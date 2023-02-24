@@ -7,12 +7,21 @@ public class MapGenerator : MonoBehaviour
 {
     int[,] tiles;
     int iterations, maxIterations = 50;
+
+    [SerializeField] float stdTurnChance;
+
     const int Xsize = 10, Ysize = 10;
-    [SerializeField] Tilemap tilemap;
+
+    
+
+    Vector2Int direction = new(0,0);
+    
+    
+    [SerializeField]Tilemap tilemap;
     [SerializeField]Tile basicTile;
     [SerializeField]Tile playerBase;
     [SerializeField]Tile enemyBase;
-    [SerializeField] Tile road;
+    [SerializeField]Tile road;
     List<Vector3Int> roadmap = new List<Vector3Int>();
 
     static Vector2Int basePlacce = new Vector2Int(0,0);
@@ -29,7 +38,13 @@ public class MapGenerator : MonoBehaviour
             else _walkerpos.x = value.x;
             if (value.y > Ysize - 1) Debug.Log("Walkerpos Y is outta range");
             else _walkerpos.y = value.y;
-
+        }
+    }
+    Vector3Int NextPos
+    {
+        get
+        {
+            return new(Walkerpos.x + direction.x, Walkerpos.y + direction.y, 0);
         }
     }
     private void Start()
@@ -63,55 +78,97 @@ public class MapGenerator : MonoBehaviour
     void Walk()
     {
         if (CheckIfCanWalk()) iterations++;
-        else iterations = maxIterations;
-
+        else
+        {
+            Debug.Log("I cant walk!");
+            iterations = maxIterations;
+        }
         if (iterations >= maxIterations) return;
-        Vector2Int direction = new();
-        //random direction world sided, clock-wised
-        switch (Random.Range(0, 4))
-        {
-            case 0:
-               direction = new(0, 1);
-                    break;
-            case 1:
-                direction = new(1, 0);
-                break;
-            case 2:
-                direction = new(0, -1);
-                break;
-            case 3:
-                direction = new(-1, 0);
-                break;
-        }
+
+        if (direction == Vector2Int.zero || Random.Range(0f, 1f) <= stdTurnChance || !PosIsInsideBorders(NextPos)) direction = NewDirection();
+        Debug.Log(direction);
         //Check if it is goodPlaceToRoad
-        Vector3Int newpos = new(Walkerpos.x + direction.x, Walkerpos.y + direction.y, 0);
-        if (CheckIfTileWalkable(newpos))
+
+        if (CheckIfPosWalkable(NextPos)) Step();
+        else
         {
-            roadmap.Add(newpos);
-            tilemap.SetTile(newpos, road);
-            Walkerpos = new Vector3Int(newpos.x, newpos.y, 0);
+            CirculateDirection();
+            if (CheckIfPosWalkable(NextPos)) Step();
+            else
+            {
+                CirculateDirection();
+                if (CheckIfPosWalkable(NextPos)) Step();
+                else
+                {
+                    CirculateDirection();
+                    if (CheckIfPosWalkable(NextPos)) Step();
+                    else Debug.LogWarning("Circulate direction error: no available NextSteps found!");
+                }
+            }
         }
-        else Walk();
     }
-    bool CheckIfTileWalkable(Vector3Int where)
+    void CirculateDirection()
     {
-        Tile tile = tilemap.GetTile<Tile>(where);
+        if (direction == Vector2Int.up) direction = Vector2Int.right;
+        else if (direction == Vector2Int.right) direction = Vector2Int.down;
+        else if (direction == Vector2Int.down) direction = Vector2Int.left;
+        else if (direction == Vector2Int.left) direction = Vector2Int.up;
+    }
+    void Step()
+    {
+        roadmap.Add(NextPos);
+        tilemap.SetTile(NextPos, road);
+        Walkerpos = new Vector3Int(NextPos.x, NextPos.y, 0);
+    }
+    bool CheckIfPosWalkable(Vector3Int pos)
+    {
+        Tile tile = tilemap.GetTile<Tile>(pos);
+
         if (tile == road 
             || tile == enemyBase
-            || where.x > Xsize - 1 
-            || where.y > Ysize - 1)
+            || tile == playerBase
+            || !PosIsInsideBorders(pos))
             return false;
+        else return true;
+    }
+    bool PosIsInsideBorders(Vector3Int pos)
+    {
+        if (pos.x > Xsize-1 || pos.x < 0) return false;
+        else if(pos.y>Ysize-1 || pos.y<0) return false;
         else return true;
     }
     bool CheckIfCanWalk()
     {
         Tile tile = tilemap.GetTile<Tile>(Walkerpos);
         if (
-            CheckIfTileWalkable(Walkerpos + new Vector3Int(1, 0, 0))
-          && CheckIfTileWalkable(Walkerpos + new Vector3Int(-1, 0, 0))
-          && CheckIfTileWalkable(Walkerpos + new Vector3Int(0, 1, 0))
-          && CheckIfTileWalkable(Walkerpos + new Vector3Int(0, -1, 0)))
+            !CheckIfPosWalkable(Walkerpos + new Vector3Int(1, 0, 0))
+          && !CheckIfPosWalkable(Walkerpos + new Vector3Int(-1, 0, 0))
+          && !CheckIfPosWalkable(Walkerpos + new Vector3Int(0, 1, 0))
+          && !CheckIfPosWalkable(Walkerpos + new Vector3Int(0, -1, 0)))
             return false;
         else return true;
+    }
+    Vector2Int NewDirection()
+    {
+        if (direction == Vector2Int.up || direction == Vector2Int.down)
+        {
+            if (Random.Range(0f, 1f) <= Walkerpos.x / Xsize) return Vector2Int.left;
+            else return Vector2Int.right;
+        }
+        else if (direction == Vector2Int.left || direction == Vector2Int.right)
+        {
+            if (Random.Range(0f, 1f) <= Walkerpos.y / Ysize) return Vector2Int.down;
+            else return Vector2Int.up;
+        }
+        else if (direction == Vector2.zero)
+        {
+            Debug.Log("Initial step");
+            return Random.Range((int)0, 2) == 1 ? Vector2Int.left : Vector2Int.down;
+        }
+        else
+        {
+            Debug.Log("cant return new direction!");
+            return Vector2Int.zero;
+        }
     }
 }
