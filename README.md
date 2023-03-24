@@ -12,3 +12,8 @@ As you progress through the tower, you will uncover the dark history of Aranthia
 Do you have what it takes to defend the Tower of Heroes and uncover the secrets of Aranthia? Only the bravest and most skilled defenders will survive this hardcore fantasy roguelite tower-defence game.
 
 Well... al leats that is what i dreab about it should be. Currently in development, non-plyable build
+
+Tech stack:
+ - Zenject
+ - A* pathfining project
+ - unity 2021.3.16f1
