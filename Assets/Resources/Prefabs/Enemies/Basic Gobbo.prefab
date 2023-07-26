@@ -138,11 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyName: Basic Gobbo
-  _hitpoints: 20
-  _speed: 1
-  expForKill: 3
-  _deathClip: {fileID: 8300000, guid: b680284bb5eba93438e5228bb993842c, type: 3}
-  _audioSource: {fileID: 8939355090439787668}
+  _stats: {fileID: 11400000, guid: 5562cf3c38352ee4eb47bed04797a422, type: 2}
 --- !u!82 &8939355090439787668
 AudioSource:
   m_ObjectHideFlags: 0

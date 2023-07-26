@@ -1,7 +1,4 @@
 using Services;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BootStrap
@@ -14,11 +11,13 @@ namespace BootStrap
 
         private AbstractSoundPlayerService _soundPlayerService;
         private WaveLauncher _waveLauncher;
+        private DamageTextService _damageTextService;
         private void Awake()
         {
+            _damageTextService = new();
             _enemyContainer.InitializeSelf();
             _soundPlayerService = new SimpleSoundPlayerService(_audioSource);
-            _waveLauncher = new(_spawnPos, _enemyContainer, _audioSource);
+            _waveLauncher = new(_spawnPos, _enemyContainer, _audioSource, _damageTextService);
             _waveLauncher.StartAsync();
         }
 
@@ -26,3 +25,4 @@ namespace BootStrap
 
     }
 }
+

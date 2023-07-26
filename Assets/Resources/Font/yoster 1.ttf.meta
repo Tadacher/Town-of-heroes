@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b29884eecc3cc1d48a7f6bb898a71c79
+guid: e7b9583276f5da04984ec1d6b8565935
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,8 +9,9 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Pixel
-  fallbackFontReferences: []
+  - Yoster Island
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7ace17e93b923474fa5a1dadf38992cf, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

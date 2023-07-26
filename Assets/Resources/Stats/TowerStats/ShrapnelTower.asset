@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af7fcf2ee5aaefd4c94355cb1bc807bc, type: 3}
-  m_Name: ArcherTower
+  m_Name: ShrapnelTower
   m_EditorClassIdentifier: 
-  AttackDamage: 2
-  AttackRange: 5
-  AttackDelay: 1
+  AttackDamage: 1
+  AttackRange: 4
+  AttackDelay: 2
   AttackDamagePerLevel: 1
   AttackRangePerLevel: 0.2
   AttackDelayPerLevel: 0.05
-  ExpPerLevel: 5
-  AttackClip: {fileID: 8300000, guid: 8d091cbf27b8ff74686dd30dd900f56c, type: 3}
+  ExpPerLevel: 10
+  AttackClip: {fileID: 8300000, guid: 8935d940f4bf1a745a49f3f4c8f51d8f, type: 3}
   LevelupClip: {fileID: 8300000, guid: 31c2a4d3a144dc945bb15883b14c52c4, type: 3}
-  ProjectilePrefab: {fileID: 2514830900229371585, guid: 7e3a045a3158c334ab8301e0391505e9, type: 3}
-  ProjectileSpeed: 3
+  ProjectilePrefab: {fileID: 4253469294135500798, guid: b79e54fc4c5606744ad28af3914dad86, type: 3}
+  ProjectileSpeed: 5

@@ -1,4 +1,5 @@
 using System.Collections;
+using Towers;
 using UnityEngine;
 using Utilities;
 
@@ -60,6 +61,8 @@ public abstract  class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttac
     
     protected virtual void TryLevelup()
     {
+        if(Experience >= _towerStats.ExpPerLevel)
+            _audioSource.PlayOneShot(_towerStats.LevelupClip);
         while (Experience >= _towerStats.ExpPerLevel)
         {
             Experience -= _towerStats.ExpPerLevel;
@@ -69,10 +72,9 @@ public abstract  class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttac
     protected virtual void Levelup()
     {
         Level++;
-        _audioSource.PlayOneShot(_towerStats.LevelupClip);
         _attackDamage += _towerStats.AttackDamagePerLevel;
         _attackRange += _towerStats.AttackRangePerLevel;
-        _attackDelay += _towerStats.AttackDelayPerLevel;
+        _attackDelay -= _towerStats.AttackDelayPerLevel;
     }
 
     protected virtual void TryDealDamageToCurrentEnemy()
@@ -80,8 +82,6 @@ public abstract  class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttac
         if (Mat.DistanceBetweenPointsV3(transform.position, _currentEnemy.transform.position) <= _attackRange)
         {
             _attackModule.DealDamage(_currentEnemy, _attackDamage, this);
-            PlayAttackSound();
-            RefreshAttackDelay();
         }
         else
             _currentEnemy = null;
@@ -100,5 +100,27 @@ public abstract  class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttac
     protected void RefreshAttackDelay() => _currentTimeTillAttack = _attackDelay;
     protected void PlayAttackSound() => _audioSource.PlayOneShot(_towerStats.AttackClip);
     protected void InitializeAttackModule<TAttackModule>() where TAttackModule : AbstractTowerAttackModule, new() => _attackModule = new TAttackModule();
+
+    protected bool TargetInRange() => Vector2.Distance(transform.position, _currentEnemy.transform.position) < _attackRange;
+
+    protected void CountAttackDelay()
+    {
+        if (_currentTimeTillAttack >= 0)
+            _currentTimeTillAttack -= Time.deltaTime;    
+    }
+
+    protected void TryToAttack()
+    {
+        if (_currentEnemy != null && _currentEnemy.gameObject.activeSelf && TargetInRange() && _currentTimeTillAttack <= 0)
+            Attack();           
+    }
+
+    protected void FinClosestTargetIfNeeded()
+    {
+        if (_currentEnemy == null)
+            _currentEnemy = FindClosestTarget();
+        else if (!TargetInRange())
+            _currentEnemy = FindClosestTarget();
+    }
    
 }

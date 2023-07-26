@@ -19,10 +19,10 @@ public class WaveLauncher
     private Task _waveSender;
     private Task _waveSpawner;
 
-    public WaveLauncher(Transform spawnPosition, EnemyContainer enemyContainer, AudioSource _audioSource)
+    public WaveLauncher(Transform spawnPosition, EnemyContainer enemyContainer, AudioSource _audioSource, Services.DamageTextService _damageTextService)
     {
         _cancellationTokenSource = new();
-        _enemyInstantiationService = new(enemyContainer, _audioSource);
+        _enemyInstantiationService = new(enemyContainer, _audioSource, _damageTextService);
         _waveGenerator = new();
 
         _interval = 5f;
@@ -56,11 +56,11 @@ public class WaveLauncher
 
     private async Task SpawnWaveAsync(Wave wave, CancellationToken token)
     {
-        Debug.Log("sendwawe");
         for (int count = 0; count < wave._count; count++)
         {
             Debug.Log("spawn");
-            _enemyInstantiationService._gobboFactory.Construct(_spawnPosition);
+            _enemyInstantiationService._gobboFactory.ReturnObject(_spawnPosition);
+            Debug.Log("spawn1");
 
             await Task.Delay((int)(wave._delay * 1000), token);
         }

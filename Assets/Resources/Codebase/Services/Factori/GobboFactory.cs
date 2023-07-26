@@ -1,3 +1,4 @@
+using Services;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,27 +6,39 @@ using UnityEngine;
 public class GobboFactory : AbstractEnemyFactory
 {
     private const string _basicGobboKey = "Basic Gobbo";
+    
     private readonly AudioSource _audioSource;
+    private readonly DamageTextService _damageTextService;
+
     System.Type[] behaviourVariants = new System.Type[]
     {
         typeof(Gobbo)
     };
 
-    public GobboFactory(EnemyContainer enemyContainer, AudioSource audioSource)
+    public GobboFactory(EnemyContainer enemyContainer, AudioSource audioSource, Services.DamageTextService damageTextService)
     {
+        _objectPoolList = new();
         _enemyContainer = enemyContainer;
         _audioSource = audioSource;
+        _damageTextService = damageTextService;
     }
 
-    public override GameObject Construct(Transform spawnpos)
+    public override AbstractEnemy ReturnObject(Transform spawnpos)
     {
-       
-        _constructionField = GameObject.Instantiate(_enemyContainer.GetEnemy(_basicGobboKey), spawnpos.position, Quaternion.identity);
-        _constructionField.GetComponent<Gobbo>().Inject(_audioSource);
-        //_constructionField.AddComponent(GetRandomBehaviour());
-        return _constructionField;
+        if (TryGetObjectFromList(out AbstractEnemy result))
+            result.ReInitialize(spawnpos.position);
+        else
+            result = ConstructAndPoolNew(spawnpos);
+
+        return result;
+    }
+
+    private AbstractEnemy ConstructAndPoolNew(Transform spawnpos)
+    {
+        AbstractEnemy newObject = GameObject.Instantiate(_enemyContainer.GetEnemy(_basicGobboKey), spawnpos.position, Quaternion.identity).GetComponent<AbstractEnemy>();
+        newObject.Initialize(_audioSource, _damageTextService);
+        _objectPoolList.Add(newObject);
+        return newObject;
     }
     protected System.Type GetRandomBehaviour() => behaviourVariants[Random.Range((int)0, behaviourVariants.Length - 1)];
-
-
 }
