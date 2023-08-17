@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-namespace MovementModule
+namespace MovementModules
 {
     public abstract class AbstractMovementModule
     {

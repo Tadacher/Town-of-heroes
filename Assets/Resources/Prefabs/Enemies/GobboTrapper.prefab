@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5982967768163919597
+--- !u!1 &7093049030715191256
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5982967768163919603}
-  - component: {fileID: 5982967768163919601}
-  - component: {fileID: 5982967768163919602}
-  - component: {fileID: 3759015143159726169}
-  - component: {fileID: 8939355090439787668}
-  - component: {fileID: 1969486976300279265}
+  - component: {fileID: 7093049030715191254}
+  - component: {fileID: 839837273706626556}
+  - component: {fileID: 7160195063893371312}
+  - component: {fileID: 7093049030715191257}
+  - component: {fileID: 6904938369869240134}
+  - component: {fileID: 2248180668137508119}
   m_Layer: 0
-  m_Name: Basic Gobbo
-  m_TagString: Enemy
+  m_Name: GobboTrapper
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5982967768163919603
+--- !u!4 &7093049030715191254
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982967768163919597}
+  m_GameObject: {fileID: 7093049030715191256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.3236343, y: 2.1829424, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &5982967768163919601
+--- !u!50 &839837273706626556
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982967768163919597}
+  m_GameObject: {fileID: 7093049030715191256}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -57,13 +57,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5982967768163919602
+--- !u!58 &7160195063893371312
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982967768163919597}
+  m_GameObject: {fileID: 7093049030715191256}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -73,13 +73,13 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!212 &3759015143159726169
+--- !u!212 &7093049030715191257
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982967768163919597}
+  m_GameObject: {fileID: 7093049030715191256}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -114,8 +114,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1399285655, guid: 35dc55b92672343488ccf95d4d7969ca, type: 3}
-  m_Color: {r: 0.34100214, g: 0.9150943, b: 0.4096436, a: 1}
+  m_Sprite: {fileID: -1330048956, guid: 35dc55b92672343488ccf95d4d7969ca, type: 3}
+  m_Color: {r: 0.7465178, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,18 +125,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!82 &8939355090439787668
+--- !u!114 &6904938369869240134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7093049030715191256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 056072094d9f7544c9cba25470cb611c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyName: Gobbo Trapper
+  _stats: {fileID: 11400000, guid: dcd3daa2a1af8f241a8b9d3c0501ad38, type: 2}
+  _dodgeValue: 15
+--- !u!82 &2248180668137508119
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982967768163919597}
+  m_GameObject: {fileID: 7093049030715191256}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -211,7 +226,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -221,17 +236,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1969486976300279265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982967768163919597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36aa1b97094e7e649b28c0fcbdfe528c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyName: Basic Gobbo
-  _stats: {fileID: 11400000, guid: 5562cf3c38352ee4eb47bed04797a422, type: 2}

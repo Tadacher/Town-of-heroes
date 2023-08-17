@@ -8,9 +8,9 @@ public class DamageText : MonoBehaviour
     [SerializeField] TextMeshPro _textMesh;
     [SerializeField] float _speed;
     [SerializeField] float _lifeTime;
-    public void Initialize(int damage)
+    public void Initialize(string damage)
     {
-        _textMesh.text = damage.ToString();
+        _textMesh.text = damage;
         StartCoroutine(Move(_lifeTime));
     }
 

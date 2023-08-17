@@ -26,7 +26,7 @@ namespace Services
                 {
                     damageText.gameObject.SetActive(true);
 
-                    damageText.Initialize(damage);
+                    damageText.Initialize(damage.ToString());
                     damageText.transform.position = pos + RandomOffset();
 
                     return damageText;
@@ -34,7 +34,27 @@ namespace Services
             }
             DamageText newProjectileBehaviour = GameObject.Instantiate(_prefab, pos + RandomOffset(), Quaternion.identity);
             _objectPool.Add(newProjectileBehaviour);
-            newProjectileBehaviour.Initialize(damage);
+            newProjectileBehaviour.Initialize(damage.ToString());
+            return newProjectileBehaviour;
+        }
+
+        public DamageText ReturnCustomDamageText(string customText, Vector3 pos)
+        {
+            foreach (DamageText damageText in _objectPool)
+            {
+                if (!damageText.gameObject.activeSelf)
+                {
+                    damageText.gameObject.SetActive(true);
+
+                    damageText.Initialize(customText);
+                    damageText.transform.position = pos + RandomOffset();
+
+                    return damageText;
+                }
+            }
+            DamageText newProjectileBehaviour = GameObject.Instantiate(_prefab, pos + RandomOffset(), Quaternion.identity);
+            _objectPool.Add(newProjectileBehaviour);
+            newProjectileBehaviour.Initialize(customText);
             return newProjectileBehaviour;
         }
 

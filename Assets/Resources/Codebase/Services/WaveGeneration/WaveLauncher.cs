@@ -45,6 +45,8 @@ public class WaveLauncher
             Debug.Log("Wawesending...");
             _waveSpawner = SpawnWaveAsync(_waveGenerator.NewGobboWave(), token);
             await Task.Delay((int)(_interval * 1000), token);
+            _waveSpawner = SpawnWaveAsync(_waveGenerator.NewGobboTrapperWave(), token);
+            await Task.Delay((int)(_interval * 1000), token);
         }
     }
 

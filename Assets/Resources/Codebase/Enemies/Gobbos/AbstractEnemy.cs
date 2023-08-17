@@ -1,4 +1,4 @@
-using MovementModule;
+using MovementModules;
 using Services;
 using System;
 using System.Collections;
@@ -14,25 +14,40 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     protected int _hitpoints;
     protected float _speed;
     protected float _expForKill;
-    protected AudioClip _deathClip;
-
-    protected AudioSource _audioSource;
-
     protected int _maxHitpoints;
     protected int _damage;
-   
-    protected private AbstractMovementModule _enemyMovementModule;
+
+
+
+    //Audio
+    protected AudioClip _deathClip;
+    protected AudioSource _audioSource;
+    //Modules
+    protected AbstractMovementModule _enemyMovementModule;
+    protected AbstractHealthModule _abstractHealthModule;
+
     protected DamageTextService _damageTextService;
+
+    public virtual void Initialize(AudioSource audioSource, DamageTextService damageTextService)
+    {
+        _audioSource = audioSource;
+        _damageTextService = damageTextService;
+        InitializeStats();
+        
+    }
+
 
     public abstract void Heal(int points);
 
     public virtual void RecieveDamage(int damage, AbstractTower abstractTower)
     {
-        _damageTextService.ReturnDamageText(damage, transform.position);
+        
         if (_hitpoints < 0)
             return;
 
-        _hitpoints -= damage;
+        _hitpoints -= _abstractHealthModule.RecieveDamage(damage);
+
+        _damageTextService.ReturnDamageText(damage, transform.position);
         
         if (_hitpoints <= 0)
         {
@@ -43,14 +58,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     public virtual AbstractMovementModule MovementModule() => _enemyMovementModule;
 
 
-    public virtual void Initialize(AudioSource audioSource, Services.DamageTextService damageTextService)
-    {
-        _audioSource = audioSource;
-        _damageTextService = damageTextService;
-        InitializeStats();
-
-        _enemyMovementModule = new StraightMovementModule(transform, new Vector3(-1.5f, -11.5f, 0f), this, _speed);
-    }
+   
 
    
 

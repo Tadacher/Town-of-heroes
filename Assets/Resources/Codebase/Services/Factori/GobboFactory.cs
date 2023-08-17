@@ -10,11 +10,6 @@ public class GobboFactory : AbstractEnemyFactory
     private readonly AudioSource _audioSource;
     private readonly DamageTextService _damageTextService;
 
-    System.Type[] behaviourVariants = new System.Type[]
-    {
-        typeof(Gobbo)
-    };
-
     public GobboFactory(EnemyContainer enemyContainer, AudioSource audioSource, Services.DamageTextService damageTextService)
     {
         _objectPoolList = new();
@@ -40,5 +35,4 @@ public class GobboFactory : AbstractEnemyFactory
         _objectPoolList.Add(newObject);
         return newObject;
     }
-    protected System.Type GetRandomBehaviour() => behaviourVariants[Random.Range((int)0, behaviourVariants.Length - 1)];
 }

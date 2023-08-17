@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2d8d23eaeb3c54394afd34d931cc6f, type: 3}
-  m_Name: Gobbo
+  m_Name: GobboTrapper
   m_EditorClassIdentifier: 
-  HitPoints: 4
+  HitPoints: 5
   Damage: 1
-  ExpPerKill: 3
-  Speed: 0.5
-  Name: BasicGobbo
+  ExpPerKill: 1
+  Speed: 1
+  Name: GobboTrapper
   HitPointsPerLevel: 1
   DamagePerLevel: 1
   ExpPerKillPerLevel: 1
   SpeedPerLevel: 1
-  DeathSound: {fileID: 8300000, guid: 9655be54e6f7047488517c2a2eb637dd, type: 3}
+  DeathSound: {fileID: 8300000, guid: d786118f618d2994eb1514f3325802b4, type: 3}
