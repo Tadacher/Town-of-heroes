@@ -1,7 +1,6 @@
 using System.Collections;
 using Towers;
 using UnityEngine;
-using Utilities;
 
 public abstract  class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttacker
 { 
@@ -42,7 +41,7 @@ public abstract  class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttac
 
         foreach (Collider2D target in _availableEnemies)
         {
-            float distance = Mat.DistanceBetweenPointsV3(transform.position, target.transform.position);
+            float distance = Vector3.Distance(transform.position, target.transform.position);
             if (distance < maxdistance)
             {
                 maxdistance = distance;
@@ -79,7 +78,7 @@ public abstract  class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttac
 
     protected virtual void TryDealDamageToCurrentEnemy()
     {
-        if (Mat.DistanceBetweenPointsV3(transform.position, _currentEnemy.transform.position) <= _attackRange)
+        if (Vector3.Distance(transform.position, _currentEnemy.transform.position) <= _attackRange)
         {
             _attackModule.DealDamage(_currentEnemy, _attackDamage, this);
         }

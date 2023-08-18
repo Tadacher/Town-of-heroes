@@ -3,17 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GobboFactory : AbstractEnemyFactory
+public class EnemyFactory : AbstractAbstractEnemyFactory
 {
-    private const string _basicGobboKey = "Basic Gobbo";
     
     private readonly AudioSource _audioSource;
     private readonly DamageTextService _damageTextService;
 
-    public GobboFactory(EnemyContainer enemyContainer, AudioSource audioSource, Services.DamageTextService damageTextService)
+    public EnemyFactory(AbstractEnemy enemyPrefab, AudioSource audioSource, DamageTextService damageTextService)
     {
         _objectPoolList = new();
-        _enemyContainer = enemyContainer;
+        _enemyPrefab = enemyPrefab;
         _audioSource = audioSource;
         _damageTextService = damageTextService;
     }
@@ -24,13 +23,12 @@ public class GobboFactory : AbstractEnemyFactory
             result.ReInitialize(spawnpos.position);
         else
             result = ConstructAndPoolNew(spawnpos);
-
         return result;
     }
 
     private AbstractEnemy ConstructAndPoolNew(Transform spawnpos)
     {
-        AbstractEnemy newObject = GameObject.Instantiate(_enemyContainer.GetEnemy(_basicGobboKey), spawnpos.position, Quaternion.identity).GetComponent<AbstractEnemy>();
+        AbstractEnemy newObject = GameObject.Instantiate(_enemyPrefab, spawnpos.position, Quaternion.identity);
         newObject.Initialize(_audioSource, _damageTextService);
         _objectPoolList.Add(newObject);
         return newObject;

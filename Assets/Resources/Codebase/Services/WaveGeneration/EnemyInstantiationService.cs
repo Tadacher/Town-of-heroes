@@ -1,9 +1,29 @@
-﻿public class EnemyInstantiationService
-{
-    public AbstractEnemyFactory _gobboFactory;
+﻿using Services;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
 
-    public EnemyInstantiationService(EnemyContainer enemyContainer, UnityEngine.AudioSource _audioSource, Services.DamageTextService _damageTextService)
+public class EnemyInstantiationService
+{
+    private Dictionary<Type, EnemyFactory> _factoryList;
+    public EnemyFactory _goblinFactory;
+    public EnemyFactory _goblinTrapperFactory;
+
+
+    public EnemyInstantiationService(EnemyPrefabContainer enemyContainer, AudioSource audioSource, DamageTextService damageTextService)
     {
-        _gobboFactory = new GobboFactory(enemyContainer, _audioSource, _damageTextService);
+        _factoryList = new();
+        //Goblin
+        _factoryList.Add(typeof(Gobbo), new(enemyContainer.Goblin, audioSource, damageTextService));
+
+        //GoblinTrapper
+        _factoryList.Add(typeof(GobboTrapper), new(enemyContainer.GoblinTrapper, audioSource, damageTextService));
     }
+
+    public void ReturnObject(Type type, Transform spawnpos)
+    {
+        _factoryList[type]?.ReturnObject(spawnpos);
+    }
+    //
+
 }

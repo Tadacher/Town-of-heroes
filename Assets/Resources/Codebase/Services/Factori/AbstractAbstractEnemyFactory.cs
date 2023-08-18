@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AbstractEnemyFactory
+public abstract class AbstractAbstractEnemyFactory
 {
-    protected EnemyContainer _enemyContainer;
+    protected AbstractEnemy _enemyPrefab;
     protected GameObject _prototype;
     protected List<AbstractEnemy> _objectPoolList;
     public abstract AbstractEnemy ReturnObject(Transform spawnpos);
