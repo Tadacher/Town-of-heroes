@@ -24,6 +24,4 @@ public class EnemyInstantiationService
     {
         _factoryList[type]?.ReturnObject(spawnpos);
     }
-    //
-
 }

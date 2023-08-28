@@ -15,8 +15,13 @@ namespace Services
         {
             _objectPool = new();
             GameObject prefab = (GameObject)Resources.Load("Prefabs/Text/DamageText");
+
+            if (prefab == null)
+            {
+                Debug.Log("No damage text refab found at Prefabs/Text/DamageText");
+                return;
+            }
             _prefab = prefab.GetComponent<DamageText>();
-            Debug.Log(_prefab);
         }
         public DamageText ReturnDamageText(int damage, Vector3 pos)
         {

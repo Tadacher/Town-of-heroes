@@ -16,7 +16,7 @@ public class WaveService
     private Task _waveSender;
     private Task _spawnerOfwawes;
   
-    public WaveService(Transform spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemyPrefabContainer enemyPrefabContainer)
+    public WaveService(EnemySpawnPosMarker spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemyPrefabContainer enemyPrefabContainer)
     {
         _cancellationTokenSource = new();
         _enemyInstantiationService = new(enemyPrefabContainer, _audioSource, _damageTextService);
@@ -25,7 +25,7 @@ public class WaveService
         
         _interval = 5f;
 
-        _spawnPosition = spawnPosition;
+        _spawnPosition = spawnPosition.transform;
         _enemyPrefabContainer = enemyPrefabContainer;
     }
     public async void StartAsync()

@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1981195852}
-  _spawnPos: {fileID: 1383419166}
+  _spawnPos: {fileID: 1383419167}
   _enemyPrefabContainer: {fileID: 11400000, guid: 349055015ee7eed4ab7106bf22e05ad2, type: 2}
 --- !u!1 &493912715
 GameObject:
@@ -950,6 +950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383419166}
+  - component: {fileID: 1383419167}
   m_Layer: 0
   m_Name: SpawnPos
   m_TagString: Untagged
@@ -972,6 +973,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1383419167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383419165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff629f49bef4934faa319e3761cb189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1436684358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1030,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2d034db75e5404a9e3af78b04a1903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 1981195852}
+  _spawnPos: {fileID: 1383419167}
+  _enemyPrefabContainer: {fileID: 11400000, guid: 349055015ee7eed4ab7106bf22e05ad2, type: 2}
+  _sceneBootstrapper: {fileID: 344426881}
 --- !u!114 &1436684361
 MonoBehaviour:
   m_ObjectHideFlags: 0
