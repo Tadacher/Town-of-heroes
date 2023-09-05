@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5982967768163919601}
   - component: {fileID: 5982967768163919602}
   - component: {fileID: 3759015143159726169}
-  - component: {fileID: 1534375309}
   - component: {fileID: 8939355090439787668}
+  - component: {fileID: 1969486976300279265}
   m_Layer: 0
   m_Name: Basic Gobbo
   m_TagString: Enemy
@@ -125,24 +125,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1534375309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982967768163919597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e60f4da5aae996b42b9e1e1ed3e85544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyName: Basic Gobbo
-  _hitpoints: 20
-  _speed: 1
-  expForKill: 3
-  _deathClip: {fileID: 8300000, guid: b680284bb5eba93438e5228bb993842c, type: 3}
-  _audioSource: {fileID: 8939355090439787668}
 --- !u!82 &8939355090439787668
 AudioSource:
   m_ObjectHideFlags: 0
@@ -239,3 +221,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1969486976300279265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982967768163919597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36aa1b97094e7e649b28c0fcbdfe528c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyName: Basic Gobbo
+  _stats: {fileID: 11400000, guid: 5562cf3c38352ee4eb47bed04797a422, type: 2}

@@ -8,21 +8,34 @@ public class ProjectileBehaviour : MonoBehaviour
     private float _speed;
     private Transform _target;
     private Action _onTagetReached;
-    private IObjectPool<ProjectileBehaviour> _objectPool;
     void Update()
     {
+        if (_target == null || !_target.gameObject.activeSelf)
+        {
+            ReturnToPool();
+            return;
+        }
+        
+
         transform.position += _speed * Time.deltaTime * (_target.position - transform.position).normalized;
+        LookAtTarget();
         if (Vector3.Distance(transform.position, _target.position) < 0.1)
         {
             _onTagetReached.Invoke();
-            DeInitializeAndPool();
+            ReturnToPool();
         }
-    } 
+    }
 
-    public void Initialize(float speed, Transform target, Vector3 initialPos, Action onTargetReached, IObjectPool<ProjectileBehaviour> objectPool)
+    private void LookAtTarget()
+    {
+        Vector3 look = transform.InverseTransformPoint(_target.position);
+        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
+        transform.Rotate(0, 0, angle);
+    }
+
+    public void Initialize(float speed, Transform target, Vector3 initialPos, Action onTargetReached)
     {
         transform.position = initialPos;
-        _objectPool = objectPool;
         _speed = speed;
         _target = target;
         _onTagetReached += onTargetReached;
@@ -35,10 +48,9 @@ public class ProjectileBehaviour : MonoBehaviour
     }
     private void ResetSelf() => _onTagetReached = null;
     
-    private void DeInitializeAndPool()
+    private void ReturnToPool()
     {
-        gameObject.SetActive(false);
         ResetSelf();
-        _objectPool.ReturnToPool(this);
+        gameObject.SetActive(false);
     }
 }

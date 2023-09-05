@@ -1,4 +1,4 @@
-﻿using MovementModule;
+﻿using MovementModules;
 
 public interface IMowementModuleOwner
 {

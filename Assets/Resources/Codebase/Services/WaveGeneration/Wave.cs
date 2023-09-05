@@ -1,15 +1,17 @@
 ﻿
 using System;
 
-public struct Wave
+public struct Wave 
 {
-    public string enemyName;
-    public int _count;
-    public float _delay;
-    internal Wave(string name, int count, float delay)
+    public Type[] Enemies { get => enemies; }
+    public float Delay;
+
+    private Type[] enemies;
+
+
+    public Wave(float delay, Type[] enemyTypes)
     {
-        enemyName = name;
-        _count = count;
-        _delay = delay;
+        enemies = enemyTypes;
+        Delay = delay;
     }
 }
