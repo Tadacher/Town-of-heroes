@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8939355090439787668}
   - component: {fileID: 1969486976300279265}
   m_Layer: 0
-  m_Name: Basic Gobbo
+  m_Name: Gobbo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

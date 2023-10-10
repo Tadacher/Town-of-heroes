@@ -5,23 +5,40 @@ using UnityEngine;
 
 public class EnemyInstantiationService
 {
-    private Dictionary<Type, EnemyFactory> _factoryList;
-    public EnemyFactory _goblinFactory;
-    public EnemyFactory _goblinTrapperFactory;
+    private Dictionary<Type, IFactory<AbstractEnemy>> _factories;
+    private AudioSource _audioSource;
+    private DamageTextService _damageTextService;
 
+    private const string _enemyPrefabPath = "Prefabs/Enemies/";
 
     public EnemyInstantiationService(EnemyPrefabContainer enemyContainer, AudioSource audioSource, DamageTextService damageTextService)
     {
-        _factoryList = new();
-        //Goblin
-        _factoryList.Add(typeof(Gobbo), new(enemyContainer.Goblin, audioSource, damageTextService));
-
-        //GoblinTrapper
-        _factoryList.Add(typeof(GobboTrapper), new(enemyContainer.GoblinTrapper, audioSource, damageTextService));
+        _factories = new();
+        _audioSource = audioSource;
+        _damageTextService = damageTextService;
     }
 
-    public void ReturnObject(Type type, Transform spawnpos)
+    public TEnemyType ReturnObject<TEnemyType>() where TEnemyType : AbstractEnemy
     {
-        _factoryList[type]?.ReturnObject(spawnpos);
+        if (!_factories.ContainsKey(typeof(TEnemyType)))
+        {
+            AddNewFactory<TEnemyType>();
+        }
+       
+        return ((IFactory<TEnemyType>)_factories[typeof(TEnemyType)]).GetObject();
+    }
+
+    private void AddNewFactory<TEnemyType>() where TEnemyType : AbstractEnemy => 
+        _factories.Add(typeof(TEnemyType), CreateNewEnemyFactory<TEnemyType>());
+
+    private EnemyFactory<TEnemyType> CreateNewEnemyFactory<TEnemyType>() where TEnemyType : AbstractEnemy => 
+        new EnemyFactory<TEnemyType>(_audioSource, _damageTextService, LoadEnemyPrefab<TEnemyType>());
+
+    private TenemyType LoadEnemyPrefab<TenemyType>() where TenemyType : AbstractEnemy
+    {
+        Debug.Log(_enemyPrefabPath + typeof(TenemyType).Name);
+        TenemyType tenemyType = Resources.Load<TenemyType>(_enemyPrefabPath + typeof(TenemyType).Name);
+        Debug.Log(tenemyType);
+        return tenemyType;
     }
 }

@@ -1,17 +1,16 @@
-﻿
-using System;
+﻿using System;
 
-public struct Wave 
+public class Wave 
 {
-    public Type[] Enemies { get => enemies; }
-    public float Delay;
+    public  Action[] EnemyCreationCommands => enemyCreationCommands;
+    public readonly float Delay;
 
-    private Type[] enemies;
+    private Action[] enemyCreationCommands;
 
 
-    public Wave(float delay, Type[] enemyTypes)
+    public Wave(float delay, Action[] enemyTypes)
     {
-        enemies = enemyTypes;
+        enemyCreationCommands = enemyTypes;
         Delay = delay;
     }
 }

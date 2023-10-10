@@ -2,18 +2,20 @@
 
 public class WaveGenerator
 {
-    private EnemyPrefabContainer _enemyPrefabContainer;
+    private EnemyInstantiationService _enemyInstantiationService;
 
-    public WaveGenerator(EnemyPrefabContainer enemyPrefabContainer) => _enemyPrefabContainer = enemyPrefabContainer;
-
-
-    private Type[] GenerateEnemies()
+    public WaveGenerator(EnemyInstantiationService nemyInstantiationService)
     {
-        Type[] abstractEnemies = new Type[3];
-        abstractEnemies[0] = typeof(GobboTrapper);
-        abstractEnemies[1] = typeof(Gobbo);
-        abstractEnemies[2] = typeof(Gobbo);
+        _enemyInstantiationService = nemyInstantiationService;
+    }
+
+    private Action[] GenerateSpawnCommands()
+    {
+        Action[] abstractEnemies = new Action[] {
+        () => _enemyInstantiationService.ReturnObject<Gobbo>(),
+        () => _enemyInstantiationService.ReturnObject<Gobbo>(),
+        () => _enemyInstantiationService.ReturnObject<Gobbo>()};
         return abstractEnemies;
     }
-    public Wave GenerateWave() => new(1f, GenerateEnemies());
+    public Wave GenerateWave() => new(1f, GenerateSpawnCommands());
 }
