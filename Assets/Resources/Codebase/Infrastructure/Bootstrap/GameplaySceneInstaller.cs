@@ -7,25 +7,26 @@ namespace Infrastructure
     public class GameplaySceneInstaller : AbstractMonoInstaller
     {
         [SerializeField] private AudioSource _audioSource;
-        [SerializeField] private EnemySpawnPosMarker _spawnPos;
+        [SerializeField] private EnemySpawnPosMarker _spawnPosMarker;
         [SerializeField] private EnemyPrefabContainer _enemyPrefabContainer;
         [SerializeField] private SceneBootstrapper _sceneBootstrapper;
         public override void InstallBindings()
         {
             //scriptableObjects
-            InstallScriptableObjecttBinding(_enemyPrefabContainer);
+            BindScriptableObject(_enemyPrefabContainer);
 
             //Unity components
-            InstallUnityComponentBinding(_audioSource);
+            BindUnityComponent(_audioSource);
 
             //Monobeh
-            InstallMonobehaviourBinding(_spawnPos);
+            BindMonobehaviour(_spawnPosMarker);
+
             //Non-monobeh
-            InstallBinding<DamageTextService>();
-            InstallBinding<WaveService>();
+            BindService<DamageTextService>();
+            BindService<WaveService>();
 
             //Non monobeh abstract
-            InstallAbstractClassBinding<AbstractSoundPlayerService, SimpleSoundPlayerService>();
+            BindAbstractClass<AbstractSoundPlayerService, SimpleSoundPlayerService>();
 
             Container.Inject(_sceneBootstrapper);
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine.Pool;
 
-public abstract class AbstractPoolerFactory<TType> : IObjectPooler<TType>, IFactory<TType> where TType : class
+public abstract class AbstractPoolerFactory<TType> : IObjectPooler, IFactory<TType> where TType : class
 {
     protected ObjectPool<TType> _pool;
 
@@ -20,6 +20,6 @@ public abstract class AbstractPoolerFactory<TType> : IObjectPooler<TType>, IFact
     protected abstract TType CreateNew();
     protected abstract void ActionOnGet(TType poolable);
     protected abstract void ActionOnDestroy(TType poolable);
-    public abstract void ReturnToPool(TType returnable);
+    public abstract void ReturnToPool(IPoolableObject returnable);
     public abstract TType GetObject();
 }

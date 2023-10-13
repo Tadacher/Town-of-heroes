@@ -1,4 +1,4 @@
-﻿public interface IObjectPooler<TObject>
+﻿public interface IObjectPooler
 {
-    public void ReturnToPool(TObject returnable);
+    public void ReturnToPool(IPoolableObject returnable);
 }

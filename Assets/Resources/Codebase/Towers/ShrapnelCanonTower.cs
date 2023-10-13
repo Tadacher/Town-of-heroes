@@ -1,44 +1,47 @@
 ﻿using Towers;
 using UnityEngine;
 
-public class ShrapnelCanonTower : AbstractTower
+namespace Core.Towers
 {
-    [SerializeField]
-    private int _shrapnelCount;
-    [SerializeField]
-    private int _shrapnelCountPerLevel;
-    private void Awake()
+    public class ShrapnelCanonTower : AbstractTower
     {
-        InitializeBase();
-        InitializeAttackModule<ShrapnelTowerAttakModule>();
-        InitializeProjectileFactory(_towerStats.ProjectilePrefab);
-        RefreshAttackDelay();
-        UpdateAttackModule();
-    }
-    private void Update()
-    {
-        FinClosestTargetIfNeeded();
-        CountAttackDelay();
-        TryToAttack();
-    }
-    protected override void Attack()
-    {
-        _projectileFactory.ReturnProjectile(_towerStats.ProjectileSpeed, _currentEnemy.transform, transform.position, () => { TryDealDamageToCurrentEnemy(); });
-        PlayAttackSound();
-        RefreshAttackDelay();
-    }
+        [SerializeField]
+        private int _shrapnelCount;
+        [SerializeField]
+        private int _shrapnelCountPerLevel;
+        private void Awake()
+        {
+            InitializeAttackModule<ShrapnelTowerAttakModule>();
+            InitializeProjectileFactory(_towerStats.ProjectilePrefab);
+            RefreshAttackDelay();
+            UpdateAttackModule();
+        }
+        protected override void Update()
+        {
+            base.Update();
+            FinClosestTargetIfNeeded();
+            CountAttackDelay();
+            TryToAttack();
+        }
+        protected override void Attack()
+        {
+            _projectileFactory.ReturnProjectile(_towerStats.ProjectileSpeed, _currentEnemy.transform, transform.position, () => { TryDealDamageToCurrentEnemy(); });
+            PlayAttackSound();
+            RefreshAttackDelay();
+        }
 
-    protected override void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab) => _projectileFactory = new SimpleProjectileFactory(projectilePrefab);
-    protected override void Levelup()
-    {
-        base.Levelup();
-        _shrapnelCount += _shrapnelCountPerLevel;
-        UpdateAttackModule();
-    }
+        protected override void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab) => _projectileFactory = new SimpleProjectileFactory(projectilePrefab);
+        protected override void Levelup()
+        {
+            base.Levelup();
+            _shrapnelCount += _shrapnelCountPerLevel;
+            UpdateAttackModule();
+        }
 
-    private void UpdateAttackModule()
-    {
-        ShrapnelTowerAttakModule module = (ShrapnelTowerAttakModule)_attackModule;
-        module.ShrapnelCount = _shrapnelCount;
+        private void UpdateAttackModule()
+        {
+            ShrapnelTowerAttakModule module = (ShrapnelTowerAttakModule)_attackModule;
+            module.ShrapnelCount = _shrapnelCount;
+        }
     }
 }

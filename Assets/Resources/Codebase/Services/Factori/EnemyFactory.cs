@@ -18,8 +18,8 @@ public class EnemyFactory<TEnemy> : AbstractPoolerFactory<TEnemy> where TEnemy :
     public override TEnemy GetObject() =>
         _pool.Get();
 
-    public override void ReturnToPool(TEnemy returnable) => 
-        _pool.Release(returnable);
+    public override void ReturnToPool(IPoolableObject poolable) => 
+        _pool.Release((TEnemy)poolable);
 
     protected override void ActionOnDestroy(TEnemy poolable) => 
         GameObject.Destroy(poolable.gameObject);
@@ -32,7 +32,8 @@ public class EnemyFactory<TEnemy> : AbstractPoolerFactory<TEnemy> where TEnemy :
 
     protected override TEnemy CreateNew()
     {
-
-        return GameObject.Instantiate(_enemyPrefab, null);
+        TEnemy enemy = GameObject.Instantiate(_enemyPrefab, null);
+        enemy.Initialize(_audioSource, _damageTextService, this);
+        return enemy;
     }
 }

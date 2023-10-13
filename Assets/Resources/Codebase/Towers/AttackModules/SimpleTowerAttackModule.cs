@@ -1,4 +1,5 @@
-﻿using Towers;
+﻿using Core.Towers;
+using Towers;
 
 public class SimpleTowerAttackModule : AbstractTowerAttackModule
 {

@@ -1,7 +1,8 @@
+using Core.Towers;
 using MovementModules;
 using Services;
 using UnityEngine;
-public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementModuleOwner
+public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementModuleOwner, IPoolableObject
 {
     public string EnemyName;
 
@@ -15,7 +16,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     protected int _damage;
 
 
-
+    protected IObjectPooler _pooler;
     //Audio
     protected AudioClip _deathClip;
     protected AudioSource _audioSource;
@@ -25,12 +26,12 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
 
     protected DamageTextService _damageTextService;
 
-    public virtual void Initialize(AudioSource audioSource, DamageTextService damageTextService)
+    public virtual void Initialize(AudioSource audioSource, DamageTextService damageTextService, IObjectPooler objectPooler)
     {
+        _pooler = objectPooler;
         _audioSource = audioSource;
         _damageTextService = damageTextService;
-        InitializeStats();
-        
+        InitializeStats();      
     }
 
 
@@ -85,6 +86,9 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         _deathClip = _stats.DeathSound;
         _expForKill = _stats.ExpPerKill;
     }
+
+    void IPoolableObject.ReturnToPool() => 
+        _pooler.ReturnToPool(this);
 }
 
 

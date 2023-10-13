@@ -3,29 +3,31 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyInstantiationService
+public class EnemyInstantiationService : AbstractInstantiationService<AbstractEnemy>
 {
-    private Dictionary<Type, IFactory<AbstractEnemy>> _factories;
     private AudioSource _audioSource;
     private DamageTextService _damageTextService;
+    private Transform _spawnPosition;
 
     private const string _enemyPrefabPath = "Prefabs/Enemies/";
 
-    public EnemyInstantiationService(EnemyPrefabContainer enemyContainer, AudioSource audioSource, DamageTextService damageTextService)
+    public EnemyInstantiationService(AudioSource audioSource, DamageTextService damageTextService, EnemySpawnPosMarker enemySpawnPosMarker) : base()
     {
-        _factories = new();
+        _spawnPosition = enemySpawnPosMarker.transform;
+        
         _audioSource = audioSource;
         _damageTextService = damageTextService;
     }
 
-    public TEnemyType ReturnObject<TEnemyType>() where TEnemyType : AbstractEnemy
+    public override TEnemyType ReturnObject<TEnemyType>()
     {
         if (!_factories.ContainsKey(typeof(TEnemyType)))
         {
             AddNewFactory<TEnemyType>();
         }
-       
-        return ((IFactory<TEnemyType>)_factories[typeof(TEnemyType)]).GetObject();
+        var returnable = ((IFactory<TEnemyType>)_factories[typeof(TEnemyType)]).GetObject();
+        returnable.transform.position = _spawnPosition.position;
+        return returnable;
     }
 
     private void AddNewFactory<TEnemyType>() where TEnemyType : AbstractEnemy => 
@@ -36,9 +38,7 @@ public class EnemyInstantiationService
 
     private TenemyType LoadEnemyPrefab<TenemyType>() where TenemyType : AbstractEnemy
     {
-        Debug.Log(_enemyPrefabPath + typeof(TenemyType).Name);
         TenemyType tenemyType = Resources.Load<TenemyType>(_enemyPrefabPath + typeof(TenemyType).Name);
-        Debug.Log(tenemyType);
         return tenemyType;
     }
 }

@@ -15,10 +15,10 @@ public class WaveService
     private Task _waveSender;
     private Task _spawnerOfwawes;
   
-    public WaveService(EnemySpawnPosMarker spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemyPrefabContainer enemyPrefabContainer)
+    public WaveService(EnemySpawnPosMarker spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemySpawnPosMarker enemySpawnPosMarker)
     {
         _cancellationTokenSource = new();
-        _enemyInstantiationService = new(enemyPrefabContainer, _audioSource, _damageTextService);
+        _enemyInstantiationService = new(_audioSource, _damageTextService, enemySpawnPosMarker);
         _waveGenerator = new(_enemyInstantiationService);
 
         
