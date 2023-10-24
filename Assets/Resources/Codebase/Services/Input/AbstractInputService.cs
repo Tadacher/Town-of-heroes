@@ -5,11 +5,7 @@ namespace Services.Input
 {
     public abstract class AbstractInputService : IInputListener
     {
-        protected Camera _camera;
-
-        protected AbstractInputService(Camera camera) => 
-            _camera = camera;
-
+        protected Camera Camera => Camera.main;
 
         public event Action OnPointerUp;
         public event Action OnPointerDown;
@@ -23,7 +19,10 @@ namespace Services.Input
         void IInputListener.PointerDown() => 
             OnPointerDown?.Invoke();
 
-        void IInputListener.PointerUp() => 
+        void IInputListener.PointerUp()
+        {
+            Debug.Log("up");
             OnPointerUp?.Invoke();
+        }
     }
 }

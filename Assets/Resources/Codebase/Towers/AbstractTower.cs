@@ -44,7 +44,7 @@ namespace Core.Towers
         }
         protected virtual void Initialize(IObjectPooler objectPooler, AbstractInputService abstractInputService)
         {
-            _pointerFollower.Initialize(abstractInputService);
+            //_pointerFollower.Initialize(abstractInputService);
             _availableEnemies = new Collider2D[20];
             _attackDamage = _towerStats.AttackDamage;
             _attackRange = _towerStats.AttackRange;
@@ -53,8 +53,8 @@ namespace Core.Towers
 
         protected virtual void Update()
         {
-            if (_isGhost)
-                return;
+           // if (_isGhost)
+              //  return;
         }
 
         public virtual AbstractEnemy FindClosestTarget()
@@ -146,7 +146,7 @@ namespace Core.Towers
 
         protected void FinClosestTargetIfNeeded()
         {
-            if (_currentEnemy == null)
+            if (_currentEnemy == null || _currentEnemy.gameObject.activeSelf == false)
                 _currentEnemy = FindClosestTarget();
             else if (!TargetInRange())
                 _currentEnemy = FindClosestTarget();

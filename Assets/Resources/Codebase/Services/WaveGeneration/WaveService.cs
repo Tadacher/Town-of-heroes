@@ -17,6 +17,7 @@ public class WaveService
   
     public WaveService(EnemySpawnPosMarker spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemySpawnPosMarker enemySpawnPosMarker)
     {
+        
         _cancellationTokenSource = new();
         _enemyInstantiationService = new(_audioSource, _damageTextService, enemySpawnPosMarker);
         _waveGenerator = new(_enemyInstantiationService);
@@ -28,6 +29,7 @@ public class WaveService
     }
     public async void StartAsync()
     {
+        
         _waveSender = WaveSendingAsync(_cancellationTokenSource.Token);
         await _waveSender;
     }
@@ -53,11 +55,7 @@ public class WaveService
     {
         for (int count = 0; count < wave.EnemyCreationCommands.Length; count++)
         {
-            Debug.Log(wave.EnemyCreationCommands[count].ToString());
-
             wave.EnemyCreationCommands[count].Invoke();
-
-            Debug.Log(wave.EnemyCreationCommands[count].ToString());
             await Task.Delay((int)(wave.Delay * 1000));
         }
     }

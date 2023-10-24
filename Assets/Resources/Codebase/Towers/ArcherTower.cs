@@ -1,4 +1,7 @@
-﻿namespace Core.Towers
+﻿
+using UnityEngine;
+
+namespace Core.Towers
 {
     public class ArcherTower : AbstractTower
     {
@@ -6,12 +9,13 @@
         {
             InitializeAttackModule<SimpleTowerAttackModule>();
             InitializeProjectileFactory(_towerStats.ProjectilePrefab);
+            Initialize(null, null);
             RefreshAttackDelay();
         }
         protected override void Update()
         {
             base.Update();
-
+            Debug.Log(_currentEnemy);
             FinClosestTargetIfNeeded();
             CountAttackDelay();
             TryToAttack();

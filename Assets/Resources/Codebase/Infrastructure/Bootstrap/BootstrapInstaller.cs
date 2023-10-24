@@ -1,36 +1,36 @@
 ﻿using Assets.Resources.Codebase.Infrastructure;
 using Services.Input;
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using Zenject;
 
 namespace Infrastructure
 {
     public class BootstrapInstaller : AbstractMonoInstaller
     {
-        [SerializeField] CoroutineProcessorService _coroutineRunnerPrefab;
-        [SerializeField] InputReciever _inputRecieverPrefab;
-         CoroutineProcessorService _coroutineRunner;
+        [SerializeField] private CoroutineProcessorService _coroutineRunnerPrefab;
+        [SerializeField] private InputReciever _inputRecieverPrefab;
+        private CoroutineProcessorService _coroutineRunner;
+        private InputReciever _inputReciever;
         public override void InstallBindings()
         {
-            BindInterfacesAndSelft<DesctopInput>();
-
+            BindInterfacesAndSelfto<DesctopInput>();
+            
             InitializeCoroutineRunner();
             InitializeInputListener();
 
-            InstallInterfaceBindingFromInstance<ICoroutineRunner, CoroutineProcessorService>(_coroutineRunner);
+            BindInterfaceFromInstance<ICoroutineRunner, CoroutineProcessorService>(_coroutineRunner);
+
 
             BindService<SceneLoaderService>();
             BindService<GameStateMachine>()
                 .NonLazy();
-            Debug.Log("DONE");
+            Debug.Log("BOOTSTRAP INSTALLER DONE");
         }
 
         private void InitializeInputListener()
         {
-            var inputReciever = Instantiate(_inputRecieverPrefab, null);
-            DontDestroyOnLoad(inputReciever);
+            _inputReciever = Instantiate(_inputRecieverPrefab, null);
+            Container.Inject(_inputReciever);
+            DontDestroyOnLoad(_inputReciever);
         }
 
         private void InitializeCoroutineRunner()
@@ -38,8 +38,6 @@ namespace Infrastructure
             Debug.Log("Lol");
             _coroutineRunner = Instantiate(_coroutineRunnerPrefab, null);
             DontDestroyOnLoad(_coroutineRunner);
-        }
-
-        
+        }      
     }
 }

@@ -1,38 +1,38 @@
 using Services;
 using UnityEngine;
 
-public class EnemyFactory<TEnemy> : AbstractPoolerFactory<TEnemy> where TEnemy : AbstractEnemy
+public class EnemyFactory : AbstractPoolerFactory<AbstractEnemy> 
 {
     private readonly AudioSource _audioSource;
     private readonly DamageTextService _damageTextService;
-    protected TEnemy _enemyPrefab;
+    protected AbstractEnemy _enemyPrefab;
     protected GameObject _prototype;
 
-    public EnemyFactory(AudioSource audioSource, DamageTextService damageTextService, TEnemy enemyPrefab) : base()
+    public EnemyFactory(AudioSource audioSource, DamageTextService damageTextService, AbstractEnemy enemyPrefab) : base()
     {
         _audioSource = audioSource;
         _damageTextService = damageTextService;
         _enemyPrefab = enemyPrefab;
     }
 
-    public override TEnemy GetObject() =>
+    public override AbstractEnemy GetObject() =>
         _pool.Get();
 
     public override void ReturnToPool(IPoolableObject poolable) => 
-        _pool.Release((TEnemy)poolable);
+        _pool.Release((AbstractEnemy)poolable);
 
-    protected override void ActionOnDestroy(TEnemy poolable) => 
+    protected override void ActionOnDestroy(AbstractEnemy poolable) => 
         GameObject.Destroy(poolable.gameObject);
 
-    protected override void ActionOnGet(TEnemy poolable) => 
+    protected override void ActionOnGet(AbstractEnemy poolable) => 
         poolable.gameObject.SetActive(true);
 
-    protected override void ActionOnRelease(TEnemy poolable) => 
+    protected override void ActionOnRelease(AbstractEnemy poolable) => 
         poolable.gameObject.SetActive(false);
 
-    protected override TEnemy CreateNew()
+    protected override AbstractEnemy CreateNew()
     {
-        TEnemy enemy = GameObject.Instantiate(_enemyPrefab, null);
+        AbstractEnemy enemy = GameObject.Instantiate(_enemyPrefab, null);
         enemy.Initialize(_audioSource, _damageTextService, this);
         return enemy;
     }

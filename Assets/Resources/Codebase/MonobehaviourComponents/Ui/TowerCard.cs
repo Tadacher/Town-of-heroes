@@ -1,4 +1,3 @@
-using Core.Towers;
 using Services.TowerBuilding;
 using System;
 using System.Collections;
@@ -6,12 +5,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using Zenject;
 
-public class TowerCard<TTower> : MonoBehaviour, IPoolableObject, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler where TTower : AbstractTower
+public class TowerCard : MonoBehaviour, IPoolableObject, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     //external
     [SerializeField] private RectTransform _cardImageTransform;
     [SerializeField] private float _popupDistance;
     [SerializeField] private float _popupSpeed;
+    [SerializeField] private IObjectPooler _pooler;
     //
 
     //internal
@@ -20,10 +20,11 @@ public class TowerCard<TTower> : MonoBehaviour, IPoolableObject, IPointerEnterHa
 
     //dependencies
     private TowerBuildingService _instantiationService;
+    private Type _towerType;
     //
 
-    [Inject]
-    public void Initialize(TowerBuildingService service)
+   // [Inject]
+    public void Initialize(TowerBuildingService service, Type towerType)
     {
         _instantiationService = service;
     }
@@ -64,11 +65,10 @@ public class TowerCard<TTower> : MonoBehaviour, IPoolableObject, IPointerEnterHa
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        _instantiationService.InstantiateTowerFromCard<TTower>(this);
+        _instantiationService.InstantiateTowerFromCard(this, _towerType);
+        gameObject.SetActive(false);
     }
 
-    public void ReturnToPool()
-    {
-        throw new NotImplementedException();
-    }
+    public void ReturnToPool() =>
+        _pooler.ReturnToPool(this);
 }

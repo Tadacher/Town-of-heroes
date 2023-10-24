@@ -1,12 +1,15 @@
 ﻿using Services.Input;
 using UnityEngine;
+using Zenject;
 
 namespace Infrastructure
 {
-    public class InputReciever : MonoBehaviour
+    public class InputReciever : MonoBehaviour, IInputReciever
     {
-        private readonly IInputListener _inputListener;
-        public InputReciever(IInputListener inputListener) => 
+        private IInputListener _inputListener;
+       
+       [Inject]
+        public void Initialize(IInputListener inputListener) => 
             _inputListener = inputListener;
 
         private void Update()

@@ -12,10 +12,11 @@ public class WaveGenerator
     private Action[] GenerateSpawnCommands()
     {
         Action[] abstractEnemies = new Action[] {
-        () => _enemyInstantiationService.ReturnObject<Gobbo>(),
-        () => _enemyInstantiationService.ReturnObject<Gobbo>(),
-        () => _enemyInstantiationService.ReturnObject<Gobbo>()};
+        () => _enemyInstantiationService.ReturnObject(typeof(Gobbo)),
+        () => _enemyInstantiationService.ReturnObject(typeof(Gobbo)),
+        () => _enemyInstantiationService.ReturnObject(typeof(Gobbo))};
         return abstractEnemies;
     }
-    public Wave GenerateWave() => new(1f, GenerateSpawnCommands());
+    public Wave GenerateWave() => 
+        new(1f, GenerateSpawnCommands());
 }

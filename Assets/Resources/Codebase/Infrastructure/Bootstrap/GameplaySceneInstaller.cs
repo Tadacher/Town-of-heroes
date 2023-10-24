@@ -1,5 +1,8 @@
 ﻿using BootStrap;
+using Codebase.MonobehaviourComponents;
+using Codebase.Services.CardGeneration;
 using Services;
+using Services.TowerBuilding;
 using UnityEngine;
 
 namespace Infrastructure
@@ -10,6 +13,7 @@ namespace Infrastructure
         [SerializeField] private EnemySpawnPosMarker _spawnPosMarker;
         [SerializeField] private EnemyPrefabContainer _enemyPrefabContainer;
         [SerializeField] private SceneBootstrapper _sceneBootstrapper;
+        [SerializeField] private TowerCardSpawnMarker _towerCardSpawnMarker;
         public override void InstallBindings()
         {
             //scriptableObjects
@@ -17,14 +21,16 @@ namespace Infrastructure
 
             //Unity components
             BindUnityComponent(_audioSource);
-
+            
             //Monobeh
             BindMonobehaviour(_spawnPosMarker);
-
+            BindMonobehaviour(_towerCardSpawnMarker);
             //Non-monobeh
+            BindService<TowerBuildingService>();
+            BindService<TowerInstantiationService>();
+            BindService<CardInstantiationService>().NonLazy();
             BindService<DamageTextService>();
             BindService<WaveService>();
-
             //Non monobeh abstract
             BindAbstractClass<AbstractSoundPlayerService, SimpleSoundPlayerService>();
 

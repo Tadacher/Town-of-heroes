@@ -8,18 +8,25 @@ namespace Services.TowerBuilding
     public class TowerBuildingService
     {
         private TowerInstantiationService _towerInstantiatingService;
+
+
         private AbstractInputService _inputService;
         private AbstractTower _abstractTower;
         private IPoolableObject _activeCard;
-        public void InstantiateTowerFromCard<TTower>(TowerCard<TTower> towerCard) where TTower : AbstractTower
+        public TowerBuildingService(TowerInstantiationService towerInstantiatingService, AbstractInputService inputService = null)
         {
-            AbstractTower tower = GetTowerGhost<TTower>();
+            _towerInstantiatingService = towerInstantiatingService;
+            _inputService = inputService;
+        }
+        public void InstantiateTowerFromCard(TowerCard towerCard, Type type)
+        {
+            AbstractTower tower = GetTowerGhost(type);
             _activeCard = towerCard;
             tower.StartFollowPointer();
-            _inputService.OnPointerUp += ReleaseActiveTower;
+            _inputService.OnPointerUp += TryReleaseActiveTower;
         }
 
-        private void ReleaseActiveTower()
+        private void TryReleaseActiveTower()
         {
             if (CanBePlacedAtPointer())
             {
@@ -37,17 +44,18 @@ namespace Services.TowerBuilding
 
         private void PlaceActiveTower()
         {
-            throw new NotImplementedException();
-            _abstractTower.StopFollowingPointer();
+            //throw new NotImplementedException();
+            //_abstractTower.StopFollowingPointer();
         }
 
         private bool CanBePlacedAtPointer()
         {
-            throw new NotImplementedException();
+            return true;
+            //throw new NotImplementedException();
         }
 
-        private AbstractTower GetTowerGhost<TTower>() where TTower : AbstractTower => 
-            _towerInstantiatingService.ReturnObject<TTower>().AsGhost();
+        private AbstractTower GetTowerGhost(Type type) => 
+            _towerInstantiatingService.ReturnObject(type).AsGhost();
 
 
     }
