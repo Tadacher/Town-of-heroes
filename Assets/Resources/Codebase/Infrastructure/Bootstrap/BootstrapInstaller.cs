@@ -12,7 +12,7 @@ namespace Infrastructure
         private InputReciever _inputReciever;
         public override void InstallBindings()
         {
-            BindInterfacesAndSelfto<DesctopInput>();
+            BindInterfacesAndSelfto<DesctopInput, AbstractInputService>();
             
             InitializeCoroutineRunner();
             InitializeInputListener();

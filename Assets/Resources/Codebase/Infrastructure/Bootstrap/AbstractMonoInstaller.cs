@@ -21,5 +21,10 @@ namespace Infrastructure
             => Container.Bind<TDependency>().FromInstance(instance).AsSingle();
         protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfto<TService>() where TService : class => 
             Container.BindInterfacesAndSelfTo<TService>().AsSingle();
+        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfto<TService, TAbstractService>() where TService : TAbstractService where TAbstractService : class
+        {
+            TService service = Container.Instantiate<TService>();
+            return Container.BindInterfacesAndSelfTo<TAbstractService>().FromInstance(service);
+        }
     }
 }

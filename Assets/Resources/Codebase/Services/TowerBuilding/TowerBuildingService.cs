@@ -11,7 +11,7 @@ namespace Services.TowerBuilding
 
 
         private AbstractInputService _inputService;
-        private AbstractTower _abstractTower;
+        private AbstractTower _activeTower;
         private IPoolableObject _activeCard;
         public TowerBuildingService(TowerInstantiationService towerInstantiatingService, AbstractInputService inputService = null)
         {
@@ -20,9 +20,10 @@ namespace Services.TowerBuilding
         }
         public void InstantiateTowerFromCard(TowerCard towerCard, Type type)
         {
-            AbstractTower tower = GetTowerGhost(type);
+           _activeTower = GetTowerGhost(type);
+           
             _activeCard = towerCard;
-            tower.StartFollowPointer();
+            _activeTower.StartFollowPointer();
             _inputService.OnPointerUp += TryReleaseActiveTower;
         }
 
@@ -36,16 +37,15 @@ namespace Services.TowerBuilding
             else
             {
                 ((MonoBehaviour)_activeCard).gameObject.SetActive(true);
-                _abstractTower.StopFollowingPointer();
-                _abstractTower.ReturnToPool();
+                _activeTower.StopFollowingPointer();
+                _activeTower.ReturnToPool();
             }
-           
+            _inputService.OnPointerUp -= TryReleaseActiveTower;
         }
 
         private void PlaceActiveTower()
-        {
-            //throw new NotImplementedException();
-            //_abstractTower.StopFollowingPointer();
+        {          
+            _activeTower.AsUnGhost().StopFollowingPointer();
         }
 
         private bool CanBePlacedAtPointer()

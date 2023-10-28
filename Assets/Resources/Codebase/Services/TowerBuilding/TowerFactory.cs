@@ -1,34 +1,37 @@
 using Core.Towers;
+using Services.Input;
+using UnityEngine;
 
 public class TowerFactory : AbstractPoolerFactory<AbstractTower>
 {
-    public override AbstractTower GetObject()
+    protected readonly AbstractTower _towerPrefab;
+    protected readonly AbstractInputService _abstractInputService;
+
+    public TowerFactory(AbstractTower towerPrefab, AbstractInputService abstractInputService) : base()
     {
-        throw new System.NotImplementedException();
+        _towerPrefab = towerPrefab;
+        _abstractInputService = abstractInputService;
     }
 
-    public override void ReturnToPool(IPoolableObject returnable)
-    {
-        throw new System.NotImplementedException();
-    }
+    public override AbstractTower GetObject() 
+        => _pool.Get();
 
-    protected override void ActionOnDestroy(AbstractTower poolable)
-    {
-        throw new System.NotImplementedException();
-    }
+    public override void ReturnToPool(IPoolableObject returnable) => 
+        _pool.Release((AbstractTower)returnable);
 
-    protected override void ActionOnGet(AbstractTower poolable)
-    {
-        throw new System.NotImplementedException();
-    }
+    protected override void ActionOnDestroy(AbstractTower poolable) => 
+        Object.Destroy(poolable.gameObject);
 
-    protected override void ActionOnRelease(AbstractTower type)
-    {
-        throw new System.NotImplementedException();
-    }
+    protected override void ActionOnGet(AbstractTower poolable) =>
+        poolable.gameObject.SetActive(true);
+
+    protected override void ActionOnRelease(AbstractTower type) => 
+        type.gameObject.SetActive(false);
 
     protected override AbstractTower CreateNew()
     {
-        throw new System.NotImplementedException();
+        AbstractTower tower = GameObject.Instantiate(_towerPrefab, null);
+        tower.Initialize(this, _abstractInputService);
+        return tower;
     }
 }

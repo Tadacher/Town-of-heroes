@@ -11,7 +11,6 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerEnterHandler, I
     [SerializeField] private RectTransform _cardImageTransform;
     [SerializeField] private float _popupDistance;
     [SerializeField] private float _popupSpeed;
-    [SerializeField] private IObjectPooler _pooler;
     //
 
     //internal
@@ -19,14 +18,17 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerEnterHandler, I
     //
 
     //dependencies
+    private IObjectPooler _pooler;
     private TowerBuildingService _instantiationService;
     private Type _towerType;
     //
 
-   // [Inject]
-    public void Initialize(TowerBuildingService service, Type towerType)
+
+    public void Initialize(TowerBuildingService service, IObjectPooler pooler, Type towerType)
     {
+        _pooler = pooler;
         _instantiationService = service;
+        _towerType = towerType;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

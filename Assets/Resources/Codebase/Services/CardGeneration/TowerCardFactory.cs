@@ -39,7 +39,7 @@ namespace Services.CardGeneration
         protected override TowerCard CreateNew()
         {
             TowerCard returnable = GameObject.Instantiate(_cardPrefab, null);
-            returnable.Initialize(_towerBuildingService, _type);
+            returnable.Initialize(_towerBuildingService, this, _type);
             return returnable;
         }
     }

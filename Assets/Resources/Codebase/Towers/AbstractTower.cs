@@ -31,20 +31,25 @@ namespace Core.Towers
         protected AbstractProjectileFactory _projectileFactory;
         protected AbstractTowerAttackModule _attackModule;
         protected Collider2D[] _availableEnemies;
+        protected readonly Color _ghostColor = new Color(0, 0, 0, 0.4f);
         //
 
         //dependencies
         protected IObjectPooler _objectPooler;
 
         public AbstractTower AsGhost()
-        {
-            
+        {  
             MakeGhost();
             return this;
         }
-        protected virtual void Initialize(IObjectPooler objectPooler, AbstractInputService abstractInputService)
+        public AbstractTower AsUnGhost()
         {
-            //_pointerFollower.Initialize(abstractInputService);
+            MakeUnGhost();
+            return this;
+        }
+        public virtual void Initialize(IObjectPooler objectPooler, AbstractInputService abstractInputService)
+        {
+            _pointerFollower.Initialize(abstractInputService);
             _availableEnemies = new Collider2D[20];
             _attackDamage = _towerStats.AttackDamage;
             _attackRange = _towerStats.AttackRange;
@@ -90,7 +95,7 @@ namespace Core.Towers
             _pointerFollower.enabled = true;
 
         public void StopFollowingPointer() =>
-            _pointerFollower.enabled = true;
+            _pointerFollower.enabled = false;
 
         protected abstract void Attack();
         protected abstract void InitializeProjectileFactory(ProjectileBehaviour projectileBehaviour);
@@ -155,7 +160,13 @@ namespace Core.Towers
         private void MakeGhost()
         {
             _isGhost = true;
-            _spriteRenderer.color -= new Color(0, 0, 0, 0.4f);
+            _spriteRenderer.color -= _ghostColor;
+        }
+
+        private void MakeUnGhost()
+        {
+            _isGhost = false;
+            _spriteRenderer.color += _ghostColor;
         }
     }
 }
