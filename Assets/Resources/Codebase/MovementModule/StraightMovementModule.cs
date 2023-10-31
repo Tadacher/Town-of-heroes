@@ -18,7 +18,6 @@ namespace MovementModules
 
         protected override IEnumerator MovementCoroutine()
         {
-            Debug.Log("move");
             while ((_unitTransform.position - _targetV3).magnitude >= 0.1)
             {
                 _unitTransform.position += (_targetV3 - _unitTransform.position).normalized * _speed * Time.deltaTime;

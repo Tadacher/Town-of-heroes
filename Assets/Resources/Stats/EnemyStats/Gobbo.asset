@@ -15,7 +15,7 @@ MonoBehaviour:
   HitPoints: 4
   Damage: 1
   ExpPerKill: 3
-  Speed: 0.5
+  Speed: 2
   Name: BasicGobbo
   HitPointsPerLevel: 1
   DamagePerLevel: 1

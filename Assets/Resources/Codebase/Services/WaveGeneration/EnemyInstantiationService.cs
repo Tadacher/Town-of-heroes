@@ -1,27 +1,38 @@
 ﻿using Services;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyInstantiationService
+public class EnemyInstantiationService : AbstractInstantiationService<AbstractEnemy>
 {
-    private Dictionary<Type, EnemyFactory> _factoryList;
-    public EnemyFactory _goblinFactory;
-    public EnemyFactory _goblinTrapperFactory;
+    private AudioSource _audioSource;
+    private DamageTextService _damageTextService;
+    private Transform _spawnPosition;
 
+    private const string _enemyPrefabPath = "Prefabs/Enemies/";
 
-    public EnemyInstantiationService(EnemyPrefabContainer enemyContainer, AudioSource audioSource, DamageTextService damageTextService)
+    public EnemyInstantiationService(AudioSource audioSource, DamageTextService damageTextService, EnemySpawnPosMarker enemySpawnPosMarker) : base(_enemyPrefabPath)
     {
-        _factoryList = new();
-        //Goblin
-        _factoryList.Add(typeof(Gobbo), new(enemyContainer.Goblin, audioSource, damageTextService));
-
-        //GoblinTrapper
-        _factoryList.Add(typeof(GobboTrapper), new(enemyContainer.GoblinTrapper, audioSource, damageTextService));
+        _spawnPosition = enemySpawnPosMarker.transform;
+        
+        _audioSource = audioSource;
+        _damageTextService = damageTextService;
     }
 
-    public void ReturnObject(Type type, Transform spawnpos)
+    public override AbstractEnemy ReturnObject(Type type)
     {
-        _factoryList[type]?.ReturnObject(spawnpos);
+        if (!_factories.ContainsKey(type))
+        {
+            AddNewFactory(type);
+        }
+        var returnable = _factories[type].GetObject();
+        returnable.transform.position = _spawnPosition.position;
+        return returnable;
     }
+
+    protected override void AddNewFactory(Type type) => 
+        _factories.Add(type, GetNewFactory(type));
+
+    protected override IFactory<AbstractEnemy> GetNewFactory(Type productType) =>
+        new EnemyFactory(_audioSource, _damageTextService, LoadProductPrefab(productType));
+
 }

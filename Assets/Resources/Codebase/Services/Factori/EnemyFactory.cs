@@ -1,36 +1,39 @@
 using Services;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFactory : AbstractAbstractEnemyFactory
+public class EnemyFactory : AbstractPoolerFactory<AbstractEnemy> 
 {
-    
     private readonly AudioSource _audioSource;
     private readonly DamageTextService _damageTextService;
+    protected AbstractEnemy _enemyPrefab;
+    protected GameObject _prototype;
 
-    public EnemyFactory(AbstractEnemy enemyPrefab, AudioSource audioSource, DamageTextService damageTextService)
+    public EnemyFactory(AudioSource audioSource, DamageTextService damageTextService, AbstractEnemy enemyPrefab) : base()
     {
-        _objectPoolList = new();
-        _enemyPrefab = enemyPrefab;
         _audioSource = audioSource;
         _damageTextService = damageTextService;
+        _enemyPrefab = enemyPrefab;
     }
 
-    public override AbstractEnemy ReturnObject(Transform spawnpos)
-    {
-        if (TryGetObjectFromList(out AbstractEnemy result))
-            result.ReInitialize(spawnpos.position);
-        else
-            result = ConstructAndPoolNew(spawnpos);
-        return result;
-    }
+    public override AbstractEnemy GetObject() =>
+        _pool.Get();
 
-    private AbstractEnemy ConstructAndPoolNew(Transform spawnpos)
+    public override void ReturnToPool(IPoolableObject poolable) => 
+        _pool.Release((AbstractEnemy)poolable);
+
+    protected override void ActionOnDestroy(AbstractEnemy poolable) => 
+        GameObject.Destroy(poolable.gameObject);
+
+    protected override void ActionOnGet(AbstractEnemy poolable) => 
+        poolable.gameObject.SetActive(true);
+
+    protected override void ActionOnRelease(AbstractEnemy poolable) => 
+        poolable.gameObject.SetActive(false);
+
+    protected override AbstractEnemy CreateNew()
     {
-        AbstractEnemy newObject = GameObject.Instantiate(_enemyPrefab, spawnpos.position, Quaternion.identity);
-        newObject.Initialize(_audioSource, _damageTextService);
-        _objectPoolList.Add(newObject);
-        return newObject;
+        AbstractEnemy enemy = GameObject.Instantiate(_enemyPrefab, null);
+        enemy.Initialize(_audioSource, _damageTextService, this);
+        return enemy;
     }
 }

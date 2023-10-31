@@ -1,26 +1,33 @@
-﻿using UnityEngine;
-public class ArcherTower : AbstractTower
+﻿
+using UnityEngine;
+
+namespace Core.Towers
 {
-    private void Awake()
+    public class ArcherTower : AbstractTower
     {
-        InitializeBase();
-        InitializeAttackModule<SimpleTowerAttackModule>();
-        InitializeProjectileFactory(_towerStats.ProjectilePrefab);
-        RefreshAttackDelay();
-    }
-    private void Update()
-    {
-        FinClosestTargetIfNeeded();
-        CountAttackDelay();
-        TryToAttack();
-    }
+        private void Awake()
+        {
+            InitializeAttackModule<SimpleTowerAttackModule>();
+            InitializeProjectileFactory(_towerStats.ProjectilePrefab);
+            Initialize(null, null);
+            RefreshAttackDelay();
+        }
+        protected override void Update()
+        {
+            base.Update();
+            Debug.Log(_currentEnemy);
+            FinClosestTargetIfNeeded();
+            CountAttackDelay();
+            TryToAttack();
+        }
 
-    protected override void Attack()
-    {
-        _projectileFactory.ReturnProjectile(_towerStats.ProjectileSpeed, _currentEnemy.transform, transform.position, () => { TryDealDamageToCurrentEnemy(); });
-        PlayAttackSound();
-        RefreshAttackDelay();
-    }
+        protected override void Attack()
+        {
+            _projectileFactory.ReturnProjectile(_towerStats.ProjectileSpeed, _currentEnemy.transform, transform.position, () => { TryDealDamageToCurrentEnemy(); });
+            PlayAttackSound();
+            RefreshAttackDelay();
+        }
 
-    protected override void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab) => _projectileFactory = new SimpleProjectileFactory(projectilePrefab);
+        protected override void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab) => _projectileFactory = new SimpleProjectileFactory(projectilePrefab);
+    }
 }

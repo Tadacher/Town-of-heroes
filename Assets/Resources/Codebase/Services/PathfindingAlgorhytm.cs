@@ -16,7 +16,7 @@ public class PathfindingAlgorhytm : MonoBehaviour
     private void Start()
     {
         FindPath();
-        TileData tileData = new TileData();
+        
        
         
     }

@@ -1,4 +1,6 @@
-﻿namespace Towers
+﻿using Core.Towers;
+
+namespace Towers
 {
     public class ShrapnelTowerAttakModule : AbstractTowerAttackModule
     {

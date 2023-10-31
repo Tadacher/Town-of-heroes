@@ -7,7 +7,6 @@ public class WaveService
 
     private float _interval;
 
-    private EnemyPrefabContainer _enemyPrefabContainer;
     private WaveGenerator _waveGenerator;
     private EnemyInstantiationService _enemyInstantiationService;
     private CancellationTokenSource _cancellationTokenSource;
@@ -16,29 +15,30 @@ public class WaveService
     private Task _waveSender;
     private Task _spawnerOfwawes;
   
-    public WaveService(EnemySpawnPosMarker spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemyPrefabContainer enemyPrefabContainer)
+    public WaveService(EnemySpawnPosMarker spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemySpawnPosMarker enemySpawnPosMarker)
     {
+        
         _cancellationTokenSource = new();
-        _enemyInstantiationService = new(enemyPrefabContainer, _audioSource, _damageTextService);
-        _waveGenerator = new(enemyPrefabContainer);
+        _enemyInstantiationService = new(_audioSource, _damageTextService, enemySpawnPosMarker);
+        _waveGenerator = new(_enemyInstantiationService);
 
         
         _interval = 5f;
 
         _spawnPosition = spawnPosition.transform;
-        _enemyPrefabContainer = enemyPrefabContainer;
     }
     public async void StartAsync()
     {
+        
         _waveSender = WaveSendingAsync(_cancellationTokenSource.Token);
         await _waveSender;
     }
 
     private async Task WaveSendingAsync(CancellationToken token)
     {
-        bool flag = false;
-        while (!flag)
+        while (true)
         {
+         //   Debug.Log("NewWave");
            // _spawnerOfwawes = SendAWaweAsync(_waveGenerator.GenerateWave(), token);
             _spawnerOfwawes = SendAWaweAsync(_waveGenerator.GenerateWave(), token);
             await Task.Delay((int)(_interval*1000), token);         
@@ -53,11 +53,10 @@ public class WaveService
 
     private async Task SendAWaweAsync(Wave wave, CancellationToken token)
     {
-        for (int count = 0; count < wave.Enemies.Length; count++)
+        for (int count = 0; count < wave.EnemyCreationCommands.Length; count++)
         {
-            _enemyInstantiationService.ReturnObject(wave.Enemies[0], _spawnPosition);
+            wave.EnemyCreationCommands[count].Invoke();
             await Task.Delay((int)(wave.Delay * 1000));
         }
     }
-    
 }
