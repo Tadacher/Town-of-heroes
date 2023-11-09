@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5209098480618504602}
   - component: {fileID: 5209098480618504603}
   - component: {fileID: 4330898138467402901}
+  - component: {fileID: 6863590121437015299}
   m_Layer: 5
   m_Name: ArcherTower
   m_TagString: Untagged
@@ -91,8 +92,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cardImageTransform: {fileID: 5209098481229664223}
-  _popupDistance: 2
-  _popupSpeed: 10
+--- !u!114 &6863590121437015299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5209098480618504606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f78ffd496a05f1446ac4c19b21945279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _popupDistance: 4
+  _popupSpeedX: 0
+  _popupSpeedY: 10
+  _popupObjectTransform: {fileID: 5209098481229664223}
 --- !u!1 &5209098481229664220
 GameObject:
   m_ObjectHideFlags: 0

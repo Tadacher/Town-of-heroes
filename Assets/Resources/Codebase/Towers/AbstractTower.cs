@@ -128,9 +128,8 @@ namespace Core.Towers
         protected virtual void TryDealDamageToCurrentEnemy()
         {
             if (Vector3.Distance(transform.position, _currentEnemy.transform.position) <= _attackRange)
-            {
                 _attackModule.DealDamage(_currentEnemy, _attackDamage, this);
-            }
+
             else
                 _currentEnemy = null;
         }

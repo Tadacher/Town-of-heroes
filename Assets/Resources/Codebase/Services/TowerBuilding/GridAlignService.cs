@@ -40,7 +40,6 @@ namespace Services.GridSystem
                 _cells[6, i] = new RoadCell();
         }
 
-
         private Vector2Int PosToCellCoords(Vector3 position)
         {
             int x = (int)(position.x / _gridsize);
@@ -48,6 +47,5 @@ namespace Services.GridSystem
             Debug.Log(x + " " + y);
             return new Vector2Int(x, y);
         }
-
     }
 }

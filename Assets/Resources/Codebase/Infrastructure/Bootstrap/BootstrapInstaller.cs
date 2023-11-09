@@ -1,5 +1,4 @@
-﻿using Assets.Resources.Codebase.Infrastructure;
-using Services.Input;
+﻿using Services.Input;
 using UnityEngine;
 
 namespace Infrastructure
