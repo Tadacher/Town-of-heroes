@@ -1,4 +1,5 @@
 using Core.Towers;
+using Services.GridSystem;
 using Services.Input;
 using UnityEngine;
 
@@ -6,9 +7,11 @@ public class TowerFactory : AbstractPoolerFactory<AbstractTower>
 {
     protected readonly AbstractTower _towerPrefab;
     protected readonly AbstractInputService _abstractInputService;
+    protected readonly GridAlignService _gridAlignService;
 
-    public TowerFactory(AbstractTower towerPrefab, AbstractInputService abstractInputService) : base()
+    public TowerFactory(AbstractTower towerPrefab, AbstractInputService abstractInputService, GridAlignService gridAlignService) : base()
     {
+        _gridAlignService = gridAlignService;
         _towerPrefab = towerPrefab;
         _abstractInputService = abstractInputService;
     }
@@ -31,7 +34,7 @@ public class TowerFactory : AbstractPoolerFactory<AbstractTower>
     protected override AbstractTower CreateNew()
     {
         AbstractTower tower = GameObject.Instantiate(_towerPrefab, null);
-        tower.Initialize(this, _abstractInputService);
+        tower.Initialize(this, _abstractInputService, _gridAlignService);
         return tower;
     }
 }

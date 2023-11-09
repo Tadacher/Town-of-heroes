@@ -2,6 +2,7 @@
 using Codebase.MonobehaviourComponents;
 using Codebase.Services.CardGeneration;
 using Services;
+using Services.GridSystem;
 using Services.TowerBuilding;
 using UnityEngine;
 
@@ -31,6 +32,7 @@ namespace Infrastructure
             BindService<CardInstantiationService>().NonLazy();
             BindService<DamageTextService>();
             BindService<WaveService>();
+            BindService<GridAlignService>();
             //Non monobeh abstract
             BindAbstractClass<AbstractSoundPlayerService, SimpleSoundPlayerService>();
 

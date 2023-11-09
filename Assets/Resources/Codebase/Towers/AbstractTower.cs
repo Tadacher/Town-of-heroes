@@ -1,10 +1,11 @@
+using Services.GridSystem;
 using Services.Input;
 using Towers;
 using UnityEngine;
 
 namespace Core.Towers
 {
-    public abstract class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttacker, IPoolableObject
+    public abstract class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttacker, IPoolableObject, IGridCellObject
     {
         public virtual float Experience { get; protected private set; }
         public virtual int Level { get; protected private set; }
@@ -31,6 +32,7 @@ namespace Core.Towers
         protected AbstractProjectileFactory _projectileFactory;
         protected AbstractTowerAttackModule _attackModule;
         protected Collider2D[] _availableEnemies;
+        protected GridAlignService _gridAlignService;
         protected readonly Color _ghostColor = new Color(0, 0, 0, 0.4f);
         //
 
@@ -47,9 +49,11 @@ namespace Core.Towers
             MakeUnGhost();
             return this;
         }
-        public virtual void Initialize(IObjectPooler objectPooler, AbstractInputService abstractInputService)
+        public virtual void Initialize(IObjectPooler objectPooler, AbstractInputService abstractInputService, GridAlignService gridAlignService)
         {
-            _pointerFollower.Initialize(abstractInputService);
+            _objectPooler = objectPooler;
+            _gridAlignService = gridAlignService;
+            _pointerFollower.Initialize(abstractInputService, gridAlignService);
             _availableEnemies = new Collider2D[20];
             _attackDamage = _towerStats.AttackDamage;
             _attackRange = _towerStats.AttackRange;
@@ -94,8 +98,11 @@ namespace Core.Towers
         public void StartFollowPointer() =>
             _pointerFollower.enabled = true;
 
-        public void StopFollowingPointer() =>
+        public void StopFollowingPointer()
+        {
+            _gridAlignService.Insert(this, transform.position);
             _pointerFollower.enabled = false;
+        }
 
         protected abstract void Attack();
         protected abstract void InitializeProjectileFactory(ProjectileBehaviour projectileBehaviour);
