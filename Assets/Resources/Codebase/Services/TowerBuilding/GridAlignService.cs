@@ -9,6 +9,7 @@ namespace Services.GridSystem
         private const float _gridsize = 1f;
         private const int _gridSizeX = 32;
         private const int _gridSizeY = 32;
+
         private static Vector2 _offset = new Vector2(0.5f, 0.5f);
         private IGridCellObject[,] _cells;
 
@@ -22,8 +23,9 @@ namespace Services.GridSystem
             Vector2Int cellCoords = PosToCellCoords(position);
             return Equals(_cells[cellCoords.x, cellCoords.y], null);
         }
+
         public Vector3 PosToGrid(Vector2 pos) => 
-            (Vector2)PosToCellCoords(pos + _offset);
+            (Vector2)PosToCellCoords(pos) + _offset;
 
         public void Insert(IGridCellObject insertable, Vector3 position)
         {
@@ -35,9 +37,7 @@ namespace Services.GridSystem
         {
             //place road Cells
             for (int i = 0; i < _gridSizeY - 1; i++)
-            {
                 _cells[6, i] = new RoadCell();
-            }
         }
 
 
