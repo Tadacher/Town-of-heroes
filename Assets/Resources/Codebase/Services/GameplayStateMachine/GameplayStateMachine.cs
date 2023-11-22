@@ -20,7 +20,7 @@ namespace Infrastructure
         protected override TState ChangeState<TState>()
         {
             TState state = base.ChangeState<TState>();
-            OnStateChanged.Invoke(state);
+            OnStateChanged?.Invoke(state);
             return state;
         }
     }

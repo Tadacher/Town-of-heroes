@@ -31,6 +31,7 @@ namespace Services.GridSystem
         {
             Vector2Int cellCoords = PosToCellCoords(position);
             _cells[cellCoords.x, cellCoords.y] = insertable;
+            Debug.Log(_cells[cellCoords.x, cellCoords.y]);
         }
 
         private void InitCellContent()

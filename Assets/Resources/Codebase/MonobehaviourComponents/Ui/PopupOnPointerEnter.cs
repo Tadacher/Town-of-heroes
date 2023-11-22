@@ -18,7 +18,7 @@ public class PopupOnPointerEnter : MonoBehaviour, IPointerEnterHandler, IPointer
     private void Start()
     {
         _direction = new Vector3(_popupSpeedX, _popupSpeedY, 0f);
-        _origPos = transform.localPosition;
+        _origPos = _popupObjectTransform.localPosition;
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -37,7 +37,7 @@ public class PopupOnPointerEnter : MonoBehaviour, IPointerEnterHandler, IPointer
 
     private IEnumerator PopupCoroutine()
     {
-        while (Vector3.Distance(transform.localPosition, _origPos) < _popupDistance)
+        while (Vector2.Distance(_popupObjectTransform.localPosition, _origPos) < _popupDistance)
         {
             _popupObjectTransform.localPosition += _direction * Time.deltaTime;
             yield return null;
@@ -46,7 +46,7 @@ public class PopupOnPointerEnter : MonoBehaviour, IPointerEnterHandler, IPointer
 
     private IEnumerator PopdownCoroutine()
     {
-        while ((transform.localPosition - _origPos).sqrMagnitude > 0.1f)
+        while (Vector2.Distance(_popupObjectTransform.localPosition, _origPos) > 1f)
         {
             _popupObjectTransform.localPosition -= _direction * Time.deltaTime;
             yield return null;

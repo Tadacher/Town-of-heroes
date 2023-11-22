@@ -1,5 +1,6 @@
 ﻿using System;
 using Codebase.MonobehaviourComponents;
+using Infrastructure;
 using Services.CardGeneration;
 using Services.TowerBuilding;
 using UnityEngine;
@@ -11,8 +12,10 @@ namespace Codebase.Services.CardGeneration
         private const string _prefabpath = "Prefabs/Cards/"; 
         private Transform _cardParent;
         private readonly TowerBuildingService _towerBuildingService;
-        public CardInstantiationService(TowerBuildingService towerBuildingService, TowerCardSpawnMarker cardparent) : base(_prefabpath)
+        private readonly GameplayStateMachine _gameplayStateMachine;
+        public CardInstantiationService(TowerBuildingService towerBuildingService, TowerCardSpawnMarker cardparent, GameplayStateMachine gameplayStateMachine) : base(_prefabpath)
         {
+            _gameplayStateMachine = gameplayStateMachine;
             _towerBuildingService = towerBuildingService;
             _cardParent = cardparent.transform;
         }
@@ -32,6 +35,6 @@ namespace Codebase.Services.CardGeneration
             _factories.Add(type, GetNewFactory(type));
 
         protected override IFactory<TowerCard> GetNewFactory(Type type) => 
-            new TowerCardFactory(type, LoadProductPrefab(type), _towerBuildingService);
+            new TowerCardFactory(type, LoadProductPrefab(type), _towerBuildingService, _gameplayStateMachine);
     }
 }
