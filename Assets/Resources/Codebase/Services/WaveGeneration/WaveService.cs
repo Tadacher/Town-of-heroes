@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using System.Collections;
+using Infrastructure;
 
 public class WaveService
 {
@@ -14,7 +15,7 @@ public class WaveService
     private CancellationTokenSource _cancellationTokenSource;
     private Transform _spawnPosition;
    
-    private CoroutineRunner _coroutineRunner;
+    private ICoroutineRunner _coroutineRunner;
 
     private Coroutine _waveSender;
     private Coroutine _spawnerOfwawes;
@@ -23,9 +24,9 @@ public class WaveService
         EnemySpawnPosMarker spawnPosition,
         AudioSource _audioSource,
         Services.DamageTextService _damageTextService,
-        CoroutineRunner coroutineRunner)
+        ICoroutineRunner coroutineRunner)
     {
-        
+        _coroutineRunner = coroutineRunner;
         _cancellationTokenSource = new();
         _enemyInstantiationService = new(_audioSource, _damageTextService, spawnPosition);
         _waveGenerator = new(_enemyInstantiationService);
