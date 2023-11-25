@@ -104,9 +104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f78ffd496a05f1446ac4c19b21945279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _popupDistance: 4
+  _popupDistance: 16
   _popupSpeedX: 0
-  _popupSpeedY: 10
+  _popupSpeedY: 90
   _popupObjectTransform: {fileID: 5209098481229664223}
 --- !u!1 &5209098481229664220
 GameObject:

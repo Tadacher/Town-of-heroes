@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Threading;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
+using System.Collections;
 
 public class WaveService
 {
@@ -12,14 +14,20 @@ public class WaveService
     private CancellationTokenSource _cancellationTokenSource;
     private Transform _spawnPosition;
    
-    private Task _waveSender;
-    private Task _spawnerOfwawes;
+    private CoroutineRunner _coroutineRunner;
+
+    private Coroutine _waveSender;
+    private Coroutine _spawnerOfwawes;
   
-    public WaveService(EnemySpawnPosMarker spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemySpawnPosMarker enemySpawnPosMarker)
+    public WaveService(
+        EnemySpawnPosMarker spawnPosition,
+        AudioSource _audioSource,
+        Services.DamageTextService _damageTextService,
+        CoroutineRunner coroutineRunner)
     {
         
         _cancellationTokenSource = new();
-        _enemyInstantiationService = new(_audioSource, _damageTextService, enemySpawnPosMarker);
+        _enemyInstantiationService = new(_audioSource, _damageTextService, spawnPosition);
         _waveGenerator = new(_enemyInstantiationService);
 
         
@@ -27,21 +35,16 @@ public class WaveService
 
         _spawnPosition = spawnPosition.transform;
     }
-    public async void StartAsync()
-    {
-        
-        _waveSender = WaveSendingAsync(_cancellationTokenSource.Token);
-        await _waveSender;
-    }
+    public void StartCoroutine() 
+        => _waveSender = _coroutineRunner.StartCoroutine(WaveSending());
 
-    private async Task WaveSendingAsync(CancellationToken token)
+    private IEnumerator WaveSending()
     {
         while (true)
         {
-         //   Debug.Log("NewWave");
-           // _spawnerOfwawes = SendAWaweAsync(_waveGenerator.GenerateWave(), token);
-            _spawnerOfwawes = SendAWaweAsync(_waveGenerator.GenerateWave(), token);
-            await Task.Delay((int)(_interval*1000), token);         
+            //   Debug.Log("NewWave");
+            _spawnerOfwawes = _coroutineRunner.StartCoroutine(SendWaweCoroutine(_waveGenerator.GenerateWave())); 
+            yield return new WaitForSeconds(_interval);         
         }
     }
 
@@ -51,12 +54,12 @@ public class WaveService
         _cancellationTokenSource.Cancel();
     }
 
-    private async Task SendAWaweAsync(Wave wave, CancellationToken token)
+    private IEnumerator SendWaweCoroutine(Wave wave)
     {
         for (int count = 0; count < wave.EnemyCreationCommands.Length; count++)
         {
             wave.EnemyCreationCommands[count].Invoke();
-            await Task.Delay((int)(wave.Delay * 1000));
+           yield return new WaitForSeconds(wave.Delay);
         }
     }
 }
