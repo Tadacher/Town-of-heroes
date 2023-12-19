@@ -9,9 +9,9 @@ namespace Services.TowerBuilding
     {
         private const string _prefabPath = "Prefabs/Towers/";
         private AbstractInputService _inputInputService;
-        private GridAlignService _alignService;
+        private BattleGridService _alignService;
 
-        public TowerInstantiationService(AbstractInputService abstractInputService, GridAlignService gridAlignService) : base(_prefabPath)
+        public TowerInstantiationService(AbstractInputService abstractInputService, BattleGridService gridAlignService) : base(_prefabPath)
         {
             _alignService = gridAlignService;
             _inputInputService = abstractInputService;

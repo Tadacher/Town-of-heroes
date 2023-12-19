@@ -13,15 +13,18 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     //
 
     //dependencies
-    private GameplayStateMachine _gameplayStateMachine;
+
     private IObjectPooler _pooler;
+    //TowerPlacing
     private TowerBuildingService _instantiationService;
     private Type _towerType;
-    private Coroutine _swithStateCoroutine;
-    private bool _battlefieldStated;
-    
-    //
+    //WorldCellPlacing
+    private WorldCellBuildingService _worldCellBuildingService;
+    private Type _worldCellType;
 
+    private GameplayStateMachine _gameplayStateMachine;
+    private bool _battlefieldStated;
+    private Coroutine _swithStateCoroutine;
 
     public void Initialize(TowerBuildingService service, GameplayStateMachine gameplayStateMachine, IObjectPooler pooler, Type towerType)
     {
@@ -53,7 +56,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     private void SwitchToMapState()
     {
         _battlefieldStated = false;
-        StartCoroutine(SwitchState());
+        _swithStateCoroutine = StartCoroutine(SwitchState());
     }
     private IEnumerator SwitchState()
     {
@@ -65,7 +68,11 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
         if(_battlefieldStated) 
         { 
-        
+           //set _battleFieldStateImg
+        }
+        else
+        {
+            //set _worldmapStateImg
         }
 
         while (transform.localScale.x < 1)

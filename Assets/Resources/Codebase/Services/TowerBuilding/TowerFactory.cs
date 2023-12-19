@@ -7,9 +7,9 @@ public class TowerFactory : AbstractPoolerFactory<AbstractTower>
 {
     protected readonly AbstractTower _towerPrefab;
     protected readonly AbstractInputService _abstractInputService;
-    protected readonly GridAlignService _gridAlignService;
+    protected readonly BattleGridService _gridAlignService;
 
-    public TowerFactory(AbstractTower towerPrefab, AbstractInputService abstractInputService, GridAlignService gridAlignService) : base()
+    public TowerFactory(AbstractTower towerPrefab, AbstractInputService abstractInputService, BattleGridService gridAlignService) : base()
     {
         _gridAlignService = gridAlignService;
         _towerPrefab = towerPrefab;

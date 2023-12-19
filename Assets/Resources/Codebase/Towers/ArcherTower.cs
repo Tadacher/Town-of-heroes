@@ -14,6 +14,10 @@ namespace Core.Towers
         protected override void Update()
         {
             base.Update();
+
+            if (_isGhost) 
+                return;
+            
             Debug.Log(_currentEnemy);
             FinClosestTargetIfNeeded();
             CountAttackDelay();

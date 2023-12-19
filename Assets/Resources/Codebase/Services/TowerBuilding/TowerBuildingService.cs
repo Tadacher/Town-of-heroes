@@ -9,12 +9,12 @@ namespace Services.TowerBuilding
     public class TowerBuildingService
     {
         private TowerInstantiationService _towerInstantiatingService;
-        private GridAlignService _alignerService;
+        private BattleGridService _alignerService;
 
         private AbstractInputService _inputService;
         private AbstractTower _activeTower;
         private IPoolableObject _activeCard;
-        public TowerBuildingService(TowerInstantiationService towerInstantiatingService, GridAlignService gridAlignService, AbstractInputService inputService = null)
+        public TowerBuildingService(TowerInstantiationService towerInstantiatingService, BattleGridService gridAlignService, AbstractInputService inputService = null)
         {
             _towerInstantiatingService = towerInstantiatingService;
             _inputService = inputService;

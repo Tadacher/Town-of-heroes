@@ -32,7 +32,7 @@ namespace Core.Towers
         protected AbstractProjectileFactory _projectileFactory;
         protected AbstractTowerAttackModule _attackModule;
         protected Collider2D[] _availableEnemies;
-        protected GridAlignService _gridAlignService;
+        protected BattleGridService _gridAlignService;
         protected readonly Color _ghostColor = new Color(0, 0, 0, 0.4f);
         //
 
@@ -49,7 +49,7 @@ namespace Core.Towers
             MakeUnGhost();
             return this;
         }
-        public virtual void Initialize(IObjectPooler objectPooler, AbstractInputService abstractInputService, GridAlignService gridAlignService)
+        public virtual void Initialize(IObjectPooler objectPooler, AbstractInputService abstractInputService, BattleGridService gridAlignService)
         {
             _objectPooler = objectPooler;
             _gridAlignService = gridAlignService;
@@ -127,6 +127,9 @@ namespace Core.Towers
 
         protected virtual void TryDealDamageToCurrentEnemy()
         {
+            if (_currentEnemy == null)
+                return;
+
             if (Vector3.Distance(transform.position, _currentEnemy.transform.position) <= _attackRange)
                 _attackModule.DealDamage(_currentEnemy, _attackDamage, this);
 

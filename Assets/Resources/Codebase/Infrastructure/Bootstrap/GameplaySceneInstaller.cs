@@ -48,7 +48,7 @@ namespace Infrastructure
             BindService<CardInstantiationService>().NonLazy();
             BindService<DamageTextService>();
             BindService<WaveService>();
-            BindService<GridAlignService>();
+            BindService<BattleGridService>();
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();
             BindService<UiService>().NonLazy();
