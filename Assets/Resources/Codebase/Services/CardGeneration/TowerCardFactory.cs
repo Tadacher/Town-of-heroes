@@ -1,5 +1,6 @@
 ﻿using Core.Towers;
 using Infrastructure;
+using Services.Factories;
 using Services.TowerBuilding;
 using System;
 using UnityEngine;
@@ -10,11 +11,18 @@ namespace Services.CardGeneration
     {
         private readonly GameplayStateMachine _gameplayStateMachine;
         private readonly TowerBuildingService _towerBuildingService;
+        private readonly WorldCellBuildingService _worldCellBuildingService;
+        
         private readonly TowerCard _cardPrefab;
         private Type _type;
 
-        public TowerCardFactory(Type type, TowerCard cardPrefab, TowerBuildingService towerBuildingService, GameplayStateMachine gameplayStateMachine) : base()
+        public TowerCardFactory(Type type,
+                                TowerCard cardPrefab,
+                                WorldCellBuildingService worldCellBuildingService,
+                                TowerBuildingService towerBuildingService,
+                                GameplayStateMachine gameplayStateMachine) : base()
         {
+            _worldCellBuildingService = worldCellBuildingService;
             _gameplayStateMachine = gameplayStateMachine;
             _type = type;
             Debug.Log(cardPrefab);
@@ -27,8 +35,6 @@ namespace Services.CardGeneration
 
         public override void ReturnToPool(IPoolableObject poolable) =>
             _pool.Release((TowerCard)poolable);
-
-       
 
         protected override void ActionOnDestroy(TowerCard poolable) => 
             GameObject.Destroy(poolable.gameObject);
@@ -44,7 +50,13 @@ namespace Services.CardGeneration
         protected override TowerCard CreateNew()
         {
             TowerCard returnable = GameObject.Instantiate(_cardPrefab, null);
-            returnable.Initialize(_towerBuildingService, _gameplayStateMachine, this, _type);
+            returnable.Initialize(
+                towerBuildingService: _towerBuildingService, 
+                worldCellBuildingService: _worldCellBuildingService,
+                gameplayStateMachine: _gameplayStateMachine, 
+                pooler: this, 
+                towerType: _type, 
+                worldCellType: null);
             return returnable;
         }
     }

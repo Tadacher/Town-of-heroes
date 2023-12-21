@@ -11,11 +11,17 @@ namespace Codebase.Services.CardGeneration
     {
         private const string _prefabpath = "Prefabs/Cards/"; 
         private Transform _cardParent;
+
+        private readonly WorldCellBuildingService _worldCellBuildingService;
         private readonly TowerBuildingService _towerBuildingService;
         private readonly GameplayStateMachine _gameplayStateMachine;
-        public CardInstantiationService(TowerBuildingService towerBuildingService, TowerCardSpawnMarker cardparent, GameplayStateMachine gameplayStateMachine) : base(_prefabpath)
+        public CardInstantiationService(TowerBuildingService towerBuildingService,
+                                        TowerCardSpawnMarker cardparent,
+                                        WorldCellBuildingService worldCellBuildingService,
+                                        GameplayStateMachine gameplayStateMachine) : base(_prefabpath)
         {
             _gameplayStateMachine = gameplayStateMachine;
+            _worldCellBuildingService = worldCellBuildingService;
             _towerBuildingService = towerBuildingService;
             _cardParent = cardparent.transform;
         }
@@ -35,6 +41,11 @@ namespace Codebase.Services.CardGeneration
             _factories.Add(type, GetNewFactory(type));
 
         protected override IFactory<TowerCard> GetNewFactory(Type type) => 
-            new TowerCardFactory(type, LoadProductPrefab(type), _towerBuildingService, _gameplayStateMachine);
+            new TowerCardFactory(
+                type: type,
+                cardPrefab: LoadProductPrefab(type),
+                worldCellBuildingService: _worldCellBuildingService,
+                towerBuildingService: _towerBuildingService,
+                gameplayStateMachine: _gameplayStateMachine);
     }
 }

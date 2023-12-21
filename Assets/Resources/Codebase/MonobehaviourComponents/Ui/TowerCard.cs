@@ -16,23 +16,35 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
     private IObjectPooler _pooler;
     //TowerPlacing
-    private TowerBuildingService _instantiationService;
+    private TowerBuildingService _towerInstantiationService;
     private Type _towerType;
     //WorldCellPlacing
-    private WorldCellBuildingService _worldCellBuildingService;
+    private WorldCellBuildingService _worldCellInstantiationService;
     private Type _worldCellType;
 
     private GameplayStateMachine _gameplayStateMachine;
     private bool _battlefieldStated;
     private Coroutine _swithStateCoroutine;
 
-    public void Initialize(TowerBuildingService service, GameplayStateMachine gameplayStateMachine, IObjectPooler pooler, Type towerType)
+    private readonly Type _worldCellMap = typeof(GrassField);
+
+    public void Initialize(TowerBuildingService towerBuildingService,
+                           WorldCellBuildingService worldCellBuildingService,
+                           GameplayStateMachine gameplayStateMachine,
+                           IObjectPooler pooler,
+                           Type towerType,
+                           Type worldCellType)
     {
         _gameplayStateMachine = gameplayStateMachine;
         _gameplayStateMachine.OnStateChanged += OnGameplayStateChanged;
         _pooler = pooler;
-        _instantiationService = service;
+
+
+        _towerInstantiationService = towerBuildingService;
         _towerType = towerType;
+
+        _worldCellInstantiationService = worldCellBuildingService;
+        _worldCellType = worldCellType; //TODO: move to getter class
     }
 
     protected void OnGameplayStateChanged(IExitableState state)
@@ -50,14 +62,17 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     private void SwitchToBattlefieldState()
     {
         _battlefieldStated = true;
+        ResetScale();
         _swithStateCoroutine = StartCoroutine(SwitchState());
     }
-
     private void SwitchToMapState()
     {
         _battlefieldStated = false;
+        ResetScale();
         _swithStateCoroutine = StartCoroutine(SwitchState());
     }
+    private void ResetScale() => transform.localScale = new Vector3(1, 1, 1);
+
     private IEnumerator SwitchState()
     {
         while (transform.localScale.x > 0)
@@ -84,9 +99,17 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        _instantiationService.InstantiateTowerFromCard(this, _towerType);
+        if(_battlefieldStated) 
+            InstantiateTowerGhost();
+        else
+            InstantiateWorldCellGhost();
+
         gameObject.SetActive(false);
     }
+
+    private void InstantiateWorldCellGhost() => _worldCellInstantiationService.InstantiateWorldCellFromCard(this, _worldCellType);
+
+    private void InstantiateTowerGhost() => _towerInstantiationService.InstantiateTowerFromCard(this, _towerType);
 
     public void ReturnToPool() =>
         _pooler.ReturnToPool(this);

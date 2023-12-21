@@ -21,7 +21,7 @@ namespace Infrastructure
 
         [SerializeField] private GameplayCanvasContainer _gameplayCanvasContainer;
         [SerializeField] private MapCanvasContainer _mapCanvasContainer;
-
+        
         public override void InstallBindings()
         {
             //scriptableObjects
@@ -44,8 +44,11 @@ namespace Infrastructure
             //Non-monobeh
             BindService<GameTimeService>();
             BindService<TowerBuildingService>();
+
             BindService<TowerInstantiationService>();
+            BindService<WorldCellBuildingService>();
             BindService<CardInstantiationService>().NonLazy();
+
             BindService<DamageTextService>();
             BindService<WaveService>();
             BindService<BattleGridService>();
