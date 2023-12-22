@@ -56,8 +56,10 @@ namespace Services.CardGeneration
                 gameplayStateMachine: _gameplayStateMachine, 
                 pooler: this, 
                 towerType: _type, 
-                worldCellType: null);
+                worldCellType: GetWorldCellType());
             return returnable;
         }
+
+        private Type GetWorldCellType() => typeof(GrassCell);
     }
 }

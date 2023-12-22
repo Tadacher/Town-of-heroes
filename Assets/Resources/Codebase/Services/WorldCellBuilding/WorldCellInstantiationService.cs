@@ -1,4 +1,5 @@
 ﻿using Services.Factories;
+using Services.GlobalMap;
 using Services.GridSystem;
 using Services.Input;
 using System;
@@ -6,15 +7,19 @@ using System;
 public class WorldCellInstantiationService : AbstractInstantiationService<AbstractWorldCell>
 {
     private const string _prefabPath = "Prefabs/WorldCells/";
-    private AbstractInputService _inputInputService;
-    private BattleGridService _alignService;
+    private readonly WorldCellGridService _worldCellGridService;
+    private readonly AbstractInputService _abstractInputService;
+    private readonly WorldCellBalanceService _worldCellBalanceService;
 
-    public WorldCellInstantiationService(AbstractInputService inputInputService, BattleGridService alignService) : base(_prefabPath)
+    public WorldCellInstantiationService( WorldCellGridService alignService,
+                                         AbstractInputService abstractInputService,
+                                         WorldCellBalanceService worldCellBalanceService) : base(_prefabPath)
     {
-        _inputInputService = inputInputService;
-        _alignService = alignService;
+        _worldCellGridService = alignService;
+        _abstractInputService = abstractInputService;
+        _worldCellBalanceService = worldCellBalanceService;
     }
-
+    
     public override AbstractWorldCell ReturnObject(Type type)
     {
         if (!_factories.ContainsKey(type))
@@ -27,5 +32,5 @@ public class WorldCellInstantiationService : AbstractInstantiationService<Abstra
         _factories.Add(type, GetNewFactory(type));
 
     protected override IFactory<AbstractWorldCell> GetNewFactory(Type productType) => 
-        new WorldCellFactory(LoadProductPrefab(productType));
+        new WorldCellFactory(LoadProductPrefab(productType), _worldCellGridService, _abstractInputService, _worldCellBalanceService);
 }

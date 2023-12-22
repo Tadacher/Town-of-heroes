@@ -55,7 +55,5 @@ namespace Services.TowerBuilding
 
         private AbstractTower GetTowerGhost(Type type) => 
             _towerInstantiatingService.ReturnObject(type).AsGhost();
-
-
     }
 }

@@ -34,8 +34,11 @@ namespace Services.GridSystem
             _cells[cellCoords.x, cellCoords.y] = insertable;
         }
 
-        public Vector3 PosToGrid(Vector2 pos) => 
-            (Vector2)PosToCellCoords(pos) + _cellOffset;
+        public Vector3 PosToGrid(Vector2 pos)
+        {
+            Debug.Log((Vector2)PosToCellCoords(pos) + " " + _cellOffset);
+            return (Vector2)PosToCellCoords(pos) + _cellOffset + _zeroPoint;
+        }
 
         protected virtual void InitCellContent()
         {
@@ -48,18 +51,6 @@ namespace Services.GridSystem
             int y = (int)(position.y / _cellsize);
             Debug.Log(x + " " + y);
             return new Vector2Int(x, y);
-        }
-    }
-
-    public class WorldMapGridService : AbstractGridService
-    {
-        private const float _globalCellSize = 1f;
-        private const int _gridSizex = 1;
-        private const int _gridSizey = 1;
-
-        public WorldMapGridService() : base(new Vector2(0.5f, 0.5f), new Vector2(50f, 50f), _globalCellSize, _gridSizex, _gridSizey)
-        {
-
         }
     }
 }

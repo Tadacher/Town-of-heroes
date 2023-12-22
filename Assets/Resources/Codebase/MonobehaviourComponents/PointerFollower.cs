@@ -5,9 +5,9 @@ using UnityEngine;
 public class PointerFollower : MonoBehaviour
 {
     private AbstractInputService _inputService;
-    private BattleGridService _gridAlignService;
+    private AbstractGridService _gridAlignService;
     private Transform _transform;
-    public void Initialize(AbstractInputService abstractInputService, BattleGridService gridAlignService)
+    public void Initialize(AbstractInputService abstractInputService, AbstractGridService gridAlignService)
     {
         _gridAlignService = gridAlignService;
         _inputService = abstractInputService;

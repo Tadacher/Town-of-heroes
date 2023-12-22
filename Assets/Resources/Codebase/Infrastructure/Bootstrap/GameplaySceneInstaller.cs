@@ -2,6 +2,7 @@
 using Codebase.MonobehaviourComponents;
 using Codebase.Services.CardGeneration;
 using Services;
+using Services.GlobalMap;
 using Services.GridSystem;
 using Services.TowerBuilding;
 using Services.Ui;
@@ -42,18 +43,29 @@ namespace Infrastructure
             BindMonobehaviour(_gameplayCanvasContainer);
 
             //Non-monobeh
-            BindService<GameTimeService>();
-            BindService<TowerBuildingService>();
+            
 
+            //towers
+            BindService<TowerBuildingService>();
+            BindService<BattleGridService>();
             BindService<TowerInstantiationService>();
-            BindService<WorldCellBuildingService>();
+            BindService<DamageTextService>();
+
+            //cards
             BindService<CardInstantiationService>().NonLazy();
 
-            BindService<DamageTextService>();
+            //worldCells
+            BindService<WorldCellInstantiationService>();
+            BindService<WorldCellGridService>();
+            BindService<WorldCellBuildingService>();
+            BindService<WorldCellBalanceService>();
+
+
             BindService<WaveService>();
-            BindService<BattleGridService>();
+
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();
+            BindService<GameTimeService>();
             BindService<UiService>().NonLazy();
             BindService<UiButtonBinder>().NonLazy();
             //Non monobeh abstract
