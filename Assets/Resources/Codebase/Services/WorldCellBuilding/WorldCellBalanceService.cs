@@ -1,9 +1,35 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class WorldCellBalanceService
+namespace WorldCells
 {
-    public void Count(GrassCell grassCell)
+    public class WorldCellBalanceService
     {
-        Debug.Log($"counted {grassCell}");
+        public Dictionary<CellTags, int> CellCountByTag { get; private set; }
+        public WorldCellBalanceService() =>
+            CellCountByTag = new Dictionary<CellTags, int>(1);
+
+        public void Count(IEnumerable<CellTags> tags)
+        {
+            foreach (CellTags tag in tags)
+            {
+                if (CellCountByTag.ContainsKey(tag))
+                    CellCountByTag[tag]++;
+                else
+                    CellCountByTag.Add(tag, 1);
+                Debug.Log($"{tag} count {CellCountByTag[tag]}");
+            }
+        }
+        public void Clear(IEnumerable<CellTags> tags)
+        {
+            foreach (CellTags tag in tags)
+            {
+                if (CellCountByTag.ContainsKey(tag))
+                    CellCountByTag[tag]--;
+
+                else
+                    CellCountByTag.Add(tag, 1);
+            }
+        }
     }
 }

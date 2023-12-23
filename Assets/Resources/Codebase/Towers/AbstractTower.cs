@@ -98,11 +98,10 @@ namespace Core.Towers
         public void StartFollowPointer() =>
             _pointerFollower.enabled = true;
 
-        public void StopFollowingPointer()
-        {
-            _gridAlignService.Insert(this, transform.position);
+        public void StopFollowingPointer() => 
             _pointerFollower.enabled = false;
-        }
+
+        public void InsertSelfToGrid() => _gridAlignService.Insert(this, transform.position);
 
         protected abstract void Attack();
         protected abstract void InitializeProjectileFactory(ProjectileBehaviour projectileBehaviour);

@@ -4,6 +4,7 @@ namespace Infrastructure
 {
     public class AbstractStateMachine
     {
+        public IExitableState ActiveState => _activeState;
         protected IExitableState _activeState;
 
         protected Dictionary<Type, IExitableState> _states;

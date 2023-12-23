@@ -48,6 +48,7 @@ namespace Services.TowerBuilding
         private void PlaceActiveTower()
         {          
             _activeTower.AsUnGhost().StopFollowingPointer();
+            _activeTower.InsertSelfToGrid();
         }
 
         private bool CanBePlacedAtPointer() => 

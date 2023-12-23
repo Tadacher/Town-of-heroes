@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7435374027758615251}
   - component: {fileID: 2925296441813844222}
   m_Layer: 0
-  m_Name: GrassCell
+  m_Name: MeadowsCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,3 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pointerFollower: {fileID: 7435374027758615251}
   _spriteRenderer: {fileID: 643364651810632001}
+  _cellStats: {fileID: 11400000, guid: fa584f63c784fbb4bb5c2e3383c9debf, type: 2}

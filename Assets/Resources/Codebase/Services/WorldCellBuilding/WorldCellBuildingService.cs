@@ -1,20 +1,19 @@
-﻿using Core.Towers;
-using Services.GlobalMap;
-using Services.GridSystem;
+﻿using Services.GlobalMap;
 using Services.Input;
 using System;
 using UnityEngine;
+using WorldCells;
 
 public class WorldCellBuildingService
 {
     protected IPoolableObject _activeCard;
-    private WorldCellInstantiationService _instantiatingService;
-    private WorldCellGridService _alignerService;
+    protected WorldCellInstantiationService _instantiatingService;
+    protected WorldCellGridService _alignerService;
 
-    private AbstractInputService _inputService;
+    protected AbstractInputService _inputService;
 
 
-    private AbstractWorldCell _activeCell;
+    protected AbstractWorldCell _activeCell;
 
     public WorldCellBuildingService(WorldCellInstantiationService towerInstantiatingService,
                                     WorldCellGridService alignerService,
@@ -51,7 +50,11 @@ public class WorldCellBuildingService
         _activeCell.StartFollowPointer();
         _inputService.OnPointerUp += TryReleaseActiveCell;
     }
-    private void PlaceActiveCell() => _activeCell.AsUnGhost().StopFollowingPointer();
+    private void PlaceActiveCell()
+    {
+        _activeCell.AsUnGhost().StopFollowingPointer();
+        _activeCell.InsertSelfToGrid();
+    }
 
     private bool CanBePlacedAtPointer() =>
         _alignerService.CellAvailable(_activeCell.transform.position);

@@ -7,6 +7,7 @@ namespace Infrastructure
     public class GameplayStateMachine : AbstractStateMachine
     {
         public event Action<IExitableState> OnStateChanged;
+
         public GameplayStateMachine(CameraPositionService cameraPositionService, GameTimeService gameTimeService, UiService uiService)
         {
             _states = new Dictionary<System.Type, IExitableState>()
@@ -15,12 +16,14 @@ namespace Infrastructure
                 [typeof(Map)] = new Map(cameraPositionService, uiService)
             };
             EnterState<BattleField>();
+            
         }
 
         protected override TState ChangeState<TState>()
         {
             TState state = base.ChangeState<TState>();
             OnStateChanged?.Invoke(state);
+            _activeState = state;
             return state;
         }
     }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 namespace Services.GridSystem
 {
-    public class AbstractGridService
+    public abstract class AbstractGridService
     {
         protected readonly float _cellsize;
         protected readonly int _gridSizeX;
@@ -33,23 +33,25 @@ namespace Services.GridSystem
             Vector2Int cellCoords = PosToCellCoords(position);
             _cells[cellCoords.x, cellCoords.y] = insertable;
         }
+        public void Remove(Vector3 position)
+        {
+            Vector2Int cellCoords = PosToCellCoords(position);
+            _cells[cellCoords.x, cellCoords.y] = null;
+        }
 
         public Vector3 PosToGrid(Vector2 pos)
         {
-            Debug.Log((Vector2)PosToCellCoords(pos) + " " + _cellOffset);
+           // Debug.Log((Vector2)PosToCellCoords(pos) + " " + _cellOffset);
             return (Vector2)PosToCellCoords(pos) + _cellOffset + _zeroPoint;
         }
 
-        protected virtual void InitCellContent()
-        {
-           
-        }
+        protected abstract void InitCellContent();
         protected Vector2Int PosToCellCoords(Vector3 position)
         {
             position -= (Vector3)_zeroPoint;
             int x = (int)(position.x / _cellsize);
             int y = (int)(position.y / _cellsize);
-            Debug.Log(x + " " + y);
+            Debug.Log($"{x}.{y}");
             return new Vector2Int(x, y);
         }
     }

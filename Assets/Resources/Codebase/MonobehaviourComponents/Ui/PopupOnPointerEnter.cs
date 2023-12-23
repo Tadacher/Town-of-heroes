@@ -8,6 +8,8 @@ public class PopupOnPointerEnter : MonoBehaviour, IPointerEnterHandler, IPointer
     [SerializeField] private float _popupSpeedX;
     [SerializeField] private float _popupSpeedY;
     [SerializeField] private RectTransform _popupObjectTransform;
+
+
     //
 
     //internal

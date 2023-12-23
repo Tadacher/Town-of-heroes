@@ -1,6 +1,7 @@
 ﻿using Services.GlobalMap;
 using Services.Input;
 using UnityEngine;
+using WorldCells;
 
 namespace Services.Factories
 {
@@ -19,6 +20,7 @@ namespace Services.Factories
             _cellGridService = worldCellGridService;
             _inputService = inputService;
             _cellGridService = worldCellGridService;
+            _worldCellBalanceService = worldCellBalanceService;
         }
 
         protected override AbstractWorldCell CreateNew()

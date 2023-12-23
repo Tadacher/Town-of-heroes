@@ -4,12 +4,15 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using Zenject;
+using UnityEngine.UI;
 
 public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 {
     //external
     [SerializeField] private RectTransform _cardImageTransform;
+    [SerializeField] private Sprite _imageAsTower;
+    [SerializeField] private Sprite _imageAsCell;
+    [SerializeField] private Image _image;
     //
 
     //dependencies
@@ -22,9 +25,10 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     private WorldCellBuildingService _worldCellInstantiationService;
     private Type _worldCellType;
 
+    private IExitableState _currentState;
     private GameplayStateMachine _gameplayStateMachine;
-    private bool _battlefieldStated;
     private Coroutine _swithStateCoroutine;
+    private bool _battlefieldStated;
 
     private readonly Type _worldCellMap = typeof(GrassField);
 
@@ -45,8 +49,32 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
         _worldCellInstantiationService = worldCellBuildingService;
         _worldCellType = worldCellType; //TODO: move to getter class
-    }
 
+        SetGameState();
+        SetImageAsState();
+    }
+    public TowerCard ReInitialize()
+    {
+        SetGameState();
+        SetImageAsState();
+        return this;
+    }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (_battlefieldStated)
+            InstantiateTowerGhost();
+        else
+            InstantiateWorldCellGhost();
+
+        gameObject.SetActive(false);
+    }
+    private void SetGameState()
+    {
+        if (_gameplayStateMachine.ActiveState is BattleField)
+            _battlefieldStated = true;
+        else
+            _battlefieldStated = false;
+    } 
     protected void OnGameplayStateChanged(IExitableState state)
     {
         switch (state)
@@ -72,7 +100,6 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         _swithStateCoroutine = StartCoroutine(SwitchState());
     }
     private void ResetScale() => transform.localScale = new Vector3(1, 1, 1);
-
     private IEnumerator SwitchState()
     {
         while (transform.localScale.x > 0)
@@ -81,14 +108,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
             yield return null;
         }
 
-        if(_battlefieldStated) 
-        { 
-           //set _battleFieldStateImg
-        }
-        else
-        {
-            //set _worldmapStateImg
-        }
+        SetImageAsState();
 
         while (transform.localScale.x < 1)
         {
@@ -96,16 +116,19 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
             yield return null;
         }
     }
-
-    public void OnPointerDown(PointerEventData eventData)
+    private void SetImageAsState()
     {
-        if(_battlefieldStated) 
-            InstantiateTowerGhost();
+        if (_battlefieldStated)
+            SetTImageAsTower();
         else
-            InstantiateWorldCellGhost();
-
-        gameObject.SetActive(false);
+            SetImageAsCell();
     }
+
+    private void SetImageAsCell() => _image.sprite = _imageAsCell;
+
+    private void SetTImageAsTower() => _image.sprite = _imageAsTower;
+
+    
 
     private void InstantiateWorldCellGhost() => _worldCellInstantiationService.InstantiateWorldCellFromCard(this, _worldCellType);
 

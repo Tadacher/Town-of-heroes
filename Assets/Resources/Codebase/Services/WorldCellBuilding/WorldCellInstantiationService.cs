@@ -3,6 +3,7 @@ using Services.GlobalMap;
 using Services.GridSystem;
 using Services.Input;
 using System;
+using WorldCells;
 
 public class WorldCellInstantiationService : AbstractInstantiationService<AbstractWorldCell>
 {

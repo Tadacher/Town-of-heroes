@@ -12,5 +12,10 @@ namespace Services.GlobalMap
         {
 
         }
+
+        protected override void InitCellContent()
+        {
+            //place castle and initial cells
+        }
     }
 }

@@ -4,15 +4,16 @@ using Services.Factories;
 using Services.TowerBuilding;
 using System;
 using UnityEngine;
+using WorldCells;
 
 namespace Services.CardGeneration
 {
     public class TowerCardFactory : AbstractPoolerFactory<TowerCard>, IFactory<TowerCard>
     {
+        [SerializeField] private CellStats _cellStats;
         private readonly GameplayStateMachine _gameplayStateMachine;
         private readonly TowerBuildingService _towerBuildingService;
         private readonly WorldCellBuildingService _worldCellBuildingService;
-        
         private readonly TowerCard _cardPrefab;
         private Type _type;
 
@@ -30,8 +31,11 @@ namespace Services.CardGeneration
             _towerBuildingService = towerBuildingService;
         }
 
-        public override TowerCard GetObject() =>
-            _pool.Get();
+        public override TowerCard GetObject()
+        {
+            TowerCard gettable = _pool.Get();
+            return gettable.ReInitialize();
+        }
 
         public override void ReturnToPool(IPoolableObject poolable) =>
             _pool.Release((TowerCard)poolable);
@@ -60,6 +64,6 @@ namespace Services.CardGeneration
             return returnable;
         }
 
-        private Type GetWorldCellType() => typeof(GrassCell);
+        private Type GetWorldCellType() => typeof(MeadowsCell);
     }
 }
