@@ -1,6 +1,6 @@
 ﻿namespace WorldCells
 {
-    public enum CellTags
+    public enum CellBiomeTypes
     {
         Green,
         Desert,

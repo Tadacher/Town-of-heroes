@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d6ed19178eea140acce16b5050fe9c, type: 3}
+  m_Name: WorldCellCardsConfig
+  m_EditorClassIdentifier: 
+  Configs:
+  - Tower: {fileID: 3369840710708336310, guid: a2b4619c51e2b7948920dacce50acacf, type: 3}
+    CellProbabilityPairs:
+    - WorldCell: {fileID: 2925296441813844222, guid: fc69c44528dcc1d488c8a1a95bea2037, type: 3}
+      ProbabilityWeight: 100
+  - Tower: {fileID: 7595039726850096372, guid: 9e7203908c325684d8f23d85e530c4c9, type: 3}
+    CellProbabilityPairs:
+    - WorldCell: {fileID: 2925296441813844222, guid: fc69c44528dcc1d488c8a1a95bea2037, type: 3}
+      ProbabilityWeight: 100

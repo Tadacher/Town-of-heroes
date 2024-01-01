@@ -40,7 +40,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
                            Type worldCellType)
     {
         _gameplayStateMachine = gameplayStateMachine;
-        _gameplayStateMachine.OnStateChanged += OnGameplayStateChanged;
+        SubscribeToGameStateChange();
         _pooler = pooler;
 
 
@@ -53,6 +53,10 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         SetGameState();
         SetImageAsState();
     }
+
+    private void SubscribeToGameStateChange() => _gameplayStateMachine.OnStateChanged += OnGameplayStateChanged;
+    private void UnsubscribeToGameStateChange() => _gameplayStateMachine.OnStateChanged -= OnGameplayStateChanged;
+
     public TowerCard ReInitialize()
     {
         SetGameState();
@@ -91,7 +95,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     {
         _battlefieldStated = true;
         ResetScale();
-        _swithStateCoroutine = StartCoroutine(SwitchState());
+        _swithStateCoroutine = StartCoroutine(SwitchState());      
     }
     private void SwitchToMapState()
     {
@@ -134,6 +138,9 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
     private void InstantiateTowerGhost() => _towerInstantiationService.InstantiateTowerFromCard(this, _towerType);
 
-    public void ReturnToPool() =>
+    public void ReturnToPool()
+    {
+        UnsubscribeToGameStateChange();
         _pooler.ReturnToPool(this);
+    }
 }

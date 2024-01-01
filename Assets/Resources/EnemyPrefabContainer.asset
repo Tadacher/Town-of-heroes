@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9283038b6fd5b384a965f8e9c60b50e6, type: 3}
   m_Name: EnemyPrefabContainer
   m_EditorClassIdentifier: 
+  Enemies:
+  - {fileID: 6904938369869240134, guid: 8df181e602c70974a9ec4c36b39a3906, type: 3}
+  - {fileID: 1969486976300279265, guid: 9b93a6bb1264a464695e6ef4601dffd1, type: 3}
   GoblinTrapper: {fileID: 6904938369869240134, guid: 8df181e602c70974a9ec4c36b39a3906, type: 3}
   Goblin: {fileID: 1969486976300279265, guid: 9b93a6bb1264a464695e6ef4601dffd1, type: 3}

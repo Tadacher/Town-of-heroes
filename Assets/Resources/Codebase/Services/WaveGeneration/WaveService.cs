@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Threading;
 using System.Collections;
 using Infrastructure;
+using WorldCells;
 
 public class WaveService
 {
@@ -22,12 +23,15 @@ public class WaveService
         EnemySpawnPosMarker spawnPosition,
         AudioSource _audioSource,
         Services.DamageTextService _damageTextService,
+        WorldCellBalanceService worldCellBalanceService,
+        EnemyPrefabContainer enemyPrefabContainer,
+        EnemyTypeService enemyTypeService,
         ICoroutineRunner coroutineRunner)
     {
         _coroutineRunner = coroutineRunner;
         _cancellationTokenSource = new();
         _enemyInstantiationService = new(_audioSource, _damageTextService, spawnPosition);
-        _waveGenerator = new(_enemyInstantiationService);
+        _waveGenerator = new(_enemyInstantiationService, worldCellBalanceService, enemyPrefabContainer, enemyTypeService);
 
         
         _interval = 5f;

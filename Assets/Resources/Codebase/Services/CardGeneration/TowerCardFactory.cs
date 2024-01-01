@@ -15,20 +15,22 @@ namespace Services.CardGeneration
         private readonly TowerBuildingService _towerBuildingService;
         private readonly WorldCellBuildingService _worldCellBuildingService;
         private readonly TowerCard _cardPrefab;
-        private Type _type;
+        private readonly WorldCellCardGenerator _worldCellCardGenerator;
+        private Type _towerType;
 
         public TowerCardFactory(Type type,
                                 TowerCard cardPrefab,
                                 WorldCellBuildingService worldCellBuildingService,
                                 TowerBuildingService towerBuildingService,
-                                GameplayStateMachine gameplayStateMachine) : base()
+                                GameplayStateMachine gameplayStateMachine,
+                                WorldCellCardGenerator worldCellCardGenerator) : base()
         {
             _worldCellBuildingService = worldCellBuildingService;
             _gameplayStateMachine = gameplayStateMachine;
-            _type = type;
-            Debug.Log(cardPrefab);
+            _towerType = type;
             _cardPrefab = cardPrefab;
             _towerBuildingService = towerBuildingService;
+            _worldCellCardGenerator = worldCellCardGenerator;
         }
 
         public override TowerCard GetObject()
@@ -59,11 +61,11 @@ namespace Services.CardGeneration
                 worldCellBuildingService: _worldCellBuildingService,
                 gameplayStateMachine: _gameplayStateMachine, 
                 pooler: this, 
-                towerType: _type, 
+                towerType: _towerType, 
                 worldCellType: GetWorldCellType());
             return returnable;
         }
 
-        private Type GetWorldCellType() => typeof(MeadowsCell);
+        private Type GetWorldCellType() => _worldCellCardGenerator.GetWorldCellType(_towerType);
     }
 }

@@ -5,13 +5,13 @@ namespace WorldCells
 {
     public class WorldCellBalanceService
     {
-        public Dictionary<CellTags, int> CellCountByTag { get; private set; }
+        public Dictionary<CellBiomeTypes, int> CellCountByTag { get; private set; }
         public WorldCellBalanceService() =>
-            CellCountByTag = new Dictionary<CellTags, int>(1);
+            CellCountByTag = new Dictionary<CellBiomeTypes, int>(1);
 
-        public void Count(IEnumerable<CellTags> tags)
+        public void Count(IEnumerable<CellBiomeTypes> tags)
         {
-            foreach (CellTags tag in tags)
+            foreach (CellBiomeTypes tag in tags)
             {
                 if (CellCountByTag.ContainsKey(tag))
                     CellCountByTag[tag]++;
@@ -20,9 +20,9 @@ namespace WorldCells
                 Debug.Log($"{tag} count {CellCountByTag[tag]}");
             }
         }
-        public void Clear(IEnumerable<CellTags> tags)
+        public void Clear(IEnumerable<CellBiomeTypes> tags)
         {
-            foreach (CellTags tag in tags)
+            foreach (CellBiomeTypes tag in tags)
             {
                 if (CellCountByTag.ContainsKey(tag))
                     CellCountByTag[tag]--;
