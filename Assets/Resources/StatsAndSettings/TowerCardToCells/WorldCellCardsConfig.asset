@@ -15,9 +15,9 @@ MonoBehaviour:
   Configs:
   - Tower: {fileID: 3369840710708336310, guid: a2b4619c51e2b7948920dacce50acacf, type: 3}
     CellProbabilityPairs:
-    - WorldCell: {fileID: 2925296441813844222, guid: fc69c44528dcc1d488c8a1a95bea2037, type: 3}
+    - WorldCell: {fileID: 1780903576480717292, guid: fc69c44528dcc1d488c8a1a95bea2037, type: 3}
       ProbabilityWeight: 100
   - Tower: {fileID: 7595039726850096372, guid: 9e7203908c325684d8f23d85e530c4c9, type: 3}
     CellProbabilityPairs:
-    - WorldCell: {fileID: 2925296441813844222, guid: fc69c44528dcc1d488c8a1a95bea2037, type: 3}
+    - WorldCell: {fileID: 1780903576480717292, guid: fc69c44528dcc1d488c8a1a95bea2037, type: 3}
       ProbabilityWeight: 100

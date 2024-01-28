@@ -1,5 +1,6 @@
 ﻿using Services.Input;
 using UnityEngine;
+using Zenject;
 
 namespace Infrastructure
 {
@@ -22,6 +23,9 @@ namespace Infrastructure
             BindService<SceneLoaderService>();
             BindService<GameStateMachine>()
                 .NonLazy();
+            
+            Container.Bind<DiContainer>().FromInstance(Container);
+
             Debug.Log("BOOTSTRAP INSTALLER DONE");
         }
 

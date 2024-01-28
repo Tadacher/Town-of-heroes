@@ -15765,7 +15765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383419165}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.48, y: 9.82, z: 0.49497882}
+  m_LocalPosition: {x: 16.62, y: 29.73, z: 0.49497882}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32534,6 +32534,10 @@ PrefabInstance:
       propertyPath: _mainCameraMarker
       value: 
       objectReference: {fileID: 519420034}
+    - target: {fileID: 6307842806946569395, guid: aa336045e1dafaa479bc4855762b5bae, type: 3}
+      propertyPath: _cardImageDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: f0eb54cd7d0d448459327a4b650e0e84, type: 2}
     - target: {fileID: 6307842806946569395, guid: aa336045e1dafaa479bc4855762b5bae, type: 3}
       propertyPath: _sceneBootstrapper
       value: 

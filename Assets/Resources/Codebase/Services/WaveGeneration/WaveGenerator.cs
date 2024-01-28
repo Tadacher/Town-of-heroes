@@ -51,7 +51,7 @@ public class WaveGenerator
 
         if (maxValue == 0)
         {
-            Debug.LogError($"No cell placed yet, sending green");
+            Debug.LogWarning($"No cell placed yet, sending green");
             return CellBiomeTypes.Green;
         }
 

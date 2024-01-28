@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using Zenject;
 
 namespace Services.Factories
 {
     public abstract class MonobehaviourAbstractPoolerFactory<TType> : AbstractPoolerFactory<TType> where TType : MonoBehaviour
     {
-        protected MonobehaviourAbstractPoolerFactory() : base()
+        protected MonobehaviourAbstractPoolerFactory(DiContainer diContainer) : base(diContainer)
         {
         }
 

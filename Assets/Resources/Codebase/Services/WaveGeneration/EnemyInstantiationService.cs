@@ -1,22 +1,16 @@
 ﻿using Services;
 using System;
 using UnityEngine;
+using Zenject;
 
 public class EnemyInstantiationService : AbstractInstantiationService<AbstractEnemy>
 {
-    private AudioSource _audioSource;
-    private DamageTextService _damageTextService;
     private Transform _spawnPosition;
-
     private const string _enemyPrefabPath = "Prefabs/Enemies/";
 
-    public EnemyInstantiationService(AudioSource audioSource, DamageTextService damageTextService, EnemySpawnPosMarker enemySpawnPosMarker) : base(_enemyPrefabPath)
-    {
-        _spawnPosition = enemySpawnPosMarker.transform;
-        
-        _audioSource = audioSource;
-        _damageTextService = damageTextService;
-    }
+    public EnemyInstantiationService(EnemySpawnPosMarker enemySpawnPosMarker,
+                                     DiContainer diContainer) : base(_enemyPrefabPath, diContainer) 
+        => _spawnPosition = enemySpawnPosMarker.transform;
 
     public override AbstractEnemy ReturnObject(Type type)
     {
@@ -33,6 +27,6 @@ public class EnemyInstantiationService : AbstractInstantiationService<AbstractEn
         _factories.Add(type, GetNewFactory(type));
 
     protected override IFactory<AbstractEnemy> GetNewFactory(Type productType) =>
-        new EnemyFactory(_audioSource, _damageTextService, LoadProductPrefab(productType));
+        new EnemyFactory(LoadProductPrefab(productType), _container);
 
 }

@@ -1,4 +1,5 @@
 using Infrastructure;
+using Services.Input;
 using Services.TowerBuilding;
 using System;
 using System.Collections;
@@ -24,11 +25,15 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     //WorldCellPlacing
     private WorldCellBuildingService _worldCellInstantiationService;
     private Type _worldCellType;
+    //Input
+    private IShiftEventProvider _shiftEventProvider;
 
+    //internal
     private IExitableState _currentState;
     private GameplayStateMachine _gameplayStateMachine;
-    private Coroutine _swithStateCoroutine;
+    private Coroutine _switchStateCoroutine;
     private bool _battlefieldStated;
+    private bool _shifted;
 
     private readonly Type _worldCellMap = typeof(GrassField);
 
@@ -36,11 +41,15 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
                            WorldCellBuildingService worldCellBuildingService,
                            GameplayStateMachine gameplayStateMachine,
                            IObjectPooler pooler,
+                           IShiftEventProvider shiftEventProvider,
+                           Sprite worldCellSprite,
                            Type towerType,
                            Type worldCellType)
     {
+        _shiftEventProvider = shiftEventProvider;
         _gameplayStateMachine = gameplayStateMachine;
         SubscribeToGameStateChange();
+        SubscribeToShiftEvent();
         _pooler = pooler;
 
 
@@ -48,17 +57,17 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         _towerType = towerType;
 
         _worldCellInstantiationService = worldCellBuildingService;
-        _worldCellType = worldCellType; //TODO: move to getter class
-
+        _worldCellType = worldCellType;
+        _imageAsCell = worldCellSprite;
         SetGameState();
         SetImageAsState();
     }
 
-    private void SubscribeToGameStateChange() => _gameplayStateMachine.OnStateChanged += OnGameplayStateChanged;
-    private void UnsubscribeToGameStateChange() => _gameplayStateMachine.OnStateChanged -= OnGameplayStateChanged;
-
     public TowerCard ReInitialize()
     {
+        SubscribeToGameStateChange();
+        SubscribeToShiftEvent();
+
         SetGameState();
         SetImageAsState();
         return this;
@@ -72,13 +81,42 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
         gameObject.SetActive(false);
     }
-    private void SetGameState()
+
+    #region INPUT_SHIFT
+    private void SubscribeToShiftEvent()
     {
-        if (_gameplayStateMachine.ActiveState is BattleField)
-            _battlefieldStated = true;
-        else
-            _battlefieldStated = false;
-    } 
+        _shiftEventProvider.OnShiftDown += OnShitDownHandler;
+        _shiftEventProvider.OnShiftUp += OnShiftUpHandler;
+    }
+    private void UnsubscribeToShiftEvent()
+    {
+        _shiftEventProvider.OnShiftDown -= OnShitDownHandler;
+        _shiftEventProvider.OnShiftUp -= OnShiftUpHandler;
+    }
+
+    private void OnShitDownHandler()
+    {
+        switch (_gameplayStateMachine.ActiveState)
+        {
+            case BattleField battleField:
+                SetImageAsCell();
+                break;
+            case Map map: 
+                SetTImageAsTower();
+            break;
+        }
+        _shifted = true;
+    }
+    private void OnShiftUpHandler()
+    {
+        SetImageAsState();
+        _shifted = false;
+    }
+    #endregion
+
+    #region GAME_STATE_HANDLERS
+    private void SubscribeToGameStateChange() => _gameplayStateMachine.OnStateChanged += OnGameplayStateChanged;
+    private void UnsubscribeToGameStateChange() => _gameplayStateMachine.OnStateChanged -= OnGameplayStateChanged;
     protected void OnGameplayStateChanged(IExitableState state)
     {
         switch (state)
@@ -95,14 +133,24 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     {
         _battlefieldStated = true;
         ResetScale();
-        _swithStateCoroutine = StartCoroutine(SwitchState());      
+        _switchStateCoroutine = StartCoroutine(SwitchState());
     }
     private void SwitchToMapState()
     {
         _battlefieldStated = false;
         ResetScale();
-        _swithStateCoroutine = StartCoroutine(SwitchState());
+        _switchStateCoroutine = StartCoroutine(SwitchState());
     }
+    private void SetGameState()
+    {
+        if (_gameplayStateMachine.ActiveState is BattleField)
+            _battlefieldStated = true;
+        else
+            _battlefieldStated = false;
+    }
+    #endregion
+
+    #region SWITCH_STATE_ROUTINE
     private void ResetScale() => transform.localScale = new Vector3(1, 1, 1);
     private IEnumerator SwitchState()
     {
@@ -131,9 +179,9 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     private void SetImageAsCell() => _image.sprite = _imageAsCell;
 
     private void SetTImageAsTower() => _image.sprite = _imageAsTower;
+    #endregion
 
-    
-
+    #region UTIL
     private void InstantiateWorldCellGhost() => _worldCellInstantiationService.InstantiateWorldCellFromCard(this, _worldCellType);
 
     private void InstantiateTowerGhost() => _towerInstantiationService.InstantiateTowerFromCard(this, _towerType);
@@ -141,6 +189,14 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     public void ReturnToPool()
     {
         UnsubscribeToGameStateChange();
+        UnsubscribeToShiftEvent();
         _pooler.ReturnToPool(this);
     }
+
+    ~TowerCard()
+    {
+        UnsubscribeToGameStateChange();
+        UnsubscribeToShiftEvent();
+    }
+    #endregion
 }

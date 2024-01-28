@@ -3,41 +3,46 @@ using System.Threading;
 using System.Collections;
 using Infrastructure;
 using WorldCells;
+using Zenject;
+using Services;
 
 public class WaveService
 {
-
     private float _interval;
 
     private WaveGenerator _waveGenerator;
     private EnemyInstantiationService _enemyInstantiationService;
     private CancellationTokenSource _cancellationTokenSource;
-    private Transform _spawnPosition;
    
     private ICoroutineRunner _coroutineRunner;
 
     private Coroutine _waveSender;
     private Coroutine _spawnerOfwawes;
   
-    public WaveService(
-        EnemySpawnPosMarker spawnPosition,
-        AudioSource _audioSource,
-        Services.DamageTextService _damageTextService,
-        WorldCellBalanceService worldCellBalanceService,
-        EnemyPrefabContainer enemyPrefabContainer,
-        EnemyTypeService enemyTypeService,
-        ICoroutineRunner coroutineRunner)
+    private DiContainer _container;
+    public WaveService(DiContainer diContainer, ICoroutineRunner coroutineRunner)
     {
+        _container = diContainer;
         _coroutineRunner = coroutineRunner;
-        _cancellationTokenSource = new();
-        _enemyInstantiationService = new(_audioSource, _damageTextService, spawnPosition);
-        _waveGenerator = new(_enemyInstantiationService, worldCellBalanceService, enemyPrefabContainer, enemyTypeService);
-
-        
-        _interval = 5f;
-
-        _spawnPosition = spawnPosition.transform;
+        ConstructEnemtInstantiationService();
+        ConstructWaveGenerator();
+        _interval = 5f;      
     }
+    private void ConstructEnemtInstantiationService()
+    {
+        _enemyInstantiationService = new(
+                    diContainer: _container,
+                    enemySpawnPosMarker: _container.Resolve<EnemySpawnPosMarker>());
+    }
+    private void ConstructWaveGenerator()
+    {
+        _waveGenerator = new(
+                    nemyInstantiationService: _enemyInstantiationService,
+                    enemyTypeService: _container.Resolve<EnemyTypeService>(),
+                    enemyPrefabContainer: _container.Resolve<EnemyPrefabContainer>(),
+                    worldCellBalanceService: _container.Resolve<WorldCellBalanceService>());
+    }
+
     public void StartCoroutine() 
         => _waveSender = _coroutineRunner.StartCoroutine(WaveSending());
 

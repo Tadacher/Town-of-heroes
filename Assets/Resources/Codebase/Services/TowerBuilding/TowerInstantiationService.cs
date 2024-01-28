@@ -2,6 +2,7 @@
 using Services.GridSystem;
 using Services.Input;
 using System;
+using Zenject;
 
 namespace Services.TowerBuilding
 {
@@ -11,7 +12,10 @@ namespace Services.TowerBuilding
         private AbstractInputService _inputInputService;
         private BattleGridService _alignService;
 
-        public TowerInstantiationService(AbstractInputService abstractInputService, BattleGridService gridAlignService) : base(_prefabPath)
+        public TowerInstantiationService(
+            AbstractInputService abstractInputService,
+            BattleGridService gridAlignService,
+            DiContainer diContainer) : base(_prefabPath, diContainer)
         {
             _alignService = gridAlignService;
             _inputInputService = abstractInputService;
@@ -29,6 +33,9 @@ namespace Services.TowerBuilding
             _factories.Add(type, GetNewFactory(type));
 
         protected override IFactory<AbstractTower> GetNewFactory(Type type) => 
-            new TowerFactory(LoadProductPrefab(type), _inputInputService, _alignService);
+            new TowerFactory(LoadProductPrefab(type),
+                             abstractInputService: _container.Resolve<AbstractInputService>(),
+                             gridAlignService: _container.Resolve<BattleGridService>(),
+                             _container);
     }
 }

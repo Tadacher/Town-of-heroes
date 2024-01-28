@@ -1,9 +1,9 @@
 ﻿using System;
 using Codebase.MonobehaviourComponents;
-using Infrastructure;
 using Services.CardGeneration;
-using Services.TowerBuilding;
 using UnityEngine;
+using WorldCellBuilding.CardImage;
+using Zenject;
 
 namespace Codebase.Services.CardGeneration
 {
@@ -12,22 +12,10 @@ namespace Codebase.Services.CardGeneration
         private const string _prefabpath = "Prefabs/Cards/"; 
         private Transform _cardParent;
 
-        private readonly WorldCellBuildingService _worldCellBuildingService;
-        private readonly TowerBuildingService _towerBuildingService;
-        private readonly GameplayStateMachine _gameplayStateMachine;
-        private readonly WorldCellCardGenerator _worldCellCardGenerator;
-        public CardInstantiationService(TowerBuildingService towerBuildingService,
-                                        TowerCardSpawnMarker cardparent,
-                                        WorldCellBuildingService worldCellBuildingService,
-                                        GameplayStateMachine gameplayStateMachine,
-                                        WorldCellCardGenerator worldCellCardGenerator) : base(_prefabpath)
-        {
-            _gameplayStateMachine = gameplayStateMachine;
-            _worldCellBuildingService = worldCellBuildingService;
-            _towerBuildingService = towerBuildingService;
-            _cardParent = cardparent.transform;
-            _worldCellCardGenerator = worldCellCardGenerator;
-        }
+        public CardInstantiationService(
+            DiContainer diContainer, 
+            TowerCardSpawnMarker towerCardSpawnMarker) : base(_prefabpath, diContainer) 
+            => _cardParent = towerCardSpawnMarker.transform;
 
         public override TowerCard ReturnObject(Type type)
         {
@@ -47,9 +35,8 @@ namespace Codebase.Services.CardGeneration
             new TowerCardFactory(
                 type: type,
                 cardPrefab: LoadProductPrefab(type),
-                worldCellBuildingService: _worldCellBuildingService,
-                towerBuildingService: _towerBuildingService,
-                gameplayStateMachine: _gameplayStateMachine,
-                worldCellCardGenerator: _worldCellCardGenerator);
+                cardImageDatabase: _container.Resolve<CardImageDatabase>(),
+                worldCellCardGenerator: _container.Resolve<WorldCellCardGenerator>(),
+                diContainer: _container);
     }
 }

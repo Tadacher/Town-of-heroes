@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48b55440d803c0e4682797f6782cdd6c, type: 3}
-  m_Name: Meadows
+  m_Name: GrassMeadows
   m_EditorClassIdentifier: 
   CellTags: 0000000000000000

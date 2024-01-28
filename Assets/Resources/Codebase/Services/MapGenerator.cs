@@ -11,9 +11,6 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] float stdTurnChance;
 
     const int Xsize = 10, Ysize = 10;
-
-    
-
     Vector2Int direction = new(0,0);
     
     

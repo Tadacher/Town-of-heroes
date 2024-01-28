@@ -8,6 +8,7 @@ using Services.GridSystem;
 using Services.TowerBuilding;
 using Services.Ui;
 using UnityEngine;
+using WorldCellBuilding.CardImage;
 using WorldCells;
 
 namespace Infrastructure
@@ -28,12 +29,16 @@ namespace Infrastructure
         [SerializeField] private EnemyPrefabContainer _enemyPrefabContainer;
         [SerializeField] private WorldCellCardsConfig _worldCellCardsConfig;
         [SerializeField] private EnemyTypeToBiomeSettings _enemyTypeToBiomeSettings;
+        [SerializeField] private CardImageDatabase _cardImageDatabase;
         public override void InstallBindings()
         {
             //ScriptableObjects
             BindScriptableObject(_enemyPrefabContainer);
             BindScriptableObject(_worldCellCardsConfig);
             BindScriptableObject(_enemyTypeToBiomeSettings);
+            BindScriptableObject(_cardImageDatabase);
+            
+
             //Unity components
             BindUnityComponent(_audioSource);
             

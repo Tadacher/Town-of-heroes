@@ -4,23 +4,15 @@ using Services.GridSystem;
 using Services.Input;
 using System;
 using WorldCells;
+using Zenject;
 
 public class WorldCellInstantiationService : AbstractInstantiationService<AbstractWorldCell>
 {
     private const string _prefabPath = "Prefabs/WorldCells/";
-    private readonly WorldCellGridService _worldCellGridService;
-    private readonly AbstractInputService _abstractInputService;
-    private readonly WorldCellBalanceService _worldCellBalanceService;
-
-    public WorldCellInstantiationService( WorldCellGridService alignService,
-                                         AbstractInputService abstractInputService,
-                                         WorldCellBalanceService worldCellBalanceService) : base(_prefabPath)
+    public WorldCellInstantiationService(DiContainer diContainer) : base(_prefabPath, diContainer)
     {
-        _worldCellGridService = alignService;
-        _abstractInputService = abstractInputService;
-        _worldCellBalanceService = worldCellBalanceService;
+
     }
-    
     public override AbstractWorldCell ReturnObject(Type type)
     {
         if (!_factories.ContainsKey(type))
@@ -33,5 +25,5 @@ public class WorldCellInstantiationService : AbstractInstantiationService<Abstra
         _factories.Add(type, GetNewFactory(type));
 
     protected override IFactory<AbstractWorldCell> GetNewFactory(Type productType) => 
-        new WorldCellFactory(LoadProductPrefab(productType), _worldCellGridService, _abstractInputService, _worldCellBalanceService);
+        new WorldCellFactory(LoadProductPrefab(productType), _container);
 }

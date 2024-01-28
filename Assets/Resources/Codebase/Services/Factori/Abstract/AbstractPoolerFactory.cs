@@ -1,12 +1,18 @@
 ﻿using UnityEngine.Pool;
+using Zenject;
 
 namespace Services.Factories
 {
     public abstract class AbstractPoolerFactory<TType> : IObjectPooler, IFactory<TType> where TType : class
     {
         protected ObjectPool<TType> _pool;
+        protected DiContainer _container;
 
-        protected AbstractPoolerFactory() => InitializePool();
+        protected AbstractPoolerFactory(DiContainer diContainer)
+        {
+            _container = diContainer;
+            InitializePool();
+        }
 
         private void InitializePool()
         {

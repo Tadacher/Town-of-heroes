@@ -2,31 +2,23 @@
 using Services.Input;
 using UnityEngine;
 using WorldCells;
+using Zenject;
 
 namespace Services.Factories
 {
     public class WorldCellFactory : MonobehaviourAbstractPoolerFactory<AbstractWorldCell>
     {
         private AbstractWorldCell _cellPrefab;
-        private WorldCellGridService _cellGridService;
-        private AbstractInputService _inputService;
-        private WorldCellBalanceService _worldCellBalanceService;
-        public WorldCellFactory(AbstractWorldCell cellPrefab,
-                                WorldCellGridService worldCellGridService,
-                                AbstractInputService inputService,
-                                WorldCellBalanceService worldCellBalanceService) : base()
-        {
-            _cellPrefab = cellPrefab;
-            _cellGridService = worldCellGridService;
-            _inputService = inputService;
-            _cellGridService = worldCellGridService;
-            _worldCellBalanceService = worldCellBalanceService;
-        }
+        public WorldCellFactory(AbstractWorldCell cellPrefab, DiContainer diContainer) : base(diContainer) 
+            => _cellPrefab = cellPrefab;
 
         protected override AbstractWorldCell CreateNew()
         {
             AbstractWorldCell cell = Object.Instantiate(_cellPrefab, null);
-            cell.Initialize(this, _cellGridService, _inputService, _worldCellBalanceService);
+            cell.Initialize(this,
+                            worldCellBalanceService: _container.Resolve<WorldCellBalanceService>(),
+                            inputService: _container.Resolve<AbstractInputService>(),
+                            gridAlignService: _container.Resolve<WorldCellGridService>());
             return cell;
         }
     }
