@@ -1,19 +1,16 @@
 using Services;
+using Services.Factories;
 using UnityEngine;
+using Zenject;
 
 public class EnemyFactory : AbstractPoolerFactory<AbstractEnemy> 
 {
-    private readonly AudioSource _audioSource;
-    private readonly DamageTextService _damageTextService;
+    
     protected AbstractEnemy _enemyPrefab;
     protected GameObject _prototype;
 
-    public EnemyFactory(AudioSource audioSource, DamageTextService damageTextService, AbstractEnemy enemyPrefab) : base()
-    {
-        _audioSource = audioSource;
-        _damageTextService = damageTextService;
-        _enemyPrefab = enemyPrefab;
-    }
+    public EnemyFactory(AbstractEnemy enemyPrefab, DiContainer diContainer) : base(diContainer) 
+        => _enemyPrefab = enemyPrefab;
 
     public override AbstractEnemy GetObject() =>
         _pool.Get();
@@ -33,7 +30,10 @@ public class EnemyFactory : AbstractPoolerFactory<AbstractEnemy>
     protected override AbstractEnemy CreateNew()
     {
         AbstractEnemy enemy = GameObject.Instantiate(_enemyPrefab, null);
-        enemy.Initialize(_audioSource, _damageTextService, this);
+        enemy.Initialize(
+            audioSource: _container.Resolve<AudioSource>(),
+            damageTextService: _container.Resolve<DamageTextService>(),
+            this);
         return enemy;
     }
 }

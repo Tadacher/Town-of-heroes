@@ -1,47 +1,58 @@
 using UnityEngine;
 using System.Threading;
-using System.Threading.Tasks;
+using System.Collections;
+using Infrastructure;
+using WorldCells;
+using Zenject;
+using Services;
 
 public class WaveService
 {
-
     private float _interval;
 
     private WaveGenerator _waveGenerator;
     private EnemyInstantiationService _enemyInstantiationService;
     private CancellationTokenSource _cancellationTokenSource;
-    private Transform _spawnPosition;
    
-    private Task _waveSender;
-    private Task _spawnerOfwawes;
+    private ICoroutineRunner _coroutineRunner;
+
+    private Coroutine _waveSender;
+    private Coroutine _spawnerOfwawes;
   
-    public WaveService(EnemySpawnPosMarker spawnPosition,  AudioSource _audioSource, Services.DamageTextService _damageTextService, EnemySpawnPosMarker enemySpawnPosMarker)
+    private DiContainer _container;
+    public WaveService(DiContainer diContainer, ICoroutineRunner coroutineRunner)
     {
-        
-        _cancellationTokenSource = new();
-        _enemyInstantiationService = new(_audioSource, _damageTextService, enemySpawnPosMarker);
-        _waveGenerator = new(_enemyInstantiationService);
-
-        
-        _interval = 5f;
-
-        _spawnPosition = spawnPosition.transform;
+        _container = diContainer;
+        _coroutineRunner = coroutineRunner;
+        ConstructEnemtInstantiationService();
+        ConstructWaveGenerator();
+        _interval = 5f;      
     }
-    public async void StartAsync()
+    private void ConstructEnemtInstantiationService()
     {
-        
-        _waveSender = WaveSendingAsync(_cancellationTokenSource.Token);
-        await _waveSender;
+        _enemyInstantiationService = new(
+                    diContainer: _container,
+                    enemySpawnPosMarker: _container.Resolve<EnemySpawnPosMarker>());
+    }
+    private void ConstructWaveGenerator()
+    {
+        _waveGenerator = new(
+                    nemyInstantiationService: _enemyInstantiationService,
+                    enemyTypeService: _container.Resolve<EnemyTypeService>(),
+                    enemyPrefabContainer: _container.Resolve<EnemyPrefabContainer>(),
+                    worldCellBalanceService: _container.Resolve<WorldCellBalanceService>());
     }
 
-    private async Task WaveSendingAsync(CancellationToken token)
+    public void StartCoroutine() 
+        => _waveSender = _coroutineRunner.StartCoroutine(WaveSending());
+
+    private IEnumerator WaveSending()
     {
         while (true)
         {
-         //   Debug.Log("NewWave");
-           // _spawnerOfwawes = SendAWaweAsync(_waveGenerator.GenerateWave(), token);
-            _spawnerOfwawes = SendAWaweAsync(_waveGenerator.GenerateWave(), token);
-            await Task.Delay((int)(_interval*1000), token);         
+            //   Debug.Log("NewWave");
+            _spawnerOfwawes = _coroutineRunner.StartCoroutine(SendWaweCoroutine(_waveGenerator.GenerateWave())); 
+            yield return new WaitForSeconds(_interval);         
         }
     }
 
@@ -51,12 +62,12 @@ public class WaveService
         _cancellationTokenSource.Cancel();
     }
 
-    private async Task SendAWaweAsync(Wave wave, CancellationToken token)
+    private IEnumerator SendWaweCoroutine(Wave wave)
     {
         for (int count = 0; count < wave.EnemyCreationCommands.Length; count++)
         {
             wave.EnemyCreationCommands[count].Invoke();
-            await Task.Delay((int)(wave.Delay * 1000));
+           yield return new WaitForSeconds(wave.Delay);
         }
     }
 }

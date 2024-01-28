@@ -1,7 +1,7 @@
 ﻿using Infrastructure;
 using System;
 
-namespace Assets.Resources.Codebase.Infrastructure
+namespace Infrastructure
 {
     public class BootstrapState : IState
     {

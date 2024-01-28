@@ -1,8 +1,9 @@
 ﻿using System;
 using Codebase.MonobehaviourComponents;
 using Services.CardGeneration;
-using Services.TowerBuilding;
 using UnityEngine;
+using WorldCellBuilding.CardImage;
+using Zenject;
 
 namespace Codebase.Services.CardGeneration
 {
@@ -10,12 +11,11 @@ namespace Codebase.Services.CardGeneration
     {
         private const string _prefabpath = "Prefabs/Cards/"; 
         private Transform _cardParent;
-        private readonly TowerBuildingService _towerBuildingService;
-        public CardInstantiationService(TowerBuildingService towerBuildingService, TowerCardSpawnMarker cardparent) : base(_prefabpath)
-        {
-            _towerBuildingService = towerBuildingService;
-            _cardParent = cardparent.transform;
-        }
+
+        public CardInstantiationService(
+            DiContainer diContainer, 
+            TowerCardSpawnMarker towerCardSpawnMarker) : base(_prefabpath, diContainer) 
+            => _cardParent = towerCardSpawnMarker.transform;
 
         public override TowerCard ReturnObject(Type type)
         {
@@ -32,6 +32,11 @@ namespace Codebase.Services.CardGeneration
             _factories.Add(type, GetNewFactory(type));
 
         protected override IFactory<TowerCard> GetNewFactory(Type type) => 
-            new TowerCardFactory(type, LoadProductPrefab(type), _towerBuildingService);
+            new TowerCardFactory(
+                type: type,
+                cardPrefab: LoadProductPrefab(type),
+                cardImageDatabase: _container.Resolve<CardImageDatabase>(),
+                worldCellCardGenerator: _container.Resolve<WorldCellCardGenerator>(),
+                diContainer: _container);
     }
 }

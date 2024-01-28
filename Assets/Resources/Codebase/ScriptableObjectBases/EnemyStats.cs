@@ -3,6 +3,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyStats", menuName = "ScriptableObjects/EnemyStats", order = 1)]
 public class EnemyStats : ScriptableObject
 {
+    [Header("EnemyTypes tags")]
+    public EnemyTypes[] EnemyTypes;
+
     [Header("Base stats")]
     public int HitPoints;
     public int Damage;

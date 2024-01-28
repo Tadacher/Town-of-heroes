@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 /// <summary>
 /// a collection of fabric exemplars paramerized with child classes of Tproduction
@@ -8,11 +9,13 @@ using UnityEngine;
 
 public abstract class AbstractInstantiationService<TProduction> where TProduction : MonoBehaviour
 {
+    protected readonly DiContainer _container;
     protected Dictionary<Type, IFactory<TProduction>> _factories;
     protected string _productionPrefabPath;
 
-    protected AbstractInstantiationService(string productionPrefabPath)
+    protected AbstractInstantiationService(string productionPrefabPath, DiContainer diContainer)
     {
+        _container = diContainer;
         _factories = new();
         _productionPrefabPath = productionPrefabPath;
     }

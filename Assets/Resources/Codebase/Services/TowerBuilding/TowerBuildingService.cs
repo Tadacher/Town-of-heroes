@@ -1,4 +1,5 @@
 ﻿using Core.Towers;
+using Services.GridSystem;
 using Services.Input;
 using System;
 using UnityEngine;
@@ -7,16 +8,17 @@ namespace Services.TowerBuilding
 {
     public class TowerBuildingService
     {
+        protected IPoolableObject _activeCard;
         private TowerInstantiationService _towerInstantiatingService;
-
+        private BattleGridService _alignerService;
 
         private AbstractInputService _inputService;
         private AbstractTower _activeTower;
-        private IPoolableObject _activeCard;
-        public TowerBuildingService(TowerInstantiationService towerInstantiatingService, AbstractInputService inputService = null)
+        public TowerBuildingService(TowerInstantiationService towerInstantiatingService, BattleGridService gridAlignService, AbstractInputService inputService = null)
         {
             _towerInstantiatingService = towerInstantiatingService;
             _inputService = inputService;
+            _alignerService = gridAlignService;
         }
         public void InstantiateTowerFromCard(TowerCard towerCard, Type type)
         {
@@ -46,17 +48,13 @@ namespace Services.TowerBuilding
         private void PlaceActiveTower()
         {          
             _activeTower.AsUnGhost().StopFollowingPointer();
+            _activeTower.InsertSelfToGrid();
         }
 
-        private bool CanBePlacedAtPointer()
-        {
-            return true;
-            //throw new NotImplementedException();
-        }
+        private bool CanBePlacedAtPointer() => 
+            _alignerService.CellAvailable(_activeTower.transform.position);
 
         private AbstractTower GetTowerGhost(Type type) => 
             _towerInstantiatingService.ReturnObject(type).AsGhost();
-
-
     }
 }

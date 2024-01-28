@@ -6,10 +6,10 @@ namespace Infrastructure
 {
     public class InputReciever : MonoBehaviour, IInputReciever
     {
-        private IInputListener _inputListener;
+        private AbstractInputService _inputListener;
        
        [Inject]
-        public void Initialize(IInputListener inputListener) => 
+        public void Initialize(AbstractInputService inputListener) => 
             _inputListener = inputListener;
 
         private void Update()
@@ -19,6 +19,11 @@ namespace Infrastructure
 
             else if (Input.GetMouseButtonUp(0))
                 _inputListener.PointerUp();
+
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+                _inputListener.ShiftDown();
+            else if(Input.GetKeyUp(KeyCode.LeftShift))
+                _inputListener.ShiftUp();
         }
     }
 }

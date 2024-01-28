@@ -9,12 +9,15 @@ namespace Core.Towers
         {
             InitializeAttackModule<SimpleTowerAttackModule>();
             InitializeProjectileFactory(_towerStats.ProjectilePrefab);
-            Initialize(null, null);
             RefreshAttackDelay();
         }
         protected override void Update()
         {
             base.Update();
+
+            if (_isGhost) 
+                return;
+            
             Debug.Log(_currentEnemy);
             FinClosestTargetIfNeeded();
             CountAttackDelay();
@@ -28,6 +31,7 @@ namespace Core.Towers
             RefreshAttackDelay();
         }
 
-        protected override void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab) => _projectileFactory = new SimpleProjectileFactory(projectilePrefab);
+        protected override void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab) => 
+            _projectileFactory = new SimpleProjectileFactory(projectilePrefab);
     }
 }

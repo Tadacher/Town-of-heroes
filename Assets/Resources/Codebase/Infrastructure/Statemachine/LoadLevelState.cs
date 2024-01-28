@@ -1,6 +1,6 @@
 ﻿using Infrastructure;
 
-namespace Assets.Resources.Codebase.Infrastructure
+namespace Infrastructure
 {
     public class LoadLevelState : IPayloadedState<string>
     {

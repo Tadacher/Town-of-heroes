@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementModuleOwner, IPoolableObject
 {
     public string EnemyName;
+    public EnemyStats Stats => _stats;
 
     [SerializeField]
     protected EnemyStats _stats;

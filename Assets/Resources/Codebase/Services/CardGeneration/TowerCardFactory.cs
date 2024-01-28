@@ -1,26 +1,40 @@
-﻿using Core.Towers;
+﻿using Infrastructure;
+using Services.Factories;
+using Services.Input;
 using Services.TowerBuilding;
 using System;
 using UnityEngine;
+using WorldCellBuilding.CardImage;
+using Zenject;
 
 namespace Services.CardGeneration
 {
     public class TowerCardFactory : AbstractPoolerFactory<TowerCard>, IFactory<TowerCard>
     {
-        private readonly TowerBuildingService _towerBuildingService;
+        [SerializeField] private CellStats _cellStats;
+        private readonly CardImageDatabase _cardImageDatabase;
         private readonly TowerCard _cardPrefab;
-        private Type _type;
+        private readonly WorldCellCardGenerator _worldCellCardGenerator;
+        private Type _towerType;
 
-        public TowerCardFactory(Type type, TowerCard cardPrefab, TowerBuildingService towerBuildingService) : base()
+        public TowerCardFactory(Type type,
+                                TowerCard cardPrefab,
+                                CardImageDatabase cardImageDatabase,
+                                WorldCellCardGenerator worldCellCardGenerator,
+                                DiContainer diContainer) : base(diContainer)
         {
-            _type = type;
-            Debug.Log(cardPrefab);
+            _cardImageDatabase = cardImageDatabase;
+            _cardImageDatabase.Initialize();
+            _worldCellCardGenerator = worldCellCardGenerator;
+            _towerType = type;
             _cardPrefab = cardPrefab;
-            _towerBuildingService = towerBuildingService;
         }
 
-        public override TowerCard GetObject() =>
-            _pool.Get();
+        public override TowerCard GetObject()
+        {
+            TowerCard gettable = _pool.Get();
+            return gettable.ReInitialize();
+        }
 
         public override void ReturnToPool(IPoolableObject poolable) =>
             _pool.Release((TowerCard)poolable);
@@ -39,8 +53,27 @@ namespace Services.CardGeneration
         protected override TowerCard CreateNew()
         {
             TowerCard returnable = GameObject.Instantiate(_cardPrefab, null);
-            returnable.Initialize(_towerBuildingService, this, _type);
+
+            Type worldCellType = GetWorldCellType();
+            try
+            {
+                returnable.Initialize(
+                    towerBuildingService: _container.Resolve<TowerBuildingService>(),
+                    worldCellBuildingService: _container.Resolve<WorldCellBuildingService>(),
+                    gameplayStateMachine: _container.Resolve<GameplayStateMachine>(),
+                    shiftEventProvider: _container.Resolve<AbstractInputService>(),
+                    worldCellSprite: _cardImageDatabase.GetSprite(worldCellType.ToString()),
+                    pooler: this,
+                    towerType: _towerType,
+                    worldCellType: worldCellType);
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+            }
             return returnable;
         }
+
+        private Type GetWorldCellType() => _worldCellCardGenerator.GetWorldCellType(_towerType);
     }
 }
