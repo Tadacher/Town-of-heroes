@@ -1,0 +1,80 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.ICoroutineRunner
+  commentId: T:Infrastructure.ICoroutineRunner
+  id: ICoroutineRunner
+  parent: Infrastructure
+  children:
+  - Infrastructure.ICoroutineRunner.StartCoroutine(IEnumerator)
+  langs:
+  - csharp
+  - vb
+  name: ICoroutineRunner
+  nameWithType: ICoroutineRunner
+  fullName: Infrastructure.ICoroutineRunner
+  type: Interface
+  source:
+    id: ICoroutineRunner
+    path: ''
+    startLine: 707
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public interface ICoroutineRunner
+    content.vb: Public Interface ICoroutineRunner
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Infrastructure.ICoroutineRunner.StartCoroutine(IEnumerator)
+  commentId: M:Infrastructure.ICoroutineRunner.StartCoroutine(IEnumerator)
+  id: StartCoroutine(IEnumerator)
+  parent: Infrastructure.ICoroutineRunner
+  langs:
+  - csharp
+  - vb
+  name: StartCoroutine(IEnumerator)
+  nameWithType: ICoroutineRunner.StartCoroutine(IEnumerator)
+  fullName: Infrastructure.ICoroutineRunner.StartCoroutine(IEnumerator)
+  type: Method
+  source:
+    id: StartCoroutine
+    path: ''
+    startLine: 709
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: UnityEngine.Coroutine StartCoroutine(IEnumerator enumerator)
+    parameters:
+    - id: enumerator
+      type: Global.IEnumerator
+    return:
+      type: Global.UnityEngine.Coroutine
+    content.vb: Function StartCoroutine(enumerator As IEnumerator) As UnityEngine.Coroutine
+  overload: Infrastructure.ICoroutineRunner.StartCoroutine*
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: Infrastructure.ICoroutineRunner.StartCoroutine*
+  commentId: Overload:Infrastructure.ICoroutineRunner.StartCoroutine
+  name: StartCoroutine
+  nameWithType: ICoroutineRunner.StartCoroutine
+  fullName: Infrastructure.ICoroutineRunner.StartCoroutine
+- uid: Global.IEnumerator
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: IEnumerator
+- uid: Global.UnityEngine.Coroutine
+  commentId: '!:Global.UnityEngine.Coroutine'
+  isExternal: true
+  name: UnityEngine.Coroutine
+  nameWithType: UnityEngine.Coroutine
+  fullName: UnityEngine.Coroutine

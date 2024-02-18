@@ -5,16 +5,16 @@ using Services.Input;
 using UnityEngine;
 
 namespace WorldCells
-{
+{/// <summary>
+/// base class for all world cells
+/// it is mandatory for it to be in WorldCells namespace for propper card generation
+/// </summary>
     public class AbstractWorldCell : MonoBehaviour, IPoolableObject, IGridCellObject
     {
         //external
-        [SerializeField]
-        protected PointerFollower _pointerFollower;
-        [SerializeField]
-        protected SpriteRenderer _spriteRenderer;
-        [SerializeField]
-        protected CellStats _cellStats;
+        [SerializeField] protected PointerFollower _pointerFollower;
+        [SerializeField] protected SpriteRenderer _spriteRenderer;
+        [SerializeField] protected CellStats _cellStats;
         //dependencies
         protected IObjectPooler _objectPooler;
         protected WorldCellGridService _gridAlignService;

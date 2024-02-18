@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.MainCameraMarker
+  commentId: T:Infrastructure.MainCameraMarker
+  id: MainCameraMarker
+  parent: Infrastructure
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MainCameraMarker
+  nameWithType: MainCameraMarker
+  fullName: Infrastructure.MainCameraMarker
+  type: Class
+  source:
+    id: MainCameraMarker
+    path: ''
+    startLine: 666
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: 'public class MainCameraMarker : MonoBehaviour'
+    content.vb: >-
+      Public Class MainCameraMarker
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

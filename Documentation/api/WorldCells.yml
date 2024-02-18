@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorldCells
+  commentId: N:WorldCells
+  id: WorldCells
+  children:
+  - WorldCells.AbstractWorldCell
+  - WorldCells.CellBiomeTypes
+  - WorldCells.GrassMeadows
+  - WorldCells.WorldCellBalanceService
+  langs:
+  - csharp
+  - vb
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: WorldCells.CellBiomeTypes
+  commentId: T:WorldCells.CellBiomeTypes
+  parent: WorldCells
+  name: CellBiomeTypes
+  nameWithType: CellBiomeTypes
+  fullName: WorldCells.CellBiomeTypes
+- uid: WorldCells.WorldCellBalanceService
+  commentId: T:WorldCells.WorldCellBalanceService
+  parent: WorldCells
+  name: WorldCellBalanceService
+  nameWithType: WorldCellBalanceService
+  fullName: WorldCells.WorldCellBalanceService
+- uid: WorldCells.AbstractWorldCell
+  commentId: T:WorldCells.AbstractWorldCell
+  parent: WorldCells
+  name: AbstractWorldCell
+  nameWithType: AbstractWorldCell
+  fullName: WorldCells.AbstractWorldCell
+- uid: WorldCells.GrassMeadows
+  commentId: T:WorldCells.GrassMeadows
+  name: GrassMeadows
+  nameWithType: GrassMeadows
+  fullName: WorldCells.GrassMeadows
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells

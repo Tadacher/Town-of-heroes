@@ -15,7 +15,7 @@ namespace BootStrap
                 return;
 
             _waveService = waveService;
-            _waveService.StartCoroutine();
+            _waveService.StartWaveCoroutine();
         }
 
         private void OnDisable() => 

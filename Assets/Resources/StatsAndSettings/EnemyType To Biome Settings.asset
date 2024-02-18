@@ -19,3 +19,7 @@ MonoBehaviour:
       Weight: 1
     - EnemyType: 2
       Weight: 3
+  - CellBiomeType: 4
+    ProbabilityWeightPairs:
+    - EnemyType: 3
+      Weight: 1

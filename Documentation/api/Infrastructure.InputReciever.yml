@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.InputReciever
+  commentId: T:Infrastructure.InputReciever
+  id: InputReciever
+  parent: Infrastructure
+  children:
+  - Infrastructure.InputReciever.Initialize(AbstractInputService)
+  langs:
+  - csharp
+  - vb
+  name: InputReciever
+  nameWithType: InputReciever
+  fullName: Infrastructure.InputReciever
+  type: Class
+  source:
+    id: InputReciever
+    path: ''
+    startLine: 2185
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: 'public class InputReciever : MonoBehaviour'
+    content.vb: >-
+      Public Class InputReciever
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Infrastructure.InputReciever.Initialize(AbstractInputService)
+  commentId: M:Infrastructure.InputReciever.Initialize(AbstractInputService)
+  id: Initialize(AbstractInputService)
+  parent: Infrastructure.InputReciever
+  langs:
+  - csharp
+  - vb
+  name: Initialize(AbstractInputService)
+  nameWithType: InputReciever.Initialize(AbstractInputService)
+  fullName: Infrastructure.InputReciever.Initialize(AbstractInputService)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 2189
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public void Initialize(AbstractInputService inputListener)
+    parameters:
+    - id: inputListener
+      type: Global.AbstractInputService
+    content.vb: Public Sub Initialize(inputListener As AbstractInputService)
+  overload: Infrastructure.InputReciever.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Infrastructure.InputReciever.Initialize*
+  commentId: Overload:Infrastructure.InputReciever.Initialize
+  name: Initialize
+  nameWithType: InputReciever.Initialize
+  fullName: Infrastructure.InputReciever.Initialize
+- uid: Global.AbstractInputService
+  isExternal: true
+  name: AbstractInputService
+  nameWithType: AbstractInputService
+  fullName: AbstractInputService

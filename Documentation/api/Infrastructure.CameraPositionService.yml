@@ -1,0 +1,443 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.CameraPositionService
+  commentId: T:Infrastructure.CameraPositionService
+  id: CameraPositionService
+  parent: Infrastructure
+  children:
+  - Infrastructure.CameraPositionService.#ctor(Infrastructure.MainCameraMarker)
+  - Infrastructure.CameraPositionService.SetCamToBattlefield
+  - Infrastructure.CameraPositionService.SetCamToMap
+  langs:
+  - csharp
+  - vb
+  name: CameraPositionService
+  nameWithType: CameraPositionService
+  fullName: Infrastructure.CameraPositionService
+  type: Class
+  source:
+    id: CameraPositionService
+    path: ''
+    startLine: 1251
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public class CameraPositionService
+    content.vb: Public Class CameraPositionService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Infrastructure.CameraPositionService.#ctor(Infrastructure.MainCameraMarker)
+  commentId: M:Infrastructure.CameraPositionService.#ctor(Infrastructure.MainCameraMarker)
+  id: '#ctor(Infrastructure.MainCameraMarker)'
+  parent: Infrastructure.CameraPositionService
+  langs:
+  - csharp
+  - vb
+  name: CameraPositionService(MainCameraMarker)
+  nameWithType: CameraPositionService.CameraPositionService(MainCameraMarker)
+  fullName: Infrastructure.CameraPositionService.CameraPositionService(Infrastructure.MainCameraMarker)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1257
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public CameraPositionService(MainCameraMarker cameraTransform)
+    parameters:
+    - id: cameraTransform
+      type: Infrastructure.MainCameraMarker
+    content.vb: Public Sub New(cameraTransform As MainCameraMarker)
+  overload: Infrastructure.CameraPositionService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Infrastructure.CameraPositionService.SetCamToBattlefield
+  commentId: M:Infrastructure.CameraPositionService.SetCamToBattlefield
+  id: SetCamToBattlefield
+  parent: Infrastructure.CameraPositionService
+  langs:
+  - csharp
+  - vb
+  name: SetCamToBattlefield()
+  nameWithType: CameraPositionService.SetCamToBattlefield()
+  fullName: Infrastructure.CameraPositionService.SetCamToBattlefield()
+  type: Method
+  source:
+    id: SetCamToBattlefield
+    path: ''
+    startLine: 1262
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public void SetCamToBattlefield()
+    content.vb: Public Sub SetCamToBattlefield
+  overload: Infrastructure.CameraPositionService.SetCamToBattlefield*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Infrastructure.CameraPositionService.SetCamToMap
+  commentId: M:Infrastructure.CameraPositionService.SetCamToMap
+  id: SetCamToMap
+  parent: Infrastructure.CameraPositionService
+  langs:
+  - csharp
+  - vb
+  name: SetCamToMap()
+  nameWithType: CameraPositionService.SetCamToMap()
+  fullName: Infrastructure.CameraPositionService.SetCamToMap()
+  type: Method
+  source:
+    id: SetCamToMap
+    path: ''
+    startLine: 1264
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public void SetCamToMap()
+    content.vb: Public Sub SetCamToMap
+  overload: Infrastructure.CameraPositionService.SetCamToMap*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Infrastructure.CameraPositionService.#ctor*
+  commentId: Overload:Infrastructure.CameraPositionService.#ctor
+  name: CameraPositionService
+  nameWithType: CameraPositionService.CameraPositionService
+  fullName: Infrastructure.CameraPositionService.CameraPositionService
+- uid: Infrastructure.MainCameraMarker
+  commentId: T:Infrastructure.MainCameraMarker
+  parent: Infrastructure
+  name: MainCameraMarker
+  nameWithType: MainCameraMarker
+  fullName: Infrastructure.MainCameraMarker
+- uid: Infrastructure.CameraPositionService.SetCamToBattlefield*
+  commentId: Overload:Infrastructure.CameraPositionService.SetCamToBattlefield
+  name: SetCamToBattlefield
+  nameWithType: CameraPositionService.SetCamToBattlefield
+  fullName: Infrastructure.CameraPositionService.SetCamToBattlefield
+- uid: Infrastructure.CameraPositionService.SetCamToMap*
+  commentId: Overload:Infrastructure.CameraPositionService.SetCamToMap
+  name: SetCamToMap
+  nameWithType: CameraPositionService.SetCamToMap
+  fullName: Infrastructure.CameraPositionService.SetCamToMap

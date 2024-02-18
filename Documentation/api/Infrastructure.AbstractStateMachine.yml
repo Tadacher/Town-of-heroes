@@ -1,0 +1,728 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.AbstractStateMachine
+  commentId: T:Infrastructure.AbstractStateMachine
+  id: AbstractStateMachine
+  parent: Infrastructure
+  children:
+  - Infrastructure.AbstractStateMachine._activeState
+  - Infrastructure.AbstractStateMachine._states
+  - Infrastructure.AbstractStateMachine.ActiveState
+  - Infrastructure.AbstractStateMachine.ChangeState``1
+  - Infrastructure.AbstractStateMachine.EnterState``1
+  - Infrastructure.AbstractStateMachine.EnterState``2(``1)
+  - Infrastructure.AbstractStateMachine.GetState``1
+  langs:
+  - csharp
+  - vb
+  name: AbstractStateMachine
+  nameWithType: AbstractStateMachine
+  fullName: Infrastructure.AbstractStateMachine
+  type: Class
+  source:
+    id: AbstractStateMachine
+    path: ''
+    startLine: 498
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public class AbstractStateMachine
+    content.vb: Public Class AbstractStateMachine
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Infrastructure.GameplayStateMachine
+  - Infrastructure.GameStateMachine
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Infrastructure.AbstractStateMachine.ActiveState
+  commentId: P:Infrastructure.AbstractStateMachine.ActiveState
+  id: ActiveState
+  parent: Infrastructure.AbstractStateMachine
+  langs:
+  - csharp
+  - vb
+  name: ActiveState
+  nameWithType: AbstractStateMachine.ActiveState
+  fullName: Infrastructure.AbstractStateMachine.ActiveState
+  type: Property
+  source:
+    id: ActiveState
+    path: ''
+    startLine: 500
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public IExitableState ActiveState { get; }
+    parameters: []
+    return:
+      type: Infrastructure.IExitableState
+    content.vb: Public ReadOnly Property ActiveState As IExitableState
+  overload: Infrastructure.AbstractStateMachine.ActiveState*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Infrastructure.AbstractStateMachine._activeState
+  commentId: F:Infrastructure.AbstractStateMachine._activeState
+  id: _activeState
+  parent: Infrastructure.AbstractStateMachine
+  langs:
+  - csharp
+  - vb
+  name: _activeState
+  nameWithType: AbstractStateMachine._activeState
+  fullName: Infrastructure.AbstractStateMachine._activeState
+  type: Field
+  source:
+    id: _activeState
+    path: ''
+    startLine: 501
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: protected IExitableState _activeState
+    return:
+      type: Infrastructure.IExitableState
+    content.vb: Protected _activeState As IExitableState
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Infrastructure.AbstractStateMachine._states
+  commentId: F:Infrastructure.AbstractStateMachine._states
+  id: _states
+  parent: Infrastructure.AbstractStateMachine
+  langs:
+  - csharp
+  - vb
+  name: _states
+  nameWithType: AbstractStateMachine._states
+  fullName: Infrastructure.AbstractStateMachine._states
+  type: Field
+  source:
+    id: _states
+    path: ''
+    startLine: 503
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: protected Dictionary<Type, IExitableState> _states
+    return:
+      type: Global.Dictionary{Type,Infrastructure.IExitableState}
+    content.vb: Protected _states As Dictionary(Of Type, IExitableState)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Infrastructure.AbstractStateMachine.EnterState``1
+  commentId: M:Infrastructure.AbstractStateMachine.EnterState``1
+  id: EnterState``1
+  parent: Infrastructure.AbstractStateMachine
+  langs:
+  - csharp
+  - vb
+  name: EnterState<TState>()
+  nameWithType: AbstractStateMachine.EnterState<TState>()
+  fullName: Infrastructure.AbstractStateMachine.EnterState<TState>()
+  type: Method
+  source:
+    id: EnterState
+    path: ''
+    startLine: 505
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: >-
+      public void EnterState<TState>()
+          where TState : class, IState
+    typeParameters:
+    - id: TState
+    content.vb: Public Sub EnterState(Of TState As {Class, IState})
+  overload: Infrastructure.AbstractStateMachine.EnterState*
+  nameWithType.vb: AbstractStateMachine.EnterState(Of TState)()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Infrastructure.AbstractStateMachine.EnterState(Of TState)()
+  name.vb: EnterState(Of TState)()
+- uid: Infrastructure.AbstractStateMachine.EnterState``2(``1)
+  commentId: M:Infrastructure.AbstractStateMachine.EnterState``2(``1)
+  id: EnterState``2(``1)
+  parent: Infrastructure.AbstractStateMachine
+  langs:
+  - csharp
+  - vb
+  name: EnterState<TState, TPayload>(TPayload)
+  nameWithType: AbstractStateMachine.EnterState<TState, TPayload>(TPayload)
+  fullName: Infrastructure.AbstractStateMachine.EnterState<TState, TPayload>(TPayload)
+  type: Method
+  source:
+    id: EnterState
+    path: ''
+    startLine: 507
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: >-
+      public void EnterState<TState, TPayload>(TPayload payload)
+          where TState : class, IPayloadedState<TPayload>
+    parameters:
+    - id: payload
+      type: '{TPayload}'
+    typeParameters:
+    - id: TState
+    - id: TPayload
+    content.vb: Public Sub EnterState(Of TState As {Class, IPayloadedState(Of TPayload)}, TPayload)(payload As TPayload)
+  overload: Infrastructure.AbstractStateMachine.EnterState*
+  nameWithType.vb: AbstractStateMachine.EnterState(Of TState, TPayload)(TPayload)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Infrastructure.AbstractStateMachine.EnterState(Of TState, TPayload)(TPayload)
+  name.vb: EnterState(Of TState, TPayload)(TPayload)
+- uid: Infrastructure.AbstractStateMachine.ChangeState``1
+  commentId: M:Infrastructure.AbstractStateMachine.ChangeState``1
+  id: ChangeState``1
+  parent: Infrastructure.AbstractStateMachine
+  langs:
+  - csharp
+  - vb
+  name: ChangeState<TState>()
+  nameWithType: AbstractStateMachine.ChangeState<TState>()
+  fullName: Infrastructure.AbstractStateMachine.ChangeState<TState>()
+  type: Method
+  source:
+    id: ChangeState
+    path: ''
+    startLine: 509
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: >-
+      protected virtual TState ChangeState<TState>()
+          where TState : class, IExitableState
+    typeParameters:
+    - id: TState
+    return:
+      type: '{TState}'
+    content.vb: Protected Overridable Function ChangeState(Of TState As {Class, IExitableState}) As TState
+  overload: Infrastructure.AbstractStateMachine.ChangeState*
+  nameWithType.vb: AbstractStateMachine.ChangeState(Of TState)()
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+  fullName.vb: Infrastructure.AbstractStateMachine.ChangeState(Of TState)()
+  name.vb: ChangeState(Of TState)()
+- uid: Infrastructure.AbstractStateMachine.GetState``1
+  commentId: M:Infrastructure.AbstractStateMachine.GetState``1
+  id: GetState``1
+  parent: Infrastructure.AbstractStateMachine
+  langs:
+  - csharp
+  - vb
+  name: GetState<TState>()
+  nameWithType: AbstractStateMachine.GetState<TState>()
+  fullName: Infrastructure.AbstractStateMachine.GetState<TState>()
+  type: Method
+  source:
+    id: GetState
+    path: ''
+    startLine: 517
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: >-
+      protected TState GetState<TState>()
+          where TState : class, IExitableState
+    typeParameters:
+    - id: TState
+    return:
+      type: '{TState}'
+    content.vb: Protected Function GetState(Of TState As {Class, IExitableState}) As TState
+  overload: Infrastructure.AbstractStateMachine.GetState*
+  nameWithType.vb: AbstractStateMachine.GetState(Of TState)()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractStateMachine.GetState(Of TState)()
+  name.vb: GetState(Of TState)()
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Infrastructure.AbstractStateMachine.ActiveState*
+  commentId: Overload:Infrastructure.AbstractStateMachine.ActiveState
+  name: ActiveState
+  nameWithType: AbstractStateMachine.ActiveState
+  fullName: Infrastructure.AbstractStateMachine.ActiveState
+- uid: Infrastructure.IExitableState
+  commentId: T:Infrastructure.IExitableState
+  parent: Infrastructure
+  name: IExitableState
+  nameWithType: IExitableState
+  fullName: Infrastructure.IExitableState
+- uid: Global.Dictionary{Type,Infrastructure.IExitableState}
+  commentId: '!:Global.Dictionary{Type,Infrastructure.IExitableState}'
+  definition: Global.Dictionary`2
+  name: Dictionary<Type, IExitableState>
+  nameWithType: Dictionary<Type, IExitableState>
+  fullName: Dictionary<Type, Infrastructure.IExitableState>
+  nameWithType.vb: Dictionary(Of Type, IExitableState)
+  fullName.vb: Dictionary(Of Type, Infrastructure.IExitableState)
+  name.vb: Dictionary(Of Type, IExitableState)
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Type
+    name: Type
+    nameWithType: Type
+    fullName: Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Infrastructure.IExitableState
+    name: IExitableState
+    nameWithType: IExitableState
+    fullName: Infrastructure.IExitableState
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Type
+    name: Type
+    nameWithType: Type
+    fullName: Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Infrastructure.IExitableState
+    name: IExitableState
+    nameWithType: IExitableState
+    fullName: Infrastructure.IExitableState
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractStateMachine.EnterState*
+  commentId: Overload:Infrastructure.AbstractStateMachine.EnterState
+  name: EnterState
+  nameWithType: AbstractStateMachine.EnterState
+  fullName: Infrastructure.AbstractStateMachine.EnterState
+- uid: '{TPayload}'
+  commentId: '!:TPayload'
+  definition: TPayload
+  name: TPayload
+  nameWithType: TPayload
+  fullName: TPayload
+- uid: TPayload
+  name: TPayload
+  nameWithType: TPayload
+  fullName: TPayload
+- uid: Infrastructure.AbstractStateMachine.ChangeState*
+  commentId: Overload:Infrastructure.AbstractStateMachine.ChangeState
+  name: ChangeState
+  nameWithType: AbstractStateMachine.ChangeState
+  fullName: Infrastructure.AbstractStateMachine.ChangeState
+- uid: '{TState}'
+  commentId: '!:TState'
+  definition: TState
+  name: TState
+  nameWithType: TState
+  fullName: TState
+- uid: TState
+  name: TState
+  nameWithType: TState
+  fullName: TState
+- uid: Infrastructure.AbstractStateMachine.GetState*
+  commentId: Overload:Infrastructure.AbstractStateMachine.GetState
+  name: GetState
+  nameWithType: AbstractStateMachine.GetState
+  fullName: Infrastructure.AbstractStateMachine.GetState

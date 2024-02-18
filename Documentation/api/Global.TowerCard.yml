@@ -1,0 +1,371 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.TowerCard
+  commentId: T:Global.TowerCard
+  id: TowerCard
+  parent: Global
+  children:
+  - Global.TowerCard.Finalize
+  - Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
+  - Global.TowerCard.OnGameplayStateChanged(IExitableState)
+  - Global.TowerCard.OnPointerDown(PointerEventData)
+  - Global.TowerCard.ReInitialize
+  - Global.TowerCard.ReturnToPool
+  langs:
+  - csharp
+  - vb
+  name: TowerCard
+  nameWithType: TowerCard
+  fullName: TowerCard
+  type: Class
+  source:
+    id: TowerCard
+    path: ''
+    startLine: 821
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class TowerCard : MonoBehaviour, IPoolableObject'
+    content.vb: >-
+      Public Class TowerCard
+          Inherits MonoBehaviour
+          Implements IPoolableObject
+  inheritance:
+  - System.Object
+  implements:
+  - Global.IPoolableObject
+  - Global.IPointerDownHandler
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
+  commentId: M:Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
+  id: Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
+  parent: Global.TowerCard
+  langs:
+  - csharp
+  - vb
+  name: Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
+  nameWithType: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
+  fullName: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 849
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Initialize(TowerBuildingService towerBuildingService, WorldCellBuildingService worldCellBuildingService, GameplayStateMachine gameplayStateMachine, IObjectPooler pooler, IShiftEventProvider shiftEventProvider, Sprite worldCellSprite, Type towerType, Type worldCellType)
+    parameters:
+    - id: towerBuildingService
+      type: Global.TowerBuildingService
+    - id: worldCellBuildingService
+      type: Global.WorldCellBuildingService
+    - id: gameplayStateMachine
+      type: Global.GameplayStateMachine
+    - id: pooler
+      type: Global.IObjectPooler
+    - id: shiftEventProvider
+      type: Global.IShiftEventProvider
+    - id: worldCellSprite
+      type: Global.Sprite
+    - id: towerType
+      type: Global.Type
+    - id: worldCellType
+      type: Global.Type
+    content.vb: Public Sub Initialize(towerBuildingService As TowerBuildingService, worldCellBuildingService As WorldCellBuildingService, gameplayStateMachine As GameplayStateMachine, pooler As IObjectPooler, shiftEventProvider As IShiftEventProvider, worldCellSprite As Sprite, towerType As Type, worldCellType As Type)
+  overload: Global.TowerCard.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TowerCard.ReInitialize
+  commentId: M:Global.TowerCard.ReInitialize
+  id: ReInitialize
+  parent: Global.TowerCard
+  langs:
+  - csharp
+  - vb
+  name: ReInitialize()
+  nameWithType: TowerCard.ReInitialize()
+  fullName: TowerCard.ReInitialize()
+  type: Method
+  source:
+    id: ReInitialize
+    path: ''
+    startLine: 875
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public TowerCard ReInitialize()
+    return:
+      type: Global.TowerCard
+    content.vb: Public Function ReInitialize As TowerCard
+  overload: Global.TowerCard.ReInitialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TowerCard.OnPointerDown(PointerEventData)
+  commentId: M:Global.TowerCard.OnPointerDown(PointerEventData)
+  id: OnPointerDown(PointerEventData)
+  parent: Global.TowerCard
+  langs:
+  - csharp
+  - vb
+  name: OnPointerDown(PointerEventData)
+  nameWithType: TowerCard.OnPointerDown(PointerEventData)
+  fullName: TowerCard.OnPointerDown(PointerEventData)
+  type: Method
+  source:
+    id: OnPointerDown
+    path: ''
+    startLine: 884
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnPointerDown(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: Global.PointerEventData
+    content.vb: Public Sub OnPointerDown(eventData As PointerEventData)
+  overload: Global.TowerCard.OnPointerDown*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TowerCard.OnGameplayStateChanged(IExitableState)
+  commentId: M:Global.TowerCard.OnGameplayStateChanged(IExitableState)
+  id: OnGameplayStateChanged(IExitableState)
+  parent: Global.TowerCard
+  langs:
+  - csharp
+  - vb
+  name: OnGameplayStateChanged(IExitableState)
+  nameWithType: TowerCard.OnGameplayStateChanged(IExitableState)
+  fullName: TowerCard.OnGameplayStateChanged(IExitableState)
+  type: Method
+  source:
+    id: OnGameplayStateChanged
+    path: ''
+    startLine: 929
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected void OnGameplayStateChanged(IExitableState state)
+    parameters:
+    - id: state
+      type: Global.IExitableState
+    content.vb: Protected Sub OnGameplayStateChanged(state As IExitableState)
+  overload: Global.TowerCard.OnGameplayStateChanged*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Global.TowerCard.ReturnToPool
+  commentId: M:Global.TowerCard.ReturnToPool
+  id: ReturnToPool
+  parent: Global.TowerCard
+  langs:
+  - csharp
+  - vb
+  name: ReturnToPool()
+  nameWithType: TowerCard.ReturnToPool()
+  fullName: TowerCard.ReturnToPool()
+  type: Method
+  source:
+    id: ReturnToPool
+    path: ''
+    startLine: 998
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void ReturnToPool()
+    content.vb: Public Sub ReturnToPool
+  overload: Global.TowerCard.ReturnToPool*
+  implements:
+  - Global.IPoolableObject.ReturnToPool
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TowerCard.Finalize
+  commentId: M:Global.TowerCard.Finalize
+  id: Finalize
+  parent: Global.TowerCard
+  langs:
+  - csharp
+  - vb
+  name: Finalize()
+  nameWithType: TowerCard.Finalize()
+  fullName: TowerCard.Finalize()
+  type: Method
+  source:
+    id: Finalize
+    path: ''
+    startLine: 1005
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected void Finalize()
+    content.vb: Protected Sub Finalize
+  overload: Global.TowerCard.Finalize*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+- uid: Global.IPointerDownHandler
+  commentId: '!:Global.IPointerDownHandler'
+  isExternal: true
+  name: IPointerDownHandler
+  nameWithType: IPointerDownHandler
+  fullName: IPointerDownHandler
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.TowerCard.Initialize*
+  commentId: Overload:Global.TowerCard.Initialize
+  name: Initialize
+  nameWithType: TowerCard.Initialize
+  fullName: TowerCard.Initialize
+- uid: Global.TowerBuildingService
+  commentId: '!:Global.TowerBuildingService'
+  isExternal: true
+  name: TowerBuildingService
+  nameWithType: TowerBuildingService
+  fullName: TowerBuildingService
+- uid: Global.WorldCellBuildingService
+  commentId: T:Global.WorldCellBuildingService
+  name: WorldCellBuildingService
+  nameWithType: WorldCellBuildingService
+  fullName: WorldCellBuildingService
+- uid: Global.GameplayStateMachine
+  commentId: '!:Global.GameplayStateMachine'
+  isExternal: true
+  name: GameplayStateMachine
+  nameWithType: GameplayStateMachine
+  fullName: GameplayStateMachine
+- uid: Global.IObjectPooler
+  commentId: T:Global.IObjectPooler
+  name: IObjectPooler
+  nameWithType: IObjectPooler
+  fullName: IObjectPooler
+- uid: Global.IShiftEventProvider
+  commentId: '!:Global.IShiftEventProvider'
+  isExternal: true
+  name: IShiftEventProvider
+  nameWithType: IShiftEventProvider
+  fullName: IShiftEventProvider
+- uid: Global.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite
+- uid: Global.Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: Global.TowerCard.ReInitialize*
+  commentId: Overload:Global.TowerCard.ReInitialize
+  name: ReInitialize
+  nameWithType: TowerCard.ReInitialize
+  fullName: TowerCard.ReInitialize
+- uid: Global.TowerCard
+  commentId: T:Global.TowerCard
+  name: TowerCard
+  nameWithType: TowerCard
+  fullName: TowerCard
+- uid: Global.TowerCard.OnPointerDown*
+  commentId: Overload:Global.TowerCard.OnPointerDown
+  name: OnPointerDown
+  nameWithType: TowerCard.OnPointerDown
+  fullName: TowerCard.OnPointerDown
+- uid: Global.PointerEventData
+  isExternal: true
+  name: PointerEventData
+  nameWithType: PointerEventData
+  fullName: PointerEventData
+- uid: Global.TowerCard.OnGameplayStateChanged*
+  commentId: Overload:Global.TowerCard.OnGameplayStateChanged
+  name: OnGameplayStateChanged
+  nameWithType: TowerCard.OnGameplayStateChanged
+  fullName: TowerCard.OnGameplayStateChanged
+- uid: Global.IExitableState
+  commentId: '!:Global.IExitableState'
+  isExternal: true
+  name: IExitableState
+  nameWithType: IExitableState
+  fullName: IExitableState
+- uid: Global.TowerCard.ReturnToPool*
+  commentId: Overload:Global.TowerCard.ReturnToPool
+  name: ReturnToPool
+  nameWithType: TowerCard.ReturnToPool
+  fullName: TowerCard.ReturnToPool
+- uid: Global.IPoolableObject.ReturnToPool
+  commentId: M:Global.IPoolableObject.ReturnToPool
+  parent: Global.IPoolableObject
+  name: ReturnToPool()
+  nameWithType: IPoolableObject.ReturnToPool()
+  fullName: IPoolableObject.ReturnToPool()
+  spec.csharp:
+  - uid: Global.IPoolableObject.ReturnToPool
+    name: ReturnToPool
+    nameWithType: IPoolableObject.ReturnToPool
+    fullName: IPoolableObject.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.IPoolableObject.ReturnToPool
+    name: ReturnToPool
+    nameWithType: IPoolableObject.ReturnToPool
+    fullName: IPoolableObject.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.TowerCard.Finalize*
+  commentId: Overload:Global.TowerCard.Finalize
+  name: Finalize
+  nameWithType: TowerCard.Finalize
+  fullName: TowerCard.Finalize

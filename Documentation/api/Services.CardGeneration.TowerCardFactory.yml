@@ -1,0 +1,488 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.CardGeneration.TowerCardFactory
+  commentId: T:Services.CardGeneration.TowerCardFactory
+  id: TowerCardFactory
+  parent: Services.CardGeneration
+  children:
+  - Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)
+  - Services.CardGeneration.TowerCardFactory.ActionOnDestroy(TowerCard)
+  - Services.CardGeneration.TowerCardFactory.ActionOnGet(TowerCard)
+  - Services.CardGeneration.TowerCardFactory.ActionOnRelease(TowerCard)
+  - Services.CardGeneration.TowerCardFactory.CreateNew
+  - Services.CardGeneration.TowerCardFactory.GetObject
+  - Services.CardGeneration.TowerCardFactory.ReturnToPool(IPoolableObject)
+  langs:
+  - csharp
+  - vb
+  name: TowerCardFactory
+  nameWithType: TowerCardFactory
+  fullName: Services.CardGeneration.TowerCardFactory
+  type: Class
+  source:
+    id: TowerCardFactory
+    path: ''
+    startLine: 1684
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: 'public class TowerCardFactory : AbstractPoolerFactory<TowerCard>, IFactory<TowerCard>'
+    content.vb: >-
+      Public Class TowerCardFactory
+          Inherits AbstractPoolerFactory(Of TowerCard)
+          Implements IFactory(Of TowerCard)
+  inheritance:
+  - System.Object
+  implements:
+  - Global.IFactory{TowerCard}
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)
+  commentId: M:Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)
+  id: '#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)'
+  parent: Services.CardGeneration.TowerCardFactory
+  langs:
+  - csharp
+  - vb
+  name: TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, DiContainer)
+  nameWithType: TowerCardFactory.TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, DiContainer)
+  fullName: Services.CardGeneration.TowerCardFactory.TowerCardFactory(Type, TowerCard, CardImageDatabase, Services.CardGeneration.WorldCellCardGenerator, DiContainer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1692
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: public TowerCardFactory(Type type, TowerCard cardPrefab, CardImageDatabase cardImageDatabase, WorldCellCardGenerator worldCellCardGenerator, DiContainer diContainer)
+    parameters:
+    - id: type
+      type: Global.Type
+    - id: cardPrefab
+      type: Global.TowerCard
+    - id: cardImageDatabase
+      type: Global.CardImageDatabase
+    - id: worldCellCardGenerator
+      type: Services.CardGeneration.WorldCellCardGenerator
+    - id: diContainer
+      type: Global.DiContainer
+    content.vb: Public Sub New(type As Type, cardPrefab As TowerCard, cardImageDatabase As CardImageDatabase, worldCellCardGenerator As WorldCellCardGenerator, diContainer As DiContainer)
+  overload: Services.CardGeneration.TowerCardFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.CardGeneration.TowerCardFactory.GetObject
+  commentId: M:Services.CardGeneration.TowerCardFactory.GetObject
+  id: GetObject
+  parent: Services.CardGeneration.TowerCardFactory
+  langs:
+  - csharp
+  - vb
+  name: GetObject()
+  nameWithType: TowerCardFactory.GetObject()
+  fullName: Services.CardGeneration.TowerCardFactory.GetObject()
+  type: Method
+  source:
+    id: GetObject
+    path: ''
+    startLine: 1705
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: public override TowerCard GetObject()
+    return:
+      type: Global.TowerCard
+    content.vb: Public Overrides Function GetObject As TowerCard
+  overload: Services.CardGeneration.TowerCardFactory.GetObject*
+  implements:
+  - Global.IFactory{TowerCard}.GetObject
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Services.CardGeneration.TowerCardFactory.ReturnToPool(IPoolableObject)
+  commentId: M:Services.CardGeneration.TowerCardFactory.ReturnToPool(IPoolableObject)
+  id: ReturnToPool(IPoolableObject)
+  parent: Services.CardGeneration.TowerCardFactory
+  langs:
+  - csharp
+  - vb
+  name: ReturnToPool(IPoolableObject)
+  nameWithType: TowerCardFactory.ReturnToPool(IPoolableObject)
+  fullName: Services.CardGeneration.TowerCardFactory.ReturnToPool(IPoolableObject)
+  type: Method
+  source:
+    id: ReturnToPool
+    path: ''
+    startLine: 1711
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: public override void ReturnToPool(IPoolableObject poolable)
+    parameters:
+    - id: poolable
+      type: Global.IPoolableObject
+    content.vb: Public Overrides Sub ReturnToPool(poolable As IPoolableObject)
+  overload: Services.CardGeneration.TowerCardFactory.ReturnToPool*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Services.CardGeneration.TowerCardFactory.ActionOnDestroy(TowerCard)
+  commentId: M:Services.CardGeneration.TowerCardFactory.ActionOnDestroy(TowerCard)
+  id: ActionOnDestroy(TowerCard)
+  parent: Services.CardGeneration.TowerCardFactory
+  langs:
+  - csharp
+  - vb
+  name: ActionOnDestroy(TowerCard)
+  nameWithType: TowerCardFactory.ActionOnDestroy(TowerCard)
+  fullName: Services.CardGeneration.TowerCardFactory.ActionOnDestroy(TowerCard)
+  type: Method
+  source:
+    id: ActionOnDestroy
+    path: ''
+    startLine: 1714
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: protected override void ActionOnDestroy(TowerCard poolable)
+    parameters:
+    - id: poolable
+      type: Global.TowerCard
+    content.vb: Protected Overrides Sub ActionOnDestroy(poolable As TowerCard)
+  overload: Services.CardGeneration.TowerCardFactory.ActionOnDestroy*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Services.CardGeneration.TowerCardFactory.ActionOnGet(TowerCard)
+  commentId: M:Services.CardGeneration.TowerCardFactory.ActionOnGet(TowerCard)
+  id: ActionOnGet(TowerCard)
+  parent: Services.CardGeneration.TowerCardFactory
+  langs:
+  - csharp
+  - vb
+  name: ActionOnGet(TowerCard)
+  nameWithType: TowerCardFactory.ActionOnGet(TowerCard)
+  fullName: Services.CardGeneration.TowerCardFactory.ActionOnGet(TowerCard)
+  type: Method
+  source:
+    id: ActionOnGet
+    path: ''
+    startLine: 1717
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: protected override void ActionOnGet(TowerCard poolable)
+    parameters:
+    - id: poolable
+      type: Global.TowerCard
+    content.vb: Protected Overrides Sub ActionOnGet(poolable As TowerCard)
+  overload: Services.CardGeneration.TowerCardFactory.ActionOnGet*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Services.CardGeneration.TowerCardFactory.ActionOnRelease(TowerCard)
+  commentId: M:Services.CardGeneration.TowerCardFactory.ActionOnRelease(TowerCard)
+  id: ActionOnRelease(TowerCard)
+  parent: Services.CardGeneration.TowerCardFactory
+  langs:
+  - csharp
+  - vb
+  name: ActionOnRelease(TowerCard)
+  nameWithType: TowerCardFactory.ActionOnRelease(TowerCard)
+  fullName: Services.CardGeneration.TowerCardFactory.ActionOnRelease(TowerCard)
+  type: Method
+  source:
+    id: ActionOnRelease
+    path: ''
+    startLine: 1720
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: protected override void ActionOnRelease(TowerCard returnable)
+    parameters:
+    - id: returnable
+      type: Global.TowerCard
+    content.vb: Protected Overrides Sub ActionOnRelease(returnable As TowerCard)
+  overload: Services.CardGeneration.TowerCardFactory.ActionOnRelease*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Services.CardGeneration.TowerCardFactory.CreateNew
+  commentId: M:Services.CardGeneration.TowerCardFactory.CreateNew
+  id: CreateNew
+  parent: Services.CardGeneration.TowerCardFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateNew()
+  nameWithType: TowerCardFactory.CreateNew()
+  fullName: Services.CardGeneration.TowerCardFactory.CreateNew()
+  type: Method
+  source:
+    id: CreateNew
+    path: ''
+    startLine: 1725
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: protected override TowerCard CreateNew()
+    return:
+      type: Global.TowerCard
+    content.vb: Protected Overrides Function CreateNew As TowerCard
+  overload: Services.CardGeneration.TowerCardFactory.CreateNew*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Services.CardGeneration
+  commentId: N:Services.CardGeneration
+  name: Services.CardGeneration
+  nameWithType: Services.CardGeneration
+  fullName: Services.CardGeneration
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.IFactory{TowerCard}
+  commentId: T:Global.IFactory{TowerCard}
+  definition: Global.IFactory`1
+  name: IFactory<TowerCard>
+  nameWithType: IFactory<TowerCard>
+  fullName: IFactory<TowerCard>
+  nameWithType.vb: IFactory(Of TowerCard)
+  fullName.vb: IFactory(Of TowerCard)
+  name.vb: IFactory(Of TowerCard)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.TowerCard
+    name: TowerCard
+    nameWithType: TowerCard
+    fullName: TowerCard
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.TowerCard
+    name: TowerCard
+    nameWithType: TowerCard
+    fullName: TowerCard
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.IFactory`1
+  commentId: T:Global.IFactory`1
+  name: IFactory<TType>
+  nameWithType: IFactory<TType>
+  fullName: IFactory<TType>
+  nameWithType.vb: IFactory(Of TType)
+  fullName.vb: IFactory(Of TType)
+  name.vb: IFactory(Of TType)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.CardGeneration.TowerCardFactory.#ctor*
+  commentId: Overload:Services.CardGeneration.TowerCardFactory.#ctor
+  name: TowerCardFactory
+  nameWithType: TowerCardFactory.TowerCardFactory
+  fullName: Services.CardGeneration.TowerCardFactory.TowerCardFactory
+- uid: Global.Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: Global.TowerCard
+  commentId: T:Global.TowerCard
+  name: TowerCard
+  nameWithType: TowerCard
+  fullName: TowerCard
+- uid: Global.CardImageDatabase
+  commentId: '!:Global.CardImageDatabase'
+  isExternal: true
+  name: CardImageDatabase
+  nameWithType: CardImageDatabase
+  fullName: CardImageDatabase
+- uid: Services.CardGeneration.WorldCellCardGenerator
+  commentId: T:Services.CardGeneration.WorldCellCardGenerator
+  parent: Services.CardGeneration
+  name: WorldCellCardGenerator
+  nameWithType: WorldCellCardGenerator
+  fullName: Services.CardGeneration.WorldCellCardGenerator
+- uid: Global.DiContainer
+  isExternal: true
+  name: DiContainer
+  nameWithType: DiContainer
+  fullName: DiContainer
+- uid: Services.CardGeneration.TowerCardFactory.GetObject*
+  commentId: Overload:Services.CardGeneration.TowerCardFactory.GetObject
+  name: GetObject
+  nameWithType: TowerCardFactory.GetObject
+  fullName: Services.CardGeneration.TowerCardFactory.GetObject
+- uid: Global.IFactory{TowerCard}.GetObject
+  commentId: M:Global.IFactory{TowerCard}.GetObject
+  parent: Global.IFactory{TowerCard}
+  definition: Global.IFactory`1.GetObject
+  name: GetObject()
+  nameWithType: IFactory<TowerCard>.GetObject()
+  fullName: IFactory<TowerCard>.GetObject()
+  nameWithType.vb: IFactory(Of TowerCard).GetObject()
+  fullName.vb: IFactory(Of TowerCard).GetObject()
+  spec.csharp:
+  - uid: Global.IFactory`1.GetObject
+    name: GetObject
+    nameWithType: IFactory<TowerCard>.GetObject
+    fullName: IFactory<TowerCard>.GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.IFactory`1.GetObject
+    name: GetObject
+    nameWithType: IFactory(Of TowerCard).GetObject
+    fullName: IFactory(Of TowerCard).GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.IFactory`1.GetObject
+  commentId: M:Global.IFactory`1.GetObject
+  name: GetObject()
+  nameWithType: IFactory<TType>.GetObject()
+  fullName: IFactory<TType>.GetObject()
+  nameWithType.vb: IFactory(Of TType).GetObject()
+  fullName.vb: IFactory(Of TType).GetObject()
+  spec.csharp:
+  - uid: Global.IFactory`1.GetObject
+    name: GetObject
+    nameWithType: IFactory<TType>.GetObject
+    fullName: IFactory<TType>.GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.IFactory`1.GetObject
+    name: GetObject
+    nameWithType: IFactory(Of TType).GetObject
+    fullName: IFactory(Of TType).GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.CardGeneration.TowerCardFactory.ReturnToPool*
+  commentId: Overload:Services.CardGeneration.TowerCardFactory.ReturnToPool
+  name: ReturnToPool
+  nameWithType: TowerCardFactory.ReturnToPool
+  fullName: Services.CardGeneration.TowerCardFactory.ReturnToPool
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+- uid: Services.CardGeneration.TowerCardFactory.ActionOnDestroy*
+  commentId: Overload:Services.CardGeneration.TowerCardFactory.ActionOnDestroy
+  name: ActionOnDestroy
+  nameWithType: TowerCardFactory.ActionOnDestroy
+  fullName: Services.CardGeneration.TowerCardFactory.ActionOnDestroy
+- uid: Services.CardGeneration.TowerCardFactory.ActionOnGet*
+  commentId: Overload:Services.CardGeneration.TowerCardFactory.ActionOnGet
+  name: ActionOnGet
+  nameWithType: TowerCardFactory.ActionOnGet
+  fullName: Services.CardGeneration.TowerCardFactory.ActionOnGet
+- uid: Services.CardGeneration.TowerCardFactory.ActionOnRelease*
+  commentId: Overload:Services.CardGeneration.TowerCardFactory.ActionOnRelease
+  name: ActionOnRelease
+  nameWithType: TowerCardFactory.ActionOnRelease
+  fullName: Services.CardGeneration.TowerCardFactory.ActionOnRelease
+- uid: Services.CardGeneration.TowerCardFactory.CreateNew*
+  commentId: Overload:Services.CardGeneration.TowerCardFactory.CreateNew
+  name: CreateNew
+  nameWithType: TowerCardFactory.CreateNew
+  fullName: Services.CardGeneration.TowerCardFactory.CreateNew

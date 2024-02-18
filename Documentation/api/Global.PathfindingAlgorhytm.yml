@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PathfindingAlgorhytm
+  commentId: T:Global.PathfindingAlgorhytm
+  id: PathfindingAlgorhytm
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: PathfindingAlgorhytm
+  nameWithType: PathfindingAlgorhytm
+  fullName: PathfindingAlgorhytm
+  type: Class
+  source:
+    id: PathfindingAlgorhytm
+    path: ''
+    startLine: 1544
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PathfindingAlgorhytm : MonoBehaviour'
+    content.vb: >-
+      Public Class PathfindingAlgorhytm
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

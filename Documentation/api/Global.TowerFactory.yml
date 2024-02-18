@@ -1,0 +1,254 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.TowerFactory
+  commentId: T:Global.TowerFactory
+  id: TowerFactory
+  parent: Global
+  children:
+  - Global.TowerFactory.#ctor(Core.Towers.AbstractTower,AbstractInputService,Services.GridSystem.BattleGridService,DiContainer)
+  - Global.TowerFactory._abstractInputService
+  - Global.TowerFactory._gridAlignService
+  - Global.TowerFactory._towerPrefab
+  - Global.TowerFactory.CreateNew
+  langs:
+  - csharp
+  - vb
+  name: TowerFactory
+  nameWithType: TowerFactory
+  fullName: TowerFactory
+  type: Class
+  source:
+    id: TowerFactory
+    path: ''
+    startLine: 2335
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class TowerFactory : MonobehaviourAbstractPoolerFactory<AbstractTower>'
+    content.vb: >-
+      Public Class TowerFactory
+          Inherits MonobehaviourAbstractPoolerFactory(Of AbstractTower)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.TowerFactory._towerPrefab
+  commentId: F:Global.TowerFactory._towerPrefab
+  id: _towerPrefab
+  parent: Global.TowerFactory
+  langs:
+  - csharp
+  - vb
+  name: _towerPrefab
+  nameWithType: TowerFactory._towerPrefab
+  fullName: TowerFactory._towerPrefab
+  type: Field
+  source:
+    id: _towerPrefab
+    path: ''
+    startLine: 2337
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected readonly AbstractTower _towerPrefab
+    return:
+      type: Core.Towers.AbstractTower
+    content.vb: Protected ReadOnly _towerPrefab As AbstractTower
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: Global.TowerFactory._abstractInputService
+  commentId: F:Global.TowerFactory._abstractInputService
+  id: _abstractInputService
+  parent: Global.TowerFactory
+  langs:
+  - csharp
+  - vb
+  name: _abstractInputService
+  nameWithType: TowerFactory._abstractInputService
+  fullName: TowerFactory._abstractInputService
+  type: Field
+  source:
+    id: _abstractInputService
+    path: ''
+    startLine: 2338
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected readonly AbstractInputService _abstractInputService
+    return:
+      type: Global.AbstractInputService
+    content.vb: Protected ReadOnly _abstractInputService As AbstractInputService
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: Global.TowerFactory._gridAlignService
+  commentId: F:Global.TowerFactory._gridAlignService
+  id: _gridAlignService
+  parent: Global.TowerFactory
+  langs:
+  - csharp
+  - vb
+  name: _gridAlignService
+  nameWithType: TowerFactory._gridAlignService
+  fullName: TowerFactory._gridAlignService
+  type: Field
+  source:
+    id: _gridAlignService
+    path: ''
+    startLine: 2339
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected readonly BattleGridService _gridAlignService
+    return:
+      type: Services.GridSystem.BattleGridService
+    content.vb: Protected ReadOnly _gridAlignService As BattleGridService
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+- uid: Global.TowerFactory.#ctor(Core.Towers.AbstractTower,AbstractInputService,Services.GridSystem.BattleGridService,DiContainer)
+  commentId: M:Global.TowerFactory.#ctor(Core.Towers.AbstractTower,AbstractInputService,Services.GridSystem.BattleGridService,DiContainer)
+  id: '#ctor(Core.Towers.AbstractTower,AbstractInputService,Services.GridSystem.BattleGridService,DiContainer)'
+  parent: Global.TowerFactory
+  langs:
+  - csharp
+  - vb
+  name: TowerFactory(AbstractTower, AbstractInputService, BattleGridService, DiContainer)
+  nameWithType: TowerFactory.TowerFactory(AbstractTower, AbstractInputService, BattleGridService, DiContainer)
+  fullName: TowerFactory.TowerFactory(Core.Towers.AbstractTower, AbstractInputService, Services.GridSystem.BattleGridService, DiContainer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2341
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public TowerFactory(AbstractTower towerPrefab, AbstractInputService abstractInputService, BattleGridService gridAlignService, DiContainer diContainer)
+    parameters:
+    - id: towerPrefab
+      type: Core.Towers.AbstractTower
+    - id: abstractInputService
+      type: Global.AbstractInputService
+    - id: gridAlignService
+      type: Services.GridSystem.BattleGridService
+    - id: diContainer
+      type: Global.DiContainer
+    content.vb: Public Sub New(towerPrefab As AbstractTower, abstractInputService As AbstractInputService, gridAlignService As BattleGridService, diContainer As DiContainer)
+  overload: Global.TowerFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.TowerFactory.CreateNew
+  commentId: M:Global.TowerFactory.CreateNew
+  id: CreateNew
+  parent: Global.TowerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateNew()
+  nameWithType: TowerFactory.CreateNew()
+  fullName: TowerFactory.CreateNew()
+  type: Method
+  source:
+    id: CreateNew
+    path: ''
+    startLine: 2347
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected override AbstractTower CreateNew()
+    return:
+      type: Core.Towers.AbstractTower
+    content.vb: Protected Overrides Function CreateNew As AbstractTower
+  overload: Global.TowerFactory.CreateNew*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Core.Towers.AbstractTower
+  commentId: T:Core.Towers.AbstractTower
+  parent: Core.Towers
+  name: AbstractTower
+  nameWithType: AbstractTower
+  fullName: Core.Towers.AbstractTower
+- uid: Core.Towers
+  commentId: N:Core.Towers
+  name: Core.Towers
+  nameWithType: Core.Towers
+  fullName: Core.Towers
+- uid: Global.AbstractInputService
+  isExternal: true
+  name: AbstractInputService
+  nameWithType: AbstractInputService
+  fullName: AbstractInputService
+- uid: Services.GridSystem.BattleGridService
+  commentId: T:Services.GridSystem.BattleGridService
+  parent: Services.GridSystem
+  name: BattleGridService
+  nameWithType: BattleGridService
+  fullName: Services.GridSystem.BattleGridService
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem
+- uid: Global.TowerFactory.#ctor*
+  commentId: Overload:Global.TowerFactory.#ctor
+  name: TowerFactory
+  nameWithType: TowerFactory.TowerFactory
+  fullName: TowerFactory.TowerFactory
+- uid: Global.DiContainer
+  isExternal: true
+  name: DiContainer
+  nameWithType: DiContainer
+  fullName: DiContainer
+- uid: Global.TowerFactory.CreateNew*
+  commentId: Overload:Global.TowerFactory.CreateNew
+  name: CreateNew
+  nameWithType: TowerFactory.CreateNew
+  fullName: TowerFactory.CreateNew

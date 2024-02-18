@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-
+﻿using System.Collections.Generic;
 public class EnemyTypeService
 {
     private readonly EnemyTypeToBiomeSettings _enemyTypeToBiomeSettings;
     private readonly EnemyPrefabContainer _enemyPrefabContainer;
-    private Dictionary<EnemyTypes, List<AbstractEnemy>> EnemiesByType;
+    /// <summary>
+    /// Dictionary contains EnemyType as key and List<(AbstractEnemy, float) as value
+    /// first determines some enemy type like gobbo or greeskin, second contains list of (concrete enemy of that type, weight in gen); 
+    /// </summary>
+    private Dictionary<EnemyType, List<(AbstractEnemy, float)>> EnemiesByType;
     public EnemyTypeService(EnemyTypeToBiomeSettings enemyTypeToBiomeSettings, EnemyPrefabContainer enemyPrefabContainer)
     {
         _enemyTypeToBiomeSettings = enemyTypeToBiomeSettings;
@@ -16,23 +17,23 @@ public class EnemyTypeService
 
     private void InitializeEnemieesByType()
     {
-        EnemiesByType = new Dictionary<EnemyTypes, List<AbstractEnemy>>();
+        EnemiesByType = new Dictionary<EnemyType, List<(AbstractEnemy, float)>>();
         foreach (AbstractEnemy enemy in _enemyPrefabContainer.Enemies)
         {
-            foreach (EnemyTypes tag in enemy.Stats.EnemyTypes)
+            foreach (EnemyStats.WeightToEnemyType tag in enemy.Stats.EnemyTypesAndWeights)
             {
-                if (EnemiesByType.ContainsKey(tag))
-                    EnemiesByType[tag].Add(enemy);
+                if (EnemiesByType.ContainsKey(tag.enemyType))
+                    EnemiesByType[tag.enemyType].Add((enemy, tag.Weight));
                 else
                 {
-                    EnemiesByType.Add(tag, new List<AbstractEnemy>());
-                    EnemiesByType[tag].Add(enemy);
+                    EnemiesByType.Add(tag.enemyType, new List<(AbstractEnemy, float)>());
+                    EnemiesByType[tag.enemyType].Add((enemy, tag.Weight));
                 }
             }
         }
     }
 
-    public EnemyTypes GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes biomeType)
+    public EnemyType GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes biomeType)
     {
         float maxvalue = 0;
         EnemytypeToWeightPair[] biomeToEnemyTypesPairs = _enemyTypeToBiomeSettings.GetPairByBiomeType(biomeType);
@@ -50,22 +51,32 @@ public class EnemyTypeService
         }
 
         UnityEngine.Debug.LogError($"no acceptable intries found while generating enemy type from biome {biomeType}");
-        return EnemyTypes.Goblin;
+        return EnemyType.Goblin;
     }
 
-    public AbstractEnemy GetRandomEnemyByType(EnemyTypes enemyBiomeType)
+    public AbstractEnemy GetRandomEnemyByType(EnemyType enemyType)
     {
-        List<AbstractEnemy> EnemiesByBiome;
+        if (EnemiesByType[enemyType].Count == 0)
+            return (EnemiesByType[enemyType])[0].Item1;
 
-        if (EnemiesByType.ContainsKey(enemyBiomeType))
-            EnemiesByBiome = EnemiesByType[enemyBiomeType];
-        else
-            EnemiesByBiome = EnemiesByType[EnemyTypes.Goblin];
-        
-        return EnemiesByBiome[UnityEngine.Random.Range(0, EnemiesByBiome.Count)];
+        float maxValue = 0;
+        foreach ((AbstractEnemy, float) pair in EnemiesByType[enemyType])
+            maxValue += pair.Item2;
+
+        float pointer = UnityEngine.Random.Range(0, maxValue);        
+
+        foreach ((AbstractEnemy, float) pair in EnemiesByType[enemyType])
+        {
+            pointer -= pair.Item2;
+            if (pointer <= 0)
+                return pair.Item1;
+        }
+
+        UnityEngine.Debug.LogError($"no acceptable intries found while generating enemy type from type {enemyType}");
+        return _enemyPrefabContainer.Goblin;
     }
 }
-public enum EnemyTypes
+public enum EnemyType
 {
     Goblin,
     Orc,

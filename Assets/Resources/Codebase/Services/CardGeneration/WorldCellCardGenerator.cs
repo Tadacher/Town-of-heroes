@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using WorldCells;
 
 namespace Services.CardGeneration
 {
@@ -9,7 +10,7 @@ namespace Services.CardGeneration
     {
         private WorldCellCardsConfig _worldCellCardsConfig;
         /// <summary>
-        /// tower types, probability of each cell type
+        /// tower type, probability of each cell type
         /// </summary>
         private Dictionary<Type, CellProbabilityPair[]> _towerCellPairs; 
 
@@ -43,8 +44,8 @@ namespace Services.CardGeneration
                     return pairs[i].WorldCell.GetType();
             }
 
-            Debug.LogError($"found no acceptable entries on card world cell generation for {towerType}");
-            return typeof(GrassField);
+            Debug.LogError($"found no acceptable entries on  world cell card generation for {towerType}");
+            return typeof(GrassMeadows); 
         }
     }
 }

@@ -1,0 +1,476 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.SimpleSoundPlayerService
+  commentId: T:Services.SimpleSoundPlayerService
+  id: SimpleSoundPlayerService
+  parent: Services
+  children:
+  - Services.SimpleSoundPlayerService.#ctor(AudioSource)
+  - Services.SimpleSoundPlayerService.PlayOneShot(AudioClip)
+  langs:
+  - csharp
+  - vb
+  name: SimpleSoundPlayerService
+  nameWithType: SimpleSoundPlayerService
+  fullName: Services.SimpleSoundPlayerService
+  type: Class
+  source:
+    id: SimpleSoundPlayerService
+    path: ''
+    startLine: 2258
+  assemblies:
+  - cs.temp.dll
+  namespace: Services
+  syntax:
+    content: 'public class SimpleSoundPlayerService : AbstractSoundPlayerService'
+    content.vb: >-
+      Public Class SimpleSoundPlayerService
+          Inherits AbstractSoundPlayerService
+  inheritance:
+  - System.Object
+  - Services.AbstractSoundPlayerService
+  inheritedMembers:
+  - Services.AbstractSoundPlayerService._audioSource
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.SimpleSoundPlayerService.#ctor(AudioSource)
+  commentId: M:Services.SimpleSoundPlayerService.#ctor(AudioSource)
+  id: '#ctor(AudioSource)'
+  parent: Services.SimpleSoundPlayerService
+  langs:
+  - csharp
+  - vb
+  name: SimpleSoundPlayerService(AudioSource)
+  nameWithType: SimpleSoundPlayerService.SimpleSoundPlayerService(AudioSource)
+  fullName: Services.SimpleSoundPlayerService.SimpleSoundPlayerService(AudioSource)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2260
+  assemblies:
+  - cs.temp.dll
+  namespace: Services
+  syntax:
+    content: public SimpleSoundPlayerService(AudioSource audioSource)
+    parameters:
+    - id: audioSource
+      type: Global.AudioSource
+    content.vb: Public Sub New(audioSource As AudioSource)
+  overload: Services.SimpleSoundPlayerService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.SimpleSoundPlayerService.PlayOneShot(AudioClip)
+  commentId: M:Services.SimpleSoundPlayerService.PlayOneShot(AudioClip)
+  id: PlayOneShot(AudioClip)
+  parent: Services.SimpleSoundPlayerService
+  langs:
+  - csharp
+  - vb
+  name: PlayOneShot(AudioClip)
+  nameWithType: SimpleSoundPlayerService.PlayOneShot(AudioClip)
+  fullName: Services.SimpleSoundPlayerService.PlayOneShot(AudioClip)
+  type: Method
+  source:
+    id: PlayOneShot
+    path: ''
+    startLine: 2262
+  assemblies:
+  - cs.temp.dll
+  namespace: Services
+  syntax:
+    content: public override void PlayOneShot(AudioClip audioClip)
+    parameters:
+    - id: audioClip
+      type: Global.AudioClip
+    content.vb: Public Overrides Sub PlayOneShot(audioClip As AudioClip)
+  overridden: Services.AbstractSoundPlayerService.PlayOneShot(AudioClip)
+  overload: Services.SimpleSoundPlayerService.PlayOneShot*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Services
+  commentId: N:Services
+  name: Services
+  nameWithType: Services
+  fullName: Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Services.AbstractSoundPlayerService
+  commentId: T:Services.AbstractSoundPlayerService
+  parent: Services
+  name: AbstractSoundPlayerService
+  nameWithType: AbstractSoundPlayerService
+  fullName: Services.AbstractSoundPlayerService
+- uid: Services.AbstractSoundPlayerService._audioSource
+  commentId: F:Services.AbstractSoundPlayerService._audioSource
+  parent: Services.AbstractSoundPlayerService
+  name: _audioSource
+  nameWithType: AbstractSoundPlayerService._audioSource
+  fullName: Services.AbstractSoundPlayerService._audioSource
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Services.SimpleSoundPlayerService.#ctor*
+  commentId: Overload:Services.SimpleSoundPlayerService.#ctor
+  name: SimpleSoundPlayerService
+  nameWithType: SimpleSoundPlayerService.SimpleSoundPlayerService
+  fullName: Services.SimpleSoundPlayerService.SimpleSoundPlayerService
+- uid: Global.AudioSource
+  isExternal: true
+  name: AudioSource
+  nameWithType: AudioSource
+  fullName: AudioSource
+- uid: Services.AbstractSoundPlayerService.PlayOneShot(AudioClip)
+  commentId: M:Services.AbstractSoundPlayerService.PlayOneShot(AudioClip)
+  parent: Services.AbstractSoundPlayerService
+  isExternal: true
+  name: PlayOneShot(AudioClip)
+  nameWithType: AbstractSoundPlayerService.PlayOneShot(AudioClip)
+  fullName: Services.AbstractSoundPlayerService.PlayOneShot(AudioClip)
+  spec.csharp:
+  - uid: Services.AbstractSoundPlayerService.PlayOneShot(AudioClip)
+    name: PlayOneShot
+    nameWithType: AbstractSoundPlayerService.PlayOneShot
+    fullName: Services.AbstractSoundPlayerService.PlayOneShot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.AudioClip
+    name: AudioClip
+    nameWithType: AudioClip
+    fullName: AudioClip
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.AbstractSoundPlayerService.PlayOneShot(AudioClip)
+    name: PlayOneShot
+    nameWithType: AbstractSoundPlayerService.PlayOneShot
+    fullName: Services.AbstractSoundPlayerService.PlayOneShot
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.AudioClip
+    name: AudioClip
+    nameWithType: AudioClip
+    fullName: AudioClip
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.SimpleSoundPlayerService.PlayOneShot*
+  commentId: Overload:Services.SimpleSoundPlayerService.PlayOneShot
+  name: PlayOneShot
+  nameWithType: SimpleSoundPlayerService.PlayOneShot
+  fullName: Services.SimpleSoundPlayerService.PlayOneShot
+- uid: Global.AudioClip
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: AudioClip

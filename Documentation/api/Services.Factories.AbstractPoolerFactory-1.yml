@@ -1,0 +1,971 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.Factories.AbstractPoolerFactory`1
+  commentId: T:Services.Factories.AbstractPoolerFactory`1
+  id: AbstractPoolerFactory`1
+  parent: Services.Factories
+  children:
+  - Services.Factories.AbstractPoolerFactory`1.#ctor(DiContainer)
+  - Services.Factories.AbstractPoolerFactory`1._container
+  - Services.Factories.AbstractPoolerFactory`1._pool
+  - Services.Factories.AbstractPoolerFactory`1.ActionOnDestroy(`0)
+  - Services.Factories.AbstractPoolerFactory`1.ActionOnGet(`0)
+  - Services.Factories.AbstractPoolerFactory`1.ActionOnRelease(`0)
+  - Services.Factories.AbstractPoolerFactory`1.CreateNew
+  - Services.Factories.AbstractPoolerFactory`1.GetObject
+  - Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+  langs:
+  - csharp
+  - vb
+  name: AbstractPoolerFactory<TType>
+  nameWithType: AbstractPoolerFactory<TType>
+  fullName: Services.Factories.AbstractPoolerFactory<TType>
+  type: Class
+  source:
+    id: AbstractPoolerFactory
+    path: ''
+    startLine: 1881
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: 'public abstract class AbstractPoolerFactory<TType> : IObjectPooler, IFactory<TType> where TType : class'
+    typeParameters:
+    - id: TType
+    content.vb: >-
+      Public MustInherit Class AbstractPoolerFactory(Of TType As Class)
+          Implements IObjectPooler, IFactory(Of TType)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Services.Factories.MonobehaviourAbstractPoolerFactory`1
+  implements:
+  - Global.IObjectPooler
+  - Global.IFactory{{TType}}
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: AbstractPoolerFactory(Of TType)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType)
+  name.vb: AbstractPoolerFactory(Of TType)
+- uid: Services.Factories.AbstractPoolerFactory`1._pool
+  commentId: F:Services.Factories.AbstractPoolerFactory`1._pool
+  id: _pool
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: _pool
+  nameWithType: AbstractPoolerFactory<TType>._pool
+  fullName: Services.Factories.AbstractPoolerFactory<TType>._pool
+  type: Field
+  source:
+    id: _pool
+    path: ''
+    startLine: 1883
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: protected ObjectPool<TType> _pool
+    return:
+      type: Global.ObjectPool{{TType}}
+    content.vb: Protected _pool As ObjectPool(Of TType)
+  nameWithType.vb: AbstractPoolerFactory(Of TType)._pool
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType)._pool
+- uid: Services.Factories.AbstractPoolerFactory`1._container
+  commentId: F:Services.Factories.AbstractPoolerFactory`1._container
+  id: _container
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: _container
+  nameWithType: AbstractPoolerFactory<TType>._container
+  fullName: Services.Factories.AbstractPoolerFactory<TType>._container
+  type: Field
+  source:
+    id: _container
+    path: ''
+    startLine: 1884
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: protected DiContainer _container
+    return:
+      type: Global.DiContainer
+    content.vb: Protected _container As DiContainer
+  nameWithType.vb: AbstractPoolerFactory(Of TType)._container
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType)._container
+- uid: Services.Factories.AbstractPoolerFactory`1.#ctor(DiContainer)
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.#ctor(DiContainer)
+  id: '#ctor(DiContainer)'
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: AbstractPoolerFactory(DiContainer)
+  nameWithType: AbstractPoolerFactory<TType>.AbstractPoolerFactory(DiContainer)
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.AbstractPoolerFactory(DiContainer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1886
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: protected AbstractPoolerFactory(DiContainer diContainer)
+    parameters:
+    - id: diContainer
+      type: Global.DiContainer
+    content.vb: Protected Sub New(diContainer As DiContainer)
+  overload: Services.Factories.AbstractPoolerFactory`1.#ctor*
+  nameWithType.vb: AbstractPoolerFactory(Of TType).AbstractPoolerFactory(DiContainer)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).AbstractPoolerFactory(DiContainer)
+- uid: Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+  id: ReturnToPool(IPoolableObject)
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: ReturnToPool(IPoolableObject)
+  nameWithType: AbstractPoolerFactory<TType>.ReturnToPool(IPoolableObject)
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ReturnToPool(IPoolableObject)
+  type: Method
+  source:
+    id: ReturnToPool
+    path: ''
+    startLine: 1900
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: public virtual void ReturnToPool(IPoolableObject returnable)
+    parameters:
+    - id: returnable
+      type: Global.IPoolableObject
+    content.vb: Public Overridable Sub ReturnToPool(returnable As IPoolableObject)
+  overload: Services.Factories.AbstractPoolerFactory`1.ReturnToPool*
+  implements:
+  - Global.IObjectPooler.ReturnToPool(IPoolableObject)
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ReturnToPool(IPoolableObject)
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ReturnToPool(IPoolableObject)
+- uid: Services.Factories.AbstractPoolerFactory`1.GetObject
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.GetObject
+  id: GetObject
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: GetObject()
+  nameWithType: AbstractPoolerFactory<TType>.GetObject()
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.GetObject()
+  type: Method
+  source:
+    id: GetObject
+    path: ''
+    startLine: 1902
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: public virtual TType GetObject()
+    return:
+      type: '{TType}'
+    content.vb: Public Overridable Function GetObject As TType
+  overload: Services.Factories.AbstractPoolerFactory`1.GetObject*
+  implements:
+  - Global.IFactory{{TType}}.GetObject
+  nameWithType.vb: AbstractPoolerFactory(Of TType).GetObject()
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).GetObject()
+- uid: Services.Factories.AbstractPoolerFactory`1.ActionOnRelease(`0)
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.ActionOnRelease(`0)
+  id: ActionOnRelease(`0)
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: ActionOnRelease(TType)
+  nameWithType: AbstractPoolerFactory<TType>.ActionOnRelease(TType)
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ActionOnRelease(TType)
+  type: Method
+  source:
+    id: ActionOnRelease
+    path: ''
+    startLine: 1905
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: protected abstract void ActionOnRelease(TType type)
+    parameters:
+    - id: type
+      type: '{TType}'
+    content.vb: Protected MustOverride Sub ActionOnRelease(type As TType)
+  overload: Services.Factories.AbstractPoolerFactory`1.ActionOnRelease*
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ActionOnRelease(TType)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ActionOnRelease(TType)
+- uid: Services.Factories.AbstractPoolerFactory`1.CreateNew
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.CreateNew
+  id: CreateNew
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: CreateNew()
+  nameWithType: AbstractPoolerFactory<TType>.CreateNew()
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.CreateNew()
+  type: Method
+  source:
+    id: CreateNew
+    path: ''
+    startLine: 1906
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: protected abstract TType CreateNew()
+    return:
+      type: '{TType}'
+    content.vb: Protected MustOverride Function CreateNew As TType
+  overload: Services.Factories.AbstractPoolerFactory`1.CreateNew*
+  nameWithType.vb: AbstractPoolerFactory(Of TType).CreateNew()
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).CreateNew()
+- uid: Services.Factories.AbstractPoolerFactory`1.ActionOnGet(`0)
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.ActionOnGet(`0)
+  id: ActionOnGet(`0)
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: ActionOnGet(TType)
+  nameWithType: AbstractPoolerFactory<TType>.ActionOnGet(TType)
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ActionOnGet(TType)
+  type: Method
+  source:
+    id: ActionOnGet
+    path: ''
+    startLine: 1907
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: protected abstract void ActionOnGet(TType poolable)
+    parameters:
+    - id: poolable
+      type: '{TType}'
+    content.vb: Protected MustOverride Sub ActionOnGet(poolable As TType)
+  overload: Services.Factories.AbstractPoolerFactory`1.ActionOnGet*
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ActionOnGet(TType)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ActionOnGet(TType)
+- uid: Services.Factories.AbstractPoolerFactory`1.ActionOnDestroy(`0)
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.ActionOnDestroy(`0)
+  id: ActionOnDestroy(`0)
+  parent: Services.Factories.AbstractPoolerFactory`1
+  langs:
+  - csharp
+  - vb
+  name: ActionOnDestroy(TType)
+  nameWithType: AbstractPoolerFactory<TType>.ActionOnDestroy(TType)
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ActionOnDestroy(TType)
+  type: Method
+  source:
+    id: ActionOnDestroy
+    path: ''
+    startLine: 1908
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: protected abstract void ActionOnDestroy(TType poolable)
+    parameters:
+    - id: poolable
+      type: '{TType}'
+    content.vb: Protected MustOverride Sub ActionOnDestroy(poolable As TType)
+  overload: Services.Factories.AbstractPoolerFactory`1.ActionOnDestroy*
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ActionOnDestroy(TType)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ActionOnDestroy(TType)
+references:
+- uid: Services.Factories
+  commentId: N:Services.Factories
+  name: Services.Factories
+  nameWithType: Services.Factories
+  fullName: Services.Factories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.IObjectPooler
+  commentId: T:Global.IObjectPooler
+  name: IObjectPooler
+  nameWithType: IObjectPooler
+  fullName: IObjectPooler
+- uid: Global.IFactory{{TType}}
+  commentId: T:Global.IFactory{`0}
+  definition: Global.IFactory`1
+  name: IFactory<TType>
+  nameWithType: IFactory<TType>
+  fullName: IFactory<TType>
+  nameWithType.vb: IFactory(Of TType)
+  fullName.vb: IFactory(Of TType)
+  name.vb: IFactory(Of TType)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.IFactory`1
+  commentId: T:Global.IFactory`1
+  name: IFactory<TType>
+  nameWithType: IFactory<TType>
+  fullName: IFactory<TType>
+  nameWithType.vb: IFactory(Of TType)
+  fullName.vb: IFactory(Of TType)
+  name.vb: IFactory(Of TType)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ObjectPool{{TType}}
+  commentId: '!:Global.ObjectPool{`0}'
+  definition: Global.ObjectPool`1
+  name: ObjectPool<TType>
+  nameWithType: ObjectPool<TType>
+  fullName: ObjectPool<TType>
+  nameWithType.vb: ObjectPool(Of TType)
+  fullName.vb: ObjectPool(Of TType)
+  name.vb: ObjectPool(Of TType)
+  spec.csharp:
+  - uid: Global.ObjectPool`1
+    name: ObjectPool
+    nameWithType: ObjectPool
+    fullName: ObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.ObjectPool`1
+    name: ObjectPool
+    nameWithType: ObjectPool
+    fullName: ObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ObjectPool`1
+  commentId: '!:Global.ObjectPool`1'
+  isExternal: true
+  name: ObjectPool<>
+  nameWithType: ObjectPool<>
+  fullName: ObjectPool<>
+  nameWithType.vb: ObjectPool(Of )
+  fullName.vb: ObjectPool(Of )
+  name.vb: ObjectPool(Of )
+  spec.csharp:
+  - uid: Global.ObjectPool`1
+    name: ObjectPool
+    nameWithType: ObjectPool
+    fullName: ObjectPool
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.ObjectPool`1
+    name: ObjectPool
+    nameWithType: ObjectPool
+    fullName: ObjectPool
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.DiContainer
+  isExternal: true
+  name: DiContainer
+  nameWithType: DiContainer
+  fullName: DiContainer
+- uid: Services.Factories.AbstractPoolerFactory`1.#ctor*
+  commentId: Overload:Services.Factories.AbstractPoolerFactory`1.#ctor
+  name: AbstractPoolerFactory
+  nameWithType: AbstractPoolerFactory<TType>.AbstractPoolerFactory
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.AbstractPoolerFactory
+  nameWithType.vb: AbstractPoolerFactory(Of TType).AbstractPoolerFactory
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).AbstractPoolerFactory
+- uid: Services.Factories.AbstractPoolerFactory`1.ReturnToPool*
+  commentId: Overload:Services.Factories.AbstractPoolerFactory`1.ReturnToPool
+  name: ReturnToPool
+  nameWithType: AbstractPoolerFactory<TType>.ReturnToPool
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ReturnToPool
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ReturnToPool
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ReturnToPool
+- uid: Global.IObjectPooler.ReturnToPool(IPoolableObject)
+  commentId: M:Global.IObjectPooler.ReturnToPool(IPoolableObject)
+  parent: Global.IObjectPooler
+  name: ReturnToPool(IPoolableObject)
+  nameWithType: IObjectPooler.ReturnToPool(IPoolableObject)
+  fullName: IObjectPooler.ReturnToPool(IPoolableObject)
+  spec.csharp:
+  - uid: Global.IObjectPooler.ReturnToPool(IPoolableObject)
+    name: ReturnToPool
+    nameWithType: IObjectPooler.ReturnToPool
+    fullName: IObjectPooler.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IPoolableObject
+    name: IPoolableObject
+    nameWithType: IPoolableObject
+    fullName: IPoolableObject
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.IObjectPooler.ReturnToPool(IPoolableObject)
+    name: ReturnToPool
+    nameWithType: IObjectPooler.ReturnToPool
+    fullName: IObjectPooler.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IPoolableObject
+    name: IPoolableObject
+    nameWithType: IPoolableObject
+    fullName: IPoolableObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+- uid: Services.Factories.AbstractPoolerFactory`1.GetObject*
+  commentId: Overload:Services.Factories.AbstractPoolerFactory`1.GetObject
+  name: GetObject
+  nameWithType: AbstractPoolerFactory<TType>.GetObject
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.GetObject
+  nameWithType.vb: AbstractPoolerFactory(Of TType).GetObject
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).GetObject
+- uid: Global.IFactory{{TType}}.GetObject
+  commentId: M:Global.IFactory{`0}.GetObject
+  parent: Global.IFactory{{TType}}
+  definition: Global.IFactory`1.GetObject
+  name: GetObject()
+  nameWithType: IFactory<TType>.GetObject()
+  fullName: IFactory<TType>.GetObject()
+  nameWithType.vb: IFactory(Of TType).GetObject()
+  fullName.vb: IFactory(Of TType).GetObject()
+  spec.csharp:
+  - uid: Global.IFactory`1.GetObject
+    name: GetObject
+    nameWithType: IFactory<TType>.GetObject
+    fullName: IFactory<TType>.GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.IFactory`1.GetObject
+    name: GetObject
+    nameWithType: IFactory(Of TType).GetObject
+    fullName: IFactory(Of TType).GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TType}'
+  commentId: '!:TType'
+  definition: TType
+  name: TType
+  nameWithType: TType
+  fullName: TType
+- uid: Global.IFactory`1.GetObject
+  commentId: M:Global.IFactory`1.GetObject
+  name: GetObject()
+  nameWithType: IFactory<TType>.GetObject()
+  fullName: IFactory<TType>.GetObject()
+  nameWithType.vb: IFactory(Of TType).GetObject()
+  fullName.vb: IFactory(Of TType).GetObject()
+  spec.csharp:
+  - uid: Global.IFactory`1.GetObject
+    name: GetObject
+    nameWithType: IFactory<TType>.GetObject
+    fullName: IFactory<TType>.GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.IFactory`1.GetObject
+    name: GetObject
+    nameWithType: IFactory(Of TType).GetObject
+    fullName: IFactory(Of TType).GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TType
+  name: TType
+  nameWithType: TType
+  fullName: TType
+- uid: Services.Factories.AbstractPoolerFactory`1.ActionOnRelease*
+  commentId: Overload:Services.Factories.AbstractPoolerFactory`1.ActionOnRelease
+  name: ActionOnRelease
+  nameWithType: AbstractPoolerFactory<TType>.ActionOnRelease
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ActionOnRelease
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ActionOnRelease
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ActionOnRelease
+- uid: Services.Factories.AbstractPoolerFactory`1.CreateNew*
+  commentId: Overload:Services.Factories.AbstractPoolerFactory`1.CreateNew
+  name: CreateNew
+  nameWithType: AbstractPoolerFactory<TType>.CreateNew
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.CreateNew
+  nameWithType.vb: AbstractPoolerFactory(Of TType).CreateNew
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).CreateNew
+- uid: Services.Factories.AbstractPoolerFactory`1.ActionOnGet*
+  commentId: Overload:Services.Factories.AbstractPoolerFactory`1.ActionOnGet
+  name: ActionOnGet
+  nameWithType: AbstractPoolerFactory<TType>.ActionOnGet
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ActionOnGet
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ActionOnGet
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ActionOnGet
+- uid: Services.Factories.AbstractPoolerFactory`1.ActionOnDestroy*
+  commentId: Overload:Services.Factories.AbstractPoolerFactory`1.ActionOnDestroy
+  name: ActionOnDestroy
+  nameWithType: AbstractPoolerFactory<TType>.ActionOnDestroy
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ActionOnDestroy
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ActionOnDestroy
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ActionOnDestroy

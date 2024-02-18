@@ -4,8 +4,10 @@ using System.Collections;
 using Infrastructure;
 using WorldCells;
 using Zenject;
-using Services;
 
+/// <summary>
+/// 
+/// </summary>
 public class WaveService
 {
     private float _interval;
@@ -43,7 +45,7 @@ public class WaveService
                     worldCellBalanceService: _container.Resolve<WorldCellBalanceService>());
     }
 
-    public void StartCoroutine() 
+    public void StartWaveCoroutine() 
         => _waveSender = _coroutineRunner.StartCoroutine(WaveSending());
 
     private IEnumerator WaveSending()
@@ -59,7 +61,7 @@ public class WaveService
     public void CancelRoutine()
     {
         Debug.Log("spawning routine canceled");
-        _cancellationTokenSource.Cancel();
+        _cancellationTokenSource?.Cancel();
     }
 
     private IEnumerator SendWaweCoroutine(Wave wave)

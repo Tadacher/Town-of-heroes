@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: Towers
+  commentId: N:Towers
+  id: Towers
+  children:
+  - Towers.AbstractTowerAttackModule
+  - Towers.ShrapnelTowerAttakModule
+  langs:
+  - csharp
+  - vb
+  name: Towers
+  nameWithType: Towers
+  fullName: Towers
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Towers.AbstractTowerAttackModule
+  commentId: T:Towers.AbstractTowerAttackModule
+  parent: Towers
+  name: AbstractTowerAttackModule
+  nameWithType: AbstractTowerAttackModule
+  fullName: Towers.AbstractTowerAttackModule
+- uid: Towers.ShrapnelTowerAttakModule
+  commentId: T:Towers.ShrapnelTowerAttakModule
+  name: ShrapnelTowerAttakModule
+  nameWithType: ShrapnelTowerAttakModule
+  fullName: Towers.ShrapnelTowerAttakModule
+- uid: Towers
+  commentId: N:Towers
+  name: Towers
+  nameWithType: Towers
+  fullName: Towers

@@ -1,0 +1,87 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.IFactory`1
+  commentId: T:Global.IFactory`1
+  id: IFactory`1
+  parent: Global
+  children:
+  - Global.IFactory`1.GetObject
+  langs:
+  - csharp
+  - vb
+  name: IFactory<TType>
+  nameWithType: IFactory<TType>
+  fullName: IFactory<TType>
+  type: Interface
+  source:
+    id: IFactory
+    path: ''
+    startLine: 1868
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public interface IFactory<out TType>
+    typeParameters:
+    - id: TType
+    content.vb: Public Interface IFactory(Of Out TType)
+  nameWithType.vb: IFactory(Of TType)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: IFactory(Of TType)
+  name.vb: IFactory(Of TType)
+- uid: Global.IFactory`1.GetObject
+  commentId: M:Global.IFactory`1.GetObject
+  id: GetObject
+  parent: Global.IFactory`1
+  langs:
+  - csharp
+  - vb
+  name: GetObject()
+  nameWithType: IFactory<TType>.GetObject()
+  fullName: IFactory<TType>.GetObject()
+  type: Method
+  source:
+    id: GetObject
+    path: ''
+    startLine: 1870
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: TType GetObject()
+    return:
+      type: '{TType}'
+    content.vb: Function GetObject As TType
+  overload: Global.IFactory`1.GetObject*
+  nameWithType.vb: IFactory(Of TType).GetObject()
+  fullName.vb: IFactory(Of TType).GetObject()
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.IFactory`1.GetObject*
+  commentId: Overload:Global.IFactory`1.GetObject
+  name: GetObject
+  nameWithType: IFactory<TType>.GetObject
+  fullName: IFactory<TType>.GetObject
+  nameWithType.vb: IFactory(Of TType).GetObject
+  fullName.vb: IFactory(Of TType).GetObject
+- uid: '{TType}'
+  commentId: '!:TType'
+  definition: TType
+  name: TType
+  nameWithType: TType
+  fullName: TType
+- uid: TType
+  name: TType
+  nameWithType: TType
+  fullName: TType

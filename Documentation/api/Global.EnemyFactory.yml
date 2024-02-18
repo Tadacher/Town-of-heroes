@@ -1,0 +1,389 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.EnemyFactory
+  commentId: T:Global.EnemyFactory
+  id: EnemyFactory
+  parent: Global
+  children:
+  - Global.EnemyFactory.#ctor(AbstractEnemy,DiContainer)
+  - Global.EnemyFactory._enemyPrefab
+  - Global.EnemyFactory._prototype
+  - Global.EnemyFactory.ActionOnDestroy(AbstractEnemy)
+  - Global.EnemyFactory.ActionOnGet(AbstractEnemy)
+  - Global.EnemyFactory.ActionOnRelease(AbstractEnemy)
+  - Global.EnemyFactory.CreateNew
+  - Global.EnemyFactory.GetObject
+  - Global.EnemyFactory.ReturnToPool(IPoolableObject)
+  langs:
+  - csharp
+  - vb
+  name: EnemyFactory
+  nameWithType: EnemyFactory
+  fullName: EnemyFactory
+  type: Class
+  source:
+    id: EnemyFactory
+    path: ''
+    startLine: 1833
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class EnemyFactory : AbstractPoolerFactory<AbstractEnemy>'
+    content.vb: >-
+      Public Class EnemyFactory
+          Inherits AbstractPoolerFactory(Of AbstractEnemy)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.EnemyFactory._enemyPrefab
+  commentId: F:Global.EnemyFactory._enemyPrefab
+  id: _enemyPrefab
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: _enemyPrefab
+  nameWithType: EnemyFactory._enemyPrefab
+  fullName: EnemyFactory._enemyPrefab
+  type: Field
+  source:
+    id: _enemyPrefab
+    path: ''
+    startLine: 1836
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected AbstractEnemy _enemyPrefab
+    return:
+      type: Global.AbstractEnemy
+    content.vb: Protected _enemyPrefab As AbstractEnemy
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Global.EnemyFactory._prototype
+  commentId: F:Global.EnemyFactory._prototype
+  id: _prototype
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: _prototype
+  nameWithType: EnemyFactory._prototype
+  fullName: EnemyFactory._prototype
+  type: Field
+  source:
+    id: _prototype
+    path: ''
+    startLine: 1837
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected GameObject _prototype
+    return:
+      type: Global.GameObject
+    content.vb: Protected _prototype As GameObject
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Global.EnemyFactory.#ctor(AbstractEnemy,DiContainer)
+  commentId: M:Global.EnemyFactory.#ctor(AbstractEnemy,DiContainer)
+  id: '#ctor(AbstractEnemy,DiContainer)'
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: EnemyFactory(AbstractEnemy, DiContainer)
+  nameWithType: EnemyFactory.EnemyFactory(AbstractEnemy, DiContainer)
+  fullName: EnemyFactory.EnemyFactory(AbstractEnemy, DiContainer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1839
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public EnemyFactory(AbstractEnemy enemyPrefab, DiContainer diContainer)
+    parameters:
+    - id: enemyPrefab
+      type: Global.AbstractEnemy
+    - id: diContainer
+      type: Global.DiContainer
+    content.vb: Public Sub New(enemyPrefab As AbstractEnemy, diContainer As DiContainer)
+  overload: Global.EnemyFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.EnemyFactory.GetObject
+  commentId: M:Global.EnemyFactory.GetObject
+  id: GetObject
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: GetObject()
+  nameWithType: EnemyFactory.GetObject()
+  fullName: EnemyFactory.GetObject()
+  type: Method
+  source:
+    id: GetObject
+    path: ''
+    startLine: 1842
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public override AbstractEnemy GetObject()
+    return:
+      type: Global.AbstractEnemy
+    content.vb: Public Overrides Function GetObject As AbstractEnemy
+  overload: Global.EnemyFactory.GetObject*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Global.EnemyFactory.ReturnToPool(IPoolableObject)
+  commentId: M:Global.EnemyFactory.ReturnToPool(IPoolableObject)
+  id: ReturnToPool(IPoolableObject)
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: ReturnToPool(IPoolableObject)
+  nameWithType: EnemyFactory.ReturnToPool(IPoolableObject)
+  fullName: EnemyFactory.ReturnToPool(IPoolableObject)
+  type: Method
+  source:
+    id: ReturnToPool
+    path: ''
+    startLine: 1845
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public override void ReturnToPool(IPoolableObject poolable)
+    parameters:
+    - id: poolable
+      type: Global.IPoolableObject
+    content.vb: Public Overrides Sub ReturnToPool(poolable As IPoolableObject)
+  overload: Global.EnemyFactory.ReturnToPool*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Global.EnemyFactory.ActionOnDestroy(AbstractEnemy)
+  commentId: M:Global.EnemyFactory.ActionOnDestroy(AbstractEnemy)
+  id: ActionOnDestroy(AbstractEnemy)
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: ActionOnDestroy(AbstractEnemy)
+  nameWithType: EnemyFactory.ActionOnDestroy(AbstractEnemy)
+  fullName: EnemyFactory.ActionOnDestroy(AbstractEnemy)
+  type: Method
+  source:
+    id: ActionOnDestroy
+    path: ''
+    startLine: 1848
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected override void ActionOnDestroy(AbstractEnemy poolable)
+    parameters:
+    - id: poolable
+      type: Global.AbstractEnemy
+    content.vb: Protected Overrides Sub ActionOnDestroy(poolable As AbstractEnemy)
+  overload: Global.EnemyFactory.ActionOnDestroy*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Global.EnemyFactory.ActionOnGet(AbstractEnemy)
+  commentId: M:Global.EnemyFactory.ActionOnGet(AbstractEnemy)
+  id: ActionOnGet(AbstractEnemy)
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: ActionOnGet(AbstractEnemy)
+  nameWithType: EnemyFactory.ActionOnGet(AbstractEnemy)
+  fullName: EnemyFactory.ActionOnGet(AbstractEnemy)
+  type: Method
+  source:
+    id: ActionOnGet
+    path: ''
+    startLine: 1851
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected override void ActionOnGet(AbstractEnemy poolable)
+    parameters:
+    - id: poolable
+      type: Global.AbstractEnemy
+    content.vb: Protected Overrides Sub ActionOnGet(poolable As AbstractEnemy)
+  overload: Global.EnemyFactory.ActionOnGet*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Global.EnemyFactory.ActionOnRelease(AbstractEnemy)
+  commentId: M:Global.EnemyFactory.ActionOnRelease(AbstractEnemy)
+  id: ActionOnRelease(AbstractEnemy)
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: ActionOnRelease(AbstractEnemy)
+  nameWithType: EnemyFactory.ActionOnRelease(AbstractEnemy)
+  fullName: EnemyFactory.ActionOnRelease(AbstractEnemy)
+  type: Method
+  source:
+    id: ActionOnRelease
+    path: ''
+    startLine: 1854
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected override void ActionOnRelease(AbstractEnemy poolable)
+    parameters:
+    - id: poolable
+      type: Global.AbstractEnemy
+    content.vb: Protected Overrides Sub ActionOnRelease(poolable As AbstractEnemy)
+  overload: Global.EnemyFactory.ActionOnRelease*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Global.EnemyFactory.CreateNew
+  commentId: M:Global.EnemyFactory.CreateNew
+  id: CreateNew
+  parent: Global.EnemyFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateNew()
+  nameWithType: EnemyFactory.CreateNew()
+  fullName: EnemyFactory.CreateNew()
+  type: Method
+  source:
+    id: CreateNew
+    path: ''
+    startLine: 1857
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected override AbstractEnemy CreateNew()
+    return:
+      type: Global.AbstractEnemy
+    content.vb: Protected Overrides Function CreateNew As AbstractEnemy
+  overload: Global.EnemyFactory.CreateNew*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.AbstractEnemy
+  commentId: T:Global.AbstractEnemy
+  name: AbstractEnemy
+  nameWithType: AbstractEnemy
+  fullName: AbstractEnemy
+- uid: Global.GameObject
+  commentId: '!:Global.GameObject'
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: GameObject
+- uid: Global.EnemyFactory.#ctor*
+  commentId: Overload:Global.EnemyFactory.#ctor
+  name: EnemyFactory
+  nameWithType: EnemyFactory.EnemyFactory
+  fullName: EnemyFactory.EnemyFactory
+- uid: Global.DiContainer
+  isExternal: true
+  name: DiContainer
+  nameWithType: DiContainer
+  fullName: DiContainer
+- uid: Global.EnemyFactory.GetObject*
+  commentId: Overload:Global.EnemyFactory.GetObject
+  name: GetObject
+  nameWithType: EnemyFactory.GetObject
+  fullName: EnemyFactory.GetObject
+- uid: Global.EnemyFactory.ReturnToPool*
+  commentId: Overload:Global.EnemyFactory.ReturnToPool
+  name: ReturnToPool
+  nameWithType: EnemyFactory.ReturnToPool
+  fullName: EnemyFactory.ReturnToPool
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+- uid: Global.EnemyFactory.ActionOnDestroy*
+  commentId: Overload:Global.EnemyFactory.ActionOnDestroy
+  name: ActionOnDestroy
+  nameWithType: EnemyFactory.ActionOnDestroy
+  fullName: EnemyFactory.ActionOnDestroy
+- uid: Global.EnemyFactory.ActionOnGet*
+  commentId: Overload:Global.EnemyFactory.ActionOnGet
+  name: ActionOnGet
+  nameWithType: EnemyFactory.ActionOnGet
+  fullName: EnemyFactory.ActionOnGet
+- uid: Global.EnemyFactory.ActionOnRelease*
+  commentId: Overload:Global.EnemyFactory.ActionOnRelease
+  name: ActionOnRelease
+  nameWithType: EnemyFactory.ActionOnRelease
+  fullName: EnemyFactory.ActionOnRelease
+- uid: Global.EnemyFactory.CreateNew*
+  commentId: Overload:Global.EnemyFactory.CreateNew
+  name: CreateNew
+  nameWithType: EnemyFactory.CreateNew
+  fullName: EnemyFactory.CreateNew

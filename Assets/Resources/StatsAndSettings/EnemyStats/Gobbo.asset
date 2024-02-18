@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2d8d23eaeb3c54394afd34d931cc6f, type: 3}
   m_Name: Gobbo
   m_EditorClassIdentifier: 
-  EnemyTypes: 0000000002000000
+  EnemyTypesAndWeights:
+  - enemyType: 0
+    Weight: 40
+  - enemyType: 2
+    Weight: 15
   HitPoints: 4
   Damage: 1
   ExpPerKill: 3
@@ -22,4 +26,4 @@ MonoBehaviour:
   DamagePerLevel: 1
   ExpPerKillPerLevel: 1
   SpeedPerLevel: 1
-  DeathSound: {fileID: 8300000, guid: 9655be54e6f7047488517c2a2eb637dd, type: 3}
+  DeathSound: {fileID: 8300000, guid: 7e367ee9624dabb41ae3c152ef4a6535, type: 3}

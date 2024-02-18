@@ -1,0 +1,482 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.EnemyTypeService
+  commentId: T:Global.EnemyTypeService
+  id: EnemyTypeService
+  parent: Global
+  children:
+  - Global.EnemyTypeService.#ctor(EnemyTypeToBiomeSettings,EnemyPrefabContainer)
+  - Global.EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
+  - Global.EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
+  langs:
+  - csharp
+  - vb
+  name: EnemyTypeService
+  nameWithType: EnemyTypeService
+  fullName: EnemyTypeService
+  type: Class
+  source:
+    id: EnemyTypeService
+    path: ''
+    startLine: 2513
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public class EnemyTypeService
+    content.vb: Public Class EnemyTypeService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.EnemyTypeService.#ctor(EnemyTypeToBiomeSettings,EnemyPrefabContainer)
+  commentId: M:Global.EnemyTypeService.#ctor(EnemyTypeToBiomeSettings,EnemyPrefabContainer)
+  id: '#ctor(EnemyTypeToBiomeSettings,EnemyPrefabContainer)'
+  parent: Global.EnemyTypeService
+  langs:
+  - csharp
+  - vb
+  name: EnemyTypeService(EnemyTypeToBiomeSettings, EnemyPrefabContainer)
+  nameWithType: EnemyTypeService.EnemyTypeService(EnemyTypeToBiomeSettings, EnemyPrefabContainer)
+  fullName: EnemyTypeService.EnemyTypeService(EnemyTypeToBiomeSettings, EnemyPrefabContainer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2518
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public EnemyTypeService(EnemyTypeToBiomeSettings enemyTypeToBiomeSettings, EnemyPrefabContainer enemyPrefabContainer)
+    parameters:
+    - id: enemyTypeToBiomeSettings
+      type: Global.EnemyTypeToBiomeSettings
+    - id: enemyPrefabContainer
+      type: Global.EnemyPrefabContainer
+    content.vb: Public Sub New(enemyTypeToBiomeSettings As EnemyTypeToBiomeSettings, enemyPrefabContainer As EnemyPrefabContainer)
+  overload: Global.EnemyTypeService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
+  commentId: M:Global.EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
+  id: GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
+  parent: Global.EnemyTypeService
+  langs:
+  - csharp
+  - vb
+  name: GetRandomEnemyTypeFromBiome(CellBiomeTypes)
+  nameWithType: EnemyTypeService.GetRandomEnemyTypeFromBiome(CellBiomeTypes)
+  fullName: EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
+  type: Method
+  source:
+    id: GetRandomEnemyTypeFromBiome
+    path: ''
+    startLine: 2543
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public EnemyTypes GetRandomEnemyTypeFromBiome(CellBiomeTypes biomeType)
+    parameters:
+    - id: biomeType
+      type: WorldCells.CellBiomeTypes
+    return:
+      type: Global.EnemyTypes
+    content.vb: Public Function GetRandomEnemyTypeFromBiome(biomeType As CellBiomeTypes) As EnemyTypes
+  overload: Global.EnemyTypeService.GetRandomEnemyTypeFromBiome*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
+  commentId: M:Global.EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
+  id: GetRandomEnemyByType(EnemyTypes)
+  parent: Global.EnemyTypeService
+  langs:
+  - csharp
+  - vb
+  name: GetRandomEnemyByType(EnemyTypes)
+  nameWithType: EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
+  fullName: EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
+  type: Method
+  source:
+    id: GetRandomEnemyByType
+    path: ''
+    startLine: 2564
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AbstractEnemy GetRandomEnemyByType(EnemyTypes enemyBiomeType)
+    parameters:
+    - id: enemyBiomeType
+      type: Global.EnemyTypes
+    return:
+      type: Global.AbstractEnemy
+    content.vb: Public Function GetRandomEnemyByType(enemyBiomeType As EnemyTypes) As AbstractEnemy
+  overload: Global.EnemyTypeService.GetRandomEnemyByType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.EnemyTypeService.#ctor*
+  commentId: Overload:Global.EnemyTypeService.#ctor
+  name: EnemyTypeService
+  nameWithType: EnemyTypeService.EnemyTypeService
+  fullName: EnemyTypeService.EnemyTypeService
+- uid: Global.EnemyTypeToBiomeSettings
+  commentId: T:Global.EnemyTypeToBiomeSettings
+  name: EnemyTypeToBiomeSettings
+  nameWithType: EnemyTypeToBiomeSettings
+  fullName: EnemyTypeToBiomeSettings
+- uid: Global.EnemyPrefabContainer
+  commentId: T:Global.EnemyPrefabContainer
+  name: EnemyPrefabContainer
+  nameWithType: EnemyPrefabContainer
+  fullName: EnemyPrefabContainer
+- uid: Global.EnemyTypeService.GetRandomEnemyTypeFromBiome*
+  commentId: Overload:Global.EnemyTypeService.GetRandomEnemyTypeFromBiome
+  name: GetRandomEnemyTypeFromBiome
+  nameWithType: EnemyTypeService.GetRandomEnemyTypeFromBiome
+  fullName: EnemyTypeService.GetRandomEnemyTypeFromBiome
+- uid: WorldCells.CellBiomeTypes
+  commentId: T:WorldCells.CellBiomeTypes
+  parent: WorldCells
+  name: CellBiomeTypes
+  nameWithType: CellBiomeTypes
+  fullName: WorldCells.CellBiomeTypes
+- uid: Global.EnemyTypes
+  commentId: T:Global.EnemyTypes
+  name: EnemyTypes
+  nameWithType: EnemyTypes
+  fullName: EnemyTypes
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
+- uid: Global.EnemyTypeService.GetRandomEnemyByType*
+  commentId: Overload:Global.EnemyTypeService.GetRandomEnemyByType
+  name: GetRandomEnemyByType
+  nameWithType: EnemyTypeService.GetRandomEnemyByType
+  fullName: EnemyTypeService.GetRandomEnemyByType
+- uid: Global.AbstractEnemy
+  commentId: T:Global.AbstractEnemy
+  name: AbstractEnemy
+  nameWithType: AbstractEnemy
+  fullName: AbstractEnemy

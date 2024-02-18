@@ -1,0 +1,1131 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.Factories.WorldCellFactory
+  commentId: T:Services.Factories.WorldCellFactory
+  id: WorldCellFactory
+  parent: Services.Factories
+  children:
+  - Services.Factories.WorldCellFactory.#ctor(AbstractWorldCell,DiContainer)
+  - Services.Factories.WorldCellFactory.CreateNew
+  langs:
+  - csharp
+  - vb
+  name: WorldCellFactory
+  nameWithType: WorldCellFactory
+  fullName: Services.Factories.WorldCellFactory
+  type: Class
+  source:
+    id: WorldCellFactory
+    path: ''
+    startLine: 2851
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: 'public class WorldCellFactory : MonobehaviourAbstractPoolerFactory<AbstractWorldCell>, IObjectPooler, IFactory<AbstractWorldCell>'
+    content.vb: >-
+      Public Class WorldCellFactory
+          Inherits MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell)
+          Implements IObjectPooler, IFactory(Of AbstractWorldCell)
+  inheritance:
+  - System.Object
+  - Services.Factories.AbstractPoolerFactory{AbstractWorldCell}
+  - Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}
+  implements:
+  - Global.IObjectPooler
+  - Global.IFactory{AbstractWorldCell}
+  inheritedMembers:
+  - Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnRelease(AbstractWorldCell)
+  - Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnGet(AbstractWorldCell)
+  - Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnDestroy(AbstractWorldCell)
+  - Services.Factories.AbstractPoolerFactory{AbstractWorldCell}._pool
+  - Services.Factories.AbstractPoolerFactory{AbstractWorldCell}._container
+  - Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.ReturnToPool(IPoolableObject)
+  - Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.GetObject
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.Factories.WorldCellFactory.#ctor(AbstractWorldCell,DiContainer)
+  commentId: M:Services.Factories.WorldCellFactory.#ctor(AbstractWorldCell,DiContainer)
+  id: '#ctor(AbstractWorldCell,DiContainer)'
+  parent: Services.Factories.WorldCellFactory
+  langs:
+  - csharp
+  - vb
+  name: WorldCellFactory(AbstractWorldCell, DiContainer)
+  nameWithType: WorldCellFactory.WorldCellFactory(AbstractWorldCell, DiContainer)
+  fullName: Services.Factories.WorldCellFactory.WorldCellFactory(AbstractWorldCell, DiContainer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2854
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: public WorldCellFactory(AbstractWorldCell cellPrefab, DiContainer diContainer)
+    parameters:
+    - id: cellPrefab
+      type: Global.AbstractWorldCell
+    - id: diContainer
+      type: Global.DiContainer
+    content.vb: Public Sub New(cellPrefab As AbstractWorldCell, diContainer As DiContainer)
+  overload: Services.Factories.WorldCellFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Factories.WorldCellFactory.CreateNew
+  commentId: M:Services.Factories.WorldCellFactory.CreateNew
+  id: CreateNew
+  parent: Services.Factories.WorldCellFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateNew()
+  nameWithType: WorldCellFactory.CreateNew()
+  fullName: Services.Factories.WorldCellFactory.CreateNew()
+  type: Method
+  source:
+    id: CreateNew
+    path: ''
+    startLine: 2857
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Factories
+  syntax:
+    content: protected override AbstractWorldCell CreateNew()
+    return:
+      type: Global.AbstractWorldCell
+    content.vb: Protected Overrides Function CreateNew As AbstractWorldCell
+  overridden: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.CreateNew
+  overload: Services.Factories.WorldCellFactory.CreateNew*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Services.Factories
+  commentId: N:Services.Factories
+  name: Services.Factories
+  nameWithType: Services.Factories
+  fullName: Services.Factories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}
+  commentId: T:Services.Factories.AbstractPoolerFactory{AbstractWorldCell}
+  parent: Services.Factories
+  definition: Services.Factories.AbstractPoolerFactory`1
+  name: AbstractPoolerFactory<AbstractWorldCell>
+  nameWithType: AbstractPoolerFactory<AbstractWorldCell>
+  fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>
+  nameWithType.vb: AbstractPoolerFactory(Of AbstractWorldCell)
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell)
+  name.vb: AbstractPoolerFactory(Of AbstractWorldCell)
+  spec.csharp:
+  - uid: Services.Factories.AbstractPoolerFactory`1
+    name: AbstractPoolerFactory
+    nameWithType: AbstractPoolerFactory
+    fullName: Services.Factories.AbstractPoolerFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Services.Factories.AbstractPoolerFactory`1
+    name: AbstractPoolerFactory
+    nameWithType: AbstractPoolerFactory
+    fullName: Services.Factories.AbstractPoolerFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}
+  commentId: T:Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}
+  parent: Services.Factories
+  definition: Services.Factories.MonobehaviourAbstractPoolerFactory`1
+  name: MonobehaviourAbstractPoolerFactory<AbstractWorldCell>
+  nameWithType: MonobehaviourAbstractPoolerFactory<AbstractWorldCell>
+  fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<AbstractWorldCell>
+  nameWithType.vb: MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell)
+  fullName.vb: Services.Factories.MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell)
+  name.vb: MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell)
+  spec.csharp:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1
+    name: MonobehaviourAbstractPoolerFactory
+    nameWithType: MonobehaviourAbstractPoolerFactory
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1
+    name: MonobehaviourAbstractPoolerFactory
+    nameWithType: MonobehaviourAbstractPoolerFactory
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.IObjectPooler
+  commentId: T:Global.IObjectPooler
+  name: IObjectPooler
+  nameWithType: IObjectPooler
+  fullName: IObjectPooler
+- uid: Global.IFactory{AbstractWorldCell}
+  commentId: T:Global.IFactory{AbstractWorldCell}
+  definition: Global.IFactory`1
+  name: IFactory<AbstractWorldCell>
+  nameWithType: IFactory<AbstractWorldCell>
+  fullName: IFactory<AbstractWorldCell>
+  nameWithType.vb: IFactory(Of AbstractWorldCell)
+  fullName.vb: IFactory(Of AbstractWorldCell)
+  name.vb: IFactory(Of AbstractWorldCell)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnRelease(AbstractWorldCell)
+  commentId: M:Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnRelease(AbstractWorldCell)
+  parent: Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}
+  definition: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnRelease(`0)
+  name: ActionOnRelease(AbstractWorldCell)
+  nameWithType: MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnRelease(AbstractWorldCell)
+  fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnRelease(AbstractWorldCell)
+  nameWithType.vb: MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnRelease(AbstractWorldCell)
+  fullName.vb: Services.Factories.MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnRelease(AbstractWorldCell)
+  spec.csharp:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnRelease(`0)
+    name: ActionOnRelease
+    nameWithType: MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnRelease
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnRelease
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnRelease(`0)
+    name: ActionOnRelease
+    nameWithType: MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnRelease
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnRelease
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnGet(AbstractWorldCell)
+  commentId: M:Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnGet(AbstractWorldCell)
+  parent: Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}
+  definition: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnGet(`0)
+  name: ActionOnGet(AbstractWorldCell)
+  nameWithType: MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnGet(AbstractWorldCell)
+  fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnGet(AbstractWorldCell)
+  nameWithType.vb: MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnGet(AbstractWorldCell)
+  fullName.vb: Services.Factories.MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnGet(AbstractWorldCell)
+  spec.csharp:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnGet(`0)
+    name: ActionOnGet
+    nameWithType: MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnGet
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnGet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnGet(`0)
+    name: ActionOnGet
+    nameWithType: MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnGet
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnGet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnDestroy(AbstractWorldCell)
+  commentId: M:Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}.ActionOnDestroy(AbstractWorldCell)
+  parent: Services.Factories.MonobehaviourAbstractPoolerFactory{AbstractWorldCell}
+  definition: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnDestroy(`0)
+  name: ActionOnDestroy(AbstractWorldCell)
+  nameWithType: MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnDestroy(AbstractWorldCell)
+  fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnDestroy(AbstractWorldCell)
+  nameWithType.vb: MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnDestroy(AbstractWorldCell)
+  fullName.vb: Services.Factories.MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnDestroy(AbstractWorldCell)
+  spec.csharp:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnDestroy(`0)
+    name: ActionOnDestroy
+    nameWithType: MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnDestroy
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<AbstractWorldCell>.ActionOnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnDestroy(`0)
+    name: ActionOnDestroy
+    nameWithType: MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnDestroy
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory(Of AbstractWorldCell).ActionOnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.AbstractWorldCell
+    name: AbstractWorldCell
+    nameWithType: AbstractWorldCell
+    fullName: AbstractWorldCell
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}._pool
+  commentId: F:Services.Factories.AbstractPoolerFactory{AbstractWorldCell}._pool
+  parent: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}
+  definition: Services.Factories.AbstractPoolerFactory`1._pool
+  name: _pool
+  nameWithType: AbstractPoolerFactory<AbstractWorldCell>._pool
+  fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>._pool
+  nameWithType.vb: AbstractPoolerFactory(Of AbstractWorldCell)._pool
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell)._pool
+- uid: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}._container
+  commentId: F:Services.Factories.AbstractPoolerFactory{AbstractWorldCell}._container
+  parent: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}
+  definition: Services.Factories.AbstractPoolerFactory`1._container
+  name: _container
+  nameWithType: AbstractPoolerFactory<AbstractWorldCell>._container
+  fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>._container
+  nameWithType.vb: AbstractPoolerFactory(Of AbstractWorldCell)._container
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell)._container
+- uid: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.ReturnToPool(IPoolableObject)
+  commentId: M:Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.ReturnToPool(IPoolableObject)
+  parent: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}
+  definition: Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+  name: ReturnToPool(IPoolableObject)
+  nameWithType: AbstractPoolerFactory<AbstractWorldCell>.ReturnToPool(IPoolableObject)
+  fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>.ReturnToPool(IPoolableObject)
+  nameWithType.vb: AbstractPoolerFactory(Of AbstractWorldCell).ReturnToPool(IPoolableObject)
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell).ReturnToPool(IPoolableObject)
+  spec.csharp:
+  - uid: Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+    name: ReturnToPool
+    nameWithType: AbstractPoolerFactory<AbstractWorldCell>.ReturnToPool
+    fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IPoolableObject
+    name: IPoolableObject
+    nameWithType: IPoolableObject
+    fullName: IPoolableObject
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+    name: ReturnToPool
+    nameWithType: AbstractPoolerFactory(Of AbstractWorldCell).ReturnToPool
+    fullName: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell).ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IPoolableObject
+    name: IPoolableObject
+    nameWithType: IPoolableObject
+    fullName: IPoolableObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.GetObject
+  commentId: M:Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.GetObject
+  parent: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}
+  definition: Services.Factories.AbstractPoolerFactory`1.GetObject
+  name: GetObject()
+  nameWithType: AbstractPoolerFactory<AbstractWorldCell>.GetObject()
+  fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>.GetObject()
+  nameWithType.vb: AbstractPoolerFactory(Of AbstractWorldCell).GetObject()
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell).GetObject()
+  spec.csharp:
+  - uid: Services.Factories.AbstractPoolerFactory`1.GetObject
+    name: GetObject
+    nameWithType: AbstractPoolerFactory<AbstractWorldCell>.GetObject
+    fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>.GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.AbstractPoolerFactory`1.GetObject
+    name: GetObject
+    nameWithType: AbstractPoolerFactory(Of AbstractWorldCell).GetObject
+    fullName: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell).GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Services.Factories.AbstractPoolerFactory`1
+  commentId: T:Services.Factories.AbstractPoolerFactory`1
+  name: AbstractPoolerFactory<TType>
+  nameWithType: AbstractPoolerFactory<TType>
+  fullName: Services.Factories.AbstractPoolerFactory<TType>
+  nameWithType.vb: AbstractPoolerFactory(Of TType)
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType)
+  name.vb: AbstractPoolerFactory(Of TType)
+  spec.csharp:
+  - uid: Services.Factories.AbstractPoolerFactory`1
+    name: AbstractPoolerFactory
+    nameWithType: AbstractPoolerFactory
+    fullName: Services.Factories.AbstractPoolerFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Services.Factories.AbstractPoolerFactory`1
+    name: AbstractPoolerFactory
+    nameWithType: AbstractPoolerFactory
+    fullName: Services.Factories.AbstractPoolerFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1
+  commentId: T:Services.Factories.MonobehaviourAbstractPoolerFactory`1
+  name: MonobehaviourAbstractPoolerFactory<TType>
+  nameWithType: MonobehaviourAbstractPoolerFactory<TType>
+  fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<TType>
+  nameWithType.vb: MonobehaviourAbstractPoolerFactory(Of TType)
+  fullName.vb: Services.Factories.MonobehaviourAbstractPoolerFactory(Of TType)
+  name.vb: MonobehaviourAbstractPoolerFactory(Of TType)
+  spec.csharp:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1
+    name: MonobehaviourAbstractPoolerFactory
+    nameWithType: MonobehaviourAbstractPoolerFactory
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1
+    name: MonobehaviourAbstractPoolerFactory
+    nameWithType: MonobehaviourAbstractPoolerFactory
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.IFactory`1
+  commentId: T:Global.IFactory`1
+  name: IFactory<TType>
+  nameWithType: IFactory<TType>
+  fullName: IFactory<TType>
+  nameWithType.vb: IFactory(Of TType)
+  fullName.vb: IFactory(Of TType)
+  name.vb: IFactory(Of TType)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnRelease(`0)
+  commentId: M:Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnRelease(`0)
+  name: ActionOnRelease(TType)
+  nameWithType: MonobehaviourAbstractPoolerFactory<TType>.ActionOnRelease(TType)
+  fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<TType>.ActionOnRelease(TType)
+  nameWithType.vb: MonobehaviourAbstractPoolerFactory(Of TType).ActionOnRelease(TType)
+  fullName.vb: Services.Factories.MonobehaviourAbstractPoolerFactory(Of TType).ActionOnRelease(TType)
+  spec.csharp:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnRelease(`0)
+    name: ActionOnRelease
+    nameWithType: MonobehaviourAbstractPoolerFactory<TType>.ActionOnRelease
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<TType>.ActionOnRelease
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnRelease(`0)
+    name: ActionOnRelease
+    nameWithType: MonobehaviourAbstractPoolerFactory(Of TType).ActionOnRelease
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory(Of TType).ActionOnRelease
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnGet(`0)
+  commentId: M:Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnGet(`0)
+  name: ActionOnGet(TType)
+  nameWithType: MonobehaviourAbstractPoolerFactory<TType>.ActionOnGet(TType)
+  fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<TType>.ActionOnGet(TType)
+  nameWithType.vb: MonobehaviourAbstractPoolerFactory(Of TType).ActionOnGet(TType)
+  fullName.vb: Services.Factories.MonobehaviourAbstractPoolerFactory(Of TType).ActionOnGet(TType)
+  spec.csharp:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnGet(`0)
+    name: ActionOnGet
+    nameWithType: MonobehaviourAbstractPoolerFactory<TType>.ActionOnGet
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<TType>.ActionOnGet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnGet(`0)
+    name: ActionOnGet
+    nameWithType: MonobehaviourAbstractPoolerFactory(Of TType).ActionOnGet
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory(Of TType).ActionOnGet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnDestroy(`0)
+  commentId: M:Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnDestroy(`0)
+  name: ActionOnDestroy(TType)
+  nameWithType: MonobehaviourAbstractPoolerFactory<TType>.ActionOnDestroy(TType)
+  fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<TType>.ActionOnDestroy(TType)
+  nameWithType.vb: MonobehaviourAbstractPoolerFactory(Of TType).ActionOnDestroy(TType)
+  fullName.vb: Services.Factories.MonobehaviourAbstractPoolerFactory(Of TType).ActionOnDestroy(TType)
+  spec.csharp:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnDestroy(`0)
+    name: ActionOnDestroy
+    nameWithType: MonobehaviourAbstractPoolerFactory<TType>.ActionOnDestroy
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory<TType>.ActionOnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.MonobehaviourAbstractPoolerFactory`1.ActionOnDestroy(`0)
+    name: ActionOnDestroy
+    nameWithType: MonobehaviourAbstractPoolerFactory(Of TType).ActionOnDestroy
+    fullName: Services.Factories.MonobehaviourAbstractPoolerFactory(Of TType).ActionOnDestroy
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.AbstractPoolerFactory`1._pool
+  commentId: F:Services.Factories.AbstractPoolerFactory`1._pool
+  name: _pool
+  nameWithType: AbstractPoolerFactory<TType>._pool
+  fullName: Services.Factories.AbstractPoolerFactory<TType>._pool
+  nameWithType.vb: AbstractPoolerFactory(Of TType)._pool
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType)._pool
+- uid: Services.Factories.AbstractPoolerFactory`1._container
+  commentId: F:Services.Factories.AbstractPoolerFactory`1._container
+  name: _container
+  nameWithType: AbstractPoolerFactory<TType>._container
+  fullName: Services.Factories.AbstractPoolerFactory<TType>._container
+  nameWithType.vb: AbstractPoolerFactory(Of TType)._container
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType)._container
+- uid: Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+  name: ReturnToPool(IPoolableObject)
+  nameWithType: AbstractPoolerFactory<TType>.ReturnToPool(IPoolableObject)
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.ReturnToPool(IPoolableObject)
+  nameWithType.vb: AbstractPoolerFactory(Of TType).ReturnToPool(IPoolableObject)
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).ReturnToPool(IPoolableObject)
+  spec.csharp:
+  - uid: Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+    name: ReturnToPool
+    nameWithType: AbstractPoolerFactory<TType>.ReturnToPool
+    fullName: Services.Factories.AbstractPoolerFactory<TType>.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IPoolableObject
+    name: IPoolableObject
+    nameWithType: IPoolableObject
+    fullName: IPoolableObject
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.AbstractPoolerFactory`1.ReturnToPool(IPoolableObject)
+    name: ReturnToPool
+    nameWithType: AbstractPoolerFactory(Of TType).ReturnToPool
+    fullName: Services.Factories.AbstractPoolerFactory(Of TType).ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IPoolableObject
+    name: IPoolableObject
+    nameWithType: IPoolableObject
+    fullName: IPoolableObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.AbstractPoolerFactory`1.GetObject
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.GetObject
+  name: GetObject()
+  nameWithType: AbstractPoolerFactory<TType>.GetObject()
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.GetObject()
+  nameWithType.vb: AbstractPoolerFactory(Of TType).GetObject()
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).GetObject()
+  spec.csharp:
+  - uid: Services.Factories.AbstractPoolerFactory`1.GetObject
+    name: GetObject
+    nameWithType: AbstractPoolerFactory<TType>.GetObject
+    fullName: Services.Factories.AbstractPoolerFactory<TType>.GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.AbstractPoolerFactory`1.GetObject
+    name: GetObject
+    nameWithType: AbstractPoolerFactory(Of TType).GetObject
+    fullName: Services.Factories.AbstractPoolerFactory(Of TType).GetObject
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.WorldCellFactory.#ctor*
+  commentId: Overload:Services.Factories.WorldCellFactory.#ctor
+  name: WorldCellFactory
+  nameWithType: WorldCellFactory.WorldCellFactory
+  fullName: Services.Factories.WorldCellFactory.WorldCellFactory
+- uid: Global.AbstractWorldCell
+  isExternal: true
+  name: AbstractWorldCell
+  nameWithType: AbstractWorldCell
+  fullName: AbstractWorldCell
+- uid: Global.DiContainer
+  isExternal: true
+  name: DiContainer
+  nameWithType: DiContainer
+  fullName: DiContainer
+- uid: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.CreateNew
+  commentId: M:Services.Factories.AbstractPoolerFactory{AbstractWorldCell}.CreateNew
+  parent: Services.Factories.AbstractPoolerFactory{AbstractWorldCell}
+  definition: Services.Factories.AbstractPoolerFactory`1.CreateNew
+  name: CreateNew()
+  nameWithType: AbstractPoolerFactory<AbstractWorldCell>.CreateNew()
+  fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>.CreateNew()
+  nameWithType.vb: AbstractPoolerFactory(Of AbstractWorldCell).CreateNew()
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell).CreateNew()
+  spec.csharp:
+  - uid: Services.Factories.AbstractPoolerFactory`1.CreateNew
+    name: CreateNew
+    nameWithType: AbstractPoolerFactory<AbstractWorldCell>.CreateNew
+    fullName: Services.Factories.AbstractPoolerFactory<AbstractWorldCell>.CreateNew
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.AbstractPoolerFactory`1.CreateNew
+    name: CreateNew
+    nameWithType: AbstractPoolerFactory(Of AbstractWorldCell).CreateNew
+    fullName: Services.Factories.AbstractPoolerFactory(Of AbstractWorldCell).CreateNew
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Factories.WorldCellFactory.CreateNew*
+  commentId: Overload:Services.Factories.WorldCellFactory.CreateNew
+  name: CreateNew
+  nameWithType: WorldCellFactory.CreateNew
+  fullName: Services.Factories.WorldCellFactory.CreateNew
+- uid: Services.Factories.AbstractPoolerFactory`1.CreateNew
+  commentId: M:Services.Factories.AbstractPoolerFactory`1.CreateNew
+  name: CreateNew()
+  nameWithType: AbstractPoolerFactory<TType>.CreateNew()
+  fullName: Services.Factories.AbstractPoolerFactory<TType>.CreateNew()
+  nameWithType.vb: AbstractPoolerFactory(Of TType).CreateNew()
+  fullName.vb: Services.Factories.AbstractPoolerFactory(Of TType).CreateNew()
+  spec.csharp:
+  - uid: Services.Factories.AbstractPoolerFactory`1.CreateNew
+    name: CreateNew
+    nameWithType: AbstractPoolerFactory<TType>.CreateNew
+    fullName: Services.Factories.AbstractPoolerFactory<TType>.CreateNew
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Factories.AbstractPoolerFactory`1.CreateNew
+    name: CreateNew
+    nameWithType: AbstractPoolerFactory(Of TType).CreateNew
+    fullName: Services.Factories.AbstractPoolerFactory(Of TType).CreateNew
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

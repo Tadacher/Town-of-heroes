@@ -1,0 +1,64 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.IExitableState
+  commentId: T:Infrastructure.IExitableState
+  id: IExitableState
+  parent: Infrastructure
+  children:
+  - Infrastructure.IExitableState.Exit
+  langs:
+  - csharp
+  - vb
+  name: IExitableState
+  nameWithType: IExitableState
+  fullName: Infrastructure.IExitableState
+  type: Interface
+  source:
+    id: IExitableState
+    path: ''
+    startLine: 609
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public interface IExitableState
+    content.vb: Public Interface IExitableState
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Infrastructure.IExitableState.Exit
+  commentId: M:Infrastructure.IExitableState.Exit
+  id: Exit
+  parent: Infrastructure.IExitableState
+  langs:
+  - csharp
+  - vb
+  name: Exit()
+  nameWithType: IExitableState.Exit()
+  fullName: Infrastructure.IExitableState.Exit()
+  type: Method
+  source:
+    id: Exit
+    path: ''
+    startLine: 611
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: void Exit()
+    content.vb: Sub Exit
+  overload: Infrastructure.IExitableState.Exit*
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: Infrastructure.IExitableState.Exit*
+  commentId: Overload:Infrastructure.IExitableState.Exit
+  name: Exit
+  nameWithType: IExitableState.Exit
+  fullName: Infrastructure.IExitableState.Exit

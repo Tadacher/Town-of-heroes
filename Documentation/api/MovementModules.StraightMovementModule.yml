@@ -1,0 +1,595 @@
+### YamlMime:ManagedReference
+items:
+- uid: MovementModules.StraightMovementModule
+  commentId: T:MovementModules.StraightMovementModule
+  id: StraightMovementModule
+  parent: MovementModules
+  children:
+  - MovementModules.StraightMovementModule.#ctor(Transform,Vector3,MonoBehaviour,System.Single)
+  - MovementModules.StraightMovementModule.MovementCoroutine
+  langs:
+  - csharp
+  - vb
+  name: StraightMovementModule
+  nameWithType: StraightMovementModule
+  fullName: MovementModules.StraightMovementModule
+  type: Class
+  source:
+    id: StraightMovementModule
+    path: ''
+    startLine: 1056
+  assemblies:
+  - cs.temp.dll
+  namespace: MovementModules
+  syntax:
+    content: 'public class StraightMovementModule : AbstractMovementModule'
+    content.vb: >-
+      Public Class StraightMovementModule
+          Inherits AbstractMovementModule
+  inheritance:
+  - System.Object
+  - MovementModules.AbstractMovementModule
+  inheritedMembers:
+  - MovementModules.AbstractMovementModule._unitTransform
+  - MovementModules.AbstractMovementModule._targetV3
+  - MovementModules.AbstractMovementModule._coroutineProcessor
+  - MovementModules.AbstractMovementModule._movementCoroutine
+  - MovementModules.AbstractMovementModule._speed
+  - MovementModules.AbstractMovementModule.StartMovementCoroutine(MonoBehaviour)
+  - MovementModules.AbstractMovementModule.StopMovementCoroutine(MonoBehaviour)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MovementModules.StraightMovementModule.#ctor(Transform,Vector3,MonoBehaviour,System.Single)
+  commentId: M:MovementModules.StraightMovementModule.#ctor(Transform,Vector3,MonoBehaviour,System.Single)
+  id: '#ctor(Transform,Vector3,MonoBehaviour,System.Single)'
+  parent: MovementModules.StraightMovementModule
+  langs:
+  - csharp
+  - vb
+  name: StraightMovementModule(Transform, Vector3, MonoBehaviour, Single)
+  nameWithType: StraightMovementModule.StraightMovementModule(Transform, Vector3, MonoBehaviour, Single)
+  fullName: MovementModules.StraightMovementModule.StraightMovementModule(Transform, Vector3, MonoBehaviour, System.Single)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1060
+  assemblies:
+  - cs.temp.dll
+  namespace: MovementModules
+  syntax:
+    content: public StraightMovementModule(Transform unitTransform, Vector3 target, MonoBehaviour coroutineProcessor, float speed)
+    parameters:
+    - id: unitTransform
+      type: Global.Transform
+    - id: target
+      type: Global.Vector3
+    - id: coroutineProcessor
+      type: Global.MonoBehaviour
+    - id: speed
+      type: System.Single
+    content.vb: Public Sub New(unitTransform As Transform, target As Vector3, coroutineProcessor As MonoBehaviour, speed As Single)
+  overload: MovementModules.StraightMovementModule.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MovementModules.StraightMovementModule.MovementCoroutine
+  commentId: M:MovementModules.StraightMovementModule.MovementCoroutine
+  id: MovementCoroutine
+  parent: MovementModules.StraightMovementModule
+  langs:
+  - csharp
+  - vb
+  name: MovementCoroutine()
+  nameWithType: StraightMovementModule.MovementCoroutine()
+  fullName: MovementModules.StraightMovementModule.MovementCoroutine()
+  type: Method
+  source:
+    id: MovementCoroutine
+    path: ''
+    startLine: 1069
+  assemblies:
+  - cs.temp.dll
+  namespace: MovementModules
+  syntax:
+    content: protected override IEnumerator MovementCoroutine()
+    return:
+      type: Global.IEnumerator
+    content.vb: Protected Overrides Function MovementCoroutine As IEnumerator
+  overridden: MovementModules.AbstractMovementModule.MovementCoroutine
+  overload: MovementModules.StraightMovementModule.MovementCoroutine*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: MovementModules
+  commentId: N:MovementModules
+  name: MovementModules
+  nameWithType: MovementModules
+  fullName: MovementModules
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: MovementModules.AbstractMovementModule
+  commentId: T:MovementModules.AbstractMovementModule
+  parent: MovementModules
+  name: AbstractMovementModule
+  nameWithType: AbstractMovementModule
+  fullName: MovementModules.AbstractMovementModule
+- uid: MovementModules.AbstractMovementModule._unitTransform
+  commentId: F:MovementModules.AbstractMovementModule._unitTransform
+  parent: MovementModules.AbstractMovementModule
+  name: _unitTransform
+  nameWithType: AbstractMovementModule._unitTransform
+  fullName: MovementModules.AbstractMovementModule._unitTransform
+- uid: MovementModules.AbstractMovementModule._targetV3
+  commentId: F:MovementModules.AbstractMovementModule._targetV3
+  parent: MovementModules.AbstractMovementModule
+  name: _targetV3
+  nameWithType: AbstractMovementModule._targetV3
+  fullName: MovementModules.AbstractMovementModule._targetV3
+- uid: MovementModules.AbstractMovementModule._coroutineProcessor
+  commentId: F:MovementModules.AbstractMovementModule._coroutineProcessor
+  parent: MovementModules.AbstractMovementModule
+  name: _coroutineProcessor
+  nameWithType: AbstractMovementModule._coroutineProcessor
+  fullName: MovementModules.AbstractMovementModule._coroutineProcessor
+- uid: MovementModules.AbstractMovementModule._movementCoroutine
+  commentId: F:MovementModules.AbstractMovementModule._movementCoroutine
+  parent: MovementModules.AbstractMovementModule
+  name: _movementCoroutine
+  nameWithType: AbstractMovementModule._movementCoroutine
+  fullName: MovementModules.AbstractMovementModule._movementCoroutine
+- uid: MovementModules.AbstractMovementModule._speed
+  commentId: F:MovementModules.AbstractMovementModule._speed
+  parent: MovementModules.AbstractMovementModule
+  name: _speed
+  nameWithType: AbstractMovementModule._speed
+  fullName: MovementModules.AbstractMovementModule._speed
+- uid: MovementModules.AbstractMovementModule.StartMovementCoroutine(MonoBehaviour)
+  commentId: M:MovementModules.AbstractMovementModule.StartMovementCoroutine(MonoBehaviour)
+  parent: MovementModules.AbstractMovementModule
+  isExternal: true
+  name: StartMovementCoroutine(MonoBehaviour)
+  nameWithType: AbstractMovementModule.StartMovementCoroutine(MonoBehaviour)
+  fullName: MovementModules.AbstractMovementModule.StartMovementCoroutine(MonoBehaviour)
+  spec.csharp:
+  - uid: MovementModules.AbstractMovementModule.StartMovementCoroutine(MonoBehaviour)
+    name: StartMovementCoroutine
+    nameWithType: AbstractMovementModule.StartMovementCoroutine
+    fullName: MovementModules.AbstractMovementModule.StartMovementCoroutine
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.MonoBehaviour
+    name: MonoBehaviour
+    nameWithType: MonoBehaviour
+    fullName: MonoBehaviour
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MovementModules.AbstractMovementModule.StartMovementCoroutine(MonoBehaviour)
+    name: StartMovementCoroutine
+    nameWithType: AbstractMovementModule.StartMovementCoroutine
+    fullName: MovementModules.AbstractMovementModule.StartMovementCoroutine
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.MonoBehaviour
+    name: MonoBehaviour
+    nameWithType: MonoBehaviour
+    fullName: MonoBehaviour
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MovementModules.AbstractMovementModule.StopMovementCoroutine(MonoBehaviour)
+  commentId: M:MovementModules.AbstractMovementModule.StopMovementCoroutine(MonoBehaviour)
+  parent: MovementModules.AbstractMovementModule
+  isExternal: true
+  name: StopMovementCoroutine(MonoBehaviour)
+  nameWithType: AbstractMovementModule.StopMovementCoroutine(MonoBehaviour)
+  fullName: MovementModules.AbstractMovementModule.StopMovementCoroutine(MonoBehaviour)
+  spec.csharp:
+  - uid: MovementModules.AbstractMovementModule.StopMovementCoroutine(MonoBehaviour)
+    name: StopMovementCoroutine
+    nameWithType: AbstractMovementModule.StopMovementCoroutine
+    fullName: MovementModules.AbstractMovementModule.StopMovementCoroutine
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.MonoBehaviour
+    name: MonoBehaviour
+    nameWithType: MonoBehaviour
+    fullName: MonoBehaviour
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MovementModules.AbstractMovementModule.StopMovementCoroutine(MonoBehaviour)
+    name: StopMovementCoroutine
+    nameWithType: AbstractMovementModule.StopMovementCoroutine
+    fullName: MovementModules.AbstractMovementModule.StopMovementCoroutine
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.MonoBehaviour
+    name: MonoBehaviour
+    nameWithType: MonoBehaviour
+    fullName: MonoBehaviour
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MovementModules.StraightMovementModule.#ctor*
+  commentId: Overload:MovementModules.StraightMovementModule.#ctor
+  name: StraightMovementModule
+  nameWithType: StraightMovementModule.StraightMovementModule
+  fullName: MovementModules.StraightMovementModule.StraightMovementModule
+- uid: Global.Transform
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
+- uid: Global.Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: Global.MonoBehaviour
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: MonoBehaviour
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: MovementModules.AbstractMovementModule.MovementCoroutine
+  commentId: M:MovementModules.AbstractMovementModule.MovementCoroutine
+  parent: MovementModules.AbstractMovementModule
+  name: MovementCoroutine()
+  nameWithType: AbstractMovementModule.MovementCoroutine()
+  fullName: MovementModules.AbstractMovementModule.MovementCoroutine()
+  spec.csharp:
+  - uid: MovementModules.AbstractMovementModule.MovementCoroutine
+    name: MovementCoroutine
+    nameWithType: AbstractMovementModule.MovementCoroutine
+    fullName: MovementModules.AbstractMovementModule.MovementCoroutine
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MovementModules.AbstractMovementModule.MovementCoroutine
+    name: MovementCoroutine
+    nameWithType: AbstractMovementModule.MovementCoroutine
+    fullName: MovementModules.AbstractMovementModule.MovementCoroutine
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MovementModules.StraightMovementModule.MovementCoroutine*
+  commentId: Overload:MovementModules.StraightMovementModule.MovementCoroutine
+  name: MovementCoroutine
+  nameWithType: StraightMovementModule.MovementCoroutine
+  fullName: MovementModules.StraightMovementModule.MovementCoroutine
+- uid: Global.IEnumerator
+  isExternal: true
+  name: IEnumerator
+  nameWithType: IEnumerator
+  fullName: IEnumerator

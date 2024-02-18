@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.PopupOnPointerEnter
+  commentId: T:Global.PopupOnPointerEnter
+  id: PopupOnPointerEnter
+  parent: Global
+  children:
+  - Global.PopupOnPointerEnter.OnPointerEnter(PointerEventData)
+  - Global.PopupOnPointerEnter.OnPointerExit(PointerEventData)
+  langs:
+  - csharp
+  - vb
+  name: PopupOnPointerEnter
+  nameWithType: PopupOnPointerEnter
+  fullName: PopupOnPointerEnter
+  type: Class
+  source:
+    id: PopupOnPointerEnter
+    path: ''
+    startLine: 759
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class PopupOnPointerEnter : MonoBehaviour'
+    content.vb: >-
+      Public Class PopupOnPointerEnter
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  implements:
+  - Global.IPointerEnterHandler
+  - Global.IPointerExitHandler
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.PopupOnPointerEnter.OnPointerEnter(PointerEventData)
+  commentId: M:Global.PopupOnPointerEnter.OnPointerEnter(PointerEventData)
+  id: OnPointerEnter(PointerEventData)
+  parent: Global.PopupOnPointerEnter
+  langs:
+  - csharp
+  - vb
+  name: OnPointerEnter(PointerEventData)
+  nameWithType: PopupOnPointerEnter.OnPointerEnter(PointerEventData)
+  fullName: PopupOnPointerEnter.OnPointerEnter(PointerEventData)
+  type: Method
+  source:
+    id: OnPointerEnter
+    path: ''
+    startLine: 779
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnPointerEnter(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: Global.PointerEventData
+    content.vb: Public Sub OnPointerEnter(eventData As PointerEventData)
+  overload: Global.PopupOnPointerEnter.OnPointerEnter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.PopupOnPointerEnter.OnPointerExit(PointerEventData)
+  commentId: M:Global.PopupOnPointerEnter.OnPointerExit(PointerEventData)
+  id: OnPointerExit(PointerEventData)
+  parent: Global.PopupOnPointerEnter
+  langs:
+  - csharp
+  - vb
+  name: OnPointerExit(PointerEventData)
+  nameWithType: PopupOnPointerEnter.OnPointerExit(PointerEventData)
+  fullName: PopupOnPointerEnter.OnPointerExit(PointerEventData)
+  type: Method
+  source:
+    id: OnPointerExit
+    path: ''
+    startLine: 786
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void OnPointerExit(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: Global.PointerEventData
+    content.vb: Public Sub OnPointerExit(eventData As PointerEventData)
+  overload: Global.PopupOnPointerEnter.OnPointerExit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.IPointerEnterHandler
+  commentId: '!:Global.IPointerEnterHandler'
+  isExternal: true
+  name: IPointerEnterHandler
+  nameWithType: IPointerEnterHandler
+  fullName: IPointerEnterHandler
+- uid: Global.IPointerExitHandler
+  commentId: '!:Global.IPointerExitHandler'
+  isExternal: true
+  name: IPointerExitHandler
+  nameWithType: IPointerExitHandler
+  fullName: IPointerExitHandler
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.PopupOnPointerEnter.OnPointerEnter*
+  commentId: Overload:Global.PopupOnPointerEnter.OnPointerEnter
+  name: OnPointerEnter
+  nameWithType: PopupOnPointerEnter.OnPointerEnter
+  fullName: PopupOnPointerEnter.OnPointerEnter
+- uid: Global.PointerEventData
+  isExternal: true
+  name: PointerEventData
+  nameWithType: PointerEventData
+  fullName: PointerEventData
+- uid: Global.PopupOnPointerEnter.OnPointerExit*
+  commentId: Overload:Global.PopupOnPointerEnter.OnPointerExit
+  name: OnPointerExit
+  nameWithType: PopupOnPointerEnter.OnPointerExit
+  fullName: PopupOnPointerEnter.OnPointerExit

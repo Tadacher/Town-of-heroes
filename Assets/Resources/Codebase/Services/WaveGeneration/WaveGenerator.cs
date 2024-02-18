@@ -24,24 +24,24 @@ public class WaveGenerator
 
     private Action[] GenerateSpawnCommands()
     {
-        CellBiomeTypes enemyBiomeType = GetEnemyBiomeType();
+        CellBiomeTypes enemyBiomeType = GetEnemyBiomeByCountWeighted();
         Action[] abstractEnemies = new Action[] {
         () => SpawnEnemy(GetEnemyTypeByBiome(enemyBiomeType)),
-        () => _enemyInstantiationService.ReturnObject(typeof(Gobbo)),
-        () => _enemyInstantiationService.ReturnObject(typeof(Gobbo))};
+        () => SpawnEnemy(GetEnemyTypeByBiome(enemyBiomeType)),
+        () => SpawnEnemy(GetEnemyTypeByBiome(enemyBiomeType))};
         return abstractEnemies;
     }
 
-    private EnemyTypes GetEnemyTypeByBiome(CellBiomeTypes enemyBiomeType) => 
-        _enemyTypeService.GetRandomEnemyTypeFromBiome(enemyBiomeType);
+    private EnemyType GetEnemyTypeByBiome(CellBiomeTypes enemyBiomeType) => 
+        _enemyTypeService.GetRandomEnemyTypeByBiome(enemyBiomeType);
 
-    private AbstractEnemy SpawnEnemy(EnemyTypes enemyType)
+    private AbstractEnemy SpawnEnemy(EnemyType enemyType)
     {
         AbstractEnemy type = _enemyTypeService.GetRandomEnemyByType(enemyType);
         return _enemyInstantiationService.ReturnObject(type.GetType());
     }
 
-    private CellBiomeTypes GetEnemyBiomeType()
+    private CellBiomeTypes GetEnemyBiomeByCountWeighted()
     {
         Dictionary<CellBiomeTypes, int> cells = _cellBalanceService.CellCountByTag;
         float maxValue = 0;
@@ -56,11 +56,14 @@ public class WaveGenerator
         }
 
         float randomNumber = UnityEngine.Random.Range(0, maxValue);
-        foreach (var  cell in cells)
+        foreach (KeyValuePair<CellBiomeTypes, int> cell in cells)
         {
             randomNumber -= cell.Value;
             if (randomNumber <= 0)
+            {
+                Debug.Log($"picked {cell.Key} biome");
                 return cell.Key;
+            }
         }
 
         Debug.LogError($"No acceptable entries found for enemy biome type generation ");

@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.IMowementModuleOwner
+  commentId: T:Global.IMowementModuleOwner
+  id: IMowementModuleOwner
+  parent: Global
+  children:
+  - Global.IMowementModuleOwner.MovementModule
+  langs:
+  - csharp
+  - vb
+  name: IMowementModuleOwner
+  nameWithType: IMowementModuleOwner
+  fullName: IMowementModuleOwner
+  type: Interface
+  source:
+    id: IMowementModuleOwner
+    path: ''
+    startLine: 642
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public interface IMowementModuleOwner
+    content.vb: Public Interface IMowementModuleOwner
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Global.IMowementModuleOwner.MovementModule
+  commentId: M:Global.IMowementModuleOwner.MovementModule
+  id: MovementModule
+  parent: Global.IMowementModuleOwner
+  langs:
+  - csharp
+  - vb
+  name: MovementModule()
+  nameWithType: IMowementModuleOwner.MovementModule()
+  fullName: IMowementModuleOwner.MovementModule()
+  type: Method
+  source:
+    id: MovementModule
+    path: ''
+    startLine: 644
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: AbstractMovementModule MovementModule()
+    return:
+      type: Global.AbstractMovementModule
+    content.vb: Function MovementModule As AbstractMovementModule
+  overload: Global.IMowementModuleOwner.MovementModule*
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.IMowementModuleOwner.MovementModule*
+  commentId: Overload:Global.IMowementModuleOwner.MovementModule
+  name: MovementModule
+  nameWithType: IMowementModuleOwner.MovementModule
+  fullName: IMowementModuleOwner.MovementModule
+- uid: Global.AbstractMovementModule
+  isExternal: true
+  name: AbstractMovementModule
+  nameWithType: AbstractMovementModule
+  fullName: AbstractMovementModule

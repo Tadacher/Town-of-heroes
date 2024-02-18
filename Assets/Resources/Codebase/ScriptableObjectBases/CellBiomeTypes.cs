@@ -5,6 +5,7 @@
         Green,
         Desert,
         Arctic,
-        Ocean
+        Ocean,
+        Cursed
     }
 }

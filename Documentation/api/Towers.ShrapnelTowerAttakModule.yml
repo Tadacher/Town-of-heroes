@@ -1,0 +1,516 @@
+### YamlMime:ManagedReference
+items:
+- uid: Towers.ShrapnelTowerAttakModule
+  commentId: T:Towers.ShrapnelTowerAttakModule
+  id: ShrapnelTowerAttakModule
+  parent: Towers
+  children:
+  - Towers.ShrapnelTowerAttakModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  - Towers.ShrapnelTowerAttakModule.ShrapnelCount
+  langs:
+  - csharp
+  - vb
+  name: ShrapnelTowerAttakModule
+  nameWithType: ShrapnelTowerAttakModule
+  fullName: Towers.ShrapnelTowerAttakModule
+  type: Class
+  source:
+    id: ShrapnelTowerAttakModule
+    path: ''
+    startLine: 3191
+  assemblies:
+  - cs.temp.dll
+  namespace: Towers
+  syntax:
+    content: 'public class ShrapnelTowerAttakModule : AbstractTowerAttackModule'
+    content.vb: >-
+      Public Class ShrapnelTowerAttakModule
+          Inherits AbstractTowerAttackModule
+  inheritance:
+  - System.Object
+  - Towers.AbstractTowerAttackModule
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Towers.ShrapnelTowerAttakModule.ShrapnelCount
+  commentId: P:Towers.ShrapnelTowerAttakModule.ShrapnelCount
+  id: ShrapnelCount
+  parent: Towers.ShrapnelTowerAttakModule
+  langs:
+  - csharp
+  - vb
+  name: ShrapnelCount
+  nameWithType: ShrapnelTowerAttakModule.ShrapnelCount
+  fullName: Towers.ShrapnelTowerAttakModule.ShrapnelCount
+  type: Property
+  source:
+    id: ShrapnelCount
+    path: ''
+    startLine: 3195
+  assemblies:
+  - cs.temp.dll
+  namespace: Towers
+  syntax:
+    content: public int ShrapnelCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ShrapnelCount As Integer
+  overload: Towers.ShrapnelTowerAttakModule.ShrapnelCount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Towers.ShrapnelTowerAttakModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  commentId: M:Towers.ShrapnelTowerAttakModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  id: DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  parent: Towers.ShrapnelTowerAttakModule
+  langs:
+  - csharp
+  - vb
+  name: DealDamage(IHitpointOwner, Int32, AbstractTower)
+  nameWithType: ShrapnelTowerAttakModule.DealDamage(IHitpointOwner, Int32, AbstractTower)
+  fullName: Towers.ShrapnelTowerAttakModule.DealDamage(IHitpointOwner, System.Int32, Core.Towers.AbstractTower)
+  type: Method
+  source:
+    id: DealDamage
+    path: ''
+    startLine: 3197
+  assemblies:
+  - cs.temp.dll
+  namespace: Towers
+  syntax:
+    content: public override void DealDamage(IHitpointOwner target, int damage, AbstractTower damageDealer)
+    parameters:
+    - id: target
+      type: Global.IHitpointOwner
+    - id: damage
+      type: System.Int32
+    - id: damageDealer
+      type: Core.Towers.AbstractTower
+    content.vb: Public Overrides Sub DealDamage(target As IHitpointOwner, damage As Integer, damageDealer As AbstractTower)
+  overridden: Towers.AbstractTowerAttackModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  overload: Towers.ShrapnelTowerAttakModule.DealDamage*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Towers
+  commentId: N:Towers
+  name: Towers
+  nameWithType: Towers
+  fullName: Towers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Towers.AbstractTowerAttackModule
+  commentId: T:Towers.AbstractTowerAttackModule
+  parent: Towers
+  name: AbstractTowerAttackModule
+  nameWithType: AbstractTowerAttackModule
+  fullName: Towers.AbstractTowerAttackModule
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Towers.ShrapnelTowerAttakModule.ShrapnelCount*
+  commentId: Overload:Towers.ShrapnelTowerAttakModule.ShrapnelCount
+  name: ShrapnelCount
+  nameWithType: ShrapnelTowerAttakModule.ShrapnelCount
+  fullName: Towers.ShrapnelTowerAttakModule.ShrapnelCount
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Towers.AbstractTowerAttackModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  commentId: M:Towers.AbstractTowerAttackModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  parent: Towers.AbstractTowerAttackModule
+  isExternal: true
+  name: DealDamage(IHitpointOwner, Int32, AbstractTower)
+  nameWithType: AbstractTowerAttackModule.DealDamage(IHitpointOwner, Int32, AbstractTower)
+  fullName: Towers.AbstractTowerAttackModule.DealDamage(IHitpointOwner, System.Int32, Core.Towers.AbstractTower)
+  spec.csharp:
+  - uid: Towers.AbstractTowerAttackModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+    name: DealDamage
+    nameWithType: AbstractTowerAttackModule.DealDamage
+    fullName: Towers.AbstractTowerAttackModule.DealDamage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IHitpointOwner
+    name: IHitpointOwner
+    nameWithType: IHitpointOwner
+    fullName: IHitpointOwner
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Core.Towers.AbstractTower
+    name: AbstractTower
+    nameWithType: AbstractTower
+    fullName: Core.Towers.AbstractTower
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Towers.AbstractTowerAttackModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+    name: DealDamage
+    nameWithType: AbstractTowerAttackModule.DealDamage
+    fullName: Towers.AbstractTowerAttackModule.DealDamage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IHitpointOwner
+    name: IHitpointOwner
+    nameWithType: IHitpointOwner
+    fullName: IHitpointOwner
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Core.Towers.AbstractTower
+    name: AbstractTower
+    nameWithType: AbstractTower
+    fullName: Core.Towers.AbstractTower
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Towers.ShrapnelTowerAttakModule.DealDamage*
+  commentId: Overload:Towers.ShrapnelTowerAttakModule.DealDamage
+  name: DealDamage
+  nameWithType: ShrapnelTowerAttakModule.DealDamage
+  fullName: Towers.ShrapnelTowerAttakModule.DealDamage
+- uid: Global.IHitpointOwner
+  commentId: T:Global.IHitpointOwner
+  name: IHitpointOwner
+  nameWithType: IHitpointOwner
+  fullName: IHitpointOwner
+- uid: Core.Towers.AbstractTower
+  commentId: T:Core.Towers.AbstractTower
+  parent: Core.Towers
+  name: AbstractTower
+  nameWithType: AbstractTower
+  fullName: Core.Towers.AbstractTower
+- uid: Core.Towers
+  commentId: N:Core.Towers
+  name: Core.Towers
+  nameWithType: Core.Towers
+  fullName: Core.Towers

@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.MapGenerator
+  commentId: T:Global.MapGenerator
+  id: MapGenerator
+  parent: Global
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MapGenerator
+  nameWithType: MapGenerator
+  fullName: MapGenerator
+  type: Class
+  source:
+    id: MapGenerator
+    path: ''
+    startLine: 1372
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class MapGenerator : MonoBehaviour'
+    content.vb: >-
+      Public Class MapGenerator
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

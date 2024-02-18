@@ -1,0 +1,36 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.GridSystem.IGridCellObject
+  commentId: T:Services.GridSystem.IGridCellObject
+  id: IGridCellObject
+  parent: Services.GridSystem
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IGridCellObject
+  nameWithType: IGridCellObject
+  fullName: Services.GridSystem.IGridCellObject
+  type: Interface
+  source:
+    id: IGridCellObject
+    path: ''
+    startLine: 2114
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.GridSystem
+  syntax:
+    content: public interface IGridCellObject
+    content.vb: Public Interface IGridCellObject
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem

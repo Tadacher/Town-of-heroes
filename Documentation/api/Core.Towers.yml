@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Core.Towers
+  commentId: N:Core.Towers
+  id: Core.Towers
+  children:
+  - Core.Towers.AbstractTower
+  - Core.Towers.ArcherTower
+  - Core.Towers.ShrapnelCanonTower
+  langs:
+  - csharp
+  - vb
+  name: Core.Towers
+  nameWithType: Core.Towers
+  fullName: Core.Towers
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Core.Towers.AbstractTower
+  commentId: T:Core.Towers.AbstractTower
+  parent: Core.Towers
+  name: AbstractTower
+  nameWithType: AbstractTower
+  fullName: Core.Towers.AbstractTower
+- uid: Core.Towers.ArcherTower
+  commentId: T:Core.Towers.ArcherTower
+  name: ArcherTower
+  nameWithType: ArcherTower
+  fullName: Core.Towers.ArcherTower
+- uid: Core.Towers.ShrapnelCanonTower
+  commentId: T:Core.Towers.ShrapnelCanonTower
+  name: ShrapnelCanonTower
+  nameWithType: ShrapnelCanonTower
+  fullName: Core.Towers.ShrapnelCanonTower
+- uid: Core.Towers
+  commentId: N:Core.Towers
+  name: Core.Towers
+  nameWithType: Core.Towers
+  fullName: Core.Towers

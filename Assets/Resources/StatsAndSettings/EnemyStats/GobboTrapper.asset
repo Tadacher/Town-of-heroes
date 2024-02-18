@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2d8d23eaeb3c54394afd34d931cc6f, type: 3}
   m_Name: GobboTrapper
   m_EditorClassIdentifier: 
-  EnemyTypes: 0000000002000000
+  EnemyTypesAndWeights:
+  - enemyType: 0
+    Weight: 5
+  - enemyType: 2
+    Weight: 2
   HitPoints: 5
   Damage: 1
   ExpPerKill: 1

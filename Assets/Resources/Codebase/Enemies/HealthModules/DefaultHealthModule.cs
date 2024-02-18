@@ -1,14 +1,16 @@
 ﻿using Services;
 using UnityEngine;
 
-public class DefaultHealthModule : AbstractHealthModule
+public class DefaultHealthModule : AbstractDamageRecievingModule
 {
-    public DefaultHealthModule(Transform unitTransform, DamageTextService damageTextService):base(unitTransform, damageTextService)
+    public DefaultHealthModule(Transform unitTransform, DamageTextService damageTextService) : base(unitTransform, damageTextService)
     {
+        
     }
 
-    public override int RecieveDamage(int damage)
+    public override int CalculateRecievedDamage(int damage)
     {
+        _damageTextService.ReturnDamageText(damage, _unitTransform.position);
         return damage;
     }
 }

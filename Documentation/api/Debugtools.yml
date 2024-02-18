@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Debugtools
+  commentId: N:Debugtools
+  id: Debugtools
+  children:
+  - Debugtools.DebugInput
+  langs:
+  - csharp
+  - vb
+  name: Debugtools
+  nameWithType: Debugtools
+  fullName: Debugtools
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Debugtools.DebugInput
+  commentId: T:Debugtools.DebugInput
+  name: DebugInput
+  nameWithType: DebugInput
+  fullName: Debugtools.DebugInput

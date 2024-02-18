@@ -8,8 +8,8 @@ public class GobboTrapper : Gobbo
     public override void Initialize(AudioSource audioSource, DamageTextService damageTextService, IObjectPooler objectPooler)
     {
         base.Initialize(audioSource, damageTextService, _pooler);
-        _abstractHealthModule = new DodgeHealthModule(_dodgeValue, transform, damageTextService);
-        _enemyMovementModule = new StraightMovementModule(transform, new Vector3(-1.5f, -11.5f, 0f), this, _speed);
+        _abstractHealthModule = new DodgeDamageRecievingModule(_dodgeValue, transform, damageTextService);
+        _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);
     }
     public override void Heal(int points)
     {

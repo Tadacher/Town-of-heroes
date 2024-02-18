@@ -1,0 +1,468 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorldCells.GrassMeadows
+  commentId: T:WorldCells.GrassMeadows
+  id: GrassMeadows
+  parent: WorldCells
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GrassMeadows
+  nameWithType: GrassMeadows
+  fullName: WorldCells.GrassMeadows
+  type: Class
+  source:
+    id: GrassMeadows
+    path: ''
+    startLine: 3397
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: 'public class GrassMeadows : AbstractWorldCell, IPoolableObject, IGridCellObject'
+    content.vb: >-
+      Public Class GrassMeadows
+          Inherits AbstractWorldCell
+          Implements IPoolableObject, IGridCellObject
+  inheritance:
+  - System.Object
+  - WorldCells.AbstractWorldCell
+  implements:
+  - Global.IPoolableObject
+  - Services.GridSystem.IGridCellObject
+  inheritedMembers:
+  - WorldCells.AbstractWorldCell._pointerFollower
+  - WorldCells.AbstractWorldCell._spriteRenderer
+  - WorldCells.AbstractWorldCell._cellStats
+  - WorldCells.AbstractWorldCell._objectPooler
+  - WorldCells.AbstractWorldCell._gridAlignService
+  - WorldCells.AbstractWorldCell._worldCellBalanceService
+  - WorldCells.AbstractWorldCell.Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+  - WorldCells.AbstractWorldCell.ReturnToPool
+  - WorldCells.AbstractWorldCell.StartFollowPointer
+  - WorldCells.AbstractWorldCell.StopFollowingPointer
+  - WorldCells.AbstractWorldCell.InsertSelfToGrid
+  - WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  - WorldCells.AbstractWorldCell.AsGhost
+  - WorldCells.AbstractWorldCell.AsUnGhost
+  - WorldCells.AbstractWorldCell.MakeUnGhost
+  - WorldCells.AbstractWorldCell.MakeGhost
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: WorldCells.AbstractWorldCell
+  commentId: T:WorldCells.AbstractWorldCell
+  parent: WorldCells
+  name: AbstractWorldCell
+  nameWithType: AbstractWorldCell
+  fullName: WorldCells.AbstractWorldCell
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+- uid: Services.GridSystem.IGridCellObject
+  commentId: T:Services.GridSystem.IGridCellObject
+  parent: Services.GridSystem
+  name: IGridCellObject
+  nameWithType: IGridCellObject
+  fullName: Services.GridSystem.IGridCellObject
+- uid: WorldCells.AbstractWorldCell._pointerFollower
+  commentId: F:WorldCells.AbstractWorldCell._pointerFollower
+  parent: WorldCells.AbstractWorldCell
+  name: _pointerFollower
+  nameWithType: AbstractWorldCell._pointerFollower
+  fullName: WorldCells.AbstractWorldCell._pointerFollower
+- uid: WorldCells.AbstractWorldCell._spriteRenderer
+  commentId: F:WorldCells.AbstractWorldCell._spriteRenderer
+  parent: WorldCells.AbstractWorldCell
+  name: _spriteRenderer
+  nameWithType: AbstractWorldCell._spriteRenderer
+  fullName: WorldCells.AbstractWorldCell._spriteRenderer
+- uid: WorldCells.AbstractWorldCell._cellStats
+  commentId: F:WorldCells.AbstractWorldCell._cellStats
+  parent: WorldCells.AbstractWorldCell
+  name: _cellStats
+  nameWithType: AbstractWorldCell._cellStats
+  fullName: WorldCells.AbstractWorldCell._cellStats
+- uid: WorldCells.AbstractWorldCell._objectPooler
+  commentId: F:WorldCells.AbstractWorldCell._objectPooler
+  parent: WorldCells.AbstractWorldCell
+  name: _objectPooler
+  nameWithType: AbstractWorldCell._objectPooler
+  fullName: WorldCells.AbstractWorldCell._objectPooler
+- uid: WorldCells.AbstractWorldCell._gridAlignService
+  commentId: F:WorldCells.AbstractWorldCell._gridAlignService
+  parent: WorldCells.AbstractWorldCell
+  name: _gridAlignService
+  nameWithType: AbstractWorldCell._gridAlignService
+  fullName: WorldCells.AbstractWorldCell._gridAlignService
+- uid: WorldCells.AbstractWorldCell._worldCellBalanceService
+  commentId: F:WorldCells.AbstractWorldCell._worldCellBalanceService
+  parent: WorldCells.AbstractWorldCell
+  name: _worldCellBalanceService
+  nameWithType: AbstractWorldCell._worldCellBalanceService
+  fullName: WorldCells.AbstractWorldCell._worldCellBalanceService
+- uid: WorldCells.AbstractWorldCell.Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+  commentId: M:WorldCells.AbstractWorldCell.Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+  parent: WorldCells.AbstractWorldCell
+  isExternal: true
+  name: Initialize(IObjectPooler, WorldCellGridService, AbstractInputService, WorldCellBalanceService)
+  nameWithType: AbstractWorldCell.Initialize(IObjectPooler, WorldCellGridService, AbstractInputService, WorldCellBalanceService)
+  fullName: WorldCells.AbstractWorldCell.Initialize(IObjectPooler, WorldCellGridService, AbstractInputService, WorldCells.WorldCellBalanceService)
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+    name: Initialize
+    nameWithType: AbstractWorldCell.Initialize
+    fullName: WorldCells.AbstractWorldCell.Initialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IObjectPooler
+    name: IObjectPooler
+    nameWithType: IObjectPooler
+    fullName: IObjectPooler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.WorldCellGridService
+    name: WorldCellGridService
+    nameWithType: WorldCellGridService
+    fullName: WorldCellGridService
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.AbstractInputService
+    name: AbstractInputService
+    nameWithType: AbstractInputService
+    fullName: AbstractInputService
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: WorldCells.WorldCellBalanceService
+    name: WorldCellBalanceService
+    nameWithType: WorldCellBalanceService
+    fullName: WorldCells.WorldCellBalanceService
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+    name: Initialize
+    nameWithType: AbstractWorldCell.Initialize
+    fullName: WorldCells.AbstractWorldCell.Initialize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.IObjectPooler
+    name: IObjectPooler
+    nameWithType: IObjectPooler
+    fullName: IObjectPooler
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.WorldCellGridService
+    name: WorldCellGridService
+    nameWithType: WorldCellGridService
+    fullName: WorldCellGridService
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.AbstractInputService
+    name: AbstractInputService
+    nameWithType: AbstractInputService
+    fullName: AbstractInputService
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: WorldCells.WorldCellBalanceService
+    name: WorldCellBalanceService
+    nameWithType: WorldCellBalanceService
+    fullName: WorldCells.WorldCellBalanceService
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.ReturnToPool
+  commentId: M:WorldCells.AbstractWorldCell.ReturnToPool
+  parent: WorldCells.AbstractWorldCell
+  name: ReturnToPool()
+  nameWithType: AbstractWorldCell.ReturnToPool()
+  fullName: WorldCells.AbstractWorldCell.ReturnToPool()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.ReturnToPool
+    name: ReturnToPool
+    nameWithType: AbstractWorldCell.ReturnToPool
+    fullName: WorldCells.AbstractWorldCell.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.ReturnToPool
+    name: ReturnToPool
+    nameWithType: AbstractWorldCell.ReturnToPool
+    fullName: WorldCells.AbstractWorldCell.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.StartFollowPointer
+  commentId: M:WorldCells.AbstractWorldCell.StartFollowPointer
+  parent: WorldCells.AbstractWorldCell
+  name: StartFollowPointer()
+  nameWithType: AbstractWorldCell.StartFollowPointer()
+  fullName: WorldCells.AbstractWorldCell.StartFollowPointer()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.StartFollowPointer
+    name: StartFollowPointer
+    nameWithType: AbstractWorldCell.StartFollowPointer
+    fullName: WorldCells.AbstractWorldCell.StartFollowPointer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.StartFollowPointer
+    name: StartFollowPointer
+    nameWithType: AbstractWorldCell.StartFollowPointer
+    fullName: WorldCells.AbstractWorldCell.StartFollowPointer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.StopFollowingPointer
+  commentId: M:WorldCells.AbstractWorldCell.StopFollowingPointer
+  parent: WorldCells.AbstractWorldCell
+  name: StopFollowingPointer()
+  nameWithType: AbstractWorldCell.StopFollowingPointer()
+  fullName: WorldCells.AbstractWorldCell.StopFollowingPointer()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.StopFollowingPointer
+    name: StopFollowingPointer
+    nameWithType: AbstractWorldCell.StopFollowingPointer
+    fullName: WorldCells.AbstractWorldCell.StopFollowingPointer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.StopFollowingPointer
+    name: StopFollowingPointer
+    nameWithType: AbstractWorldCell.StopFollowingPointer
+    fullName: WorldCells.AbstractWorldCell.StopFollowingPointer
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.InsertSelfToGrid
+  commentId: M:WorldCells.AbstractWorldCell.InsertSelfToGrid
+  parent: WorldCells.AbstractWorldCell
+  name: InsertSelfToGrid()
+  nameWithType: AbstractWorldCell.InsertSelfToGrid()
+  fullName: WorldCells.AbstractWorldCell.InsertSelfToGrid()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.InsertSelfToGrid
+    name: InsertSelfToGrid
+    nameWithType: AbstractWorldCell.InsertSelfToGrid
+    fullName: WorldCells.AbstractWorldCell.InsertSelfToGrid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.InsertSelfToGrid
+    name: InsertSelfToGrid
+    nameWithType: AbstractWorldCell.InsertSelfToGrid
+    fullName: WorldCells.AbstractWorldCell.InsertSelfToGrid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  commentId: M:WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  parent: WorldCells.AbstractWorldCell
+  name: RemoveSelfFromGrid()
+  nameWithType: AbstractWorldCell.RemoveSelfFromGrid()
+  fullName: WorldCells.AbstractWorldCell.RemoveSelfFromGrid()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+    name: RemoveSelfFromGrid
+    nameWithType: AbstractWorldCell.RemoveSelfFromGrid
+    fullName: WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+    name: RemoveSelfFromGrid
+    nameWithType: AbstractWorldCell.RemoveSelfFromGrid
+    fullName: WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.AsGhost
+  commentId: M:WorldCells.AbstractWorldCell.AsGhost
+  parent: WorldCells.AbstractWorldCell
+  name: AsGhost()
+  nameWithType: AbstractWorldCell.AsGhost()
+  fullName: WorldCells.AbstractWorldCell.AsGhost()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.AsGhost
+    name: AsGhost
+    nameWithType: AbstractWorldCell.AsGhost
+    fullName: WorldCells.AbstractWorldCell.AsGhost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.AsGhost
+    name: AsGhost
+    nameWithType: AbstractWorldCell.AsGhost
+    fullName: WorldCells.AbstractWorldCell.AsGhost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.AsUnGhost
+  commentId: M:WorldCells.AbstractWorldCell.AsUnGhost
+  parent: WorldCells.AbstractWorldCell
+  name: AsUnGhost()
+  nameWithType: AbstractWorldCell.AsUnGhost()
+  fullName: WorldCells.AbstractWorldCell.AsUnGhost()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.AsUnGhost
+    name: AsUnGhost
+    nameWithType: AbstractWorldCell.AsUnGhost
+    fullName: WorldCells.AbstractWorldCell.AsUnGhost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.AsUnGhost
+    name: AsUnGhost
+    nameWithType: AbstractWorldCell.AsUnGhost
+    fullName: WorldCells.AbstractWorldCell.AsUnGhost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.MakeUnGhost
+  commentId: M:WorldCells.AbstractWorldCell.MakeUnGhost
+  parent: WorldCells.AbstractWorldCell
+  name: MakeUnGhost()
+  nameWithType: AbstractWorldCell.MakeUnGhost()
+  fullName: WorldCells.AbstractWorldCell.MakeUnGhost()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.MakeUnGhost
+    name: MakeUnGhost
+    nameWithType: AbstractWorldCell.MakeUnGhost
+    fullName: WorldCells.AbstractWorldCell.MakeUnGhost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.MakeUnGhost
+    name: MakeUnGhost
+    nameWithType: AbstractWorldCell.MakeUnGhost
+    fullName: WorldCells.AbstractWorldCell.MakeUnGhost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.MakeGhost
+  commentId: M:WorldCells.AbstractWorldCell.MakeGhost
+  parent: WorldCells.AbstractWorldCell
+  name: MakeGhost()
+  nameWithType: AbstractWorldCell.MakeGhost()
+  fullName: WorldCells.AbstractWorldCell.MakeGhost()
+  spec.csharp:
+  - uid: WorldCells.AbstractWorldCell.MakeGhost
+    name: MakeGhost
+    nameWithType: AbstractWorldCell.MakeGhost
+    fullName: WorldCells.AbstractWorldCell.MakeGhost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: WorldCells.AbstractWorldCell.MakeGhost
+    name: MakeGhost
+    nameWithType: AbstractWorldCell.MakeGhost
+    fullName: WorldCells.AbstractWorldCell.MakeGhost
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem

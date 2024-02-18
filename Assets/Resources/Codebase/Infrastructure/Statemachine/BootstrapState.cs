@@ -5,7 +5,7 @@ namespace Infrastructure
 {
     public class BootstrapState : IState
     {
-        private const string _initialSceneName = "Initial";
+        private const string _initialSceneName = "InitialScene";
         private const string _coreGameplayScene = "CoreGameplayScene";
         private GameStateMachine _gameStateMachine;
         private SceneLoaderService _sceneLoaderService;

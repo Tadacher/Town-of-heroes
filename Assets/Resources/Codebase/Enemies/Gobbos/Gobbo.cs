@@ -8,13 +8,6 @@ public class Gobbo : AbstractEnemy
     {
         base.Initialize(audioSource, damageTextService, objectPooler);
         _abstractHealthModule = new DefaultHealthModule(transform, damageTextService);
-        _enemyMovementModule = new StraightMovementModule(transform, new Vector3(-1.5f, -11.5f, 0f), this, _speed);
+        _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);
     }
-    public override void Heal(int points)
-    {
-        _hitpoints += points;
-        if (_hitpoints > _maxHitpoints)
-            _hitpoints = _maxHitpoints;
-    }
-
 }

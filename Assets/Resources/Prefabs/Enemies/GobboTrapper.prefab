@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: Gobbo Trapper
   _stats: {fileID: 11400000, guid: dcd3daa2a1af8f241a8b9d3c0501ad38, type: 2}
-  _dodgeValue: 15
+  _dodgeValue: 0.15
 --- !u!82 &2248180668137508119
 AudioSource:
   m_ObjectHideFlags: 0

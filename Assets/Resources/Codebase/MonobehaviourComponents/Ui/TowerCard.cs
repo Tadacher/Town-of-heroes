@@ -1,6 +1,7 @@
 using Infrastructure;
 using Services.Input;
 using Services.TowerBuilding;
+using Services.Ui;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -27,7 +28,11 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     private Type _worldCellType;
     //Input
     private IShiftEventProvider _shiftEventProvider;
-
+    private AbstractInputService _inputService;
+    //GUI
+    private CardInfoUiService _cardInfoUIService;
+    private TowerCardInfoConfig _towerCardInfoConfig;
+    private WorldCellCardInfoConfig _worldCellCardInfoConfig;
     //internal
     private IExitableState _currentState;
     private GameplayStateMachine _gameplayStateMachine;
@@ -35,23 +40,29 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     private bool _battlefieldStated;
     private bool _shifted;
 
-    private readonly Type _worldCellMap = typeof(GrassField);
-
     public void Initialize(TowerBuildingService towerBuildingService,
                            WorldCellBuildingService worldCellBuildingService,
                            GameplayStateMachine gameplayStateMachine,
                            IObjectPooler pooler,
                            IShiftEventProvider shiftEventProvider,
+                           CardInfoUiService cardInfoUiService,
+                           AbstractInputService inputService,
+                           TowerCardInfoConfig towerCardInfoConfig,
+                           WorldCellCardInfoConfig worldCellCardInfoConfig,
                            Sprite worldCellSprite,
                            Type towerType,
                            Type worldCellType)
     {
+        _towerCardInfoConfig = towerCardInfoConfig;
+        _worldCellCardInfoConfig = worldCellCardInfoConfig;
         _shiftEventProvider = shiftEventProvider;
         _gameplayStateMachine = gameplayStateMachine;
+        _inputService = inputService;
         SubscribeToGameStateChange();
         SubscribeToShiftEvent();
         _pooler = pooler;
 
+        _cardInfoUIService = cardInfoUiService;
 
         _towerInstantiationService = towerBuildingService;
         _towerType = towerType;
@@ -74,12 +85,21 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (_battlefieldStated)
-            InstantiateTowerGhost();
-        else
-            InstantiateWorldCellGhost();
-
-        gameObject.SetActive(false);
+        if (_inputService.LeftMouseDown())
+        {
+            if (_battlefieldStated)
+                InstantiateTowerGhost();
+            else
+                InstantiateWorldCellGhost();
+            gameObject.SetActive(false);
+        }
+        else if (_inputService.RightMouseDown())
+        {
+            if (_image.sprite == _imageAsTower)
+                _cardInfoUIService.ShowAsTower(_towerCardInfoConfig);
+            else
+                _cardInfoUIService.ShowAsWorldCell(_worldCellCardInfoConfig);
+        }
     }
 
     #region INPUT_SHIFT
@@ -133,12 +153,16 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     {
         _battlefieldStated = true;
         ResetScale();
+        if (_switchStateCoroutine != null)
+            StopCoroutine(_switchStateCoroutine);
         _switchStateCoroutine = StartCoroutine(SwitchState());
     }
     private void SwitchToMapState()
     {
         _battlefieldStated = false;
         ResetScale();
+        if (_switchStateCoroutine != null)
+            StopCoroutine(_switchStateCoroutine);
         _switchStateCoroutine = StartCoroutine(SwitchState());
     }
     private void SetGameState()

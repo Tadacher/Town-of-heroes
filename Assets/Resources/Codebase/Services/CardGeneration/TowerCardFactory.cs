@@ -2,6 +2,7 @@
 using Services.Factories;
 using Services.Input;
 using Services.TowerBuilding;
+using Services.Ui;
 using System;
 using UnityEngine;
 using WorldCellBuilding.CardImage;
@@ -13,16 +14,19 @@ namespace Services.CardGeneration
     {
         [SerializeField] private CellStats _cellStats;
         private readonly CardImageDatabase _cardImageDatabase;
-        private readonly TowerCard _cardPrefab;
         private readonly WorldCellCardGenerator _worldCellCardGenerator;
+        private readonly CardDescriptionService _cardDescriptionService;
+        private readonly TowerCard _cardPrefab;
         private Type _towerType;
 
         public TowerCardFactory(Type type,
                                 TowerCard cardPrefab,
                                 CardImageDatabase cardImageDatabase,
                                 WorldCellCardGenerator worldCellCardGenerator,
+                                CardDescriptionService towerCardDescriptionService,
                                 DiContainer diContainer) : base(diContainer)
         {
+            _cardDescriptionService = towerCardDescriptionService;
             _cardImageDatabase = cardImageDatabase;
             _cardImageDatabase.Initialize();
             _worldCellCardGenerator = worldCellCardGenerator;
@@ -62,10 +66,14 @@ namespace Services.CardGeneration
                     worldCellBuildingService: _container.Resolve<WorldCellBuildingService>(),
                     gameplayStateMachine: _container.Resolve<GameplayStateMachine>(),
                     shiftEventProvider: _container.Resolve<AbstractInputService>(),
+                    cardInfoUiService: _container.Resolve<CardInfoUiService>(),
+                    inputService: _container.Resolve<AbstractInputService>(),
+                    towerCardInfoConfig: _cardDescriptionService.LoadCardDescription(_towerType),
+                    worldCellCardInfoConfig: _cardDescriptionService.LoadWorldCellCardDescription(worldCellType),
                     worldCellSprite: _cardImageDatabase.GetSprite(worldCellType.ToString()),
                     pooler: this,
                     towerType: _towerType,
-                    worldCellType: worldCellType);
+                    worldCellType: worldCellType); ;
             }
             catch (Exception e)
             {

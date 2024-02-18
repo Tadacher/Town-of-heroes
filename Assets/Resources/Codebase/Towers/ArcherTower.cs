@@ -5,12 +5,6 @@ namespace Core.Towers
 {
     public class ArcherTower : AbstractTower
     {
-        private void Awake()
-        {
-            InitializeAttackModule<SimpleTowerAttackModule>();
-            InitializeProjectileFactory(_towerStats.ProjectilePrefab);
-            RefreshAttackDelay();
-        }
         protected override void Update()
         {
             base.Update();
@@ -30,8 +24,5 @@ namespace Core.Towers
             PlayAttackSound();
             RefreshAttackDelay();
         }
-
-        protected override void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab) => 
-            _projectileFactory = new SimpleProjectileFactory(projectilePrefab);
     }
 }

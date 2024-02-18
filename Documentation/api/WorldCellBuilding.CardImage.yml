@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorldCellBuilding.CardImage
+  commentId: N:WorldCellBuilding.CardImage
+  id: WorldCellBuilding.CardImage
+  children:
+  - WorldCellBuilding.CardImage.CardImageDatabase
+  - WorldCellBuilding.CardImage.ImageDatabase
+  langs:
+  - csharp
+  - vb
+  name: WorldCellBuilding.CardImage
+  nameWithType: WorldCellBuilding.CardImage
+  fullName: WorldCellBuilding.CardImage
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: WorldCellBuilding.CardImage.CardImageDatabase
+  commentId: T:WorldCellBuilding.CardImage.CardImageDatabase
+  name: CardImageDatabase
+  nameWithType: CardImageDatabase
+  fullName: WorldCellBuilding.CardImage.CardImageDatabase
+- uid: WorldCellBuilding.CardImage.ImageDatabase
+  commentId: T:WorldCellBuilding.CardImage.ImageDatabase
+  name: ImageDatabase
+  nameWithType: ImageDatabase
+  fullName: WorldCellBuilding.CardImage.ImageDatabase

@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.Ui.GameplayCanvasContainer
+  commentId: T:Services.Ui.GameplayCanvasContainer
+  id: GameplayCanvasContainer
+  parent: Services.Ui
+  children:
+  - Services.Ui.GameplayCanvasContainer.ToMapButton
+  langs:
+  - csharp
+  - vb
+  name: GameplayCanvasContainer
+  nameWithType: GameplayCanvasContainer
+  fullName: Services.Ui.GameplayCanvasContainer
+  type: Class
+  source:
+    id: GameplayCanvasContainer
+    path: ''
+    startLine: 1018
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: 'public class GameplayCanvasContainer : MonoBehaviour'
+    content.vb: >-
+      Public Class GameplayCanvasContainer
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.Ui.GameplayCanvasContainer.ToMapButton
+  commentId: F:Services.Ui.GameplayCanvasContainer.ToMapButton
+  id: ToMapButton
+  parent: Services.Ui.GameplayCanvasContainer
+  langs:
+  - csharp
+  - vb
+  name: ToMapButton
+  nameWithType: GameplayCanvasContainer.ToMapButton
+  fullName: Services.Ui.GameplayCanvasContainer.ToMapButton
+  type: Field
+  source:
+    id: ToMapButton
+    path: ''
+    startLine: 1020
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: public Button ToMapButton
+    return:
+      type: Global.Button
+    content.vb: Public ToMapButton As Button
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Services.Ui
+  commentId: N:Services.Ui
+  name: Services.Ui
+  nameWithType: Services.Ui
+  fullName: Services.Ui
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Button
+  isExternal: true
+  name: Button
+  nameWithType: Button
+  fullName: Button

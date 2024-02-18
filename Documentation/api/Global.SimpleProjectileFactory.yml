@@ -1,0 +1,519 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.SimpleProjectileFactory
+  commentId: T:Global.SimpleProjectileFactory
+  id: SimpleProjectileFactory
+  parent: Global
+  children:
+  - Global.SimpleProjectileFactory.#ctor(ProjectileBehaviour)
+  langs:
+  - csharp
+  - vb
+  name: SimpleProjectileFactory
+  nameWithType: SimpleProjectileFactory
+  fullName: SimpleProjectileFactory
+  type: Class
+  source:
+    id: SimpleProjectileFactory
+    path: ''
+    startLine: 3315
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class SimpleProjectileFactory : AbstractProjectileFactory'
+    content.vb: >-
+      Public Class SimpleProjectileFactory
+          Inherits AbstractProjectileFactory
+  inheritance:
+  - System.Object
+  - Global.AbstractProjectileFactory
+  inheritedMembers:
+  - Global.AbstractProjectileFactory._projectilePool
+  - Global.AbstractProjectileFactory._projectilePrefab
+  - Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+  - Global.AbstractProjectileFactory.TryInitializePool
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.SimpleProjectileFactory.#ctor(ProjectileBehaviour)
+  commentId: M:Global.SimpleProjectileFactory.#ctor(ProjectileBehaviour)
+  id: '#ctor(ProjectileBehaviour)'
+  parent: Global.SimpleProjectileFactory
+  langs:
+  - csharp
+  - vb
+  name: SimpleProjectileFactory(ProjectileBehaviour)
+  nameWithType: SimpleProjectileFactory.SimpleProjectileFactory(ProjectileBehaviour)
+  fullName: SimpleProjectileFactory.SimpleProjectileFactory(ProjectileBehaviour)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 3317
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public SimpleProjectileFactory(ProjectileBehaviour projectilePrefab)
+    parameters:
+    - id: projectilePrefab
+      type: Global.ProjectileBehaviour
+    content.vb: Public Sub New(projectilePrefab As ProjectileBehaviour)
+  overload: Global.SimpleProjectileFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.AbstractProjectileFactory
+  commentId: T:Global.AbstractProjectileFactory
+  name: AbstractProjectileFactory
+  nameWithType: AbstractProjectileFactory
+  fullName: AbstractProjectileFactory
+- uid: Global.AbstractProjectileFactory._projectilePool
+  commentId: F:Global.AbstractProjectileFactory._projectilePool
+  parent: Global.AbstractProjectileFactory
+  name: _projectilePool
+  nameWithType: AbstractProjectileFactory._projectilePool
+  fullName: AbstractProjectileFactory._projectilePool
+- uid: Global.AbstractProjectileFactory._projectilePrefab
+  commentId: F:Global.AbstractProjectileFactory._projectilePrefab
+  parent: Global.AbstractProjectileFactory
+  name: _projectilePrefab
+  nameWithType: AbstractProjectileFactory._projectilePrefab
+  fullName: AbstractProjectileFactory._projectilePrefab
+- uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+  commentId: M:Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+  parent: Global.AbstractProjectileFactory
+  isExternal: true
+  name: ReturnProjectile(Single, Transform, Vector3, Action)
+  nameWithType: AbstractProjectileFactory.ReturnProjectile(Single, Transform, Vector3, Action)
+  fullName: AbstractProjectileFactory.ReturnProjectile(System.Single, Transform, Vector3, Action)
+  spec.csharp:
+  - uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+    name: ReturnProjectile
+    nameWithType: AbstractProjectileFactory.ReturnProjectile
+    fullName: AbstractProjectileFactory.ReturnProjectile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Transform
+    name: Transform
+    nameWithType: Transform
+    fullName: Transform
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Action
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+    name: ReturnProjectile
+    nameWithType: AbstractProjectileFactory.ReturnProjectile
+    fullName: AbstractProjectileFactory.ReturnProjectile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Transform
+    name: Transform
+    nameWithType: Transform
+    fullName: Transform
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Action
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.AbstractProjectileFactory.TryInitializePool
+  commentId: M:Global.AbstractProjectileFactory.TryInitializePool
+  parent: Global.AbstractProjectileFactory
+  name: TryInitializePool()
+  nameWithType: AbstractProjectileFactory.TryInitializePool()
+  fullName: AbstractProjectileFactory.TryInitializePool()
+  spec.csharp:
+  - uid: Global.AbstractProjectileFactory.TryInitializePool
+    name: TryInitializePool
+    nameWithType: AbstractProjectileFactory.TryInitializePool
+    fullName: AbstractProjectileFactory.TryInitializePool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.AbstractProjectileFactory.TryInitializePool
+    name: TryInitializePool
+    nameWithType: AbstractProjectileFactory.TryInitializePool
+    fullName: AbstractProjectileFactory.TryInitializePool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.SimpleProjectileFactory.#ctor*
+  commentId: Overload:Global.SimpleProjectileFactory.#ctor
+  name: SimpleProjectileFactory
+  nameWithType: SimpleProjectileFactory.SimpleProjectileFactory
+  fullName: SimpleProjectileFactory.SimpleProjectileFactory
+- uid: Global.ProjectileBehaviour
+  commentId: T:Global.ProjectileBehaviour
+  name: ProjectileBehaviour
+  nameWithType: ProjectileBehaviour
+  fullName: ProjectileBehaviour

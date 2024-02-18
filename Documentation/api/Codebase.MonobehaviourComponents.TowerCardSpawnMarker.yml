@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Codebase.MonobehaviourComponents.TowerCardSpawnMarker
+  commentId: T:Codebase.MonobehaviourComponents.TowerCardSpawnMarker
+  id: TowerCardSpawnMarker
+  parent: Codebase.MonobehaviourComponents
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: TowerCardSpawnMarker
+  nameWithType: TowerCardSpawnMarker
+  fullName: Codebase.MonobehaviourComponents.TowerCardSpawnMarker
+  type: Class
+  source:
+    id: TowerCardSpawnMarker
+    path: ''
+    startLine: 717
+  assemblies:
+  - cs.temp.dll
+  namespace: Codebase.MonobehaviourComponents
+  syntax:
+    content: 'public class TowerCardSpawnMarker : MonoBehaviour'
+    content.vb: >-
+      Public Class TowerCardSpawnMarker
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Codebase.MonobehaviourComponents
+  commentId: N:Codebase.MonobehaviourComponents
+  name: Codebase.MonobehaviourComponents
+  nameWithType: Codebase.MonobehaviourComponents
+  fullName: Codebase.MonobehaviourComponents
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,66 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  id: IPoolableObject
+  parent: Global
+  children:
+  - Global.IPoolableObject.ReturnToPool
+  langs:
+  - csharp
+  - vb
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+  type: Interface
+  source:
+    id: IPoolableObject
+    path: ''
+    startLine: 646
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public interface IPoolableObject
+    content.vb: Public Interface IPoolableObject
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Global.IPoolableObject.ReturnToPool
+  commentId: M:Global.IPoolableObject.ReturnToPool
+  id: ReturnToPool
+  parent: Global.IPoolableObject
+  langs:
+  - csharp
+  - vb
+  name: ReturnToPool()
+  nameWithType: IPoolableObject.ReturnToPool()
+  fullName: IPoolableObject.ReturnToPool()
+  type: Method
+  source:
+    id: ReturnToPool
+    path: ''
+    startLine: 648
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void ReturnToPool()
+    content.vb: Sub ReturnToPool
+  overload: Global.IPoolableObject.ReturnToPool*
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.IPoolableObject.ReturnToPool*
+  commentId: Overload:Global.IPoolableObject.ReturnToPool
+  name: ReturnToPool
+  nameWithType: IPoolableObject.ReturnToPool
+  fullName: IPoolableObject.ReturnToPool

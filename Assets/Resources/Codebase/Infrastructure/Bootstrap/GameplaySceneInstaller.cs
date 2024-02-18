@@ -1,6 +1,5 @@
 ﻿using BootStrap;
 using Codebase.MonobehaviourComponents;
-using Codebase.Services.CardGeneration;
 using Services;
 using Services.CardGeneration;
 using Services.GlobalMap;
@@ -17,11 +16,14 @@ namespace Infrastructure
     {
         [SerializeField] private SceneBootstrapper _sceneBootstrapper;
         [SerializeField] private AudioSource _audioSource;
-        [SerializeField] private EnemySpawnPosMarker _spawnPosMarker;
 
+        [Header("Markers")]
+        [SerializeField] private EnemySpawnPosMarker _spawnPosMarker;
         [SerializeField] private TowerCardSpawnMarker _towerCardSpawnMarker;
         [SerializeField] private MainCameraMarker _mainCameraMarker;
 
+        [Header("SceneUiContainers")]
+        [SerializeField] private CardInfoUIContainer _cardInfoUIContainer;
         [SerializeField] private GameplayCanvasContainer _gameplayCanvasContainer;
         [SerializeField] private MapCanvasContainer _mapCanvasContainer;
 
@@ -30,6 +32,8 @@ namespace Infrastructure
         [SerializeField] private WorldCellCardsConfig _worldCellCardsConfig;
         [SerializeField] private EnemyTypeToBiomeSettings _enemyTypeToBiomeSettings;
         [SerializeField] private CardImageDatabase _cardImageDatabase;
+
+
         public override void InstallBindings()
         {
             //ScriptableObjects
@@ -44,7 +48,7 @@ namespace Infrastructure
             
             //Monobeh 
             BindMonobehaviour(_spawnPosMarker);
-
+            BindMonobehaviour(_cardInfoUIContainer);
             //Markers scripts
             BindMonobehaviour(_towerCardSpawnMarker);
             BindMonobehaviour(_mainCameraMarker);
@@ -62,7 +66,8 @@ namespace Infrastructure
             //cards
             BindService<CardInstantiationService>().NonLazy();
             BindService<WorldCellCardGenerator>();
-
+            BindService<CardDescriptionService>();
+            BindService<CardInfoUiService>();
             //worldCells
             BindService<WorldCellInstantiationService>();
             BindService<WorldCellGridService>();

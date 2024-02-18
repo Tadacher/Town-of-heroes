@@ -1,0 +1,882 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.AbstractInstantiationService`1
+  commentId: T:Global.AbstractInstantiationService`1
+  id: AbstractInstantiationService`1
+  parent: Global
+  children:
+  - Global.AbstractInstantiationService`1.#ctor(System.String,DiContainer)
+  - Global.AbstractInstantiationService`1._container
+  - Global.AbstractInstantiationService`1._factories
+  - Global.AbstractInstantiationService`1._productionPrefabPath
+  - Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - Global.AbstractInstantiationService`1.ReturnObject(Type)
+  langs:
+  - csharp
+  - vb
+  name: AbstractInstantiationService<TProduction>
+  nameWithType: AbstractInstantiationService<TProduction>
+  fullName: AbstractInstantiationService<TProduction>
+  type: Class
+  source:
+    id: AbstractInstantiationService
+    path: ''
+    startLine: 2446
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\na collection of fabric exemplars paramerized with child classes of Tproduction\n"
+  example: []
+  syntax:
+    content: >-
+      public abstract class AbstractInstantiationService<TProduction>
+          where TProduction : MonoBehaviour
+    typeParameters:
+    - id: TProduction
+    content.vb: Public MustInherit Class AbstractInstantiationService(Of TProduction As MonoBehaviour)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Global.EnemyInstantiationService
+  - Global.WorldCellInstantiationService
+  - Services.CardGeneration.CardInstantiationService
+  - Services.TowerBuilding.TowerInstantiationService
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: AbstractInstantiationService(Of TProduction)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: AbstractInstantiationService(Of TProduction)
+  name.vb: AbstractInstantiationService(Of TProduction)
+- uid: Global.AbstractInstantiationService`1._container
+  commentId: F:Global.AbstractInstantiationService`1._container
+  id: _container
+  parent: Global.AbstractInstantiationService`1
+  langs:
+  - csharp
+  - vb
+  name: _container
+  nameWithType: AbstractInstantiationService<TProduction>._container
+  fullName: AbstractInstantiationService<TProduction>._container
+  type: Field
+  source:
+    id: _container
+    path: ''
+    startLine: 2448
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected readonly DiContainer _container
+    return:
+      type: Global.DiContainer
+    content.vb: Protected ReadOnly _container As DiContainer
+  nameWithType.vb: AbstractInstantiationService(Of TProduction)._container
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+  fullName.vb: AbstractInstantiationService(Of TProduction)._container
+- uid: Global.AbstractInstantiationService`1._factories
+  commentId: F:Global.AbstractInstantiationService`1._factories
+  id: _factories
+  parent: Global.AbstractInstantiationService`1
+  langs:
+  - csharp
+  - vb
+  name: _factories
+  nameWithType: AbstractInstantiationService<TProduction>._factories
+  fullName: AbstractInstantiationService<TProduction>._factories
+  type: Field
+  source:
+    id: _factories
+    path: ''
+    startLine: 2449
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected Dictionary<Type, IFactory<TProduction>> _factories
+    return:
+      type: Global.Dictionary{Type,IFactory{{TProduction}}}
+    content.vb: Protected _factories As Dictionary(Of Type, IFactory(Of TProduction))
+  nameWithType.vb: AbstractInstantiationService(Of TProduction)._factories
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: AbstractInstantiationService(Of TProduction)._factories
+- uid: Global.AbstractInstantiationService`1._productionPrefabPath
+  commentId: F:Global.AbstractInstantiationService`1._productionPrefabPath
+  id: _productionPrefabPath
+  parent: Global.AbstractInstantiationService`1
+  langs:
+  - csharp
+  - vb
+  name: _productionPrefabPath
+  nameWithType: AbstractInstantiationService<TProduction>._productionPrefabPath
+  fullName: AbstractInstantiationService<TProduction>._productionPrefabPath
+  type: Field
+  source:
+    id: _productionPrefabPath
+    path: ''
+    startLine: 2450
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected string _productionPrefabPath
+    return:
+      type: System.String
+    content.vb: Protected _productionPrefabPath As String
+  nameWithType.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
+- uid: Global.AbstractInstantiationService`1.#ctor(System.String,DiContainer)
+  commentId: M:Global.AbstractInstantiationService`1.#ctor(System.String,DiContainer)
+  id: '#ctor(System.String,DiContainer)'
+  parent: Global.AbstractInstantiationService`1
+  langs:
+  - csharp
+  - vb
+  name: AbstractInstantiationService(String, DiContainer)
+  nameWithType: AbstractInstantiationService<TProduction>.AbstractInstantiationService(String, DiContainer)
+  fullName: AbstractInstantiationService<TProduction>.AbstractInstantiationService(System.String, DiContainer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2452
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected AbstractInstantiationService(string productionPrefabPath, DiContainer diContainer)
+    parameters:
+    - id: productionPrefabPath
+      type: System.String
+    - id: diContainer
+      type: Global.DiContainer
+    content.vb: Protected Sub New(productionPrefabPath As String, diContainer As DiContainer)
+  overload: Global.AbstractInstantiationService`1.#ctor*
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).AbstractInstantiationService(String, DiContainer)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: AbstractInstantiationService(Of TProduction).AbstractInstantiationService(System.String, DiContainer)
+- uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(Type)
+  id: ReturnObject(Type)
+  parent: Global.AbstractInstantiationService`1
+  langs:
+  - csharp
+  - vb
+  name: ReturnObject(Type)
+  nameWithType: AbstractInstantiationService<TProduction>.ReturnObject(Type)
+  fullName: AbstractInstantiationService<TProduction>.ReturnObject(Type)
+  type: Method
+  source:
+    id: ReturnObject
+    path: ''
+    startLine: 2459
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public abstract TProduction ReturnObject(Type type)
+    parameters:
+    - id: type
+      type: Global.Type
+    return:
+      type: '{TProduction}'
+    content.vb: Public MustOverride Function ReturnObject(type As Type) As TProduction
+  overload: Global.AbstractInstantiationService`1.ReturnObject*
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
+  modifiers.csharp:
+  - public
+  - abstract
+  modifiers.vb:
+  - Public
+  - MustOverride
+  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
+- uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  id: AddNewFactory(Type)
+  parent: Global.AbstractInstantiationService`1
+  langs:
+  - csharp
+  - vb
+  name: AddNewFactory(Type)
+  nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
+  type: Method
+  source:
+    id: AddNewFactory
+    path: ''
+    startLine: 2461
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected abstract void AddNewFactory(Type type)
+    parameters:
+    - id: type
+      type: Global.Type
+    content.vb: Protected MustOverride Sub AddNewFactory(type As Type)
+  overload: Global.AbstractInstantiationService`1.AddNewFactory*
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  id: GetNewFactory(Type)
+  parent: Global.AbstractInstantiationService`1
+  langs:
+  - csharp
+  - vb
+  name: GetNewFactory(Type)
+  nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
+  type: Method
+  source:
+    id: GetNewFactory
+    path: ''
+    startLine: 2462
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected abstract IFactory<TProduction> GetNewFactory(Type productType)
+    parameters:
+    - id: productType
+      type: Global.Type
+    return:
+      type: Global.IFactory{{TProduction}}
+    content.vb: Protected MustOverride Function GetNewFactory(productType As Type) As IFactory(Of TProduction)
+  overload: Global.AbstractInstantiationService`1.GetNewFactory*
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  id: LoadProductPrefab(Type)
+  parent: Global.AbstractInstantiationService`1
+  langs:
+  - csharp
+  - vb
+  name: LoadProductPrefab(Type)
+  nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
+  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
+  type: Method
+  source:
+    id: LoadProductPrefab
+    path: ''
+    startLine: 2464
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: protected TProduction LoadProductPrefab(Type productType)
+    parameters:
+    - id: productType
+      type: Global.Type
+    return:
+      type: '{TProduction}'
+    content.vb: Protected Function LoadProductPrefab(productType As Type) As TProduction
+  overload: Global.AbstractInstantiationService`1.LoadProductPrefab*
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.DiContainer
+  isExternal: true
+  name: DiContainer
+  nameWithType: DiContainer
+  fullName: DiContainer
+- uid: Global.Dictionary{Type,IFactory{{TProduction}}}
+  commentId: '!:Global.Dictionary{Type,IFactory{`0}}'
+  definition: Global.Dictionary`2
+  name: Dictionary<Type, IFactory<TProduction>>
+  nameWithType: Dictionary<Type, IFactory<TProduction>>
+  fullName: Dictionary<Type, IFactory<TProduction>>
+  nameWithType.vb: Dictionary(Of Type, IFactory(Of TProduction))
+  fullName.vb: Dictionary(Of Type, IFactory(Of TProduction))
+  name.vb: Dictionary(Of Type, IFactory(Of TProduction))
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Type
+    name: Type
+    nameWithType: Type
+    fullName: Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TProduction
+    nameWithType: TProduction
+    fullName: TProduction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Type
+    name: Type
+    nameWithType: Type
+    fullName: Type
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TProduction
+    nameWithType: TProduction
+    fullName: TProduction
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.AbstractInstantiationService`1.#ctor*
+  commentId: Overload:Global.AbstractInstantiationService`1.#ctor
+  name: AbstractInstantiationService
+  nameWithType: AbstractInstantiationService<TProduction>.AbstractInstantiationService
+  fullName: AbstractInstantiationService<TProduction>.AbstractInstantiationService
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).AbstractInstantiationService
+  fullName.vb: AbstractInstantiationService(Of TProduction).AbstractInstantiationService
+- uid: Global.AbstractInstantiationService`1.ReturnObject*
+  commentId: Overload:Global.AbstractInstantiationService`1.ReturnObject
+  name: ReturnObject
+  nameWithType: AbstractInstantiationService<TProduction>.ReturnObject
+  fullName: AbstractInstantiationService<TProduction>.ReturnObject
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).ReturnObject
+  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject
+- uid: Global.Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: '{TProduction}'
+  commentId: '!:TProduction'
+  definition: TProduction
+  name: TProduction
+  nameWithType: TProduction
+  fullName: TProduction
+- uid: TProduction
+  name: TProduction
+  nameWithType: TProduction
+  fullName: TProduction
+- uid: Global.AbstractInstantiationService`1.AddNewFactory*
+  commentId: Overload:Global.AbstractInstantiationService`1.AddNewFactory
+  name: AddNewFactory
+  nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory
+  fullName: AbstractInstantiationService<TProduction>.AddNewFactory
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).AddNewFactory
+  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory
+- uid: Global.AbstractInstantiationService`1.GetNewFactory*
+  commentId: Overload:Global.AbstractInstantiationService`1.GetNewFactory
+  name: GetNewFactory
+  nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory
+  fullName: AbstractInstantiationService<TProduction>.GetNewFactory
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).GetNewFactory
+  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory
+- uid: Global.IFactory{{TProduction}}
+  commentId: T:Global.IFactory{`0}
+  definition: Global.IFactory`1
+  name: IFactory<TProduction>
+  nameWithType: IFactory<TProduction>
+  fullName: IFactory<TProduction>
+  nameWithType.vb: IFactory(Of TProduction)
+  fullName.vb: IFactory(Of TProduction)
+  name.vb: IFactory(Of TProduction)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TProduction
+    nameWithType: TProduction
+    fullName: TProduction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TProduction
+    nameWithType: TProduction
+    fullName: TProduction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.IFactory`1
+  commentId: T:Global.IFactory`1
+  name: IFactory<TType>
+  nameWithType: IFactory<TType>
+  fullName: IFactory<TType>
+  nameWithType.vb: IFactory(Of TType)
+  fullName.vb: IFactory(Of TType)
+  name.vb: IFactory(Of TType)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.AbstractInstantiationService`1.LoadProductPrefab*
+  commentId: Overload:Global.AbstractInstantiationService`1.LoadProductPrefab
+  name: LoadProductPrefab
+  nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab
+  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab
+  nameWithType.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab
+  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab

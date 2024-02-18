@@ -1,0 +1,332 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global
+  id: Global
+  children:
+  - Global.AbstractEnemy
+  - Global.AbstractHealthModule
+  - Global.AbstractInstantiationService`1
+  - Global.AbstractProjectileFactory
+  - Global.BiomeToEnemyTypesPair
+  - Global.DamageText
+  - Global.DefaultHealthModule
+  - Global.DodgeHealthModule
+  - Global.EnemyFactory
+  - Global.EnemyInstantiationService
+  - Global.EnemyPrefabContainer
+  - Global.EnemySpawnPosMarker
+  - Global.EnemyStats
+  - Global.EnemyTypes
+  - Global.EnemyTypeService
+  - Global.EnemyTypeToBiomeSettings
+  - Global.EnemytypeToWeightPair
+  - Global.EventContainer
+  - Global.Gobbo
+  - Global.GobboTrapper
+  - Global.ICommonAttacker
+  - Global.IExpReciever
+  - Global.IFactory`1
+  - Global.IHitpointOwner
+  - Global.IMowementModuleOwner
+  - Global.IObjectPooler
+  - Global.IPoolableObject
+  - Global.MapGenerator
+  - Global.PathfindingAlgorhytm
+  - Global.PointerFollower
+  - Global.PopupOnPointerEnter
+  - Global.ProjectileBehaviour
+  - Global.SimpleProjectileFactory
+  - Global.SimpleTowerAttackModule
+  - Global.TowerCard
+  - Global.TowerFactory
+  - Global.TowerStats
+  - Global.Wave
+  - Global.WaveGenerator
+  - Global.WaveService
+  - Global.WorldCellBuildingService
+  - Global.WorldCellInstantiationService
+  langs:
+  - csharp
+  - vb
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+references:
+- uid: Global.AbstractEnemy
+  commentId: T:Global.AbstractEnemy
+  name: AbstractEnemy
+  nameWithType: AbstractEnemy
+  fullName: AbstractEnemy
+- uid: Global.Gobbo
+  commentId: T:Global.Gobbo
+  name: Gobbo
+  nameWithType: Gobbo
+  fullName: Gobbo
+- uid: Global.GobboTrapper
+  commentId: T:Global.GobboTrapper
+  name: GobboTrapper
+  nameWithType: GobboTrapper
+  fullName: GobboTrapper
+- uid: Global.AbstractHealthModule
+  commentId: T:Global.AbstractHealthModule
+  name: AbstractHealthModule
+  nameWithType: AbstractHealthModule
+  fullName: AbstractHealthModule
+- uid: Global.DefaultHealthModule
+  commentId: T:Global.DefaultHealthModule
+  name: DefaultHealthModule
+  nameWithType: DefaultHealthModule
+  fullName: DefaultHealthModule
+- uid: Global.DodgeHealthModule
+  commentId: T:Global.DodgeHealthModule
+  name: DodgeHealthModule
+  nameWithType: DodgeHealthModule
+  fullName: DodgeHealthModule
+- uid: Global.ICommonAttacker
+  commentId: T:Global.ICommonAttacker
+  name: ICommonAttacker
+  nameWithType: ICommonAttacker
+  fullName: ICommonAttacker
+- uid: Global.IExpReciever
+  commentId: T:Global.IExpReciever
+  name: IExpReciever
+  nameWithType: IExpReciever
+  fullName: IExpReciever
+- uid: Global.IHitpointOwner
+  commentId: T:Global.IHitpointOwner
+  name: IHitpointOwner
+  nameWithType: IHitpointOwner
+  fullName: IHitpointOwner
+- uid: Global.IMowementModuleOwner
+  commentId: T:Global.IMowementModuleOwner
+  name: IMowementModuleOwner
+  nameWithType: IMowementModuleOwner
+  fullName: IMowementModuleOwner
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+- uid: Global.PointerFollower
+  commentId: T:Global.PointerFollower
+  name: PointerFollower
+  nameWithType: PointerFollower
+  fullName: PointerFollower
+- uid: Global.DamageText
+  commentId: T:Global.DamageText
+  name: DamageText
+  nameWithType: DamageText
+  fullName: DamageText
+- uid: Global.PopupOnPointerEnter
+  commentId: T:Global.PopupOnPointerEnter
+  name: PopupOnPointerEnter
+  nameWithType: PopupOnPointerEnter
+  fullName: PopupOnPointerEnter
+- uid: Global.TowerCard
+  commentId: T:Global.TowerCard
+  name: TowerCard
+  nameWithType: TowerCard
+  fullName: TowerCard
+- uid: Global.EnemyPrefabContainer
+  commentId: T:Global.EnemyPrefabContainer
+  name: EnemyPrefabContainer
+  nameWithType: EnemyPrefabContainer
+  fullName: EnemyPrefabContainer
+- uid: Global.EnemyStats
+  commentId: T:Global.EnemyStats
+  name: EnemyStats
+  nameWithType: EnemyStats
+  fullName: EnemyStats
+- uid: Global.EnemyTypeToBiomeSettings
+  commentId: T:Global.EnemyTypeToBiomeSettings
+  name: EnemyTypeToBiomeSettings
+  nameWithType: EnemyTypeToBiomeSettings
+  fullName: EnemyTypeToBiomeSettings
+- uid: Global.BiomeToEnemyTypesPair
+  commentId: T:Global.BiomeToEnemyTypesPair
+  name: BiomeToEnemyTypesPair
+  nameWithType: BiomeToEnemyTypesPair
+  fullName: BiomeToEnemyTypesPair
+- uid: Global.EnemytypeToWeightPair
+  commentId: T:Global.EnemytypeToWeightPair
+  name: EnemytypeToWeightPair
+  nameWithType: EnemytypeToWeightPair
+  fullName: EnemytypeToWeightPair
+- uid: Global.TowerStats
+  commentId: T:Global.TowerStats
+  name: TowerStats
+  nameWithType: TowerStats
+  fullName: TowerStats
+- uid: Global.EventContainer
+  commentId: T:Global.EventContainer
+  name: EventContainer
+  nameWithType: EventContainer
+  fullName: EventContainer
+- uid: Global.MapGenerator
+  commentId: T:Global.MapGenerator
+  name: MapGenerator
+  nameWithType: MapGenerator
+  fullName: MapGenerator
+- uid: Global.PathfindingAlgorhytm
+  commentId: T:Global.PathfindingAlgorhytm
+  name: PathfindingAlgorhytm
+  nameWithType: PathfindingAlgorhytm
+  fullName: PathfindingAlgorhytm
+- uid: Global.EnemyFactory
+  commentId: T:Global.EnemyFactory
+  name: EnemyFactory
+  nameWithType: EnemyFactory
+  fullName: EnemyFactory
+- uid: Global.IFactory`1
+  commentId: T:Global.IFactory`1
+  name: IFactory<TType>
+  nameWithType: IFactory<TType>
+  fullName: IFactory<TType>
+  nameWithType.vb: IFactory(Of TType)
+  fullName.vb: IFactory(Of TType)
+  name.vb: IFactory(Of TType)
+  spec.csharp:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IFactory`1
+    name: IFactory
+    nameWithType: IFactory
+    fullName: IFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TType
+    nameWithType: TType
+    fullName: TType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.IObjectPooler
+  commentId: T:Global.IObjectPooler
+  name: IObjectPooler
+  nameWithType: IObjectPooler
+  fullName: IObjectPooler
+- uid: Global.TowerFactory
+  commentId: T:Global.TowerFactory
+  name: TowerFactory
+  nameWithType: TowerFactory
+  fullName: TowerFactory
+- uid: Global.AbstractInstantiationService`1
+  commentId: T:Global.AbstractInstantiationService`1
+  name: AbstractInstantiationService<TProduction>
+  nameWithType: AbstractInstantiationService<TProduction>
+  fullName: AbstractInstantiationService<TProduction>
+  nameWithType.vb: AbstractInstantiationService(Of TProduction)
+  fullName.vb: AbstractInstantiationService(Of TProduction)
+  name.vb: AbstractInstantiationService(Of TProduction)
+  spec.csharp:
+  - uid: Global.AbstractInstantiationService`1
+    name: AbstractInstantiationService
+    nameWithType: AbstractInstantiationService
+    fullName: AbstractInstantiationService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TProduction
+    nameWithType: TProduction
+    fullName: TProduction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.AbstractInstantiationService`1
+    name: AbstractInstantiationService
+    nameWithType: AbstractInstantiationService
+    fullName: AbstractInstantiationService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TProduction
+    nameWithType: TProduction
+    fullName: TProduction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.EnemyInstantiationService
+  commentId: T:Global.EnemyInstantiationService
+  name: EnemyInstantiationService
+  nameWithType: EnemyInstantiationService
+  fullName: EnemyInstantiationService
+- uid: Global.EnemySpawnPosMarker
+  commentId: T:Global.EnemySpawnPosMarker
+  name: EnemySpawnPosMarker
+  nameWithType: EnemySpawnPosMarker
+  fullName: EnemySpawnPosMarker
+- uid: Global.EnemyTypeService
+  commentId: T:Global.EnemyTypeService
+  name: EnemyTypeService
+  nameWithType: EnemyTypeService
+  fullName: EnemyTypeService
+- uid: Global.EnemyTypes
+  commentId: T:Global.EnemyTypes
+  name: EnemyTypes
+  nameWithType: EnemyTypes
+  fullName: EnemyTypes
+- uid: Global.Wave
+  commentId: T:Global.Wave
+  name: Wave
+  nameWithType: Wave
+  fullName: Wave
+- uid: Global.WaveGenerator
+  commentId: T:Global.WaveGenerator
+  name: WaveGenerator
+  nameWithType: WaveGenerator
+  fullName: WaveGenerator
+- uid: Global.WaveService
+  commentId: T:Global.WaveService
+  name: WaveService
+  nameWithType: WaveService
+  fullName: WaveService
+- uid: Global.WorldCellBuildingService
+  commentId: T:Global.WorldCellBuildingService
+  name: WorldCellBuildingService
+  nameWithType: WorldCellBuildingService
+  fullName: WorldCellBuildingService
+- uid: Global.WorldCellInstantiationService
+  commentId: T:Global.WorldCellInstantiationService
+  name: WorldCellInstantiationService
+  nameWithType: WorldCellInstantiationService
+  fullName: WorldCellInstantiationService
+- uid: Global.SimpleTowerAttackModule
+  commentId: T:Global.SimpleTowerAttackModule
+  name: SimpleTowerAttackModule
+  nameWithType: SimpleTowerAttackModule
+  fullName: SimpleTowerAttackModule
+- uid: Global.AbstractProjectileFactory
+  commentId: T:Global.AbstractProjectileFactory
+  name: AbstractProjectileFactory
+  nameWithType: AbstractProjectileFactory
+  fullName: AbstractProjectileFactory
+- uid: Global.ProjectileBehaviour
+  commentId: T:Global.ProjectileBehaviour
+  name: ProjectileBehaviour
+  nameWithType: ProjectileBehaviour
+  fullName: ProjectileBehaviour
+- uid: Global.SimpleProjectileFactory
+  commentId: T:Global.SimpleProjectileFactory
+  name: SimpleProjectileFactory
+  nameWithType: SimpleProjectileFactory
+  fullName: SimpleProjectileFactory
