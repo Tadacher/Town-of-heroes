@@ -10,6 +10,10 @@ using UnityEngine.UI;
 
 public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 {
+    public Type TowerType => _towerType;
+    //public Type WorldCellType => _worldCellType;
+
+
     //external
     [SerializeField] private RectTransform _cardImageTransform;
     [SerializeField] private Sprite _imageAsTower;
@@ -50,6 +54,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
                            TowerCardInfoConfig towerCardInfoConfig,
                            WorldCellCardInfoConfig worldCellCardInfoConfig,
                            Sprite worldCellSprite,
+                           Sprite towerSprite,
                            Type towerType,
                            Type worldCellType)
     {
@@ -69,6 +74,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
         _worldCellInstantiationService = worldCellBuildingService;
         _worldCellType = worldCellType;
+        _imageAsTower = towerSprite;
         _imageAsCell = worldCellSprite;
         SetGameState();
         SetImageAsState();

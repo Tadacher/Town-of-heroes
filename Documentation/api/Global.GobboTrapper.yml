@@ -122,7 +122,7 @@ items:
     - id: points
       type: System.Int32
     content.vb: Public Overrides Sub Heal(points As Integer)
-  overridden: Global.Gobbo.Heal(System.Int32)
+  overridden: Global.AbstractEnemy.Heal(System.Int32)
   overload: Global.GobboTrapper.Heal*
   modifiers.csharp:
   - public
@@ -553,18 +553,18 @@ references:
   name: IObjectPooler
   nameWithType: IObjectPooler
   fullName: IObjectPooler
-- uid: Global.Gobbo.Heal(System.Int32)
-  commentId: M:Global.Gobbo.Heal(System.Int32)
-  parent: Global.Gobbo
+- uid: Global.AbstractEnemy.Heal(System.Int32)
+  commentId: M:Global.AbstractEnemy.Heal(System.Int32)
+  parent: Global.AbstractEnemy
   isExternal: true
   name: Heal(Int32)
-  nameWithType: Gobbo.Heal(Int32)
-  fullName: Gobbo.Heal(System.Int32)
+  nameWithType: AbstractEnemy.Heal(Int32)
+  fullName: AbstractEnemy.Heal(System.Int32)
   spec.csharp:
-  - uid: Global.Gobbo.Heal(System.Int32)
+  - uid: Global.AbstractEnemy.Heal(System.Int32)
     name: Heal
-    nameWithType: Gobbo.Heal
-    fullName: Gobbo.Heal
+    nameWithType: AbstractEnemy.Heal
+    fullName: AbstractEnemy.Heal
   - name: (
     nameWithType: (
     fullName: (
@@ -577,10 +577,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.Gobbo.Heal(System.Int32)
+  - uid: Global.AbstractEnemy.Heal(System.Int32)
     name: Heal
-    nameWithType: Gobbo.Heal
-    fullName: Gobbo.Heal
+    nameWithType: AbstractEnemy.Heal
+    fullName: AbstractEnemy.Heal
   - name: (
     nameWithType: (
     fullName: (

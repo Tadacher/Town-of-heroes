@@ -26,7 +26,7 @@ items:
   source:
     id: TowerStats
     path: ''
-    startLine: 1217
+    startLine: 1529
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -57,7 +57,7 @@ items:
   source:
     id: AttackDamage
     path: ''
-    startLine: 1221
+    startLine: 1533
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -84,7 +84,7 @@ items:
   source:
     id: AttackRange
     path: ''
-    startLine: 1222
+    startLine: 1534
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -111,7 +111,7 @@ items:
   source:
     id: AttackDelay
     path: ''
-    startLine: 1223
+    startLine: 1535
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -138,7 +138,7 @@ items:
   source:
     id: AttackDamagePerLevel
     path: ''
-    startLine: 1228
+    startLine: 1540
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -165,7 +165,7 @@ items:
   source:
     id: AttackRangePerLevel
     path: ''
-    startLine: 1229
+    startLine: 1541
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -192,7 +192,7 @@ items:
   source:
     id: AttackDelayPerLevel
     path: ''
-    startLine: 1230
+    startLine: 1542
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -219,7 +219,7 @@ items:
   source:
     id: ExpPerLevel
     path: ''
-    startLine: 1232
+    startLine: 1544
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -246,7 +246,7 @@ items:
   source:
     id: AttackClip
     path: ''
-    startLine: 1236
+    startLine: 1548
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -273,7 +273,7 @@ items:
   source:
     id: LevelupClip
     path: ''
-    startLine: 1237
+    startLine: 1549
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -300,7 +300,7 @@ items:
   source:
     id: ProjectilePrefab
     path: ''
-    startLine: 1241
+    startLine: 1553
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -327,7 +327,7 @@ items:
   source:
     id: ProjectileSpeed
     path: ''
-    startLine: 1242
+    startLine: 1554
   assemblies:
   - cs.temp.dll
   namespace: Global

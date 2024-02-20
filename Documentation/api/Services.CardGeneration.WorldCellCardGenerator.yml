@@ -6,7 +6,7 @@ items:
   parent: Services.CardGeneration
   children:
   - Services.CardGeneration.WorldCellCardGenerator.#ctor(Services.CardGeneration.WorldCellCardsConfig)
-  - Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(Type)
+  - Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(System.Type)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   source:
     id: WorldCellCardGenerator
     path: ''
-    startLine: 1759
+    startLine: 2146
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -54,7 +54,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1767
+    startLine: 2154
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -69,21 +69,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(Type)
-  commentId: M:Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(Type)
-  id: GetWorldCellType(Type)
+- uid: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(System.Type)
+  commentId: M:Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(System.Type)
+  id: GetWorldCellType(System.Type)
   parent: Services.CardGeneration.WorldCellCardGenerator
   langs:
   - csharp
   - vb
   name: GetWorldCellType(Type)
   nameWithType: WorldCellCardGenerator.GetWorldCellType(Type)
-  fullName: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(Type)
+  fullName: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(System.Type)
   type: Method
   source:
     id: GetWorldCellType
     path: ''
-    startLine: 1785
+    startLine: 2172
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -91,9 +91,9 @@ items:
     content: public Type GetWorldCellType(Type towerType)
     parameters:
     - id: towerType
-      type: Global.Type
+      type: System.Type
     return:
-      type: Global.Type
+      type: System.Type
     content.vb: Public Function GetWorldCellType(towerType As Type) As Type
   overload: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType*
   modifiers.csharp:
@@ -414,8 +414,10 @@ references:
   name: GetWorldCellType
   nameWithType: WorldCellCardGenerator.GetWorldCellType
   fullName: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType
-- uid: Global.Type
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
   isExternal: true
   name: Type
   nameWithType: Type
-  fullName: Type
+  fullName: System.Type

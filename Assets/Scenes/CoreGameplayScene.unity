@@ -32433,6 +32433,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1059204637}
     - target: {fileID: 6307842806946569395, guid: aa336045e1dafaa479bc4855762b5bae, type: 3}
+      propertyPath: _towerImageDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: 56d968126e13447418cae9202590e72b, type: 2}
+    - target: {fileID: 6307842806946569395, guid: aa336045e1dafaa479bc4855762b5bae, type: 3}
       propertyPath: _cardInfoUIContainer
       value: 
       objectReference: {fileID: 1487059942}

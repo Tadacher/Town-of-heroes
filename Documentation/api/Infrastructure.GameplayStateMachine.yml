@@ -18,7 +18,7 @@ items:
   source:
     id: GameplayStateMachine
     path: ''
-    startLine: 1936
+    startLine: 2318
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -64,14 +64,14 @@ items:
   source:
     id: OnStateChanged
     path: ''
-    startLine: 1938
+    startLine: 2320
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
   syntax:
     content: public event Action<IExitableState> OnStateChanged
     return:
-      type: Global.Action{Infrastructure.IExitableState}
+      type: System.Action{Infrastructure.IExitableState}
     content.vb: Public Event OnStateChanged As Action(Of IExitableState)
   modifiers.csharp:
   - public
@@ -91,7 +91,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1940
+    startLine: 2322
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -124,7 +124,7 @@ items:
   source:
     id: ChangeState
     path: ''
-    startLine: 1951
+    startLine: 2333
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -606,20 +606,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.Action{Infrastructure.IExitableState}
-  commentId: '!:Global.Action{Infrastructure.IExitableState}'
-  definition: Global.Action`1
+- uid: System.Action{Infrastructure.IExitableState}
+  commentId: T:System.Action{Infrastructure.IExitableState}
+  parent: System
+  definition: System.Action`1
   name: Action<IExitableState>
   nameWithType: Action<IExitableState>
-  fullName: Action<Infrastructure.IExitableState>
+  fullName: System.Action<Infrastructure.IExitableState>
   nameWithType.vb: Action(Of IExitableState)
-  fullName.vb: Action(Of Infrastructure.IExitableState)
+  fullName.vb: System.Action(Of Infrastructure.IExitableState)
   name.vb: Action(Of IExitableState)
   spec.csharp:
-  - uid: Global.Action`1
+  - uid: System.Action`1
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: <
     nameWithType: <
@@ -632,10 +633,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Global.Action`1
+  - uid: System.Action`1
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -647,42 +648,42 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.Action`1
-  commentId: '!:Global.Action`1'
+- uid: System.Action`1
+  commentId: T:System.Action`1
   isExternal: true
-  name: Action<>
-  nameWithType: Action<>
-  fullName: Action<>
-  nameWithType.vb: Action(Of )
-  fullName.vb: Action(Of )
-  name.vb: Action(Of )
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
   spec.csharp:
-  - uid: Global.Action`1
+  - uid: System.Action`1
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Global.Action`1
+  - uid: System.Action`1
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )

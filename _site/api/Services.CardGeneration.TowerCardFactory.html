@@ -105,12 +105,12 @@
   
   
   <a id="Services_CardGeneration_TowerCardFactory__ctor_" data-uid="Services.CardGeneration.TowerCardFactory.#ctor*"></a>
-  <h4 id="Services_CardGeneration_TowerCardFactory__ctor_Type_TowerCard_CardImageDatabase_Services_CardGeneration_WorldCellCardGenerator_DiContainer_" data-uid="Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)">TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, DiContainer)</h4>
+  <h4 id="Services_CardGeneration_TowerCardFactory__ctor_System_Type_TowerCard_CardImageDatabase_Services_CardGeneration_WorldCellCardGenerator_CardDescriptionService_DiContainer_Services_CardGeneration_TowerImageDatabase_" data-uid="Services.CardGeneration.TowerCardFactory.#ctor(System.Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,CardDescriptionService,DiContainer,Services.CardGeneration.TowerImageDatabase)">TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, CardDescriptionService, DiContainer, TowerImageDatabase)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TowerCardFactory(Type type, TowerCard cardPrefab, CardImageDatabase cardImageDatabase, WorldCellCardGenerator worldCellCardGenerator, DiContainer diContainer)</code></pre>
+    <pre><code class="lang-csharp hljs">public TowerCardFactory(Type type, TowerCard cardPrefab, CardImageDatabase cardImageDatabase, WorldCellCardGenerator worldCellCardGenerator, CardDescriptionService towerCardDescriptionService, DiContainer diContainer, TowerImageDatabase towerImageDatabase)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -123,7 +123,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
@@ -143,8 +143,18 @@
         <td></td>
       </tr>
       <tr>
+        <td><a class="xref" href="Global.CardDescriptionService.html">CardDescriptionService</a></td>
+        <td><span class="parametername">towerCardDescriptionService</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">DiContainer</span></td>
         <td><span class="parametername">diContainer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Services.CardGeneration.TowerImageDatabase.html">TowerImageDatabase</a></td>
+        <td><span class="parametername">towerImageDatabase</span></td>
         <td></td>
       </tr>
     </tbody>

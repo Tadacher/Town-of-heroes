@@ -16,7 +16,7 @@ items:
   source:
     id: IFactory
     path: ''
-    startLine: 1868
+    startLine: 2250
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -48,7 +48,7 @@ items:
   source:
     id: GetObject
     path: ''
-    startLine: 1870
+    startLine: 2252
   assemblies:
   - cs.temp.dll
   namespace: Global

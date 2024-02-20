@@ -1,37 +1,36 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Global.DodgeHealthModule
-  commentId: T:Global.DodgeHealthModule
-  id: DodgeHealthModule
-  parent: Global
+- uid: Services.Ui.CardInfoUiService
+  commentId: T:Services.Ui.CardInfoUiService
+  id: CardInfoUiService
+  parent: Services.Ui
   children:
-  - Global.DodgeHealthModule.#ctor(System.Single,Transform,DamageTextService)
-  - Global.DodgeHealthModule.RecieveDamage(System.Int32)
+  - Services.Ui.CardInfoUiService.#ctor(CardInfoUIContainer,AbstractInputService)
+  - Services.Ui.CardInfoUiService.Hide
+  - Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  - Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
   langs:
   - csharp
   - vb
-  name: DodgeHealthModule
-  nameWithType: DodgeHealthModule
-  fullName: DodgeHealthModule
+  name: CardInfoUiService
+  nameWithType: CardInfoUiService
+  fullName: Services.Ui.CardInfoUiService
   type: Class
   source:
-    id: DodgeHealthModule
+    id: CardInfoUiService
     path: ''
-    startLine: 209
+    startLine: 793
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: Services.Ui
+  summary: "\ncontrolls tower/worldcell describition GUI\n"
+  example: []
   syntax:
-    content: 'public class DodgeHealthModule : AbstractHealthModule'
-    content.vb: >-
-      Public Class DodgeHealthModule
-          Inherits AbstractHealthModule
+    content: public class CardInfoUiService
+    content.vb: Public Class CardInfoUiService
   inheritance:
   - System.Object
-  - Global.AbstractHealthModule
   inheritedMembers:
-  - Global.AbstractHealthModule._damageTextService
-  - Global.AbstractHealthModule._unitTransform
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -45,84 +44,130 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Global.DodgeHealthModule.#ctor(System.Single,Transform,DamageTextService)
-  commentId: M:Global.DodgeHealthModule.#ctor(System.Single,Transform,DamageTextService)
-  id: '#ctor(System.Single,Transform,DamageTextService)'
-  parent: Global.DodgeHealthModule
+- uid: Services.Ui.CardInfoUiService.#ctor(CardInfoUIContainer,AbstractInputService)
+  commentId: M:Services.Ui.CardInfoUiService.#ctor(CardInfoUIContainer,AbstractInputService)
+  id: '#ctor(CardInfoUIContainer,AbstractInputService)'
+  parent: Services.Ui.CardInfoUiService
   langs:
   - csharp
   - vb
-  name: DodgeHealthModule(Single, Transform, DamageTextService)
-  nameWithType: DodgeHealthModule.DodgeHealthModule(Single, Transform, DamageTextService)
-  fullName: DodgeHealthModule.DodgeHealthModule(System.Single, Transform, DamageTextService)
+  name: CardInfoUiService(CardInfoUIContainer, AbstractInputService)
+  nameWithType: CardInfoUiService.CardInfoUiService(CardInfoUIContainer, AbstractInputService)
+  fullName: Services.Ui.CardInfoUiService.CardInfoUiService(CardInfoUIContainer, AbstractInputService)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 218
+    startLine: 798
   assemblies:
   - cs.temp.dll
-  namespace: Global
-  summary: "\nChance from 0 to 1f\n"
-  example: []
+  namespace: Services.Ui
   syntax:
-    content: public DodgeHealthModule(float chance, Transform unitTransform, DamageTextService damageTextService)
+    content: public CardInfoUiService(CardInfoUIContainer container, AbstractInputService abstractInputService)
     parameters:
-    - id: chance
-      type: System.Single
-      description: ''
-    - id: unitTransform
-      type: Global.Transform
-    - id: damageTextService
-      type: Global.DamageTextService
-    content.vb: Public Sub New(chance As Single, unitTransform As Transform, damageTextService As DamageTextService)
-  overload: Global.DodgeHealthModule.#ctor*
+    - id: container
+      type: Global.CardInfoUIContainer
+    - id: abstractInputService
+      type: Global.AbstractInputService
+    content.vb: Public Sub New(container As CardInfoUIContainer, abstractInputService As AbstractInputService)
+  overload: Services.Ui.CardInfoUiService.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Global.DodgeHealthModule.RecieveDamage(System.Int32)
-  commentId: M:Global.DodgeHealthModule.RecieveDamage(System.Int32)
-  id: RecieveDamage(System.Int32)
-  parent: Global.DodgeHealthModule
+- uid: Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  commentId: M:Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  id: ShowAsTower(TowerCardInfoConfig)
+  parent: Services.Ui.CardInfoUiService
   langs:
   - csharp
   - vb
-  name: RecieveDamage(Int32)
-  nameWithType: DodgeHealthModule.RecieveDamage(Int32)
-  fullName: DodgeHealthModule.RecieveDamage(System.Int32)
+  name: ShowAsTower(TowerCardInfoConfig)
+  nameWithType: CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  fullName: Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
   type: Method
   source:
-    id: RecieveDamage
+    id: ShowAsTower
     path: ''
-    startLine: 224
+    startLine: 810
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: Services.Ui
+  summary: "\nshows given tower description\n"
+  example: []
   syntax:
-    content: public override int RecieveDamage(int damage)
+    content: public void ShowAsTower(TowerCardInfoConfig towerCardInfoConfig)
     parameters:
-    - id: damage
-      type: System.Int32
-    return:
-      type: System.Int32
-    content.vb: Public Overrides Function RecieveDamage(damage As Integer) As Integer
-  overridden: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  overload: Global.DodgeHealthModule.RecieveDamage*
+    - id: towerCardInfoConfig
+      type: Global.TowerCardInfoConfig
+      description: description container
+    content.vb: Public Sub ShowAsTower(towerCardInfoConfig As TowerCardInfoConfig)
+  overload: Services.Ui.CardInfoUiService.ShowAsTower*
   modifiers.csharp:
   - public
-  - override
   modifiers.vb:
   - Public
-  - Overrides
+- uid: Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  commentId: M:Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  id: ShowAsWorldCell(WorldCellCardInfoConfig)
+  parent: Services.Ui.CardInfoUiService
+  langs:
+  - csharp
+  - vb
+  name: ShowAsWorldCell(WorldCellCardInfoConfig)
+  nameWithType: CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  fullName: Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  type: Method
+  source:
+    id: ShowAsWorldCell
+    path: ''
+    startLine: 823
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: public void ShowAsWorldCell(WorldCellCardInfoConfig worldCellCardInfoConfig)
+    parameters:
+    - id: worldCellCardInfoConfig
+      type: Global.WorldCellCardInfoConfig
+    content.vb: Public Sub ShowAsWorldCell(worldCellCardInfoConfig As WorldCellCardInfoConfig)
+  overload: Services.Ui.CardInfoUiService.ShowAsWorldCell*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Ui.CardInfoUiService.Hide
+  commentId: M:Services.Ui.CardInfoUiService.Hide
+  id: Hide
+  parent: Services.Ui.CardInfoUiService
+  langs:
+  - csharp
+  - vb
+  name: Hide()
+  nameWithType: CardInfoUiService.Hide()
+  fullName: Services.Ui.CardInfoUiService.Hide()
+  type: Method
+  source:
+    id: Hide
+    path: ''
+    startLine: 833
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: public void Hide()
+    content.vb: Public Sub Hide
+  overload: Services.Ui.CardInfoUiService.Hide*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
-- uid: Global
-  name: Global
-  nameWithType: Global
-  fullName: Global
-  nameWithType.vb: ''
-  fullName.vb: ''
-  name.vb: ''
+- uid: Services.Ui
+  commentId: N:Services.Ui
+  name: Services.Ui
+  nameWithType: Services.Ui
+  fullName: Services.Ui
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -130,23 +175,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Global.AbstractHealthModule
-  commentId: T:Global.AbstractHealthModule
-  name: AbstractHealthModule
-  nameWithType: AbstractHealthModule
-  fullName: AbstractHealthModule
-- uid: Global.AbstractHealthModule._damageTextService
-  commentId: F:Global.AbstractHealthModule._damageTextService
-  parent: Global.AbstractHealthModule
-  name: _damageTextService
-  nameWithType: AbstractHealthModule._damageTextService
-  fullName: AbstractHealthModule._damageTextService
-- uid: Global.AbstractHealthModule._unitTransform
-  commentId: F:Global.AbstractHealthModule._unitTransform
-  parent: Global.AbstractHealthModule
-  name: _unitTransform
-  nameWithType: AbstractHealthModule._unitTransform
-  fullName: AbstractHealthModule._unitTransform
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -432,76 +460,43 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.DodgeHealthModule.#ctor*
-  commentId: Overload:Global.DodgeHealthModule.#ctor
-  name: DodgeHealthModule
-  nameWithType: DodgeHealthModule.DodgeHealthModule
-  fullName: DodgeHealthModule.DodgeHealthModule
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
+- uid: Services.Ui.CardInfoUiService.#ctor*
+  commentId: Overload:Services.Ui.CardInfoUiService.#ctor
+  name: CardInfoUiService
+  nameWithType: CardInfoUiService.CardInfoUiService
+  fullName: Services.Ui.CardInfoUiService.CardInfoUiService
+- uid: Global.CardInfoUIContainer
+  commentId: T:Global.CardInfoUIContainer
+  name: CardInfoUIContainer
+  nameWithType: CardInfoUIContainer
+  fullName: CardInfoUIContainer
+- uid: Global.AbstractInputService
   isExternal: true
-  name: Single
-  nameWithType: Single
-  fullName: System.Single
-- uid: Global.Transform
-  isExternal: true
-  name: Transform
-  nameWithType: Transform
-  fullName: Transform
-- uid: Global.DamageTextService
-  isExternal: true
-  name: DamageTextService
-  nameWithType: DamageTextService
-  fullName: DamageTextService
-- uid: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  commentId: M:Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  parent: Global.AbstractHealthModule
-  isExternal: true
-  name: RecieveDamage(Int32)
-  nameWithType: AbstractHealthModule.RecieveDamage(Int32)
-  fullName: AbstractHealthModule.RecieveDamage(System.Int32)
-  spec.csharp:
-  - uid: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-    name: RecieveDamage
-    nameWithType: AbstractHealthModule.RecieveDamage
-    fullName: AbstractHealthModule.RecieveDamage
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Int32
-    name: Int32
-    nameWithType: Int32
-    fullName: System.Int32
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-    name: RecieveDamage
-    nameWithType: AbstractHealthModule.RecieveDamage
-    fullName: AbstractHealthModule.RecieveDamage
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Int32
-    name: Int32
-    nameWithType: Int32
-    fullName: System.Int32
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Global.DodgeHealthModule.RecieveDamage*
-  commentId: Overload:Global.DodgeHealthModule.RecieveDamage
-  name: RecieveDamage
-  nameWithType: DodgeHealthModule.RecieveDamage
-  fullName: DodgeHealthModule.RecieveDamage
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
+  name: AbstractInputService
+  nameWithType: AbstractInputService
+  fullName: AbstractInputService
+- uid: Services.Ui.CardInfoUiService.ShowAsTower*
+  commentId: Overload:Services.Ui.CardInfoUiService.ShowAsTower
+  name: ShowAsTower
+  nameWithType: CardInfoUiService.ShowAsTower
+  fullName: Services.Ui.CardInfoUiService.ShowAsTower
+- uid: Global.TowerCardInfoConfig
+  commentId: T:Global.TowerCardInfoConfig
+  name: TowerCardInfoConfig
+  nameWithType: TowerCardInfoConfig
+  fullName: TowerCardInfoConfig
+- uid: Services.Ui.CardInfoUiService.ShowAsWorldCell*
+  commentId: Overload:Services.Ui.CardInfoUiService.ShowAsWorldCell
+  name: ShowAsWorldCell
+  nameWithType: CardInfoUiService.ShowAsWorldCell
+  fullName: Services.Ui.CardInfoUiService.ShowAsWorldCell
+- uid: Global.WorldCellCardInfoConfig
+  commentId: T:Global.WorldCellCardInfoConfig
+  name: WorldCellCardInfoConfig
+  nameWithType: WorldCellCardInfoConfig
+  fullName: WorldCellCardInfoConfig
+- uid: Services.Ui.CardInfoUiService.Hide*
+  commentId: Overload:Services.Ui.CardInfoUiService.Hide
+  name: Hide
+  nameWithType: CardInfoUiService.Hide
+  fullName: Services.Ui.CardInfoUiService.Hide

@@ -6,7 +6,7 @@ items:
   parent: Global
   children:
   - Global.DefaultHealthModule.#ctor(Transform,DamageTextService)
-  - Global.DefaultHealthModule.RecieveDamage(System.Int32)
+  - Global.DefaultHealthModule.CalculateRecievedDamage(System.Int32)
   langs:
   - csharp
   - vb
@@ -22,16 +22,16 @@ items:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: 'public class DefaultHealthModule : AbstractHealthModule'
+    content: 'public class DefaultHealthModule : AbstractDamageRecievingModule'
     content.vb: >-
       Public Class DefaultHealthModule
-          Inherits AbstractHealthModule
+          Inherits AbstractDamageRecievingModule
   inheritance:
   - System.Object
-  - Global.AbstractHealthModule
+  - Global.AbstractDamageRecievingModule
   inheritedMembers:
-  - Global.AbstractHealthModule._damageTextService
-  - Global.AbstractHealthModule._unitTransform
+  - Global.AbstractDamageRecievingModule._damageTextService
+  - Global.AbstractDamageRecievingModule._unitTransform
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -76,34 +76,34 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.DefaultHealthModule.RecieveDamage(System.Int32)
-  commentId: M:Global.DefaultHealthModule.RecieveDamage(System.Int32)
-  id: RecieveDamage(System.Int32)
+- uid: Global.DefaultHealthModule.CalculateRecievedDamage(System.Int32)
+  commentId: M:Global.DefaultHealthModule.CalculateRecievedDamage(System.Int32)
+  id: CalculateRecievedDamage(System.Int32)
   parent: Global.DefaultHealthModule
   langs:
   - csharp
   - vb
-  name: RecieveDamage(Int32)
-  nameWithType: DefaultHealthModule.RecieveDamage(Int32)
-  fullName: DefaultHealthModule.RecieveDamage(System.Int32)
+  name: CalculateRecievedDamage(Int32)
+  nameWithType: DefaultHealthModule.CalculateRecievedDamage(Int32)
+  fullName: DefaultHealthModule.CalculateRecievedDamage(System.Int32)
   type: Method
   source:
-    id: RecieveDamage
+    id: CalculateRecievedDamage
     path: ''
-    startLine: 200
+    startLine: 201
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public override int RecieveDamage(int damage)
+    content: public override int CalculateRecievedDamage(int damage)
     parameters:
     - id: damage
       type: System.Int32
     return:
       type: System.Int32
-    content.vb: Public Overrides Function RecieveDamage(damage As Integer) As Integer
-  overridden: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  overload: Global.DefaultHealthModule.RecieveDamage*
+    content.vb: Public Overrides Function CalculateRecievedDamage(damage As Integer) As Integer
+  overridden: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  overload: Global.DefaultHealthModule.CalculateRecievedDamage*
   modifiers.csharp:
   - public
   - override
@@ -125,23 +125,23 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Global.AbstractHealthModule
-  commentId: T:Global.AbstractHealthModule
-  name: AbstractHealthModule
-  nameWithType: AbstractHealthModule
-  fullName: AbstractHealthModule
-- uid: Global.AbstractHealthModule._damageTextService
-  commentId: F:Global.AbstractHealthModule._damageTextService
-  parent: Global.AbstractHealthModule
+- uid: Global.AbstractDamageRecievingModule
+  commentId: T:Global.AbstractDamageRecievingModule
+  name: AbstractDamageRecievingModule
+  nameWithType: AbstractDamageRecievingModule
+  fullName: AbstractDamageRecievingModule
+- uid: Global.AbstractDamageRecievingModule._damageTextService
+  commentId: F:Global.AbstractDamageRecievingModule._damageTextService
+  parent: Global.AbstractDamageRecievingModule
   name: _damageTextService
-  nameWithType: AbstractHealthModule._damageTextService
-  fullName: AbstractHealthModule._damageTextService
-- uid: Global.AbstractHealthModule._unitTransform
-  commentId: F:Global.AbstractHealthModule._unitTransform
-  parent: Global.AbstractHealthModule
+  nameWithType: AbstractDamageRecievingModule._damageTextService
+  fullName: AbstractDamageRecievingModule._damageTextService
+- uid: Global.AbstractDamageRecievingModule._unitTransform
+  commentId: F:Global.AbstractDamageRecievingModule._unitTransform
+  parent: Global.AbstractDamageRecievingModule
   name: _unitTransform
-  nameWithType: AbstractHealthModule._unitTransform
-  fullName: AbstractHealthModule._unitTransform
+  nameWithType: AbstractDamageRecievingModule._unitTransform
+  fullName: AbstractDamageRecievingModule._unitTransform
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object
@@ -442,18 +442,18 @@ references:
   name: DamageTextService
   nameWithType: DamageTextService
   fullName: DamageTextService
-- uid: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  commentId: M:Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  parent: Global.AbstractHealthModule
+- uid: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  commentId: M:Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  parent: Global.AbstractDamageRecievingModule
   isExternal: true
-  name: RecieveDamage(Int32)
-  nameWithType: AbstractHealthModule.RecieveDamage(Int32)
-  fullName: AbstractHealthModule.RecieveDamage(System.Int32)
+  name: CalculateRecievedDamage(Int32)
+  nameWithType: AbstractDamageRecievingModule.CalculateRecievedDamage(Int32)
+  fullName: AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
   spec.csharp:
-  - uid: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-    name: RecieveDamage
-    nameWithType: AbstractHealthModule.RecieveDamage
-    fullName: AbstractHealthModule.RecieveDamage
+  - uid: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+    name: CalculateRecievedDamage
+    nameWithType: AbstractDamageRecievingModule.CalculateRecievedDamage
+    fullName: AbstractDamageRecievingModule.CalculateRecievedDamage
   - name: (
     nameWithType: (
     fullName: (
@@ -466,10 +466,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-    name: RecieveDamage
-    nameWithType: AbstractHealthModule.RecieveDamage
-    fullName: AbstractHealthModule.RecieveDamage
+  - uid: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+    name: CalculateRecievedDamage
+    nameWithType: AbstractDamageRecievingModule.CalculateRecievedDamage
+    fullName: AbstractDamageRecievingModule.CalculateRecievedDamage
   - name: (
     nameWithType: (
     fullName: (
@@ -481,11 +481,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.DefaultHealthModule.RecieveDamage*
-  commentId: Overload:Global.DefaultHealthModule.RecieveDamage
-  name: RecieveDamage
-  nameWithType: DefaultHealthModule.RecieveDamage
-  fullName: DefaultHealthModule.RecieveDamage
+- uid: Global.DefaultHealthModule.CalculateRecievedDamage*
+  commentId: Overload:Global.DefaultHealthModule.CalculateRecievedDamage
+  name: CalculateRecievedDamage
+  nameWithType: DefaultHealthModule.CalculateRecievedDamage
+  fullName: DefaultHealthModule.CalculateRecievedDamage
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System

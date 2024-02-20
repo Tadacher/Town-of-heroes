@@ -16,7 +16,7 @@ items:
   source:
     id: GameStateMachine
     path: ''
-    startLine: 562
+    startLine: 610
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -63,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 564
+    startLine: 612
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure

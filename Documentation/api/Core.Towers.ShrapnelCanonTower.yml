@@ -6,6 +6,7 @@ items:
   parent: Core.Towers
   children:
   - Core.Towers.ShrapnelCanonTower.Attack
+  - Core.Towers.ShrapnelCanonTower.Awake
   - Core.Towers.ShrapnelCanonTower.InitializeProjectileFactory(ProjectileBehaviour)
   - Core.Towers.ShrapnelCanonTower.Levelup
   - Core.Towers.ShrapnelCanonTower.Update
@@ -19,7 +20,7 @@ items:
   source:
     id: ShrapnelCanonTower
     path: ''
-    startLine: 3136
+    startLine: 3549
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -80,6 +81,35 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Core.Towers.ShrapnelCanonTower.Awake
+  commentId: M:Core.Towers.ShrapnelCanonTower.Awake
+  id: Awake
+  parent: Core.Towers.ShrapnelCanonTower
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: ShrapnelCanonTower.Awake()
+  fullName: Core.Towers.ShrapnelCanonTower.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: ''
+    startLine: 3555
+  assemblies:
+  - cs.temp.dll
+  namespace: Core.Towers
+  syntax:
+    content: protected override void Awake()
+    content.vb: Protected Overrides Sub Awake
+  overridden: Core.Towers.AbstractTower.Awake
+  overload: Core.Towers.ShrapnelCanonTower.Awake*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
 - uid: Core.Towers.ShrapnelCanonTower.Update
   commentId: M:Core.Towers.ShrapnelCanonTower.Update
   id: Update
@@ -94,7 +124,7 @@ items:
   source:
     id: Update
     path: ''
-    startLine: 3149
+    startLine: 3562
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -123,7 +153,7 @@ items:
   source:
     id: Attack
     path: ''
-    startLine: 3156
+    startLine: 3569
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -152,7 +182,7 @@ items:
   source:
     id: InitializeProjectileFactory
     path: ''
-    startLine: 3163
+    startLine: 3576
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -184,7 +214,7 @@ items:
   source:
     id: Levelup
     path: ''
-    startLine: 3164
+    startLine: 3577
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -915,6 +945,39 @@ references:
   name: Services.GridSystem
   nameWithType: Services.GridSystem
   fullName: Services.GridSystem
+- uid: Core.Towers.AbstractTower.Awake
+  commentId: M:Core.Towers.AbstractTower.Awake
+  parent: Core.Towers.AbstractTower
+  name: Awake()
+  nameWithType: AbstractTower.Awake()
+  fullName: Core.Towers.AbstractTower.Awake()
+  spec.csharp:
+  - uid: Core.Towers.AbstractTower.Awake
+    name: Awake
+    nameWithType: AbstractTower.Awake
+    fullName: Core.Towers.AbstractTower.Awake
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Core.Towers.AbstractTower.Awake
+    name: Awake
+    nameWithType: AbstractTower.Awake
+    fullName: Core.Towers.AbstractTower.Awake
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Core.Towers.ShrapnelCanonTower.Awake*
+  commentId: Overload:Core.Towers.ShrapnelCanonTower.Awake
+  name: Awake
+  nameWithType: ShrapnelCanonTower.Awake
+  fullName: Core.Towers.ShrapnelCanonTower.Awake
 - uid: Core.Towers.AbstractTower.Update
   commentId: M:Core.Towers.AbstractTower.Update
   parent: Core.Towers.AbstractTower

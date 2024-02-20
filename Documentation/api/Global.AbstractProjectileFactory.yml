@@ -8,7 +8,7 @@ items:
   - Global.AbstractProjectileFactory.#ctor(ProjectileBehaviour)
   - Global.AbstractProjectileFactory._projectilePool
   - Global.AbstractProjectileFactory._projectilePrefab
-  - Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+  - Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
   - Global.AbstractProjectileFactory.TryInitializePool
   langs:
   - csharp
@@ -20,7 +20,7 @@ items:
   source:
     id: AbstractProjectileFactory
     path: ''
-    startLine: 3217
+    startLine: 3654
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -61,7 +61,7 @@ items:
   source:
     id: _projectilePool
     path: ''
-    startLine: 3219
+    startLine: 3656
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -88,7 +88,7 @@ items:
   source:
     id: _projectilePrefab
     path: ''
-    startLine: 3220
+    startLine: 3657
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -115,7 +115,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3222
+    startLine: 3659
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -130,21 +130,21 @@ items:
   - protected
   modifiers.vb:
   - Protected
-- uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
-  commentId: M:Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
-  id: ReturnProjectile(System.Single,Transform,Vector3,Action)
+- uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
+  commentId: M:Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
+  id: ReturnProjectile(System.Single,Transform,Vector3,System.Action)
   parent: Global.AbstractProjectileFactory
   langs:
   - csharp
   - vb
   name: ReturnProjectile(Single, Transform, Vector3, Action)
   nameWithType: AbstractProjectileFactory.ReturnProjectile(Single, Transform, Vector3, Action)
-  fullName: AbstractProjectileFactory.ReturnProjectile(System.Single, Transform, Vector3, Action)
+  fullName: AbstractProjectileFactory.ReturnProjectile(System.Single, Transform, Vector3, System.Action)
   type: Method
   source:
     id: ReturnProjectile
     path: ''
-    startLine: 3224
+    startLine: 3661
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -158,7 +158,7 @@ items:
     - id: initialPos
       type: Global.Vector3
     - id: ontargetReached
-      type: Global.Action
+      type: System.Action
     return:
       type: Global.ProjectileBehaviour
     content.vb: Public Function ReturnProjectile(speed As Single, target As Transform, initialPos As Vector3, ontargetReached As Action) As ProjectileBehaviour
@@ -181,7 +181,7 @@ items:
   source:
     id: TryInitializePool
     path: ''
-    startLine: 3251
+    startLine: 3687
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -605,11 +605,13 @@ references:
   name: Vector3
   nameWithType: Vector3
   fullName: Vector3
-- uid: Global.Action
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
   isExternal: true
   name: Action
   nameWithType: Action
-  fullName: Action
+  fullName: System.Action
 - uid: Global.AbstractProjectileFactory.TryInitializePool*
   commentId: Overload:Global.AbstractProjectileFactory.TryInitializePool
   name: TryInitializePool

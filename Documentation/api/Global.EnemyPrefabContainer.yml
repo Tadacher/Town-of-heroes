@@ -18,7 +18,7 @@ items:
   source:
     id: EnemyPrefabContainer
     path: ''
-    startLine: 1123
+    startLine: 1355
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -49,7 +49,7 @@ items:
   source:
     id: Enemies
     path: ''
-    startLine: 1126
+    startLine: 1358
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -76,7 +76,7 @@ items:
   source:
     id: GoblinTrapper
     path: ''
-    startLine: 1129
+    startLine: 1361
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -103,7 +103,7 @@ items:
   source:
     id: Goblin
     path: ''
-    startLine: 1130
+    startLine: 1362
   assemblies:
   - cs.temp.dll
   namespace: Global

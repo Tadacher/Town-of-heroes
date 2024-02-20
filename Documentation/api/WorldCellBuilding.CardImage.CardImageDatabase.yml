@@ -18,10 +18,12 @@ items:
   source:
     id: CardImageDatabase
     path: ''
-    startLine: 1085
+    startLine: 1287
   assemblies:
   - cs.temp.dll
   namespace: WorldCellBuilding.CardImage
+  summary: "\ncontains all images for world cell cards\n"
+  example: []
   syntax:
     content: 'public class CardImageDatabase : ScriptableObject'
     content.vb: >-
@@ -49,10 +51,12 @@ items:
   source:
     id: WorldCellCardSpritesDataBase
     path: ''
-    startLine: 1089
+    startLine: 1296
   assemblies:
   - cs.temp.dll
   namespace: WorldCellBuilding.CardImage
+  summary: "\nwhere key is &quot;Worldcells.&quot; + sprite.name and value is sprite itself\n"
+  example: []
   syntax:
     content: public Dictionary<string, Sprite> WorldCellCardSpritesDataBase
     return:
@@ -76,7 +80,7 @@ items:
   source:
     id: Initialize
     path: ''
-    startLine: 1091
+    startLine: 1298
   assemblies:
   - cs.temp.dll
   namespace: WorldCellBuilding.CardImage
@@ -102,17 +106,21 @@ items:
   source:
     id: GetSprite
     path: ''
-    startLine: 1101
+    startLine: 1321
   assemblies:
   - cs.temp.dll
   namespace: WorldCellBuilding.CardImage
+  summary: "\nget sprite by world cell name\n"
+  example: []
   syntax:
     content: public Sprite GetSprite(string name)
     parameters:
     - id: name
       type: System.String
+      description: same as world cell type
     return:
       type: Global.Sprite
+      description: sprite for worldcell
     content.vb: Public Function GetSprite(name As String) As Sprite
   overload: WorldCellBuilding.CardImage.CardImageDatabase.GetSprite*
   modifiers.csharp:

@@ -23,6 +23,7 @@ items:
   - Core.Towers.AbstractTower.AsGhost
   - Core.Towers.AbstractTower.AsUnGhost
   - Core.Towers.AbstractTower.Attack
+  - Core.Towers.AbstractTower.Awake
   - Core.Towers.AbstractTower.CountAttackDelay
   - Core.Towers.AbstractTower.Experience
   - Core.Towers.AbstractTower.FinClosestTargetIfNeeded
@@ -55,7 +56,7 @@ items:
   source:
     id: AbstractTower
     path: ''
-    startLine: 2914
+    startLine: 3330
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -70,6 +71,7 @@ items:
   derivedClasses:
   - Core.Towers.ArcherTower
   - Core.Towers.ShrapnelCanonTower
+  - Core.Towers.TowerOfDeath
   implements:
   - Global.IExpReciever
   - Global.ICommonAttacker
@@ -97,7 +99,7 @@ items:
   source:
     id: Experience
     path: ''
-    startLine: 2916
+    startLine: 3332
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -130,7 +132,7 @@ items:
   source:
     id: Level
     path: ''
-    startLine: 2917
+    startLine: 3333
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -163,7 +165,7 @@ items:
   source:
     id: Hp
     path: ''
-    startLine: 2918
+    startLine: 3334
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -196,7 +198,7 @@ items:
   source:
     id: _targetTag
     path: ''
-    startLine: 2920
+    startLine: 3336
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -225,7 +227,7 @@ items:
   source:
     id: _towerStats
     path: ''
-    startLine: 2922
+    startLine: 3338
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -252,7 +254,7 @@ items:
   source:
     id: _audioSource
     path: ''
-    startLine: 2923
+    startLine: 3339
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -279,7 +281,7 @@ items:
   source:
     id: _attackDamage
     path: ''
-    startLine: 2929
+    startLine: 3345
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -306,7 +308,7 @@ items:
   source:
     id: _attackRange
     path: ''
-    startLine: 2930
+    startLine: 3346
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -333,7 +335,7 @@ items:
   source:
     id: _attackDelay
     path: ''
-    startLine: 2931
+    startLine: 3347
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -360,7 +362,7 @@ items:
   source:
     id: _currentTimeTillAttack
     path: ''
-    startLine: 2932
+    startLine: 3348
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -387,7 +389,7 @@ items:
   source:
     id: _isGhost
     path: ''
-    startLine: 2933
+    startLine: 3349
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -414,7 +416,7 @@ items:
   source:
     id: _currentEnemy
     path: ''
-    startLine: 2937
+    startLine: 3353
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -441,7 +443,7 @@ items:
   source:
     id: _projectileFactory
     path: ''
-    startLine: 2938
+    startLine: 3354
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -468,7 +470,7 @@ items:
   source:
     id: _attackModule
     path: ''
-    startLine: 2939
+    startLine: 3355
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -495,7 +497,7 @@ items:
   source:
     id: _availableEnemies
     path: ''
-    startLine: 2940
+    startLine: 3356
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -522,7 +524,7 @@ items:
   source:
     id: _gridAlignService
     path: ''
-    startLine: 2941
+    startLine: 3357
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -549,7 +551,7 @@ items:
   source:
     id: _ghostColor
     path: ''
-    startLine: 2942
+    startLine: 3358
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -578,7 +580,7 @@ items:
   source:
     id: _objectPooler
     path: ''
-    startLine: 2946
+    startLine: 3362
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -591,6 +593,34 @@ items:
   - protected
   modifiers.vb:
   - Protected
+- uid: Core.Towers.AbstractTower.Awake
+  commentId: M:Core.Towers.AbstractTower.Awake
+  id: Awake
+  parent: Core.Towers.AbstractTower
+  langs:
+  - csharp
+  - vb
+  name: Awake()
+  nameWithType: AbstractTower.Awake()
+  fullName: Core.Towers.AbstractTower.Awake()
+  type: Method
+  source:
+    id: Awake
+    path: ''
+    startLine: 3364
+  assemblies:
+  - cs.temp.dll
+  namespace: Core.Towers
+  syntax:
+    content: protected virtual void Awake()
+    content.vb: Protected Overridable Sub Awake
+  overload: Core.Towers.AbstractTower.Awake*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
 - uid: Core.Towers.AbstractTower.AsGhost
   commentId: M:Core.Towers.AbstractTower.AsGhost
   id: AsGhost
@@ -605,7 +635,7 @@ items:
   source:
     id: AsGhost
     path: ''
-    startLine: 2948
+    startLine: 3370
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -633,7 +663,7 @@ items:
   source:
     id: AsUnGhost
     path: ''
-    startLine: 2953
+    startLine: 3375
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -661,7 +691,7 @@ items:
   source:
     id: Initialize
     path: ''
-    startLine: 2958
+    startLine: 3380
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -696,7 +726,7 @@ items:
   source:
     id: Update
     path: ''
-    startLine: 2969
+    startLine: 3391
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -724,7 +754,7 @@ items:
   source:
     id: FindClosestTarget
     path: ''
-    startLine: 2975
+    startLine: 3396
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -756,7 +786,7 @@ items:
   source:
     id: RecieveExperience
     path: ''
-    startLine: 2996
+    startLine: 3417
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -789,7 +819,7 @@ items:
   source:
     id: ReturnToPool
     path: ''
-    startLine: 3001
+    startLine: 3422
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -817,7 +847,7 @@ items:
   source:
     id: StartFollowPointer
     path: ''
-    startLine: 3004
+    startLine: 3425
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -843,7 +873,7 @@ items:
   source:
     id: StopFollowingPointer
     path: ''
-    startLine: 3007
+    startLine: 3428
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -869,7 +899,7 @@ items:
   source:
     id: InsertSelfToGrid
     path: ''
-    startLine: 3010
+    startLine: 3431
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -895,7 +925,7 @@ items:
   source:
     id: Attack
     path: ''
-    startLine: 3012
+    startLine: 3433
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -923,23 +953,23 @@ items:
   source:
     id: InitializeProjectileFactory
     path: ''
-    startLine: 3013
+    startLine: 3434
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
   syntax:
-    content: protected abstract void InitializeProjectileFactory(ProjectileBehaviour projectileBehaviour)
+    content: protected virtual void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab)
     parameters:
-    - id: projectileBehaviour
+    - id: projectilePrefab
       type: Global.ProjectileBehaviour
-    content.vb: Protected MustOverride Sub InitializeProjectileFactory(projectileBehaviour As ProjectileBehaviour)
+    content.vb: Protected Overridable Sub InitializeProjectileFactory(projectilePrefab As ProjectileBehaviour)
   overload: Core.Towers.AbstractTower.InitializeProjectileFactory*
   modifiers.csharp:
   - protected
-  - abstract
+  - virtual
   modifiers.vb:
   - Protected
-  - MustOverride
+  - Overridable
 - uid: Core.Towers.AbstractTower.TryLevelup
   commentId: M:Core.Towers.AbstractTower.TryLevelup
   id: TryLevelup
@@ -954,7 +984,7 @@ items:
   source:
     id: TryLevelup
     path: ''
-    startLine: 3015
+    startLine: 3437
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -982,7 +1012,7 @@ items:
   source:
     id: Levelup
     path: ''
-    startLine: 3025
+    startLine: 3447
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1010,7 +1040,7 @@ items:
   source:
     id: TryDealDamageToCurrentEnemy
     path: ''
-    startLine: 3033
+    startLine: 3455
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1038,7 +1068,7 @@ items:
   source:
     id: RefreshAttackDelay
     path: ''
-    startLine: 3048
+    startLine: 3470
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1064,7 +1094,7 @@ items:
   source:
     id: PlayAttackSound
     path: ''
-    startLine: 3049
+    startLine: 3471
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1090,7 +1120,7 @@ items:
   source:
     id: InitializeAttackModule
     path: ''
-    startLine: 3050
+    startLine: 3472
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1123,7 +1153,7 @@ items:
   source:
     id: TargetInRange
     path: ''
-    startLine: 3052
+    startLine: 3474
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1151,7 +1181,7 @@ items:
   source:
     id: CountAttackDelay
     path: ''
-    startLine: 3054
+    startLine: 3476
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1177,7 +1207,7 @@ items:
   source:
     id: TryToAttack
     path: ''
-    startLine: 3060
+    startLine: 3482
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1203,7 +1233,7 @@ items:
   source:
     id: FinClosestTargetIfNeeded
     path: ''
-    startLine: 3066
+    startLine: 3488
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -1372,6 +1402,11 @@ references:
   name: IObjectPooler
   nameWithType: IObjectPooler
   fullName: IObjectPooler
+- uid: Core.Towers.AbstractTower.Awake*
+  commentId: Overload:Core.Towers.AbstractTower.Awake
+  name: Awake
+  nameWithType: AbstractTower.Awake
+  fullName: Core.Towers.AbstractTower.Awake
 - uid: Core.Towers.AbstractTower.AsGhost*
   commentId: Overload:Core.Towers.AbstractTower.AsGhost
   name: AsGhost

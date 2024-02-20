@@ -15,7 +15,7 @@ items:
   source:
     id: TowerCardSpawnMarker
     path: ''
-    startLine: 717
+    startLine: 765
   assemblies:
   - cs.temp.dll
   namespace: Codebase.MonobehaviourComponents

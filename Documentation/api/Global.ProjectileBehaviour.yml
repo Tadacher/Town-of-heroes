@@ -5,8 +5,8 @@ items:
   id: ProjectileBehaviour
   parent: Global
   children:
-  - Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,Action)
-  - Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,Action)
+  - Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,System.Action)
+  - Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,System.Action)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   source:
     id: ProjectileBehaviour
     path: ''
-    startLine: 3263
+    startLine: 3699
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -34,21 +34,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,Action)
-  commentId: M:Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,Action)
-  id: Initialize(System.Single,Transform,Vector3,Action)
+- uid: Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,System.Action)
+  commentId: M:Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,System.Action)
+  id: Initialize(System.Single,Transform,Vector3,System.Action)
   parent: Global.ProjectileBehaviour
   langs:
   - csharp
   - vb
   name: Initialize(Single, Transform, Vector3, Action)
   nameWithType: ProjectileBehaviour.Initialize(Single, Transform, Vector3, Action)
-  fullName: ProjectileBehaviour.Initialize(System.Single, Transform, Vector3, Action)
+  fullName: ProjectileBehaviour.Initialize(System.Single, Transform, Vector3, System.Action)
   type: Method
   source:
     id: Initialize
     path: ''
-    startLine: 3293
+    startLine: 3729
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -62,28 +62,28 @@ items:
     - id: initialPos
       type: Global.Vector3
     - id: onTargetReached
-      type: Global.Action
+      type: System.Action
     content.vb: Public Sub Initialize(speed As Single, target As Transform, initialPos As Vector3, onTargetReached As Action)
   overload: Global.ProjectileBehaviour.Initialize*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,Action)
-  commentId: M:Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,Action)
-  id: ReInitialize(Transform,Vector3,Action)
+- uid: Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,System.Action)
+  commentId: M:Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,System.Action)
+  id: ReInitialize(Transform,Vector3,System.Action)
   parent: Global.ProjectileBehaviour
   langs:
   - csharp
   - vb
   name: ReInitialize(Transform, Vector3, Action)
   nameWithType: ProjectileBehaviour.ReInitialize(Transform, Vector3, Action)
-  fullName: ProjectileBehaviour.ReInitialize(Transform, Vector3, Action)
+  fullName: ProjectileBehaviour.ReInitialize(Transform, Vector3, System.Action)
   type: Method
   source:
     id: ReInitialize
     path: ''
-    startLine: 3300
+    startLine: 3736
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -95,7 +95,7 @@ items:
     - id: initialPos
       type: Global.Vector3
     - id: onTargetReached
-      type: Global.Action
+      type: System.Action
     content.vb: Public Sub ReInitialize(target As Transform, initialPos As Vector3, onTargetReached As Action)
   overload: Global.ProjectileBehaviour.ReInitialize*
   modifiers.csharp:
@@ -145,11 +145,13 @@ references:
   name: Vector3
   nameWithType: Vector3
   fullName: Vector3
-- uid: Global.Action
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
   isExternal: true
   name: Action
   nameWithType: Action
-  fullName: Action
+  fullName: System.Action
 - uid: Global.ProjectileBehaviour.ReInitialize*
   commentId: Overload:Global.ProjectileBehaviour.ReInitialize
   name: ReInitialize

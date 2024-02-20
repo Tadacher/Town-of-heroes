@@ -17,13 +17,21 @@ items:
   source:
     id: CellProbabilityPair
     path: ''
-    startLine: 1821
+    startLine: 1617
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
+  summary: "\ncontains weighted probability of world cell to be spawned on card\n"
+  example: []
   syntax:
-    content: public class CellProbabilityPair
-    content.vb: Public Class CellProbabilityPair
+    content: >-
+      [Serializable]
+
+      public class CellProbabilityPair
+    content.vb: >-
+      <Serializable>
+
+      Public Class CellProbabilityPair
   inheritance:
   - System.Object
   inheritedMembers:
@@ -34,6 +42,10 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -54,14 +66,14 @@ items:
   source:
     id: WorldCell
     path: ''
-    startLine: 1824
+    startLine: 1620
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
   syntax:
     content: public AbstractWorldCell WorldCell
     return:
-      type: Global.AbstractWorldCell
+      type: WorldCells.AbstractWorldCell
     content.vb: Public WorldCell As AbstractWorldCell
   modifiers.csharp:
   - public
@@ -81,7 +93,7 @@ items:
   source:
     id: ProbabilityWeight
     path: ''
-    startLine: 1825
+    startLine: 1621
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -392,11 +404,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.AbstractWorldCell
-  isExternal: true
+- uid: WorldCells.AbstractWorldCell
+  commentId: T:WorldCells.AbstractWorldCell
+  parent: WorldCells
   name: AbstractWorldCell
   nameWithType: AbstractWorldCell
-  fullName: AbstractWorldCell
+  fullName: WorldCells.AbstractWorldCell
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
 - uid: System.Single
   commentId: T:System.Single
   parent: System

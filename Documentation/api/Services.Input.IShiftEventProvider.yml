@@ -17,7 +17,7 @@ items:
   source:
     id: IShiftEventProvider
     path: ''
-    startLine: 2230
+    startLine: 2627
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -44,14 +44,14 @@ items:
   source:
     id: OnShiftUp
     path: ''
-    startLine: 2232
+    startLine: 2629
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
   syntax:
     content: event Action OnShiftUp
     return:
-      type: Global.Action
+      type: System.Action
     content.vb: Event OnShiftUp As Action
 - uid: Services.Input.IShiftEventProvider.OnShiftDown
   commentId: E:Services.Input.IShiftEventProvider.OnShiftDown
@@ -67,14 +67,14 @@ items:
   source:
     id: OnShiftDown
     path: ''
-    startLine: 2233
+    startLine: 2630
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
   syntax:
     content: event Action OnShiftDown
     return:
-      type: Global.Action
+      type: System.Action
     content.vb: Event OnShiftDown As Action
 references:
 - uid: Services.Input
@@ -82,8 +82,16 @@ references:
   name: Services.Input
   nameWithType: Services.Input
   fullName: Services.Input
-- uid: Global.Action
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
   isExternal: true
   name: Action
   nameWithType: Action
-  fullName: Action
+  fullName: System.Action
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

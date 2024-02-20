@@ -7,7 +7,7 @@ items:
   children:
   - Services.TowerBuilding.TowerBuildingService.#ctor(Services.TowerBuilding.TowerInstantiationService,Services.GridSystem.BattleGridService,AbstractInputService)
   - Services.TowerBuilding.TowerBuildingService._activeCard
-  - Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,Type)
+  - Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,System.Type)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   source:
     id: TowerBuildingService
     path: ''
-    startLine: 2275
+    startLine: 2672
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -55,7 +55,7 @@ items:
   source:
     id: _activeCard
     path: ''
-    startLine: 2277
+    startLine: 2674
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -82,7 +82,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2283
+    startLine: 2680
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -101,21 +101,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,Type)
-  commentId: M:Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,Type)
-  id: InstantiateTowerFromCard(TowerCard,Type)
+- uid: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,System.Type)
+  commentId: M:Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,System.Type)
+  id: InstantiateTowerFromCard(TowerCard,System.Type)
   parent: Services.TowerBuilding.TowerBuildingService
   langs:
   - csharp
   - vb
   name: InstantiateTowerFromCard(TowerCard, Type)
   nameWithType: TowerBuildingService.InstantiateTowerFromCard(TowerCard, Type)
-  fullName: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard, Type)
+  fullName: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard, System.Type)
   type: Method
   source:
     id: InstantiateTowerFromCard
     path: ''
-    startLine: 2289
+    startLine: 2686
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -125,7 +125,7 @@ items:
     - id: towerCard
       type: Global.TowerCard
     - id: type
-      type: Global.Type
+      type: System.Type
     content.vb: Public Sub InstantiateTowerFromCard(towerCard As TowerCard, type As Type)
   overload: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard*
   modifiers.csharp:
@@ -472,8 +472,10 @@ references:
   name: TowerCard
   nameWithType: TowerCard
   fullName: TowerCard
-- uid: Global.Type
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
   isExternal: true
   name: Type
   nameWithType: Type
-  fullName: Type
+  fullName: System.Type

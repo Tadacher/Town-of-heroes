@@ -76,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core.Towers.AbstractTower.html",
-          "hash": "wAwnHFVEw/4TKsS0LW9C/mpkDLrRomTML2fJP0kfMJQ="
+          "hash": "XoFv4/rVX6ZrLh60e2htKQEr3f9MPMepnSWxzgYRV2A="
         }
       },
       "is_incremental": false,
@@ -88,7 +88,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core.Towers.ArcherTower.html",
-          "hash": "/MOEYo0yhv8a9dECImmr1Dz82cLSSjGjjAtdVM4r9Bg="
+          "hash": "CZx2T9FcQqIqt3Q+Krx1XJRup8lzsIDgLweiFum6/SM="
         }
       },
       "is_incremental": false,
@@ -100,7 +100,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Core.Towers.ShrapnelCanonTower.html",
-          "hash": "gWFU5VPdOO1CCqQDVlMiXt3FjsjqLUYhSEg7FPtLfaU="
+          "hash": "VPqqEBp02INvZmwYgCeO41EkKsT4j08ninPCt7tYi0w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Core.Towers.TowerOfDeath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Core.Towers.TowerOfDeath.html",
+          "hash": "JIf00pUbkAp+jfkbGTs7zeYG4hqQQE6GYZBTYDFXFg8="
         }
       },
       "is_incremental": false,
@@ -112,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Core.Towers.html",
-          "hash": "uK8i82WgnvNeFVuKTnrj3DwFx+3Dhv5Hw2O5k9j4Ouk="
+          "hash": "FqMuNMVdRvwVqn8EVxsH9iMRV8X87OxyiKqILZpuzv0="
         }
       },
       "is_incremental": false,
@@ -144,11 +156,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.AbstractEnemy.yml",
+      "source_relative_path": "api/Global.AbstractDamageRecievingModule.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Global.AbstractEnemy.html",
-          "hash": "8L+CvAUjkfgoEQSqBv+EO1Qj0FzWXBxxWebXCH8bJZE="
+          "relative_path": "api/Global.AbstractDamageRecievingModule.html",
+          "hash": "kdPQShF2evIqSpIfaZdsenbhvnRGoTC+gWeNvDZzYAw="
         }
       },
       "is_incremental": false,
@@ -156,11 +168,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.AbstractHealthModule.yml",
+      "source_relative_path": "api/Global.AbstractEnemy.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Global.AbstractHealthModule.html",
-          "hash": "b9i2JobSHZ0nSdYSFKl/j+ylLEbvd6JMPcC4QV6N36s="
+          "relative_path": "api/Global.AbstractEnemy.html",
+          "hash": "On0ga8DnN0J9MgrmkINvEXpx/GJCg7oI7t3mxLgDUN4="
         }
       },
       "is_incremental": false,
@@ -172,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.AbstractInstantiationService-1.html",
-          "hash": "ddJA6IqMZnPAwSyoVMoGNO77oyB7zMrUlSZcdQMmVFo="
+          "hash": "t9y5hBZWBl5g+4GJIG9fg58KYzNPiyb9ln4H5bxPW3k="
         }
       },
       "is_incremental": false,
@@ -184,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.AbstractProjectileFactory.html",
-          "hash": "Gq7NBcOyNuaORydEmmNs9/YwMs+CyubicePpl3LAQnw="
+          "hash": "BcJJnGn1/7MVm1ogF8ahm7yQPrGzcTcW6ptmAB3JRCo="
         }
       },
       "is_incremental": false,
@@ -196,7 +208,31 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.BiomeToEnemyTypesPair.html",
-          "hash": "Hi0B2UHSbaMt9hXMmEqO9ykXJa0z8rquNCVJzZGXshk="
+          "hash": "P0kY6pzGAwRMXN24c2EaT+9KSw88fyKUeqsJhWrVMjE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.CardDescriptionService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.CardDescriptionService.html",
+          "hash": "JtXySYKFcr7OsOfxTBM+EJHY6NDf6ow48rcjYUWf73c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.CardInfoUIContainer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.CardInfoUIContainer.html",
+          "hash": "lZUBGpw+cb/IdCJei8CDx7H2ALdJw81h+Rx4g7lQ4e8="
         }
       },
       "is_incremental": false,
@@ -220,7 +256,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.DefaultHealthModule.html",
-          "hash": "41mktMUyy7K09MipHqdMG0V3vTHwWTppwrA/6O3DMx0="
+          "hash": "/mOFe1wVE7HKKcoEiFP2UlREF0vOQnrajRSZ+05usao="
         }
       },
       "is_incremental": false,
@@ -228,11 +264,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Global.DodgeHealthModule.yml",
+      "source_relative_path": "api/Global.DodgeDamageRecievingModule.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Global.DodgeHealthModule.html",
-          "hash": "2kbu9dRExPUZu0J/w3q4UOGDQrrkM7HMTOylubw4ezg="
+          "relative_path": "api/Global.DodgeDamageRecievingModule.html",
+          "hash": "sLPWAyXWvvEgix1qd9yZcCZxhFshmC6uY1La855/vp8="
         }
       },
       "is_incremental": false,
@@ -256,7 +292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.EnemyInstantiationService.html",
-          "hash": "xfSTwkCvwTl12YewYpqZQ9+0PafjwRVVccVmkdd3jiM="
+          "hash": "ZrlO969AF4L7pK5N0ykb2wm9F7L4P471SoWMHThTifI="
         }
       },
       "is_incremental": false,
@@ -280,7 +316,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.EnemySpawnPosMarker.html",
-          "hash": "Hdm0/AA5wUH6tHTQtF+KaK4/P5013+I3DsfZQqaQpzI="
+          "hash": "JuueuU/xf6bv6tXq/YajjEhQVVsDGQeA3o/bjU24Qf0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.EnemyStats.WeightToEnemyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.EnemyStats.WeightToEnemyType.html",
+          "hash": "X/TPRDK4lPIk7ru76sB0XtoCaWf2puAeLtQkwXg93OQ="
         }
       },
       "is_incremental": false,
@@ -292,7 +340,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.EnemyStats.html",
-          "hash": "tsGTxgX0afH9/lq6dRGKbLRADXifYpToXg+91UDPmDM="
+          "hash": "9vHWNLnoIrqSfZoz8YfDbpyAhHJgIuL8rRGHV8ycuz8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.EnemyType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.EnemyType.html",
+          "hash": "qBfpsde+bLYkRVkUgDIK/jDLFu7L+0jIzwzxl6VRiSw="
         }
       },
       "is_incremental": false,
@@ -304,7 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.EnemyTypeService.html",
-          "hash": "8vbWxuOZ5Vzj0MXrpKEoBOVNiE/dMbBWre5eXsoAiPc="
+          "hash": "hxV/3FY3nc4FPasKsMKK+rXo78b4lIVCDIGw7DzdUDM="
         }
       },
       "is_incremental": false,
@@ -316,19 +376,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.EnemyTypeToBiomeSettings.html",
-          "hash": "sAwvffmWKiU4/8ql2MIBal7sjxqpO42hLLBBR/C6b+M="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Global.EnemyTypes.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Global.EnemyTypes.html",
-          "hash": "bgW+j1GaJmJEmYmydKXK4Ye6ngG2n1VmwBtOT47Ql/g="
+          "hash": "uUHWHjjw/D2+1Jzy+1frnAAVDrE0MraLhkpN76LrVa8="
         }
       },
       "is_incremental": false,
@@ -340,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.EnemytypeToWeightPair.html",
-          "hash": "qBeD55IYwS7GZNhXCrBUOHF06tWxkbD4sZIPgmVz464="
+          "hash": "pfDjeOYOCq5mrMZSiqzecnTlQWwvDqJtsJWUsYDywvY="
         }
       },
       "is_incremental": false,
@@ -364,7 +412,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Gobbo.html",
-          "hash": "6MYT99BZKq68a2mf7hM6Ye/Ia9qWZqRBvUaR4e1/P3s="
+          "hash": "aLVIos/PiqW2L87a5dwj6ropkofpI31oHWpWQ1NjSHQ="
         }
       },
       "is_incremental": false,
@@ -376,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.GobboTrapper.html",
-          "hash": "rX0CvzGqoiMagrLV0jWAvEZzPKvqmn/FH9X3X3fgrSo="
+          "hash": "B98cZ3QeJz7pOoBzMD9Hx2QPY0cgPGLtouYDQt3DwI0="
         }
       },
       "is_incremental": false,
@@ -520,7 +568,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.ProjectileBehaviour.html",
-          "hash": "EFqcN+lqWaPC1tTqtLUs68T1//SBXkIEGdAccQU3YlI="
+          "hash": "ZBqp4sNi6LBVgYGcR2kNks2qqQQeXVs3Znv/lb76yc0="
         }
       },
       "is_incremental": false,
@@ -532,7 +580,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.SimpleProjectileFactory.html",
-          "hash": "FpqbUMS0ehrEPKdVh+kT7kv5bseylHkC6EmFXWB9oNM="
+          "hash": "R7NoyBnKPQ/PGSneCR12P8iU1mn2hnpmwMgTux9hp/Y="
         }
       },
       "is_incremental": false,
@@ -552,11 +600,35 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Global.Skeleton.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.Skeleton.html",
+          "hash": "dsNA1b6yJA74KmpHVA8OvQIoCgFjGqMmJTmzFvnXqtU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Global.TowerCard.yml",
       "output": {
         ".html": {
           "relative_path": "api/Global.TowerCard.html",
-          "hash": "oPIe+uF95Vxd5emnqM6V0g5qu34fNmSoBcQwJ/RCRaU="
+          "hash": "yedTbEq101LhNPvL+mpfBhCKWY+m3zlL/x1QB8Cle+g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.TowerCardInfoConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.TowerCardInfoConfig.html",
+          "hash": "Zqo704Un2ahvmAJi8ehhYwYexT9ydP7eWNnxGmcPThs="
         }
       },
       "is_incremental": false,
@@ -592,7 +664,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.Wave.html",
-          "hash": "HsKWGdHdTY8gGiZRYxyVKBiywG8WTl/JdMGO6TJUpxM="
+          "hash": "IXHGRdpjpnJZ1n4umH4gophhKEb/oA46Zw++x7VLsLY="
         }
       },
       "is_incremental": false,
@@ -604,7 +676,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.WaveGenerator.html",
-          "hash": "YzjvtFCa64TI/uWRJCHfD/dxyEiQuCEkjJiOyzQBmGU="
+          "hash": "PQCpYNGNQRyfagbA5/CIFblZRNnlB/1c6JT161XL1QM="
         }
       },
       "is_incremental": false,
@@ -616,7 +688,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.WaveService.html",
-          "hash": "ZXmgBVhmhbgy0n1haX4Xd8m2O5Q2+yVSkYbeddL7aGk="
+          "hash": "LQKDpl/61HBcbZFit5hwYFlnWfCC+j67Wdew8HyANPU="
         }
       },
       "is_incremental": false,
@@ -628,7 +700,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.WorldCellBuildingService.html",
-          "hash": "c8YkgRq5bpnDnaWXAPXkQgwLrT2NStv5n6+jqpoDWvw="
+          "hash": "eav3bImmaWGObbSHznD+nSeWsDyVAf330ap8OLrDhCY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Global.WorldCellCardInfoConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Global.WorldCellCardInfoConfig.html",
+          "hash": "qffJF4Iodgseio6NNKqYXbvVdk7zcBruJdhGdz3D5/s="
         }
       },
       "is_incremental": false,
@@ -640,7 +724,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.WorldCellInstantiationService.html",
-          "hash": "hMPcfErHeMpGOdmigevdSPVlJfwBDTsVhrJEkHqjKPc="
+          "hash": "L2V5bOvIsC/ZAbfk6V8RwLBnXOiUQR2nxL4NapHACk0="
         }
       },
       "is_incremental": false,
@@ -652,7 +736,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Global.html",
-          "hash": "tgWzJL0HsmNqBJi9vbovx+p/vEPITTJwlKs/ZxI3p18="
+          "hash": "+823whoNqHAJCv22L8Wb+3+lpk7EGCW8I4bKw75uYYg="
         }
       },
       "is_incremental": false,
@@ -676,7 +760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Infrastructure.AbstractStateMachine.html",
-          "hash": "XaRQRl7H1kpRE39JhnGoRh9o9ZqRSLGWUIZVNi9h7bs="
+          "hash": "rpcFMSItV8zT0MS1W9IH/HrWkxDC4uucaFwFijZ6cq8="
         }
       },
       "is_incremental": false,
@@ -772,7 +856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Infrastructure.GameplayStateMachine.html",
-          "hash": "yFTLDRRW8cthvSlpNaT5lK9uHEK31HpK6ecxN/rJCPk="
+          "hash": "f5rWMljuWkcwy8LFFXf8rJ/6h5OpclO6dtxFP4zWLzM="
         }
       },
       "is_incremental": false,
@@ -880,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Infrastructure.SceneLoaderService.html",
-          "hash": "s1hVzCDt8iHL40pXcNoM5lF6tak2Cy44jHy0ncKbzT4="
+          "hash": "n15Z4DhFM0VhoLjJVfKhMMYFvj5uh7tlZRSGndEVB20="
         }
       },
       "is_incremental": false,
@@ -976,7 +1060,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.CardGeneration.CardInstantiationService.html",
-          "hash": "FGCkSyLuXyBTifWp5Vt3tPb9NQTCYeb27rehArshPnY="
+          "hash": "8zYDgOa2fsSia79HmNkduV4Fnv1wM1SID9NCgGGxFZg="
         }
       },
       "is_incremental": false,
@@ -988,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.CardGeneration.CellProbabilityPair.html",
-          "hash": "o30V3d3B5e3tSR1fsMQ5Cc8HKVBJb1nV3KxONbFWaWo="
+          "hash": "Pm88Eka8K9fadSj9Bawev4ejZmOWXWYAp5TM+yPu2WM="
         }
       },
       "is_incremental": false,
@@ -1000,7 +1084,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.CardGeneration.CellStats.html",
-          "hash": "cP/vHp2DdKNAI0EChGVJzPjua0+HnvYZBZYDQZTppaE="
+          "hash": "JHhgn8cDL/roJaa5aOdxiI2xwglxwvNPrurB8kVdsjo="
         }
       },
       "is_incremental": false,
@@ -1012,7 +1096,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.CardGeneration.TowerCardFactory.html",
-          "hash": "ctm7JdpTwigZhkBEReFkX4MMI74LQtNaUJIyZxJw/24="
+          "hash": "0o4xNIt6dOst4krkU3r43kx/B9O+tPOgE53o2wNViY0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Services.CardGeneration.TowerImageDatabase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Services.CardGeneration.TowerImageDatabase.html",
+          "hash": "7Cuk4ae7V2HxAMpTHnNhkCsTq0gc66PJdfYFbRr1Bmg="
         }
       },
       "is_incremental": false,
@@ -1024,7 +1120,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.CardGeneration.TowerToWorldCellPair.html",
-          "hash": "ZNW7JvuesAwDCa6nNi+wTWBP7Y5RgARQUojIPiF4NbQ="
+          "hash": "m56115sxLe+gCGG1AscYmT6yynSMB6kz2QihOGDp92s="
         }
       },
       "is_incremental": false,
@@ -1036,7 +1132,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.CardGeneration.WorldCellCardGenerator.html",
-          "hash": "O9qUdn5g5pQ3FKG2usPyRACawH9t9Of71i9EJ4wy2a4="
+          "hash": "WNN84Eje53Nja4OWX4Hs4OgHLpiNr97mNthsEP59e5g="
         }
       },
       "is_incremental": false,
@@ -1048,7 +1144,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.CardGeneration.WorldCellCardsConfig.html",
-          "hash": "00gUS8kJEq37Bm+tTF4Q1CS99Fsf33ev8YzVVu8Xr6Y="
+          "hash": "BsFTKAylYFBn6//DeowaYjEX6qODDXa05xTJntLcRTs="
         }
       },
       "is_incremental": false,
@@ -1060,7 +1156,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.CardGeneration.html",
-          "hash": "JMO0esyu27rKcGpbJYb74Sq7jrESPPqzioEBPHZLRmM="
+          "hash": "OT09U5wpf68L+Q5uEXuafJcu3yKxhWCIhBmDMPFf4Tk="
         }
       },
       "is_incremental": false,
@@ -1108,7 +1204,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.Factories.WorldCellFactory.html",
-          "hash": "UXsqHMjl/KOlWoNgrAPWwTByjAaXDa7CyEiimJSSWLc="
+          "hash": "suhKJbT+BEdrl5h4qU8uhZFfBRpncEkjW5RpSm147Uk="
         }
       },
       "is_incremental": false,
@@ -1228,7 +1324,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.Input.AbstractInputService.html",
-          "hash": "hlqRQIFYBspZd9wg7jtpopoMBmfpf4vqVTUZ1bKPmaI="
+          "hash": "6FrwxNAhqHO8bVokzNciMrhsRDs/R8H9nr6+LuxiCyo="
         }
       },
       "is_incremental": false,
@@ -1240,7 +1336,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.Input.DesctopInput.html",
-          "hash": "stAqVIihG4QrZwP3fCEMDpRrA9VjzsTtTNjE+g6PU8I="
+          "hash": "mx3jrkFX5f6qrVdLZBjJObKl7CrweJUUfX8Mq1BoOXc="
         }
       },
       "is_incremental": false,
@@ -1264,7 +1360,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.Input.IShiftEventProvider.html",
-          "hash": "jXRW2hC8jRPWf8tqVahWuUpl2TPQQlH2j4ru/sABvVY="
+          "hash": "l0JOZEbh+U+cGW/jowyLVlJ0QQsjqmvIxV2w2oN6YLc="
         }
       },
       "is_incremental": false,
@@ -1300,7 +1396,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.TowerBuilding.TowerBuildingService.html",
-          "hash": "fw2VBckE5Dwg1pTZu4xd7V41jouOmlpw69y/bwqzYRc="
+          "hash": "X+6WiSysXph+ZuH9SUw3R8utjxya/T/SutAYlIGZtlE="
         }
       },
       "is_incremental": false,
@@ -1312,7 +1408,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.TowerBuilding.TowerInstantiationService.html",
-          "hash": "Qgr+MkQb+p4d1spkgsSb/fy/RAxXGDXVzYqhUkgF6Ew="
+          "hash": "rXnTF8MolorxnfV3npOKkPMu0I/jpEYj83R+CbdIwDU="
         }
       },
       "is_incremental": false,
@@ -1325,6 +1421,18 @@
         ".html": {
           "relative_path": "api/Services.TowerBuilding.html",
           "hash": "iqEV0Wm9tiZ09Q0QGjxYN4YD2G1inF/OrKuBZYvkSfE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Services.Ui.CardInfoUiService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Services.Ui.CardInfoUiService.html",
+          "hash": "ixMoFl7ElbKjHhPri5KjvfoTOfG6sMcY6pK8Ga/Yn6I="
         }
       },
       "is_incremental": false,
@@ -1360,7 +1468,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Services.Ui.html",
-          "hash": "OxLPIxyjikiThuf2/s6BJmSb7sEDq5AH8R1sVk/VBow="
+          "hash": "gwn48GQxNOGZnYg905oUqhy4l+MZQEldZ/7koHm1raY="
         }
       },
       "is_incremental": false,
@@ -1373,6 +1481,42 @@
         ".html": {
           "relative_path": "api/Services.html",
           "hash": "kOOymz9wPZIoMLSEdzL8jBCYyWaSb0MRJtt2JsPxB4s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TowerCards.CardDatabase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TowerCards.CardDatabase.html",
+          "hash": "JLmLD1rsDYeFFi5Uvw8Kc6azTTZEQ2eCVuXX5+UKw3Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TowerCards.DeckService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TowerCards.DeckService.html",
+          "hash": "bgJ51hQ+UTtMfnTkTbvqLUjfCyv8bXRohjM7elKp6oU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TowerCards.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TowerCards.html",
+          "hash": "Fs71pvhdCmou/AmID/W3GxX3VcBjUGxZmNIRVbhE1nM="
         }
       },
       "is_incremental": false,
@@ -1420,7 +1564,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WorldCellBuilding.CardImage.CardImageDatabase.html",
-          "hash": "kK34J3fJJ/5mCM2D4Wty0RgvLLaNqm6s+0bnPgdQX84="
+          "hash": "gxnvnOIjpLfHrH1r3Du8eLWY+YySDAMtr1ecruHg+I0="
         }
       },
       "is_incremental": false,
@@ -1444,7 +1588,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WorldCellBuilding.CardImage.html",
-          "hash": "X5+lSVizRm8U1jBnj8WH0VLM5sBBbwH4GII5/y8Y7DM="
+          "hash": "5oyO/6w0wKvXHkQE94IeYaGJ+9+HgkDrWImEuHVJcVE="
         }
       },
       "is_incremental": false,
@@ -1456,7 +1600,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WorldCells.AbstractWorldCell.html",
-          "hash": "46VCCaoeXv+piSLG1FIAZsmsUdzTPYTXSbXyZuYkW1U="
+          "hash": "3t4kx6DHXx8kWuu8wbDtO6KUK3kmSzTJLtx/vNMl1sQ="
         }
       },
       "is_incremental": false,
@@ -1468,7 +1612,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WorldCells.CellBiomeTypes.html",
-          "hash": "VOkDDGRZH0dhytI4mLweXYEx0tuPqalKtg0dge8mms8="
+          "hash": "s0Rh4qxZLqj/to5TbSMxJGWPFJ+WGXCW7tafP0Jz1R4="
         }
       },
       "is_incremental": false,
@@ -1481,6 +1625,18 @@
         ".html": {
           "relative_path": "api/WorldCells.GrassMeadows.html",
           "hash": "VgMIEDVx1g+8ksZhHWKimMNM0wwLm4TCwR28e29O6KM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WorldCells.GraveYard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WorldCells.GraveYard.html",
+          "hash": "o4HREcXDkJJaOZI5rFU9WldGTRhaaed2Ooz7NZsfanU="
         }
       },
       "is_incremental": false,
@@ -1504,7 +1660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/WorldCells.html",
-          "hash": "Ppp3/jtauiiLvS0W88teCMw1ZHBHiL8eKEK5/1m94j0="
+          "hash": "lX5ZUOiPzMMyUxM0ZDTy8hfbeZSWQFXKM9VFHC+Kdvk="
         }
       },
       "is_incremental": false,
@@ -1516,7 +1672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "C71JBnnknGEQhHAkGv4iKXY4gQhGUS8fN/2bIzrRAxs="
+          "hash": "ziVx5uaA/pf/B3SCMvGwwvnO0T00qYx28zrl6Q9QHnk="
         }
       },
       "is_incremental": false,
@@ -1611,8 +1767,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 124,
-          "skipped_file_count": 1
+          "total_file_count": 137,
+          "skipped_file_count": 13
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

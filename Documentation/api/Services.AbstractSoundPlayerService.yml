@@ -17,7 +17,7 @@ items:
   source:
     id: AbstractSoundPlayerService
     path: ''
-    startLine: 2245
+    startLine: 2642
   assemblies:
   - cs.temp.dll
   namespace: Services
@@ -58,7 +58,7 @@ items:
   source:
     id: _audioSource
     path: ''
-    startLine: 2247
+    startLine: 2644
   assemblies:
   - cs.temp.dll
   namespace: Services
@@ -85,7 +85,7 @@ items:
   source:
     id: PlayOneShot
     path: ''
-    startLine: 2249
+    startLine: 2646
   assemblies:
   - cs.temp.dll
   namespace: Services

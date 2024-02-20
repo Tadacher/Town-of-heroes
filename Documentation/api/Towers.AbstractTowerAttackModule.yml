@@ -16,7 +16,7 @@ items:
   source:
     id: AbstractTowerAttackModule
     path: ''
-    startLine: 3182
+    startLine: 3619
   assemblies:
   - cs.temp.dll
   namespace: Towers
@@ -57,7 +57,7 @@ items:
   source:
     id: DealDamage
     path: ''
-    startLine: 3184
+    startLine: 3621
   assemblies:
   - cs.temp.dll
   namespace: Towers

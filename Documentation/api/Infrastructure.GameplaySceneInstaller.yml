@@ -16,7 +16,7 @@ items:
   source:
     id: GameplaySceneInstaller
     path: ''
-    startLine: 380
+    startLine: 418
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -58,7 +58,7 @@ items:
   source:
     id: InstallBindings
     path: ''
-    startLine: 397
+    startLine: 441
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure

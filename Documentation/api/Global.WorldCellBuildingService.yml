@@ -11,7 +11,7 @@ items:
   - Global.WorldCellBuildingService._alignerService
   - Global.WorldCellBuildingService._inputService
   - Global.WorldCellBuildingService._instantiatingService
-  - Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,Type)
+  - Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,System.Type)
   langs:
   - csharp
   - vb
@@ -22,7 +22,7 @@ items:
   source:
     id: WorldCellBuildingService
     path: ''
-    startLine: 2785
+    startLine: 3201
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -59,7 +59,7 @@ items:
   source:
     id: _activeCard
     path: ''
-    startLine: 2787
+    startLine: 3203
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -86,7 +86,7 @@ items:
   source:
     id: _instantiatingService
     path: ''
-    startLine: 2788
+    startLine: 3204
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -113,7 +113,7 @@ items:
   source:
     id: _alignerService
     path: ''
-    startLine: 2789
+    startLine: 3205
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -140,7 +140,7 @@ items:
   source:
     id: _inputService
     path: ''
-    startLine: 2791
+    startLine: 3207
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -167,14 +167,14 @@ items:
   source:
     id: _activeCell
     path: ''
-    startLine: 2794
+    startLine: 3210
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
     content: protected AbstractWorldCell _activeCell
     return:
-      type: Global.AbstractWorldCell
+      type: WorldCells.AbstractWorldCell
     content.vb: Protected _activeCell As AbstractWorldCell
   modifiers.csharp:
   - protected
@@ -194,7 +194,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2796
+    startLine: 3212
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -213,21 +213,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,Type)
-  commentId: M:Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,Type)
-  id: InstantiateWorldCellFromCard(TowerCard,Type)
+- uid: Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,System.Type)
+  commentId: M:Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,System.Type)
+  id: InstantiateWorldCellFromCard(TowerCard,System.Type)
   parent: Global.WorldCellBuildingService
   langs:
   - csharp
   - vb
   name: InstantiateWorldCellFromCard(TowerCard, Type)
   nameWithType: WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard, Type)
-  fullName: WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard, Type)
+  fullName: WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard, System.Type)
   type: Method
   source:
     id: InstantiateWorldCellFromCard
     path: ''
-    startLine: 2823
+    startLine: 3239
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -237,7 +237,7 @@ items:
     - id: towerCard
       type: Global.TowerCard
     - id: worldCellType
-      type: Global.Type
+      type: System.Type
     content.vb: Public Sub InstantiateWorldCellFromCard(towerCard As TowerCard, worldCellType As Type)
   overload: Global.WorldCellBuildingService.InstantiateWorldCellFromCard*
   modifiers.csharp:
@@ -564,11 +564,17 @@ references:
   name: AbstractInputService
   nameWithType: AbstractInputService
   fullName: AbstractInputService
-- uid: Global.AbstractWorldCell
-  isExternal: true
+- uid: WorldCells.AbstractWorldCell
+  commentId: T:WorldCells.AbstractWorldCell
+  parent: WorldCells
   name: AbstractWorldCell
   nameWithType: AbstractWorldCell
-  fullName: AbstractWorldCell
+  fullName: WorldCells.AbstractWorldCell
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
 - uid: Global.WorldCellBuildingService.#ctor*
   commentId: Overload:Global.WorldCellBuildingService.#ctor
   name: WorldCellBuildingService
@@ -584,8 +590,10 @@ references:
   name: TowerCard
   nameWithType: TowerCard
   fullName: TowerCard
-- uid: Global.Type
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
   isExternal: true
   name: Type
   nameWithType: Type
-  fullName: Type
+  fullName: System.Type

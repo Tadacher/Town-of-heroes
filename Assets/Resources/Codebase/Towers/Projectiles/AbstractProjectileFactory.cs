@@ -11,7 +11,6 @@ public abstract class AbstractProjectileFactory
 
     public ProjectileBehaviour ReturnProjectile(float speed, Transform target, Vector3 initialPos, Action ontargetReached)
     {
-        Debug.Log(_projectilePool.Count);
         foreach (ProjectileBehaviour projectileBehaviour in _projectilePool)
         {
             if (!projectileBehaviour.gameObject.activeSelf)

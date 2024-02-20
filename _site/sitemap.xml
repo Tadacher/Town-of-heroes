@@ -2,757 +2,835 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/BootStrap.SceneBootstrapper.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/BootStrap.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Codebase.MonobehaviourComponents.TowerCardSpawnMarker.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Codebase.MonobehaviourComponents.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Core.Towers.AbstractTower.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Core.Towers.ArcherTower.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Core.Towers.ShrapnelCanonTower.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Core.Towers.TowerOfDeath.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Core.Towers.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Debugtools.DebugInput.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Debugtools.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.AbstractDamageRecievingModule.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.AbstractEnemy.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.AbstractHealthModule.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.AbstractInstantiationService-1.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.AbstractProjectileFactory.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.BiomeToEnemyTypesPair.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.CardDescriptionService.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.CardInfoUIContainer.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.DamageText.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.DefaultHealthModule.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.DodgeHealthModule.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.DodgeDamageRecievingModule.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyFactory.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyInstantiationService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyPrefabContainer.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemySpawnPosMarker.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyStats.WeightToEnemyType.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyStats.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyTypes.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyType.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyTypeService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemyTypeToBiomeSettings.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EnemytypeToWeightPair.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.EventContainer.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.Gobbo.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.GobboTrapper.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.ICommonAttacker.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.IExpReciever.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.IFactory-1.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.IHitpointOwner.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.IMowementModuleOwner.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.IObjectPooler.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.IPoolableObject.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.MapGenerator.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.PathfindingAlgorhytm.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.PointerFollower.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.PopupOnPointerEnter.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.ProjectileBehaviour.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.SimpleProjectileFactory.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.SimpleTowerAttackModule.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.Skeleton.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.TowerCard.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.TowerCardInfoConfig.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.TowerFactory.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.TowerStats.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.Wave.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.WaveGenerator.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.WaveService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.WorldCellBuildingService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.WorldCellCardInfoConfig.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.WorldCellInstantiationService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Global.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.AbstractMonoInstaller.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.AbstractStateMachine.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.BattleField.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.BootstrapInstaller.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.BootstrapState.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.CameraPositionService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.CoroutineProcessorService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.GameplaySceneInstaller.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.GameplayStateMachine.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.GameStateMachine.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.ICoroutineRunner.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.IExitableState.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.InputReciever.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.IPayloadedState-1.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.IState.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.LoadLevelState.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.MainCameraMarker.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.Map.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.SceneLoaderService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.UiButtonBinder.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.UiService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Infrastructure.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/MovementModules.AbstractMovementModule.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/MovementModules.StraightMovementModule.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/MovementModules.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.AbstractSoundPlayerService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.CardInstantiationService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.CellProbabilityPair.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.CellStats.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.TowerCardFactory.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.TowerImageDatabase.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.TowerToWorldCellPair.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.WorldCellCardGenerator.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.WorldCellCardsConfig.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.CardGeneration.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.DamageTextService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Factories.AbstractPoolerFactory-1.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Factories.MonobehaviourAbstractPoolerFactory-1.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Factories.WorldCellFactory.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Factories.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.GameTimeService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.GlobalMap.WorldCellGridService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.GlobalMap.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.GridSystem.AbstractGridService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.GridSystem.BattleGridService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.GridSystem.IGridCellObject.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.GridSystem.RoadCell.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.GridSystem.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Input.AbstractInputService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Input.DesctopInput.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Input.IPointerEventListener.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Input.IShiftEventProvider.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Input.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.SimpleSoundPlayerService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.TowerBuilding.TowerBuildingService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.TowerBuilding.TowerInstantiationService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.TowerBuilding.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Ui.CardInfoUiService.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Ui.GameplayCanvasContainer.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Ui.MapCanvasContainer.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.Ui.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Services.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/TowerCards.CardDatabase.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/TowerCards.DeckService.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/TowerCards.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Towers.AbstractTowerAttackModule.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Towers.ShrapnelTowerAttakModule.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/Towers.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCellBuilding.CardImage.CardImageDatabase.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCellBuilding.CardImage.ImageDatabase.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCellBuilding.CardImage.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCells.AbstractWorldCell.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCells.CellBiomeTypes.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCells.GrassMeadows.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCells.GraveYard.html</loc>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCells.WorldCellBalanceService.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/api/WorldCells.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/manual/coniunctis.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://normanderwan.github.io/DocFxForUnity/manual/etiam.html</loc>
-    <lastmod>2024-02-02T09:54:37+04:00</lastmod>
+    <lastmod>2024-02-19T06:19:23+04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

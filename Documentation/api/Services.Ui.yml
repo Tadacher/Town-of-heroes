@@ -4,6 +4,7 @@ items:
   commentId: N:Services.Ui
   id: Services.Ui
   children:
+  - Services.Ui.CardInfoUiService
   - Services.Ui.GameplayCanvasContainer
   - Services.Ui.MapCanvasContainer
   langs:
@@ -16,6 +17,11 @@ items:
   assemblies:
   - cs.temp.dll
 references:
+- uid: Services.Ui.CardInfoUiService
+  commentId: T:Services.Ui.CardInfoUiService
+  name: CardInfoUiService
+  nameWithType: CardInfoUiService
+  fullName: Services.Ui.CardInfoUiService
 - uid: Services.Ui.GameplayCanvasContainer
   commentId: T:Services.Ui.GameplayCanvasContainer
   name: GameplayCanvasContainer

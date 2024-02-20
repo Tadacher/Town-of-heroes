@@ -16,7 +16,7 @@ items:
   source:
     id: DamageText
     path: ''
-    startLine: 728
+    startLine: 874
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -47,7 +47,7 @@ items:
   source:
     id: Initialize
     path: ''
-    startLine: 733
+    startLine: 879
   assemblies:
   - cs.temp.dll
   namespace: Global

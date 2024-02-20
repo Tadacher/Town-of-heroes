@@ -32,16 +32,20 @@ namespace Infrastructure
         [SerializeField] private WorldCellCardsConfig _worldCellCardsConfig;
         [SerializeField] private EnemyTypeToBiomeSettings _enemyTypeToBiomeSettings;
         [SerializeField] private CardImageDatabase _cardImageDatabase;
+        [SerializeField] private TowerImageDatabase _towerImageDatabase;
 
 
         public override void InstallBindings()
         {
+            //переместить в foreach для T : ScriptqableObject
             //ScriptableObjects
             BindScriptableObject(_enemyPrefabContainer);
             BindScriptableObject(_worldCellCardsConfig);
             BindScriptableObject(_enemyTypeToBiomeSettings);
             BindScriptableObject(_cardImageDatabase);
-            
+            BindScriptableObject(_towerImageDatabase);
+            _cardImageDatabase.Initialize();
+            _towerImageDatabase.Initialize();
 
             //Unity components
             BindUnityComponent(_audioSource);
@@ -65,9 +69,12 @@ namespace Infrastructure
 
             //cards
             BindService<CardInstantiationService>().NonLazy();
+            BindService<CardGenerationService>();
+            BindService<CardDeckService>();
             BindService<WorldCellCardGenerator>();
             BindService<CardDescriptionService>();
             BindService<CardInfoUiService>();
+
             //worldCells
             BindService<WorldCellInstantiationService>();
             BindService<WorldCellGridService>();
@@ -76,6 +83,8 @@ namespace Infrastructure
 
             //enemy waves
             BindService<WaveService>();
+            BindService<WaveGenerator>();
+            BindService<EnemyInstantiationService>();
             BindService<EnemyTypeService>();
 
             BindService<CameraPositionService>();

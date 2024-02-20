@@ -1,143 +1,143 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Global.EnemyTypes
-  commentId: T:Global.EnemyTypes
-  id: EnemyTypes
+- uid: Global.EnemyType
+  commentId: T:Global.EnemyType
+  id: EnemyType
   parent: Global
   children:
-  - Global.EnemyTypes.Goblin
-  - Global.EnemyTypes.Greenskin
-  - Global.EnemyTypes.Orc
-  - Global.EnemyTypes.Undead
+  - Global.EnemyType.Goblin
+  - Global.EnemyType.Greenskin
+  - Global.EnemyType.Orc
+  - Global.EnemyType.Undead
   langs:
   - csharp
   - vb
-  name: EnemyTypes
-  nameWithType: EnemyTypes
-  fullName: EnemyTypes
+  name: EnemyType
+  nameWithType: EnemyType
+  fullName: EnemyType
   type: Enum
   source:
-    id: EnemyTypes
+    id: EnemyType
     path: ''
-    startLine: 2576
+    startLine: 2987
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public enum EnemyTypes
-    content.vb: Public Enum EnemyTypes
+    content: public enum EnemyType
+    content.vb: Public Enum EnemyType
   modifiers.csharp:
   - public
   - enum
   modifiers.vb:
   - Public
   - Enum
-- uid: Global.EnemyTypes.Goblin
-  commentId: F:Global.EnemyTypes.Goblin
+- uid: Global.EnemyType.Goblin
+  commentId: F:Global.EnemyType.Goblin
   id: Goblin
-  parent: Global.EnemyTypes
+  parent: Global.EnemyType
   langs:
   - csharp
   - vb
   name: Goblin
-  nameWithType: EnemyTypes.Goblin
-  fullName: EnemyTypes.Goblin
+  nameWithType: EnemyType.Goblin
+  fullName: EnemyType.Goblin
   type: Field
   source:
     id: Goblin
     path: ''
-    startLine: 2578
+    startLine: 2989
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
     content: Goblin = 0
     return:
-      type: Global.EnemyTypes
+      type: Global.EnemyType
   modifiers.csharp:
   - public
   - const
   modifiers.vb:
   - Public
   - Const
-- uid: Global.EnemyTypes.Orc
-  commentId: F:Global.EnemyTypes.Orc
+- uid: Global.EnemyType.Orc
+  commentId: F:Global.EnemyType.Orc
   id: Orc
-  parent: Global.EnemyTypes
+  parent: Global.EnemyType
   langs:
   - csharp
   - vb
   name: Orc
-  nameWithType: EnemyTypes.Orc
-  fullName: EnemyTypes.Orc
+  nameWithType: EnemyType.Orc
+  fullName: EnemyType.Orc
   type: Field
   source:
     id: Orc
     path: ''
-    startLine: 2579
+    startLine: 2990
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
     content: Orc = 1
     return:
-      type: Global.EnemyTypes
+      type: Global.EnemyType
   modifiers.csharp:
   - public
   - const
   modifiers.vb:
   - Public
   - Const
-- uid: Global.EnemyTypes.Greenskin
-  commentId: F:Global.EnemyTypes.Greenskin
+- uid: Global.EnemyType.Greenskin
+  commentId: F:Global.EnemyType.Greenskin
   id: Greenskin
-  parent: Global.EnemyTypes
+  parent: Global.EnemyType
   langs:
   - csharp
   - vb
   name: Greenskin
-  nameWithType: EnemyTypes.Greenskin
-  fullName: EnemyTypes.Greenskin
+  nameWithType: EnemyType.Greenskin
+  fullName: EnemyType.Greenskin
   type: Field
   source:
     id: Greenskin
     path: ''
-    startLine: 2580
+    startLine: 2991
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
     content: Greenskin = 2
     return:
-      type: Global.EnemyTypes
+      type: Global.EnemyType
   modifiers.csharp:
   - public
   - const
   modifiers.vb:
   - Public
   - Const
-- uid: Global.EnemyTypes.Undead
-  commentId: F:Global.EnemyTypes.Undead
+- uid: Global.EnemyType.Undead
+  commentId: F:Global.EnemyType.Undead
   id: Undead
-  parent: Global.EnemyTypes
+  parent: Global.EnemyType
   langs:
   - csharp
   - vb
   name: Undead
-  nameWithType: EnemyTypes.Undead
-  fullName: EnemyTypes.Undead
+  nameWithType: EnemyType.Undead
+  fullName: EnemyType.Undead
   type: Field
   source:
     id: Undead
     path: ''
-    startLine: 2581
+    startLine: 2992
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
     content: Undead = 3
     return:
-      type: Global.EnemyTypes
+      type: Global.EnemyType
   modifiers.csharp:
   - public
   - const
@@ -152,8 +152,8 @@ references:
   nameWithType.vb: ''
   fullName.vb: ''
   name.vb: ''
-- uid: Global.EnemyTypes
-  commentId: T:Global.EnemyTypes
-  name: EnemyTypes
-  nameWithType: EnemyTypes
-  fullName: EnemyTypes
+- uid: Global.EnemyType
+  commentId: T:Global.EnemyType
+  name: EnemyType
+  nameWithType: EnemyType
+  fullName: EnemyType

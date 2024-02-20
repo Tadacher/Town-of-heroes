@@ -166,6 +166,19 @@ references:
   isSpec: "True"
   fullName: Core.Towers.AbstractTower.Attack
   nameWithType: AbstractTower.Attack
+- uid: Core.Towers.AbstractTower.Awake
+  name: Awake()
+  href: api/Core.Towers.AbstractTower.html#Core_Towers_AbstractTower_Awake
+  commentId: M:Core.Towers.AbstractTower.Awake
+  fullName: Core.Towers.AbstractTower.Awake()
+  nameWithType: AbstractTower.Awake()
+- uid: Core.Towers.AbstractTower.Awake*
+  name: Awake
+  href: api/Core.Towers.AbstractTower.html#Core_Towers_AbstractTower_Awake_
+  commentId: Overload:Core.Towers.AbstractTower.Awake
+  isSpec: "True"
+  fullName: Core.Towers.AbstractTower.Awake
+  nameWithType: AbstractTower.Awake
 - uid: Core.Towers.AbstractTower.CountAttackDelay
   name: CountAttackDelay()
   href: api/Core.Towers.AbstractTower.html#Core_Towers_AbstractTower_CountAttackDelay
@@ -474,19 +487,6 @@ references:
   isSpec: "True"
   fullName: Core.Towers.ArcherTower.Attack
   nameWithType: ArcherTower.Attack
-- uid: Core.Towers.ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
-  name: InitializeProjectileFactory(ProjectileBehaviour)
-  href: api/Core.Towers.ArcherTower.html#Core_Towers_ArcherTower_InitializeProjectileFactory_ProjectileBehaviour_
-  commentId: M:Core.Towers.ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
-  fullName: Core.Towers.ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
-  nameWithType: ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
-- uid: Core.Towers.ArcherTower.InitializeProjectileFactory*
-  name: InitializeProjectileFactory
-  href: api/Core.Towers.ArcherTower.html#Core_Towers_ArcherTower_InitializeProjectileFactory_
-  commentId: Overload:Core.Towers.ArcherTower.InitializeProjectileFactory
-  isSpec: "True"
-  fullName: Core.Towers.ArcherTower.InitializeProjectileFactory
-  nameWithType: ArcherTower.InitializeProjectileFactory
 - uid: Core.Towers.ArcherTower.Update
   name: Update()
   href: api/Core.Towers.ArcherTower.html#Core_Towers_ArcherTower_Update
@@ -519,6 +519,19 @@ references:
   isSpec: "True"
   fullName: Core.Towers.ShrapnelCanonTower.Attack
   nameWithType: ShrapnelCanonTower.Attack
+- uid: Core.Towers.ShrapnelCanonTower.Awake
+  name: Awake()
+  href: api/Core.Towers.ShrapnelCanonTower.html#Core_Towers_ShrapnelCanonTower_Awake
+  commentId: M:Core.Towers.ShrapnelCanonTower.Awake
+  fullName: Core.Towers.ShrapnelCanonTower.Awake()
+  nameWithType: ShrapnelCanonTower.Awake()
+- uid: Core.Towers.ShrapnelCanonTower.Awake*
+  name: Awake
+  href: api/Core.Towers.ShrapnelCanonTower.html#Core_Towers_ShrapnelCanonTower_Awake_
+  commentId: Overload:Core.Towers.ShrapnelCanonTower.Awake
+  isSpec: "True"
+  fullName: Core.Towers.ShrapnelCanonTower.Awake
+  nameWithType: ShrapnelCanonTower.Awake
 - uid: Core.Towers.ShrapnelCanonTower.InitializeProjectileFactory(ProjectileBehaviour)
   name: InitializeProjectileFactory(ProjectileBehaviour)
   href: api/Core.Towers.ShrapnelCanonTower.html#Core_Towers_ShrapnelCanonTower_InitializeProjectileFactory_ProjectileBehaviour_
@@ -558,6 +571,38 @@ references:
   isSpec: "True"
   fullName: Core.Towers.ShrapnelCanonTower.Update
   nameWithType: ShrapnelCanonTower.Update
+- uid: Core.Towers.TowerOfDeath
+  name: TowerOfDeath
+  href: api/Core.Towers.TowerOfDeath.html
+  commentId: T:Core.Towers.TowerOfDeath
+  fullName: Core.Towers.TowerOfDeath
+  nameWithType: TowerOfDeath
+- uid: Core.Towers.TowerOfDeath.Attack
+  name: Attack()
+  href: api/Core.Towers.TowerOfDeath.html#Core_Towers_TowerOfDeath_Attack
+  commentId: M:Core.Towers.TowerOfDeath.Attack
+  fullName: Core.Towers.TowerOfDeath.Attack()
+  nameWithType: TowerOfDeath.Attack()
+- uid: Core.Towers.TowerOfDeath.Attack*
+  name: Attack
+  href: api/Core.Towers.TowerOfDeath.html#Core_Towers_TowerOfDeath_Attack_
+  commentId: Overload:Core.Towers.TowerOfDeath.Attack
+  isSpec: "True"
+  fullName: Core.Towers.TowerOfDeath.Attack
+  nameWithType: TowerOfDeath.Attack
+- uid: Core.Towers.TowerOfDeath.Update
+  name: Update()
+  href: api/Core.Towers.TowerOfDeath.html#Core_Towers_TowerOfDeath_Update
+  commentId: M:Core.Towers.TowerOfDeath.Update
+  fullName: Core.Towers.TowerOfDeath.Update()
+  nameWithType: TowerOfDeath.Update()
+- uid: Core.Towers.TowerOfDeath.Update*
+  name: Update
+  href: api/Core.Towers.TowerOfDeath.html#Core_Towers_TowerOfDeath_Update_
+  commentId: Overload:Core.Towers.TowerOfDeath.Update
+  isSpec: "True"
+  fullName: Core.Towers.TowerOfDeath.Update
+  nameWithType: TowerOfDeath.Update
 - uid: Debugtools
   name: Debugtools
   href: api/Debugtools.html
@@ -604,6 +649,50 @@ references:
   fullName.vb: ''
   nameWithType: Global
   nameWithType.vb: ''
+- uid: Global.AbstractDamageRecievingModule
+  name: AbstractDamageRecievingModule
+  href: api/Global.AbstractDamageRecievingModule.html
+  commentId: T:Global.AbstractDamageRecievingModule
+  fullName: AbstractDamageRecievingModule
+  nameWithType: AbstractDamageRecievingModule
+- uid: Global.AbstractDamageRecievingModule.#ctor(Transform,DamageTextService)
+  name: AbstractDamageRecievingModule(Transform, DamageTextService)
+  href: api/Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule__ctor_Transform_DamageTextService_
+  commentId: M:Global.AbstractDamageRecievingModule.#ctor(Transform,DamageTextService)
+  fullName: AbstractDamageRecievingModule.AbstractDamageRecievingModule(Transform, DamageTextService)
+  nameWithType: AbstractDamageRecievingModule.AbstractDamageRecievingModule(Transform, DamageTextService)
+- uid: Global.AbstractDamageRecievingModule.#ctor*
+  name: AbstractDamageRecievingModule
+  href: api/Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule__ctor_
+  commentId: Overload:Global.AbstractDamageRecievingModule.#ctor
+  isSpec: "True"
+  fullName: AbstractDamageRecievingModule.AbstractDamageRecievingModule
+  nameWithType: AbstractDamageRecievingModule.AbstractDamageRecievingModule
+- uid: Global.AbstractDamageRecievingModule._damageTextService
+  name: _damageTextService
+  href: api/Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule__damageTextService
+  commentId: F:Global.AbstractDamageRecievingModule._damageTextService
+  fullName: AbstractDamageRecievingModule._damageTextService
+  nameWithType: AbstractDamageRecievingModule._damageTextService
+- uid: Global.AbstractDamageRecievingModule._unitTransform
+  name: _unitTransform
+  href: api/Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule__unitTransform
+  commentId: F:Global.AbstractDamageRecievingModule._unitTransform
+  fullName: AbstractDamageRecievingModule._unitTransform
+  nameWithType: AbstractDamageRecievingModule._unitTransform
+- uid: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  name: CalculateRecievedDamage(Int32)
+  href: api/Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule_CalculateRecievedDamage_System_Int32_
+  commentId: M:Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  fullName: AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  nameWithType: AbstractDamageRecievingModule.CalculateRecievedDamage(Int32)
+- uid: Global.AbstractDamageRecievingModule.CalculateRecievedDamage*
+  name: CalculateRecievedDamage
+  href: api/Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule_CalculateRecievedDamage_
+  commentId: Overload:Global.AbstractDamageRecievingModule.CalculateRecievedDamage
+  isSpec: "True"
+  fullName: AbstractDamageRecievingModule.CalculateRecievedDamage
+  nameWithType: AbstractDamageRecievingModule.CalculateRecievedDamage
 - uid: Global.AbstractEnemy
   name: AbstractEnemy
   href: api/Global.AbstractEnemy.html
@@ -805,50 +894,6 @@ references:
   isSpec: "True"
   fullName: AbstractEnemy.Stats
   nameWithType: AbstractEnemy.Stats
-- uid: Global.AbstractHealthModule
-  name: AbstractHealthModule
-  href: api/Global.AbstractHealthModule.html
-  commentId: T:Global.AbstractHealthModule
-  fullName: AbstractHealthModule
-  nameWithType: AbstractHealthModule
-- uid: Global.AbstractHealthModule.#ctor(Transform,DamageTextService)
-  name: AbstractHealthModule(Transform, DamageTextService)
-  href: api/Global.AbstractHealthModule.html#Global_AbstractHealthModule__ctor_Transform_DamageTextService_
-  commentId: M:Global.AbstractHealthModule.#ctor(Transform,DamageTextService)
-  fullName: AbstractHealthModule.AbstractHealthModule(Transform, DamageTextService)
-  nameWithType: AbstractHealthModule.AbstractHealthModule(Transform, DamageTextService)
-- uid: Global.AbstractHealthModule.#ctor*
-  name: AbstractHealthModule
-  href: api/Global.AbstractHealthModule.html#Global_AbstractHealthModule__ctor_
-  commentId: Overload:Global.AbstractHealthModule.#ctor
-  isSpec: "True"
-  fullName: AbstractHealthModule.AbstractHealthModule
-  nameWithType: AbstractHealthModule.AbstractHealthModule
-- uid: Global.AbstractHealthModule._damageTextService
-  name: _damageTextService
-  href: api/Global.AbstractHealthModule.html#Global_AbstractHealthModule__damageTextService
-  commentId: F:Global.AbstractHealthModule._damageTextService
-  fullName: AbstractHealthModule._damageTextService
-  nameWithType: AbstractHealthModule._damageTextService
-- uid: Global.AbstractHealthModule._unitTransform
-  name: _unitTransform
-  href: api/Global.AbstractHealthModule.html#Global_AbstractHealthModule__unitTransform
-  commentId: F:Global.AbstractHealthModule._unitTransform
-  fullName: AbstractHealthModule._unitTransform
-  nameWithType: AbstractHealthModule._unitTransform
-- uid: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  name: RecieveDamage(Int32)
-  href: api/Global.AbstractHealthModule.html#Global_AbstractHealthModule_RecieveDamage_System_Int32_
-  commentId: M:Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  fullName: AbstractHealthModule.RecieveDamage(System.Int32)
-  nameWithType: AbstractHealthModule.RecieveDamage(Int32)
-- uid: Global.AbstractHealthModule.RecieveDamage*
-  name: RecieveDamage
-  href: api/Global.AbstractHealthModule.html#Global_AbstractHealthModule_RecieveDamage_
-  commentId: Overload:Global.AbstractHealthModule.RecieveDamage
-  isSpec: "True"
-  fullName: AbstractHealthModule.RecieveDamage
-  nameWithType: AbstractHealthModule.RecieveDamage
 - uid: Global.AbstractInstantiationService`1
   name: AbstractInstantiationService<TProduction>
   href: api/Global.AbstractInstantiationService-1.html
@@ -899,12 +944,12 @@ references:
   fullName.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
   nameWithType: AbstractInstantiationService<TProduction>._productionPrefabPath
   nameWithType.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
-- uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
   name: AddNewFactory(Type)
-  href: api/Global.AbstractInstantiationService-1.html#Global_AbstractInstantiationService_1_AddNewFactory_Type_
-  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
+  href: api/Global.AbstractInstantiationService-1.html#Global_AbstractInstantiationService_1_AddNewFactory_System_Type_
+  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
+  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(System.Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(System.Type)
   nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
 - uid: Global.AbstractInstantiationService`1.AddNewFactory*
@@ -916,12 +961,12 @@ references:
   fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory
   nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory
   nameWithType.vb: AbstractInstantiationService(Of TProduction).AddNewFactory
-- uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
   name: GetNewFactory(Type)
-  href: api/Global.AbstractInstantiationService-1.html#Global_AbstractInstantiationService_1_GetNewFactory_Type_
-  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
+  href: api/Global.AbstractInstantiationService-1.html#Global_AbstractInstantiationService_1_GetNewFactory_System_Type_
+  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
+  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(System.Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(System.Type)
   nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
 - uid: Global.AbstractInstantiationService`1.GetNewFactory*
@@ -933,12 +978,12 @@ references:
   fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory
   nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory
   nameWithType.vb: AbstractInstantiationService(Of TProduction).GetNewFactory
-- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
   name: LoadProductPrefab(Type)
-  href: api/Global.AbstractInstantiationService-1.html#Global_AbstractInstantiationService_1_LoadProductPrefab_Type_
-  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
-  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
+  href: api/Global.AbstractInstantiationService-1.html#Global_AbstractInstantiationService_1_LoadProductPrefab_System_Type_
+  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
+  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(System.Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(System.Type)
   nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
 - uid: Global.AbstractInstantiationService`1.LoadProductPrefab*
@@ -950,12 +995,12 @@ references:
   fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab
   nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab
   nameWithType.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab
-- uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+- uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
   name: ReturnObject(Type)
-  href: api/Global.AbstractInstantiationService-1.html#Global_AbstractInstantiationService_1_ReturnObject_Type_
-  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(Type)
-  fullName: AbstractInstantiationService<TProduction>.ReturnObject(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
+  href: api/Global.AbstractInstantiationService-1.html#Global_AbstractInstantiationService_1_ReturnObject_System_Type_
+  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(System.Type)
+  fullName: AbstractInstantiationService<TProduction>.ReturnObject(System.Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(System.Type)
   nameWithType: AbstractInstantiationService<TProduction>.ReturnObject(Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
 - uid: Global.AbstractInstantiationService`1.ReturnObject*
@@ -998,11 +1043,11 @@ references:
   commentId: F:Global.AbstractProjectileFactory._projectilePrefab
   fullName: AbstractProjectileFactory._projectilePrefab
   nameWithType: AbstractProjectileFactory._projectilePrefab
-- uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+- uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
   name: ReturnProjectile(Single, Transform, Vector3, Action)
-  href: api/Global.AbstractProjectileFactory.html#Global_AbstractProjectileFactory_ReturnProjectile_System_Single_Transform_Vector3_Action_
-  commentId: M:Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
-  fullName: AbstractProjectileFactory.ReturnProjectile(System.Single, Transform, Vector3, Action)
+  href: api/Global.AbstractProjectileFactory.html#Global_AbstractProjectileFactory_ReturnProjectile_System_Single_Transform_Vector3_System_Action_
+  commentId: M:Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
+  fullName: AbstractProjectileFactory.ReturnProjectile(System.Single, Transform, Vector3, System.Action)
   nameWithType: AbstractProjectileFactory.ReturnProjectile(Single, Transform, Vector3, Action)
 - uid: Global.AbstractProjectileFactory.ReturnProjectile*
   name: ReturnProjectile
@@ -1042,6 +1087,61 @@ references:
   commentId: F:Global.BiomeToEnemyTypesPair.ProbabilityWeightPairs
   fullName: BiomeToEnemyTypesPair.ProbabilityWeightPairs
   nameWithType: BiomeToEnemyTypesPair.ProbabilityWeightPairs
+- uid: Global.CardDescriptionService
+  name: CardDescriptionService
+  href: api/Global.CardDescriptionService.html
+  commentId: T:Global.CardDescriptionService
+  fullName: CardDescriptionService
+  nameWithType: CardDescriptionService
+- uid: Global.CardDescriptionService.LoadCardDescription(System.Type)
+  name: LoadCardDescription(Type)
+  href: api/Global.CardDescriptionService.html#Global_CardDescriptionService_LoadCardDescription_System_Type_
+  commentId: M:Global.CardDescriptionService.LoadCardDescription(System.Type)
+  fullName: CardDescriptionService.LoadCardDescription(System.Type)
+  nameWithType: CardDescriptionService.LoadCardDescription(Type)
+- uid: Global.CardDescriptionService.LoadCardDescription*
+  name: LoadCardDescription
+  href: api/Global.CardDescriptionService.html#Global_CardDescriptionService_LoadCardDescription_
+  commentId: Overload:Global.CardDescriptionService.LoadCardDescription
+  isSpec: "True"
+  fullName: CardDescriptionService.LoadCardDescription
+  nameWithType: CardDescriptionService.LoadCardDescription
+- uid: Global.CardInfoUIContainer
+  name: CardInfoUIContainer
+  href: api/Global.CardInfoUIContainer.html
+  commentId: T:Global.CardInfoUIContainer
+  fullName: CardInfoUIContainer
+  nameWithType: CardInfoUIContainer
+- uid: Global.CardInfoUIContainer.Damage
+  name: Damage
+  href: api/Global.CardInfoUIContainer.html#Global_CardInfoUIContainer_Damage
+  commentId: F:Global.CardInfoUIContainer.Damage
+  fullName: CardInfoUIContainer.Damage
+  nameWithType: CardInfoUIContainer.Damage
+- uid: Global.CardInfoUIContainer.Description
+  name: Description
+  href: api/Global.CardInfoUIContainer.html#Global_CardInfoUIContainer_Description
+  commentId: F:Global.CardInfoUIContainer.Description
+  fullName: CardInfoUIContainer.Description
+  nameWithType: CardInfoUIContainer.Description
+- uid: Global.CardInfoUIContainer.Interval
+  name: Interval
+  href: api/Global.CardInfoUIContainer.html#Global_CardInfoUIContainer_Interval
+  commentId: F:Global.CardInfoUIContainer.Interval
+  fullName: CardInfoUIContainer.Interval
+  nameWithType: CardInfoUIContainer.Interval
+- uid: Global.CardInfoUIContainer.Radius
+  name: Radius
+  href: api/Global.CardInfoUIContainer.html#Global_CardInfoUIContainer_Radius
+  commentId: F:Global.CardInfoUIContainer.Radius
+  fullName: CardInfoUIContainer.Radius
+  nameWithType: CardInfoUIContainer.Radius
+- uid: Global.CardInfoUIContainer.Title
+  name: Title
+  href: api/Global.CardInfoUIContainer.html#Global_CardInfoUIContainer_Title
+  commentId: F:Global.CardInfoUIContainer.Title
+  fullName: CardInfoUIContainer.Title
+  nameWithType: CardInfoUIContainer.Title
 - uid: Global.DamageText
   name: DamageText
   href: api/Global.DamageText.html
@@ -1080,51 +1180,51 @@ references:
   isSpec: "True"
   fullName: DefaultHealthModule.DefaultHealthModule
   nameWithType: DefaultHealthModule.DefaultHealthModule
-- uid: Global.DefaultHealthModule.RecieveDamage(System.Int32)
-  name: RecieveDamage(Int32)
-  href: api/Global.DefaultHealthModule.html#Global_DefaultHealthModule_RecieveDamage_System_Int32_
-  commentId: M:Global.DefaultHealthModule.RecieveDamage(System.Int32)
-  fullName: DefaultHealthModule.RecieveDamage(System.Int32)
-  nameWithType: DefaultHealthModule.RecieveDamage(Int32)
-- uid: Global.DefaultHealthModule.RecieveDamage*
-  name: RecieveDamage
-  href: api/Global.DefaultHealthModule.html#Global_DefaultHealthModule_RecieveDamage_
-  commentId: Overload:Global.DefaultHealthModule.RecieveDamage
+- uid: Global.DefaultHealthModule.CalculateRecievedDamage(System.Int32)
+  name: CalculateRecievedDamage(Int32)
+  href: api/Global.DefaultHealthModule.html#Global_DefaultHealthModule_CalculateRecievedDamage_System_Int32_
+  commentId: M:Global.DefaultHealthModule.CalculateRecievedDamage(System.Int32)
+  fullName: DefaultHealthModule.CalculateRecievedDamage(System.Int32)
+  nameWithType: DefaultHealthModule.CalculateRecievedDamage(Int32)
+- uid: Global.DefaultHealthModule.CalculateRecievedDamage*
+  name: CalculateRecievedDamage
+  href: api/Global.DefaultHealthModule.html#Global_DefaultHealthModule_CalculateRecievedDamage_
+  commentId: Overload:Global.DefaultHealthModule.CalculateRecievedDamage
   isSpec: "True"
-  fullName: DefaultHealthModule.RecieveDamage
-  nameWithType: DefaultHealthModule.RecieveDamage
-- uid: Global.DodgeHealthModule
-  name: DodgeHealthModule
-  href: api/Global.DodgeHealthModule.html
-  commentId: T:Global.DodgeHealthModule
-  fullName: DodgeHealthModule
-  nameWithType: DodgeHealthModule
-- uid: Global.DodgeHealthModule.#ctor(System.Single,Transform,DamageTextService)
-  name: DodgeHealthModule(Single, Transform, DamageTextService)
-  href: api/Global.DodgeHealthModule.html#Global_DodgeHealthModule__ctor_System_Single_Transform_DamageTextService_
-  commentId: M:Global.DodgeHealthModule.#ctor(System.Single,Transform,DamageTextService)
-  fullName: DodgeHealthModule.DodgeHealthModule(System.Single, Transform, DamageTextService)
-  nameWithType: DodgeHealthModule.DodgeHealthModule(Single, Transform, DamageTextService)
-- uid: Global.DodgeHealthModule.#ctor*
-  name: DodgeHealthModule
-  href: api/Global.DodgeHealthModule.html#Global_DodgeHealthModule__ctor_
-  commentId: Overload:Global.DodgeHealthModule.#ctor
+  fullName: DefaultHealthModule.CalculateRecievedDamage
+  nameWithType: DefaultHealthModule.CalculateRecievedDamage
+- uid: Global.DodgeDamageRecievingModule
+  name: DodgeDamageRecievingModule
+  href: api/Global.DodgeDamageRecievingModule.html
+  commentId: T:Global.DodgeDamageRecievingModule
+  fullName: DodgeDamageRecievingModule
+  nameWithType: DodgeDamageRecievingModule
+- uid: Global.DodgeDamageRecievingModule.#ctor(System.Single,Transform,DamageTextService)
+  name: DodgeDamageRecievingModule(Single, Transform, DamageTextService)
+  href: api/Global.DodgeDamageRecievingModule.html#Global_DodgeDamageRecievingModule__ctor_System_Single_Transform_DamageTextService_
+  commentId: M:Global.DodgeDamageRecievingModule.#ctor(System.Single,Transform,DamageTextService)
+  fullName: DodgeDamageRecievingModule.DodgeDamageRecievingModule(System.Single, Transform, DamageTextService)
+  nameWithType: DodgeDamageRecievingModule.DodgeDamageRecievingModule(Single, Transform, DamageTextService)
+- uid: Global.DodgeDamageRecievingModule.#ctor*
+  name: DodgeDamageRecievingModule
+  href: api/Global.DodgeDamageRecievingModule.html#Global_DodgeDamageRecievingModule__ctor_
+  commentId: Overload:Global.DodgeDamageRecievingModule.#ctor
   isSpec: "True"
-  fullName: DodgeHealthModule.DodgeHealthModule
-  nameWithType: DodgeHealthModule.DodgeHealthModule
-- uid: Global.DodgeHealthModule.RecieveDamage(System.Int32)
-  name: RecieveDamage(Int32)
-  href: api/Global.DodgeHealthModule.html#Global_DodgeHealthModule_RecieveDamage_System_Int32_
-  commentId: M:Global.DodgeHealthModule.RecieveDamage(System.Int32)
-  fullName: DodgeHealthModule.RecieveDamage(System.Int32)
-  nameWithType: DodgeHealthModule.RecieveDamage(Int32)
-- uid: Global.DodgeHealthModule.RecieveDamage*
-  name: RecieveDamage
-  href: api/Global.DodgeHealthModule.html#Global_DodgeHealthModule_RecieveDamage_
-  commentId: Overload:Global.DodgeHealthModule.RecieveDamage
+  fullName: DodgeDamageRecievingModule.DodgeDamageRecievingModule
+  nameWithType: DodgeDamageRecievingModule.DodgeDamageRecievingModule
+- uid: Global.DodgeDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  name: CalculateRecievedDamage(Int32)
+  href: api/Global.DodgeDamageRecievingModule.html#Global_DodgeDamageRecievingModule_CalculateRecievedDamage_System_Int32_
+  commentId: M:Global.DodgeDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  fullName: DodgeDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  nameWithType: DodgeDamageRecievingModule.CalculateRecievedDamage(Int32)
+- uid: Global.DodgeDamageRecievingModule.CalculateRecievedDamage*
+  name: CalculateRecievedDamage
+  href: api/Global.DodgeDamageRecievingModule.html#Global_DodgeDamageRecievingModule_CalculateRecievedDamage_
+  commentId: Overload:Global.DodgeDamageRecievingModule.CalculateRecievedDamage
   isSpec: "True"
-  fullName: DodgeHealthModule.RecieveDamage
-  nameWithType: DodgeHealthModule.RecieveDamage
+  fullName: DodgeDamageRecievingModule.CalculateRecievedDamage
+  nameWithType: DodgeDamageRecievingModule.CalculateRecievedDamage
 - uid: Global.EnemyFactory
   name: EnemyFactory
   href: api/Global.EnemyFactory.html
@@ -1253,11 +1353,11 @@ references:
   isSpec: "True"
   fullName: EnemyInstantiationService.EnemyInstantiationService
   nameWithType: EnemyInstantiationService.EnemyInstantiationService
-- uid: Global.EnemyInstantiationService.AddNewFactory(Type)
+- uid: Global.EnemyInstantiationService.AddNewFactory(System.Type)
   name: AddNewFactory(Type)
-  href: api/Global.EnemyInstantiationService.html#Global_EnemyInstantiationService_AddNewFactory_Type_
-  commentId: M:Global.EnemyInstantiationService.AddNewFactory(Type)
-  fullName: EnemyInstantiationService.AddNewFactory(Type)
+  href: api/Global.EnemyInstantiationService.html#Global_EnemyInstantiationService_AddNewFactory_System_Type_
+  commentId: M:Global.EnemyInstantiationService.AddNewFactory(System.Type)
+  fullName: EnemyInstantiationService.AddNewFactory(System.Type)
   nameWithType: EnemyInstantiationService.AddNewFactory(Type)
 - uid: Global.EnemyInstantiationService.AddNewFactory*
   name: AddNewFactory
@@ -1266,11 +1366,11 @@ references:
   isSpec: "True"
   fullName: EnemyInstantiationService.AddNewFactory
   nameWithType: EnemyInstantiationService.AddNewFactory
-- uid: Global.EnemyInstantiationService.GetNewFactory(Type)
+- uid: Global.EnemyInstantiationService.GetNewFactory(System.Type)
   name: GetNewFactory(Type)
-  href: api/Global.EnemyInstantiationService.html#Global_EnemyInstantiationService_GetNewFactory_Type_
-  commentId: M:Global.EnemyInstantiationService.GetNewFactory(Type)
-  fullName: EnemyInstantiationService.GetNewFactory(Type)
+  href: api/Global.EnemyInstantiationService.html#Global_EnemyInstantiationService_GetNewFactory_System_Type_
+  commentId: M:Global.EnemyInstantiationService.GetNewFactory(System.Type)
+  fullName: EnemyInstantiationService.GetNewFactory(System.Type)
   nameWithType: EnemyInstantiationService.GetNewFactory(Type)
 - uid: Global.EnemyInstantiationService.GetNewFactory*
   name: GetNewFactory
@@ -1279,11 +1379,11 @@ references:
   isSpec: "True"
   fullName: EnemyInstantiationService.GetNewFactory
   nameWithType: EnemyInstantiationService.GetNewFactory
-- uid: Global.EnemyInstantiationService.ReturnObject(Type)
+- uid: Global.EnemyInstantiationService.ReturnObject(System.Type)
   name: ReturnObject(Type)
-  href: api/Global.EnemyInstantiationService.html#Global_EnemyInstantiationService_ReturnObject_Type_
-  commentId: M:Global.EnemyInstantiationService.ReturnObject(Type)
-  fullName: EnemyInstantiationService.ReturnObject(Type)
+  href: api/Global.EnemyInstantiationService.html#Global_EnemyInstantiationService_ReturnObject_System_Type_
+  commentId: M:Global.EnemyInstantiationService.ReturnObject(System.Type)
+  fullName: EnemyInstantiationService.ReturnObject(System.Type)
   nameWithType: EnemyInstantiationService.ReturnObject(Type)
 - uid: Global.EnemyInstantiationService.ReturnObject*
   name: ReturnObject
@@ -1346,12 +1446,12 @@ references:
   commentId: F:Global.EnemyStats.DeathSound
   fullName: EnemyStats.DeathSound
   nameWithType: EnemyStats.DeathSound
-- uid: Global.EnemyStats.EnemyTypes
-  name: EnemyTypes
-  href: api/Global.EnemyStats.html#Global_EnemyStats_EnemyTypes
-  commentId: F:Global.EnemyStats.EnemyTypes
-  fullName: EnemyStats.EnemyTypes
-  nameWithType: EnemyStats.EnemyTypes
+- uid: Global.EnemyStats.EnemyTypesAndWeights
+  name: EnemyTypesAndWeights
+  href: api/Global.EnemyStats.html#Global_EnemyStats_EnemyTypesAndWeights
+  commentId: F:Global.EnemyStats.EnemyTypesAndWeights
+  fullName: EnemyStats.EnemyTypesAndWeights
+  nameWithType: EnemyStats.EnemyTypesAndWeights
 - uid: Global.EnemyStats.ExpPerKill
   name: ExpPerKill
   href: api/Global.EnemyStats.html#Global_EnemyStats_ExpPerKill
@@ -1394,36 +1494,54 @@ references:
   commentId: F:Global.EnemyStats.SpeedPerLevel
   fullName: EnemyStats.SpeedPerLevel
   nameWithType: EnemyStats.SpeedPerLevel
-- uid: Global.EnemyTypes
-  name: EnemyTypes
-  href: api/Global.EnemyTypes.html
-  commentId: T:Global.EnemyTypes
-  fullName: EnemyTypes
-  nameWithType: EnemyTypes
-- uid: Global.EnemyTypes.Goblin
+- uid: Global.EnemyStats.WeightToEnemyType
+  name: EnemyStats.WeightToEnemyType
+  href: api/Global.EnemyStats.WeightToEnemyType.html
+  commentId: T:Global.EnemyStats.WeightToEnemyType
+  fullName: EnemyStats.WeightToEnemyType
+  nameWithType: EnemyStats.WeightToEnemyType
+- uid: Global.EnemyStats.WeightToEnemyType.enemyType
+  name: enemyType
+  href: api/Global.EnemyStats.WeightToEnemyType.html#Global_EnemyStats_WeightToEnemyType_enemyType
+  commentId: F:Global.EnemyStats.WeightToEnemyType.enemyType
+  fullName: EnemyStats.WeightToEnemyType.enemyType
+  nameWithType: EnemyStats.WeightToEnemyType.enemyType
+- uid: Global.EnemyStats.WeightToEnemyType.Weight
+  name: Weight
+  href: api/Global.EnemyStats.WeightToEnemyType.html#Global_EnemyStats_WeightToEnemyType_Weight
+  commentId: F:Global.EnemyStats.WeightToEnemyType.Weight
+  fullName: EnemyStats.WeightToEnemyType.Weight
+  nameWithType: EnemyStats.WeightToEnemyType.Weight
+- uid: Global.EnemyType
+  name: EnemyType
+  href: api/Global.EnemyType.html
+  commentId: T:Global.EnemyType
+  fullName: EnemyType
+  nameWithType: EnemyType
+- uid: Global.EnemyType.Goblin
   name: Goblin
-  href: api/Global.EnemyTypes.html#Global_EnemyTypes_Goblin
-  commentId: F:Global.EnemyTypes.Goblin
-  fullName: EnemyTypes.Goblin
-  nameWithType: EnemyTypes.Goblin
-- uid: Global.EnemyTypes.Greenskin
+  href: api/Global.EnemyType.html#Global_EnemyType_Goblin
+  commentId: F:Global.EnemyType.Goblin
+  fullName: EnemyType.Goblin
+  nameWithType: EnemyType.Goblin
+- uid: Global.EnemyType.Greenskin
   name: Greenskin
-  href: api/Global.EnemyTypes.html#Global_EnemyTypes_Greenskin
-  commentId: F:Global.EnemyTypes.Greenskin
-  fullName: EnemyTypes.Greenskin
-  nameWithType: EnemyTypes.Greenskin
-- uid: Global.EnemyTypes.Orc
+  href: api/Global.EnemyType.html#Global_EnemyType_Greenskin
+  commentId: F:Global.EnemyType.Greenskin
+  fullName: EnemyType.Greenskin
+  nameWithType: EnemyType.Greenskin
+- uid: Global.EnemyType.Orc
   name: Orc
-  href: api/Global.EnemyTypes.html#Global_EnemyTypes_Orc
-  commentId: F:Global.EnemyTypes.Orc
-  fullName: EnemyTypes.Orc
-  nameWithType: EnemyTypes.Orc
-- uid: Global.EnemyTypes.Undead
+  href: api/Global.EnemyType.html#Global_EnemyType_Orc
+  commentId: F:Global.EnemyType.Orc
+  fullName: EnemyType.Orc
+  nameWithType: EnemyType.Orc
+- uid: Global.EnemyType.Undead
   name: Undead
-  href: api/Global.EnemyTypes.html#Global_EnemyTypes_Undead
-  commentId: F:Global.EnemyTypes.Undead
-  fullName: EnemyTypes.Undead
-  nameWithType: EnemyTypes.Undead
+  href: api/Global.EnemyType.html#Global_EnemyType_Undead
+  commentId: F:Global.EnemyType.Undead
+  fullName: EnemyType.Undead
+  nameWithType: EnemyType.Undead
 - uid: Global.EnemyTypeService
   name: EnemyTypeService
   href: api/Global.EnemyTypeService.html
@@ -1443,12 +1561,12 @@ references:
   isSpec: "True"
   fullName: EnemyTypeService.EnemyTypeService
   nameWithType: EnemyTypeService.EnemyTypeService
-- uid: Global.EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
-  name: GetRandomEnemyByType(EnemyTypes)
-  href: api/Global.EnemyTypeService.html#Global_EnemyTypeService_GetRandomEnemyByType_EnemyTypes_
-  commentId: M:Global.EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
-  fullName: EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
-  nameWithType: EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
+- uid: Global.EnemyTypeService.GetRandomEnemyByType(EnemyType)
+  name: GetRandomEnemyByType(EnemyType)
+  href: api/Global.EnemyTypeService.html#Global_EnemyTypeService_GetRandomEnemyByType_EnemyType_
+  commentId: M:Global.EnemyTypeService.GetRandomEnemyByType(EnemyType)
+  fullName: EnemyTypeService.GetRandomEnemyByType(EnemyType)
+  nameWithType: EnemyTypeService.GetRandomEnemyByType(EnemyType)
 - uid: Global.EnemyTypeService.GetRandomEnemyByType*
   name: GetRandomEnemyByType
   href: api/Global.EnemyTypeService.html#Global_EnemyTypeService_GetRandomEnemyByType_
@@ -1456,19 +1574,19 @@ references:
   isSpec: "True"
   fullName: EnemyTypeService.GetRandomEnemyByType
   nameWithType: EnemyTypeService.GetRandomEnemyByType
-- uid: Global.EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
-  name: GetRandomEnemyTypeFromBiome(CellBiomeTypes)
-  href: api/Global.EnemyTypeService.html#Global_EnemyTypeService_GetRandomEnemyTypeFromBiome_WorldCells_CellBiomeTypes_
-  commentId: M:Global.EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
-  fullName: EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
-  nameWithType: EnemyTypeService.GetRandomEnemyTypeFromBiome(CellBiomeTypes)
-- uid: Global.EnemyTypeService.GetRandomEnemyTypeFromBiome*
-  name: GetRandomEnemyTypeFromBiome
-  href: api/Global.EnemyTypeService.html#Global_EnemyTypeService_GetRandomEnemyTypeFromBiome_
-  commentId: Overload:Global.EnemyTypeService.GetRandomEnemyTypeFromBiome
+- uid: Global.EnemyTypeService.GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes)
+  name: GetRandomEnemyTypeByBiome(CellBiomeTypes)
+  href: api/Global.EnemyTypeService.html#Global_EnemyTypeService_GetRandomEnemyTypeByBiome_WorldCells_CellBiomeTypes_
+  commentId: M:Global.EnemyTypeService.GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes)
+  fullName: EnemyTypeService.GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes)
+  nameWithType: EnemyTypeService.GetRandomEnemyTypeByBiome(CellBiomeTypes)
+- uid: Global.EnemyTypeService.GetRandomEnemyTypeByBiome*
+  name: GetRandomEnemyTypeByBiome
+  href: api/Global.EnemyTypeService.html#Global_EnemyTypeService_GetRandomEnemyTypeByBiome_
+  commentId: Overload:Global.EnemyTypeService.GetRandomEnemyTypeByBiome
   isSpec: "True"
-  fullName: EnemyTypeService.GetRandomEnemyTypeFromBiome
-  nameWithType: EnemyTypeService.GetRandomEnemyTypeFromBiome
+  fullName: EnemyTypeService.GetRandomEnemyTypeByBiome
+  nameWithType: EnemyTypeService.GetRandomEnemyTypeByBiome
 - uid: Global.EnemyTypeToBiomeSettings
   name: EnemyTypeToBiomeSettings
   href: api/Global.EnemyTypeToBiomeSettings.html
@@ -1481,11 +1599,11 @@ references:
   commentId: F:Global.EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
   fullName: EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
   nameWithType: EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
-- uid: Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
+- uid: Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
   name: GetPairByBiomeType(CellBiomeTypes)
-  href: api/Global.EnemyTypeToBiomeSettings.html#Global_EnemyTypeToBiomeSettings_GetPairByBiomeType_CellBiomeTypes_
-  commentId: M:Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
-  fullName: EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
+  href: api/Global.EnemyTypeToBiomeSettings.html#Global_EnemyTypeToBiomeSettings_GetPairByBiomeType_WorldCells_CellBiomeTypes_
+  commentId: M:Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
+  fullName: EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
   nameWithType: EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
 - uid: Global.EnemyTypeToBiomeSettings.GetPairByBiomeType*
   name: GetPairByBiomeType
@@ -1524,19 +1642,6 @@ references:
   commentId: T:Global.Gobbo
   fullName: Gobbo
   nameWithType: Gobbo
-- uid: Global.Gobbo.Heal(System.Int32)
-  name: Heal(Int32)
-  href: api/Global.Gobbo.html#Global_Gobbo_Heal_System_Int32_
-  commentId: M:Global.Gobbo.Heal(System.Int32)
-  fullName: Gobbo.Heal(System.Int32)
-  nameWithType: Gobbo.Heal(Int32)
-- uid: Global.Gobbo.Heal*
-  name: Heal
-  href: api/Global.Gobbo.html#Global_Gobbo_Heal_
-  commentId: Overload:Global.Gobbo.Heal
-  isSpec: "True"
-  fullName: Gobbo.Heal
-  nameWithType: Gobbo.Heal
 - uid: Global.Gobbo.Initialize(AudioSource,DamageTextService,IObjectPooler)
   name: Initialize(AudioSource, DamageTextService, IObjectPooler)
   href: api/Global.Gobbo.html#Global_Gobbo_Initialize_AudioSource_DamageTextService_IObjectPooler_
@@ -1804,11 +1909,11 @@ references:
   commentId: T:Global.ProjectileBehaviour
   fullName: ProjectileBehaviour
   nameWithType: ProjectileBehaviour
-- uid: Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,Action)
+- uid: Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,System.Action)
   name: Initialize(Single, Transform, Vector3, Action)
-  href: api/Global.ProjectileBehaviour.html#Global_ProjectileBehaviour_Initialize_System_Single_Transform_Vector3_Action_
-  commentId: M:Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,Action)
-  fullName: ProjectileBehaviour.Initialize(System.Single, Transform, Vector3, Action)
+  href: api/Global.ProjectileBehaviour.html#Global_ProjectileBehaviour_Initialize_System_Single_Transform_Vector3_System_Action_
+  commentId: M:Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,System.Action)
+  fullName: ProjectileBehaviour.Initialize(System.Single, Transform, Vector3, System.Action)
   nameWithType: ProjectileBehaviour.Initialize(Single, Transform, Vector3, Action)
 - uid: Global.ProjectileBehaviour.Initialize*
   name: Initialize
@@ -1817,11 +1922,11 @@ references:
   isSpec: "True"
   fullName: ProjectileBehaviour.Initialize
   nameWithType: ProjectileBehaviour.Initialize
-- uid: Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,Action)
+- uid: Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,System.Action)
   name: ReInitialize(Transform, Vector3, Action)
-  href: api/Global.ProjectileBehaviour.html#Global_ProjectileBehaviour_ReInitialize_Transform_Vector3_Action_
-  commentId: M:Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,Action)
-  fullName: ProjectileBehaviour.ReInitialize(Transform, Vector3, Action)
+  href: api/Global.ProjectileBehaviour.html#Global_ProjectileBehaviour_ReInitialize_Transform_Vector3_System_Action_
+  commentId: M:Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,System.Action)
+  fullName: ProjectileBehaviour.ReInitialize(Transform, Vector3, System.Action)
   nameWithType: ProjectileBehaviour.ReInitialize(Transform, Vector3, Action)
 - uid: Global.ProjectileBehaviour.ReInitialize*
   name: ReInitialize
@@ -1868,6 +1973,38 @@ references:
   isSpec: "True"
   fullName: SimpleTowerAttackModule.DealDamage
   nameWithType: SimpleTowerAttackModule.DealDamage
+- uid: Global.Skeleton
+  name: Skeleton
+  href: api/Global.Skeleton.html
+  commentId: T:Global.Skeleton
+  fullName: Skeleton
+  nameWithType: Skeleton
+- uid: Global.Skeleton.Die
+  name: Die()
+  href: api/Global.Skeleton.html#Global_Skeleton_Die
+  commentId: M:Global.Skeleton.Die
+  fullName: Skeleton.Die()
+  nameWithType: Skeleton.Die()
+- uid: Global.Skeleton.Die*
+  name: Die
+  href: api/Global.Skeleton.html#Global_Skeleton_Die_
+  commentId: Overload:Global.Skeleton.Die
+  isSpec: "True"
+  fullName: Skeleton.Die
+  nameWithType: Skeleton.Die
+- uid: Global.Skeleton.Initialize(AudioSource,DamageTextService,IObjectPooler)
+  name: Initialize(AudioSource, DamageTextService, IObjectPooler)
+  href: api/Global.Skeleton.html#Global_Skeleton_Initialize_AudioSource_DamageTextService_IObjectPooler_
+  commentId: M:Global.Skeleton.Initialize(AudioSource,DamageTextService,IObjectPooler)
+  fullName: Skeleton.Initialize(AudioSource, DamageTextService, IObjectPooler)
+  nameWithType: Skeleton.Initialize(AudioSource, DamageTextService, IObjectPooler)
+- uid: Global.Skeleton.Initialize*
+  name: Initialize
+  href: api/Global.Skeleton.html#Global_Skeleton_Initialize_
+  commentId: Overload:Global.Skeleton.Initialize
+  isSpec: "True"
+  fullName: Skeleton.Initialize
+  nameWithType: Skeleton.Initialize
 - uid: Global.TowerCard
   name: TowerCard
   href: api/Global.TowerCard.html
@@ -1887,12 +2024,12 @@ references:
   isSpec: "True"
   fullName: TowerCard.Finalize
   nameWithType: TowerCard.Finalize
-- uid: Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
-  name: Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
-  href: api/Global.TowerCard.html#Global_TowerCard_Initialize_TowerBuildingService_WorldCellBuildingService_GameplayStateMachine_IObjectPooler_IShiftEventProvider_Sprite_Type_Type_
-  commentId: M:Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
-  fullName: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
-  nameWithType: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
+- uid: Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,CardInfoUiService,AbstractInputService,TowerCardInfoConfig,WorldCellCardInfoConfig,Sprite,Sprite,System.Type,System.Type)
+  name: Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, CardInfoUiService, AbstractInputService, TowerCardInfoConfig, WorldCellCardInfoConfig, Sprite, Sprite, Type, Type)
+  href: api/Global.TowerCard.html#Global_TowerCard_Initialize_TowerBuildingService_WorldCellBuildingService_GameplayStateMachine_IObjectPooler_IShiftEventProvider_CardInfoUiService_AbstractInputService_TowerCardInfoConfig_WorldCellCardInfoConfig_Sprite_Sprite_System_Type_System_Type_
+  commentId: M:Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,CardInfoUiService,AbstractInputService,TowerCardInfoConfig,WorldCellCardInfoConfig,Sprite,Sprite,System.Type,System.Type)
+  fullName: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, CardInfoUiService, AbstractInputService, TowerCardInfoConfig, WorldCellCardInfoConfig, Sprite, Sprite, System.Type, System.Type)
+  nameWithType: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, CardInfoUiService, AbstractInputService, TowerCardInfoConfig, WorldCellCardInfoConfig, Sprite, Sprite, Type, Type)
 - uid: Global.TowerCard.Initialize*
   name: Initialize
   href: api/Global.TowerCard.html#Global_TowerCard_Initialize_
@@ -1952,6 +2089,121 @@ references:
   isSpec: "True"
   fullName: TowerCard.ReturnToPool
   nameWithType: TowerCard.ReturnToPool
+- uid: Global.TowerCard.TowerType
+  name: TowerType
+  href: api/Global.TowerCard.html#Global_TowerCard_TowerType
+  commentId: P:Global.TowerCard.TowerType
+  fullName: TowerCard.TowerType
+  nameWithType: TowerCard.TowerType
+- uid: Global.TowerCard.TowerType*
+  name: TowerType
+  href: api/Global.TowerCard.html#Global_TowerCard_TowerType_
+  commentId: Overload:Global.TowerCard.TowerType
+  isSpec: "True"
+  fullName: TowerCard.TowerType
+  nameWithType: TowerCard.TowerType
+- uid: Global.TowerCardInfoConfig
+  name: TowerCardInfoConfig
+  href: api/Global.TowerCardInfoConfig.html
+  commentId: T:Global.TowerCardInfoConfig
+  fullName: TowerCardInfoConfig
+  nameWithType: TowerCardInfoConfig
+- uid: Global.TowerCardInfoConfig.Damage
+  name: Damage
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_Damage
+  commentId: P:Global.TowerCardInfoConfig.Damage
+  fullName: TowerCardInfoConfig.Damage
+  nameWithType: TowerCardInfoConfig.Damage
+- uid: Global.TowerCardInfoConfig.Damage*
+  name: Damage
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_Damage_
+  commentId: Overload:Global.TowerCardInfoConfig.Damage
+  isSpec: "True"
+  fullName: TowerCardInfoConfig.Damage
+  nameWithType: TowerCardInfoConfig.Damage
+- uid: Global.TowerCardInfoConfig.DamagePerLevel
+  name: DamagePerLevel
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_DamagePerLevel
+  commentId: P:Global.TowerCardInfoConfig.DamagePerLevel
+  fullName: TowerCardInfoConfig.DamagePerLevel
+  nameWithType: TowerCardInfoConfig.DamagePerLevel
+- uid: Global.TowerCardInfoConfig.DamagePerLevel*
+  name: DamagePerLevel
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_DamagePerLevel_
+  commentId: Overload:Global.TowerCardInfoConfig.DamagePerLevel
+  isSpec: "True"
+  fullName: TowerCardInfoConfig.DamagePerLevel
+  nameWithType: TowerCardInfoConfig.DamagePerLevel
+- uid: Global.TowerCardInfoConfig.Decription
+  name: Decription
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_Decription
+  commentId: F:Global.TowerCardInfoConfig.Decription
+  fullName: TowerCardInfoConfig.Decription
+  nameWithType: TowerCardInfoConfig.Decription
+- uid: Global.TowerCardInfoConfig.Header
+  name: Header
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_Header
+  commentId: F:Global.TowerCardInfoConfig.Header
+  fullName: TowerCardInfoConfig.Header
+  nameWithType: TowerCardInfoConfig.Header
+- uid: Global.TowerCardInfoConfig.Interval
+  name: Interval
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_Interval
+  commentId: P:Global.TowerCardInfoConfig.Interval
+  fullName: TowerCardInfoConfig.Interval
+  nameWithType: TowerCardInfoConfig.Interval
+- uid: Global.TowerCardInfoConfig.Interval*
+  name: Interval
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_Interval_
+  commentId: Overload:Global.TowerCardInfoConfig.Interval
+  isSpec: "True"
+  fullName: TowerCardInfoConfig.Interval
+  nameWithType: TowerCardInfoConfig.Interval
+- uid: Global.TowerCardInfoConfig.IntervalPerLevel
+  name: IntervalPerLevel
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_IntervalPerLevel
+  commentId: P:Global.TowerCardInfoConfig.IntervalPerLevel
+  fullName: TowerCardInfoConfig.IntervalPerLevel
+  nameWithType: TowerCardInfoConfig.IntervalPerLevel
+- uid: Global.TowerCardInfoConfig.IntervalPerLevel*
+  name: IntervalPerLevel
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_IntervalPerLevel_
+  commentId: Overload:Global.TowerCardInfoConfig.IntervalPerLevel
+  isSpec: "True"
+  fullName: TowerCardInfoConfig.IntervalPerLevel
+  nameWithType: TowerCardInfoConfig.IntervalPerLevel
+- uid: Global.TowerCardInfoConfig.Range
+  name: Range
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_Range
+  commentId: P:Global.TowerCardInfoConfig.Range
+  fullName: TowerCardInfoConfig.Range
+  nameWithType: TowerCardInfoConfig.Range
+- uid: Global.TowerCardInfoConfig.Range*
+  name: Range
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_Range_
+  commentId: Overload:Global.TowerCardInfoConfig.Range
+  isSpec: "True"
+  fullName: TowerCardInfoConfig.Range
+  nameWithType: TowerCardInfoConfig.Range
+- uid: Global.TowerCardInfoConfig.RangePerLevel
+  name: RangePerLevel
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_RangePerLevel
+  commentId: P:Global.TowerCardInfoConfig.RangePerLevel
+  fullName: TowerCardInfoConfig.RangePerLevel
+  nameWithType: TowerCardInfoConfig.RangePerLevel
+- uid: Global.TowerCardInfoConfig.RangePerLevel*
+  name: RangePerLevel
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_RangePerLevel_
+  commentId: Overload:Global.TowerCardInfoConfig.RangePerLevel
+  isSpec: "True"
+  fullName: TowerCardInfoConfig.RangePerLevel
+  nameWithType: TowerCardInfoConfig.RangePerLevel
+- uid: Global.TowerCardInfoConfig.TowerStats
+  name: TowerStats
+  href: api/Global.TowerCardInfoConfig.html#Global_TowerCardInfoConfig_TowerStats
+  commentId: F:Global.TowerCardInfoConfig.TowerStats
+  fullName: TowerCardInfoConfig.TowerStats
+  nameWithType: TowerCardInfoConfig.TowerStats
 - uid: Global.TowerFactory
   name: TowerFactory
   href: api/Global.TowerFactory.html
@@ -2080,13 +2332,13 @@ references:
   commentId: T:Global.Wave
   fullName: Wave
   nameWithType: Wave
-- uid: Global.Wave.#ctor(System.Single,Action[])
+- uid: Global.Wave.#ctor(System.Single,System.Action[])
   name: Wave(Single, Action[])
-  href: api/Global.Wave.html#Global_Wave__ctor_System_Single_Action___
-  commentId: M:Global.Wave.#ctor(System.Single,Action[])
+  href: api/Global.Wave.html#Global_Wave__ctor_System_Single_System_Action___
+  commentId: M:Global.Wave.#ctor(System.Single,System.Action[])
   name.vb: Wave(Single, Action())
-  fullName: Wave.Wave(System.Single, Action[])
-  fullName.vb: Wave.Wave(System.Single, Action())
+  fullName: Wave.Wave(System.Single, System.Action[])
+  fullName.vb: Wave.Wave(System.Single, System.Action())
   nameWithType: Wave.Wave(Single, Action[])
   nameWithType.vb: Wave.Wave(Single, Action())
 - uid: Global.Wave.#ctor*
@@ -2121,11 +2373,11 @@ references:
   commentId: T:Global.WaveGenerator
   fullName: WaveGenerator
   nameWithType: WaveGenerator
-- uid: Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
+- uid: Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCells.WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
   name: WaveGenerator(EnemyInstantiationService, WorldCellBalanceService, EnemyPrefabContainer, EnemyTypeService)
-  href: api/Global.WaveGenerator.html#Global_WaveGenerator__ctor_EnemyInstantiationService_WorldCellBalanceService_EnemyPrefabContainer_EnemyTypeService_
-  commentId: M:Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
-  fullName: WaveGenerator.WaveGenerator(EnemyInstantiationService, WorldCellBalanceService, EnemyPrefabContainer, EnemyTypeService)
+  href: api/Global.WaveGenerator.html#Global_WaveGenerator__ctor_EnemyInstantiationService_WorldCells_WorldCellBalanceService_EnemyPrefabContainer_EnemyTypeService_
+  commentId: M:Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCells.WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
+  fullName: WaveGenerator.WaveGenerator(EnemyInstantiationService, WorldCells.WorldCellBalanceService, EnemyPrefabContainer, EnemyTypeService)
   nameWithType: WaveGenerator.WaveGenerator(EnemyInstantiationService, WorldCellBalanceService, EnemyPrefabContainer, EnemyTypeService)
 - uid: Global.WaveGenerator.#ctor*
   name: WaveGenerator
@@ -2179,19 +2431,19 @@ references:
   isSpec: "True"
   fullName: WaveService.CancelRoutine
   nameWithType: WaveService.CancelRoutine
-- uid: Global.WaveService.StartCoroutine
-  name: StartCoroutine()
-  href: api/Global.WaveService.html#Global_WaveService_StartCoroutine
-  commentId: M:Global.WaveService.StartCoroutine
-  fullName: WaveService.StartCoroutine()
-  nameWithType: WaveService.StartCoroutine()
-- uid: Global.WaveService.StartCoroutine*
-  name: StartCoroutine
-  href: api/Global.WaveService.html#Global_WaveService_StartCoroutine_
-  commentId: Overload:Global.WaveService.StartCoroutine
+- uid: Global.WaveService.StartWaveCoroutine
+  name: StartWaveCoroutine()
+  href: api/Global.WaveService.html#Global_WaveService_StartWaveCoroutine
+  commentId: M:Global.WaveService.StartWaveCoroutine
+  fullName: WaveService.StartWaveCoroutine()
+  nameWithType: WaveService.StartWaveCoroutine()
+- uid: Global.WaveService.StartWaveCoroutine*
+  name: StartWaveCoroutine
+  href: api/Global.WaveService.html#Global_WaveService_StartWaveCoroutine_
+  commentId: Overload:Global.WaveService.StartWaveCoroutine
   isSpec: "True"
-  fullName: WaveService.StartCoroutine
-  nameWithType: WaveService.StartCoroutine
+  fullName: WaveService.StartWaveCoroutine
+  nameWithType: WaveService.StartWaveCoroutine
 - uid: Global.WorldCellBuildingService
   name: WorldCellBuildingService
   href: api/Global.WorldCellBuildingService.html
@@ -2241,11 +2493,11 @@ references:
   commentId: F:Global.WorldCellBuildingService._instantiatingService
   fullName: WorldCellBuildingService._instantiatingService
   nameWithType: WorldCellBuildingService._instantiatingService
-- uid: Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,Type)
+- uid: Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,System.Type)
   name: InstantiateWorldCellFromCard(TowerCard, Type)
-  href: api/Global.WorldCellBuildingService.html#Global_WorldCellBuildingService_InstantiateWorldCellFromCard_TowerCard_Type_
-  commentId: M:Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,Type)
-  fullName: WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard, Type)
+  href: api/Global.WorldCellBuildingService.html#Global_WorldCellBuildingService_InstantiateWorldCellFromCard_TowerCard_System_Type_
+  commentId: M:Global.WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard,System.Type)
+  fullName: WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard, System.Type)
   nameWithType: WorldCellBuildingService.InstantiateWorldCellFromCard(TowerCard, Type)
 - uid: Global.WorldCellBuildingService.InstantiateWorldCellFromCard*
   name: InstantiateWorldCellFromCard
@@ -2254,6 +2506,43 @@ references:
   isSpec: "True"
   fullName: WorldCellBuildingService.InstantiateWorldCellFromCard
   nameWithType: WorldCellBuildingService.InstantiateWorldCellFromCard
+- uid: Global.WorldCellCardInfoConfig
+  name: WorldCellCardInfoConfig
+  href: api/Global.WorldCellCardInfoConfig.html
+  commentId: T:Global.WorldCellCardInfoConfig
+  fullName: WorldCellCardInfoConfig
+  nameWithType: WorldCellCardInfoConfig
+- uid: Global.WorldCellCardInfoConfig.CellStats
+  name: CellStats
+  href: api/Global.WorldCellCardInfoConfig.html#Global_WorldCellCardInfoConfig_CellStats
+  commentId: F:Global.WorldCellCardInfoConfig.CellStats
+  fullName: WorldCellCardInfoConfig.CellStats
+  nameWithType: WorldCellCardInfoConfig.CellStats
+- uid: Global.WorldCellCardInfoConfig.CellTags
+  name: CellTags
+  href: api/Global.WorldCellCardInfoConfig.html#Global_WorldCellCardInfoConfig_CellTags
+  commentId: P:Global.WorldCellCardInfoConfig.CellTags
+  fullName: WorldCellCardInfoConfig.CellTags
+  nameWithType: WorldCellCardInfoConfig.CellTags
+- uid: Global.WorldCellCardInfoConfig.CellTags*
+  name: CellTags
+  href: api/Global.WorldCellCardInfoConfig.html#Global_WorldCellCardInfoConfig_CellTags_
+  commentId: Overload:Global.WorldCellCardInfoConfig.CellTags
+  isSpec: "True"
+  fullName: WorldCellCardInfoConfig.CellTags
+  nameWithType: WorldCellCardInfoConfig.CellTags
+- uid: Global.WorldCellCardInfoConfig.Decription
+  name: Decription
+  href: api/Global.WorldCellCardInfoConfig.html#Global_WorldCellCardInfoConfig_Decription
+  commentId: F:Global.WorldCellCardInfoConfig.Decription
+  fullName: WorldCellCardInfoConfig.Decription
+  nameWithType: WorldCellCardInfoConfig.Decription
+- uid: Global.WorldCellCardInfoConfig.Header
+  name: Header
+  href: api/Global.WorldCellCardInfoConfig.html#Global_WorldCellCardInfoConfig_Header
+  commentId: F:Global.WorldCellCardInfoConfig.Header
+  fullName: WorldCellCardInfoConfig.Header
+  nameWithType: WorldCellCardInfoConfig.Header
 - uid: Global.WorldCellInstantiationService
   name: WorldCellInstantiationService
   href: api/Global.WorldCellInstantiationService.html
@@ -2273,11 +2562,11 @@ references:
   isSpec: "True"
   fullName: WorldCellInstantiationService.WorldCellInstantiationService
   nameWithType: WorldCellInstantiationService.WorldCellInstantiationService
-- uid: Global.WorldCellInstantiationService.AddNewFactory(Type)
+- uid: Global.WorldCellInstantiationService.AddNewFactory(System.Type)
   name: AddNewFactory(Type)
-  href: api/Global.WorldCellInstantiationService.html#Global_WorldCellInstantiationService_AddNewFactory_Type_
-  commentId: M:Global.WorldCellInstantiationService.AddNewFactory(Type)
-  fullName: WorldCellInstantiationService.AddNewFactory(Type)
+  href: api/Global.WorldCellInstantiationService.html#Global_WorldCellInstantiationService_AddNewFactory_System_Type_
+  commentId: M:Global.WorldCellInstantiationService.AddNewFactory(System.Type)
+  fullName: WorldCellInstantiationService.AddNewFactory(System.Type)
   nameWithType: WorldCellInstantiationService.AddNewFactory(Type)
 - uid: Global.WorldCellInstantiationService.AddNewFactory*
   name: AddNewFactory
@@ -2286,11 +2575,11 @@ references:
   isSpec: "True"
   fullName: WorldCellInstantiationService.AddNewFactory
   nameWithType: WorldCellInstantiationService.AddNewFactory
-- uid: Global.WorldCellInstantiationService.GetNewFactory(Type)
+- uid: Global.WorldCellInstantiationService.GetNewFactory(System.Type)
   name: GetNewFactory(Type)
-  href: api/Global.WorldCellInstantiationService.html#Global_WorldCellInstantiationService_GetNewFactory_Type_
-  commentId: M:Global.WorldCellInstantiationService.GetNewFactory(Type)
-  fullName: WorldCellInstantiationService.GetNewFactory(Type)
+  href: api/Global.WorldCellInstantiationService.html#Global_WorldCellInstantiationService_GetNewFactory_System_Type_
+  commentId: M:Global.WorldCellInstantiationService.GetNewFactory(System.Type)
+  fullName: WorldCellInstantiationService.GetNewFactory(System.Type)
   nameWithType: WorldCellInstantiationService.GetNewFactory(Type)
 - uid: Global.WorldCellInstantiationService.GetNewFactory*
   name: GetNewFactory
@@ -2299,11 +2588,11 @@ references:
   isSpec: "True"
   fullName: WorldCellInstantiationService.GetNewFactory
   nameWithType: WorldCellInstantiationService.GetNewFactory
-- uid: Global.WorldCellInstantiationService.ReturnObject(Type)
+- uid: Global.WorldCellInstantiationService.ReturnObject(System.Type)
   name: ReturnObject(Type)
-  href: api/Global.WorldCellInstantiationService.html#Global_WorldCellInstantiationService_ReturnObject_Type_
-  commentId: M:Global.WorldCellInstantiationService.ReturnObject(Type)
-  fullName: WorldCellInstantiationService.ReturnObject(Type)
+  href: api/Global.WorldCellInstantiationService.html#Global_WorldCellInstantiationService_ReturnObject_System_Type_
+  commentId: M:Global.WorldCellInstantiationService.ReturnObject(System.Type)
+  fullName: WorldCellInstantiationService.ReturnObject(System.Type)
   nameWithType: WorldCellInstantiationService.ReturnObject(Type)
 - uid: Global.WorldCellInstantiationService.ReturnObject*
   name: ReturnObject
@@ -3013,11 +3302,11 @@ references:
   isSpec: "True"
   fullName: Infrastructure.SceneLoaderService.SceneLoaderService
   nameWithType: SceneLoaderService.SceneLoaderService
-- uid: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,Action)
+- uid: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,System.Action)
   name: StartLoadSceneCoroutine(String, Action)
-  href: api/Infrastructure.SceneLoaderService.html#Infrastructure_SceneLoaderService_StartLoadSceneCoroutine_System_String_Action_
-  commentId: M:Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,Action)
-  fullName: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String, Action)
+  href: api/Infrastructure.SceneLoaderService.html#Infrastructure_SceneLoaderService_StartLoadSceneCoroutine_System_String_System_Action_
+  commentId: M:Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,System.Action)
+  fullName: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String, System.Action)
   nameWithType: SceneLoaderService.StartLoadSceneCoroutine(String, Action)
 - uid: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine*
   name: StartLoadSceneCoroutine
@@ -3259,11 +3548,11 @@ references:
   isSpec: "True"
   fullName: Services.CardGeneration.CardInstantiationService.CardInstantiationService
   nameWithType: CardInstantiationService.CardInstantiationService
-- uid: Services.CardGeneration.CardInstantiationService.AddNewFactory(Type)
+- uid: Services.CardGeneration.CardInstantiationService.AddNewFactory(System.Type)
   name: AddNewFactory(Type)
-  href: api/Services.CardGeneration.CardInstantiationService.html#Services_CardGeneration_CardInstantiationService_AddNewFactory_Type_
-  commentId: M:Services.CardGeneration.CardInstantiationService.AddNewFactory(Type)
-  fullName: Services.CardGeneration.CardInstantiationService.AddNewFactory(Type)
+  href: api/Services.CardGeneration.CardInstantiationService.html#Services_CardGeneration_CardInstantiationService_AddNewFactory_System_Type_
+  commentId: M:Services.CardGeneration.CardInstantiationService.AddNewFactory(System.Type)
+  fullName: Services.CardGeneration.CardInstantiationService.AddNewFactory(System.Type)
   nameWithType: CardInstantiationService.AddNewFactory(Type)
 - uid: Services.CardGeneration.CardInstantiationService.AddNewFactory*
   name: AddNewFactory
@@ -3272,11 +3561,11 @@ references:
   isSpec: "True"
   fullName: Services.CardGeneration.CardInstantiationService.AddNewFactory
   nameWithType: CardInstantiationService.AddNewFactory
-- uid: Services.CardGeneration.CardInstantiationService.GetNewFactory(Type)
+- uid: Services.CardGeneration.CardInstantiationService.GetNewFactory(System.Type)
   name: GetNewFactory(Type)
-  href: api/Services.CardGeneration.CardInstantiationService.html#Services_CardGeneration_CardInstantiationService_GetNewFactory_Type_
-  commentId: M:Services.CardGeneration.CardInstantiationService.GetNewFactory(Type)
-  fullName: Services.CardGeneration.CardInstantiationService.GetNewFactory(Type)
+  href: api/Services.CardGeneration.CardInstantiationService.html#Services_CardGeneration_CardInstantiationService_GetNewFactory_System_Type_
+  commentId: M:Services.CardGeneration.CardInstantiationService.GetNewFactory(System.Type)
+  fullName: Services.CardGeneration.CardInstantiationService.GetNewFactory(System.Type)
   nameWithType: CardInstantiationService.GetNewFactory(Type)
 - uid: Services.CardGeneration.CardInstantiationService.GetNewFactory*
   name: GetNewFactory
@@ -3285,11 +3574,11 @@ references:
   isSpec: "True"
   fullName: Services.CardGeneration.CardInstantiationService.GetNewFactory
   nameWithType: CardInstantiationService.GetNewFactory
-- uid: Services.CardGeneration.CardInstantiationService.ReturnObject(Type)
+- uid: Services.CardGeneration.CardInstantiationService.ReturnObject(System.Type)
   name: ReturnObject(Type)
-  href: api/Services.CardGeneration.CardInstantiationService.html#Services_CardGeneration_CardInstantiationService_ReturnObject_Type_
-  commentId: M:Services.CardGeneration.CardInstantiationService.ReturnObject(Type)
-  fullName: Services.CardGeneration.CardInstantiationService.ReturnObject(Type)
+  href: api/Services.CardGeneration.CardInstantiationService.html#Services_CardGeneration_CardInstantiationService_ReturnObject_System_Type_
+  commentId: M:Services.CardGeneration.CardInstantiationService.ReturnObject(System.Type)
+  fullName: Services.CardGeneration.CardInstantiationService.ReturnObject(System.Type)
   nameWithType: CardInstantiationService.ReturnObject(Type)
 - uid: Services.CardGeneration.CardInstantiationService.ReturnObject*
   name: ReturnObject
@@ -3334,12 +3623,12 @@ references:
   commentId: T:Services.CardGeneration.TowerCardFactory
   fullName: Services.CardGeneration.TowerCardFactory
   nameWithType: TowerCardFactory
-- uid: Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)
-  name: TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, DiContainer)
-  href: api/Services.CardGeneration.TowerCardFactory.html#Services_CardGeneration_TowerCardFactory__ctor_Type_TowerCard_CardImageDatabase_Services_CardGeneration_WorldCellCardGenerator_DiContainer_
-  commentId: M:Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)
-  fullName: Services.CardGeneration.TowerCardFactory.TowerCardFactory(Type, TowerCard, CardImageDatabase, Services.CardGeneration.WorldCellCardGenerator, DiContainer)
-  nameWithType: TowerCardFactory.TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, DiContainer)
+- uid: Services.CardGeneration.TowerCardFactory.#ctor(System.Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,CardDescriptionService,DiContainer,Services.CardGeneration.TowerImageDatabase)
+  name: TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, CardDescriptionService, DiContainer, TowerImageDatabase)
+  href: api/Services.CardGeneration.TowerCardFactory.html#Services_CardGeneration_TowerCardFactory__ctor_System_Type_TowerCard_CardImageDatabase_Services_CardGeneration_WorldCellCardGenerator_CardDescriptionService_DiContainer_Services_CardGeneration_TowerImageDatabase_
+  commentId: M:Services.CardGeneration.TowerCardFactory.#ctor(System.Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,CardDescriptionService,DiContainer,Services.CardGeneration.TowerImageDatabase)
+  fullName: Services.CardGeneration.TowerCardFactory.TowerCardFactory(System.Type, TowerCard, CardImageDatabase, Services.CardGeneration.WorldCellCardGenerator, CardDescriptionService, DiContainer, Services.CardGeneration.TowerImageDatabase)
+  nameWithType: TowerCardFactory.TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, CardDescriptionService, DiContainer, TowerImageDatabase)
 - uid: Services.CardGeneration.TowerCardFactory.#ctor*
   name: TowerCardFactory
   href: api/Services.CardGeneration.TowerCardFactory.html#Services_CardGeneration_TowerCardFactory__ctor_
@@ -3425,6 +3714,44 @@ references:
   isSpec: "True"
   fullName: Services.CardGeneration.TowerCardFactory.ReturnToPool
   nameWithType: TowerCardFactory.ReturnToPool
+- uid: Services.CardGeneration.TowerImageDatabase
+  name: TowerImageDatabase
+  href: api/Services.CardGeneration.TowerImageDatabase.html
+  commentId: T:Services.CardGeneration.TowerImageDatabase
+  fullName: Services.CardGeneration.TowerImageDatabase
+  nameWithType: TowerImageDatabase
+- uid: Services.CardGeneration.TowerImageDatabase.GetSprite(System.String)
+  name: GetSprite(String)
+  href: api/Services.CardGeneration.TowerImageDatabase.html#Services_CardGeneration_TowerImageDatabase_GetSprite_System_String_
+  commentId: M:Services.CardGeneration.TowerImageDatabase.GetSprite(System.String)
+  fullName: Services.CardGeneration.TowerImageDatabase.GetSprite(System.String)
+  nameWithType: TowerImageDatabase.GetSprite(String)
+- uid: Services.CardGeneration.TowerImageDatabase.GetSprite*
+  name: GetSprite
+  href: api/Services.CardGeneration.TowerImageDatabase.html#Services_CardGeneration_TowerImageDatabase_GetSprite_
+  commentId: Overload:Services.CardGeneration.TowerImageDatabase.GetSprite
+  isSpec: "True"
+  fullName: Services.CardGeneration.TowerImageDatabase.GetSprite
+  nameWithType: TowerImageDatabase.GetSprite
+- uid: Services.CardGeneration.TowerImageDatabase.Initialize
+  name: Initialize()
+  href: api/Services.CardGeneration.TowerImageDatabase.html#Services_CardGeneration_TowerImageDatabase_Initialize
+  commentId: M:Services.CardGeneration.TowerImageDatabase.Initialize
+  fullName: Services.CardGeneration.TowerImageDatabase.Initialize()
+  nameWithType: TowerImageDatabase.Initialize()
+- uid: Services.CardGeneration.TowerImageDatabase.Initialize*
+  name: Initialize
+  href: api/Services.CardGeneration.TowerImageDatabase.html#Services_CardGeneration_TowerImageDatabase_Initialize_
+  commentId: Overload:Services.CardGeneration.TowerImageDatabase.Initialize
+  isSpec: "True"
+  fullName: Services.CardGeneration.TowerImageDatabase.Initialize
+  nameWithType: TowerImageDatabase.Initialize
+- uid: Services.CardGeneration.TowerImageDatabase.TowerCardSpritesDataBase
+  name: TowerCardSpritesDataBase
+  href: api/Services.CardGeneration.TowerImageDatabase.html#Services_CardGeneration_TowerImageDatabase_TowerCardSpritesDataBase
+  commentId: F:Services.CardGeneration.TowerImageDatabase.TowerCardSpritesDataBase
+  fullName: Services.CardGeneration.TowerImageDatabase.TowerCardSpritesDataBase
+  nameWithType: TowerImageDatabase.TowerCardSpritesDataBase
 - uid: Services.CardGeneration.TowerToWorldCellPair
   name: TowerToWorldCellPair
   href: api/Services.CardGeneration.TowerToWorldCellPair.html
@@ -3462,11 +3789,11 @@ references:
   isSpec: "True"
   fullName: Services.CardGeneration.WorldCellCardGenerator.WorldCellCardGenerator
   nameWithType: WorldCellCardGenerator.WorldCellCardGenerator
-- uid: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(Type)
+- uid: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(System.Type)
   name: GetWorldCellType(Type)
-  href: api/Services.CardGeneration.WorldCellCardGenerator.html#Services_CardGeneration_WorldCellCardGenerator_GetWorldCellType_Type_
-  commentId: M:Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(Type)
-  fullName: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(Type)
+  href: api/Services.CardGeneration.WorldCellCardGenerator.html#Services_CardGeneration_WorldCellCardGenerator_GetWorldCellType_System_Type_
+  commentId: M:Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(System.Type)
+  fullName: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType(System.Type)
   nameWithType: WorldCellCardGenerator.GetWorldCellType(Type)
 - uid: Services.CardGeneration.WorldCellCardGenerator.GetWorldCellType*
   name: GetWorldCellType
@@ -3765,11 +4092,11 @@ references:
   commentId: T:Services.Factories.WorldCellFactory
   fullName: Services.Factories.WorldCellFactory
   nameWithType: WorldCellFactory
-- uid: Services.Factories.WorldCellFactory.#ctor(AbstractWorldCell,DiContainer)
+- uid: Services.Factories.WorldCellFactory.#ctor(WorldCells.AbstractWorldCell,DiContainer)
   name: WorldCellFactory(AbstractWorldCell, DiContainer)
-  href: api/Services.Factories.WorldCellFactory.html#Services_Factories_WorldCellFactory__ctor_AbstractWorldCell_DiContainer_
-  commentId: M:Services.Factories.WorldCellFactory.#ctor(AbstractWorldCell,DiContainer)
-  fullName: Services.Factories.WorldCellFactory.WorldCellFactory(AbstractWorldCell, DiContainer)
+  href: api/Services.Factories.WorldCellFactory.html#Services_Factories_WorldCellFactory__ctor_WorldCells_AbstractWorldCell_DiContainer_
+  commentId: M:Services.Factories.WorldCellFactory.#ctor(WorldCells.AbstractWorldCell,DiContainer)
+  fullName: Services.Factories.WorldCellFactory.WorldCellFactory(WorldCells.AbstractWorldCell, DiContainer)
   nameWithType: WorldCellFactory.WorldCellFactory(AbstractWorldCell, DiContainer)
 - uid: Services.Factories.WorldCellFactory.#ctor*
   name: WorldCellFactory
@@ -4139,6 +4466,45 @@ references:
   isSpec: "True"
   fullName: Services.Input.AbstractInputService.IsPointerUp
   nameWithType: AbstractInputService.IsPointerUp
+- uid: Services.Input.AbstractInputService.LeftMouseButtonDown
+  name: LeftMouseButtonDown()
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_LeftMouseButtonDown
+  commentId: M:Services.Input.AbstractInputService.LeftMouseButtonDown
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonDown()
+  nameWithType: AbstractInputService.LeftMouseButtonDown()
+- uid: Services.Input.AbstractInputService.LeftMouseButtonDown*
+  name: LeftMouseButtonDown
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_LeftMouseButtonDown_
+  commentId: Overload:Services.Input.AbstractInputService.LeftMouseButtonDown
+  isSpec: "True"
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonDown
+  nameWithType: AbstractInputService.LeftMouseButtonDown
+- uid: Services.Input.AbstractInputService.LeftMouseButtonUp
+  name: LeftMouseButtonUp()
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_LeftMouseButtonUp
+  commentId: M:Services.Input.AbstractInputService.LeftMouseButtonUp
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonUp()
+  nameWithType: AbstractInputService.LeftMouseButtonUp()
+- uid: Services.Input.AbstractInputService.LeftMouseButtonUp*
+  name: LeftMouseButtonUp
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_LeftMouseButtonUp_
+  commentId: Overload:Services.Input.AbstractInputService.LeftMouseButtonUp
+  isSpec: "True"
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonUp
+  nameWithType: AbstractInputService.LeftMouseButtonUp
+- uid: Services.Input.AbstractInputService.LeftMouseDown
+  name: LeftMouseDown()
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_LeftMouseDown
+  commentId: M:Services.Input.AbstractInputService.LeftMouseDown
+  fullName: Services.Input.AbstractInputService.LeftMouseDown()
+  nameWithType: AbstractInputService.LeftMouseDown()
+- uid: Services.Input.AbstractInputService.LeftMouseDown*
+  name: LeftMouseDown
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_LeftMouseDown_
+  commentId: Overload:Services.Input.AbstractInputService.LeftMouseDown
+  isSpec: "True"
+  fullName: Services.Input.AbstractInputService.LeftMouseDown
+  nameWithType: AbstractInputService.LeftMouseDown
 - uid: Services.Input.AbstractInputService.OnPointerDown
   name: OnPointerDown
   href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_OnPointerDown
@@ -4151,6 +4517,12 @@ references:
   commentId: E:Services.Input.AbstractInputService.OnPointerUp
   fullName: Services.Input.AbstractInputService.OnPointerUp
   nameWithType: AbstractInputService.OnPointerUp
+- uid: Services.Input.AbstractInputService.OnRightButtonUp
+  name: OnRightButtonUp
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_OnRightButtonUp
+  commentId: E:Services.Input.AbstractInputService.OnRightButtonUp
+  fullName: Services.Input.AbstractInputService.OnRightButtonUp
+  nameWithType: AbstractInputService.OnRightButtonUp
 - uid: Services.Input.AbstractInputService.OnShiftDown
   name: OnShiftDown
   href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_OnShiftDown
@@ -4163,32 +4535,58 @@ references:
   commentId: E:Services.Input.AbstractInputService.OnShiftUp
   fullName: Services.Input.AbstractInputService.OnShiftUp
   nameWithType: AbstractInputService.OnShiftUp
-- uid: Services.Input.AbstractInputService.PointerDown
-  name: PointerDown()
-  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_PointerDown
-  commentId: M:Services.Input.AbstractInputService.PointerDown
-  fullName: Services.Input.AbstractInputService.PointerDown()
-  nameWithType: AbstractInputService.PointerDown()
-- uid: Services.Input.AbstractInputService.PointerDown*
-  name: PointerDown
-  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_PointerDown_
-  commentId: Overload:Services.Input.AbstractInputService.PointerDown
+- uid: Services.Input.AbstractInputService.RightButtonUp
+  name: RightButtonUp()
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_RightButtonUp
+  commentId: M:Services.Input.AbstractInputService.RightButtonUp
+  fullName: Services.Input.AbstractInputService.RightButtonUp()
+  nameWithType: AbstractInputService.RightButtonUp()
+- uid: Services.Input.AbstractInputService.RightButtonUp*
+  name: RightButtonUp
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_RightButtonUp_
+  commentId: Overload:Services.Input.AbstractInputService.RightButtonUp
   isSpec: "True"
-  fullName: Services.Input.AbstractInputService.PointerDown
-  nameWithType: AbstractInputService.PointerDown
-- uid: Services.Input.AbstractInputService.PointerUp
-  name: PointerUp()
-  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_PointerUp
-  commentId: M:Services.Input.AbstractInputService.PointerUp
-  fullName: Services.Input.AbstractInputService.PointerUp()
-  nameWithType: AbstractInputService.PointerUp()
-- uid: Services.Input.AbstractInputService.PointerUp*
-  name: PointerUp
-  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_PointerUp_
-  commentId: Overload:Services.Input.AbstractInputService.PointerUp
+  fullName: Services.Input.AbstractInputService.RightButtonUp
+  nameWithType: AbstractInputService.RightButtonUp
+- uid: Services.Input.AbstractInputService.RightMouseDown
+  name: RightMouseDown()
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_RightMouseDown
+  commentId: M:Services.Input.AbstractInputService.RightMouseDown
+  fullName: Services.Input.AbstractInputService.RightMouseDown()
+  nameWithType: AbstractInputService.RightMouseDown()
+- uid: Services.Input.AbstractInputService.RightMouseDown*
+  name: RightMouseDown
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_RightMouseDown_
+  commentId: Overload:Services.Input.AbstractInputService.RightMouseDown
   isSpec: "True"
-  fullName: Services.Input.AbstractInputService.PointerUp
-  nameWithType: AbstractInputService.PointerUp
+  fullName: Services.Input.AbstractInputService.RightMouseDown
+  nameWithType: AbstractInputService.RightMouseDown
+- uid: Services.Input.AbstractInputService.ShiftDown
+  name: ShiftDown()
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_ShiftDown
+  commentId: M:Services.Input.AbstractInputService.ShiftDown
+  fullName: Services.Input.AbstractInputService.ShiftDown()
+  nameWithType: AbstractInputService.ShiftDown()
+- uid: Services.Input.AbstractInputService.ShiftDown*
+  name: ShiftDown
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_ShiftDown_
+  commentId: Overload:Services.Input.AbstractInputService.ShiftDown
+  isSpec: "True"
+  fullName: Services.Input.AbstractInputService.ShiftDown
+  nameWithType: AbstractInputService.ShiftDown
+- uid: Services.Input.AbstractInputService.ShiftUp
+  name: ShiftUp()
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_ShiftUp
+  commentId: M:Services.Input.AbstractInputService.ShiftUp
+  fullName: Services.Input.AbstractInputService.ShiftUp()
+  nameWithType: AbstractInputService.ShiftUp()
+- uid: Services.Input.AbstractInputService.ShiftUp*
+  name: ShiftUp
+  href: api/Services.Input.AbstractInputService.html#Services_Input_AbstractInputService_ShiftUp_
+  commentId: Overload:Services.Input.AbstractInputService.ShiftUp
+  isSpec: "True"
+  fullName: Services.Input.AbstractInputService.ShiftUp
+  nameWithType: AbstractInputService.ShiftUp
 - uid: Services.Input.DesctopInput
   name: DesctopInput
   href: api/Services.Input.DesctopInput.html
@@ -4360,11 +4758,11 @@ references:
   commentId: F:Services.TowerBuilding.TowerBuildingService._activeCard
   fullName: Services.TowerBuilding.TowerBuildingService._activeCard
   nameWithType: TowerBuildingService._activeCard
-- uid: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,Type)
+- uid: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,System.Type)
   name: InstantiateTowerFromCard(TowerCard, Type)
-  href: api/Services.TowerBuilding.TowerBuildingService.html#Services_TowerBuilding_TowerBuildingService_InstantiateTowerFromCard_TowerCard_Type_
-  commentId: M:Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,Type)
-  fullName: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard, Type)
+  href: api/Services.TowerBuilding.TowerBuildingService.html#Services_TowerBuilding_TowerBuildingService_InstantiateTowerFromCard_TowerCard_System_Type_
+  commentId: M:Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,System.Type)
+  fullName: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard, System.Type)
   nameWithType: TowerBuildingService.InstantiateTowerFromCard(TowerCard, Type)
 - uid: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard*
   name: InstantiateTowerFromCard
@@ -4392,11 +4790,11 @@ references:
   isSpec: "True"
   fullName: Services.TowerBuilding.TowerInstantiationService.TowerInstantiationService
   nameWithType: TowerInstantiationService.TowerInstantiationService
-- uid: Services.TowerBuilding.TowerInstantiationService.AddNewFactory(Type)
+- uid: Services.TowerBuilding.TowerInstantiationService.AddNewFactory(System.Type)
   name: AddNewFactory(Type)
-  href: api/Services.TowerBuilding.TowerInstantiationService.html#Services_TowerBuilding_TowerInstantiationService_AddNewFactory_Type_
-  commentId: M:Services.TowerBuilding.TowerInstantiationService.AddNewFactory(Type)
-  fullName: Services.TowerBuilding.TowerInstantiationService.AddNewFactory(Type)
+  href: api/Services.TowerBuilding.TowerInstantiationService.html#Services_TowerBuilding_TowerInstantiationService_AddNewFactory_System_Type_
+  commentId: M:Services.TowerBuilding.TowerInstantiationService.AddNewFactory(System.Type)
+  fullName: Services.TowerBuilding.TowerInstantiationService.AddNewFactory(System.Type)
   nameWithType: TowerInstantiationService.AddNewFactory(Type)
 - uid: Services.TowerBuilding.TowerInstantiationService.AddNewFactory*
   name: AddNewFactory
@@ -4405,11 +4803,11 @@ references:
   isSpec: "True"
   fullName: Services.TowerBuilding.TowerInstantiationService.AddNewFactory
   nameWithType: TowerInstantiationService.AddNewFactory
-- uid: Services.TowerBuilding.TowerInstantiationService.GetNewFactory(Type)
+- uid: Services.TowerBuilding.TowerInstantiationService.GetNewFactory(System.Type)
   name: GetNewFactory(Type)
-  href: api/Services.TowerBuilding.TowerInstantiationService.html#Services_TowerBuilding_TowerInstantiationService_GetNewFactory_Type_
-  commentId: M:Services.TowerBuilding.TowerInstantiationService.GetNewFactory(Type)
-  fullName: Services.TowerBuilding.TowerInstantiationService.GetNewFactory(Type)
+  href: api/Services.TowerBuilding.TowerInstantiationService.html#Services_TowerBuilding_TowerInstantiationService_GetNewFactory_System_Type_
+  commentId: M:Services.TowerBuilding.TowerInstantiationService.GetNewFactory(System.Type)
+  fullName: Services.TowerBuilding.TowerInstantiationService.GetNewFactory(System.Type)
   nameWithType: TowerInstantiationService.GetNewFactory(Type)
 - uid: Services.TowerBuilding.TowerInstantiationService.GetNewFactory*
   name: GetNewFactory
@@ -4418,11 +4816,11 @@ references:
   isSpec: "True"
   fullName: Services.TowerBuilding.TowerInstantiationService.GetNewFactory
   nameWithType: TowerInstantiationService.GetNewFactory
-- uid: Services.TowerBuilding.TowerInstantiationService.ReturnObject(Type)
+- uid: Services.TowerBuilding.TowerInstantiationService.ReturnObject(System.Type)
   name: ReturnObject(Type)
-  href: api/Services.TowerBuilding.TowerInstantiationService.html#Services_TowerBuilding_TowerInstantiationService_ReturnObject_Type_
-  commentId: M:Services.TowerBuilding.TowerInstantiationService.ReturnObject(Type)
-  fullName: Services.TowerBuilding.TowerInstantiationService.ReturnObject(Type)
+  href: api/Services.TowerBuilding.TowerInstantiationService.html#Services_TowerBuilding_TowerInstantiationService_ReturnObject_System_Type_
+  commentId: M:Services.TowerBuilding.TowerInstantiationService.ReturnObject(System.Type)
+  fullName: Services.TowerBuilding.TowerInstantiationService.ReturnObject(System.Type)
   nameWithType: TowerInstantiationService.ReturnObject(Type)
 - uid: Services.TowerBuilding.TowerInstantiationService.ReturnObject*
   name: ReturnObject
@@ -4437,6 +4835,64 @@ references:
   commentId: N:Services.Ui
   fullName: Services.Ui
   nameWithType: Services.Ui
+- uid: Services.Ui.CardInfoUiService
+  name: CardInfoUiService
+  href: api/Services.Ui.CardInfoUiService.html
+  commentId: T:Services.Ui.CardInfoUiService
+  fullName: Services.Ui.CardInfoUiService
+  nameWithType: CardInfoUiService
+- uid: Services.Ui.CardInfoUiService.#ctor(CardInfoUIContainer,AbstractInputService)
+  name: CardInfoUiService(CardInfoUIContainer, AbstractInputService)
+  href: api/Services.Ui.CardInfoUiService.html#Services_Ui_CardInfoUiService__ctor_CardInfoUIContainer_AbstractInputService_
+  commentId: M:Services.Ui.CardInfoUiService.#ctor(CardInfoUIContainer,AbstractInputService)
+  fullName: Services.Ui.CardInfoUiService.CardInfoUiService(CardInfoUIContainer, AbstractInputService)
+  nameWithType: CardInfoUiService.CardInfoUiService(CardInfoUIContainer, AbstractInputService)
+- uid: Services.Ui.CardInfoUiService.#ctor*
+  name: CardInfoUiService
+  href: api/Services.Ui.CardInfoUiService.html#Services_Ui_CardInfoUiService__ctor_
+  commentId: Overload:Services.Ui.CardInfoUiService.#ctor
+  isSpec: "True"
+  fullName: Services.Ui.CardInfoUiService.CardInfoUiService
+  nameWithType: CardInfoUiService.CardInfoUiService
+- uid: Services.Ui.CardInfoUiService.Hide
+  name: Hide()
+  href: api/Services.Ui.CardInfoUiService.html#Services_Ui_CardInfoUiService_Hide
+  commentId: M:Services.Ui.CardInfoUiService.Hide
+  fullName: Services.Ui.CardInfoUiService.Hide()
+  nameWithType: CardInfoUiService.Hide()
+- uid: Services.Ui.CardInfoUiService.Hide*
+  name: Hide
+  href: api/Services.Ui.CardInfoUiService.html#Services_Ui_CardInfoUiService_Hide_
+  commentId: Overload:Services.Ui.CardInfoUiService.Hide
+  isSpec: "True"
+  fullName: Services.Ui.CardInfoUiService.Hide
+  nameWithType: CardInfoUiService.Hide
+- uid: Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  name: ShowAsTower(TowerCardInfoConfig)
+  href: api/Services.Ui.CardInfoUiService.html#Services_Ui_CardInfoUiService_ShowAsTower_TowerCardInfoConfig_
+  commentId: M:Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  fullName: Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  nameWithType: CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+- uid: Services.Ui.CardInfoUiService.ShowAsTower*
+  name: ShowAsTower
+  href: api/Services.Ui.CardInfoUiService.html#Services_Ui_CardInfoUiService_ShowAsTower_
+  commentId: Overload:Services.Ui.CardInfoUiService.ShowAsTower
+  isSpec: "True"
+  fullName: Services.Ui.CardInfoUiService.ShowAsTower
+  nameWithType: CardInfoUiService.ShowAsTower
+- uid: Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  name: ShowAsWorldCell(WorldCellCardInfoConfig)
+  href: api/Services.Ui.CardInfoUiService.html#Services_Ui_CardInfoUiService_ShowAsWorldCell_WorldCellCardInfoConfig_
+  commentId: M:Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  fullName: Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  nameWithType: CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+- uid: Services.Ui.CardInfoUiService.ShowAsWorldCell*
+  name: ShowAsWorldCell
+  href: api/Services.Ui.CardInfoUiService.html#Services_Ui_CardInfoUiService_ShowAsWorldCell_
+  commentId: Overload:Services.Ui.CardInfoUiService.ShowAsWorldCell
+  isSpec: "True"
+  fullName: Services.Ui.CardInfoUiService.ShowAsWorldCell
+  nameWithType: CardInfoUiService.ShowAsWorldCell
 - uid: Services.Ui.GameplayCanvasContainer
   name: GameplayCanvasContainer
   href: api/Services.Ui.GameplayCanvasContainer.html
@@ -4461,6 +4917,37 @@ references:
   commentId: F:Services.Ui.MapCanvasContainer.ToBattleFieldBtn
   fullName: Services.Ui.MapCanvasContainer.ToBattleFieldBtn
   nameWithType: MapCanvasContainer.ToBattleFieldBtn
+- uid: TowerCards
+  name: TowerCards
+  href: api/TowerCards.html
+  commentId: N:TowerCards
+  fullName: TowerCards
+  nameWithType: TowerCards
+- uid: TowerCards.CardDatabase
+  name: CardDatabase
+  href: api/TowerCards.CardDatabase.html
+  commentId: T:TowerCards.CardDatabase
+  fullName: TowerCards.CardDatabase
+  nameWithType: CardDatabase
+- uid: TowerCards.CardDatabase.Initialize
+  name: Initialize()
+  href: api/TowerCards.CardDatabase.html#TowerCards_CardDatabase_Initialize
+  commentId: M:TowerCards.CardDatabase.Initialize
+  fullName: TowerCards.CardDatabase.Initialize()
+  nameWithType: CardDatabase.Initialize()
+- uid: TowerCards.CardDatabase.Initialize*
+  name: Initialize
+  href: api/TowerCards.CardDatabase.html#TowerCards_CardDatabase_Initialize_
+  commentId: Overload:TowerCards.CardDatabase.Initialize
+  isSpec: "True"
+  fullName: TowerCards.CardDatabase.Initialize
+  nameWithType: CardDatabase.Initialize
+- uid: TowerCards.DeckService
+  name: DeckService
+  href: api/TowerCards.DeckService.html
+  commentId: T:TowerCards.DeckService
+  fullName: TowerCards.DeckService
+  nameWithType: DeckService
 - uid: Towers
   name: Towers
   href: api/Towers.html
@@ -4758,6 +5245,12 @@ references:
   commentId: F:WorldCells.CellBiomeTypes.Arctic
   fullName: WorldCells.CellBiomeTypes.Arctic
   nameWithType: CellBiomeTypes.Arctic
+- uid: WorldCells.CellBiomeTypes.Cursed
+  name: Cursed
+  href: api/WorldCells.CellBiomeTypes.html#WorldCells_CellBiomeTypes_Cursed
+  commentId: F:WorldCells.CellBiomeTypes.Cursed
+  fullName: WorldCells.CellBiomeTypes.Cursed
+  nameWithType: CellBiomeTypes.Cursed
 - uid: WorldCells.CellBiomeTypes.Desert
   name: Desert
   href: api/WorldCells.CellBiomeTypes.html#WorldCells_CellBiomeTypes_Desert
@@ -4782,6 +5275,12 @@ references:
   commentId: T:WorldCells.GrassMeadows
   fullName: WorldCells.GrassMeadows
   nameWithType: GrassMeadows
+- uid: WorldCells.GraveYard
+  name: GraveYard
+  href: api/WorldCells.GraveYard.html
+  commentId: T:WorldCells.GraveYard
+  fullName: WorldCells.GraveYard
+  nameWithType: GraveYard
 - uid: WorldCells.WorldCellBalanceService
   name: WorldCellBalanceService
   href: api/WorldCells.WorldCellBalanceService.html

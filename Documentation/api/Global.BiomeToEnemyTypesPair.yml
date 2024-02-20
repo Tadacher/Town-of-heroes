@@ -17,15 +17,21 @@ items:
   source:
     id: BiomeToEnemyTypesPair
     path: ''
-    startLine: 1200
+    startLine: 1439
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ndescribes which biome can be summoner of which enemyTypes and\n"
+  summary: "\ndescribes which biome can be cause which enemyTypes to spawn\n"
   example: []
   syntax:
-    content: public class BiomeToEnemyTypesPair
-    content.vb: Public Class BiomeToEnemyTypesPair
+    content: >-
+      [Serializable]
+
+      public class BiomeToEnemyTypesPair
+    content.vb: >-
+      <Serializable>
+
+      Public Class BiomeToEnemyTypesPair
   inheritance:
   - System.Object
   inheritedMembers:
@@ -36,6 +42,10 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -56,14 +66,14 @@ items:
   source:
     id: CellBiomeType
     path: ''
-    startLine: 1203
+    startLine: 1442
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
     content: public CellBiomeTypes CellBiomeType
     return:
-      type: Global.CellBiomeTypes
+      type: WorldCells.CellBiomeTypes
     content.vb: Public CellBiomeType As CellBiomeTypes
   modifiers.csharp:
   - public
@@ -83,7 +93,7 @@ items:
   source:
     id: ProbabilityWeightPairs
     path: ''
-    startLine: 1204
+    startLine: 1443
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -396,11 +406,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.CellBiomeTypes
-  isExternal: true
+- uid: WorldCells.CellBiomeTypes
+  commentId: T:WorldCells.CellBiomeTypes
+  parent: WorldCells
   name: CellBiomeTypes
   nameWithType: CellBiomeTypes
-  fullName: CellBiomeTypes
+  fullName: WorldCells.CellBiomeTypes
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
 - uid: Global.EnemytypeToWeightPair[]
   isExternal: true
   name: EnemytypeToWeightPair[]

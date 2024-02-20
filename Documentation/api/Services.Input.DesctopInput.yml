@@ -19,7 +19,7 @@ items:
   source:
     id: DesctopInput
     path: ''
-    startLine: 2157
+    startLine: 2550
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -37,12 +37,18 @@ items:
   - Services.Input.IShiftEventProvider
   inheritedMembers:
   - Services.Input.AbstractInputService.Camera
+  - Services.Input.AbstractInputService.OnRightButtonUp
   - Services.Input.AbstractInputService.OnPointerUp
   - Services.Input.AbstractInputService.OnPointerDown
   - Services.Input.AbstractInputService.OnShiftUp
   - Services.Input.AbstractInputService.OnShiftDown
-  - Services.Input.AbstractInputService.PointerDown
-  - Services.Input.AbstractInputService.PointerUp
+  - Services.Input.AbstractInputService.LeftMouseButtonDown
+  - Services.Input.AbstractInputService.LeftMouseButtonUp
+  - Services.Input.AbstractInputService.LeftMouseDown
+  - Services.Input.AbstractInputService.ShiftDown
+  - Services.Input.AbstractInputService.ShiftUp
+  - Services.Input.AbstractInputService.RightButtonUp
+  - Services.Input.AbstractInputService.RightMouseDown
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -70,7 +76,7 @@ items:
   source:
     id: GetPointerPositionScreen
     path: ''
-    startLine: 2159
+    startLine: 2552
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -101,7 +107,7 @@ items:
   source:
     id: GetPointerPositionWorld
     path: ''
-    startLine: 2162
+    startLine: 2555
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -132,7 +138,7 @@ items:
   source:
     id: IsPointerDown
     path: ''
-    startLine: 2165
+    startLine: 2558
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -163,7 +169,7 @@ items:
   source:
     id: IsPointerUp
     path: ''
-    startLine: 2168
+    startLine: 2561
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -217,6 +223,12 @@ references:
   name: Camera
   nameWithType: AbstractInputService.Camera
   fullName: Services.Input.AbstractInputService.Camera
+- uid: Services.Input.AbstractInputService.OnRightButtonUp
+  commentId: E:Services.Input.AbstractInputService.OnRightButtonUp
+  parent: Services.Input.AbstractInputService
+  name: OnRightButtonUp
+  nameWithType: AbstractInputService.OnRightButtonUp
+  fullName: Services.Input.AbstractInputService.OnRightButtonUp
 - uid: Services.Input.AbstractInputService.OnPointerUp
   commentId: E:Services.Input.AbstractInputService.OnPointerUp
   parent: Services.Input.AbstractInputService
@@ -241,17 +253,17 @@ references:
   name: OnShiftDown
   nameWithType: AbstractInputService.OnShiftDown
   fullName: Services.Input.AbstractInputService.OnShiftDown
-- uid: Services.Input.AbstractInputService.PointerDown
-  commentId: M:Services.Input.AbstractInputService.PointerDown
+- uid: Services.Input.AbstractInputService.LeftMouseButtonDown
+  commentId: M:Services.Input.AbstractInputService.LeftMouseButtonDown
   parent: Services.Input.AbstractInputService
-  name: PointerDown()
-  nameWithType: AbstractInputService.PointerDown()
-  fullName: Services.Input.AbstractInputService.PointerDown()
+  name: LeftMouseButtonDown()
+  nameWithType: AbstractInputService.LeftMouseButtonDown()
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonDown()
   spec.csharp:
-  - uid: Services.Input.AbstractInputService.PointerDown
-    name: PointerDown
-    nameWithType: AbstractInputService.PointerDown
-    fullName: Services.Input.AbstractInputService.PointerDown
+  - uid: Services.Input.AbstractInputService.LeftMouseButtonDown
+    name: LeftMouseButtonDown
+    nameWithType: AbstractInputService.LeftMouseButtonDown
+    fullName: Services.Input.AbstractInputService.LeftMouseButtonDown
   - name: (
     nameWithType: (
     fullName: (
@@ -259,27 +271,27 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Services.Input.AbstractInputService.PointerDown
-    name: PointerDown
-    nameWithType: AbstractInputService.PointerDown
-    fullName: Services.Input.AbstractInputService.PointerDown
+  - uid: Services.Input.AbstractInputService.LeftMouseButtonDown
+    name: LeftMouseButtonDown
+    nameWithType: AbstractInputService.LeftMouseButtonDown
+    fullName: Services.Input.AbstractInputService.LeftMouseButtonDown
   - name: (
     nameWithType: (
     fullName: (
   - name: )
     nameWithType: )
     fullName: )
-- uid: Services.Input.AbstractInputService.PointerUp
-  commentId: M:Services.Input.AbstractInputService.PointerUp
+- uid: Services.Input.AbstractInputService.LeftMouseButtonUp
+  commentId: M:Services.Input.AbstractInputService.LeftMouseButtonUp
   parent: Services.Input.AbstractInputService
-  name: PointerUp()
-  nameWithType: AbstractInputService.PointerUp()
-  fullName: Services.Input.AbstractInputService.PointerUp()
+  name: LeftMouseButtonUp()
+  nameWithType: AbstractInputService.LeftMouseButtonUp()
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonUp()
   spec.csharp:
-  - uid: Services.Input.AbstractInputService.PointerUp
-    name: PointerUp
-    nameWithType: AbstractInputService.PointerUp
-    fullName: Services.Input.AbstractInputService.PointerUp
+  - uid: Services.Input.AbstractInputService.LeftMouseButtonUp
+    name: LeftMouseButtonUp
+    nameWithType: AbstractInputService.LeftMouseButtonUp
+    fullName: Services.Input.AbstractInputService.LeftMouseButtonUp
   - name: (
     nameWithType: (
     fullName: (
@@ -287,10 +299,150 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Services.Input.AbstractInputService.PointerUp
-    name: PointerUp
-    nameWithType: AbstractInputService.PointerUp
-    fullName: Services.Input.AbstractInputService.PointerUp
+  - uid: Services.Input.AbstractInputService.LeftMouseButtonUp
+    name: LeftMouseButtonUp
+    nameWithType: AbstractInputService.LeftMouseButtonUp
+    fullName: Services.Input.AbstractInputService.LeftMouseButtonUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Input.AbstractInputService.LeftMouseDown
+  commentId: M:Services.Input.AbstractInputService.LeftMouseDown
+  parent: Services.Input.AbstractInputService
+  name: LeftMouseDown()
+  nameWithType: AbstractInputService.LeftMouseDown()
+  fullName: Services.Input.AbstractInputService.LeftMouseDown()
+  spec.csharp:
+  - uid: Services.Input.AbstractInputService.LeftMouseDown
+    name: LeftMouseDown
+    nameWithType: AbstractInputService.LeftMouseDown
+    fullName: Services.Input.AbstractInputService.LeftMouseDown
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Input.AbstractInputService.LeftMouseDown
+    name: LeftMouseDown
+    nameWithType: AbstractInputService.LeftMouseDown
+    fullName: Services.Input.AbstractInputService.LeftMouseDown
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Input.AbstractInputService.ShiftDown
+  commentId: M:Services.Input.AbstractInputService.ShiftDown
+  parent: Services.Input.AbstractInputService
+  name: ShiftDown()
+  nameWithType: AbstractInputService.ShiftDown()
+  fullName: Services.Input.AbstractInputService.ShiftDown()
+  spec.csharp:
+  - uid: Services.Input.AbstractInputService.ShiftDown
+    name: ShiftDown
+    nameWithType: AbstractInputService.ShiftDown
+    fullName: Services.Input.AbstractInputService.ShiftDown
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Input.AbstractInputService.ShiftDown
+    name: ShiftDown
+    nameWithType: AbstractInputService.ShiftDown
+    fullName: Services.Input.AbstractInputService.ShiftDown
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Input.AbstractInputService.ShiftUp
+  commentId: M:Services.Input.AbstractInputService.ShiftUp
+  parent: Services.Input.AbstractInputService
+  name: ShiftUp()
+  nameWithType: AbstractInputService.ShiftUp()
+  fullName: Services.Input.AbstractInputService.ShiftUp()
+  spec.csharp:
+  - uid: Services.Input.AbstractInputService.ShiftUp
+    name: ShiftUp
+    nameWithType: AbstractInputService.ShiftUp
+    fullName: Services.Input.AbstractInputService.ShiftUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Input.AbstractInputService.ShiftUp
+    name: ShiftUp
+    nameWithType: AbstractInputService.ShiftUp
+    fullName: Services.Input.AbstractInputService.ShiftUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Input.AbstractInputService.RightButtonUp
+  commentId: M:Services.Input.AbstractInputService.RightButtonUp
+  parent: Services.Input.AbstractInputService
+  name: RightButtonUp()
+  nameWithType: AbstractInputService.RightButtonUp()
+  fullName: Services.Input.AbstractInputService.RightButtonUp()
+  spec.csharp:
+  - uid: Services.Input.AbstractInputService.RightButtonUp
+    name: RightButtonUp
+    nameWithType: AbstractInputService.RightButtonUp
+    fullName: Services.Input.AbstractInputService.RightButtonUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Input.AbstractInputService.RightButtonUp
+    name: RightButtonUp
+    nameWithType: AbstractInputService.RightButtonUp
+    fullName: Services.Input.AbstractInputService.RightButtonUp
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.Input.AbstractInputService.RightMouseDown
+  commentId: M:Services.Input.AbstractInputService.RightMouseDown
+  parent: Services.Input.AbstractInputService
+  name: RightMouseDown()
+  nameWithType: AbstractInputService.RightMouseDown()
+  fullName: Services.Input.AbstractInputService.RightMouseDown()
+  spec.csharp:
+  - uid: Services.Input.AbstractInputService.RightMouseDown
+    name: RightMouseDown
+    nameWithType: AbstractInputService.RightMouseDown
+    fullName: Services.Input.AbstractInputService.RightMouseDown
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.Input.AbstractInputService.RightMouseDown
+    name: RightMouseDown
+    nameWithType: AbstractInputService.RightMouseDown
+    fullName: Services.Input.AbstractInputService.RightMouseDown
   - name: (
     nameWithType: (
     fullName: (

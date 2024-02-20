@@ -20,7 +20,7 @@ items:
   source:
     id: BattleGridService
     path: ''
-    startLine: 2094
+    startLine: 2476
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -71,7 +71,7 @@ items:
   source:
     id: _battleCellSize
     path: ''
-    startLine: 2096
+    startLine: 2478
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -100,7 +100,7 @@ items:
   source:
     id: _battleGridSizeX
     path: ''
-    startLine: 2097
+    startLine: 2479
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -129,7 +129,7 @@ items:
   source:
     id: _battleGridSizeY
     path: ''
-    startLine: 2098
+    startLine: 2480
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -158,7 +158,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2100
+    startLine: 2482
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -184,7 +184,7 @@ items:
   source:
     id: InitCellContent
     path: ''
-    startLine: 2105
+    startLine: 2487
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem

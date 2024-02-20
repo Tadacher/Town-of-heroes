@@ -88,16 +88,16 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="Global.AbstractHealthModule.html">AbstractHealthModule</a></div>
+    <div class="level1"><a class="xref" href="Global.AbstractDamageRecievingModule.html">AbstractDamageRecievingModule</a></div>
     <div class="level2"><span class="xref">DefaultHealthModule</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Global.AbstractHealthModule.html#Global_AbstractHealthModule__damageTextService">AbstractHealthModule._damageTextService</a>
+      <a class="xref" href="Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule__damageTextService">AbstractDamageRecievingModule._damageTextService</a>
     </div>
     <div>
-      <a class="xref" href="Global.AbstractHealthModule.html#Global_AbstractHealthModule__unitTransform">AbstractHealthModule._unitTransform</a>
+      <a class="xref" href="Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule__unitTransform">AbstractDamageRecievingModule._unitTransform</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring#system-object-tostring">Object.ToString()</a>
@@ -125,7 +125,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Global_DefaultHealthModule_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DefaultHealthModule : AbstractHealthModule</code></pre>
+    <pre><code class="lang-csharp hljs">public class DefaultHealthModule : AbstractDamageRecievingModule</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -165,13 +165,13 @@
   </h3>
   
   
-  <a id="Global_DefaultHealthModule_RecieveDamage_" data-uid="Global.DefaultHealthModule.RecieveDamage*"></a>
-  <h4 id="Global_DefaultHealthModule_RecieveDamage_System_Int32_" data-uid="Global.DefaultHealthModule.RecieveDamage(System.Int32)">RecieveDamage(Int32)</h4>
+  <a id="Global_DefaultHealthModule_CalculateRecievedDamage_" data-uid="Global.DefaultHealthModule.CalculateRecievedDamage*"></a>
+  <h4 id="Global_DefaultHealthModule_CalculateRecievedDamage_System_Int32_" data-uid="Global.DefaultHealthModule.CalculateRecievedDamage(System.Int32)">CalculateRecievedDamage(Int32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int RecieveDamage(int damage)</code></pre>
+    <pre><code class="lang-csharp hljs">public override int CalculateRecievedDamage(int damage)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,7 +206,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Global.AbstractHealthModule.html#Global_AbstractHealthModule_RecieveDamage_System_Int32_">AbstractHealthModule.RecieveDamage(Int32)</a></div>
+  <div><a class="xref" href="Global.AbstractDamageRecievingModule.html#Global_AbstractDamageRecievingModule_CalculateRecievedDamage_System_Int32_">AbstractDamageRecievingModule.CalculateRecievedDamage(Int32)</a></div>
 </article>
           </div>
           

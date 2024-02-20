@@ -91,6 +91,7 @@
     <div class="level1"><span class="xref">AbstractTower</span></div>
       <div class="level2"><a class="xref" href="Core.Towers.ArcherTower.html">ArcherTower</a></div>
       <div class="level2"><a class="xref" href="Core.Towers.ShrapnelCanonTower.html">ShrapnelCanonTower</a></div>
+      <div class="level2"><a class="xref" href="Core.Towers.TowerOfDeath.html">TowerOfDeath</a></div>
   </div>
   <div class="implements">
     <h5>Implements</h5>
@@ -608,6 +609,16 @@
   </div>
   
   
+  <a id="Core_Towers_AbstractTower_Awake_" data-uid="Core.Towers.AbstractTower.Awake*"></a>
+  <h4 id="Core_Towers_AbstractTower_Awake" data-uid="Core.Towers.AbstractTower.Awake">Awake()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Awake()</code></pre>
+  </div>
+  
+  
   <a id="Core_Towers_AbstractTower_CountAttackDelay_" data-uid="Core.Towers.AbstractTower.CountAttackDelay*"></a>
   <h4 id="Core_Towers_AbstractTower_CountAttackDelay" data-uid="Core.Towers.AbstractTower.CountAttackDelay">CountAttackDelay()</h4>
   <div class="markdown level1 summary"></div>
@@ -722,7 +733,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void InitializeProjectileFactory(ProjectileBehaviour projectileBehaviour)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -736,7 +747,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Global.ProjectileBehaviour.html">ProjectileBehaviour</a></td>
-        <td><span class="parametername">projectileBehaviour</span></td>
+        <td><span class="parametername">projectilePrefab</span></td>
         <td></td>
       </tr>
     </tbody>

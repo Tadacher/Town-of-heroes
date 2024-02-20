@@ -5,7 +5,7 @@ items:
   id: WaveGenerator
   parent: Global
   children:
-  - Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
+  - Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCells.WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
   - Global.WaveGenerator.GenerateWave
   langs:
   - csharp
@@ -17,7 +17,7 @@ items:
   source:
     id: WaveGenerator
     path: ''
-    startLine: 2604
+    startLine: 3015
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -40,21 +40,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
-  commentId: M:Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
-  id: '#ctor(EnemyInstantiationService,WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)'
+- uid: Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCells.WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
+  commentId: M:Global.WaveGenerator.#ctor(EnemyInstantiationService,WorldCells.WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)
+  id: '#ctor(EnemyInstantiationService,WorldCells.WorldCellBalanceService,EnemyPrefabContainer,EnemyTypeService)'
   parent: Global.WaveGenerator
   langs:
   - csharp
   - vb
   name: WaveGenerator(EnemyInstantiationService, WorldCellBalanceService, EnemyPrefabContainer, EnemyTypeService)
   nameWithType: WaveGenerator.WaveGenerator(EnemyInstantiationService, WorldCellBalanceService, EnemyPrefabContainer, EnemyTypeService)
-  fullName: WaveGenerator.WaveGenerator(EnemyInstantiationService, WorldCellBalanceService, EnemyPrefabContainer, EnemyTypeService)
+  fullName: WaveGenerator.WaveGenerator(EnemyInstantiationService, WorldCells.WorldCellBalanceService, EnemyPrefabContainer, EnemyTypeService)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 2611
+    startLine: 3022
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -64,7 +64,7 @@ items:
     - id: nemyInstantiationService
       type: Global.EnemyInstantiationService
     - id: worldCellBalanceService
-      type: Global.WorldCellBalanceService
+      type: WorldCells.WorldCellBalanceService
     - id: enemyPrefabContainer
       type: Global.EnemyPrefabContainer
     - id: enemyTypeService
@@ -89,7 +89,7 @@ items:
   source:
     id: GenerateWave
     path: ''
-    startLine: 2620
+    startLine: 3031
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -413,12 +413,12 @@ references:
   name: EnemyInstantiationService
   nameWithType: EnemyInstantiationService
   fullName: EnemyInstantiationService
-- uid: Global.WorldCellBalanceService
-  commentId: '!:Global.WorldCellBalanceService'
-  isExternal: true
+- uid: WorldCells.WorldCellBalanceService
+  commentId: T:WorldCells.WorldCellBalanceService
+  parent: WorldCells
   name: WorldCellBalanceService
   nameWithType: WorldCellBalanceService
-  fullName: WorldCellBalanceService
+  fullName: WorldCells.WorldCellBalanceService
 - uid: Global.EnemyPrefabContainer
   commentId: T:Global.EnemyPrefabContainer
   name: EnemyPrefabContainer
@@ -429,6 +429,11 @@ references:
   name: EnemyTypeService
   nameWithType: EnemyTypeService
   fullName: EnemyTypeService
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
 - uid: Global.WaveGenerator.GenerateWave*
   commentId: Overload:Global.WaveGenerator.GenerateWave
   name: GenerateWave

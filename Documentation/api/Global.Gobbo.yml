@@ -5,7 +5,6 @@ items:
   id: Gobbo
   parent: Global
   children:
-  - Global.Gobbo.Heal(System.Int32)
   - Global.Gobbo.Initialize(AudioSource,DamageTextService,IObjectPooler)
   langs:
   - csharp
@@ -17,7 +16,7 @@ items:
   source:
     id: Gobbo
     path: ''
-    startLine: 137
+    startLine: 144
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -51,6 +50,7 @@ items:
   - Global.AbstractEnemy._enemyMovementModule
   - Global.AbstractEnemy._abstractHealthModule
   - Global.AbstractEnemy._damageTextService
+  - Global.AbstractEnemy.Heal(System.Int32)
   - Global.AbstractEnemy.RecieveDamage(System.Int32,Core.Towers.AbstractTower)
   - Global.AbstractEnemy.MovementModule
   - Global.AbstractEnemy.ReInitialize(Vector3)
@@ -77,7 +77,7 @@ items:
   source:
     id: Initialize
     path: ''
-    startLine: 139
+    startLine: 146
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -93,38 +93,6 @@ items:
     content.vb: Public Overrides Sub Initialize(audioSource As AudioSource, damageTextService As DamageTextService, objectPooler As IObjectPooler)
   overridden: Global.AbstractEnemy.Initialize(AudioSource,DamageTextService,IObjectPooler)
   overload: Global.Gobbo.Initialize*
-  modifiers.csharp:
-  - public
-  - override
-  modifiers.vb:
-  - Public
-  - Overrides
-- uid: Global.Gobbo.Heal(System.Int32)
-  commentId: M:Global.Gobbo.Heal(System.Int32)
-  id: Heal(System.Int32)
-  parent: Global.Gobbo
-  langs:
-  - csharp
-  - vb
-  name: Heal(Int32)
-  nameWithType: Gobbo.Heal(Int32)
-  fullName: Gobbo.Heal(System.Int32)
-  type: Method
-  source:
-    id: Heal
-    path: ''
-    startLine: 145
-  assemblies:
-  - cs.temp.dll
-  namespace: Global
-  syntax:
-    content: public override void Heal(int points)
-    parameters:
-    - id: points
-      type: System.Int32
-    content.vb: Public Overrides Sub Heal(points As Integer)
-  overridden: Global.AbstractEnemy.Heal(System.Int32)
-  overload: Global.Gobbo.Heal*
   modifiers.csharp:
   - public
   - override
@@ -250,6 +218,45 @@ references:
   name: _damageTextService
   nameWithType: AbstractEnemy._damageTextService
   fullName: AbstractEnemy._damageTextService
+- uid: Global.AbstractEnemy.Heal(System.Int32)
+  commentId: M:Global.AbstractEnemy.Heal(System.Int32)
+  parent: Global.AbstractEnemy
+  isExternal: true
+  name: Heal(Int32)
+  nameWithType: AbstractEnemy.Heal(Int32)
+  fullName: AbstractEnemy.Heal(System.Int32)
+  spec.csharp:
+  - uid: Global.AbstractEnemy.Heal(System.Int32)
+    name: Heal
+    nameWithType: AbstractEnemy.Heal
+    fullName: AbstractEnemy.Heal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.AbstractEnemy.Heal(System.Int32)
+    name: Heal
+    nameWithType: AbstractEnemy.Heal
+    fullName: AbstractEnemy.Heal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Global.AbstractEnemy.RecieveDamage(System.Int32,Core.Towers.AbstractTower)
   commentId: M:Global.AbstractEnemy.RecieveDamage(System.Int32,Core.Towers.AbstractTower)
   parent: Global.AbstractEnemy
@@ -549,54 +556,3 @@ references:
   name: IObjectPooler
   nameWithType: IObjectPooler
   fullName: IObjectPooler
-- uid: Global.AbstractEnemy.Heal(System.Int32)
-  commentId: M:Global.AbstractEnemy.Heal(System.Int32)
-  parent: Global.AbstractEnemy
-  isExternal: true
-  name: Heal(Int32)
-  nameWithType: AbstractEnemy.Heal(Int32)
-  fullName: AbstractEnemy.Heal(System.Int32)
-  spec.csharp:
-  - uid: Global.AbstractEnemy.Heal(System.Int32)
-    name: Heal
-    nameWithType: AbstractEnemy.Heal
-    fullName: AbstractEnemy.Heal
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Int32
-    name: Int32
-    nameWithType: Int32
-    fullName: System.Int32
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Global.AbstractEnemy.Heal(System.Int32)
-    name: Heal
-    nameWithType: AbstractEnemy.Heal
-    fullName: AbstractEnemy.Heal
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Int32
-    name: Int32
-    nameWithType: Int32
-    fullName: System.Int32
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Global.Gobbo.Heal*
-  commentId: Overload:Global.Gobbo.Heal
-  name: Heal
-  nameWithType: Gobbo.Heal
-  fullName: Gobbo.Heal
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32

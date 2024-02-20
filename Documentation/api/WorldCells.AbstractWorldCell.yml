@@ -31,10 +31,12 @@ items:
   source:
     id: AbstractWorldCell
     path: ''
-    startLine: 3328
+    startLine: 3767
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
+  summary: "\nbase class for all world cells\nit is mandatory for it to be in WorldCells namespace for propper card generation\n"
+  example: []
   syntax:
     content: 'public class AbstractWorldCell : MonoBehaviour, IPoolableObject, IGridCellObject'
     content.vb: >-
@@ -45,6 +47,7 @@ items:
   - System.Object
   derivedClasses:
   - WorldCells.GrassMeadows
+  - WorldCells.GraveYard
   implements:
   - Global.IPoolableObject
   - Services.GridSystem.IGridCellObject
@@ -68,7 +71,7 @@ items:
   source:
     id: _pointerFollower
     path: ''
-    startLine: 3332
+    startLine: 3770
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -95,7 +98,7 @@ items:
   source:
     id: _spriteRenderer
     path: ''
-    startLine: 3334
+    startLine: 3771
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -122,7 +125,7 @@ items:
   source:
     id: _cellStats
     path: ''
-    startLine: 3336
+    startLine: 3772
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -149,7 +152,7 @@ items:
   source:
     id: _objectPooler
     path: ''
-    startLine: 3338
+    startLine: 3774
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -176,7 +179,7 @@ items:
   source:
     id: _gridAlignService
     path: ''
-    startLine: 3339
+    startLine: 3775
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -203,7 +206,7 @@ items:
   source:
     id: _worldCellBalanceService
     path: ''
-    startLine: 3340
+    startLine: 3776
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -230,7 +233,7 @@ items:
   source:
     id: Initialize
     path: ''
-    startLine: 3342
+    startLine: 3778
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -265,7 +268,7 @@ items:
   source:
     id: ReturnToPool
     path: ''
-    startLine: 3353
+    startLine: 3789
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -293,7 +296,7 @@ items:
   source:
     id: StartFollowPointer
     path: ''
-    startLine: 3356
+    startLine: 3792
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -319,7 +322,7 @@ items:
   source:
     id: StopFollowingPointer
     path: ''
-    startLine: 3358
+    startLine: 3794
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -345,7 +348,7 @@ items:
   source:
     id: InsertSelfToGrid
     path: ''
-    startLine: 3360
+    startLine: 3796
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -373,7 +376,7 @@ items:
   source:
     id: RemoveSelfFromGrid
     path: ''
-    startLine: 3366
+    startLine: 3802
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -401,7 +404,7 @@ items:
   source:
     id: AsGhost
     path: ''
-    startLine: 3372
+    startLine: 3808
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -429,7 +432,7 @@ items:
   source:
     id: AsUnGhost
     path: ''
-    startLine: 3378
+    startLine: 3814
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -457,7 +460,7 @@ items:
   source:
     id: MakeUnGhost
     path: ''
-    startLine: 3384
+    startLine: 3820
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -483,7 +486,7 @@ items:
   source:
     id: MakeGhost
     path: ''
-    startLine: 3389
+    startLine: 3825
   assemblies:
   - cs.temp.dll
   namespace: WorldCells

@@ -17,7 +17,7 @@ items:
   source:
     id: WorldCellGridService
     path: ''
-    startLine: 2015
+    startLine: 2397
   assemblies:
   - cs.temp.dll
   namespace: Services.GlobalMap
@@ -68,7 +68,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2020
+    startLine: 2402
   assemblies:
   - cs.temp.dll
   namespace: Services.GlobalMap
@@ -94,7 +94,7 @@ items:
   source:
     id: InitCellContent
     path: ''
-    startLine: 2025
+    startLine: 2407
   assemblies:
   - cs.temp.dll
   namespace: Services.GlobalMap

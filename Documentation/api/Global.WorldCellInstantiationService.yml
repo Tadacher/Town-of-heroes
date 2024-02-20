@@ -6,9 +6,9 @@ items:
   parent: Global
   children:
   - Global.WorldCellInstantiationService.#ctor(DiContainer)
-  - Global.WorldCellInstantiationService.AddNewFactory(Type)
-  - Global.WorldCellInstantiationService.GetNewFactory(Type)
-  - Global.WorldCellInstantiationService.ReturnObject(Type)
+  - Global.WorldCellInstantiationService.AddNewFactory(System.Type)
+  - Global.WorldCellInstantiationService.GetNewFactory(System.Type)
+  - Global.WorldCellInstantiationService.ReturnObject(System.Type)
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
   source:
     id: WorldCellInstantiationService
     path: ''
-    startLine: 2876
+    startLine: 3292
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -30,12 +30,12 @@ items:
           Inherits AbstractInstantiationService(Of AbstractWorldCell)
   inheritance:
   - System.Object
-  - Global.AbstractInstantiationService{AbstractWorldCell}
+  - Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
   inheritedMembers:
-  - Global.AbstractInstantiationService{AbstractWorldCell}._container
-  - Global.AbstractInstantiationService{AbstractWorldCell}._factories
-  - Global.AbstractInstantiationService{AbstractWorldCell}._productionPrefabPath
-  - Global.AbstractInstantiationService{AbstractWorldCell}.LoadProductPrefab(Type)
+  - Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._container
+  - Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._factories
+  - Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._productionPrefabPath
+  - Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.LoadProductPrefab(System.Type)
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -63,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2879
+    startLine: 3295
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -78,21 +78,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.WorldCellInstantiationService.ReturnObject(Type)
-  commentId: M:Global.WorldCellInstantiationService.ReturnObject(Type)
-  id: ReturnObject(Type)
+- uid: Global.WorldCellInstantiationService.ReturnObject(System.Type)
+  commentId: M:Global.WorldCellInstantiationService.ReturnObject(System.Type)
+  id: ReturnObject(System.Type)
   parent: Global.WorldCellInstantiationService
   langs:
   - csharp
   - vb
   name: ReturnObject(Type)
   nameWithType: WorldCellInstantiationService.ReturnObject(Type)
-  fullName: WorldCellInstantiationService.ReturnObject(Type)
+  fullName: WorldCellInstantiationService.ReturnObject(System.Type)
   type: Method
   source:
     id: ReturnObject
     path: ''
-    startLine: 2883
+    startLine: 3299
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -100,11 +100,11 @@ items:
     content: public override AbstractWorldCell ReturnObject(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     return:
-      type: Global.AbstractWorldCell
+      type: WorldCells.AbstractWorldCell
     content.vb: Public Overrides Function ReturnObject(type As Type) As AbstractWorldCell
-  overridden: Global.AbstractInstantiationService{AbstractWorldCell}.ReturnObject(Type)
+  overridden: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.ReturnObject(System.Type)
   overload: Global.WorldCellInstantiationService.ReturnObject*
   modifiers.csharp:
   - public
@@ -112,21 +112,21 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: Global.WorldCellInstantiationService.AddNewFactory(Type)
-  commentId: M:Global.WorldCellInstantiationService.AddNewFactory(Type)
-  id: AddNewFactory(Type)
+- uid: Global.WorldCellInstantiationService.AddNewFactory(System.Type)
+  commentId: M:Global.WorldCellInstantiationService.AddNewFactory(System.Type)
+  id: AddNewFactory(System.Type)
   parent: Global.WorldCellInstantiationService
   langs:
   - csharp
   - vb
   name: AddNewFactory(Type)
   nameWithType: WorldCellInstantiationService.AddNewFactory(Type)
-  fullName: WorldCellInstantiationService.AddNewFactory(Type)
+  fullName: WorldCellInstantiationService.AddNewFactory(System.Type)
   type: Method
   source:
     id: AddNewFactory
     path: ''
-    startLine: 2891
+    startLine: 3307
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -134,9 +134,9 @@ items:
     content: protected override void AddNewFactory(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     content.vb: Protected Overrides Sub AddNewFactory(type As Type)
-  overridden: Global.AbstractInstantiationService{AbstractWorldCell}.AddNewFactory(Type)
+  overridden: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.AddNewFactory(System.Type)
   overload: Global.WorldCellInstantiationService.AddNewFactory*
   modifiers.csharp:
   - protected
@@ -144,21 +144,21 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
-- uid: Global.WorldCellInstantiationService.GetNewFactory(Type)
-  commentId: M:Global.WorldCellInstantiationService.GetNewFactory(Type)
-  id: GetNewFactory(Type)
+- uid: Global.WorldCellInstantiationService.GetNewFactory(System.Type)
+  commentId: M:Global.WorldCellInstantiationService.GetNewFactory(System.Type)
+  id: GetNewFactory(System.Type)
   parent: Global.WorldCellInstantiationService
   langs:
   - csharp
   - vb
   name: GetNewFactory(Type)
   nameWithType: WorldCellInstantiationService.GetNewFactory(Type)
-  fullName: WorldCellInstantiationService.GetNewFactory(Type)
+  fullName: WorldCellInstantiationService.GetNewFactory(System.Type)
   type: Method
   source:
     id: GetNewFactory
     path: ''
-    startLine: 2894
+    startLine: 3310
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -166,11 +166,11 @@ items:
     content: protected override IFactory<AbstractWorldCell> GetNewFactory(Type productType)
     parameters:
     - id: productType
-      type: Global.Type
+      type: System.Type
     return:
-      type: Global.IFactory{AbstractWorldCell}
+      type: Global.IFactory{WorldCells.AbstractWorldCell}
     content.vb: Protected Overrides Function GetNewFactory(productType As Type) As IFactory(Of AbstractWorldCell)
-  overridden: Global.AbstractInstantiationService{AbstractWorldCell}.GetNewFactory(Type)
+  overridden: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.GetNewFactory(System.Type)
   overload: Global.WorldCellInstantiationService.GetNewFactory*
   modifiers.csharp:
   - protected
@@ -193,14 +193,14 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Global.AbstractInstantiationService{AbstractWorldCell}
-  commentId: T:Global.AbstractInstantiationService{AbstractWorldCell}
+- uid: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
+  commentId: T:Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
   definition: Global.AbstractInstantiationService`1
   name: AbstractInstantiationService<AbstractWorldCell>
   nameWithType: AbstractInstantiationService<AbstractWorldCell>
-  fullName: AbstractInstantiationService<AbstractWorldCell>
+  fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>
   nameWithType.vb: AbstractInstantiationService(Of AbstractWorldCell)
-  fullName.vb: AbstractInstantiationService(Of AbstractWorldCell)
+  fullName.vb: AbstractInstantiationService(Of WorldCells.AbstractWorldCell)
   name.vb: AbstractInstantiationService(Of AbstractWorldCell)
   spec.csharp:
   - uid: Global.AbstractInstantiationService`1
@@ -210,11 +210,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Global.AbstractWorldCell
+  - uid: WorldCells.AbstractWorldCell
     name: AbstractWorldCell
     nameWithType: AbstractWorldCell
-    fullName: AbstractWorldCell
-    isExternal: true
+    fullName: WorldCells.AbstractWorldCell
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -226,78 +225,77 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Global.AbstractWorldCell
+  - uid: WorldCells.AbstractWorldCell
     name: AbstractWorldCell
     nameWithType: AbstractWorldCell
-    fullName: AbstractWorldCell
-    isExternal: true
+    fullName: WorldCells.AbstractWorldCell
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService{AbstractWorldCell}._container
-  commentId: F:Global.AbstractInstantiationService{AbstractWorldCell}._container
-  parent: Global.AbstractInstantiationService{AbstractWorldCell}
+- uid: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._container
+  commentId: F:Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._container
+  parent: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
   definition: Global.AbstractInstantiationService`1._container
   name: _container
   nameWithType: AbstractInstantiationService<AbstractWorldCell>._container
-  fullName: AbstractInstantiationService<AbstractWorldCell>._container
+  fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>._container
   nameWithType.vb: AbstractInstantiationService(Of AbstractWorldCell)._container
-  fullName.vb: AbstractInstantiationService(Of AbstractWorldCell)._container
-- uid: Global.AbstractInstantiationService{AbstractWorldCell}._factories
-  commentId: F:Global.AbstractInstantiationService{AbstractWorldCell}._factories
-  parent: Global.AbstractInstantiationService{AbstractWorldCell}
+  fullName.vb: AbstractInstantiationService(Of WorldCells.AbstractWorldCell)._container
+- uid: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._factories
+  commentId: F:Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._factories
+  parent: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
   definition: Global.AbstractInstantiationService`1._factories
   name: _factories
   nameWithType: AbstractInstantiationService<AbstractWorldCell>._factories
-  fullName: AbstractInstantiationService<AbstractWorldCell>._factories
+  fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>._factories
   nameWithType.vb: AbstractInstantiationService(Of AbstractWorldCell)._factories
-  fullName.vb: AbstractInstantiationService(Of AbstractWorldCell)._factories
-- uid: Global.AbstractInstantiationService{AbstractWorldCell}._productionPrefabPath
-  commentId: F:Global.AbstractInstantiationService{AbstractWorldCell}._productionPrefabPath
-  parent: Global.AbstractInstantiationService{AbstractWorldCell}
+  fullName.vb: AbstractInstantiationService(Of WorldCells.AbstractWorldCell)._factories
+- uid: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._productionPrefabPath
+  commentId: F:Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}._productionPrefabPath
+  parent: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
   definition: Global.AbstractInstantiationService`1._productionPrefabPath
   name: _productionPrefabPath
   nameWithType: AbstractInstantiationService<AbstractWorldCell>._productionPrefabPath
-  fullName: AbstractInstantiationService<AbstractWorldCell>._productionPrefabPath
+  fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>._productionPrefabPath
   nameWithType.vb: AbstractInstantiationService(Of AbstractWorldCell)._productionPrefabPath
-  fullName.vb: AbstractInstantiationService(Of AbstractWorldCell)._productionPrefabPath
-- uid: Global.AbstractInstantiationService{AbstractWorldCell}.LoadProductPrefab(Type)
-  commentId: M:Global.AbstractInstantiationService{AbstractWorldCell}.LoadProductPrefab(Type)
-  parent: Global.AbstractInstantiationService{AbstractWorldCell}
-  definition: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of WorldCells.AbstractWorldCell)._productionPrefabPath
+- uid: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.LoadProductPrefab(System.Type)
+  commentId: M:Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.LoadProductPrefab(System.Type)
+  parent: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
+  definition: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
   name: LoadProductPrefab(Type)
   nameWithType: AbstractInstantiationService<AbstractWorldCell>.LoadProductPrefab(Type)
-  fullName: AbstractInstantiationService<AbstractWorldCell>.LoadProductPrefab(Type)
+  fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>.LoadProductPrefab(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractWorldCell).LoadProductPrefab(Type)
-  fullName.vb: AbstractInstantiationService(Of AbstractWorldCell).LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of WorldCells.AbstractWorldCell).LoadProductPrefab(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService<AbstractWorldCell>.LoadProductPrefab
-    fullName: AbstractInstantiationService<AbstractWorldCell>.LoadProductPrefab
+    fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>.LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService(Of AbstractWorldCell).LoadProductPrefab
-    fullName: AbstractInstantiationService(Of AbstractWorldCell).LoadProductPrefab
+    fullName: AbstractInstantiationService(Of WorldCells.AbstractWorldCell).LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -644,42 +642,42 @@ references:
   fullName: AbstractInstantiationService<TProduction>._productionPrefabPath
   nameWithType.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
   fullName.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
-- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
-  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
   isExternal: true
   name: LoadProductPrefab(Type)
   nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
-  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
+  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab
     fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService(Of TProduction).LoadProductPrefab
     fullName: AbstractInstantiationService(Of TProduction).LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -694,43 +692,43 @@ references:
   name: DiContainer
   nameWithType: DiContainer
   fullName: DiContainer
-- uid: Global.AbstractInstantiationService{AbstractWorldCell}.ReturnObject(Type)
-  commentId: M:Global.AbstractInstantiationService{AbstractWorldCell}.ReturnObject(Type)
-  parent: Global.AbstractInstantiationService{AbstractWorldCell}
-  definition: Global.AbstractInstantiationService`1.ReturnObject(Type)
+- uid: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.ReturnObject(System.Type)
+  commentId: M:Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.ReturnObject(System.Type)
+  parent: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
+  definition: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
   name: ReturnObject(Type)
   nameWithType: AbstractInstantiationService<AbstractWorldCell>.ReturnObject(Type)
-  fullName: AbstractInstantiationService<AbstractWorldCell>.ReturnObject(Type)
+  fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>.ReturnObject(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractWorldCell).ReturnObject(Type)
-  fullName.vb: AbstractInstantiationService(Of AbstractWorldCell).ReturnObject(Type)
+  fullName.vb: AbstractInstantiationService(Of WorldCells.AbstractWorldCell).ReturnObject(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService<AbstractWorldCell>.ReturnObject
-    fullName: AbstractInstantiationService<AbstractWorldCell>.ReturnObject
+    fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>.ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService(Of AbstractWorldCell).ReturnObject
-    fullName: AbstractInstantiationService(Of AbstractWorldCell).ReturnObject
+    fullName: AbstractInstantiationService(Of WorldCells.AbstractWorldCell).ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -740,93 +738,101 @@ references:
   name: ReturnObject
   nameWithType: WorldCellInstantiationService.ReturnObject
   fullName: WorldCellInstantiationService.ReturnObject
-- uid: Global.Type
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
   isExternal: true
   name: Type
   nameWithType: Type
-  fullName: Type
-- uid: Global.AbstractWorldCell
-  isExternal: true
+  fullName: System.Type
+- uid: WorldCells.AbstractWorldCell
+  commentId: T:WorldCells.AbstractWorldCell
+  parent: WorldCells
   name: AbstractWorldCell
   nameWithType: AbstractWorldCell
-  fullName: AbstractWorldCell
-- uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
-  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(Type)
+  fullName: WorldCells.AbstractWorldCell
+- uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(System.Type)
   isExternal: true
   name: ReturnObject(Type)
   nameWithType: AbstractInstantiationService<TProduction>.ReturnObject(Type)
-  fullName: AbstractInstantiationService<TProduction>.ReturnObject(Type)
+  fullName: AbstractInstantiationService<TProduction>.ReturnObject(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService<TProduction>.ReturnObject
     fullName: AbstractInstantiationService<TProduction>.ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService(Of TProduction).ReturnObject
     fullName: AbstractInstantiationService(Of TProduction).ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService{AbstractWorldCell}.AddNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService{AbstractWorldCell}.AddNewFactory(Type)
-  parent: Global.AbstractInstantiationService{AbstractWorldCell}
-  definition: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
+- uid: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.AddNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.AddNewFactory(System.Type)
+  parent: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
+  definition: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
   name: AddNewFactory(Type)
   nameWithType: AbstractInstantiationService<AbstractWorldCell>.AddNewFactory(Type)
-  fullName: AbstractInstantiationService<AbstractWorldCell>.AddNewFactory(Type)
+  fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>.AddNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractWorldCell).AddNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of AbstractWorldCell).AddNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of WorldCells.AbstractWorldCell).AddNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService<AbstractWorldCell>.AddNewFactory
-    fullName: AbstractInstantiationService<AbstractWorldCell>.AddNewFactory
+    fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>.AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService(Of AbstractWorldCell).AddNewFactory
-    fullName: AbstractInstantiationService(Of AbstractWorldCell).AddNewFactory
+    fullName: AbstractInstantiationService(Of WorldCells.AbstractWorldCell).AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -836,83 +842,83 @@ references:
   name: AddNewFactory
   nameWithType: WorldCellInstantiationService.AddNewFactory
   fullName: WorldCellInstantiationService.AddNewFactory
-- uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
   isExternal: true
   name: AddNewFactory(Type)
   nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory
     fullName: AbstractInstantiationService<TProduction>.AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService(Of TProduction).AddNewFactory
     fullName: AbstractInstantiationService(Of TProduction).AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService{AbstractWorldCell}.GetNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService{AbstractWorldCell}.GetNewFactory(Type)
-  parent: Global.AbstractInstantiationService{AbstractWorldCell}
-  definition: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+- uid: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.GetNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}.GetNewFactory(System.Type)
+  parent: Global.AbstractInstantiationService{WorldCells.AbstractWorldCell}
+  definition: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
   name: GetNewFactory(Type)
   nameWithType: AbstractInstantiationService<AbstractWorldCell>.GetNewFactory(Type)
-  fullName: AbstractInstantiationService<AbstractWorldCell>.GetNewFactory(Type)
+  fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>.GetNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractWorldCell).GetNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of AbstractWorldCell).GetNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of WorldCells.AbstractWorldCell).GetNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService<AbstractWorldCell>.GetNewFactory
-    fullName: AbstractInstantiationService<AbstractWorldCell>.GetNewFactory
+    fullName: AbstractInstantiationService<WorldCells.AbstractWorldCell>.GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService(Of AbstractWorldCell).GetNewFactory
-    fullName: AbstractInstantiationService(Of AbstractWorldCell).GetNewFactory
+    fullName: AbstractInstantiationService(Of WorldCells.AbstractWorldCell).GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -922,14 +928,14 @@ references:
   name: GetNewFactory
   nameWithType: WorldCellInstantiationService.GetNewFactory
   fullName: WorldCellInstantiationService.GetNewFactory
-- uid: Global.IFactory{AbstractWorldCell}
-  commentId: T:Global.IFactory{AbstractWorldCell}
+- uid: Global.IFactory{WorldCells.AbstractWorldCell}
+  commentId: T:Global.IFactory{WorldCells.AbstractWorldCell}
   definition: Global.IFactory`1
   name: IFactory<AbstractWorldCell>
   nameWithType: IFactory<AbstractWorldCell>
-  fullName: IFactory<AbstractWorldCell>
+  fullName: IFactory<WorldCells.AbstractWorldCell>
   nameWithType.vb: IFactory(Of AbstractWorldCell)
-  fullName.vb: IFactory(Of AbstractWorldCell)
+  fullName.vb: IFactory(Of WorldCells.AbstractWorldCell)
   name.vb: IFactory(Of AbstractWorldCell)
   spec.csharp:
   - uid: Global.IFactory`1
@@ -939,11 +945,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Global.AbstractWorldCell
+  - uid: WorldCells.AbstractWorldCell
     name: AbstractWorldCell
     nameWithType: AbstractWorldCell
-    fullName: AbstractWorldCell
-    isExternal: true
+    fullName: WorldCells.AbstractWorldCell
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -955,50 +960,49 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Global.AbstractWorldCell
+  - uid: WorldCells.AbstractWorldCell
     name: AbstractWorldCell
     nameWithType: AbstractWorldCell
-    fullName: AbstractWorldCell
-    isExternal: true
+    fullName: WorldCells.AbstractWorldCell
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
   isExternal: true
   name: GetNewFactory(Type)
   nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory
     fullName: AbstractInstantiationService<TProduction>.GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService(Of TProduction).GetNewFactory
     fullName: AbstractInstantiationService(Of TProduction).GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )

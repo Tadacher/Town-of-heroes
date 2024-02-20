@@ -16,7 +16,7 @@ items:
   source:
     id: BootstrapInstaller
     path: ''
-    startLine: 325
+    startLine: 363
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -58,7 +58,7 @@ items:
   source:
     id: InstallBindings
     path: ''
-    startLine: 331
+    startLine: 369
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure

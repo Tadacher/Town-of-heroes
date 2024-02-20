@@ -5,7 +5,7 @@ items:
   id: TowerCardFactory
   parent: Services.CardGeneration
   children:
-  - Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)
+  - Services.CardGeneration.TowerCardFactory.#ctor(System.Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,CardDescriptionService,DiContainer,Services.CardGeneration.TowerImageDatabase)
   - Services.CardGeneration.TowerCardFactory.ActionOnDestroy(TowerCard)
   - Services.CardGeneration.TowerCardFactory.ActionOnGet(TowerCard)
   - Services.CardGeneration.TowerCardFactory.ActionOnRelease(TowerCard)
@@ -22,7 +22,7 @@ items:
   source:
     id: TowerCardFactory
     path: ''
-    startLine: 1684
+    startLine: 2061
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -42,38 +42,42 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)
-  commentId: M:Services.CardGeneration.TowerCardFactory.#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)
-  id: '#ctor(Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,DiContainer)'
+- uid: Services.CardGeneration.TowerCardFactory.#ctor(System.Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,CardDescriptionService,DiContainer,Services.CardGeneration.TowerImageDatabase)
+  commentId: M:Services.CardGeneration.TowerCardFactory.#ctor(System.Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,CardDescriptionService,DiContainer,Services.CardGeneration.TowerImageDatabase)
+  id: '#ctor(System.Type,TowerCard,CardImageDatabase,Services.CardGeneration.WorldCellCardGenerator,CardDescriptionService,DiContainer,Services.CardGeneration.TowerImageDatabase)'
   parent: Services.CardGeneration.TowerCardFactory
   langs:
   - csharp
   - vb
-  name: TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, DiContainer)
-  nameWithType: TowerCardFactory.TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, DiContainer)
-  fullName: Services.CardGeneration.TowerCardFactory.TowerCardFactory(Type, TowerCard, CardImageDatabase, Services.CardGeneration.WorldCellCardGenerator, DiContainer)
+  name: TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, CardDescriptionService, DiContainer, TowerImageDatabase)
+  nameWithType: TowerCardFactory.TowerCardFactory(Type, TowerCard, CardImageDatabase, WorldCellCardGenerator, CardDescriptionService, DiContainer, TowerImageDatabase)
+  fullName: Services.CardGeneration.TowerCardFactory.TowerCardFactory(System.Type, TowerCard, CardImageDatabase, Services.CardGeneration.WorldCellCardGenerator, CardDescriptionService, DiContainer, Services.CardGeneration.TowerImageDatabase)
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 1692
+    startLine: 2071
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
   syntax:
-    content: public TowerCardFactory(Type type, TowerCard cardPrefab, CardImageDatabase cardImageDatabase, WorldCellCardGenerator worldCellCardGenerator, DiContainer diContainer)
+    content: public TowerCardFactory(Type type, TowerCard cardPrefab, CardImageDatabase cardImageDatabase, WorldCellCardGenerator worldCellCardGenerator, CardDescriptionService towerCardDescriptionService, DiContainer diContainer, TowerImageDatabase towerImageDatabase)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     - id: cardPrefab
       type: Global.TowerCard
     - id: cardImageDatabase
       type: Global.CardImageDatabase
     - id: worldCellCardGenerator
       type: Services.CardGeneration.WorldCellCardGenerator
+    - id: towerCardDescriptionService
+      type: Global.CardDescriptionService
     - id: diContainer
       type: Global.DiContainer
-    content.vb: Public Sub New(type As Type, cardPrefab As TowerCard, cardImageDatabase As CardImageDatabase, worldCellCardGenerator As WorldCellCardGenerator, diContainer As DiContainer)
+    - id: towerImageDatabase
+      type: Services.CardGeneration.TowerImageDatabase
+    content.vb: Public Sub New(type As Type, cardPrefab As TowerCard, cardImageDatabase As CardImageDatabase, worldCellCardGenerator As WorldCellCardGenerator, towerCardDescriptionService As CardDescriptionService, diContainer As DiContainer, towerImageDatabase As TowerImageDatabase)
   overload: Services.CardGeneration.TowerCardFactory.#ctor*
   modifiers.csharp:
   - public
@@ -93,7 +97,7 @@ items:
   source:
     id: GetObject
     path: ''
-    startLine: 1705
+    startLine: 2088
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -125,7 +129,7 @@ items:
   source:
     id: ReturnToPool
     path: ''
-    startLine: 1711
+    startLine: 2094
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -156,7 +160,7 @@ items:
   source:
     id: ActionOnDestroy
     path: ''
-    startLine: 1714
+    startLine: 2097
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -187,7 +191,7 @@ items:
   source:
     id: ActionOnGet
     path: ''
-    startLine: 1717
+    startLine: 2100
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -218,7 +222,7 @@ items:
   source:
     id: ActionOnRelease
     path: ''
-    startLine: 1720
+    startLine: 2103
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -249,7 +253,7 @@ items:
   source:
     id: CreateNew
     path: ''
-    startLine: 1725
+    startLine: 2106
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -364,11 +368,13 @@ references:
   name: TowerCardFactory
   nameWithType: TowerCardFactory.TowerCardFactory
   fullName: Services.CardGeneration.TowerCardFactory.TowerCardFactory
-- uid: Global.Type
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
   isExternal: true
   name: Type
   nameWithType: Type
-  fullName: Type
+  fullName: System.Type
 - uid: Global.TowerCard
   commentId: T:Global.TowerCard
   name: TowerCard
@@ -386,11 +392,22 @@ references:
   name: WorldCellCardGenerator
   nameWithType: WorldCellCardGenerator
   fullName: Services.CardGeneration.WorldCellCardGenerator
+- uid: Global.CardDescriptionService
+  commentId: T:Global.CardDescriptionService
+  name: CardDescriptionService
+  nameWithType: CardDescriptionService
+  fullName: CardDescriptionService
 - uid: Global.DiContainer
   isExternal: true
   name: DiContainer
   nameWithType: DiContainer
   fullName: DiContainer
+- uid: Services.CardGeneration.TowerImageDatabase
+  commentId: T:Services.CardGeneration.TowerImageDatabase
+  parent: Services.CardGeneration
+  name: TowerImageDatabase
+  nameWithType: TowerImageDatabase
+  fullName: Services.CardGeneration.TowerImageDatabase
 - uid: Services.CardGeneration.TowerCardFactory.GetObject*
   commentId: Overload:Services.CardGeneration.TowerCardFactory.GetObject
   name: GetObject

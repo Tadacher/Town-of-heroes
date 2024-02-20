@@ -6,7 +6,7 @@ items:
   parent: Global
   children:
   - Global.EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
-  - Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
+  - Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   source:
     id: EnemyTypeToBiomeSettings
     path: ''
-    startLine: 1169
+    startLine: 1408
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -48,7 +48,7 @@ items:
   source:
     id: BiomeToEnemyTypesSettings
     path: ''
-    startLine: 1172
+    startLine: 1411
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -61,21 +61,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
-  commentId: M:Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
-  id: GetPairByBiomeType(CellBiomeTypes)
+- uid: Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
+  commentId: M:Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
+  id: GetPairByBiomeType(WorldCells.CellBiomeTypes)
   parent: Global.EnemyTypeToBiomeSettings
   langs:
   - csharp
   - vb
   name: GetPairByBiomeType(CellBiomeTypes)
   nameWithType: EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
-  fullName: EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
+  fullName: EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
   type: Method
   source:
     id: GetPairByBiomeType
     path: ''
-    startLine: 1180
+    startLine: 1419
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -85,7 +85,7 @@ items:
     content: public EnemytypeToWeightPair[] GetPairByBiomeType(CellBiomeTypes biomeType)
     parameters:
     - id: biomeType
-      type: Global.CellBiomeTypes
+      type: WorldCells.CellBiomeTypes
       description: ''
     return:
       type: Global.EnemytypeToWeightPair[]
@@ -146,11 +146,12 @@ references:
   name: GetPairByBiomeType
   nameWithType: EnemyTypeToBiomeSettings.GetPairByBiomeType
   fullName: EnemyTypeToBiomeSettings.GetPairByBiomeType
-- uid: Global.CellBiomeTypes
-  isExternal: true
+- uid: WorldCells.CellBiomeTypes
+  commentId: T:WorldCells.CellBiomeTypes
+  parent: WorldCells
   name: CellBiomeTypes
   nameWithType: CellBiomeTypes
-  fullName: CellBiomeTypes
+  fullName: WorldCells.CellBiomeTypes
 - uid: Global.EnemytypeToWeightPair[]
   isExternal: true
   name: EnemytypeToWeightPair[]
@@ -175,3 +176,8 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells

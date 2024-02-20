@@ -6,7 +6,7 @@ items:
   parent: Infrastructure
   children:
   - Infrastructure.SceneLoaderService.#ctor(Infrastructure.ICoroutineRunner)
-  - Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,Action)
+  - Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,System.Action)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
   source:
     id: SceneLoaderService
     path: ''
-    startLine: 1591
+    startLine: 1976
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -54,7 +54,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1595
+    startLine: 1980
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -69,21 +69,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,Action)
-  commentId: M:Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,Action)
-  id: StartLoadSceneCoroutine(System.String,Action)
+- uid: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,System.Action)
+  commentId: M:Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String,System.Action)
+  id: StartLoadSceneCoroutine(System.String,System.Action)
   parent: Infrastructure.SceneLoaderService
   langs:
   - csharp
   - vb
   name: StartLoadSceneCoroutine(String, Action)
   nameWithType: SceneLoaderService.StartLoadSceneCoroutine(String, Action)
-  fullName: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String, Action)
+  fullName: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine(System.String, System.Action)
   type: Method
   source:
     id: StartLoadSceneCoroutine
     path: ''
-    startLine: 1598
+    startLine: 1983
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -93,7 +93,7 @@ items:
     - id: name
       type: System.String
     - id: onloaded
-      type: Global.Action
+      type: System.Action
     content.vb: Public Sub StartLoadSceneCoroutine(name As String, onloaded As Action = Nothing)
   overload: Infrastructure.SceneLoaderService.StartLoadSceneCoroutine*
   modifiers.csharp:
@@ -421,8 +421,10 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Global.Action
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
   isExternal: true
   name: Action
   nameWithType: Action
-  fullName: Action
+  fullName: System.Action

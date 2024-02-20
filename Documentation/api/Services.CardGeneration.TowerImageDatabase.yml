@@ -1,0 +1,277 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.CardGeneration.TowerImageDatabase
+  commentId: T:Services.CardGeneration.TowerImageDatabase
+  id: TowerImageDatabase
+  parent: Services.CardGeneration
+  children:
+  - Services.CardGeneration.TowerImageDatabase.GetSprite(System.String)
+  - Services.CardGeneration.TowerImageDatabase.Initialize
+  - Services.CardGeneration.TowerImageDatabase.TowerCardSpritesDataBase
+  langs:
+  - csharp
+  - vb
+  name: TowerImageDatabase
+  nameWithType: TowerImageDatabase
+  fullName: Services.CardGeneration.TowerImageDatabase
+  type: Class
+  source:
+    id: TowerImageDatabase
+    path: ''
+    startLine: 1486
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  summary: "\ncontains all sprites for tower cards\n"
+  example: []
+  syntax:
+    content: 'public class TowerImageDatabase : ScriptableObject'
+    content.vb: >-
+      Public Class TowerImageDatabase
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.CardGeneration.TowerImageDatabase.TowerCardSpritesDataBase
+  commentId: F:Services.CardGeneration.TowerImageDatabase.TowerCardSpritesDataBase
+  id: TowerCardSpritesDataBase
+  parent: Services.CardGeneration.TowerImageDatabase
+  langs:
+  - csharp
+  - vb
+  name: TowerCardSpritesDataBase
+  nameWithType: TowerImageDatabase.TowerCardSpritesDataBase
+  fullName: Services.CardGeneration.TowerImageDatabase.TowerCardSpritesDataBase
+  type: Field
+  source:
+    id: TowerCardSpritesDataBase
+    path: ''
+    startLine: 1490
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: public Dictionary<string, Sprite> TowerCardSpritesDataBase
+    return:
+      type: Global.Dictionary{System.String,Sprite}
+    content.vb: Public TowerCardSpritesDataBase As Dictionary(Of String, Sprite)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.CardGeneration.TowerImageDatabase.Initialize
+  commentId: M:Services.CardGeneration.TowerImageDatabase.Initialize
+  id: Initialize
+  parent: Services.CardGeneration.TowerImageDatabase
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: TowerImageDatabase.Initialize()
+  fullName: Services.CardGeneration.TowerImageDatabase.Initialize()
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 1494
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: public void Initialize()
+    content.vb: Public Sub Initialize
+  overload: Services.CardGeneration.TowerImageDatabase.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.CardGeneration.TowerImageDatabase.GetSprite(System.String)
+  commentId: M:Services.CardGeneration.TowerImageDatabase.GetSprite(System.String)
+  id: GetSprite(System.String)
+  parent: Services.CardGeneration.TowerImageDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetSprite(String)
+  nameWithType: TowerImageDatabase.GetSprite(String)
+  fullName: Services.CardGeneration.TowerImageDatabase.GetSprite(System.String)
+  type: Method
+  source:
+    id: GetSprite
+    path: ''
+    startLine: 1517
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  summary: "\nget sprite by tower name\n"
+  example: []
+  syntax:
+    content: public Sprite GetSprite(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: same as tower type
+    return:
+      type: Global.Sprite
+      description: sprite for worldcell
+    content.vb: Public Function GetSprite(name As String) As Sprite
+  overload: Services.CardGeneration.TowerImageDatabase.GetSprite*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Services.CardGeneration
+  commentId: N:Services.CardGeneration
+  name: Services.CardGeneration
+  nameWithType: Services.CardGeneration
+  fullName: Services.CardGeneration
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Dictionary{System.String,Sprite}
+  commentId: '!:Global.Dictionary{System.String,Sprite}'
+  definition: Global.Dictionary`2
+  name: Dictionary<String, Sprite>
+  nameWithType: Dictionary<String, Sprite>
+  fullName: Dictionary<System.String, Sprite>
+  nameWithType.vb: Dictionary(Of String, Sprite)
+  fullName.vb: Dictionary(Of System.String, Sprite)
+  name.vb: Dictionary(Of String, Sprite)
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Sprite
+    name: Sprite
+    nameWithType: Sprite
+    fullName: Sprite
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Sprite
+    name: Sprite
+    nameWithType: Sprite
+    fullName: Sprite
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.CardGeneration.TowerImageDatabase.Initialize*
+  commentId: Overload:Services.CardGeneration.TowerImageDatabase.Initialize
+  name: Initialize
+  nameWithType: TowerImageDatabase.Initialize
+  fullName: Services.CardGeneration.TowerImageDatabase.Initialize
+- uid: Services.CardGeneration.TowerImageDatabase.GetSprite*
+  commentId: Overload:Services.CardGeneration.TowerImageDatabase.GetSprite
+  name: GetSprite
+  nameWithType: TowerImageDatabase.GetSprite
+  fullName: Services.CardGeneration.TowerImageDatabase.GetSprite
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite

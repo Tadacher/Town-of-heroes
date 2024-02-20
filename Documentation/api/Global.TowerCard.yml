@@ -6,11 +6,12 @@ items:
   parent: Global
   children:
   - Global.TowerCard.Finalize
-  - Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
+  - Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,CardInfoUiService,AbstractInputService,TowerCardInfoConfig,WorldCellCardInfoConfig,Sprite,Sprite,System.Type,System.Type)
   - Global.TowerCard.OnGameplayStateChanged(IExitableState)
   - Global.TowerCard.OnPointerDown(PointerEventData)
   - Global.TowerCard.ReInitialize
   - Global.TowerCard.ReturnToPool
+  - Global.TowerCard.TowerType
   langs:
   - csharp
   - vb
@@ -21,7 +22,7 @@ items:
   source:
     id: TowerCard
     path: ''
-    startLine: 821
+    startLine: 965
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -42,26 +43,57 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
-  commentId: M:Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
-  id: Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)
+- uid: Global.TowerCard.TowerType
+  commentId: P:Global.TowerCard.TowerType
+  id: TowerType
   parent: Global.TowerCard
   langs:
   - csharp
   - vb
-  name: Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
-  nameWithType: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
-  fullName: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)
-  type: Method
+  name: TowerType
+  nameWithType: TowerCard.TowerType
+  fullName: TowerCard.TowerType
+  type: Property
   source:
-    id: Initialize
+    id: TowerType
     path: ''
-    startLine: 849
+    startLine: 967
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public void Initialize(TowerBuildingService towerBuildingService, WorldCellBuildingService worldCellBuildingService, GameplayStateMachine gameplayStateMachine, IObjectPooler pooler, IShiftEventProvider shiftEventProvider, Sprite worldCellSprite, Type towerType, Type worldCellType)
+    content: public Type TowerType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property TowerType As Type
+  overload: Global.TowerCard.TowerType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,CardInfoUiService,AbstractInputService,TowerCardInfoConfig,WorldCellCardInfoConfig,Sprite,Sprite,System.Type,System.Type)
+  commentId: M:Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,CardInfoUiService,AbstractInputService,TowerCardInfoConfig,WorldCellCardInfoConfig,Sprite,Sprite,System.Type,System.Type)
+  id: Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,CardInfoUiService,AbstractInputService,TowerCardInfoConfig,WorldCellCardInfoConfig,Sprite,Sprite,System.Type,System.Type)
+  parent: Global.TowerCard
+  langs:
+  - csharp
+  - vb
+  name: Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, CardInfoUiService, AbstractInputService, TowerCardInfoConfig, WorldCellCardInfoConfig, Sprite, Sprite, Type, Type)
+  nameWithType: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, CardInfoUiService, AbstractInputService, TowerCardInfoConfig, WorldCellCardInfoConfig, Sprite, Sprite, Type, Type)
+  fullName: TowerCard.Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, CardInfoUiService, AbstractInputService, TowerCardInfoConfig, WorldCellCardInfoConfig, Sprite, Sprite, System.Type, System.Type)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 1001
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Initialize(TowerBuildingService towerBuildingService, WorldCellBuildingService worldCellBuildingService, GameplayStateMachine gameplayStateMachine, IObjectPooler pooler, IShiftEventProvider shiftEventProvider, CardInfoUiService cardInfoUiService, AbstractInputService inputService, TowerCardInfoConfig towerCardInfoConfig, WorldCellCardInfoConfig worldCellCardInfoConfig, Sprite worldCellSprite, Sprite towerSprite, Type towerType, Type worldCellType)
     parameters:
     - id: towerBuildingService
       type: Global.TowerBuildingService
@@ -73,13 +105,23 @@ items:
       type: Global.IObjectPooler
     - id: shiftEventProvider
       type: Global.IShiftEventProvider
+    - id: cardInfoUiService
+      type: Global.CardInfoUiService
+    - id: inputService
+      type: Global.AbstractInputService
+    - id: towerCardInfoConfig
+      type: Global.TowerCardInfoConfig
+    - id: worldCellCardInfoConfig
+      type: Global.WorldCellCardInfoConfig
     - id: worldCellSprite
       type: Global.Sprite
+    - id: towerSprite
+      type: Global.Sprite
     - id: towerType
-      type: Global.Type
+      type: System.Type
     - id: worldCellType
-      type: Global.Type
-    content.vb: Public Sub Initialize(towerBuildingService As TowerBuildingService, worldCellBuildingService As WorldCellBuildingService, gameplayStateMachine As GameplayStateMachine, pooler As IObjectPooler, shiftEventProvider As IShiftEventProvider, worldCellSprite As Sprite, towerType As Type, worldCellType As Type)
+      type: System.Type
+    content.vb: Public Sub Initialize(towerBuildingService As TowerBuildingService, worldCellBuildingService As WorldCellBuildingService, gameplayStateMachine As GameplayStateMachine, pooler As IObjectPooler, shiftEventProvider As IShiftEventProvider, cardInfoUiService As CardInfoUiService, inputService As AbstractInputService, towerCardInfoConfig As TowerCardInfoConfig, worldCellCardInfoConfig As WorldCellCardInfoConfig, worldCellSprite As Sprite, towerSprite As Sprite, towerType As Type, worldCellType As Type)
   overload: Global.TowerCard.Initialize*
   modifiers.csharp:
   - public
@@ -99,7 +141,7 @@ items:
   source:
     id: ReInitialize
     path: ''
-    startLine: 875
+    startLine: 1037
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -127,7 +169,7 @@ items:
   source:
     id: OnPointerDown
     path: ''
-    startLine: 884
+    startLine: 1046
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -156,7 +198,7 @@ items:
   source:
     id: OnGameplayStateChanged
     path: ''
-    startLine: 929
+    startLine: 1100
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -185,7 +227,7 @@ items:
   source:
     id: ReturnToPool
     path: ''
-    startLine: 998
+    startLine: 1173
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -213,7 +255,7 @@ items:
   source:
     id: Finalize
     path: ''
-    startLine: 1005
+    startLine: 1180
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -257,6 +299,18 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Global.TowerCard.TowerType*
+  commentId: Overload:Global.TowerCard.TowerType
+  name: TowerType
+  nameWithType: TowerCard.TowerType
+  fullName: TowerCard.TowerType
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
 - uid: Global.TowerCard.Initialize*
   commentId: Overload:Global.TowerCard.Initialize
   name: Initialize
@@ -290,16 +344,32 @@ references:
   name: IShiftEventProvider
   nameWithType: IShiftEventProvider
   fullName: IShiftEventProvider
+- uid: Global.CardInfoUiService
+  commentId: '!:Global.CardInfoUiService'
+  isExternal: true
+  name: CardInfoUiService
+  nameWithType: CardInfoUiService
+  fullName: CardInfoUiService
+- uid: Global.AbstractInputService
+  isExternal: true
+  name: AbstractInputService
+  nameWithType: AbstractInputService
+  fullName: AbstractInputService
+- uid: Global.TowerCardInfoConfig
+  commentId: T:Global.TowerCardInfoConfig
+  name: TowerCardInfoConfig
+  nameWithType: TowerCardInfoConfig
+  fullName: TowerCardInfoConfig
+- uid: Global.WorldCellCardInfoConfig
+  commentId: T:Global.WorldCellCardInfoConfig
+  name: WorldCellCardInfoConfig
+  nameWithType: WorldCellCardInfoConfig
+  fullName: WorldCellCardInfoConfig
 - uid: Global.Sprite
   isExternal: true
   name: Sprite
   nameWithType: Sprite
   fullName: Sprite
-- uid: Global.Type
-  isExternal: true
-  name: Type
-  nameWithType: Type
-  fullName: Type
 - uid: Global.TowerCard.ReInitialize*
   commentId: Overload:Global.TowerCard.ReInitialize
   name: ReInitialize

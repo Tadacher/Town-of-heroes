@@ -1,75 +1,65 @@
 using UnityEngine;
-using System.Threading;
 using System.Collections;
 using Infrastructure;
-using WorldCells;
-using Zenject;
 
 /// <summary>
-/// 
+/// General service for generating and spawning waves
 /// </summary>
 public class WaveService
 {
     private float _interval;
 
-    private WaveGenerator _waveGenerator;
-    private EnemyInstantiationService _enemyInstantiationService;
-    private CancellationTokenSource _cancellationTokenSource;
-   
+    private WaveGenerator _waveGenerator;   
     private ICoroutineRunner _coroutineRunner;
 
     private Coroutine _waveSender;
     private Coroutine _spawnerOfwawes;
-  
-    private DiContainer _container;
-    public WaveService(DiContainer diContainer, ICoroutineRunner coroutineRunner)
-    {
-        _container = diContainer;
-        _coroutineRunner = coroutineRunner;
-        ConstructEnemtInstantiationService();
-        ConstructWaveGenerator();
-        _interval = 5f;      
-    }
-    private void ConstructEnemtInstantiationService()
-    {
-        _enemyInstantiationService = new(
-                    diContainer: _container,
-                    enemySpawnPosMarker: _container.Resolve<EnemySpawnPosMarker>());
-    }
-    private void ConstructWaveGenerator()
-    {
-        _waveGenerator = new(
-                    nemyInstantiationService: _enemyInstantiationService,
-                    enemyTypeService: _container.Resolve<EnemyTypeService>(),
-                    enemyPrefabContainer: _container.Resolve<EnemyPrefabContainer>(),
-                    worldCellBalanceService: _container.Resolve<WorldCellBalanceService>());
-    }
 
+    public WaveService(WaveGenerator waveGenerator, ICoroutineRunner coroutineRunner)
+    {
+        _waveGenerator = waveGenerator;
+        _coroutineRunner = coroutineRunner;
+        _interval = 15f;      
+    }
+    
+    /// <summary>
+    /// Starts general coroutine that starts wavesending and waits for an interval betwee waves
+    /// </summary>
     public void StartWaveCoroutine() 
         => _waveSender = _coroutineRunner.StartCoroutine(WaveSending());
-
+    /// <summary>
+    /// General coroutine that starts wavesending and waits for an interval betwee waves
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator WaveSending()
     {
         while (true)
         {
-            //   Debug.Log("NewWave");
             _spawnerOfwawes = _coroutineRunner.StartCoroutine(SendWaweCoroutine(_waveGenerator.GenerateWave())); 
             yield return new WaitForSeconds(_interval);         
         }
     }
-
+    /// <summary>
+    /// Cancels all active spawn and wave routines
+    /// </summary>
     public void CancelRoutine()
     {
-        Debug.Log("spawning routine canceled");
-        _cancellationTokenSource?.Cancel();
+        Debug.Log("Spawn routine canceled");
+        _coroutineRunner.StopCoroutine(_waveSender);
+        _coroutineRunner.StopCoroutine(_spawnerOfwawes);
     }
 
+    /// <summary>
+    /// Coroutine that directly spawns enemies from generated spawn instructions in wave object
+    /// </summary>
+    /// <param name="wave">wave object</param>
+    /// <returns></returns>
     private IEnumerator SendWaweCoroutine(Wave wave)
     {
-        for (int count = 0; count < wave.EnemyCreationCommands.Length; count++)
+        for (int pointer = 0; pointer < wave.EnemyCreationCommands.Length; pointer++)
         {
-            wave.EnemyCreationCommands[count].Invoke();
-           yield return new WaitForSeconds(wave.Delay);
+            wave.EnemyCreationCommands[pointer].Invoke();
+            yield return new WaitForSeconds(wave.Delay);
         }
     }
 }

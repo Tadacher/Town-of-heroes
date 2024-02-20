@@ -7,6 +7,7 @@ items:
   - WorldCells.AbstractWorldCell
   - WorldCells.CellBiomeTypes
   - WorldCells.GrassMeadows
+  - WorldCells.GraveYard
   - WorldCells.WorldCellBalanceService
   langs:
   - csharp
@@ -41,6 +42,11 @@ references:
   name: GrassMeadows
   nameWithType: GrassMeadows
   fullName: WorldCells.GrassMeadows
+- uid: WorldCells.GraveYard
+  commentId: T:WorldCells.GraveYard
+  name: GraveYard
+  nameWithType: GraveYard
+  fullName: WorldCells.GraveYard
 - uid: WorldCells
   commentId: N:WorldCells
   name: WorldCells

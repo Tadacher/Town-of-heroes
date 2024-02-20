@@ -10,8 +10,6 @@ namespace Core.Towers
 
             if (_isGhost)
                 return;
-
-            Debug.Log(_currentEnemy);
             FinClosestTargetIfNeeded();
             CountAttackDelay();
             TryToAttack();

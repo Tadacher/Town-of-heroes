@@ -16,7 +16,7 @@ items:
   source:
     id: CellStats
     path: ''
-    startLine: 1667
+    startLine: 1348
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -47,14 +47,14 @@ items:
   source:
     id: CellTags
     path: ''
-    startLine: 1670
+    startLine: 1351
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
   syntax:
     content: public CellBiomeTypes[] CellTags
     return:
-      type: Global.CellBiomeTypes[]
+      type: WorldCells.CellBiomeTypes[]
     content.vb: Public CellTags As CellBiomeTypes()
   modifiers.csharp:
   - public
@@ -79,29 +79,27 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.CellBiomeTypes[]
+- uid: WorldCells.CellBiomeTypes[]
   isExternal: true
   name: CellBiomeTypes[]
   nameWithType: CellBiomeTypes[]
-  fullName: CellBiomeTypes[]
+  fullName: WorldCells.CellBiomeTypes[]
   nameWithType.vb: CellBiomeTypes()
-  fullName.vb: CellBiomeTypes()
+  fullName.vb: WorldCells.CellBiomeTypes()
   name.vb: CellBiomeTypes()
   spec.csharp:
-  - uid: Global.CellBiomeTypes
+  - uid: WorldCells.CellBiomeTypes
     name: CellBiomeTypes
     nameWithType: CellBiomeTypes
-    fullName: CellBiomeTypes
-    isExternal: true
+    fullName: WorldCells.CellBiomeTypes
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: Global.CellBiomeTypes
+  - uid: WorldCells.CellBiomeTypes
     name: CellBiomeTypes
     nameWithType: CellBiomeTypes
-    fullName: CellBiomeTypes
-    isExternal: true
+    fullName: WorldCells.CellBiomeTypes
   - name: ()
     nameWithType: ()
     fullName: ()

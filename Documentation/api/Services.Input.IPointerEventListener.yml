@@ -17,7 +17,7 @@ items:
   source:
     id: IPointerEventListener
     path: ''
-    startLine: 2210
+    startLine: 2607
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -44,7 +44,7 @@ items:
   source:
     id: IsPointerDown
     path: ''
-    startLine: 2212
+    startLine: 2609
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -68,7 +68,7 @@ items:
   source:
     id: IsPointerUp
     path: ''
-    startLine: 2213
+    startLine: 2610
   assemblies:
   - cs.temp.dll
   namespace: Services.Input

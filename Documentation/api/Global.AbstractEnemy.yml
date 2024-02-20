@@ -37,7 +37,7 @@ items:
   source:
     id: AbstractEnemy
     path: ''
-    startLine: 41
+    startLine: 49
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -53,6 +53,7 @@ items:
   - System.Object
   derivedClasses:
   - Global.Gobbo
+  - Global.Skeleton
   implements:
   - Global.IHitpointOwner
   - Global.IMowementModuleOwner
@@ -79,7 +80,7 @@ items:
   source:
     id: EnemyName
     path: ''
-    startLine: 43
+    startLine: 51
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -106,7 +107,7 @@ items:
   source:
     id: Stats
     path: ''
-    startLine: 44
+    startLine: 52
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -137,7 +138,7 @@ items:
   source:
     id: _stats
     path: ''
-    startLine: 47
+    startLine: 55
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -164,7 +165,7 @@ items:
   source:
     id: _hitpoints
     path: ''
-    startLine: 49
+    startLine: 57
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -191,7 +192,7 @@ items:
   source:
     id: _speed
     path: ''
-    startLine: 50
+    startLine: 58
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -218,7 +219,7 @@ items:
   source:
     id: _expForKill
     path: ''
-    startLine: 51
+    startLine: 59
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -245,7 +246,7 @@ items:
   source:
     id: _maxHitpoints
     path: ''
-    startLine: 52
+    startLine: 60
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -272,7 +273,7 @@ items:
   source:
     id: _damage
     path: ''
-    startLine: 53
+    startLine: 61
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -299,7 +300,7 @@ items:
   source:
     id: _pooler
     path: ''
-    startLine: 56
+    startLine: 64
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -326,7 +327,7 @@ items:
   source:
     id: _deathClip
     path: ''
-    startLine: 58
+    startLine: 66
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -353,7 +354,7 @@ items:
   source:
     id: _audioSource
     path: ''
-    startLine: 59
+    startLine: 67
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -380,7 +381,7 @@ items:
   source:
     id: _enemyMovementModule
     path: ''
-    startLine: 61
+    startLine: 69
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -407,15 +408,15 @@ items:
   source:
     id: _abstractHealthModule
     path: ''
-    startLine: 62
+    startLine: 70
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: protected AbstractHealthModule _abstractHealthModule
+    content: protected AbstractDamageRecievingModule _abstractHealthModule
     return:
-      type: Global.AbstractHealthModule
-    content.vb: Protected _abstractHealthModule As AbstractHealthModule
+      type: Global.AbstractDamageRecievingModule
+    content.vb: Protected _abstractHealthModule As AbstractDamageRecievingModule
   modifiers.csharp:
   - protected
   modifiers.vb:
@@ -434,7 +435,7 @@ items:
   source:
     id: _damageTextService
     path: ''
-    startLine: 64
+    startLine: 72
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -461,7 +462,7 @@ items:
   source:
     id: Initialize
     path: ''
-    startLine: 66
+    startLine: 74
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -496,25 +497,25 @@ items:
   source:
     id: Heal
     path: ''
-    startLine: 75
+    startLine: 84
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public abstract void Heal(int points)
+    content: public virtual void Heal(int points)
     parameters:
     - id: points
       type: System.Int32
-    content.vb: Public MustOverride Sub Heal(points As Integer)
+    content.vb: Public Overridable Sub Heal(points As Integer)
   overload: Global.AbstractEnemy.Heal*
   implements:
   - Global.IHitpointOwner.Heal(System.Int32)
   modifiers.csharp:
   - public
-  - abstract
+  - virtual
   modifiers.vb:
   - Public
-  - MustOverride
+  - Overridable
 - uid: Global.AbstractEnemy.RecieveDamage(System.Int32,Core.Towers.AbstractTower)
   commentId: M:Global.AbstractEnemy.RecieveDamage(System.Int32,Core.Towers.AbstractTower)
   id: RecieveDamage(System.Int32,Core.Towers.AbstractTower)
@@ -529,7 +530,7 @@ items:
   source:
     id: RecieveDamage
     path: ''
-    startLine: 77
+    startLine: 91
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -564,7 +565,7 @@ items:
   source:
     id: MovementModule
     path: ''
-    startLine: 93
+    startLine: 105
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -596,7 +597,7 @@ items:
   source:
     id: ReInitialize
     path: ''
-    startLine: 100
+    startLine: 107
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -627,7 +628,7 @@ items:
   source:
     id: PlayDeathSound
     path: ''
-    startLine: 106
+    startLine: 113
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -655,7 +656,7 @@ items:
   source:
     id: Die
     path: ''
-    startLine: 107
+    startLine: 114
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -684,7 +685,7 @@ items:
   source:
     id: IPoolableObject.ReturnToPool
     path: ''
-    startLine: 127
+    startLine: 134
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -781,11 +782,11 @@ references:
   name: AbstractMovementModule
   nameWithType: AbstractMovementModule
   fullName: AbstractMovementModule
-- uid: Global.AbstractHealthModule
-  commentId: T:Global.AbstractHealthModule
-  name: AbstractHealthModule
-  nameWithType: AbstractHealthModule
-  fullName: AbstractHealthModule
+- uid: Global.AbstractDamageRecievingModule
+  commentId: T:Global.AbstractDamageRecievingModule
+  name: AbstractDamageRecievingModule
+  nameWithType: AbstractDamageRecievingModule
+  fullName: AbstractDamageRecievingModule
 - uid: Global.DamageTextService
   isExternal: true
   name: DamageTextService

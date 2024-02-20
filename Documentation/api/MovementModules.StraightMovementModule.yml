@@ -17,7 +17,7 @@ items:
   source:
     id: StraightMovementModule
     path: ''
-    startLine: 1056
+    startLine: 1231
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -64,7 +64,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1060
+    startLine: 1235
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -99,7 +99,7 @@ items:
   source:
     id: MovementCoroutine
     path: ''
-    startLine: 1069
+    startLine: 1244
   assemblies:
   - cs.temp.dll
   namespace: MovementModules

@@ -6,8 +6,8 @@ items:
   parent: Global
   children:
   - Global.EnemyTypeService.#ctor(EnemyTypeToBiomeSettings,EnemyPrefabContainer)
-  - Global.EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
-  - Global.EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
+  - Global.EnemyTypeService.GetRandomEnemyByType(EnemyType)
+  - Global.EnemyTypeService.GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes)
   langs:
   - csharp
   - vb
@@ -18,7 +18,7 @@ items:
   source:
     id: EnemyTypeService
     path: ''
-    startLine: 2513
+    startLine: 2910
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -55,7 +55,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2518
+    startLine: 2919
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -72,63 +72,63 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
-  commentId: M:Global.EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
-  id: GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
+- uid: Global.EnemyTypeService.GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes)
+  commentId: M:Global.EnemyTypeService.GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes)
+  id: GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes)
   parent: Global.EnemyTypeService
   langs:
   - csharp
   - vb
-  name: GetRandomEnemyTypeFromBiome(CellBiomeTypes)
-  nameWithType: EnemyTypeService.GetRandomEnemyTypeFromBiome(CellBiomeTypes)
-  fullName: EnemyTypeService.GetRandomEnemyTypeFromBiome(WorldCells.CellBiomeTypes)
+  name: GetRandomEnemyTypeByBiome(CellBiomeTypes)
+  nameWithType: EnemyTypeService.GetRandomEnemyTypeByBiome(CellBiomeTypes)
+  fullName: EnemyTypeService.GetRandomEnemyTypeByBiome(WorldCells.CellBiomeTypes)
   type: Method
   source:
-    id: GetRandomEnemyTypeFromBiome
+    id: GetRandomEnemyTypeByBiome
     path: ''
-    startLine: 2543
+    startLine: 2944
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public EnemyTypes GetRandomEnemyTypeFromBiome(CellBiomeTypes biomeType)
+    content: public EnemyType GetRandomEnemyTypeByBiome(CellBiomeTypes biomeType)
     parameters:
     - id: biomeType
       type: WorldCells.CellBiomeTypes
     return:
-      type: Global.EnemyTypes
-    content.vb: Public Function GetRandomEnemyTypeFromBiome(biomeType As CellBiomeTypes) As EnemyTypes
-  overload: Global.EnemyTypeService.GetRandomEnemyTypeFromBiome*
+      type: Global.EnemyType
+    content.vb: Public Function GetRandomEnemyTypeByBiome(biomeType As CellBiomeTypes) As EnemyType
+  overload: Global.EnemyTypeService.GetRandomEnemyTypeByBiome*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Global.EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
-  commentId: M:Global.EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
-  id: GetRandomEnemyByType(EnemyTypes)
+- uid: Global.EnemyTypeService.GetRandomEnemyByType(EnemyType)
+  commentId: M:Global.EnemyTypeService.GetRandomEnemyByType(EnemyType)
+  id: GetRandomEnemyByType(EnemyType)
   parent: Global.EnemyTypeService
   langs:
   - csharp
   - vb
-  name: GetRandomEnemyByType(EnemyTypes)
-  nameWithType: EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
-  fullName: EnemyTypeService.GetRandomEnemyByType(EnemyTypes)
+  name: GetRandomEnemyByType(EnemyType)
+  nameWithType: EnemyTypeService.GetRandomEnemyByType(EnemyType)
+  fullName: EnemyTypeService.GetRandomEnemyByType(EnemyType)
   type: Method
   source:
     id: GetRandomEnemyByType
     path: ''
-    startLine: 2564
+    startLine: 2965
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public AbstractEnemy GetRandomEnemyByType(EnemyTypes enemyBiomeType)
+    content: public AbstractEnemy GetRandomEnemyByType(EnemyType enemyType)
     parameters:
-    - id: enemyBiomeType
-      type: Global.EnemyTypes
+    - id: enemyType
+      type: Global.EnemyType
     return:
       type: Global.AbstractEnemy
-    content.vb: Public Function GetRandomEnemyByType(enemyBiomeType As EnemyTypes) As AbstractEnemy
+    content.vb: Public Function GetRandomEnemyByType(enemyType As EnemyType) As AbstractEnemy
   overload: Global.EnemyTypeService.GetRandomEnemyByType*
   modifiers.csharp:
   - public
@@ -449,22 +449,22 @@ references:
   name: EnemyPrefabContainer
   nameWithType: EnemyPrefabContainer
   fullName: EnemyPrefabContainer
-- uid: Global.EnemyTypeService.GetRandomEnemyTypeFromBiome*
-  commentId: Overload:Global.EnemyTypeService.GetRandomEnemyTypeFromBiome
-  name: GetRandomEnemyTypeFromBiome
-  nameWithType: EnemyTypeService.GetRandomEnemyTypeFromBiome
-  fullName: EnemyTypeService.GetRandomEnemyTypeFromBiome
+- uid: Global.EnemyTypeService.GetRandomEnemyTypeByBiome*
+  commentId: Overload:Global.EnemyTypeService.GetRandomEnemyTypeByBiome
+  name: GetRandomEnemyTypeByBiome
+  nameWithType: EnemyTypeService.GetRandomEnemyTypeByBiome
+  fullName: EnemyTypeService.GetRandomEnemyTypeByBiome
 - uid: WorldCells.CellBiomeTypes
   commentId: T:WorldCells.CellBiomeTypes
   parent: WorldCells
   name: CellBiomeTypes
   nameWithType: CellBiomeTypes
   fullName: WorldCells.CellBiomeTypes
-- uid: Global.EnemyTypes
-  commentId: T:Global.EnemyTypes
-  name: EnemyTypes
-  nameWithType: EnemyTypes
-  fullName: EnemyTypes
+- uid: Global.EnemyType
+  commentId: T:Global.EnemyType
+  name: EnemyType
+  nameWithType: EnemyType
+  fullName: EnemyType
 - uid: WorldCells
   commentId: N:WorldCells
   name: WorldCells

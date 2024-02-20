@@ -16,7 +16,7 @@ items:
   source:
     id: MapCanvasContainer
     path: ''
-    startLine: 1028
+    startLine: 1203
   assemblies:
   - cs.temp.dll
   namespace: Services.Ui
@@ -47,7 +47,7 @@ items:
   source:
     id: ToBattleFieldBtn
     path: ''
-    startLine: 1030
+    startLine: 1205
   assemblies:
   - cs.temp.dll
   namespace: Services.Ui

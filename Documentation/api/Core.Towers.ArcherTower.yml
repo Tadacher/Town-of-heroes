@@ -6,7 +6,6 @@ items:
   parent: Core.Towers
   children:
   - Core.Towers.ArcherTower.Attack
-  - Core.Towers.ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
   - Core.Towers.ArcherTower.Update
   langs:
   - csharp
@@ -18,7 +17,7 @@ items:
   source:
     id: ArcherTower
     path: ''
-    startLine: 3092
+    startLine: 3514
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -55,6 +54,7 @@ items:
   - Core.Towers.AbstractTower._gridAlignService
   - Core.Towers.AbstractTower._ghostColor
   - Core.Towers.AbstractTower._objectPooler
+  - Core.Towers.AbstractTower.Awake
   - Core.Towers.AbstractTower.AsGhost
   - Core.Towers.AbstractTower.AsUnGhost
   - Core.Towers.AbstractTower.Initialize(IObjectPooler,AbstractInputService,Services.GridSystem.BattleGridService)
@@ -64,6 +64,7 @@ items:
   - Core.Towers.AbstractTower.StartFollowPointer
   - Core.Towers.AbstractTower.StopFollowingPointer
   - Core.Towers.AbstractTower.InsertSelfToGrid
+  - Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
   - Core.Towers.AbstractTower.TryLevelup
   - Core.Towers.AbstractTower.Levelup
   - Core.Towers.AbstractTower.TryDealDamageToCurrentEnemy
@@ -94,7 +95,7 @@ items:
   source:
     id: Update
     path: ''
-    startLine: 3100
+    startLine: 3516
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -123,7 +124,7 @@ items:
   source:
     id: Attack
     path: ''
-    startLine: 3113
+    startLine: 3529
   assemblies:
   - cs.temp.dll
   namespace: Core.Towers
@@ -132,38 +133,6 @@ items:
     content.vb: Protected Overrides Sub Attack
   overridden: Core.Towers.AbstractTower.Attack
   overload: Core.Towers.ArcherTower.Attack*
-  modifiers.csharp:
-  - protected
-  - override
-  modifiers.vb:
-  - Protected
-  - Overrides
-- uid: Core.Towers.ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
-  commentId: M:Core.Towers.ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
-  id: InitializeProjectileFactory(ProjectileBehaviour)
-  parent: Core.Towers.ArcherTower
-  langs:
-  - csharp
-  - vb
-  name: InitializeProjectileFactory(ProjectileBehaviour)
-  nameWithType: ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
-  fullName: Core.Towers.ArcherTower.InitializeProjectileFactory(ProjectileBehaviour)
-  type: Method
-  source:
-    id: InitializeProjectileFactory
-    path: ''
-    startLine: 3120
-  assemblies:
-  - cs.temp.dll
-  namespace: Core.Towers
-  syntax:
-    content: protected override void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab)
-    parameters:
-    - id: projectilePrefab
-      type: Global.ProjectileBehaviour
-    content.vb: Protected Overrides Sub InitializeProjectileFactory(projectilePrefab As ProjectileBehaviour)
-  overridden: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
-  overload: Core.Towers.ArcherTower.InitializeProjectileFactory*
   modifiers.csharp:
   - protected
   - override
@@ -318,6 +287,34 @@ references:
   name: _objectPooler
   nameWithType: AbstractTower._objectPooler
   fullName: Core.Towers.AbstractTower._objectPooler
+- uid: Core.Towers.AbstractTower.Awake
+  commentId: M:Core.Towers.AbstractTower.Awake
+  parent: Core.Towers.AbstractTower
+  name: Awake()
+  nameWithType: AbstractTower.Awake()
+  fullName: Core.Towers.AbstractTower.Awake()
+  spec.csharp:
+  - uid: Core.Towers.AbstractTower.Awake
+    name: Awake
+    nameWithType: AbstractTower.Awake
+    fullName: Core.Towers.AbstractTower.Awake
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Core.Towers.AbstractTower.Awake
+    name: Awake
+    nameWithType: AbstractTower.Awake
+    fullName: Core.Towers.AbstractTower.Awake
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Core.Towers.AbstractTower.AsGhost
   commentId: M:Core.Towers.AbstractTower.AsGhost
   parent: Core.Towers.AbstractTower
@@ -617,6 +614,42 @@ references:
   - name: (
     nameWithType: (
     fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
+  commentId: M:Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
+  parent: Core.Towers.AbstractTower
+  name: InitializeProjectileFactory(ProjectileBehaviour)
+  nameWithType: AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
+  fullName: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
+  spec.csharp:
+  - uid: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
+    name: InitializeProjectileFactory
+    nameWithType: AbstractTower.InitializeProjectileFactory
+    fullName: Core.Towers.AbstractTower.InitializeProjectileFactory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.ProjectileBehaviour
+    name: ProjectileBehaviour
+    nameWithType: ProjectileBehaviour
+    fullName: ProjectileBehaviour
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
+    name: InitializeProjectileFactory
+    nameWithType: AbstractTower.InitializeProjectileFactory
+    fullName: Core.Towers.AbstractTower.InitializeProjectileFactory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.ProjectileBehaviour
+    name: ProjectileBehaviour
+    nameWithType: ProjectileBehaviour
+    fullName: ProjectileBehaviour
   - name: )
     nameWithType: )
     fullName: )
@@ -980,49 +1013,3 @@ references:
   name: Attack
   nameWithType: ArcherTower.Attack
   fullName: Core.Towers.ArcherTower.Attack
-- uid: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
-  commentId: M:Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
-  parent: Core.Towers.AbstractTower
-  name: InitializeProjectileFactory(ProjectileBehaviour)
-  nameWithType: AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
-  fullName: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
-  spec.csharp:
-  - uid: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
-    name: InitializeProjectileFactory
-    nameWithType: AbstractTower.InitializeProjectileFactory
-    fullName: Core.Towers.AbstractTower.InitializeProjectileFactory
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Global.ProjectileBehaviour
-    name: ProjectileBehaviour
-    nameWithType: ProjectileBehaviour
-    fullName: ProjectileBehaviour
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Core.Towers.AbstractTower.InitializeProjectileFactory(ProjectileBehaviour)
-    name: InitializeProjectileFactory
-    nameWithType: AbstractTower.InitializeProjectileFactory
-    fullName: Core.Towers.AbstractTower.InitializeProjectileFactory
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: Global.ProjectileBehaviour
-    name: ProjectileBehaviour
-    nameWithType: ProjectileBehaviour
-    fullName: ProjectileBehaviour
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Core.Towers.ArcherTower.InitializeProjectileFactory*
-  commentId: Overload:Core.Towers.ArcherTower.InitializeProjectileFactory
-  name: InitializeProjectileFactory
-  nameWithType: ArcherTower.InitializeProjectileFactory
-  fullName: Core.Towers.ArcherTower.InitializeProjectileFactory
-- uid: Global.ProjectileBehaviour
-  commentId: T:Global.ProjectileBehaviour
-  name: ProjectileBehaviour
-  nameWithType: ProjectileBehaviour
-  fullName: ProjectileBehaviour

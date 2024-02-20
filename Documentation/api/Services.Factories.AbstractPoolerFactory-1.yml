@@ -24,7 +24,7 @@ items:
   source:
     id: AbstractPoolerFactory
     path: ''
-    startLine: 1881
+    startLine: 2263
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -75,7 +75,7 @@ items:
   source:
     id: _pool
     path: ''
-    startLine: 1883
+    startLine: 2265
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -104,7 +104,7 @@ items:
   source:
     id: _container
     path: ''
-    startLine: 1884
+    startLine: 2266
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -133,7 +133,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1886
+    startLine: 2268
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -164,7 +164,7 @@ items:
   source:
     id: ReturnToPool
     path: ''
-    startLine: 1900
+    startLine: 2282
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -199,7 +199,7 @@ items:
   source:
     id: GetObject
     path: ''
-    startLine: 1902
+    startLine: 2284
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -233,7 +233,7 @@ items:
   source:
     id: ActionOnRelease
     path: ''
-    startLine: 1905
+    startLine: 2287
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -266,7 +266,7 @@ items:
   source:
     id: CreateNew
     path: ''
-    startLine: 1906
+    startLine: 2288
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -298,7 +298,7 @@ items:
   source:
     id: ActionOnGet
     path: ''
-    startLine: 1907
+    startLine: 2289
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories
@@ -331,7 +331,7 @@ items:
   source:
     id: ActionOnDestroy
     path: ''
-    startLine: 1908
+    startLine: 2290
   assemblies:
   - cs.temp.dll
   namespace: Services.Factories

@@ -18,7 +18,7 @@ items:
   source:
     id: DamageTextService
     path: ''
-    startLine: 1275
+    startLine: 1652
   assemblies:
   - cs.temp.dll
   namespace: Services
@@ -55,7 +55,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 1281
+    startLine: 1658
   assemblies:
   - cs.temp.dll
   namespace: Services
@@ -81,7 +81,7 @@ items:
   source:
     id: ReturnDamageText
     path: ''
-    startLine: 1293
+    startLine: 1670
   assemblies:
   - cs.temp.dll
   namespace: Services
@@ -114,7 +114,7 @@ items:
   source:
     id: ReturnCustomDamageText
     path: ''
-    startLine: 1313
+    startLine: 1690
   assemblies:
   - cs.temp.dll
   namespace: Services

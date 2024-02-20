@@ -24,7 +24,7 @@ items:
   source:
     id: AbstractMonoInstaller
     path: ''
-    startLine: 246
+    startLine: 284
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -62,7 +62,7 @@ items:
   source:
     id: BindService
     path: ''
-    startLine: 253
+    startLine: 291
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -99,7 +99,7 @@ items:
   source:
     id: BindAbstractClass
     path: ''
-    startLine: 261
+    startLine: 299
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -140,7 +140,7 @@ items:
   source:
     id: InstallInterfaceBinding
     path: ''
-    startLine: 269
+    startLine: 307
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -181,7 +181,7 @@ items:
   source:
     id: BindInterfaceFromInstance
     path: ''
-    startLine: 278
+    startLine: 316
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -226,7 +226,7 @@ items:
   source:
     id: BindUnityComponent
     path: ''
-    startLine: 286
+    startLine: 324
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -269,7 +269,7 @@ items:
   source:
     id: BindMonobehaviour
     path: ''
-    startLine: 294
+    startLine: 332
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -312,7 +312,7 @@ items:
   source:
     id: BindScriptableObject
     path: ''
-    startLine: 302
+    startLine: 340
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -355,7 +355,7 @@ items:
   source:
     id: BindInterfacesAndSelfto
     path: ''
-    startLine: 309
+    startLine: 347
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -394,7 +394,7 @@ items:
   source:
     id: BindInterfacesAndSelfto
     path: ''
-    startLine: 311
+    startLine: 349
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure

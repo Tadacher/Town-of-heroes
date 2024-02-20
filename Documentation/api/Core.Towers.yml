@@ -7,6 +7,7 @@ items:
   - Core.Towers.AbstractTower
   - Core.Towers.ArcherTower
   - Core.Towers.ShrapnelCanonTower
+  - Core.Towers.TowerOfDeath
   langs:
   - csharp
   - vb
@@ -33,6 +34,11 @@ references:
   name: ShrapnelCanonTower
   nameWithType: ShrapnelCanonTower
   fullName: Core.Towers.ShrapnelCanonTower
+- uid: Core.Towers.TowerOfDeath
+  commentId: T:Core.Towers.TowerOfDeath
+  name: TowerOfDeath
+  nameWithType: TowerOfDeath
+  fullName: Core.Towers.TowerOfDeath
 - uid: Core.Towers
   commentId: N:Core.Towers
   name: Core.Towers

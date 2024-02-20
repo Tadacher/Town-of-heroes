@@ -3,20 +3,23 @@ items:
 - uid: Global
   id: Global
   children:
+  - Global.AbstractDamageRecievingModule
   - Global.AbstractEnemy
-  - Global.AbstractHealthModule
   - Global.AbstractInstantiationService`1
   - Global.AbstractProjectileFactory
   - Global.BiomeToEnemyTypesPair
+  - Global.CardDescriptionService
+  - Global.CardInfoUIContainer
   - Global.DamageText
   - Global.DefaultHealthModule
-  - Global.DodgeHealthModule
+  - Global.DodgeDamageRecievingModule
   - Global.EnemyFactory
   - Global.EnemyInstantiationService
   - Global.EnemyPrefabContainer
   - Global.EnemySpawnPosMarker
   - Global.EnemyStats
-  - Global.EnemyTypes
+  - Global.EnemyStats.WeightToEnemyType
+  - Global.EnemyType
   - Global.EnemyTypeService
   - Global.EnemyTypeToBiomeSettings
   - Global.EnemytypeToWeightPair
@@ -37,13 +40,16 @@ items:
   - Global.ProjectileBehaviour
   - Global.SimpleProjectileFactory
   - Global.SimpleTowerAttackModule
+  - Global.Skeleton
   - Global.TowerCard
+  - Global.TowerCardInfoConfig
   - Global.TowerFactory
   - Global.TowerStats
   - Global.Wave
   - Global.WaveGenerator
   - Global.WaveService
   - Global.WorldCellBuildingService
+  - Global.WorldCellCardInfoConfig
   - Global.WorldCellInstantiationService
   langs:
   - csharp
@@ -73,21 +79,26 @@ references:
   name: GobboTrapper
   nameWithType: GobboTrapper
   fullName: GobboTrapper
-- uid: Global.AbstractHealthModule
-  commentId: T:Global.AbstractHealthModule
-  name: AbstractHealthModule
-  nameWithType: AbstractHealthModule
-  fullName: AbstractHealthModule
+- uid: Global.AbstractDamageRecievingModule
+  commentId: T:Global.AbstractDamageRecievingModule
+  name: AbstractDamageRecievingModule
+  nameWithType: AbstractDamageRecievingModule
+  fullName: AbstractDamageRecievingModule
 - uid: Global.DefaultHealthModule
   commentId: T:Global.DefaultHealthModule
   name: DefaultHealthModule
   nameWithType: DefaultHealthModule
   fullName: DefaultHealthModule
-- uid: Global.DodgeHealthModule
-  commentId: T:Global.DodgeHealthModule
-  name: DodgeHealthModule
-  nameWithType: DodgeHealthModule
-  fullName: DodgeHealthModule
+- uid: Global.DodgeDamageRecievingModule
+  commentId: T:Global.DodgeDamageRecievingModule
+  name: DodgeDamageRecievingModule
+  nameWithType: DodgeDamageRecievingModule
+  fullName: DodgeDamageRecievingModule
+- uid: Global.Skeleton
+  commentId: T:Global.Skeleton
+  name: Skeleton
+  nameWithType: Skeleton
+  fullName: Skeleton
 - uid: Global.ICommonAttacker
   commentId: T:Global.ICommonAttacker
   name: ICommonAttacker
@@ -118,6 +129,11 @@ references:
   name: PointerFollower
   nameWithType: PointerFollower
   fullName: PointerFollower
+- uid: Global.CardInfoUIContainer
+  commentId: T:Global.CardInfoUIContainer
+  name: CardInfoUIContainer
+  nameWithType: CardInfoUIContainer
+  fullName: CardInfoUIContainer
 - uid: Global.DamageText
   commentId: T:Global.DamageText
   name: DamageText
@@ -143,6 +159,11 @@ references:
   name: EnemyStats
   nameWithType: EnemyStats
   fullName: EnemyStats
+- uid: Global.EnemyStats.WeightToEnemyType
+  commentId: T:Global.EnemyStats.WeightToEnemyType
+  name: EnemyStats.WeightToEnemyType
+  nameWithType: EnemyStats.WeightToEnemyType
+  fullName: EnemyStats.WeightToEnemyType
 - uid: Global.EnemyTypeToBiomeSettings
   commentId: T:Global.EnemyTypeToBiomeSettings
   name: EnemyTypeToBiomeSettings
@@ -158,11 +179,21 @@ references:
   name: EnemytypeToWeightPair
   nameWithType: EnemytypeToWeightPair
   fullName: EnemytypeToWeightPair
+- uid: Global.TowerCardInfoConfig
+  commentId: T:Global.TowerCardInfoConfig
+  name: TowerCardInfoConfig
+  nameWithType: TowerCardInfoConfig
+  fullName: TowerCardInfoConfig
 - uid: Global.TowerStats
   commentId: T:Global.TowerStats
   name: TowerStats
   nameWithType: TowerStats
   fullName: TowerStats
+- uid: Global.WorldCellCardInfoConfig
+  commentId: T:Global.WorldCellCardInfoConfig
+  name: WorldCellCardInfoConfig
+  nameWithType: WorldCellCardInfoConfig
+  fullName: WorldCellCardInfoConfig
 - uid: Global.EventContainer
   commentId: T:Global.EventContainer
   name: EventContainer
@@ -178,6 +209,11 @@ references:
   name: PathfindingAlgorhytm
   nameWithType: PathfindingAlgorhytm
   fullName: PathfindingAlgorhytm
+- uid: Global.CardDescriptionService
+  commentId: T:Global.CardDescriptionService
+  name: CardDescriptionService
+  nameWithType: CardDescriptionService
+  fullName: CardDescriptionService
 - uid: Global.EnemyFactory
   commentId: T:Global.EnemyFactory
   name: EnemyFactory
@@ -280,11 +316,11 @@ references:
   name: EnemyTypeService
   nameWithType: EnemyTypeService
   fullName: EnemyTypeService
-- uid: Global.EnemyTypes
-  commentId: T:Global.EnemyTypes
-  name: EnemyTypes
-  nameWithType: EnemyTypes
-  fullName: EnemyTypes
+- uid: Global.EnemyType
+  commentId: T:Global.EnemyType
+  name: EnemyType
+  nameWithType: EnemyType
+  fullName: EnemyType
 - uid: Global.Wave
   commentId: T:Global.Wave
   name: Wave

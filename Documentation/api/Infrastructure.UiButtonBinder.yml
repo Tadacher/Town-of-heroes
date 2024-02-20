@@ -16,7 +16,7 @@ items:
   source:
     id: UiButtonBinder
     path: ''
-    startLine: 2400
+    startLine: 2797
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -53,7 +53,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2402
+    startLine: 2799
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure

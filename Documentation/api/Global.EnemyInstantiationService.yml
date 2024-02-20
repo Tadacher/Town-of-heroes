@@ -6,9 +6,9 @@ items:
   parent: Global
   children:
   - Global.EnemyInstantiationService.#ctor(EnemySpawnPosMarker,DiContainer)
-  - Global.EnemyInstantiationService.AddNewFactory(Type)
-  - Global.EnemyInstantiationService.GetNewFactory(Type)
-  - Global.EnemyInstantiationService.ReturnObject(Type)
+  - Global.EnemyInstantiationService.AddNewFactory(System.Type)
+  - Global.EnemyInstantiationService.GetNewFactory(System.Type)
+  - Global.EnemyInstantiationService.ReturnObject(System.Type)
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
   source:
     id: EnemyInstantiationService
     path: ''
-    startLine: 2476
+    startLine: 2873
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -35,7 +35,7 @@ items:
   - Global.AbstractInstantiationService{AbstractEnemy}._container
   - Global.AbstractInstantiationService{AbstractEnemy}._factories
   - Global.AbstractInstantiationService{AbstractEnemy}._productionPrefabPath
-  - Global.AbstractInstantiationService{AbstractEnemy}.LoadProductPrefab(Type)
+  - Global.AbstractInstantiationService{AbstractEnemy}.LoadProductPrefab(System.Type)
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -63,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2481
+    startLine: 2878
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -80,21 +80,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.EnemyInstantiationService.ReturnObject(Type)
-  commentId: M:Global.EnemyInstantiationService.ReturnObject(Type)
-  id: ReturnObject(Type)
+- uid: Global.EnemyInstantiationService.ReturnObject(System.Type)
+  commentId: M:Global.EnemyInstantiationService.ReturnObject(System.Type)
+  id: ReturnObject(System.Type)
   parent: Global.EnemyInstantiationService
   langs:
   - csharp
   - vb
   name: ReturnObject(Type)
   nameWithType: EnemyInstantiationService.ReturnObject(Type)
-  fullName: EnemyInstantiationService.ReturnObject(Type)
+  fullName: EnemyInstantiationService.ReturnObject(System.Type)
   type: Method
   source:
     id: ReturnObject
     path: ''
-    startLine: 2485
+    startLine: 2882
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -102,11 +102,11 @@ items:
     content: public override AbstractEnemy ReturnObject(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     return:
       type: Global.AbstractEnemy
     content.vb: Public Overrides Function ReturnObject(type As Type) As AbstractEnemy
-  overridden: Global.AbstractInstantiationService{AbstractEnemy}.ReturnObject(Type)
+  overridden: Global.AbstractInstantiationService{AbstractEnemy}.ReturnObject(System.Type)
   overload: Global.EnemyInstantiationService.ReturnObject*
   modifiers.csharp:
   - public
@@ -114,21 +114,21 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: Global.EnemyInstantiationService.AddNewFactory(Type)
-  commentId: M:Global.EnemyInstantiationService.AddNewFactory(Type)
-  id: AddNewFactory(Type)
+- uid: Global.EnemyInstantiationService.AddNewFactory(System.Type)
+  commentId: M:Global.EnemyInstantiationService.AddNewFactory(System.Type)
+  id: AddNewFactory(System.Type)
   parent: Global.EnemyInstantiationService
   langs:
   - csharp
   - vb
   name: AddNewFactory(Type)
   nameWithType: EnemyInstantiationService.AddNewFactory(Type)
-  fullName: EnemyInstantiationService.AddNewFactory(Type)
+  fullName: EnemyInstantiationService.AddNewFactory(System.Type)
   type: Method
   source:
     id: AddNewFactory
     path: ''
-    startLine: 2496
+    startLine: 2893
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -136,9 +136,9 @@ items:
     content: protected override void AddNewFactory(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     content.vb: Protected Overrides Sub AddNewFactory(type As Type)
-  overridden: Global.AbstractInstantiationService{AbstractEnemy}.AddNewFactory(Type)
+  overridden: Global.AbstractInstantiationService{AbstractEnemy}.AddNewFactory(System.Type)
   overload: Global.EnemyInstantiationService.AddNewFactory*
   modifiers.csharp:
   - protected
@@ -146,21 +146,21 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
-- uid: Global.EnemyInstantiationService.GetNewFactory(Type)
-  commentId: M:Global.EnemyInstantiationService.GetNewFactory(Type)
-  id: GetNewFactory(Type)
+- uid: Global.EnemyInstantiationService.GetNewFactory(System.Type)
+  commentId: M:Global.EnemyInstantiationService.GetNewFactory(System.Type)
+  id: GetNewFactory(System.Type)
   parent: Global.EnemyInstantiationService
   langs:
   - csharp
   - vb
   name: GetNewFactory(Type)
   nameWithType: EnemyInstantiationService.GetNewFactory(Type)
-  fullName: EnemyInstantiationService.GetNewFactory(Type)
+  fullName: EnemyInstantiationService.GetNewFactory(System.Type)
   type: Method
   source:
     id: GetNewFactory
     path: ''
-    startLine: 2499
+    startLine: 2896
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -168,11 +168,11 @@ items:
     content: protected override IFactory<AbstractEnemy> GetNewFactory(Type productType)
     parameters:
     - id: productType
-      type: Global.Type
+      type: System.Type
     return:
       type: Global.IFactory{AbstractEnemy}
     content.vb: Protected Overrides Function GetNewFactory(productType As Type) As IFactory(Of AbstractEnemy)
-  overridden: Global.AbstractInstantiationService{AbstractEnemy}.GetNewFactory(Type)
+  overridden: Global.AbstractInstantiationService{AbstractEnemy}.GetNewFactory(System.Type)
   overload: Global.EnemyInstantiationService.GetNewFactory*
   modifiers.csharp:
   - protected
@@ -261,43 +261,43 @@ references:
   fullName: AbstractInstantiationService<AbstractEnemy>._productionPrefabPath
   nameWithType.vb: AbstractInstantiationService(Of AbstractEnemy)._productionPrefabPath
   fullName.vb: AbstractInstantiationService(Of AbstractEnemy)._productionPrefabPath
-- uid: Global.AbstractInstantiationService{AbstractEnemy}.LoadProductPrefab(Type)
-  commentId: M:Global.AbstractInstantiationService{AbstractEnemy}.LoadProductPrefab(Type)
+- uid: Global.AbstractInstantiationService{AbstractEnemy}.LoadProductPrefab(System.Type)
+  commentId: M:Global.AbstractInstantiationService{AbstractEnemy}.LoadProductPrefab(System.Type)
   parent: Global.AbstractInstantiationService{AbstractEnemy}
-  definition: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  definition: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
   name: LoadProductPrefab(Type)
   nameWithType: AbstractInstantiationService<AbstractEnemy>.LoadProductPrefab(Type)
-  fullName: AbstractInstantiationService<AbstractEnemy>.LoadProductPrefab(Type)
+  fullName: AbstractInstantiationService<AbstractEnemy>.LoadProductPrefab(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractEnemy).LoadProductPrefab(Type)
-  fullName.vb: AbstractInstantiationService(Of AbstractEnemy).LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of AbstractEnemy).LoadProductPrefab(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService<AbstractEnemy>.LoadProductPrefab
     fullName: AbstractInstantiationService<AbstractEnemy>.LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService(Of AbstractEnemy).LoadProductPrefab
     fullName: AbstractInstantiationService(Of AbstractEnemy).LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -644,42 +644,42 @@ references:
   fullName: AbstractInstantiationService<TProduction>._productionPrefabPath
   nameWithType.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
   fullName.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
-- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
-  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
   isExternal: true
   name: LoadProductPrefab(Type)
   nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
-  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
+  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab
     fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService(Of TProduction).LoadProductPrefab
     fullName: AbstractInstantiationService(Of TProduction).LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -699,43 +699,43 @@ references:
   name: DiContainer
   nameWithType: DiContainer
   fullName: DiContainer
-- uid: Global.AbstractInstantiationService{AbstractEnemy}.ReturnObject(Type)
-  commentId: M:Global.AbstractInstantiationService{AbstractEnemy}.ReturnObject(Type)
+- uid: Global.AbstractInstantiationService{AbstractEnemy}.ReturnObject(System.Type)
+  commentId: M:Global.AbstractInstantiationService{AbstractEnemy}.ReturnObject(System.Type)
   parent: Global.AbstractInstantiationService{AbstractEnemy}
-  definition: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  definition: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
   name: ReturnObject(Type)
   nameWithType: AbstractInstantiationService<AbstractEnemy>.ReturnObject(Type)
-  fullName: AbstractInstantiationService<AbstractEnemy>.ReturnObject(Type)
+  fullName: AbstractInstantiationService<AbstractEnemy>.ReturnObject(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractEnemy).ReturnObject(Type)
-  fullName.vb: AbstractInstantiationService(Of AbstractEnemy).ReturnObject(Type)
+  fullName.vb: AbstractInstantiationService(Of AbstractEnemy).ReturnObject(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService<AbstractEnemy>.ReturnObject
     fullName: AbstractInstantiationService<AbstractEnemy>.ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService(Of AbstractEnemy).ReturnObject
     fullName: AbstractInstantiationService(Of AbstractEnemy).ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -745,93 +745,95 @@ references:
   name: ReturnObject
   nameWithType: EnemyInstantiationService.ReturnObject
   fullName: EnemyInstantiationService.ReturnObject
-- uid: Global.Type
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
   isExternal: true
   name: Type
   nameWithType: Type
-  fullName: Type
+  fullName: System.Type
 - uid: Global.AbstractEnemy
   commentId: T:Global.AbstractEnemy
   name: AbstractEnemy
   nameWithType: AbstractEnemy
   fullName: AbstractEnemy
-- uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
-  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(Type)
+- uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(System.Type)
   isExternal: true
   name: ReturnObject(Type)
   nameWithType: AbstractInstantiationService<TProduction>.ReturnObject(Type)
-  fullName: AbstractInstantiationService<TProduction>.ReturnObject(Type)
+  fullName: AbstractInstantiationService<TProduction>.ReturnObject(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService<TProduction>.ReturnObject
     fullName: AbstractInstantiationService<TProduction>.ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService(Of TProduction).ReturnObject
     fullName: AbstractInstantiationService(Of TProduction).ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService{AbstractEnemy}.AddNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService{AbstractEnemy}.AddNewFactory(Type)
+- uid: Global.AbstractInstantiationService{AbstractEnemy}.AddNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService{AbstractEnemy}.AddNewFactory(System.Type)
   parent: Global.AbstractInstantiationService{AbstractEnemy}
-  definition: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  definition: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
   name: AddNewFactory(Type)
   nameWithType: AbstractInstantiationService<AbstractEnemy>.AddNewFactory(Type)
-  fullName: AbstractInstantiationService<AbstractEnemy>.AddNewFactory(Type)
+  fullName: AbstractInstantiationService<AbstractEnemy>.AddNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractEnemy).AddNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of AbstractEnemy).AddNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of AbstractEnemy).AddNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService<AbstractEnemy>.AddNewFactory
     fullName: AbstractInstantiationService<AbstractEnemy>.AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService(Of AbstractEnemy).AddNewFactory
     fullName: AbstractInstantiationService(Of AbstractEnemy).AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -841,83 +843,83 @@ references:
   name: AddNewFactory
   nameWithType: EnemyInstantiationService.AddNewFactory
   fullName: EnemyInstantiationService.AddNewFactory
-- uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
   isExternal: true
   name: AddNewFactory(Type)
   nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory
     fullName: AbstractInstantiationService<TProduction>.AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService(Of TProduction).AddNewFactory
     fullName: AbstractInstantiationService(Of TProduction).AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService{AbstractEnemy}.GetNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService{AbstractEnemy}.GetNewFactory(Type)
+- uid: Global.AbstractInstantiationService{AbstractEnemy}.GetNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService{AbstractEnemy}.GetNewFactory(System.Type)
   parent: Global.AbstractInstantiationService{AbstractEnemy}
-  definition: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  definition: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
   name: GetNewFactory(Type)
   nameWithType: AbstractInstantiationService<AbstractEnemy>.GetNewFactory(Type)
-  fullName: AbstractInstantiationService<AbstractEnemy>.GetNewFactory(Type)
+  fullName: AbstractInstantiationService<AbstractEnemy>.GetNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractEnemy).GetNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of AbstractEnemy).GetNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of AbstractEnemy).GetNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService<AbstractEnemy>.GetNewFactory
     fullName: AbstractInstantiationService<AbstractEnemy>.GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService(Of AbstractEnemy).GetNewFactory
     fullName: AbstractInstantiationService(Of AbstractEnemy).GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -966,42 +968,42 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
   isExternal: true
   name: GetNewFactory(Type)
   nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory
     fullName: AbstractInstantiationService<TProduction>.GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService(Of TProduction).GetNewFactory
     fullName: AbstractInstantiationService(Of TProduction).GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )

@@ -37,6 +37,7 @@ namespace Services.CardGeneration
                 towerCardDescriptionService: _container.Resolve<CardDescriptionService>(),
                 cardImageDatabase: _container.Resolve<CardImageDatabase>(),
                 worldCellCardGenerator: _container.Resolve<WorldCellCardGenerator>(),
+                towerImageDatabase: _container.Resolve<TowerImageDatabase>(),
                 diContainer: _container);
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a0cffec2c17a7042b0ae262d3843816, type: 3}
-  m_Name: CardImageDatabase
+  m_Name: WorldCellCardImageDatabase
   m_EditorClassIdentifier: 
   WorldCellCardSprites:
   - {fileID: 21300000, guid: ef1e2cd4f966d2349990a2902f812f29, type: 3}

@@ -17,7 +17,7 @@ items:
   source:
     id: IHitpointOwner
     path: ''
-    startLine: 629
+    startLine: 677
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -44,7 +44,7 @@ items:
   source:
     id: RecieveDamage
     path: ''
-    startLine: 631
+    startLine: 679
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -71,7 +71,7 @@ items:
   source:
     id: Heal
     path: ''
-    startLine: 632
+    startLine: 680
   assemblies:
   - cs.temp.dll
   namespace: Global

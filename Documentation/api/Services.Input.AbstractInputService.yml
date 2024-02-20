@@ -10,12 +10,18 @@ items:
   - Services.Input.AbstractInputService.GetPointerPositionWorld
   - Services.Input.AbstractInputService.IsPointerDown
   - Services.Input.AbstractInputService.IsPointerUp
+  - Services.Input.AbstractInputService.LeftMouseButtonDown
+  - Services.Input.AbstractInputService.LeftMouseButtonUp
+  - Services.Input.AbstractInputService.LeftMouseDown
   - Services.Input.AbstractInputService.OnPointerDown
   - Services.Input.AbstractInputService.OnPointerUp
+  - Services.Input.AbstractInputService.OnRightButtonUp
   - Services.Input.AbstractInputService.OnShiftDown
   - Services.Input.AbstractInputService.OnShiftUp
-  - Services.Input.AbstractInputService.PointerDown
-  - Services.Input.AbstractInputService.PointerUp
+  - Services.Input.AbstractInputService.RightButtonUp
+  - Services.Input.AbstractInputService.RightMouseDown
+  - Services.Input.AbstractInputService.ShiftDown
+  - Services.Input.AbstractInputService.ShiftUp
   langs:
   - csharp
   - vb
@@ -26,7 +32,7 @@ items:
   source:
     id: AbstractInputService
     path: ''
-    startLine: 2123
+    startLine: 2505
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -72,7 +78,7 @@ items:
   source:
     id: Camera
     path: ''
-    startLine: 2125
+    startLine: 2508
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -89,6 +95,33 @@ items:
   modifiers.vb:
   - Protected
   - ReadOnly
+- uid: Services.Input.AbstractInputService.OnRightButtonUp
+  commentId: E:Services.Input.AbstractInputService.OnRightButtonUp
+  id: OnRightButtonUp
+  parent: Services.Input.AbstractInputService
+  langs:
+  - csharp
+  - vb
+  name: OnRightButtonUp
+  nameWithType: AbstractInputService.OnRightButtonUp
+  fullName: Services.Input.AbstractInputService.OnRightButtonUp
+  type: Event
+  source:
+    id: OnRightButtonUp
+    path: ''
+    startLine: 2510
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: public event Action OnRightButtonUp
+    return:
+      type: System.Action
+    content.vb: Public Event OnRightButtonUp As Action
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Services.Input.AbstractInputService.OnPointerUp
   commentId: E:Services.Input.AbstractInputService.OnPointerUp
   id: OnPointerUp
@@ -103,14 +136,14 @@ items:
   source:
     id: OnPointerUp
     path: ''
-    startLine: 2127
+    startLine: 2511
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
   syntax:
     content: public event Action OnPointerUp
     return:
-      type: Global.Action
+      type: System.Action
     content.vb: Public Event OnPointerUp As Action
   modifiers.csharp:
   - public
@@ -130,14 +163,14 @@ items:
   source:
     id: OnPointerDown
     path: ''
-    startLine: 2128
+    startLine: 2512
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
   syntax:
     content: public event Action OnPointerDown
     return:
-      type: Global.Action
+      type: System.Action
     content.vb: Public Event OnPointerDown As Action
   modifiers.csharp:
   - public
@@ -157,14 +190,14 @@ items:
   source:
     id: OnShiftUp
     path: ''
-    startLine: 2130
+    startLine: 2514
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
   syntax:
     content: public event Action OnShiftUp
     return:
-      type: Global.Action
+      type: System.Action
     content.vb: Public Event OnShiftUp As Action
   implements:
   - Services.Input.IShiftEventProvider.OnShiftUp
@@ -186,14 +219,14 @@ items:
   source:
     id: OnShiftDown
     path: ''
-    startLine: 2131
+    startLine: 2515
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
   syntax:
     content: public event Action OnShiftDown
     return:
-      type: Global.Action
+      type: System.Action
     content.vb: Public Event OnShiftDown As Action
   implements:
   - Services.Input.IShiftEventProvider.OnShiftDown
@@ -215,7 +248,7 @@ items:
   source:
     id: GetPointerPositionScreen
     path: ''
-    startLine: 2133
+    startLine: 2517
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -245,7 +278,7 @@ items:
   source:
     id: GetPointerPositionWorld
     path: ''
-    startLine: 2134
+    startLine: 2518
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -275,7 +308,7 @@ items:
   source:
     id: IsPointerDown
     path: ''
-    startLine: 2136
+    startLine: 2520
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -307,7 +340,7 @@ items:
   source:
     id: IsPointerUp
     path: ''
-    startLine: 2137
+    startLine: 2521
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
@@ -325,54 +358,188 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
-- uid: Services.Input.AbstractInputService.PointerDown
-  commentId: M:Services.Input.AbstractInputService.PointerDown
-  id: PointerDown
+- uid: Services.Input.AbstractInputService.LeftMouseButtonDown
+  commentId: M:Services.Input.AbstractInputService.LeftMouseButtonDown
+  id: LeftMouseButtonDown
   parent: Services.Input.AbstractInputService
   langs:
   - csharp
   - vb
-  name: PointerDown()
-  nameWithType: AbstractInputService.PointerDown()
-  fullName: Services.Input.AbstractInputService.PointerDown()
+  name: LeftMouseButtonDown()
+  nameWithType: AbstractInputService.LeftMouseButtonDown()
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonDown()
   type: Method
   source:
-    id: PointerDown
+    id: LeftMouseButtonDown
     path: ''
-    startLine: 2139
+    startLine: 2523
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
   syntax:
-    content: public void PointerDown()
-    content.vb: Public Sub PointerDown
-  overload: Services.Input.AbstractInputService.PointerDown*
+    content: public void LeftMouseButtonDown()
+    content.vb: Public Sub LeftMouseButtonDown
+  overload: Services.Input.AbstractInputService.LeftMouseButtonDown*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Services.Input.AbstractInputService.PointerUp
-  commentId: M:Services.Input.AbstractInputService.PointerUp
-  id: PointerUp
+- uid: Services.Input.AbstractInputService.LeftMouseButtonUp
+  commentId: M:Services.Input.AbstractInputService.LeftMouseButtonUp
+  id: LeftMouseButtonUp
   parent: Services.Input.AbstractInputService
   langs:
   - csharp
   - vb
-  name: PointerUp()
-  nameWithType: AbstractInputService.PointerUp()
-  fullName: Services.Input.AbstractInputService.PointerUp()
+  name: LeftMouseButtonUp()
+  nameWithType: AbstractInputService.LeftMouseButtonUp()
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonUp()
   type: Method
   source:
-    id: PointerUp
+    id: LeftMouseButtonUp
     path: ''
-    startLine: 2142
+    startLine: 2526
   assemblies:
   - cs.temp.dll
   namespace: Services.Input
   syntax:
-    content: public void PointerUp()
-    content.vb: Public Sub PointerUp
-  overload: Services.Input.AbstractInputService.PointerUp*
+    content: public void LeftMouseButtonUp()
+    content.vb: Public Sub LeftMouseButtonUp
+  overload: Services.Input.AbstractInputService.LeftMouseButtonUp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Input.AbstractInputService.LeftMouseDown
+  commentId: M:Services.Input.AbstractInputService.LeftMouseDown
+  id: LeftMouseDown
+  parent: Services.Input.AbstractInputService
+  langs:
+  - csharp
+  - vb
+  name: LeftMouseDown()
+  nameWithType: AbstractInputService.LeftMouseDown()
+  fullName: Services.Input.AbstractInputService.LeftMouseDown()
+  type: Method
+  source:
+    id: LeftMouseDown
+    path: ''
+    startLine: 2529
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: public bool LeftMouseDown()
+    return:
+      type: System.Boolean
+    content.vb: Public Function LeftMouseDown As Boolean
+  overload: Services.Input.AbstractInputService.LeftMouseDown*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Input.AbstractInputService.ShiftDown
+  commentId: M:Services.Input.AbstractInputService.ShiftDown
+  id: ShiftDown
+  parent: Services.Input.AbstractInputService
+  langs:
+  - csharp
+  - vb
+  name: ShiftDown()
+  nameWithType: AbstractInputService.ShiftDown()
+  fullName: Services.Input.AbstractInputService.ShiftDown()
+  type: Method
+  source:
+    id: ShiftDown
+    path: ''
+    startLine: 2532
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: public void ShiftDown()
+    content.vb: Public Sub ShiftDown
+  overload: Services.Input.AbstractInputService.ShiftDown*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Input.AbstractInputService.ShiftUp
+  commentId: M:Services.Input.AbstractInputService.ShiftUp
+  id: ShiftUp
+  parent: Services.Input.AbstractInputService
+  langs:
+  - csharp
+  - vb
+  name: ShiftUp()
+  nameWithType: AbstractInputService.ShiftUp()
+  fullName: Services.Input.AbstractInputService.ShiftUp()
+  type: Method
+  source:
+    id: ShiftUp
+    path: ''
+    startLine: 2535
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: public void ShiftUp()
+    content.vb: Public Sub ShiftUp
+  overload: Services.Input.AbstractInputService.ShiftUp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Input.AbstractInputService.RightButtonUp
+  commentId: M:Services.Input.AbstractInputService.RightButtonUp
+  id: RightButtonUp
+  parent: Services.Input.AbstractInputService
+  langs:
+  - csharp
+  - vb
+  name: RightButtonUp()
+  nameWithType: AbstractInputService.RightButtonUp()
+  fullName: Services.Input.AbstractInputService.RightButtonUp()
+  type: Method
+  source:
+    id: RightButtonUp
+    path: ''
+    startLine: 2538
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: public void RightButtonUp()
+    content.vb: Public Sub RightButtonUp
+  overload: Services.Input.AbstractInputService.RightButtonUp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Input.AbstractInputService.RightMouseDown
+  commentId: M:Services.Input.AbstractInputService.RightMouseDown
+  id: RightMouseDown
+  parent: Services.Input.AbstractInputService
+  langs:
+  - csharp
+  - vb
+  name: RightMouseDown()
+  nameWithType: AbstractInputService.RightMouseDown()
+  fullName: Services.Input.AbstractInputService.RightMouseDown()
+  type: Method
+  source:
+    id: RightMouseDown
+    path: ''
+    startLine: 2541
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: public bool RightMouseDown()
+    return:
+      type: System.Boolean
+    content.vb: Public Function RightMouseDown As Boolean
+  overload: Services.Input.AbstractInputService.RightMouseDown*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -698,11 +865,13 @@ references:
   name: Camera
   nameWithType: Camera
   fullName: Camera
-- uid: Global.Action
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
   isExternal: true
   name: Action
   nameWithType: Action
-  fullName: Action
+  fullName: System.Action
 - uid: Services.Input.IShiftEventProvider.OnShiftUp
   commentId: E:Services.Input.IShiftEventProvider.OnShiftUp
   parent: Services.Input.IShiftEventProvider
@@ -803,13 +972,38 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Services.Input.AbstractInputService.PointerDown*
-  commentId: Overload:Services.Input.AbstractInputService.PointerDown
-  name: PointerDown
-  nameWithType: AbstractInputService.PointerDown
-  fullName: Services.Input.AbstractInputService.PointerDown
-- uid: Services.Input.AbstractInputService.PointerUp*
-  commentId: Overload:Services.Input.AbstractInputService.PointerUp
-  name: PointerUp
-  nameWithType: AbstractInputService.PointerUp
-  fullName: Services.Input.AbstractInputService.PointerUp
+- uid: Services.Input.AbstractInputService.LeftMouseButtonDown*
+  commentId: Overload:Services.Input.AbstractInputService.LeftMouseButtonDown
+  name: LeftMouseButtonDown
+  nameWithType: AbstractInputService.LeftMouseButtonDown
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonDown
+- uid: Services.Input.AbstractInputService.LeftMouseButtonUp*
+  commentId: Overload:Services.Input.AbstractInputService.LeftMouseButtonUp
+  name: LeftMouseButtonUp
+  nameWithType: AbstractInputService.LeftMouseButtonUp
+  fullName: Services.Input.AbstractInputService.LeftMouseButtonUp
+- uid: Services.Input.AbstractInputService.LeftMouseDown*
+  commentId: Overload:Services.Input.AbstractInputService.LeftMouseDown
+  name: LeftMouseDown
+  nameWithType: AbstractInputService.LeftMouseDown
+  fullName: Services.Input.AbstractInputService.LeftMouseDown
+- uid: Services.Input.AbstractInputService.ShiftDown*
+  commentId: Overload:Services.Input.AbstractInputService.ShiftDown
+  name: ShiftDown
+  nameWithType: AbstractInputService.ShiftDown
+  fullName: Services.Input.AbstractInputService.ShiftDown
+- uid: Services.Input.AbstractInputService.ShiftUp*
+  commentId: Overload:Services.Input.AbstractInputService.ShiftUp
+  name: ShiftUp
+  nameWithType: AbstractInputService.ShiftUp
+  fullName: Services.Input.AbstractInputService.ShiftUp
+- uid: Services.Input.AbstractInputService.RightButtonUp*
+  commentId: Overload:Services.Input.AbstractInputService.RightButtonUp
+  name: RightButtonUp
+  nameWithType: AbstractInputService.RightButtonUp
+  fullName: Services.Input.AbstractInputService.RightButtonUp
+- uid: Services.Input.AbstractInputService.RightMouseDown*
+  commentId: Overload:Services.Input.AbstractInputService.RightMouseDown
+  name: RightMouseDown
+  nameWithType: AbstractInputService.RightMouseDown
+  fullName: Services.Input.AbstractInputService.RightMouseDown

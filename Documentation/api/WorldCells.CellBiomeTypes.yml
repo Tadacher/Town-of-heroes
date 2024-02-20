@@ -6,6 +6,7 @@ items:
   parent: WorldCells
   children:
   - WorldCells.CellBiomeTypes.Arctic
+  - WorldCells.CellBiomeTypes.Cursed
   - WorldCells.CellBiomeTypes.Desert
   - WorldCells.CellBiomeTypes.Green
   - WorldCells.CellBiomeTypes.Ocean
@@ -19,7 +20,7 @@ items:
   source:
     id: CellBiomeTypes
     path: ''
-    startLine: 1114
+    startLine: 1334
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -46,7 +47,7 @@ items:
   source:
     id: Green
     path: ''
-    startLine: 1116
+    startLine: 1336
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -74,7 +75,7 @@ items:
   source:
     id: Desert
     path: ''
-    startLine: 1117
+    startLine: 1337
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -102,7 +103,7 @@ items:
   source:
     id: Arctic
     path: ''
-    startLine: 1118
+    startLine: 1338
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
@@ -130,12 +131,40 @@ items:
   source:
     id: Ocean
     path: ''
-    startLine: 1119
+    startLine: 1339
   assemblies:
   - cs.temp.dll
   namespace: WorldCells
   syntax:
     content: Ocean = 3
+    return:
+      type: WorldCells.CellBiomeTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: WorldCells.CellBiomeTypes.Cursed
+  commentId: F:WorldCells.CellBiomeTypes.Cursed
+  id: Cursed
+  parent: WorldCells.CellBiomeTypes
+  langs:
+  - csharp
+  - vb
+  name: Cursed
+  nameWithType: CellBiomeTypes.Cursed
+  fullName: WorldCells.CellBiomeTypes.Cursed
+  type: Field
+  source:
+    id: Cursed
+    path: ''
+    startLine: 1340
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: Cursed = 4
     return:
       type: WorldCells.CellBiomeTypes
   modifiers.csharp:

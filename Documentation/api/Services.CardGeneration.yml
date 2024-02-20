@@ -8,6 +8,7 @@ items:
   - Services.CardGeneration.CellProbabilityPair
   - Services.CardGeneration.CellStats
   - Services.CardGeneration.TowerCardFactory
+  - Services.CardGeneration.TowerImageDatabase
   - Services.CardGeneration.TowerToWorldCellPair
   - Services.CardGeneration.WorldCellCardGenerator
   - Services.CardGeneration.WorldCellCardsConfig
@@ -21,29 +22,18 @@ items:
   assemblies:
   - cs.temp.dll
 references:
-- uid: Services.CardGeneration.CardInstantiationService
-  commentId: T:Services.CardGeneration.CardInstantiationService
-  parent: Services.CardGeneration
-  name: CardInstantiationService
-  nameWithType: CardInstantiationService
-  fullName: Services.CardGeneration.CardInstantiationService
 - uid: Services.CardGeneration.CellStats
   commentId: T:Services.CardGeneration.CellStats
   parent: Services.CardGeneration
   name: CellStats
   nameWithType: CellStats
   fullName: Services.CardGeneration.CellStats
-- uid: Services.CardGeneration.TowerCardFactory
-  commentId: T:Services.CardGeneration.TowerCardFactory
-  name: TowerCardFactory
-  nameWithType: TowerCardFactory
-  fullName: Services.CardGeneration.TowerCardFactory
-- uid: Services.CardGeneration.WorldCellCardGenerator
-  commentId: T:Services.CardGeneration.WorldCellCardGenerator
+- uid: Services.CardGeneration.TowerImageDatabase
+  commentId: T:Services.CardGeneration.TowerImageDatabase
   parent: Services.CardGeneration
-  name: WorldCellCardGenerator
-  nameWithType: WorldCellCardGenerator
-  fullName: Services.CardGeneration.WorldCellCardGenerator
+  name: TowerImageDatabase
+  nameWithType: TowerImageDatabase
+  fullName: Services.CardGeneration.TowerImageDatabase
 - uid: Services.CardGeneration.WorldCellCardsConfig
   commentId: T:Services.CardGeneration.WorldCellCardsConfig
   parent: Services.CardGeneration
@@ -60,6 +50,23 @@ references:
   name: CellProbabilityPair
   nameWithType: CellProbabilityPair
   fullName: Services.CardGeneration.CellProbabilityPair
+- uid: Services.CardGeneration.CardInstantiationService
+  commentId: T:Services.CardGeneration.CardInstantiationService
+  parent: Services.CardGeneration
+  name: CardInstantiationService
+  nameWithType: CardInstantiationService
+  fullName: Services.CardGeneration.CardInstantiationService
+- uid: Services.CardGeneration.TowerCardFactory
+  commentId: T:Services.CardGeneration.TowerCardFactory
+  name: TowerCardFactory
+  nameWithType: TowerCardFactory
+  fullName: Services.CardGeneration.TowerCardFactory
+- uid: Services.CardGeneration.WorldCellCardGenerator
+  commentId: T:Services.CardGeneration.WorldCellCardGenerator
+  parent: Services.CardGeneration
+  name: WorldCellCardGenerator
+  nameWithType: WorldCellCardGenerator
+  fullName: Services.CardGeneration.WorldCellCardGenerator
 - uid: Services.CardGeneration
   commentId: N:Services.CardGeneration
   name: Services.CardGeneration

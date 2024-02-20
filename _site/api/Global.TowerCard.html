@@ -101,6 +101,33 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class TowerCard : MonoBehaviour, IPoolableObject</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Global_TowerCard_TowerType_" data-uid="Global.TowerCard.TowerType*"></a>
+  <h4 id="Global_TowerCard_TowerType" data-uid="Global.TowerCard.TowerType">TowerType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type TowerType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -116,12 +143,12 @@
   
   
   <a id="Global_TowerCard_Initialize_" data-uid="Global.TowerCard.Initialize*"></a>
-  <h4 id="Global_TowerCard_Initialize_TowerBuildingService_WorldCellBuildingService_GameplayStateMachine_IObjectPooler_IShiftEventProvider_Sprite_Type_Type_" data-uid="Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,Sprite,Type,Type)">Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, Sprite, Type, Type)</h4>
+  <h4 id="Global_TowerCard_Initialize_TowerBuildingService_WorldCellBuildingService_GameplayStateMachine_IObjectPooler_IShiftEventProvider_CardInfoUiService_AbstractInputService_TowerCardInfoConfig_WorldCellCardInfoConfig_Sprite_Sprite_System_Type_System_Type_" data-uid="Global.TowerCard.Initialize(TowerBuildingService,WorldCellBuildingService,GameplayStateMachine,IObjectPooler,IShiftEventProvider,CardInfoUiService,AbstractInputService,TowerCardInfoConfig,WorldCellCardInfoConfig,Sprite,Sprite,System.Type,System.Type)">Initialize(TowerBuildingService, WorldCellBuildingService, GameplayStateMachine, IObjectPooler, IShiftEventProvider, CardInfoUiService, AbstractInputService, TowerCardInfoConfig, WorldCellCardInfoConfig, Sprite, Sprite, Type, Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Initialize(TowerBuildingService towerBuildingService, WorldCellBuildingService worldCellBuildingService, GameplayStateMachine gameplayStateMachine, IObjectPooler pooler, IShiftEventProvider shiftEventProvider, Sprite worldCellSprite, Type towerType, Type worldCellType)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Initialize(TowerBuildingService towerBuildingService, WorldCellBuildingService worldCellBuildingService, GameplayStateMachine gameplayStateMachine, IObjectPooler pooler, IShiftEventProvider shiftEventProvider, CardInfoUiService cardInfoUiService, AbstractInputService inputService, TowerCardInfoConfig towerCardInfoConfig, WorldCellCardInfoConfig worldCellCardInfoConfig, Sprite worldCellSprite, Sprite towerSprite, Type towerType, Type worldCellType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,17 +186,42 @@
         <td></td>
       </tr>
       <tr>
+        <td><span class="xref">CardInfoUiService</span></td>
+        <td><span class="parametername">cardInfoUiService</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">AbstractInputService</span></td>
+        <td><span class="parametername">inputService</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Global.TowerCardInfoConfig.html">TowerCardInfoConfig</a></td>
+        <td><span class="parametername">towerCardInfoConfig</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Global.WorldCellCardInfoConfig.html">WorldCellCardInfoConfig</a></td>
+        <td><span class="parametername">worldCellCardInfoConfig</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><span class="xref">Sprite</span></td>
         <td><span class="parametername">worldCellSprite</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><span class="xref">Sprite</span></td>
+        <td><span class="parametername">towerSprite</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">towerType</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">worldCellType</span></td>
         <td></td>
       </tr>

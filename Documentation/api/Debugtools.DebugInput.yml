@@ -17,7 +17,7 @@ items:
   source:
     id: DebugInput
     path: ''
-    startLine: 8
+    startLine: 10
   assemblies:
   - cs.temp.dll
   namespace: Debugtools
@@ -48,7 +48,7 @@ items:
   source:
     id: Construct
     path: ''
-    startLine: 12
+    startLine: 14
   assemblies:
   - cs.temp.dll
   namespace: Debugtools
@@ -79,7 +79,7 @@ items:
   source:
     id: Update
     path: ''
-    startLine: 19
+    startLine: 21
   assemblies:
   - cs.temp.dll
   namespace: Debugtools

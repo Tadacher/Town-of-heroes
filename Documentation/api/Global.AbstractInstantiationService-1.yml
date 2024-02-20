@@ -9,10 +9,10 @@ items:
   - Global.AbstractInstantiationService`1._container
   - Global.AbstractInstantiationService`1._factories
   - Global.AbstractInstantiationService`1._productionPrefabPath
-  - Global.AbstractInstantiationService`1.AddNewFactory(Type)
-  - Global.AbstractInstantiationService`1.GetNewFactory(Type)
-  - Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
-  - Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
+  - Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
+  - Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
+  - Global.AbstractInstantiationService`1.ReturnObject(System.Type)
   langs:
   - csharp
   - vb
@@ -23,7 +23,7 @@ items:
   source:
     id: AbstractInstantiationService
     path: ''
-    startLine: 2446
+    startLine: 2843
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -76,7 +76,7 @@ items:
   source:
     id: _container
     path: ''
-    startLine: 2448
+    startLine: 2845
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -107,14 +107,14 @@ items:
   source:
     id: _factories
     path: ''
-    startLine: 2449
+    startLine: 2846
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
     content: protected Dictionary<Type, IFactory<TProduction>> _factories
     return:
-      type: Global.Dictionary{Type,IFactory{{TProduction}}}
+      type: Global.Dictionary{System.Type,IFactory{{TProduction}}}
     content.vb: Protected _factories As Dictionary(Of Type, IFactory(Of TProduction))
   nameWithType.vb: AbstractInstantiationService(Of TProduction)._factories
   modifiers.csharp:
@@ -136,7 +136,7 @@ items:
   source:
     id: _productionPrefabPath
     path: ''
-    startLine: 2450
+    startLine: 2847
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -165,7 +165,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2452
+    startLine: 2849
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -184,21 +184,21 @@ items:
   modifiers.vb:
   - Protected
   fullName.vb: AbstractInstantiationService(Of TProduction).AbstractInstantiationService(System.String, DiContainer)
-- uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
-  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(Type)
-  id: ReturnObject(Type)
+- uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(System.Type)
+  id: ReturnObject(System.Type)
   parent: Global.AbstractInstantiationService`1
   langs:
   - csharp
   - vb
   name: ReturnObject(Type)
   nameWithType: AbstractInstantiationService<TProduction>.ReturnObject(Type)
-  fullName: AbstractInstantiationService<TProduction>.ReturnObject(Type)
+  fullName: AbstractInstantiationService<TProduction>.ReturnObject(System.Type)
   type: Method
   source:
     id: ReturnObject
     path: ''
-    startLine: 2459
+    startLine: 2856
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -206,7 +206,7 @@ items:
     content: public abstract TProduction ReturnObject(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     return:
       type: '{TProduction}'
     content.vb: Public MustOverride Function ReturnObject(type As Type) As TProduction
@@ -218,22 +218,22 @@ items:
   modifiers.vb:
   - Public
   - MustOverride
-  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
-- uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(Type)
-  id: AddNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(System.Type)
+- uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
+  id: AddNewFactory(System.Type)
   parent: Global.AbstractInstantiationService`1
   langs:
   - csharp
   - vb
   name: AddNewFactory(Type)
   nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(System.Type)
   type: Method
   source:
     id: AddNewFactory
     path: ''
-    startLine: 2461
+    startLine: 2858
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -241,7 +241,7 @@ items:
     content: protected abstract void AddNewFactory(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     content.vb: Protected MustOverride Sub AddNewFactory(type As Type)
   overload: Global.AbstractInstantiationService`1.AddNewFactory*
   nameWithType.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
@@ -251,22 +251,22 @@ items:
   modifiers.vb:
   - Protected
   - MustOverride
-  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
-- uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(Type)
-  id: GetNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(System.Type)
+- uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
+  id: GetNewFactory(System.Type)
   parent: Global.AbstractInstantiationService`1
   langs:
   - csharp
   - vb
   name: GetNewFactory(Type)
   nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(System.Type)
   type: Method
   source:
     id: GetNewFactory
     path: ''
-    startLine: 2462
+    startLine: 2859
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -274,7 +274,7 @@ items:
     content: protected abstract IFactory<TProduction> GetNewFactory(Type productType)
     parameters:
     - id: productType
-      type: Global.Type
+      type: System.Type
     return:
       type: Global.IFactory{{TProduction}}
     content.vb: Protected MustOverride Function GetNewFactory(productType As Type) As IFactory(Of TProduction)
@@ -286,22 +286,22 @@ items:
   modifiers.vb:
   - Protected
   - MustOverride
-  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
-- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
-  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
-  id: LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(System.Type)
+- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
+  id: LoadProductPrefab(System.Type)
   parent: Global.AbstractInstantiationService`1
   langs:
   - csharp
   - vb
   name: LoadProductPrefab(Type)
   nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
-  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
+  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(System.Type)
   type: Method
   source:
     id: LoadProductPrefab
     path: ''
-    startLine: 2464
+    startLine: 2861
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -309,7 +309,7 @@ items:
     content: protected TProduction LoadProductPrefab(Type productType)
     parameters:
     - id: productType
-      type: Global.Type
+      type: System.Type
     return:
       type: '{TProduction}'
     content.vb: Protected Function LoadProductPrefab(productType As Type) As TProduction
@@ -319,7 +319,7 @@ items:
   - protected
   modifiers.vb:
   - Protected
-  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(System.Type)
 references:
 - uid: Global
   name: Global
@@ -625,14 +625,14 @@ references:
   name: DiContainer
   nameWithType: DiContainer
   fullName: DiContainer
-- uid: Global.Dictionary{Type,IFactory{{TProduction}}}
-  commentId: '!:Global.Dictionary{Type,IFactory{`0}}'
+- uid: Global.Dictionary{System.Type,IFactory{{TProduction}}}
+  commentId: '!:Global.Dictionary{System.Type,IFactory{`0}}'
   definition: Global.Dictionary`2
   name: Dictionary<Type, IFactory<TProduction>>
   nameWithType: Dictionary<Type, IFactory<TProduction>>
-  fullName: Dictionary<Type, IFactory<TProduction>>
+  fullName: Dictionary<System.Type, IFactory<TProduction>>
   nameWithType.vb: Dictionary(Of Type, IFactory(Of TProduction))
-  fullName.vb: Dictionary(Of Type, IFactory(Of TProduction))
+  fullName.vb: Dictionary(Of System.Type, IFactory(Of TProduction))
   name.vb: Dictionary(Of Type, IFactory(Of TProduction))
   spec.csharp:
   - uid: Global.Dictionary`2
@@ -643,10 +643,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -676,10 +676,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -771,11 +771,13 @@ references:
   fullName: AbstractInstantiationService<TProduction>.ReturnObject
   nameWithType.vb: AbstractInstantiationService(Of TProduction).ReturnObject
   fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject
-- uid: Global.Type
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
   isExternal: true
   name: Type
   nameWithType: Type
-  fullName: Type
+  fullName: System.Type
 - uid: '{TProduction}'
   commentId: '!:TProduction'
   definition: TProduction

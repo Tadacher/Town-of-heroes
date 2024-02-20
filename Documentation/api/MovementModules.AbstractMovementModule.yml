@@ -23,7 +23,7 @@ items:
   source:
     id: AbstractMovementModule
     path: ''
-    startLine: 1038
+    startLine: 1213
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -64,7 +64,7 @@ items:
   source:
     id: _unitTransform
     path: ''
-    startLine: 1040
+    startLine: 1215
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -91,7 +91,7 @@ items:
   source:
     id: _targetV3
     path: ''
-    startLine: 1041
+    startLine: 1216
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -118,7 +118,7 @@ items:
   source:
     id: _coroutineProcessor
     path: ''
-    startLine: 1042
+    startLine: 1217
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -145,7 +145,7 @@ items:
   source:
     id: _movementCoroutine
     path: ''
-    startLine: 1043
+    startLine: 1218
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -172,7 +172,7 @@ items:
   source:
     id: _speed
     path: ''
-    startLine: 1044
+    startLine: 1219
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -199,7 +199,7 @@ items:
   source:
     id: StartMovementCoroutine
     path: ''
-    startLine: 1045
+    startLine: 1220
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -230,7 +230,7 @@ items:
   source:
     id: StopMovementCoroutine
     path: ''
-    startLine: 1046
+    startLine: 1221
   assemblies:
   - cs.temp.dll
   namespace: MovementModules
@@ -261,7 +261,7 @@ items:
   source:
     id: MovementCoroutine
     path: ''
-    startLine: 1048
+    startLine: 1223
   assemblies:
   - cs.temp.dll
   namespace: MovementModules

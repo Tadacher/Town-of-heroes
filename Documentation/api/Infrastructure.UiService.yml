@@ -18,7 +18,7 @@ items:
   source:
     id: UiService
     path: ''
-    startLine: 2413
+    startLine: 2810
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -55,7 +55,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2419
+    startLine: 2816
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -86,7 +86,7 @@ items:
   source:
     id: SwitchToGameplayCanvas
     path: ''
-    startLine: 2425
+    startLine: 2822
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure
@@ -112,7 +112,7 @@ items:
   source:
     id: SwitchToMapCanvas
     path: ''
-    startLine: 2430
+    startLine: 2827
   assemblies:
   - cs.temp.dll
   namespace: Infrastructure

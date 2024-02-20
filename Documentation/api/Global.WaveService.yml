@@ -7,7 +7,7 @@ items:
   children:
   - Global.WaveService.#ctor(DiContainer,ICoroutineRunner)
   - Global.WaveService.CancelRoutine
-  - Global.WaveService.StartCoroutine
+  - Global.WaveService.StartWaveCoroutine
   langs:
   - csharp
   - vb
@@ -18,10 +18,12 @@ items:
   source:
     id: WaveService
     path: ''
-    startLine: 2678
+    startLine: 3094
   assemblies:
   - cs.temp.dll
   namespace: Global
+  summary: "\n\n"
+  example: []
   syntax:
     content: public class WaveService
     content.vb: Public Class WaveService
@@ -55,7 +57,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2692
+    startLine: 3108
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -72,28 +74,28 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Global.WaveService.StartCoroutine
-  commentId: M:Global.WaveService.StartCoroutine
-  id: StartCoroutine
+- uid: Global.WaveService.StartWaveCoroutine
+  commentId: M:Global.WaveService.StartWaveCoroutine
+  id: StartWaveCoroutine
   parent: Global.WaveService
   langs:
   - csharp
   - vb
-  name: StartCoroutine()
-  nameWithType: WaveService.StartCoroutine()
-  fullName: WaveService.StartCoroutine()
+  name: StartWaveCoroutine()
+  nameWithType: WaveService.StartWaveCoroutine()
+  fullName: WaveService.StartWaveCoroutine()
   type: Method
   source:
-    id: StartCoroutine
+    id: StartWaveCoroutine
     path: ''
-    startLine: 2715
+    startLine: 3131
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public void StartCoroutine()
-    content.vb: Public Sub StartCoroutine
-  overload: Global.WaveService.StartCoroutine*
+    content: public void StartWaveCoroutine()
+    content.vb: Public Sub StartWaveCoroutine
+  overload: Global.WaveService.StartWaveCoroutine*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -112,7 +114,7 @@ items:
   source:
     id: CancelRoutine
     path: ''
-    startLine: 2728
+    startLine: 3144
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -440,11 +442,11 @@ references:
   name: ICoroutineRunner
   nameWithType: ICoroutineRunner
   fullName: ICoroutineRunner
-- uid: Global.WaveService.StartCoroutine*
-  commentId: Overload:Global.WaveService.StartCoroutine
-  name: StartCoroutine
-  nameWithType: WaveService.StartCoroutine
-  fullName: WaveService.StartCoroutine
+- uid: Global.WaveService.StartWaveCoroutine*
+  commentId: Overload:Global.WaveService.StartWaveCoroutine
+  name: StartWaveCoroutine
+  nameWithType: WaveService.StartWaveCoroutine
+  fullName: WaveService.StartWaveCoroutine
 - uid: Global.WaveService.CancelRoutine*
   commentId: Overload:Global.WaveService.CancelRoutine
   name: CancelRoutine

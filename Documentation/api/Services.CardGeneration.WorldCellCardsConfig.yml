@@ -16,10 +16,12 @@ items:
   source:
     id: WorldCellCardsConfig
     path: ''
-    startLine: 1809
+    startLine: 1600
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
+  summary: "\ncontains all tower to worldcell configs\n"
+  example: []
   syntax:
     content: 'public class WorldCellCardsConfig : ScriptableObject'
     content.vb: >-
@@ -47,7 +49,7 @@ items:
   source:
     id: Configs
     path: ''
-    startLine: 1812
+    startLine: 1603
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration

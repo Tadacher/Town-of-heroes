@@ -17,15 +17,21 @@ items:
   source:
     id: EnemytypeToWeightPair
     path: ''
-    startLine: 1209
+    startLine: 1448
   assemblies:
   - cs.temp.dll
   namespace: Global
-  summary: "\ndescribes weight in biome overall  \n"
+  summary: "\ndescribes weight of EnemyType in certain biome \n"
   example: []
   syntax:
-    content: public class EnemytypeToWeightPair
-    content.vb: Public Class EnemytypeToWeightPair
+    content: >-
+      [Serializable]
+
+      public class EnemytypeToWeightPair
+    content.vb: >-
+      <Serializable>
+
+      Public Class EnemytypeToWeightPair
   inheritance:
   - System.Object
   inheritedMembers:
@@ -36,6 +42,10 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -56,15 +66,15 @@ items:
   source:
     id: EnemyType
     path: ''
-    startLine: 1212
+    startLine: 1451
   assemblies:
   - cs.temp.dll
   namespace: Global
   syntax:
-    content: public EnemyTypes EnemyType
+    content: public EnemyType EnemyType
     return:
-      type: Global.EnemyTypes
-    content.vb: Public EnemyType As EnemyTypes
+      type: Global.EnemyType
+    content.vb: Public EnemyType As EnemyType
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -83,7 +93,7 @@ items:
   source:
     id: Weight
     path: ''
-    startLine: 1213
+    startLine: 1452
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -396,11 +406,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.EnemyTypes
-  commentId: T:Global.EnemyTypes
-  name: EnemyTypes
-  nameWithType: EnemyTypes
-  fullName: EnemyTypes
+- uid: Global.EnemyType
+  commentId: T:Global.EnemyType
+  name: EnemyType
+  nameWithType: EnemyType
+  fullName: EnemyType
 - uid: System.Single
   commentId: T:System.Single
   parent: System

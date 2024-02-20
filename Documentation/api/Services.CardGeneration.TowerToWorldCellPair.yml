@@ -17,13 +17,21 @@ items:
   source:
     id: TowerToWorldCellPair
     path: ''
-    startLine: 1815
+    startLine: 1608
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
+  summary: "\ndescribes which tower on card can contain which world cell card on other side\n"
+  example: []
   syntax:
-    content: public class TowerToWorldCellPair
-    content.vb: Public Class TowerToWorldCellPair
+    content: >-
+      [Serializable]
+
+      public class TowerToWorldCellPair
+    content.vb: >-
+      <Serializable>
+
+      Public Class TowerToWorldCellPair
   inheritance:
   - System.Object
   inheritedMembers:
@@ -34,6 +42,10 @@ items:
   - System.Object.GetHashCode
   - System.Object.GetType
   - System.Object.MemberwiseClone
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - class
@@ -54,7 +66,7 @@ items:
   source:
     id: Tower
     path: ''
-    startLine: 1818
+    startLine: 1611
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration
@@ -81,7 +93,7 @@ items:
   source:
     id: CellProbabilityPairs
     path: ''
-    startLine: 1819
+    startLine: 1612
   assemblies:
   - cs.temp.dll
   namespace: Services.CardGeneration

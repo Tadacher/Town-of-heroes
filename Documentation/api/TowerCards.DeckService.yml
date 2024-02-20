@@ -1,36 +1,29 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Global.AbstractHealthModule
-  commentId: T:Global.AbstractHealthModule
-  id: AbstractHealthModule
-  parent: Global
-  children:
-  - Global.AbstractHealthModule.#ctor(Transform,DamageTextService)
-  - Global.AbstractHealthModule._damageTextService
-  - Global.AbstractHealthModule._unitTransform
-  - Global.AbstractHealthModule.RecieveDamage(System.Int32)
+- uid: TowerCards.DeckService
+  commentId: T:TowerCards.DeckService
+  id: DeckService
+  parent: TowerCards
+  children: []
   langs:
   - csharp
   - vb
-  name: AbstractHealthModule
-  nameWithType: AbstractHealthModule
-  fullName: AbstractHealthModule
+  name: DeckService
+  nameWithType: DeckService
+  fullName: TowerCards.DeckService
   type: Class
   source:
-    id: AbstractHealthModule
+    id: DeckService
     path: ''
-    startLine: 177
+    startLine: 1715
   assemblies:
   - cs.temp.dll
-  namespace: Global
+  namespace: TowerCards
   syntax:
-    content: public abstract class AbstractHealthModule
-    content.vb: Public MustInherit Class AbstractHealthModule
+    content: public class DeckService
+    content.vb: Public Class DeckService
   inheritance:
   - System.Object
-  derivedClasses:
-  - Global.DefaultHealthModule
-  - Global.DodgeHealthModule
   inheritedMembers:
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -41,138 +34,16 @@ items:
   - System.Object.MemberwiseClone
   modifiers.csharp:
   - public
-  - abstract
   - class
   modifiers.vb:
   - Public
-  - MustInherit
   - Class
-- uid: Global.AbstractHealthModule._damageTextService
-  commentId: F:Global.AbstractHealthModule._damageTextService
-  id: _damageTextService
-  parent: Global.AbstractHealthModule
-  langs:
-  - csharp
-  - vb
-  name: _damageTextService
-  nameWithType: AbstractHealthModule._damageTextService
-  fullName: AbstractHealthModule._damageTextService
-  type: Field
-  source:
-    id: _damageTextService
-    path: ''
-    startLine: 179
-  assemblies:
-  - cs.temp.dll
-  namespace: Global
-  syntax:
-    content: protected DamageTextService _damageTextService
-    return:
-      type: Global.DamageTextService
-    content.vb: Protected _damageTextService As DamageTextService
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
-- uid: Global.AbstractHealthModule._unitTransform
-  commentId: F:Global.AbstractHealthModule._unitTransform
-  id: _unitTransform
-  parent: Global.AbstractHealthModule
-  langs:
-  - csharp
-  - vb
-  name: _unitTransform
-  nameWithType: AbstractHealthModule._unitTransform
-  fullName: AbstractHealthModule._unitTransform
-  type: Field
-  source:
-    id: _unitTransform
-    path: ''
-    startLine: 180
-  assemblies:
-  - cs.temp.dll
-  namespace: Global
-  syntax:
-    content: protected Transform _unitTransform
-    return:
-      type: Global.Transform
-    content.vb: Protected _unitTransform As Transform
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
-- uid: Global.AbstractHealthModule.#ctor(Transform,DamageTextService)
-  commentId: M:Global.AbstractHealthModule.#ctor(Transform,DamageTextService)
-  id: '#ctor(Transform,DamageTextService)'
-  parent: Global.AbstractHealthModule
-  langs:
-  - csharp
-  - vb
-  name: AbstractHealthModule(Transform, DamageTextService)
-  nameWithType: AbstractHealthModule.AbstractHealthModule(Transform, DamageTextService)
-  fullName: AbstractHealthModule.AbstractHealthModule(Transform, DamageTextService)
-  type: Constructor
-  source:
-    id: .ctor
-    path: ''
-    startLine: 182
-  assemblies:
-  - cs.temp.dll
-  namespace: Global
-  syntax:
-    content: protected AbstractHealthModule(Transform unitTransform, DamageTextService damageTextService)
-    parameters:
-    - id: unitTransform
-      type: Global.Transform
-    - id: damageTextService
-      type: Global.DamageTextService
-    content.vb: Protected Sub New(unitTransform As Transform, damageTextService As DamageTextService)
-  overload: Global.AbstractHealthModule.#ctor*
-  modifiers.csharp:
-  - protected
-  modifiers.vb:
-  - Protected
-- uid: Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  commentId: M:Global.AbstractHealthModule.RecieveDamage(System.Int32)
-  id: RecieveDamage(System.Int32)
-  parent: Global.AbstractHealthModule
-  langs:
-  - csharp
-  - vb
-  name: RecieveDamage(Int32)
-  nameWithType: AbstractHealthModule.RecieveDamage(Int32)
-  fullName: AbstractHealthModule.RecieveDamage(System.Int32)
-  type: Method
-  source:
-    id: RecieveDamage
-    path: ''
-    startLine: 188
-  assemblies:
-  - cs.temp.dll
-  namespace: Global
-  syntax:
-    content: public abstract int RecieveDamage(int damage)
-    parameters:
-    - id: damage
-      type: System.Int32
-    return:
-      type: System.Int32
-    content.vb: Public MustOverride Function RecieveDamage(damage As Integer) As Integer
-  overload: Global.AbstractHealthModule.RecieveDamage*
-  modifiers.csharp:
-  - public
-  - abstract
-  modifiers.vb:
-  - Public
-  - MustOverride
 references:
-- uid: Global
-  name: Global
-  nameWithType: Global
-  fullName: Global
-  nameWithType.vb: ''
-  fullName.vb: ''
-  name.vb: ''
+- uid: TowerCards
+  commentId: N:TowerCards
+  name: TowerCards
+  nameWithType: TowerCards
+  fullName: TowerCards
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -465,30 +336,3 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Global.DamageTextService
-  isExternal: true
-  name: DamageTextService
-  nameWithType: DamageTextService
-  fullName: DamageTextService
-- uid: Global.Transform
-  isExternal: true
-  name: Transform
-  nameWithType: Transform
-  fullName: Transform
-- uid: Global.AbstractHealthModule.#ctor*
-  commentId: Overload:Global.AbstractHealthModule.#ctor
-  name: AbstractHealthModule
-  nameWithType: AbstractHealthModule.AbstractHealthModule
-  fullName: AbstractHealthModule.AbstractHealthModule
-- uid: Global.AbstractHealthModule.RecieveDamage*
-  commentId: Overload:Global.AbstractHealthModule.RecieveDamage
-  name: RecieveDamage
-  nameWithType: AbstractHealthModule.RecieveDamage
-  fullName: AbstractHealthModule.RecieveDamage
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32

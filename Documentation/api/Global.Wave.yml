@@ -5,7 +5,7 @@ items:
   id: Wave
   parent: Global
   children:
-  - Global.Wave.#ctor(System.Single,Action[])
+  - Global.Wave.#ctor(System.Single,System.Action[])
   - Global.Wave.Delay
   - Global.Wave.EnemyCreationCommands
   langs:
@@ -18,7 +18,7 @@ items:
   source:
     id: Wave
     path: ''
-    startLine: 2585
+    startLine: 2996
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -55,7 +55,7 @@ items:
   source:
     id: EnemyCreationCommands
     path: ''
-    startLine: 2587
+    startLine: 2998
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -63,7 +63,7 @@ items:
     content: public Action[] EnemyCreationCommands { get; }
     parameters: []
     return:
-      type: Global.Action[]
+      type: System.Action[]
     content.vb: Public ReadOnly Property EnemyCreationCommands As Action()
   overload: Global.Wave.EnemyCreationCommands*
   modifiers.csharp:
@@ -86,7 +86,7 @@ items:
   source:
     id: Delay
     path: ''
-    startLine: 2588
+    startLine: 2999
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -101,21 +101,21 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Global.Wave.#ctor(System.Single,Action[])
-  commentId: M:Global.Wave.#ctor(System.Single,Action[])
-  id: '#ctor(System.Single,Action[])'
+- uid: Global.Wave.#ctor(System.Single,System.Action[])
+  commentId: M:Global.Wave.#ctor(System.Single,System.Action[])
+  id: '#ctor(System.Single,System.Action[])'
   parent: Global.Wave
   langs:
   - csharp
   - vb
   name: Wave(Single, Action[])
   nameWithType: Wave.Wave(Single, Action[])
-  fullName: Wave.Wave(System.Single, Action[])
+  fullName: Wave.Wave(System.Single, System.Action[])
   type: Constructor
   source:
     id: .ctor
     path: ''
-    startLine: 2593
+    startLine: 3004
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -125,7 +125,7 @@ items:
     - id: delay
       type: System.Single
     - id: enemyTypes
-      type: Global.Action[]
+      type: System.Action[]
     content.vb: Public Sub New(delay As Single, enemyTypes As Action())
   overload: Global.Wave.#ctor*
   nameWithType.vb: Wave.Wave(Single, Action())
@@ -133,7 +133,7 @@ items:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Wave.Wave(System.Single, Action())
+  fullName.vb: Wave.Wave(System.Single, System.Action())
   name.vb: Wave(Single, Action())
 references:
 - uid: Global
@@ -440,28 +440,28 @@ references:
   name: EnemyCreationCommands
   nameWithType: Wave.EnemyCreationCommands
   fullName: Wave.EnemyCreationCommands
-- uid: Global.Action[]
+- uid: System.Action[]
   isExternal: true
   name: Action[]
   nameWithType: Action[]
-  fullName: Action[]
+  fullName: System.Action[]
   nameWithType.vb: Action()
-  fullName.vb: Action()
+  fullName.vb: System.Action()
   name.vb: Action()
   spec.csharp:
-  - uid: Global.Action
+  - uid: System.Action
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: Global.Action
+  - uid: System.Action
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: ()
     nameWithType: ()

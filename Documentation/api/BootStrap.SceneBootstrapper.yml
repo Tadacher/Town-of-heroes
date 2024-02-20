@@ -15,7 +15,7 @@ items:
   source:
     id: SceneBootstrapper
     path: ''
-    startLine: 474
+    startLine: 522
   assemblies:
   - cs.temp.dll
   namespace: BootStrap

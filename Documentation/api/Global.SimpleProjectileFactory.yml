@@ -16,7 +16,7 @@ items:
   source:
     id: SimpleProjectileFactory
     path: ''
-    startLine: 3315
+    startLine: 3751
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -31,7 +31,7 @@ items:
   inheritedMembers:
   - Global.AbstractProjectileFactory._projectilePool
   - Global.AbstractProjectileFactory._projectilePrefab
-  - Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+  - Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
   - Global.AbstractProjectileFactory.TryInitializePool
   - System.Object.ToString
   - System.Object.Equals(System.Object)
@@ -60,7 +60,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 3317
+    startLine: 3753
   assemblies:
   - cs.temp.dll
   namespace: Global
@@ -107,15 +107,15 @@ references:
   name: _projectilePrefab
   nameWithType: AbstractProjectileFactory._projectilePrefab
   fullName: AbstractProjectileFactory._projectilePrefab
-- uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
-  commentId: M:Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+- uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
+  commentId: M:Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
   parent: Global.AbstractProjectileFactory
   isExternal: true
   name: ReturnProjectile(Single, Transform, Vector3, Action)
   nameWithType: AbstractProjectileFactory.ReturnProjectile(Single, Transform, Vector3, Action)
-  fullName: AbstractProjectileFactory.ReturnProjectile(System.Single, Transform, Vector3, Action)
+  fullName: AbstractProjectileFactory.ReturnProjectile(System.Single, Transform, Vector3, System.Action)
   spec.csharp:
-  - uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+  - uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
     name: ReturnProjectile
     nameWithType: AbstractProjectileFactory.ReturnProjectile
     fullName: AbstractProjectileFactory.ReturnProjectile
@@ -146,16 +146,16 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Global.Action
+  - uid: System.Action
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,Action)
+  - uid: Global.AbstractProjectileFactory.ReturnProjectile(System.Single,Transform,Vector3,System.Action)
     name: ReturnProjectile
     nameWithType: AbstractProjectileFactory.ReturnProjectile
     fullName: AbstractProjectileFactory.ReturnProjectile
@@ -186,10 +186,10 @@ references:
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: Global.Action
+  - uid: System.Action
     name: Action
     nameWithType: Action
-    fullName: Action
+    fullName: System.Action
     isExternal: true
   - name: )
     nameWithType: )

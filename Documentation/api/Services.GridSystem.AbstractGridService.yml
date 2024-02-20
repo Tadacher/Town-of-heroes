@@ -28,7 +28,7 @@ items:
   source:
     id: AbstractGridService
     path: ''
-    startLine: 2035
+    startLine: 2417
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -70,7 +70,7 @@ items:
   source:
     id: _cellsize
     path: ''
-    startLine: 2037
+    startLine: 2419
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -99,7 +99,7 @@ items:
   source:
     id: _gridSizeX
     path: ''
-    startLine: 2038
+    startLine: 2420
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -128,7 +128,7 @@ items:
   source:
     id: _gridSizeY
     path: ''
-    startLine: 2039
+    startLine: 2421
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -157,7 +157,7 @@ items:
   source:
     id: _cellOffset
     path: ''
-    startLine: 2041
+    startLine: 2423
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -186,7 +186,7 @@ items:
   source:
     id: _zeroPoint
     path: ''
-    startLine: 2042
+    startLine: 2424
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -215,7 +215,7 @@ items:
   source:
     id: _cells
     path: ''
-    startLine: 2044
+    startLine: 2426
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -242,7 +242,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2046
+    startLine: 2428
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -279,7 +279,7 @@ items:
   source:
     id: CellAvailable
     path: ''
-    startLine: 2056
+    startLine: 2438
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -310,7 +310,7 @@ items:
   source:
     id: Insert
     path: ''
-    startLine: 2062
+    startLine: 2444
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -341,7 +341,7 @@ items:
   source:
     id: Remove
     path: ''
-    startLine: 2067
+    startLine: 2449
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -370,7 +370,7 @@ items:
   source:
     id: PosToGrid
     path: ''
-    startLine: 2073
+    startLine: 2455
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -401,7 +401,7 @@ items:
   source:
     id: InitCellContent
     path: ''
-    startLine: 2079
+    startLine: 2461
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem
@@ -429,7 +429,7 @@ items:
   source:
     id: PosToCellCoords
     path: ''
-    startLine: 2080
+    startLine: 2462
   assemblies:
   - cs.temp.dll
   namespace: Services.GridSystem

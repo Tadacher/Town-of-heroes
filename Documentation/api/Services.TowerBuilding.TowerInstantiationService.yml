@@ -6,9 +6,9 @@ items:
   parent: Services.TowerBuilding
   children:
   - Services.TowerBuilding.TowerInstantiationService.#ctor(AbstractInputService,Services.GridSystem.BattleGridService,DiContainer)
-  - Services.TowerBuilding.TowerInstantiationService.AddNewFactory(Type)
-  - Services.TowerBuilding.TowerInstantiationService.GetNewFactory(Type)
-  - Services.TowerBuilding.TowerInstantiationService.ReturnObject(Type)
+  - Services.TowerBuilding.TowerInstantiationService.AddNewFactory(System.Type)
+  - Services.TowerBuilding.TowerInstantiationService.GetNewFactory(System.Type)
+  - Services.TowerBuilding.TowerInstantiationService.ReturnObject(System.Type)
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
   source:
     id: TowerInstantiationService
     path: ''
-    startLine: 2363
+    startLine: 2760
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -35,7 +35,7 @@ items:
   - Global.AbstractInstantiationService{Core.Towers.AbstractTower}._container
   - Global.AbstractInstantiationService{Core.Towers.AbstractTower}._factories
   - Global.AbstractInstantiationService{Core.Towers.AbstractTower}._productionPrefabPath
-  - Global.AbstractInstantiationService{Core.Towers.AbstractTower}.LoadProductPrefab(Type)
+  - Global.AbstractInstantiationService{Core.Towers.AbstractTower}.LoadProductPrefab(System.Type)
   - System.Object.ToString
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -63,7 +63,7 @@ items:
   source:
     id: .ctor
     path: ''
-    startLine: 2369
+    startLine: 2766
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -82,21 +82,21 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Services.TowerBuilding.TowerInstantiationService.ReturnObject(Type)
-  commentId: M:Services.TowerBuilding.TowerInstantiationService.ReturnObject(Type)
-  id: ReturnObject(Type)
+- uid: Services.TowerBuilding.TowerInstantiationService.ReturnObject(System.Type)
+  commentId: M:Services.TowerBuilding.TowerInstantiationService.ReturnObject(System.Type)
+  id: ReturnObject(System.Type)
   parent: Services.TowerBuilding.TowerInstantiationService
   langs:
   - csharp
   - vb
   name: ReturnObject(Type)
   nameWithType: TowerInstantiationService.ReturnObject(Type)
-  fullName: Services.TowerBuilding.TowerInstantiationService.ReturnObject(Type)
+  fullName: Services.TowerBuilding.TowerInstantiationService.ReturnObject(System.Type)
   type: Method
   source:
     id: ReturnObject
     path: ''
-    startLine: 2378
+    startLine: 2775
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -104,11 +104,11 @@ items:
     content: public override AbstractTower ReturnObject(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     return:
       type: Core.Towers.AbstractTower
     content.vb: Public Overrides Function ReturnObject(type As Type) As AbstractTower
-  overridden: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.ReturnObject(Type)
+  overridden: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.ReturnObject(System.Type)
   overload: Services.TowerBuilding.TowerInstantiationService.ReturnObject*
   modifiers.csharp:
   - public
@@ -116,21 +116,21 @@ items:
   modifiers.vb:
   - Public
   - Overrides
-- uid: Services.TowerBuilding.TowerInstantiationService.AddNewFactory(Type)
-  commentId: M:Services.TowerBuilding.TowerInstantiationService.AddNewFactory(Type)
-  id: AddNewFactory(Type)
+- uid: Services.TowerBuilding.TowerInstantiationService.AddNewFactory(System.Type)
+  commentId: M:Services.TowerBuilding.TowerInstantiationService.AddNewFactory(System.Type)
+  id: AddNewFactory(System.Type)
   parent: Services.TowerBuilding.TowerInstantiationService
   langs:
   - csharp
   - vb
   name: AddNewFactory(Type)
   nameWithType: TowerInstantiationService.AddNewFactory(Type)
-  fullName: Services.TowerBuilding.TowerInstantiationService.AddNewFactory(Type)
+  fullName: Services.TowerBuilding.TowerInstantiationService.AddNewFactory(System.Type)
   type: Method
   source:
     id: AddNewFactory
     path: ''
-    startLine: 2386
+    startLine: 2783
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -138,9 +138,9 @@ items:
     content: protected override void AddNewFactory(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     content.vb: Protected Overrides Sub AddNewFactory(type As Type)
-  overridden: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.AddNewFactory(Type)
+  overridden: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.AddNewFactory(System.Type)
   overload: Services.TowerBuilding.TowerInstantiationService.AddNewFactory*
   modifiers.csharp:
   - protected
@@ -148,21 +148,21 @@ items:
   modifiers.vb:
   - Protected
   - Overrides
-- uid: Services.TowerBuilding.TowerInstantiationService.GetNewFactory(Type)
-  commentId: M:Services.TowerBuilding.TowerInstantiationService.GetNewFactory(Type)
-  id: GetNewFactory(Type)
+- uid: Services.TowerBuilding.TowerInstantiationService.GetNewFactory(System.Type)
+  commentId: M:Services.TowerBuilding.TowerInstantiationService.GetNewFactory(System.Type)
+  id: GetNewFactory(System.Type)
   parent: Services.TowerBuilding.TowerInstantiationService
   langs:
   - csharp
   - vb
   name: GetNewFactory(Type)
   nameWithType: TowerInstantiationService.GetNewFactory(Type)
-  fullName: Services.TowerBuilding.TowerInstantiationService.GetNewFactory(Type)
+  fullName: Services.TowerBuilding.TowerInstantiationService.GetNewFactory(System.Type)
   type: Method
   source:
     id: GetNewFactory
     path: ''
-    startLine: 2389
+    startLine: 2786
   assemblies:
   - cs.temp.dll
   namespace: Services.TowerBuilding
@@ -170,11 +170,11 @@ items:
     content: protected override IFactory<AbstractTower> GetNewFactory(Type type)
     parameters:
     - id: type
-      type: Global.Type
+      type: System.Type
     return:
       type: Global.IFactory{Core.Towers.AbstractTower}
     content.vb: Protected Overrides Function GetNewFactory(type As Type) As IFactory(Of AbstractTower)
-  overridden: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.GetNewFactory(Type)
+  overridden: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.GetNewFactory(System.Type)
   overload: Services.TowerBuilding.TowerInstantiationService.GetNewFactory*
   modifiers.csharp:
   - protected
@@ -261,43 +261,43 @@ references:
   fullName: AbstractInstantiationService<Core.Towers.AbstractTower>._productionPrefabPath
   nameWithType.vb: AbstractInstantiationService(Of AbstractTower)._productionPrefabPath
   fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower)._productionPrefabPath
-- uid: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.LoadProductPrefab(Type)
-  commentId: M:Global.AbstractInstantiationService{Core.Towers.AbstractTower}.LoadProductPrefab(Type)
+- uid: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.LoadProductPrefab(System.Type)
+  commentId: M:Global.AbstractInstantiationService{Core.Towers.AbstractTower}.LoadProductPrefab(System.Type)
   parent: Global.AbstractInstantiationService{Core.Towers.AbstractTower}
-  definition: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  definition: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
   name: LoadProductPrefab(Type)
   nameWithType: AbstractInstantiationService<AbstractTower>.LoadProductPrefab(Type)
-  fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.LoadProductPrefab(Type)
+  fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.LoadProductPrefab(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractTower).LoadProductPrefab(Type)
-  fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower).LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower).LoadProductPrefab(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService<AbstractTower>.LoadProductPrefab
     fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService(Of AbstractTower).LoadProductPrefab
     fullName: AbstractInstantiationService(Of Core.Towers.AbstractTower).LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -644,42 +644,42 @@ references:
   fullName: AbstractInstantiationService<TProduction>._productionPrefabPath
   nameWithType.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
   fullName.vb: AbstractInstantiationService(Of TProduction)._productionPrefabPath
-- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
-  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+- uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
   isExternal: true
   name: LoadProductPrefab(Type)
   nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
-  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(Type)
+  fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).LoadProductPrefab(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService<TProduction>.LoadProductPrefab
     fullName: AbstractInstantiationService<TProduction>.LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(Type)
+  - uid: Global.AbstractInstantiationService`1.LoadProductPrefab(System.Type)
     name: LoadProductPrefab
     nameWithType: AbstractInstantiationService(Of TProduction).LoadProductPrefab
     fullName: AbstractInstantiationService(Of TProduction).LoadProductPrefab
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -710,43 +710,43 @@ references:
   name: Services.GridSystem
   nameWithType: Services.GridSystem
   fullName: Services.GridSystem
-- uid: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.ReturnObject(Type)
-  commentId: M:Global.AbstractInstantiationService{Core.Towers.AbstractTower}.ReturnObject(Type)
+- uid: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.ReturnObject(System.Type)
+  commentId: M:Global.AbstractInstantiationService{Core.Towers.AbstractTower}.ReturnObject(System.Type)
   parent: Global.AbstractInstantiationService{Core.Towers.AbstractTower}
-  definition: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  definition: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
   name: ReturnObject(Type)
   nameWithType: AbstractInstantiationService<AbstractTower>.ReturnObject(Type)
-  fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.ReturnObject(Type)
+  fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.ReturnObject(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractTower).ReturnObject(Type)
-  fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower).ReturnObject(Type)
+  fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower).ReturnObject(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService<AbstractTower>.ReturnObject
     fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService(Of AbstractTower).ReturnObject
     fullName: AbstractInstantiationService(Of Core.Towers.AbstractTower).ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -756,53 +756,55 @@ references:
   name: ReturnObject
   nameWithType: TowerInstantiationService.ReturnObject
   fullName: Services.TowerBuilding.TowerInstantiationService.ReturnObject
-- uid: Global.Type
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
   isExternal: true
   name: Type
   nameWithType: Type
-  fullName: Type
+  fullName: System.Type
 - uid: Core.Towers.AbstractTower
   commentId: T:Core.Towers.AbstractTower
   parent: Core.Towers
   name: AbstractTower
   nameWithType: AbstractTower
   fullName: Core.Towers.AbstractTower
-- uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
-  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(Type)
+- uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.ReturnObject(System.Type)
   isExternal: true
   name: ReturnObject(Type)
   nameWithType: AbstractInstantiationService<TProduction>.ReturnObject(Type)
-  fullName: AbstractInstantiationService<TProduction>.ReturnObject(Type)
+  fullName: AbstractInstantiationService<TProduction>.ReturnObject(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).ReturnObject(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService<TProduction>.ReturnObject
     fullName: AbstractInstantiationService<TProduction>.ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.ReturnObject(Type)
+  - uid: Global.AbstractInstantiationService`1.ReturnObject(System.Type)
     name: ReturnObject
     nameWithType: AbstractInstantiationService(Of TProduction).ReturnObject
     fullName: AbstractInstantiationService(Of TProduction).ReturnObject
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -812,43 +814,43 @@ references:
   name: Core.Towers
   nameWithType: Core.Towers
   fullName: Core.Towers
-- uid: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.AddNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService{Core.Towers.AbstractTower}.AddNewFactory(Type)
+- uid: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.AddNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService{Core.Towers.AbstractTower}.AddNewFactory(System.Type)
   parent: Global.AbstractInstantiationService{Core.Towers.AbstractTower}
-  definition: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  definition: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
   name: AddNewFactory(Type)
   nameWithType: AbstractInstantiationService<AbstractTower>.AddNewFactory(Type)
-  fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.AddNewFactory(Type)
+  fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.AddNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractTower).AddNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower).AddNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower).AddNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService<AbstractTower>.AddNewFactory
     fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService(Of AbstractTower).AddNewFactory
     fullName: AbstractInstantiationService(Of Core.Towers.AbstractTower).AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -858,83 +860,83 @@ references:
   name: AddNewFactory
   nameWithType: TowerInstantiationService.AddNewFactory
   fullName: Services.TowerBuilding.TowerInstantiationService.AddNewFactory
-- uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
   isExternal: true
   name: AddNewFactory(Type)
   nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.AddNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).AddNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService<TProduction>.AddNewFactory
     fullName: AbstractInstantiationService<TProduction>.AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.AddNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.AddNewFactory(System.Type)
     name: AddNewFactory
     nameWithType: AbstractInstantiationService(Of TProduction).AddNewFactory
     fullName: AbstractInstantiationService(Of TProduction).AddNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.GetNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService{Core.Towers.AbstractTower}.GetNewFactory(Type)
+- uid: Global.AbstractInstantiationService{Core.Towers.AbstractTower}.GetNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService{Core.Towers.AbstractTower}.GetNewFactory(System.Type)
   parent: Global.AbstractInstantiationService{Core.Towers.AbstractTower}
-  definition: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  definition: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
   name: GetNewFactory(Type)
   nameWithType: AbstractInstantiationService<AbstractTower>.GetNewFactory(Type)
-  fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.GetNewFactory(Type)
+  fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.GetNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of AbstractTower).GetNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower).GetNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of Core.Towers.AbstractTower).GetNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService<AbstractTower>.GetNewFactory
     fullName: AbstractInstantiationService<Core.Towers.AbstractTower>.GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService(Of AbstractTower).GetNewFactory
     fullName: AbstractInstantiationService(Of Core.Towers.AbstractTower).GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
@@ -983,42 +985,42 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
-  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(Type)
+- uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
+  commentId: M:Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
   isExternal: true
   name: GetNewFactory(Type)
   nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
-  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(Type)
+  fullName: AbstractInstantiationService<TProduction>.GetNewFactory(System.Type)
   nameWithType.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
-  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(Type)
+  fullName.vb: AbstractInstantiationService(Of TProduction).GetNewFactory(System.Type)
   spec.csharp:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService<TProduction>.GetNewFactory
     fullName: AbstractInstantiationService<TProduction>.GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Global.AbstractInstantiationService`1.GetNewFactory(Type)
+  - uid: Global.AbstractInstantiationService`1.GetNewFactory(System.Type)
     name: GetNewFactory
     nameWithType: AbstractInstantiationService(Of TProduction).GetNewFactory
     fullName: AbstractInstantiationService(Of TProduction).GetNewFactory
   - name: (
     nameWithType: (
     fullName: (
-  - uid: Global.Type
+  - uid: System.Type
     name: Type
     nameWithType: Type
-    fullName: Type
+    fullName: System.Type
     isExternal: true
   - name: )
     nameWithType: )

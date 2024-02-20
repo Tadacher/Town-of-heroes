@@ -5,9 +5,7 @@ namespace Infrastructure
 {
     public class CoroutineProcessorService : MonoBehaviour, ICoroutineRunner
     {
-        Coroutine ICoroutineRunner.StartCoroutine(IEnumerator routine)
-        {
-           return StartCoroutine(routine);
-        }
+        Coroutine ICoroutineRunner.StartCoroutine(IEnumerator routine) => StartCoroutine(routine);
+        void ICoroutineRunner.StopCoroutine(UnityEngine.Coroutine coroutine) => StopCoroutine(coroutine);
     }
 }
