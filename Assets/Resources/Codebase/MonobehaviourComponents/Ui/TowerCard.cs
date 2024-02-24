@@ -19,30 +19,37 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     [SerializeField] private Sprite _imageAsTower;
     [SerializeField] private Sprite _imageAsCell;
     [SerializeField] private Image _image;
-    //
+    [SerializeField] private float _speed = 650f;
 
     //dependencies
 
     private IObjectPooler _pooler;
+
     //TowerPlacing
     private TowerBuildingService _towerInstantiationService;
     private Type _towerType;
+
     //WorldCellPlacing
     private WorldCellBuildingService _worldCellInstantiationService;
     private Type _worldCellType;
+
     //Input
     private IShiftEventProvider _shiftEventProvider;
     private AbstractInputService _inputService;
+
     //GUI
     private CardInfoUiService _cardInfoUIService;
     private TowerCardInfoConfig _towerCardInfoConfig;
     private WorldCellCardInfoConfig _worldCellCardInfoConfig;
+
     //internal
     private IExitableState _currentState;
     private GameplayStateMachine _gameplayStateMachine;
     private Coroutine _switchStateCoroutine;
+    
+
     private bool _battlefieldStated;
-    private bool _shifted;
+    private bool _readyToUse;
 
     public void Initialize(TowerBuildingService towerBuildingService,
                            WorldCellBuildingService worldCellBuildingService,
@@ -122,6 +129,9 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
     private void OnShitDownHandler()
     {
+        if (!_readyToUse)
+            return;
+
         switch (_gameplayStateMachine.ActiveState)
         {
             case BattleField battleField:
@@ -131,12 +141,10 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
                 SetTImageAsTower();
             break;
         }
-        _shifted = true;
     }
     private void OnShiftUpHandler()
     {
-        SetImageAsState();
-        _shifted = false;
+        SetImageAsState();    
     }
     #endregion
 
@@ -221,6 +229,28 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         UnsubscribeToGameStateChange();
         UnsubscribeToShiftEvent();
         _pooler.ReturnToPool(this);
+    }
+
+    public void StartTranslationCoroutine(Transform cardParent) => StartCoroutine(TranslationCoroutine(cardParent));
+
+    private IEnumerator TranslationCoroutine(Transform cardParent)
+    {
+        
+        _readyToUse = false;
+        RectTransform transform = GetComponent<RectTransform>();
+        RectTransform targetTransform = cardParent.GetComponent<RectTransform>();
+
+        transform.localPosition = Vector3.right * Screen.width;
+
+        Vector3 direction = (targetTransform.anchoredPosition - transform.anchoredPosition).normalized;
+        while(transform.anchoredPosition.x > Screen.width/2)
+        {
+            Debug.Log($"{Screen.width/2} > {transform.anchoredPosition.x}");
+            transform.localPosition += _speed * Time.deltaTime * direction;
+            yield return null;
+        }
+        transform.SetParent(cardParent);
+        _readyToUse = true;
     }
 
     ~TowerCard()

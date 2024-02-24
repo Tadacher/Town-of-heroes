@@ -1,13 +1,12 @@
 ﻿using BootStrap;
-using Codebase.MonobehaviourComponents;
 using Services;
 using Services.CardGeneration;
 using Services.GlobalMap;
 using Services.GridSystem;
 using Services.TowerBuilding;
 using Services.Ui;
+using Unity.VisualScripting;
 using UnityEngine;
-using WorldCellBuilding.CardImage;
 using WorldCells;
 
 namespace Infrastructure
@@ -18,9 +17,7 @@ namespace Infrastructure
         [SerializeField] private AudioSource _audioSource;
 
         [Header("Markers")]
-        [SerializeField] private EnemySpawnPosMarker _spawnPosMarker;
-        [SerializeField] private TowerCardSpawnMarker _towerCardSpawnMarker;
-        [SerializeField] private MainCameraMarker _mainCameraMarker;
+        [SerializeField] private MonoBehaviourMarker[] _markers;
 
         [Header("SceneUiContainers")]
         [SerializeField] private CardInfoUIContainer _cardInfoUIContainer;
@@ -28,37 +25,22 @@ namespace Infrastructure
         [SerializeField] private MapCanvasContainer _mapCanvasContainer;
 
         [Header("Scriptables")]
-        [SerializeField] private EnemyPrefabContainer _enemyPrefabContainer;
-        [SerializeField] private WorldCellCardsConfig _worldCellCardsConfig;
-        [SerializeField] private EnemyTypeToBiomeSettings _enemyTypeToBiomeSettings;
-        [SerializeField] private CardImageDatabase _cardImageDatabase;
-        [SerializeField] private TowerImageDatabase _towerImageDatabase;
-
+        [SerializeField] private ScriptableObject[] _scriptableObjects;
 
         public override void InstallBindings()
         {
-            //переместить в foreach для T : ScriptqableObject
             //ScriptableObjects
-            BindScriptableObject(_enemyPrefabContainer);
-            BindScriptableObject(_worldCellCardsConfig);
-            BindScriptableObject(_enemyTypeToBiomeSettings);
-            BindScriptableObject(_cardImageDatabase);
-            BindScriptableObject(_towerImageDatabase);
-            _cardImageDatabase.Initialize();
-            _towerImageDatabase.Initialize();
+            BindScriptables();
 
             //Unity components
             BindUnityComponent(_audioSource);
-            
-            //Monobeh 
-            BindMonobehaviour(_spawnPosMarker);
-            BindMonobehaviour(_cardInfoUIContainer);
-            //Markers scripts
-            BindMonobehaviour(_towerCardSpawnMarker);
-            BindMonobehaviour(_mainCameraMarker);
-            BindMonobehaviour(_mapCanvasContainer);
 
+            //Markers scripts
+            BindMarkers();
+            
             //Containers
+            BindMonobehaviour(_cardInfoUIContainer);
+            BindMonobehaviour(_mapCanvasContainer);
             BindMonobehaviour(_gameplayCanvasContainer);
             
             //Towers
@@ -98,6 +80,24 @@ namespace Infrastructure
             //Container.Inject(_sceneBootstrapper);
 
             Debug.Log("SCENE_INSTALLER_DONE");
+        }
+
+        private void BindScriptables()
+        {
+            foreach (var scriptable in _scriptableObjects)
+            {
+                Container.Bind(scriptable.GetType()).FromInstance(scriptable);
+                IInitializableConfig initializable = scriptable as IInitializableConfig;
+
+                if (initializable != null) 
+                    initializable.Initialize();
+            }
+        }
+
+        private void BindMarkers()
+        {
+            foreach (var marker in _markers)
+                Container.Bind(marker.GetType()).FromInstance(marker);
         }
     }
 }

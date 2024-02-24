@@ -2,7 +2,7 @@
 
 namespace Infrastructure
 {
-    public class MainCameraMarker : MonoBehaviour
+    public class MainCameraMarker : MonoBehaviourMarker
     {
     }
 }

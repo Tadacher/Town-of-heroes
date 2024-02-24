@@ -9,7 +9,7 @@ namespace Services.CardGeneration
     /// </summary>
     [CreateAssetMenu(fileName = "TowerCardImageDatabase", menuName = "ScriptableObjects/TowerCardImageDatabase", order = 1)]
 
-    public class TowerImageDatabase : ScriptableObject
+    public class TowerImageDatabase : ScriptableObject, IInitializableConfig
     {
         public Dictionary<string, Sprite> TowerCardSpritesDataBase;
 

@@ -64,6 +64,7 @@ MonoBehaviour:
   _imageAsTower: {fileID: 489252293, guid: abf982131301bdf43bfe0cc1d4b3e024, type: 3}
   _imageAsCell: {fileID: 21300000, guid: ef1e2cd4f966d2349990a2902f812f29, type: 3}
   _image: {fileID: 5209098481229664222}
+  _speed: 650
 --- !u!114 &6863590121437015299
 MonoBehaviour:
   m_ObjectHideFlags: 0

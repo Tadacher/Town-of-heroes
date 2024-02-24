@@ -2,7 +2,7 @@
 
 namespace Codebase.MonobehaviourComponents
 {
-    public class TowerCardSpawnMarker : MonoBehaviour
+    public class TowerCardSpawnMarker : MonoBehaviourMarker
     {
 
     }

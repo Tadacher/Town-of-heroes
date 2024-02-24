@@ -10,11 +10,16 @@ namespace Services.CardGeneration
     {
         private const string _prefabpath = "Prefabs/Cards/";
         private Transform _cardParent;
+        private Transform _commonCanvas;
 
         public CardInstantiationService(
             DiContainer diContainer,
-            TowerCardSpawnMarker towerCardSpawnMarker) : base(_prefabpath, diContainer)
-            => _cardParent = towerCardSpawnMarker.transform;
+            TowerCardSpawnMarker towerCardSpawnMarker,
+            CommonCanvasMarker commonCanvasMarker) : base(_prefabpath, diContainer)
+        {
+            _commonCanvas = commonCanvasMarker.transform;
+            _cardParent = towerCardSpawnMarker.transform;
+        }
 
         public override TowerCard ReturnObject(Type type)
         {
@@ -22,8 +27,8 @@ namespace Services.CardGeneration
                 AddNewFactory(type);
 
             var card = _factories[type].GetObject();
-            card.transform.SetParent(_cardParent);
-
+            card.StartTranslationCoroutine(_cardParent);
+            card.transform.SetParent(_commonCanvas);
             return card;
         }
 

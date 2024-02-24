@@ -9,7 +9,7 @@ namespace WorldCellBuilding.CardImage
     /// </summary>
     [CreateAssetMenu(fileName = "CardImageDatabase", menuName = "ScriptableObjects/CardImageDatabase", order = 1)]
     
-    public class CardImageDatabase : ScriptableObject
+    public class CardImageDatabase : ScriptableObject, IInitializableConfig
     {
         private const string _worldCellsNameSpace = "WorldCells.";
         [SerializeField] private Sprite[] WorldCellCardSprites;
