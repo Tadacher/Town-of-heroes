@@ -65,6 +65,7 @@ namespace Infrastructure
 
             //enemy waves
             BindService<WaveService>();
+            BindService<WaveDeathListenerFactory>();
             BindService<WaveGenerator>();
             BindService<EnemyInstantiationService>();
             BindService<EnemyTypeService>();

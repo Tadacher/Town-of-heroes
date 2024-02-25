@@ -13,9 +13,7 @@
             _cardDeckService = cardDeckService;
         }
 
-        public void GenerateInitialCards()
-        {
-            _cardDeckService.DraftRandom(3);
-        }
+        public void GenerateInitialCards() => _cardDeckService.DraftRandom(3);
+        public void DraftCard() => _cardDeckService.DraftRandom();
     }
 }

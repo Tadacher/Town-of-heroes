@@ -27,6 +27,7 @@ public class WaveService
     /// </summary>
     public void StartWaveCoroutine() 
         => _waveSender = _coroutineRunner.StartCoroutine(WaveSending());
+
     /// <summary>
     /// General coroutine that starts wavesending and waits for an interval betwee waves
     /// </summary>
@@ -39,6 +40,7 @@ public class WaveService
             yield return new WaitForSeconds(_interval);         
         }
     }
+
     /// <summary>
     /// Cancels all active spawn and wave routines
     /// </summary>

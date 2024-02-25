@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class CardDescriptionService
 {
-    private const string _soPath_Tower = "StatsAndSettings/TowerDescriptions/";
-    private const string _soPath_WorldCell = "StatsAndSettings/WorldCellDescriptions/";
+    private const string _soPath_Tower = "StatsAndSettings/TowerCardConfigs/TowerDescriptions/";
+    private const string _soPath_WorldCell = "StatsAndSettings/TowerCardConfigs/WorldCellDescriptions/";
     /// <summary>
     /// loads tower describition from Assets
     /// </summary>
