@@ -249,7 +249,6 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         Vector3 direction = (targetTransform.anchoredPosition - transform.anchoredPosition).normalized;
         while(transform.anchoredPosition.x > Screen.width/2)
         {
-            Debug.Log($"{Screen.width/2} > {transform.anchoredPosition.x}");
             transform.localPosition += _speed * Time.deltaTime * direction;
             yield return null;
         }

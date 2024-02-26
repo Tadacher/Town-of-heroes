@@ -1,37 +1,35 @@
-﻿using MovementModules;
+﻿using Core.Towers;
+using MovementModules;
 using Services;
+using System;
 using UnityEngine;
 
 namespace Enemies
 {
-    public class Zombie : AbstractEnemy
+    public class SatyrBrigand : AbstractEnemy
     {
-        [SerializeField] private float _reviveChance;
-        [SerializeField] private AudioClip _reviveClip;
+        [SerializeField] private Type illusionType;
+        private int _illusionCount = 1;
         public override void Initialize(AudioSource audioSource, DamageTextService damageTextService, IObjectPooler objectPooler)
         {
             base.Initialize(audioSource, damageTextService, objectPooler);
             _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);
             _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
         }
-        protected override void Die()
+        public override void RecieveDamage(int damage, AbstractTower abstractTower)
         {
-            if (Random.Range(0f, 1f) > _reviveChance)
+            if(_illusionCount >0)
             {
-                base.Die();
-                return;
+                _illusionCount--;
+                SpawnIllusion();
             }
 
-            PlayReviveSound();
-            StartReviveAnimCoroutine();
-            _hitpoints = _maxHitpoints / 2;
+            base.RecieveDamage(damage, abstractTower);
         }
 
-        private void StartReviveAnimCoroutine()
+        private void SpawnIllusion()
         {
-
+            
         }
-
-        private void PlayReviveSound() => _audioSource.PlayOneShot(_reviveClip);
     }
 }
