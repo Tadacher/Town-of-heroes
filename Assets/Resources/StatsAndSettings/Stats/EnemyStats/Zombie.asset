@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2d8d23eaeb3c54394afd34d931cc6f, type: 3}
-  m_Name: Skeleton
+  m_Name: Zombie
   m_EditorClassIdentifier: 
   EnemyTypesAndWeights:
   - enemyType: 3
-    Weight: 2
-  HitPoints: 4
+    Weight: 4
+  HitPoints: 12
   Damage: 1
   ExpPerKill: 1
-  GenerationCost: 13
-  Speed: 2
-  Name: Skeleton
-  HitPointsPerLevel: 1
-  DamagePerLevel: 0
+  GenerationCost: 10
+  Speed: 1
+  Name: Zombie
+  HitPointsPerLevel: 4
+  DamagePerLevel: 1
   ExpPerKillPerLevel: 1
-  SpeedPerLevel: 1
-  DeathSound: {fileID: 8300000, guid: 43d02289cbc945a479275cf0ee23ae5f, type: 3}
+  SpeedPerLevel: 0.25
+  DeathSound: {fileID: 8300000, guid: d786118f618d2994eb1514f3325802b4, type: 3}

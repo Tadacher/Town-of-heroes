@@ -3,65 +3,85 @@ using UnityEngine;
 using WorldCells;
 using System.Collections.Generic;
 using Services.CardGeneration;
-
-public class WaveGenerator
+using UnityEditorInternal.Profiling.Memory.Experimental.FileFormat;
+/// <summary>
+/// Generates waves with all linked stuff
+/// First - enemy type is picked
+/// Second - it generates list of enemies of type
+/// </summary>
+public partial class WaveGenerator
 {
     private EnemyInstantiationService _enemyInstantiationService;
     private WorldCellBalanceService _cellBalanceService;
     private EnemyTypeService _enemyTypeService;
     private readonly WaveDeathListenerFactory _waveDeathListenerFactory;
     private readonly CardGenerationService _cardGenerationService;
+    private readonly EnemyGenerationCostService _enemyGenerationCostService;
+    private float _currentWaveCost = 40;
+    private float _waveMaxCost = 40;
 
     public WaveGenerator(EnemyInstantiationService nemyInstantiationService,
                          WorldCellBalanceService worldCellBalanceService,
                          EnemyTypeService enemyTypeService,
                          WaveDeathListenerFactory waveDeathListenerFactory,
-                         CardGenerationService cardGenerationService)
+                         CardGenerationService cardGenerationService,
+                         EnemyGenerationCostService enemyGenerationCostService)
     {
         _enemyInstantiationService = nemyInstantiationService;
         _cellBalanceService = worldCellBalanceService;
         _enemyTypeService = enemyTypeService;
         _waveDeathListenerFactory = waveDeathListenerFactory;
         _cardGenerationService = cardGenerationService;
+        _enemyGenerationCostService = enemyGenerationCostService;
     }
     /// <summary>
     /// Generate new wave
     /// </summary>
     /// <returns></returns>
-    public Wave GenerateWave() => 
-        new(1f, GenerateSpawnCommands(4));
+    public Wave GenerateWave() => new(1f, GenerateSpawnCommands());
     /// <summary>
     /// Generate array of spawn commands for a wave
     /// </summary>
     /// <returns>array of spawn commands for a wave</returns>
-    private Action[] GenerateSpawnCommands(int waveSize)
+    private Action[] GenerateSpawnCommands()
     {
         CellBiomeTypes enemyBiomeType = GetEnemyBiomeByCountWeighted();
-        Action[] abstractEnemies = new Action[waveSize];
+        List<Action> abstractEnemies = new ();
         WaveDeathListener waveDeathListener = _waveDeathListenerFactory.GetObject();
-        waveDeathListener.Reinitialize(waveSize);
-        waveDeathListener.OnWaveDead += _cardGenerationService.DraftCard;
-        for (int i = 0; i < waveSize; i++)
+        while (_currentWaveCost > 0 )
         {
-            abstractEnemies[i] = () => SpawnEnemy(GetEnemyTypeByBiome(enemyBiomeType), waveDeathListener);
+            Type enemyConcreteType = _enemyTypeService.GetRandomConcreteEnemyTypeByEnemyRaceType(GetEnemyRaceTypeByBiome(enemyBiomeType));
+            _currentWaveCost -= _enemyGenerationCostService.GetCostByType(enemyConcreteType);
+            abstractEnemies.Add(() => SpawnEnemy(enemyConcreteType, waveDeathListener));
         }
-        return abstractEnemies;
+        waveDeathListener.Reinitialize(abstractEnemies.Count);
+        waveDeathListener.OnWaveDead += _cardGenerationService.DraftCard;
+        IncreaseAndRestoreWaveCost();
+        return abstractEnemies.ToArray();
     }
 
-    private EnemyType GetEnemyTypeByBiome(CellBiomeTypes enemyBiomeType) => 
+    private void IncreaseAndRestoreWaveCost()
+    {
+        _waveMaxCost *= 1.1f;
+        _currentWaveCost = +_waveMaxCost;
+    }
+
+    /// <summary>
+    /// gets rand, enemy from biome type from enemyTypeService
+    /// </summary>
+    /// <param name="enemyBiomeType">BiomeType</param>
+    /// <returns>enemy</returns>
+    private EnemyType GetEnemyRaceTypeByBiome(CellBiomeTypes enemyBiomeType) => 
         _enemyTypeService.GetRandomEnemyTypeByBiome(enemyBiomeType);
 
     /// <summary>
     /// spawns enemy at spawn point
     /// </summary>
-    /// <param name="enemyType">Type of an enemy</param>
+    /// <param name="enemyRaceType">Type of an enemy</param>
     /// <param name="waveDeathListener">look at class description</param>
     /// <returns></returns>
-    private AbstractEnemy SpawnEnemy(EnemyType enemyType, WaveDeathListener waveDeathListener)
-    {
-        AbstractEnemy type = _enemyTypeService.GetRandomEnemyByType(enemyType);
-        return _enemyInstantiationService.ReturnObject(type.GetType()).WithWaveDeathListener(waveDeathListener);
-    }
+    private AbstractEnemy SpawnEnemy(Type concreteEnemyType, WaveDeathListener waveDeathListener) =>
+        _enemyInstantiationService.ReturnObject(concreteEnemyType).WithWaveDeathListener(waveDeathListener);
 
     /// <summary>
     /// selects random biome from all biomes presented on world map by weighted random method
@@ -78,7 +98,7 @@ public class WaveGenerator
         if (maxValue == 0)
         {
             Debug.LogWarning($"No cell placed yet, sending green");
-            return CellBiomeTypes.Green;
+            return CellBiomeTypes.Forest;
         }
 
         float randomNumber = UnityEngine.Random.Range(0, maxValue);
@@ -94,6 +114,6 @@ public class WaveGenerator
 
         Debug.LogError($"No acceptable entries found for enemy biome type generation ");
 
-        return CellBiomeTypes.Green;
+        return CellBiomeTypes.Forest;
     }
 }

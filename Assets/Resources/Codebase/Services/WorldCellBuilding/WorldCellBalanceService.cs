@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace WorldCells
@@ -9,15 +11,26 @@ namespace WorldCells
         public WorldCellBalanceService() =>
             CellCountByTag = new Dictionary<CellBiomeTypes, int>(1);
 
-        public void Count(IEnumerable<CellBiomeTypes> tags)
+        public void Count(IEnumerable<CellBiomeTypes> cellTags)
         {
-            foreach (CellBiomeTypes tag in tags)
+            foreach (CellBiomeTypes tag in cellTags)
             {
                 if (CellCountByTag.ContainsKey(tag))
                     CellCountByTag[tag]++;
                 else
                     CellCountByTag.Add(tag, 1);
                 Debug.Log($"{tag} count {CellCountByTag[tag]}");
+            }
+        }
+        public void UnCount(IEnumerable<CellBiomeTypes> cellTags)
+        {
+            foreach (CellBiomeTypes tag in cellTags)
+            {
+                if (CellCountByTag.ContainsKey(tag))
+                    CellCountByTag[tag]--;
+                else
+                    CellCountByTag.Add(tag, 1);
+                Debug.Log($"{tag} UnCount {CellCountByTag[tag]}");
             }
         }
         public void Clear(IEnumerable<CellBiomeTypes> tags)
@@ -30,6 +43,6 @@ namespace WorldCells
                 else
                     CellCountByTag.Add(tag, 1);
             }
-        }
+        } 
     }
 }

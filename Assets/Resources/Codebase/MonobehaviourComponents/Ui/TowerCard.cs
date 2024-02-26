@@ -46,7 +46,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     private IExitableState _currentState;
     private GameplayStateMachine _gameplayStateMachine;
     private Coroutine _switchStateCoroutine;
-    
+    private GameObject _gameObject;
 
     private bool _battlefieldStated;
     private bool _readyToUse;
@@ -65,6 +65,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
                            Type towerType,
                            Type worldCellType)
     {
+        _gameObject = this.gameObject;
         _towerCardInfoConfig = towerCardInfoConfig;
         _worldCellCardInfoConfig = worldCellCardInfoConfig;
         _shiftEventProvider = shiftEventProvider;
@@ -153,6 +154,9 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     private void UnsubscribeToGameStateChange() => _gameplayStateMachine.OnStateChanged -= OnGameplayStateChanged;
     protected void OnGameplayStateChanged(IExitableState state)
     {
+        if (!_gameObject.activeSelf)
+            return;
+
         switch (state)
         {
             case Map map:

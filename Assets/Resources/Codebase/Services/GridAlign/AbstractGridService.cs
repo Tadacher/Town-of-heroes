@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 namespace Services.GridSystem
 {
     public abstract class AbstractGridService
@@ -39,13 +40,15 @@ namespace Services.GridSystem
             _cells[cellCoords.x, cellCoords.y] = null;
         }
 
+
         public Vector3 PosToGrid(Vector2 pos)
         {
            // Debug.Log((Vector2)PosToCellCoords(pos) + " " + _cellOffset);
-            return (Vector2)PosToCellCoords(pos) + _cellOffset + _zeroPoint;
+            return PosToCellCoords(pos) + _cellOffset + _zeroPoint;
         }
 
         protected abstract void InitCellContent();
+       
         protected Vector2Int PosToCellCoords(Vector3 position)
         {
             position -= (Vector3)_zeroPoint;
@@ -53,6 +56,6 @@ namespace Services.GridSystem
             int y = (int)(position.y / _cellsize);
             // Debug.Log($"{x}.{y}");
             return new Vector2Int(x, y);
-        }
+        }  
     }
 }

@@ -11,6 +11,7 @@ public class EnemyStats : ScriptableObject
     public int HitPoints;
     public int Damage;
     public int ExpPerKill;
+    public int GenerationCost;
 
     public float Speed;
 

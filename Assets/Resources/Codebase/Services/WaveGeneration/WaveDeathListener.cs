@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 /// <summary>
 /// listens death of every mob in wave, calls event when every mob in wave is dead
 /// Preferrable way to get object of this type is via WaveDeathListenerDatory
@@ -35,6 +36,7 @@ public class WaveDeathListener : IMobDeathListener, IPoolableObject
     void IMobDeathListener.RecieveDeath()
     {
         _mobCount--;
+        Debug.Log(_mobCount);
         if(_mobCount == 0)
         {
             OnWaveDead?.Invoke();

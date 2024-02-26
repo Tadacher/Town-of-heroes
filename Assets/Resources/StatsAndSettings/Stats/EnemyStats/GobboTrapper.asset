@@ -20,6 +20,7 @@ MonoBehaviour:
   HitPoints: 5
   Damage: 1
   ExpPerKill: 1
+  GenerationCost: 20
   Speed: 1
   Name: GobboTrapper
   HitPointsPerLevel: 1

@@ -71,8 +71,8 @@ namespace Services.CardGeneration
                     inputService: _container.Resolve<AbstractInputService>(),
                     towerCardInfoConfig: _cardDescriptionService.LoadCardDescription(_towerType),
                     worldCellCardInfoConfig: _cardDescriptionService.LoadWorldCellCardDescription(worldCellType),
-                    worldCellSprite: _cardImageDatabase.GetSprite(worldCellType.ToString()),
-                    towerSprite: _towerImageDatabase.GetSprite(_towerType.ToString()),
+                    worldCellSprite: _cardImageDatabase.GetSprite(worldCellType.Name),
+                    towerSprite: _towerImageDatabase.GetSprite(_towerType.Name),
                     pooler: this,
                     towerType: _towerType,
                     worldCellType: worldCellType);

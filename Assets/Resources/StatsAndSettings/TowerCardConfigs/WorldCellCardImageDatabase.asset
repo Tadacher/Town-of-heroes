@@ -15,3 +15,5 @@ MonoBehaviour:
   WorldCellCardSprites:
   - {fileID: 21300000, guid: ef1e2cd4f966d2349990a2902f812f29, type: 3}
   - {fileID: 21300000, guid: 70cb43f6effe03441b93102655d63558, type: 3}
+  - {fileID: 21300000, guid: 625ac0fa89a1e6d43996cfc334622735, type: 3}
+  - {fileID: 21300000, guid: c248935aa41575349a4efb443832c710, type: 3}

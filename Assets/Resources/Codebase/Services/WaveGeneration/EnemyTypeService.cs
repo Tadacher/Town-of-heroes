@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+
 public class EnemyTypeService
 {
     private readonly EnemyTypeToBiomeSettings _enemyTypeToBiomeSettings;
@@ -54,32 +57,46 @@ public class EnemyTypeService
         return EnemyType.Goblin;
     }
 
-    public AbstractEnemy GetRandomEnemyByType(EnemyType enemyType)
+    /// <summary>
+    /// Gets random (weighted) enemy type from a list of enemies of given EnemyType
+    /// </summary>
+    /// <param name="enemyRaceType">given EnemyType</param>
+    /// <returns>Link to prefab</returns>
+    public Type GetRandomConcreteEnemyTypeByEnemyRaceType(EnemyType enemyRaceType)
     {
-        if (EnemiesByType[enemyType].Count == 0)
-            return (EnemiesByType[enemyType])[0].Item1;
+        if(!EnemiesByType.ContainsKey(enemyRaceType))
+        {
+            UnityEngine.Debug.LogError($"Found no enemies typed as {enemyRaceType}");
+            return (EnemiesByType[EnemyType.Goblin])[0].Item1.GetType();
+        }
+        if (EnemiesByType[enemyRaceType].Count == 0)
+            return (EnemiesByType[enemyRaceType])[0].Item1.GetType();
 
         float maxValue = 0;
-        foreach ((AbstractEnemy, float) pair in EnemiesByType[enemyType])
+        foreach ((AbstractEnemy, float) pair in EnemiesByType[enemyRaceType])
             maxValue += pair.Item2;
 
         float pointer = UnityEngine.Random.Range(0, maxValue);        
 
-        foreach ((AbstractEnemy, float) pair in EnemiesByType[enemyType])
+        foreach ((AbstractEnemy, float) pair in EnemiesByType[enemyRaceType])
         {
             pointer -= pair.Item2;
             if (pointer <= 0)
-                return pair.Item1;
+                return pair.Item1.GetType();
         }
 
-        UnityEngine.Debug.LogError($"no acceptable intries found while generating enemy type from type {enemyType}");
-        return _enemyPrefabContainer.Goblin;
+        UnityEngine.Debug.LogError($"no acceptable intries found while generating enemy type from type {enemyRaceType}");
+        return _enemyPrefabContainer.Enemies[0].GetType();
     }
 }
 public enum EnemyType
 {
-    Goblin,
-    Orc,
+    //Common
     Greenskin,
     Undead,
+
+    //Concrete
+    Goblin,
+    Orc,
+    Satyr,
 }

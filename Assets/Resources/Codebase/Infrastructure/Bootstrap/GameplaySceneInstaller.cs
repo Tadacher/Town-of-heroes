@@ -8,6 +8,7 @@ using Services.Ui;
 using Unity.VisualScripting;
 using UnityEngine;
 using WorldCells;
+using static WaveGenerator;
 
 namespace Infrastructure
 {
@@ -69,12 +70,14 @@ namespace Infrastructure
             BindService<WaveGenerator>();
             BindService<EnemyInstantiationService>();
             BindService<EnemyTypeService>();
+            BindService<EnemyGenerationCostService>();
 
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();
             BindService<GameTimeService>();
             BindService<UiService>().NonLazy();
             BindService<UiButtonBinder>().NonLazy();
+
             //Non monobeh abstract
             BindAbstractClass<AbstractSoundPlayerService, SimpleSoundPlayerService>();
 

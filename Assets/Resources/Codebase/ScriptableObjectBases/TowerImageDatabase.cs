@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
 
 namespace Services.CardGeneration
@@ -14,11 +13,8 @@ namespace Services.CardGeneration
         public Dictionary<string, Sprite> TowerCardSpritesDataBase;
 
         [SerializeField] private Sprite[] _towerCardSprites;
-        private const string _towerNameSpace = "Core.Towers.";
         public void Initialize()
         {
-            StringBuilder stringBuilder = new StringBuilder();
-
             if (TowerCardSpritesDataBase != null)
                 return;
 
@@ -26,11 +22,8 @@ namespace Services.CardGeneration
 
             for (int index = 0; index < _towerCardSprites.Length; index++)
             {
-                stringBuilder.Clear();
                 Sprite sprite = _towerCardSprites[index];
-                stringBuilder.Append(_towerNameSpace); //Namespace is needed due to .GetType() returns full type including namespace
-                stringBuilder.Append(sprite.name);
-                TowerCardSpritesDataBase.Add(_towerNameSpace + sprite.name, sprite);
+                TowerCardSpritesDataBase.Add(sprite.name, sprite);
             }
         }
         /// <summary>

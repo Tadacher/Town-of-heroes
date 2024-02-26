@@ -1,11 +1,11 @@
 ﻿using Services.Factories;
-using Services.GlobalMap;
-using Services.GridSystem;
-using Services.Input;
 using System;
 using WorldCells;
 using Zenject;
 
+/// <summary>
+/// General service for instantiating all types of world cells
+/// </summary>
 public class WorldCellInstantiationService : AbstractInstantiationService<AbstractWorldCell>
 {
     private const string _prefabPath = "Prefabs/WorldCells/";
