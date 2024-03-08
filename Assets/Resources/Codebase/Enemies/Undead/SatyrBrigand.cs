@@ -10,21 +10,26 @@ namespace Enemies
     {
         [SerializeField] private Type illusionType;
         private int _illusionCount = 1;
-        public override void Initialize(AudioSource audioSource, DamageTextService damageTextService, IObjectPooler objectPooler)
+        public override void Initialize(AudioSource audioSource, DamageTextService damageTextService, IEnemyReachedReciever enemyReachedReciever, IObjectPooler objectPooler)
         {
-            base.Initialize(audioSource, damageTextService, objectPooler);
+            base.Initialize(audioSource, damageTextService, enemyReachedReciever, objectPooler);
             _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);
             _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
+
+            _enemyMovementModule.OnEnemyReached += () => _coreGameplayService.RecieveEnemyReached(_damage);
+
         }
         public override void RecieveDamage(int damage, AbstractTower abstractTower)
         {
-            if(_illusionCount >0)
+            if (_illusionCount > 0)
             {
                 _illusionCount--;
                 SpawnIllusion();
             }
-
-            base.RecieveDamage(damage, abstractTower);
+            else
+            {
+                base.RecieveDamage(damage, abstractTower);
+            }
         }
 
         private void SpawnIllusion()

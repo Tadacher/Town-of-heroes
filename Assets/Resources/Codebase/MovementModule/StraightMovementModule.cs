@@ -5,8 +5,6 @@ namespace MovementModules
 {
     public class StraightMovementModule : AbstractMovementModule
     {
-        
-
         public StraightMovementModule(Transform unitTransform, Vector3 target, MonoBehaviour coroutineProcessor, float speed)
         {
             _unitTransform = unitTransform;
@@ -18,11 +16,12 @@ namespace MovementModules
 
         protected override IEnumerator MovementCoroutine()
         {
-            while ((_unitTransform.position - _targetV3).magnitude >= 0.1)
+            while ((_unitTransform.position - _targetV3).magnitude >= 1)
             {
                 _unitTransform.position += (_targetV3 - _unitTransform.position).normalized * _speed * Time.deltaTime;
                 yield return null;
             }
+            EnemyReached();
         }
 
     }

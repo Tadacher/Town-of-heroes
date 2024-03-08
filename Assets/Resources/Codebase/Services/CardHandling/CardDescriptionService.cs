@@ -9,13 +9,9 @@ public class CardDescriptionService
     /// loads tower describition from Assets
     /// </summary>
     /// <param name="towerType">use Type.Name </param>
-    public TowerCardInfoConfig LoadCardDescription(Type towerType)
-    {
-        return Resources.Load<TowerCardInfoConfig>(_soPath_Tower + towerType.Name);
-    }
+    public TowerCardInfoConfig LoadCardDescription(Type towerType) => 
+        Resources.Load<TowerCardInfoConfig>(_soPath_Tower + towerType.Name);
 
-    internal WorldCellCardInfoConfig LoadWorldCellCardDescription(Type worldCellType)
-    {
-        return Resources.Load<WorldCellCardInfoConfig>(_soPath_WorldCell + worldCellType.Name);
-    }
+    internal WorldCellCardInfoConfig LoadWorldCellCardDescription(Type worldCellType) => 
+        Resources.Load<WorldCellCardInfoConfig>(_soPath_WorldCell + worldCellType.Name);
 }

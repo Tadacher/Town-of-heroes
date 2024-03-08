@@ -33,7 +33,8 @@ public class EnemyFactory : AbstractPoolerFactory<AbstractEnemy>
         enemy.Initialize(
             audioSource: _container.Resolve<AudioSource>(),
             damageTextService: _container.Resolve<DamageTextService>(),
-            this);
+            coreGameplayService: _container.Resolve<IEnemyReachedReciever>(),
+            objectPooler: this);
         return enemy;
     }
 }

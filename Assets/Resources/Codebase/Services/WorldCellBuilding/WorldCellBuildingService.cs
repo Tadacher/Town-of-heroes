@@ -28,6 +28,7 @@ public class WorldCellBuildingService
 
     private void TryReleaseActiveCell()
     {
+        _inputService.OnPointerUp -= TryReleaseActiveCell;
         if (CanBePlacedAtPointer())
         {
             PlaceActiveCell();
@@ -39,7 +40,6 @@ public class WorldCellBuildingService
             _activeCell.StopFollowingPointer();
             _activeCell.ReturnToPool();
         }
-        _inputService.OnPointerUp -= TryReleaseActiveCell;
     }
 
     public void InstantiateWorldCellFromCard(TowerCard towerCard, Type worldCellType)

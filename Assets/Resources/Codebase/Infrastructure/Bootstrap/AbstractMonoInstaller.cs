@@ -78,4 +78,4 @@ namespace Infrastructure
             return Container.BindInterfacesAndSelfTo<TAbstractService>().FromInstance(service);
         }
     }
-}
+    }

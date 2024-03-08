@@ -3,5 +3,6 @@
     public interface IExitableState
     {
         public void Exit();
+        IExitableState Init(AbstractStateMachine gameStateMachine);
     }
 }

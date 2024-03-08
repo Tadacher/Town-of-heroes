@@ -4,7 +4,7 @@
     {
         private CameraPositionService _cameraPositionService;
         private readonly UiService _uiService;
-
+        private AbstractStateMachine stateMachine;
         public Map (CameraPositionService cameraPositionService, UiService uiService)
         {
             _cameraPositionService = cameraPositionService;
@@ -20,6 +20,12 @@
         public void Exit()
         {
             return;
+        }
+
+        public IExitableState Init(AbstractStateMachine gameStateMachine)
+        {
+            stateMachine = gameStateMachine;
+            return this;
         }
     }
 }

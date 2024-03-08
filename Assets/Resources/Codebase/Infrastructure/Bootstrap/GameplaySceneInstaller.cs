@@ -14,7 +14,6 @@ namespace Infrastructure
 {
     public class GameplaySceneInstaller : AbstractMonoInstaller
     {
-        [SerializeField] private SceneBootstrapper _sceneBootstrapper;
         [SerializeField] private AudioSource _audioSource;
 
         [Header("Markers")]
@@ -71,6 +70,8 @@ namespace Infrastructure
             BindService<EnemyInstantiationService>();
             BindService<EnemyTypeService>();
             BindService<EnemyGenerationCostService>();
+
+            BindInterfacesAndSelfto<CoreGameplayService>();
 
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();

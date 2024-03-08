@@ -8,11 +8,13 @@ namespace Enemies
     {
         [SerializeField] private float _reviveChance;
         [SerializeField] private AudioClip _reviveClip;
-        public override void Initialize(AudioSource audioSource, DamageTextService damageTextService, IObjectPooler objectPooler)
+        public override void Initialize(AudioSource audioSource, DamageTextService damageTextService, IEnemyReachedReciever enemyReachedReciever, IObjectPooler objectPooler)
         {
-            base.Initialize(audioSource, damageTextService, objectPooler);
+            base.Initialize(audioSource, damageTextService, enemyReachedReciever, objectPooler);
             _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);
             _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
+
+            _enemyMovementModule.OnEnemyReached += () => _coreGameplayService.RecieveEnemyReached(_damage);
         }
         protected override void Die()
         {

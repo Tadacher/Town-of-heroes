@@ -29,15 +29,21 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     protected AbstractMovementModule _enemyMovementModule;
     protected AbstractDamageRecievingModule _abstractDamageRecievingModule;
 
+    //other
+    protected IEnemyReachedReciever _coreGameplayService;
     protected IMobDeathListener _deathListener;
     protected DamageTextService _damageTextService;
 
-    public virtual void Initialize(AudioSource audioSource, DamageTextService damageTextService, IObjectPooler objectPooler)
+    public virtual void Initialize(AudioSource audioSource,
+                                   DamageTextService damageTextService,
+                                   IEnemyReachedReciever coreGameplayService,
+                                   IObjectPooler objectPooler)
     {
         _pooler = objectPooler;
         _audioSource = audioSource;
         _damageTextService = damageTextService;
-        
+        _coreGameplayService = coreGameplayService;
+
         InitializeStats();      
     }
 
@@ -80,7 +86,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         ReturnToPool();
     }
 
-    private void ReturnToPool() => gameObject.SetActive(false);
+    protected void ReturnToPool() => gameObject.SetActive(false);
 
     private void InitializeStats()
     {

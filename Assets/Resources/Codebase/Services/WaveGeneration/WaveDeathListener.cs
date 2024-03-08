@@ -36,7 +36,6 @@ public class WaveDeathListener : IMobDeathListener, IPoolableObject
     void IMobDeathListener.RecieveDeath()
     {
         _mobCount--;
-        Debug.Log(_mobCount);
         if(_mobCount == 0)
         {
             OnWaveDead?.Invoke();
