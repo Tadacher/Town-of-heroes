@@ -2,6 +2,7 @@
 using Services.Factories;
 using Services.Input;
 using Services.TowerBuilding;
+using Services.Ui;
 using System;
 using UnityEngine;
 using WorldCellBuilding.CardImage;
@@ -13,21 +14,27 @@ namespace Services.CardGeneration
     {
         [SerializeField] private CellStats _cellStats;
         private readonly CardImageDatabase _cardImageDatabase;
-        private readonly TowerCard _cardPrefab;
+        private readonly TowerImageDatabase _towerImageDatabase;
         private readonly WorldCellCardGenerator _worldCellCardGenerator;
+        private readonly CardDescriptionService _cardDescriptionService;
+        private readonly TowerCard _cardPrefab;
         private Type _towerType;
 
         public TowerCardFactory(Type type,
                                 TowerCard cardPrefab,
                                 CardImageDatabase cardImageDatabase,
                                 WorldCellCardGenerator worldCellCardGenerator,
-                                DiContainer diContainer) : base(diContainer)
+                                CardDescriptionService towerCardDescriptionService,
+                                DiContainer diContainer,
+                                TowerImageDatabase towerImageDatabase) : base(diContainer)
         {
+            _cardDescriptionService = towerCardDescriptionService;
             _cardImageDatabase = cardImageDatabase;
             _cardImageDatabase.Initialize();
             _worldCellCardGenerator = worldCellCardGenerator;
             _towerType = type;
             _cardPrefab = cardPrefab;
+            _towerImageDatabase = towerImageDatabase;
         }
 
         public override TowerCard GetObject()
@@ -45,10 +52,8 @@ namespace Services.CardGeneration
         protected override void ActionOnGet(TowerCard poolable) =>
             poolable.gameObject.SetActive(true);
 
-        protected override void ActionOnRelease(TowerCard returnable)
-        {
+        protected override void ActionOnRelease(TowerCard returnable) => 
             returnable.gameObject.SetActive(false);
-        }
 
         protected override TowerCard CreateNew()
         {
@@ -62,7 +67,12 @@ namespace Services.CardGeneration
                     worldCellBuildingService: _container.Resolve<WorldCellBuildingService>(),
                     gameplayStateMachine: _container.Resolve<GameplayStateMachine>(),
                     shiftEventProvider: _container.Resolve<AbstractInputService>(),
-                    worldCellSprite: _cardImageDatabase.GetSprite(worldCellType.ToString()),
+                    cardInfoUiService: _container.Resolve<CardInfoUiService>(),
+                    inputService: _container.Resolve<AbstractInputService>(),
+                    towerCardInfoConfig: _cardDescriptionService.LoadCardDescription(_towerType),
+                    worldCellCardInfoConfig: _cardDescriptionService.LoadWorldCellCardDescription(worldCellType),
+                    worldCellSprite: _cardImageDatabase.GetSprite(worldCellType.Name),
+                    towerSprite: _towerImageDatabase.GetSprite(_towerType.Name),
                     pooler: this,
                     towerType: _towerType,
                     worldCellType: worldCellType);

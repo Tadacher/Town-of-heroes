@@ -22,7 +22,7 @@ namespace Services.TowerBuilding
         }
         public void InstantiateTowerFromCard(TowerCard towerCard, Type type)
         {
-           _activeTower = GetTowerGhost(type);
+            _activeTower = GetTowerGhost(type);
            
             _activeCard = towerCard;
             _activeTower.StartFollowPointer();

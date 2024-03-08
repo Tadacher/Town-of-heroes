@@ -1,7 +1,11 @@
 using Core.Towers;
 using MovementModules;
 using Services;
+using System;
 using UnityEngine;
+/// <summary>
+/// base class for all enemies
+/// </summary>
 public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementModuleOwner, IPoolableObject
 {
     public string EnemyName;
@@ -23,20 +27,33 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     protected AudioSource _audioSource;
     //Modules
     protected AbstractMovementModule _enemyMovementModule;
-    protected AbstractHealthModule _abstractHealthModule;
+    protected AbstractDamageRecievingModule _abstractDamageRecievingModule;
 
+    //other
+    protected IEnemyReachedReciever _coreGameplayService;
+    protected IMobDeathListener _deathListener;
     protected DamageTextService _damageTextService;
 
-    public virtual void Initialize(AudioSource audioSource, DamageTextService damageTextService, IObjectPooler objectPooler)
+    public virtual void Initialize(AudioSource audioSource,
+                                   DamageTextService damageTextService,
+                                   IEnemyReachedReciever coreGameplayService,
+                                   IObjectPooler objectPooler)
     {
         _pooler = objectPooler;
         _audioSource = audioSource;
         _damageTextService = damageTextService;
+        _coreGameplayService = coreGameplayService;
+
         InitializeStats();      
     }
 
 
-    public abstract void Heal(int points);
+    public virtual void Heal(int points)
+    {
+        _hitpoints += points;
+        if (_hitpoints > _maxHitpoints)
+            _hitpoints = _maxHitpoints;
+    }
 
     public virtual void RecieveDamage(int damage, AbstractTower abstractTower)
     {
@@ -44,9 +61,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         if (_hitpoints < 0)
             return;
 
-        _hitpoints -= _abstractHealthModule.RecieveDamage(damage);
-
-        _damageTextService.ReturnDamageText(damage, transform.position);
+        _hitpoints -= _abstractDamageRecievingModule.CalculateRecievedDamage(damage);
         
         if (_hitpoints <= 0)
         {
@@ -55,11 +70,6 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         }
     }
     public virtual AbstractMovementModule MovementModule() => _enemyMovementModule;
-
-
-   
-
-   
 
     public virtual void ReInitialize(Vector3 position)
     {
@@ -72,10 +82,11 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     {
         _enemyMovementModule.StopMovementCoroutine(this);
         PlayDeathSound();
+        _deathListener.RecieveDeath();
         ReturnToPool();
     }
 
-    private void ReturnToPool() => gameObject.SetActive(false);
+    protected void ReturnToPool() => gameObject.SetActive(false);
 
     private void InitializeStats()
     {
@@ -90,6 +101,12 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
 
     void IPoolableObject.ReturnToPool() => 
         _pooler.ReturnToPool(this);
+
+    public AbstractEnemy WithWaveDeathListener(IMobDeathListener waveDeathListener)
+    {
+        _deathListener = waveDeathListener;
+        return this;
+    }
 }
 
 

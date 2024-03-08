@@ -114,7 +114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1330048956, guid: 35dc55b92672343488ccf95d4d7969ca, type: 3}
+  m_Sprite: {fileID: 1399285655, guid: 35dc55b92672343488ccf95d4d7969ca, type: 3}
   m_Color: {r: 0.7465178, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: Gobbo Trapper
   _stats: {fileID: 11400000, guid: dcd3daa2a1af8f241a8b9d3c0501ad38, type: 2}
-  _dodgeValue: 15
+  _dodgeValue: 0.15
 --- !u!82 &2248180668137508119
 AudioSource:
   m_ObjectHideFlags: 0

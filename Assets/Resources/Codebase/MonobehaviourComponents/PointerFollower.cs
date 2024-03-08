@@ -15,5 +15,5 @@ public class PointerFollower : MonoBehaviour
         this.enabled = false;
     }
     private void Update() => 
-        _transform.position = _gridAlignService.PosToGrid(_inputService.GetPointerPositionWorld());
+        _transform.position = _gridAlignService.AlignToGrid(_inputService.GetPointerPositionWorld());
 }

@@ -4,6 +4,7 @@
     {
         private CameraPositionService _cameraPositionService;
         private readonly UiService _uiService;
+        private AbstractStateMachine _gameStateMachine;
 
         public BattleField(CameraPositionService cameraPositionService, UiService uiService)
         {
@@ -20,6 +21,12 @@
         public void Exit()
         {
             return;
+        }
+
+        public IExitableState Init(AbstractStateMachine gameStateMachine)
+        {
+           _gameStateMachine = gameStateMachine;
+            return this;
         }
     }
 }

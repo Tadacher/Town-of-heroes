@@ -21,10 +21,12 @@ namespace Infrastructure
 
 
             BindService<SceneLoaderService>();
-            BindService<GameStateMachine>()
-                .NonLazy();
-            
-            Container.Bind<DiContainer>().FromInstance(Container);
+            BindService<GameStateMachine>().NonLazy();
+            BindService<GameStateFactory>();
+            BindService<MetaCitySaveLoader>();
+
+
+            //Container.Bind<DiContainer>().FromInstance(Container);
 
             Debug.Log("BOOTSTRAP INSTALLER DONE");
         }

@@ -9,7 +9,7 @@ namespace Core.Towers
         private int _shrapnelCount;
         [SerializeField]
         private int _shrapnelCountPerLevel;
-        private void Awake()
+        protected override void Awake()
         {
             InitializeAttackModule<ShrapnelTowerAttakModule>();
             InitializeProjectileFactory(_towerStats.ProjectilePrefab);

@@ -5,14 +5,19 @@ namespace Infrastructure
 {
     public class BootstrapState : IState
     {
-        private const string _initialSceneName = "Initial";
+        private const string _initialSceneName = "InitialScene";
         private const string _coreGameplayScene = "CoreGameplayScene";
-        private GameStateMachine _gameStateMachine;
+        private const string _metaGameplayState = "MetaGameplayScene";
+        private AbstractStateMachine _gameStateMachine;
         private SceneLoaderService _sceneLoaderService;
-        public BootstrapState(GameStateMachine gameStateMachine, SceneLoaderService sceneLoaderService)
+        public BootstrapState(SceneLoaderService sceneLoaderService)
+        {
+            _sceneLoaderService = sceneLoaderService;
+        }
+        public IExitableState Init(AbstractStateMachine gameStateMachine)
         {
             _gameStateMachine = gameStateMachine;
-            _sceneLoaderService = sceneLoaderService;
+            return this;
         }
 
         public void Enter()
@@ -21,7 +26,7 @@ namespace Infrastructure
         }
 
         private void EnterLoadLevel() => 
-            _gameStateMachine.EnterState<LoadLevelState, string>(_coreGameplayScene);
+            _gameStateMachine.EnterState<LoadInitialLevelState, string>(_metaGameplayState);
 
         private void RegisterServices()
         {

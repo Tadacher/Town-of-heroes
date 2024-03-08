@@ -1,10 +1,12 @@
-﻿using Codebase.Services.CardGeneration;
-using Core.Towers;
+﻿using Core.Towers;
+using Services.CardGeneration;
 using Services.GridSystem;
+using System;
 using UnityEngine;
+using WorldCells;
 using Zenject;
 
-namespace Codebase.Debugtools
+namespace Debugtools
 {
     public class DebugInput : MonoBehaviour
     {
@@ -23,11 +25,17 @@ namespace Codebase.Debugtools
             {
                 _cardInstantiationService.ReturnObject(typeof(ArcherTower));
             }
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                _cardInstantiationService.ReturnObject(typeof(TowerOfDeath));
+            }
 
             if (Input.GetKeyDown(KeyCode.S))
             {
                 Debug.Log(_battleGridService.PosToGrid(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
             }
         }
+
+       
     }
 }

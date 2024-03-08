@@ -15,10 +15,14 @@ namespace Infrastructure
         private void Update()
         {
             if (Input.GetMouseButtonDown(0))
-                _inputListener.PointerDown();
+                _inputListener.LeftMouseButtonDown();
 
             else if (Input.GetMouseButtonUp(0))
-                _inputListener.PointerUp();
+                _inputListener.LeftMouseButtonUp();
+
+            if (Input.GetMouseButtonUp(1))
+                _inputListener.RightButtonUp();
+
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
                 _inputListener.ShiftDown();

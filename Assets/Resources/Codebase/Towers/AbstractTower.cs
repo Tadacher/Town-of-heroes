@@ -39,6 +39,12 @@ namespace Core.Towers
         //dependencies
         protected IObjectPooler _objectPooler;
 
+        protected virtual void Awake()
+        {
+            InitializeAttackModule<SimpleTowerAttackModule>();
+            InitializeProjectileFactory(_towerStats.ProjectilePrefab);
+            RefreshAttackDelay();
+        }
         public AbstractTower AsGhost()
         {  
             MakeGhost();
@@ -62,8 +68,7 @@ namespace Core.Towers
 
         protected virtual void Update()
         {
-           // if (_isGhost)
-              //  return;
+           
         }
 
         public virtual AbstractEnemy FindClosestTarget()
@@ -104,7 +109,8 @@ namespace Core.Towers
         public void InsertSelfToGrid() => _gridAlignService.Insert(this, transform.position);
 
         protected abstract void Attack();
-        protected abstract void InitializeProjectileFactory(ProjectileBehaviour projectileBehaviour);
+        protected virtual void InitializeProjectileFactory(ProjectileBehaviour projectilePrefab) =>
+             _projectileFactory = new SimpleProjectileFactory(projectilePrefab);
 
         protected virtual void TryLevelup()
         {

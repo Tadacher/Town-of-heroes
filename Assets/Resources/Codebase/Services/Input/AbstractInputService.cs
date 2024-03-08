@@ -5,8 +5,10 @@ namespace Services.Input
 {
     public abstract class AbstractInputService : IPointerEventListener, IPointerProvider, IShiftEventProvider
     {
+
         protected Camera Camera => Camera.main;
 
+        public event Action OnRightButtonUp;
         public event Action OnPointerUp;
         public event Action OnPointerDown;
 
@@ -19,16 +21,25 @@ namespace Services.Input
         public abstract bool IsPointerDown();
         public abstract bool IsPointerUp();
 
-        public void PointerDown() => 
+        public void LeftMouseButtonDown() => 
             OnPointerDown?.Invoke();
 
-        public void PointerUp() => 
+        public void LeftMouseButtonUp() => 
             OnPointerUp?.Invoke();
 
-        internal void ShiftDown() => 
+        public bool LeftMouseDown() => 
+            UnityEngine.Input.GetMouseButtonDown(0);
+       
+        public void ShiftDown() => 
             OnShiftDown?.Invoke();
 
-        internal void ShiftUp() => 
+        public void ShiftUp() => 
             OnShiftUp?.Invoke();
+
+        public void RightButtonUp() => 
+            OnRightButtonUp?.Invoke();
+
+        public bool RightMouseDown() => 
+            UnityEngine.Input.GetMouseButtonDown(1);
     }
 }

@@ -2,9 +2,13 @@
 {
     public enum CellBiomeTypes
     {
-        Green,
+        Forest,
         Desert,
         Arctic,
-        Ocean
+        Ocean,
+        Cursed,
+
+        //cocrete mob type spawners
+        Satyr_Habitat
     }
 }

@@ -32,7 +32,7 @@ public class EnemyTypeToBiomeSettings : ScriptableObject
     }
 }
 /// <summary>
-/// describes which biome can be summoner of which enemyTypes and
+/// describes which biome can be cause which enemyTypes to spawn
 /// </summary>
 [Serializable]
 public class BiomeToEnemyTypesPair
@@ -41,11 +41,11 @@ public class BiomeToEnemyTypesPair
     public EnemytypeToWeightPair[] ProbabilityWeightPairs;
 }
 /// <summary>
-/// describes weight in biome overall  
+/// describes weight of EnemyType in certain biome 
 /// </summary>
 [Serializable]
 public class EnemytypeToWeightPair
 {
-    public EnemyTypes EnemyType;
+    public EnemyType EnemyType;
     public float Weight;
 }

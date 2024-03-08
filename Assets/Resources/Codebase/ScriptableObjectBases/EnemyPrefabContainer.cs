@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyPrefabContainer", menuName = "ScriptableObjects/EnemyPrefabContainer", order = 1)]
-public class EnemyPrefabContainer : ScriptableObject
+public class EnemyPrefabContainer : ScriptableObject, IInitializableConfig
 {
-    public AbstractEnemy[] Enemies;
+    private AbstractEnemy[] _enemies;
+    public AbstractEnemy[] Enemies => _enemies;
 
-    [Header("Goblins")]
-    public AbstractEnemy GoblinTrapper;
-    public AbstractEnemy Goblin;
+    public void Initialize()
+    {
+        _enemies = Resources.LoadAll<AbstractEnemy>("Prefabs/Enemies");
+    }
 }
