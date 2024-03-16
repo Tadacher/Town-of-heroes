@@ -5,6 +5,11 @@ namespace WorldCells
 {
     public class Forest : AbstractWorldCell
     {
+        protected override void AddResources()
+        {
+            _resourceService.GatherWood(1);
+        }
+
         protected override void CheckForGeneralInteraction()
         {
             

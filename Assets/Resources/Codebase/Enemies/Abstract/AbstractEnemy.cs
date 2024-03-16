@@ -107,6 +107,12 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         _deathListener = waveDeathListener;
         return this;
     }
+
+    protected void OnreahedTarget()
+    {
+        _coreGameplayService.RecieveEnemyReached(_damage);
+        ReturnToPool();
+    }
 }
 
 

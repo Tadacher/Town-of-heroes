@@ -25,6 +25,12 @@ namespace Services.GridSystem
         public bool CellAvailable(Vector3 position)
         {
             Vector2Int cellCoords = PosToCellCoords(position);
+
+            if (cellCoords.x < 0 || cellCoords.x > _gridSizeX)
+                return false;
+            if(cellCoords.y < 0 || cellCoords.y > _gridSizeY)
+                return false;
+
             return Equals(_cells[cellCoords.x, cellCoords.y], null);
         }
         public void Insert(IGridCellObject insertable, Vector3 position)

@@ -5,6 +5,11 @@ namespace WorldCells
 {
     public class GrassMeadows : AbstractWorldCell
     {
+        protected override void AddResources()
+        {
+            _resourceService.GatherFood(1);
+        }
+
         protected override void CheckForGeneralInteraction()
         {
 

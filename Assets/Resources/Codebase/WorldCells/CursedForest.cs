@@ -5,6 +5,11 @@ namespace WorldCells
 {
     public class CursedForest : AbstractWorldCell
     {
+        protected override void AddResources()
+        {
+            
+        }
+
         protected override void CheckForGeneralInteraction()
         {
             

@@ -1,4 +1,5 @@
-﻿using Services.Input;
+﻿using Progress;
+using Services.Input;
 using UnityEngine;
 using Zenject;
 
@@ -23,7 +24,13 @@ namespace Infrastructure
             BindService<SceneLoaderService>();
             BindService<GameStateMachine>().NonLazy();
             BindService<GameStateFactory>();
+
+            //saveload
             BindService<MetaCitySaveLoader>();
+            BindService<ResourcesSaveLoader>();
+            //
+
+            BindService<ResourceService>().NonLazy();
 
 
             //Container.Bind<DiContainer>().FromInstance(Container);

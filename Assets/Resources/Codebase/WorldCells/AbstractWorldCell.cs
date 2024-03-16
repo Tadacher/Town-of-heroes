@@ -1,4 +1,5 @@
-﻿using Services.CardGeneration;
+﻿using Progress;
+using Services.CardGeneration;
 using Services.GlobalMap;
 using Services.GridSystem;
 using Services.Input;
@@ -20,12 +21,15 @@ namespace WorldCells
         protected IObjectPooler _objectPooler;
         protected WorldCellGridService _worldCellGridService;
         protected WorldCellBalanceService _worldCellBalanceService;
+        protected ResourceService _resourceService;
 
         public void Initialize(IObjectPooler objectPooler,
                                WorldCellGridService gridAlignService,
                                AbstractInputService inputService,
-                               WorldCellBalanceService worldCellBalanceService)
+                               WorldCellBalanceService worldCellBalanceService,
+                               ResourceService resourceService)
         {
+            _resourceService = resourceService;
             _objectPooler = objectPooler;
             _worldCellGridService = gridAlignService;
             _worldCellBalanceService = worldCellBalanceService;
@@ -34,7 +38,6 @@ namespace WorldCells
 
         public void ReturnToPool() =>
                _objectPooler.ReturnToPool(this);
-
         public void StartFollowPointer() =>
             _pointerFollower.enabled = true;
         public void StopFollowingPointer() =>
@@ -46,11 +49,17 @@ namespace WorldCells
             _worldCellBalanceService.Count(_cellStats.CellTags);
 
             CheckNeighborCells();
+            AddResources();
             CheckForGeneralInteraction();
         }
 
         /// <summary>
-        /// Use this to completely remove cell from grid and subtract tag weights 
+        /// Add resources on grid placement
+        /// </summary>
+        protected abstract void AddResources();
+
+        /// <summary>
+        /// Use this to completely remove cell from grid and subtract tag weights. Remove it from world with PoolSelf()
         /// </summary>
         public virtual void RemoveSelfFromGrid()
         {
@@ -76,14 +85,10 @@ namespace WorldCells
         /// <param name="yOffset">offset y</param>
         /// <returns>neighborCell</returns>
         protected IGridCellObject GetNeighborCell(int xOffset, int yOffset) =>
-            _worldCellGridService.GetCellObjectFromWorldCoords(
-                GetNeighborWorldCoords(xOffset, yOffset));
+            _worldCellGridService.GetCellObjectFromWorldCoords(GetNeighborWorldCoords(xOffset, yOffset));
 
-        private Vector2 GetNeighborWorldCoords(int xOffset, int yOffset)
-        {
-            return (Vector2)transform.position +
-                            (new Vector2(xOffset, yOffset));
-        }
+        private Vector2 GetNeighborWorldCoords(int xOffset, int yOffset) => 
+            (Vector2)transform.position + new Vector2(xOffset, yOffset);
 
         /// <summary>
         /// Check all possible interactions cell can perform with targeted cell and perfom them

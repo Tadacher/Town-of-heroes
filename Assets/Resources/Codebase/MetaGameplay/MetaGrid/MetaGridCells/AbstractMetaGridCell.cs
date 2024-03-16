@@ -23,7 +23,6 @@ namespace Metagameplay.Buildings
         /// </summary>
         public MetaBuildingDescriptionParams Description => _description;
 
-
         [SerializeField] protected PointerFollower _pointerFollower;
         [SerializeField] protected SpriteRenderer _spriteRenderer;
         /// <summary>

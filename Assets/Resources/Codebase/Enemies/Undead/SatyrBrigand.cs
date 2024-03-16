@@ -16,7 +16,7 @@ namespace Enemies
             _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);
             _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
 
-            _enemyMovementModule.OnEnemyReached += () => _coreGameplayService.RecieveEnemyReached(_damage);
+            _enemyMovementModule.OnEnemyReached += OnreahedTarget;
 
         }
         public override void RecieveDamage(int damage, AbstractTower abstractTower)

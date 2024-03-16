@@ -5,6 +5,11 @@ namespace WorldCells
 {
     public class GraveYard : AbstractWorldCell
     {
+        protected override void AddResources()
+        {
+            _resourceService.GatherStone(1);
+        }
+
         protected override void CheckForGeneralInteraction()
         {
 

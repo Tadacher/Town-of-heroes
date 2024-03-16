@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Progress;
+using UnityEngine;
 
 namespace Metagameplay.Ui
 {
@@ -7,7 +8,15 @@ namespace Metagameplay.Ui
     {
         public string Name;
         public string Description;
+        public ResourceData Cost;
         public Sprite Image;
-    }
 
+        public static bool EnoughToBuy(ResourceData resources, ResourceData cost)
+        {
+            bool result =  resources.WoodPieces >= cost.WoodPieces &&
+                   resources.StonePieces >= cost.StonePieces &&
+                   resources.FoodPieces >= cost.FoodPieces;
+            return result;
+        }
+    }
 }

@@ -1,5 +1,6 @@
 using Metagameplay.Buildings;
 using Metagameplay.Ui;
+using Progress;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,15 +14,18 @@ public class BuildMenuEntry : MonoBehaviour
     [SerializeField] private Outline _outline;
     private DescriptionAreaView _descriptionAreaView;
     private MetaBuildingService _metaBuildingService;
+    private ResourceService _resourceService;
 
     public void Initialize(AbstractMetaGridCell building,
                            DescriptionAreaView descriptionAreaView,
-                           MetaBuildingService metaBuildingService)
+                           MetaBuildingService metaBuildingService,
+                           ResourceService resourceService)
     {
         _image.sprite = building.Image;
         _title.text = building.Name;
         LinkedPrefab = building;
         _descriptionAreaView = descriptionAreaView;
+        _resourceService = resourceService;
 
         _metaBuildingService = metaBuildingService;
     }
@@ -34,7 +38,11 @@ public class BuildMenuEntry : MonoBehaviour
 
     private void SpawnBuilding()
     {
-       _metaBuildingService.InstantiateBuilding(LinkedPrefab.GetType());
+        if (MetaBuildingDescriptionParams.EnoughToBuy(_resourceService.GetResourceData(), LinkedPrefab.Description.Cost))
+        {
+            _resourceService.SubtractResources(LinkedPrefab.Description.Cost);
+            _metaBuildingService.InstantiateBuilding(LinkedPrefab.GetType());
+        }
     }
 
     public void Deselect()

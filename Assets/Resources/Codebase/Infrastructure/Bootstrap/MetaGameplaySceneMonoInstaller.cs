@@ -21,6 +21,7 @@ namespace Infrastructure
             BindService<MetaBuildingService>();
             BindService<MetaCityService>();
 
+
             BindService<MetaCityLoadHandler>().NonLazy();
         }
     }
