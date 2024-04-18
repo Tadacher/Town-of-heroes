@@ -36,10 +36,20 @@ namespace Services.Input
         public void ShiftUp() => 
             OnShiftUp?.Invoke();
 
-        public void RightButtonUp() => 
+        public void RightMouseButtonUp() => 
             OnRightButtonUp?.Invoke();
 
         public bool RightMouseDown() => 
             UnityEngine.Input.GetMouseButtonDown(1);
+
+        public float ZoomInput()
+        {
+            if (UnityEngine.Input.mouseScrollDelta.y > 0)
+                return 1f;
+            else if (UnityEngine.Input.mouseScrollDelta.y < 0)
+                return -1f;
+            else 
+                return 0f;
+        }
     }
 }

@@ -10,14 +10,16 @@ public class EnemyTypeToBiomeSettings : ScriptableObject
     private Dictionary<CellBiomeTypes, EnemytypeToWeightPair[]> _biomeToEnemyPairs;
 
     /// <summary>
-    /// returns every possible enemy type in biome and its weight
+    /// returns every possible enemy type in given biome and its weight
     /// </summary>
-    /// <param name="biomeType"></param>
-    /// <returns></returns>
+    /// <param name="biomeType">given biome</param>
     public EnemytypeToWeightPair[] GetPairByBiomeType(CellBiomeTypes biomeType)
     {
         if (_biomeToEnemyPairs == null)
             InitBiomeToEnemyPairs();
+
+        if (!_biomeToEnemyPairs.ContainsKey(biomeType))
+            return _biomeToEnemyPairs[CellBiomeTypes.Forest];
 
         return _biomeToEnemyPairs[biomeType];
     }

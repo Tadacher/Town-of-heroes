@@ -1,11 +1,9 @@
 using Core.Towers;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System;
 
 public interface IHitpointOwner
 {
-    public void RecieveDamage(int damage, AbstractTower damageDealer);
-    public void Heal(int points);
+    public void RecieveDamage(float damage, AbstractTower damageDealer);
+    public void Heal(float points);
 
 }

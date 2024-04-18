@@ -23,7 +23,7 @@ namespace Services
             }
             _prefab = prefab.GetComponent<DamageText>();
         }
-        public DamageText ReturnDamageText(int damage, Vector3 pos)
+        public DamageText ReturnDamageText(float damage, Vector3 pos)
         {
             foreach (DamageText damageText in _objectPool)
             {
@@ -31,7 +31,7 @@ namespace Services
                 {
                     damageText.gameObject.SetActive(true);
 
-                    damageText.Initialize(damage.ToString());
+                    damageText.Initialize(damage.ToString("0.0"));
                     damageText.transform.position = pos + RandomOffset();
 
                     return damageText;

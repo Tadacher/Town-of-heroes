@@ -16,7 +16,7 @@ public class DodgeDamageRecievingModule : AbstractDamageRecievingModule
         _chance = chance;
     }
 
-    public override int CalculateRecievedDamage(int damage)
+    public override float CalculateRecievedDamage(float damage)
     {
         if (Random.Range(0f, 1f) > _chance)
         {

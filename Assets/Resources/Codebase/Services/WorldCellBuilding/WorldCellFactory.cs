@@ -1,4 +1,5 @@
-﻿using Services.GlobalMap;
+﻿using Progress;
+using Services.GlobalMap;
 using Services.Input;
 using UnityEngine;
 using WorldCells;
@@ -18,7 +19,8 @@ namespace Services.Factories
             cell.Initialize(this,
                             worldCellBalanceService: _container.Resolve<WorldCellBalanceService>(),
                             inputService: _container.Resolve<AbstractInputService>(),
-                            gridAlignService: _container.Resolve<WorldCellGridService>());
+                            gridAlignService: _container.Resolve<WorldCellGridService>(),
+                            resourceService: _container.Resolve<ResourceService>());
             return cell;
         }
     }

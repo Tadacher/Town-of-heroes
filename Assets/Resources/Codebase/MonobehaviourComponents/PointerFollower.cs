@@ -12,7 +12,7 @@ public class PointerFollower : MonoBehaviour
         _gridAlignService = gridAlignService;
         _inputService = abstractInputService;
         _transform = GetComponent<Transform>();
-        this.enabled = false;
+        enabled = false;
     }
     private void Update() => 
         _transform.position = _gridAlignService.AlignToGrid(_inputService.GetPointerPositionWorld());

@@ -36,11 +36,8 @@ namespace Metagameplay.Buildings
 
         protected override AbstractMetaGridCell CreateNew()
         {
-            var product = Object.Instantiate(_prefab, null);
-            product.Initialize(abstractInputService: _input,
-                               abstractGridService: _metaGridService,
-                               metaCityService: _metaCityService,
-                               objectPooler: this);
+            AbstractMetaGridCell product = _container.InstantiatePrefabForComponent<AbstractMetaGridCell>( prefab: _prefab, parentTransform: null);
+            product.InjectDependencies(this);
             return product;
         }
     }

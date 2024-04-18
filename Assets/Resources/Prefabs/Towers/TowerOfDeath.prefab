@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7045201476987350571}
   - component: {fileID: 7511617401070975769}
   - component: {fileID: 8329447290316851384}
-  m_Layer: 0
+  - component: {fileID: 4754387782075254202}
+  m_Layer: 6
   m_Name: TowerOfDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,3 +212,29 @@ MonoBehaviour:
   _audioSource: {fileID: 7045201476987350568}
   _spriteRenderer: {fileID: 7045201476987350571}
   _pointerFollower: {fileID: 7511617401070975769}
+--- !u!61 &4754387782075254202
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7045201476987350567}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

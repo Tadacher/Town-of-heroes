@@ -23,6 +23,8 @@ namespace Infrastructure
         [SerializeField] private CardInfoUIContainer _cardInfoUIContainer;
         [SerializeField] private GameplayCanvasContainer _gameplayCanvasContainer;
         [SerializeField] private MapCanvasContainer _mapCanvasContainer;
+        [SerializeField] private MonsterInfoView _monsterInfoView;
+        [SerializeField] private TowerInfoView _towerInfoView;
 
         [Header("Scriptables")]
         [SerializeField] private ScriptableObject[] _scriptableObjects;
@@ -38,24 +40,34 @@ namespace Infrastructure
             //Markers scripts
             BindMarkers();
             
+
             //Containers
             BindMonobehaviour(_cardInfoUIContainer);
             BindMonobehaviour(_mapCanvasContainer);
             BindMonobehaviour(_gameplayCanvasContainer);
-            
+            BindMonobehaviour(_monsterInfoView);
+            BindMonobehaviour(_towerInfoView);
+
+            //UI
+            BindService<MonsterInfoServiceIngame>();
+
+
+
             //Towers
             BindService<TowerBuildingService>();
             BindService<BattleGridService>();
             BindService<TowerInstantiationService>();
             BindService<DamageTextService>();
+            BindService<TowerInfoServiceIngame>();
 
             //cards
             BindService<CardInstantiationService>().NonLazy();
-            BindService<CardGenerationService>();
-            BindService<CardDeckService>();
+            BindService<CardGenerationService>().NonLazy();
+            BindService<CardDeckService>().NonLazy();
             BindService<WorldCellCardGenerator>();
             BindService<CardDescriptionService>();
             BindService<CardInfoUiService>();
+            BindService<CardCountService>();
 
             //worldCells
             BindService<WorldCellInstantiationService>();

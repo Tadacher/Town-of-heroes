@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace Core.Towers
 {
     public class TowerOfDeath : AbstractTower
@@ -20,5 +18,7 @@ namespace Core.Towers
             PlayAttackSound();
             RefreshAttackDelay();
         }
+
+        protected override void InitializeAttackModule() => _attackModule = new SimpleTowerAttackModule();
     }
 }

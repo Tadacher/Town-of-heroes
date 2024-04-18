@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Zombie
   m_EditorClassIdentifier: 
   EnemyTypesAndWeights:
-  - enemyType: 3
+  - enemyType: 1
     Weight: 4
   HitPoints: 12
   Damage: 1

@@ -5,12 +5,17 @@ namespace WorldCells
 {
     public class CursedForest : AbstractWorldCell
     {
+        protected override void AddResources()
+        {
+            
+        }
+
         protected override void CheckForGeneralInteraction()
         {
             
         }
 
-        protected override void CheckForNeighborInteraction(IGridCellObject gridCellObject, Vector2 pos)
+        public override void CheckForNeighborInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
         {
             
         }

@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
-
+/// <summary>
+/// loads tower and world cell describitions from /Assets
+/// </summary>
 public class CardDescriptionService
 {
     private const string _soPath_Tower = "StatsAndSettings/TowerCardConfigs/TowerDescriptions/";

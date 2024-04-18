@@ -50,7 +50,7 @@ namespace Infrastructure
         protected ConcreteIdArgConditionCopyNonLazyBinder BindUnityComponent<TDependency>(TDependency instance) where TDependency : Component
             => Container.Bind<TDependency>().FromInstance(instance).AsSingle();
         /// <summary>
-        /// Binds Monobehaviour component from existing instance of given type to thw same type 
+        /// Binds Monobehaviour component from existing instance of given type to the same type 
         /// </summary>
         /// <typeparam name="TDependency"> Monobehaviour component type</typeparam>
         /// <param name="instance">Monobehaviour component instance</param>

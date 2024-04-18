@@ -1,4 +1,3 @@
-using Services;
 using Services.Factories;
 using UnityEngine;
 using Zenject;
@@ -29,12 +28,14 @@ public class EnemyFactory : AbstractPoolerFactory<AbstractEnemy>
 
     protected override AbstractEnemy CreateNew()
     {
-        AbstractEnemy enemy = GameObject.Instantiate(_enemyPrefab, null);
-        enemy.Initialize(
-            audioSource: _container.Resolve<AudioSource>(),
-            damageTextService: _container.Resolve<DamageTextService>(),
-            coreGameplayService: _container.Resolve<IEnemyReachedReciever>(),
-            objectPooler: this);
+        AbstractEnemy enemy = _container.InstantiatePrefabForComponent<AbstractEnemy>(prefab: _enemyPrefab, parentTransform: null);
+        enemy.Init(this);
+        //enemy.Initialize(
+        //    audioSource: _container.Resolve<AudioSource>(),
+        //    damageTextService: _container.Resolve<DamageTextService>(),
+        //    monsterInfoServiceIngame: _container.Resolve<MonsterInfoServiceIngame>(),
+        //    coreGameplayService: _container.Resolve<IEnemyReachedReciever>(),
+        //    objectPooler: this);
         return enemy;
     }
 }

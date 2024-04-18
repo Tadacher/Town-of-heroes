@@ -10,7 +10,7 @@ namespace MovementModules
             _unitTransform = unitTransform;
             _targetV3 = target;
             _coroutineProcessor = coroutineProcessor;
-            _speed = speed;
+            Speed = speed;
             StartMovementCoroutine(coroutineProcessor);
         }
 
@@ -18,11 +18,12 @@ namespace MovementModules
         {
             while ((_unitTransform.position - _targetV3).magnitude >= 1)
             {
-                _unitTransform.position += (_targetV3 - _unitTransform.position).normalized * _speed * Time.deltaTime;
+               
+                _unitTransform.position += (_targetV3 - _unitTransform.position).normalized * Speed * Time.deltaTime;
                 yield return null;
             }
             EnemyReached();
         }
-
     }
+
 }

@@ -18,16 +18,16 @@ namespace Services.GlobalMap
         {
             _worldCellInstantiationService = worldCellInstantiationService;
         }
-        public IGridCellObject GetCellObjectFromWorldCoords(Vector2 coords)
-        {
-            Vector2Int coord = PosToCellCoords(coords);
-            return _cells[coord.x, coord.y];
-        }
 
         protected override void InitCellContent()
         {
             //place castle and initial cells
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="type"> cell type to spawn</param>
+        /// <param name="coords">world coords</param>
         public void SpawnAndInjectCellToWorld(Type type, Vector2 coords)
         {
             AbstractWorldCell cell = _worldCellInstantiationService.ReturnObject(type).AsUnGhost();

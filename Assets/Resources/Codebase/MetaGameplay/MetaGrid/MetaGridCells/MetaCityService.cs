@@ -1,6 +1,9 @@
 using Metagameplay.Buildings;
 using System.Collections.Generic;
 
+/// <summary>
+/// Contains city cells effect applying logic
+/// </summary>
 public class MetaCityService
 {
     private HashSet<AbstractMetaGridCell> _metaCells = new();

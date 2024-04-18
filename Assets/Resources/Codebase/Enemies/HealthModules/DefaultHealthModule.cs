@@ -8,7 +8,7 @@ public class DefaultHealthModule : AbstractDamageRecievingModule
         
     }
 
-    public override int CalculateRecievedDamage(int damage)
+    public override float CalculateRecievedDamage(float damage)
     {
         _damageTextService.ReturnDamageText(damage, _unitTransform.position);
         return damage;

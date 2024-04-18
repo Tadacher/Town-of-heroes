@@ -5,12 +5,17 @@ namespace WorldCells
 {
     public class GraveYard : AbstractWorldCell
     {
+        protected override void AddResources()
+        {
+            _resourceService.GatherStone(1);
+        }
+
         protected override void CheckForGeneralInteraction()
         {
 
         }
 
-        protected override void CheckForNeighborInteraction(IGridCellObject gridCellObject, Vector2 pos)
+        public override void CheckForNeighborInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
         {
             switch (gridCellObject)
             {

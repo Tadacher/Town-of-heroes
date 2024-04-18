@@ -1,4 +1,5 @@
 ﻿using Metagameplay.Buildings;
+using Progress;
 using UnityEngine;
 
 namespace Metagameplay.Ui
@@ -8,24 +9,29 @@ namespace Metagameplay.Ui
     /// </summary>
     public class BuldingMenuService
     {
+        private readonly ResourceService _resourceService;
         private string _buildingPrefabPath = "Prefabs/CityBuildings";
         private BuildMenuUiContainer _container;
 
-        public BuldingMenuService(
-            MetaUiContainer metaUiContainer,
-            MetaBuildingService metaBuildingService)
+        public BuldingMenuService(MetaUiContainer metaUiContainer,
+                                  MetaBuildingService metaBuildingService,
+                                  ResourceService resourceService)
         {
             _container = metaUiContainer.BuildMenuUiContainer;
             AbstractMetaGridCell[] buildings = LoadBuildings();
 
             foreach (AbstractMetaGridCell building in buildings)
             {
+                if (building.HideInBuildingMenu)
+                    continue;
                 BuildMenuEntry entry = GameObject.Instantiate(_container.BuildMenuEntryPrefab, _container.BuildingEntriesParent);
-                entry.Initialize(building,
-                                 _container.DescriptionAreaView,
-                                 metaBuildingService);
+                entry.Initialize(building: building,
+                                 descriptionAreaView: _container.DescriptionAreaView,
+                                 resourceService: resourceService,
+                                 metaBuildingService: metaBuildingService);
             }
             _container.BuildingEntriesParent.GetChild(0).GetComponent<BuildMenuEntry>().Select(); //select first entry
+            _resourceService = resourceService;
         }
 
         private AbstractMetaGridCell[] LoadBuildings() => Resources.LoadAll<AbstractMetaGridCell>(_buildingPrefabPath);

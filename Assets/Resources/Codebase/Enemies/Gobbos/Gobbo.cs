@@ -1,24 +1,24 @@
 using MovementModules;
 using Services;
 using UnityEngine;
+using Zenject;
 
 namespace Enemies
 {
     public class Gobbo : AbstractEnemy
     {
-        public override void Initialize(AudioSource audioSource, DamageTextService damageTextService, IEnemyReachedReciever coreGameplayService, IObjectPooler objectPooler)
+        [Inject]
+        public override void Construct(AudioSource audioSource, DamageTextService damageTextService, MonsterInfoServiceIngame monsterInfoServiceIngame, IEnemyReachedReciever coreGameplayService)
         {
-            base.Initialize(audioSource, damageTextService, coreGameplayService, objectPooler);
+            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, coreGameplayService);
             _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
-            _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);
 
-            _enemyMovementModule.OnEnemyReached += OnReachedTarget;
         }
 
-        private void OnReachedTarget()
+        protected override void Awake()
         {
-            _coreGameplayService.RecieveEnemyReached(_damage);
-            ReturnToPool();
+            _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);
+            _enemyMovementModule.OnEnemyReached += OnReachedTargetHandler;
         }
     }
 }

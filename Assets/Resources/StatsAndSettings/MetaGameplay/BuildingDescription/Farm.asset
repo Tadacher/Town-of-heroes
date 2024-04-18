@@ -36,4 +36,9 @@ MonoBehaviour:
     \u043C\u0435\u0441\u0442\u043E, \u0433\u0434\u0435 \u043F\u0440\u0438\u0440\u043E\u0434\u0430
     \u0438 \u0447\u0435\u043B\u043E\u0432\u0435\u043A \u0436\u0438\u0432\u0443\u0442
     \u0432 \u0433\u0430\u0440\u043C\u043E\u043D\u0438\u0438 \u0438 \u043F\u0440\u043E\u0446\u0432\u0435\u0442\u0430\u043D\u0438\u0438."
+  Cost:
+    WoodPieces: 1
+    StonePieces: 1
+    FoodPieces: 0
   Image: {fileID: 21300000, guid: 1fde77ef8c120c648bef297755ab78c9, type: 3}
+  ClipOnSelect: {fileID: 8300000, guid: 72169e55f3e3ae047b93ab1e7dc75a4d, type: 3}

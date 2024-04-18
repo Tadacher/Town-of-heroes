@@ -92,11 +92,14 @@ public class EnemyTypeService
 public enum EnemyType
 {
     //Common
-    Greenskin,
-    Undead,
+    Greenskin = 0,
+    Undead = 1,
 
     //Concrete
-    Goblin,
-    Orc,
-    Satyr,
+    Goblin = 2,
+    Orc = 3,
+    Satyr = 4,
+    Centaur = 5,
+    Murloc = 6,
+    Spider = 7,
 }

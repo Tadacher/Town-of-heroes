@@ -2,6 +2,9 @@ using Services.GridSystem;
 using System;
 using UnityEngine;
 
+/// <summary>
+/// Meta grid and grid-level interaction logic
+/// </summary>
 public class MetaGridSevice : AbstractGridService
 {
     public int SizeX => _gridSizeX;
@@ -37,5 +40,4 @@ public class MetaGridSevice : AbstractGridService
     {
         
     }
-
 }
