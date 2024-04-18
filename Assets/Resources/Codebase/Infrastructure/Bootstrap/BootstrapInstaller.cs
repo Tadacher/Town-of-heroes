@@ -1,4 +1,5 @@
 ﻿using Progress;
+using Services.CardGeneration;
 using Services.Input;
 using UnityEngine;
 using Zenject;
@@ -27,6 +28,7 @@ namespace Infrastructure
 
             //saveload
             BindService<MetaCitySaveLoader>();
+            BindService<CardDeckSaveLoader>();
             BindService<ResourcesSaveLoader>();
             //
 

@@ -8,19 +8,20 @@ using Zenject;
 public class TowerFactory : MonobehaviourAbstractPoolerFactory<AbstractTower>
 {
     protected readonly AbstractTower _towerPrefab;
-    protected readonly AbstractInputService _abstractInputService;
-    protected readonly BattleGridService _gridAlignService;
 
-    public TowerFactory(AbstractTower towerPrefab, AbstractInputService abstractInputService, BattleGridService gridAlignService, DiContainer diContainer) : base(diContainer)
+    public TowerFactory(AbstractTower towerPrefab, DiContainer diContainer) : base(diContainer)
     {
-        _gridAlignService = gridAlignService;
         _towerPrefab = towerPrefab;
-        _abstractInputService = abstractInputService;
     }
     protected override AbstractTower CreateNew()
     {
         AbstractTower tower = GameObject.Instantiate(_towerPrefab, null);
-        tower.Initialize(this, _abstractInputService, _gridAlignService);
+        tower.Initialize(
+            objectPooler: this,
+            abstractInputService: _container.Resolve<AbstractInputService>(),
+            gridAlignService: _container.Resolve<BattleGridService>(),
+            towerInfoService: _container.Resolve<TowerInfoServiceIngame>());
+
         return tower;
     }
 }

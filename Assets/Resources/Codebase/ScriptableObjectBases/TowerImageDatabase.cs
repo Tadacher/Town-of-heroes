@@ -6,14 +6,14 @@ namespace Services.CardGeneration
     /// <summary>
     /// contains all sprites for tower cards
     /// </summary>
-    [CreateAssetMenu(fileName = "TowerCardImageDatabase", menuName = "ScriptableObjects/TowerCardImageDatabase", order = 1)]
+    [CreateAssetMenu(fileName = "TowerCardImageDatabase", menuName = "ScriptableObjects/InitializableConfig/TowerCardImageDatabase", order = 1)]
 
     public class TowerImageDatabase : ScriptableObject, IInitializableConfig
     {
         public Dictionary<string, Sprite> TowerCardSpritesDataBase;
 
         [SerializeField] private Sprite[] _towerCardSprites;
-        public void Initialize()
+        void IInitializableConfig.Initialize()
         {
             if (TowerCardSpritesDataBase != null)
                 return;

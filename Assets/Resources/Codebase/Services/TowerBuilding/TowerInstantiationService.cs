@@ -33,9 +33,6 @@ namespace Services.TowerBuilding
             _factories.Add(type, GetNewFactory(type));
 
         protected override IFactory<AbstractTower> GetNewFactory(Type type) => 
-            new TowerFactory(LoadProductPrefab(type),
-                             abstractInputService: _container.Resolve<AbstractInputService>(),
-                             gridAlignService: _container.Resolve<BattleGridService>(),
-                             _container);
+            new TowerFactory(LoadProductPrefab(type), _container);
     }
 }

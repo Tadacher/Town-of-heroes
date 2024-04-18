@@ -1,31 +1,26 @@
 ﻿using Core.Towers;
+using Infrastructure;
 using System;
+using System.Collections.Generic;
 
 namespace Services.CardGeneration
 {
     public class CardDeckService
     {
-        private CardInstantiationService _cardInstantiationService;
-        private Type[] _cardDeck;
-        public CardDeckService(CardInstantiationService cardInstantiationService)
+        public List<Type> CardDeck => _cardDeck;
+
+        private List<Type> _cardDeck;
+        private CardDeckSaveLoader _cardDeckLoaderService;
+
+        public CardDeckService(CardDeckSaveLoader cardDeckLoaderService)
         {
-            _cardInstantiationService = cardInstantiationService;
-            _cardDeck = new Type[]
-            {
-                typeof(ArcherTower),
-                typeof(TowerOfDeath),
-            };
+            _cardDeckLoaderService = cardDeckLoaderService;
+            _cardDeck = _cardDeckLoaderService.CardDeckSave;
         }
 
-        public void DraftRandom(int count)
-        {
-            for (int i = 0; i < count; i++)
-                _cardInstantiationService.ReturnObject(GetRandomCardType());
-        }
-        public void DraftRandom() =>
-            _cardInstantiationService.ReturnObject(GetRandomCardType());
-
+        public Type DraftRandom() =>
+            GetRandomCardType();
         private Type GetRandomCardType() =>
-            _cardDeck[UnityEngine.Random.Range(0, _cardDeck.Length)];
+            _cardDeck[UnityEngine.Random.Range(0, _cardDeck.Count)];
     }
 }

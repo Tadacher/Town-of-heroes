@@ -21,7 +21,7 @@ namespace Infrastructure
                 _inputListener.LeftMouseButtonUp();
 
             if (Input.GetMouseButtonUp(1))
-                _inputListener.RightButtonUp();
+                _inputListener.RightMouseButtonUp();
 
 
             if (Input.GetKeyDown(KeyCode.LeftShift))

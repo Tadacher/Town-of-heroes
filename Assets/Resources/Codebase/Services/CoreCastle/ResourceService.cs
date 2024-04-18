@@ -11,6 +11,7 @@ namespace Progress
         public event Action<int> OnWoodGathered;
         public event Action<int> OnFoodGathered;
         public event Action<int> OnStoneGathered;
+        public event Action<int> OnScrollsGathered;
 
         public ResourceService(ResourcesSaveLoader resourcesSaveLoader)
         {
@@ -23,7 +24,8 @@ namespace Progress
             _data = new(
                 save.WoodPieces, 
                 save.StonePieces, 
-                save.FoodPieces);
+                save.FoodPieces,
+                save.Scrolls);
            
         }
 
@@ -41,10 +43,14 @@ namespace Progress
 
         public void GatherFood(int food)
         {
-            _data.StonePieces += food;
-            OnFoodGathered?.Invoke(_data.StonePieces);
+            _data.FoodPieces += food;
+            OnFoodGathered?.Invoke(_data.FoodPieces);
         }
-
+        public void GatherScrolls(int scrolls)
+        {
+            _data.Scrolls += scrolls;
+            OnScrollsGathered?.Invoke(_data.Scrolls);
+        }
         public ResourceData GetResourceData() => _data;
 
         public void Refresh()
@@ -65,5 +71,7 @@ namespace Progress
             _data.StonePieces -= cost.StonePieces;
             OnStoneGathered?.Invoke(_data.StonePieces);
         }
+
+        
     }
 }

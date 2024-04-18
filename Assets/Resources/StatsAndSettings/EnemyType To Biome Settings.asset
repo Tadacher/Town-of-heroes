@@ -21,9 +21,21 @@ MonoBehaviour:
       Weight: 3
   - CellBiomeType: 4
     ProbabilityWeightPairs:
-    - EnemyType: 3
+    - EnemyType: 1
       Weight: 1
-  - CellBiomeType: 5
+  - CellBiomeType: 100
     ProbabilityWeightPairs:
     - EnemyType: 4
+      Weight: 1
+  - CellBiomeType: 1
+    ProbabilityWeightPairs:
+    - EnemyType: 5
+      Weight: 1
+  - CellBiomeType: 6
+    ProbabilityWeightPairs:
+    - EnemyType: 6
+      Weight: 3
+  - CellBiomeType: 101
+    ProbabilityWeightPairs:
+    - EnemyType: 7
       Weight: 1

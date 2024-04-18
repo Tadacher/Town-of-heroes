@@ -6,7 +6,7 @@ namespace WorldCellBuilding.CardImage
     /// <summary>
     /// contains all images for world cell cards
     /// </summary>
-    [CreateAssetMenu(fileName = "CardImageDatabase", menuName = "ScriptableObjects/CardImageDatabase", order = 1)]
+    [CreateAssetMenu(fileName = "CardImageDatabase", menuName = "ScriptableObjects/InitializableConfig/CardImageDatabase", order = 1)]
     
     public class CardImageDatabase : ScriptableObject, IInitializableConfig
     {
@@ -16,7 +16,7 @@ namespace WorldCellBuilding.CardImage
         /// </summary>
         public Dictionary<string, Sprite> WorldCellCardSpritesDataBase;
 
-        public void Initialize()
+        void IInitializableConfig.Initialize()
         {
             if (WorldCellCardSpritesDataBase != null)
                 return;

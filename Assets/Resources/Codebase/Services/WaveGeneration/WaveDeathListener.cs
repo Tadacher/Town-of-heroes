@@ -15,6 +15,10 @@ public class WaveDeathListener : IMobDeathListener, IPoolableObject
     }
 
     public event Action OnWaveDead;
+    /// <summary>
+    /// TODO: send mob value as param
+    /// </summary>
+    public event Action OnMobDeath;
 
     /// <summary>
     /// reinit after being got from pool
@@ -36,6 +40,8 @@ public class WaveDeathListener : IMobDeathListener, IPoolableObject
     void IMobDeathListener.RecieveDeath()
     {
         _mobCount--;
+        OnMobDeath?.Invoke();
+
         if(_mobCount == 0)
         {
             OnWaveDead?.Invoke();

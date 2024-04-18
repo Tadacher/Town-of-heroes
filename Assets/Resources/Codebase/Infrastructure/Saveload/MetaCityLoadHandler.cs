@@ -2,6 +2,9 @@ using Infrastructure;
 using Metagameplay.Buildings;
 using UnityEngine;
 
+/// <summary>
+/// loading, deserialization and applying of meta city save
+/// </summary>
 public class MetaCityLoadHandler
 {
     private MetaGridSevice _metaGridSevice;
@@ -20,10 +23,15 @@ public class MetaCityLoadHandler
             Debug.LogError("No save found!");
             return;
         }
+        else
+            LoadInjectedBuildings(save);
+    }
 
+    private void LoadInjectedBuildings(MetaCitySave save)
+    {
         for (int x = 0; x < _metaGridSevice.SizeX; x++)
         {
-            for (int y = 0; y < _metaGridSevice.SizeY; y++) 
+            for (int y = 0; y < _metaGridSevice.SizeY; y++)
             {
                 int flatIndex = _metaGridSevice.SizeX * x + y;
                 if (save.FlatGrid[flatIndex] != null)

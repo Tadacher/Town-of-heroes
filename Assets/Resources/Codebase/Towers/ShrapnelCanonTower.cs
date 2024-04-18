@@ -11,7 +11,7 @@ namespace Core.Towers
         private int _shrapnelCountPerLevel;
         protected override void Awake()
         {
-            InitializeAttackModule<ShrapnelTowerAttakModule>();
+            InitializeAttackModule();
             InitializeProjectileFactory(_towerStats.ProjectilePrefab);
             RefreshAttackDelay();
             UpdateAttackModule();
@@ -43,5 +43,7 @@ namespace Core.Towers
             ShrapnelTowerAttakModule module = (ShrapnelTowerAttakModule)_attackModule;
             module.ShrapnelCount = _shrapnelCount;
         }
+
+        protected override void InitializeAttackModule() => _attackModule = new ShrapnelTowerAttakModule();
     }
 }

@@ -13,6 +13,8 @@ namespace Infrastructure
         public MetaCitySave SaveObject { get; set; }
 
         private const string _path = "/MetaMap.json";
+        private const string _initialMapPath = "/MetaMapInit.json";
+
         private string _json = null;
         public MetaCitySaveLoader()
         {
@@ -21,8 +23,13 @@ namespace Infrastructure
                 _json = File.ReadAllText(Application.persistentDataPath + _path);
                 SaveObject = JsonConvert.DeserializeObject<MetaCitySave>(_json);
             }
+            else if (File.Exists(Application.persistentDataPath + _initialMapPath))
+            {
+                _json = File.ReadAllText(Application.persistentDataPath + _initialMapPath);
+                SaveObject = JsonConvert.DeserializeObject<MetaCitySave>(_json);
+            }
             else
-                Debug.LogError($"No savefile found at {Application.persistentDataPath + _path}");
+                Debug.LogError("NO ACCEPTABLE SAVES FOUND");
         }
         public void Save(Type[] types)
         {

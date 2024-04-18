@@ -15,7 +15,7 @@ public class BuildMenuEntry : MonoBehaviour
     private DescriptionAreaView _descriptionAreaView;
     private MetaBuildingService _metaBuildingService;
     private ResourceService _resourceService;
-
+    private bool _selected;
     public void Initialize(AbstractMetaGridCell building,
                            DescriptionAreaView descriptionAreaView,
                            MetaBuildingService metaBuildingService,
@@ -31,23 +31,45 @@ public class BuildMenuEntry : MonoBehaviour
     }
     public void Select()
     {
+        if(_selected) 
+            return;
+
+        _selected = true;
         _descriptionAreaView.UpdateView(LinkedPrefab.Description, this);
         _descriptionAreaView.OnBuildButtonPressed += SpawnBuilding;
+        Debug.Log("Added listener " + _title.text);
         _outline.enabled = true;
     }
 
     private void SpawnBuilding()
     {
-        if (MetaBuildingDescriptionParams.EnoughToBuy(_resourceService.GetResourceData(), LinkedPrefab.Description.Cost))
+        //_descriptionAreaView.OnBuildButtonPressed -= SpawnBuilding;
+        //Debug.Log("Spawn");
+        if (EnoughToBuy(_resourceService.GetResourceData(), LinkedPrefab.Description.Cost))
         {
             _resourceService.SubtractResources(LinkedPrefab.Description.Cost);
             _metaBuildingService.InstantiateBuilding(LinkedPrefab.GetType());
         }
     }
-
+    private  bool EnoughToBuy(ResourceData resources, ResourceData cost)
+    {
+        bool result = resources.WoodPieces >= cost.WoodPieces &&
+               resources.StonePieces >= cost.StonePieces &&
+               resources.FoodPieces >= cost.FoodPieces;
+        return result;
+    }
     public void Deselect()
     {
+        _selected = false;
         _outline.enabled = false;
         _descriptionAreaView.OnBuildButtonPressed -= SpawnBuilding;
+        Debug.Log("Removed listener " + _title.text);
+
+    }
+    private void OnDestroy()
+    {
+        if(_selected)
+            _descriptionAreaView.OnBuildButtonPressed -= SpawnBuilding;
+        Debug.Log("Removed listener " + _title.text);
     }
 }

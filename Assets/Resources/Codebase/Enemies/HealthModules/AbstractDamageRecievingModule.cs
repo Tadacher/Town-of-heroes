@@ -18,5 +18,5 @@ public abstract class AbstractDamageRecievingModule
     /// </summary>
     /// <param name="damage">flat incoming damage</param>
     /// <returns>calculated damage</returns>
-    public abstract int CalculateRecievedDamage(int damage);
+    public abstract float CalculateRecievedDamage(float damage);
 }

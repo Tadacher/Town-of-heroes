@@ -3,6 +3,9 @@ using System;
 
 namespace Metagameplay.Buildings
 {
+    /// <summary>
+    /// general abstract factory container for meta building objects
+    /// </summary>
     public class MetaBuildingsInstantiationService : AbstractInstantiationService<AbstractMetaGridCell>
     {
         private const string _prefabPath = "Prefabs/CityBuildings/";

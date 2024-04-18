@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skeleton
   m_EditorClassIdentifier: 
   EnemyTypesAndWeights:
-  - enemyType: 3
+  - enemyType: 1
     Weight: 2
   HitPoints: 4
   Damage: 1

@@ -3,21 +3,36 @@ using MovementModules;
 using Services;
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using Zenject;
 /// <summary>
 /// base class for all enemies
 /// </summary>
-public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementModuleOwner, IPoolableObject
+public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementModuleOwner, IPoolableObject, IHitpointInfoProvider, IPointerDownHandler
 {
     public string EnemyName;
     public EnemyStats Stats => _stats;
 
+    float IHitpointInfoProvider.CurrentHealth => Hitpoints;
+    float IHitpointInfoProvider.MaxHealth => Stats.HitPoints;
+
+    protected float Hitpoints 
+    { 
+        get => _hitpoints; 
+        set
+        {
+            _hitpoints = value;
+            OnHealthChanged?.Invoke();
+        }
+    }
+
     [SerializeField]
     protected EnemyStats _stats;
 
-    protected int _hitpoints;
+    private float _hitpoints;
     protected float _speed;
     protected float _expForKill;
-    protected int _maxHitpoints;
+    protected float _maxHitpoints;
     protected int _damage;
 
 
@@ -34,36 +49,44 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     protected IMobDeathListener _deathListener;
     protected DamageTextService _damageTextService;
 
-    public virtual void Initialize(AudioSource audioSource,
+    //linked ui interactions
+    private MonsterInfoServiceIngame _monsterInfoService;
+
+    public event Action OnHealthChanged;
+    
+    [Inject]
+    public virtual void Construct(AudioSource audioSource,
                                    DamageTextService damageTextService,
-                                   IEnemyReachedReciever coreGameplayService,
-                                   IObjectPooler objectPooler)
+                                   MonsterInfoServiceIngame monsterInfoServiceIngame,
+                                   IEnemyReachedReciever coreGameplayService)
     {
-        _pooler = objectPooler;
         _audioSource = audioSource;
         _damageTextService = damageTextService;
         _coreGameplayService = coreGameplayService;
-
+        _monsterInfoService = monsterInfoServiceIngame;
         InitializeStats();      
     }
-
-
-    public virtual void Heal(int points)
+    public virtual void Init(IObjectPooler objectPooler)
     {
-        _hitpoints += points;
-        if (_hitpoints > _maxHitpoints)
-            _hitpoints = _maxHitpoints;
+        _pooler = objectPooler;
+    }
+    protected abstract void Awake();
+    public virtual void Heal(float points)
+    {
+        Hitpoints += points;
+        if (Hitpoints > _maxHitpoints)
+            Hitpoints = _maxHitpoints;
     }
 
-    public virtual void RecieveDamage(int damage, AbstractTower abstractTower)
+    public virtual void RecieveDamage(float damage, AbstractTower abstractTower)
     {
         
-        if (_hitpoints < 0)
+        if (Hitpoints < 0)
             return;
 
-        _hitpoints -= _abstractDamageRecievingModule.CalculateRecievedDamage(damage);
+        Hitpoints -= _abstractDamageRecievingModule.CalculateRecievedDamage(damage);
         
-        if (_hitpoints <= 0)
+        if (Hitpoints <= 0)
         {
             abstractTower.RecieveExperience(_expForKill);
             Die();
@@ -74,7 +97,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     public virtual void ReInitialize(Vector3 position)
     {
         transform.position = position;
-        _hitpoints = _maxHitpoints;
+        Hitpoints = _maxHitpoints;
         _enemyMovementModule.StartMovementCoroutine(this);
     }
     protected virtual void PlayDeathSound() => _audioSource.PlayOneShot(_deathClip);
@@ -92,7 +115,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     {
         EnemyName = _stats.Name;
         _maxHitpoints = _stats.HitPoints;
-        _hitpoints = _maxHitpoints;
+        Hitpoints = _maxHitpoints;
         _damage = _stats.Damage;
         _speed = _stats.Speed;
         _deathClip = _stats.DeathSound;
@@ -108,10 +131,15 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         return this;
     }
 
-    protected void OnreahedTarget()
+    protected void OnReachedTargetHandler()
     {
         _coreGameplayService.RecieveEnemyReached(_damage);
         ReturnToPool();
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        _monsterInfoService.Show(this, this);
     }
 }
 

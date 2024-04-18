@@ -2,16 +2,30 @@ using Services.GridSystem;
 using Services.Input;
 using Towers;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Core.Towers
-{
-    public abstract class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttacker, IPoolableObject, IGridCellObject
+{   
+    /// <summary>
+    /// General tower logic
+    /// </summary>
+    public abstract partial class AbstractTower : MonoBehaviour, IExpReciever, ICommonAttacker, IPoolableObject, IGridCellObject, IPointerDownHandler, ITowerInfoProvider
     {
         public virtual float Experience { get; protected private set; }
-        public virtual int Level { get; protected private set; }
         public virtual int Hp { get; protected private set; }
 
+        #region TowerInfoProvider
+        public virtual int Level { get; protected private set; }
+        float ITowerInfoProvider.Damage => _attackDamage;
+        float ITowerInfoProvider.Range => _attackRange;
+        float ITowerInfoProvider.Delay => _attackDelay;
+        string ITowerInfoProvider.Name => GetType().Name;
+        #endregion
+
+
         protected const string _targetTag = "Enemy";
+        private const string EnemyLayerName = "Enemies";
+
         //external
         [SerializeField] protected TowerStats _towerStats;
         [SerializeField] protected AudioSource _audioSource;
@@ -41,7 +55,7 @@ namespace Core.Towers
 
         protected virtual void Awake()
         {
-            InitializeAttackModule<SimpleTowerAttackModule>();
+            InitializeAttackModule();
             InitializeProjectileFactory(_towerStats.ProjectilePrefab);
             RefreshAttackDelay();
         }
@@ -55,8 +69,16 @@ namespace Core.Towers
             MakeUnGhost();
             return this;
         }
-        public virtual void Initialize(IObjectPooler objectPooler, AbstractInputService abstractInputService, BattleGridService gridAlignService)
+        public virtual void Initialize(IObjectPooler objectPooler,
+                                       AbstractInputService abstractInputService,
+                                       BattleGridService gridAlignService,
+                                       TowerInfoServiceIngame towerInfoService)
         {
+            //AbstractTower.Infopanel
+            _towerInfoService = towerInfoService;
+            _abstractInputService = abstractInputService;
+            //
+
             _objectPooler = objectPooler;
             _gridAlignService = gridAlignService;
             _pointerFollower.Initialize(abstractInputService, gridAlignService);
@@ -73,7 +95,8 @@ namespace Core.Towers
 
         public virtual AbstractEnemy FindClosestTarget()
         {
-            _availableEnemies = Physics2D.OverlapCircleAll(transform.position, _towerStats.AttackRange);
+            int layerMask = LayerMask.NameToLayer(EnemyLayerName);
+            _availableEnemies = Physics2D.OverlapCircleAll(transform.position, _towerStats.AttackRange, 1<<layerMask);
 
             if (_availableEnemies.Length == 0)
                 return null;
@@ -147,7 +170,7 @@ namespace Core.Towers
 
         protected void RefreshAttackDelay() => _currentTimeTillAttack = _attackDelay;
         protected void PlayAttackSound() => _audioSource.PlayOneShot(_towerStats.AttackClip);
-        protected void InitializeAttackModule<TAttackModule>() where TAttackModule : AbstractTowerAttackModule, new() => _attackModule = new TAttackModule();
+        protected abstract void InitializeAttackModule();
 
         protected bool TargetInRange() => Vector2.Distance(transform.position, _currentEnemy.transform.position) < _attackRange;
 
@@ -182,5 +205,6 @@ namespace Core.Towers
             _isGhost = false;
             _spriteRenderer.color += _ghostColor;
         }
+
     }
 }

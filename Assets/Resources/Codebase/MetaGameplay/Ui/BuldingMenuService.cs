@@ -22,6 +22,8 @@ namespace Metagameplay.Ui
 
             foreach (AbstractMetaGridCell building in buildings)
             {
+                if (building.HideInBuildingMenu)
+                    continue;
                 BuildMenuEntry entry = GameObject.Instantiate(_container.BuildMenuEntryPrefab, _container.BuildingEntriesParent);
                 entry.Initialize(building: building,
                                  descriptionAreaView: _container.DescriptionAreaView,

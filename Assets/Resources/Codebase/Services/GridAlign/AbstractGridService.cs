@@ -1,5 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using WorldCells;
 namespace Services.GridSystem
 {
     public abstract class AbstractGridService
@@ -33,10 +33,19 @@ namespace Services.GridSystem
 
             return Equals(_cells[cellCoords.x, cellCoords.y], null);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="insertable">cell</param>
+        /// <param name="position">world coords</param>
         public void Insert(IGridCellObject insertable, Vector3 position)
         {
             Vector2Int cellCoords = PosToCellCoords(position);
             _cells[cellCoords.x, cellCoords.y] = insertable;
+        }
+        public void Insert(IGridCellObject insertable, Vector2Int position)
+        {
+            _cells[position.x, position.y] = insertable;
         }
         /// <summary>
         /// removes cell at gicen coordinates, but only in grid, ypu must remove it in world by yourself
@@ -70,7 +79,7 @@ namespace Services.GridSystem
         /// </summary>
         protected abstract void InitCellContent();
        
-        protected Vector2Int PosToCellCoords(Vector3 position)
+        public Vector2Int PosToCellCoords(Vector3 position)
         {
             position -= (Vector3)_zeroPoint;
             int x = (int)(position.x / _cellsize);
@@ -78,5 +87,25 @@ namespace Services.GridSystem
             // Debug.Log($"{x}.{y}");
             return new Vector2Int(x, y);
         }  
+        public IWorldGridCellObject GetCellObjectFromWorldCoords(Vector2 coords)
+        {
+            Vector2Int coord = PosToCellCoords(coords);
+            return (IWorldGridCellObject)_cells[coord.x, coord.y];
+        }
+        public IWorldGridCellObject GetCellObjectFromGridCoords(int x, int y)
+        {
+            return (IWorldGridCellObject)_cells[x, y];
+        }
+        /// <summary>
+        /// checks if gicen coords are in bounds of grid
+        /// </summary>
+        /// <param name="x">x coord</param>
+        /// <param name="y">y coord</param>
+        /// <returns></returns>
+        public bool CoordIsInsideGrid(int x, int y) => 
+            x >= 0 && 
+            x < _gridSizeX &&
+            y >= 0 && 
+            y < _gridSizeY;
     }
 }

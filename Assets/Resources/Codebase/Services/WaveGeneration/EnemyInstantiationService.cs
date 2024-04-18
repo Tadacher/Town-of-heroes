@@ -22,6 +22,16 @@ public class EnemyInstantiationService : AbstractInstantiationService<AbstractEn
         returnable.transform.position = _spawnPosition.position;
         return returnable;
     }
+    public AbstractEnemy ReturnObject(Type type, Vector3 positition)
+    {
+        if (!_factories.ContainsKey(type))
+        {
+            AddNewFactory(type);
+        }
+        var returnable = _factories[type].GetObject();
+        returnable.transform.position = positition;
+        return returnable;
+    }
 
     protected override void AddNewFactory(Type type) => 
         _factories.Add(type, GetNewFactory(type));

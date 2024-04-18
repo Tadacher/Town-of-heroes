@@ -27,3 +27,11 @@ MonoBehaviour:
     CellProbabilityPairs:
     - WorldCell: {fileID: 5910704507340267064, guid: 37cc7fba8d67ec248850a470b433b48d, type: 3}
       ProbabilityWeight: 100
+  - Tower: {fileID: 1359920425590890985, guid: 14d20c90a0f88db4fa0ecd7527c06413, type: 3}
+    CellProbabilityPairs:
+    - WorldCell: {fileID: 8122995059641230204, guid: 3a963821559960740bf8bfe807814b14, type: 3}
+      ProbabilityWeight: 100
+  - Tower: {fileID: 8399250403091713473, guid: 02639988f7a6cac40a59b019263613a5, type: 3}
+    CellProbabilityPairs:
+    - WorldCell: {fileID: 3220683919994174034, guid: 81fffb3458c7ea141bb79a3c14d66f5b, type: 3}
+      ProbabilityWeight: 100

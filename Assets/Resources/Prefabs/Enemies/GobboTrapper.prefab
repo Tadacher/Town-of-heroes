@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7093049030715191257}
   - component: {fileID: 6904938369869240134}
   - component: {fileID: 2248180668137508119}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GobboTrapper
   m_TagString: Untagged
   m_Icon: {fileID: 0}

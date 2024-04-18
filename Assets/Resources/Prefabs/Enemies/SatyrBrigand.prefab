@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7198782511671779237}
   - component: {fileID: 6271285360280199633}
   - component: {fileID: 2455292003253600321}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SatyrBrigand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

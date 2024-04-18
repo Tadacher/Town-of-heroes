@@ -30,7 +30,6 @@ namespace Services.CardGeneration
         {
             _cardDescriptionService = towerCardDescriptionService;
             _cardImageDatabase = cardImageDatabase;
-            _cardImageDatabase.Initialize();
             _worldCellCardGenerator = worldCellCardGenerator;
             _towerType = type;
             _cardPrefab = cardPrefab;

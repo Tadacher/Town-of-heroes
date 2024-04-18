@@ -10,13 +10,6 @@ namespace Metagameplay.Ui
         public string Description;
         public ResourceData Cost;
         public Sprite Image;
-
-        public static bool EnoughToBuy(ResourceData resources, ResourceData cost)
-        {
-            bool result =  resources.WoodPieces >= cost.WoodPieces &&
-                   resources.StonePieces >= cost.StonePieces &&
-                   resources.FoodPieces >= cost.FoodPieces;
-            return result;
-        }
+        public AudioClip ClipOnSelect;    
     }
 }

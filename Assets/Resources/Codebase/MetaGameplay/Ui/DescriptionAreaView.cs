@@ -23,6 +23,7 @@ namespace Metagameplay.Ui
         {
             _buildButton.onClick
                 .AddListener(() => metaUiContainer.BuildMenuUiContainer.gameObject.SetActive(false));
+            _buildButton.onClick.AddListener(OnButtonPressed);
         }
         public void UpdateView(MetaBuildingDescriptionParams buildingDescruptionParams, BuildMenuEntry buildMenuEntry)
         {
@@ -33,9 +34,12 @@ namespace Metagameplay.Ui
             _image.sprite = buildingDescruptionParams.Image;
             _title.text = buildingDescruptionParams.Name;
             _description.text = buildingDescruptionParams.Description;
-            _buildButton.onClick.AddListener(OnButtonPressed);
         }
 
-        private void OnButtonPressed() => OnBuildButtonPressed.Invoke();
+        private void OnButtonPressed()
+        {
+            Debug.Log("Build pressed");
+            OnBuildButtonPressed?.Invoke();
+        }
     }
 }

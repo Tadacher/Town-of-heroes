@@ -1,7 +1,4 @@
-﻿
-using UnityEngine;
-
-namespace Core.Towers
+﻿namespace Core.Towers
 {
     public class ArcherTower : AbstractTower
     {
@@ -23,5 +20,8 @@ namespace Core.Towers
             PlayAttackSound();
             RefreshAttackDelay();
         }
+
+        protected override void InitializeAttackModule() => _attackModule = new SimpleTowerAttackModule();
     }
+
 }
