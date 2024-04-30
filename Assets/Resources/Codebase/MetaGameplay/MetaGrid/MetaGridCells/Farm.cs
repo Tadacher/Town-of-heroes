@@ -75,6 +75,10 @@ namespace Metagameplay.Buildings
                         
                         Debug.Log($"Field inserted at {debugpos.x} {debugpos.y}");
                     }
+                    else
+                    {
+                        Debug.Log(cell);
+                    }
                 }
             }
         }

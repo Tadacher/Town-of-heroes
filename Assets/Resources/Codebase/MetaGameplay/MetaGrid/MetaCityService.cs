@@ -11,7 +11,7 @@ public class MetaCityService
 
     public void ApplyEffects()
     {
-        foreach (var cell in _metaCells) { cell.ApplyCellEffects(); }
+        foreach (var cell in _metaCells) { cell.ApplyLevelEffects(); }
     }
     public void AddCell (AbstractMetaGridCell cell)
     {

@@ -32,13 +32,13 @@ namespace Infrastructure
             else
                 Debug.LogError("NO ACCEPTABLE SAVES FOUND");
         }
-        public void Save(MetaCitySaveEntry[] types)
+        public void Save(MetaCitySaveEntry[] save)
         {
             if (SaveObject == null)
-                SaveObject = new(types);
+                SaveObject = new(save);
 
             else 
-                SaveObject.FlatGrid = types;
+                SaveObject.FlatGrid = save;
             
             try
             {

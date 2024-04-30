@@ -1,3 +1,4 @@
+using Core.Towers;
 using Metagameplay.Ui;
 using Services.CardGeneration;
 using System;
@@ -32,6 +33,8 @@ public class CardDeckEditingMenu : IDeckEntryPressedReciever, IEntryInserter
         InitCardFactory();
         InitDeckLayoutContent();
         InitCardLayoutContent();
+
+        _cardAvalilabilityService.OnTypeAdded += OnTypeAddedHandler; 
     }
 
     private void InitCardFactory() => _cardEntryFactory.Init(this);
@@ -39,25 +42,38 @@ public class CardDeckEditingMenu : IDeckEntryPressedReciever, IEntryInserter
 
     private void InitCardLayoutContent()
     {
-        foreach (Core.Towers.AbstractTower tower in _abstractTowerPrefabContainer.Towers)
+        foreach (AbstractTower tower in _abstractTowerPrefabContainer.Towers)
         {
-            if (_deckService.CardDeckSave.Contains(tower.GetType()))
-                continue;
-
-            if (!_cardAvalilabilityService.AllowedTypes.Contains(tower.GetType()))
-                continue;
-
-            CardEntry card = _cardEntryFactory.GetObject();
-            card.InitContent(tower, tower.GetType());
+            TryAddCardEntry(tower);
         }
     }
+    private void OnTypeAddedHandler(Type towerType)
+    {
+        if (!_abstractTowerPrefabContainer.TowerDictionary.ContainsKey(towerType))
+        {
+            Debug.LogError("No tower prefab found");
+            return;
+        }
+        TryAddCardEntry(_abstractTowerPrefabContainer.TowerDictionary[towerType]);
+    }
+    private bool TryAddCardEntry(AbstractTower tower)
+    {
+        if (_deckService.CardDeckSave.Contains(tower.GetType()))
+            return false;
 
+        if (!_cardAvalilabilityService.AllowedTypes.Contains(tower.GetType()))
+            return false;
+
+        CardEntry card = _cardEntryFactory.GetObject();
+        card.InitContent(tower, tower.GetType());
+        return true;
+    }
     private void InitDeckLayoutContent()
     {
         foreach (Type entry in _deckService.CardDeckSave)
         {
             DeckEntry deckEntry = _deckEntryFactory.GetObject();
-            Core.Towers.AbstractTower tower = _abstractTowerPrefabContainer.TowerDictionary[entry];
+            AbstractTower tower = _abstractTowerPrefabContainer.TowerDictionary[entry];
             deckEntry.InitContent(tower, tower.GetType());
         }
     }

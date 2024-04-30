@@ -20,7 +20,7 @@ public class MetaGridSevice : AbstractGridService
     public MetaGridSevice() : base(Vector2.one/2, Vector2.zero, _cellSize, _gridSize_X, _gridSize_Y)
     {
     }
-    public Infrastructure.MetaCitySave.MetaCitySaveEntry[] GetSaveData()
+    public MetaCitySaveEntry[] GetSaveData()
     {
         MetaCitySaveEntry[] types = new MetaCitySaveEntry[_gridSizeX*_gridSizeY];
 
@@ -35,8 +35,13 @@ public class MetaGridSevice : AbstractGridService
 
                 else
                 {
+                    var cell = (_cells[x, y] as AbstractMetaGridCell);
+
+                    if (cell.ShouldNotSave)
+                        continue;
+                    
                     Type buildingType = _cells[x, y].GetType();
-                    int level = (_cells[x, y] as AbstractMetaGridCell).Level;
+                    int level = cell.Level;
                     types[flatIndex] = new(buildingType, level);
                 }
             }

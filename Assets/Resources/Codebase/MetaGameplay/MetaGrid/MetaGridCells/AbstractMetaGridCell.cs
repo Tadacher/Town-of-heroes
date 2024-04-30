@@ -32,6 +32,7 @@ namespace Metagameplay.Buildings
         /// Show in building menu or not, marks available for player buildings 
         /// </summary>
         public bool HideInBuildingMenu => _hideInBuildingMenu;
+        public bool ShouldNotSave => _shouldNotSave;
         public int Level => _level;
 
 
@@ -43,7 +44,9 @@ namespace Metagameplay.Buildings
         /// </summary>
         [SerializeField] protected MetaBuildingDescriptionParams _description;
         [SerializeField] private bool _hideInBuildingMenu;
-        [SerializeField] private bool CanBeDestroyed;
+        [SerializeField] private bool _shouldNotSave;
+        [SerializeField] private bool _canBeDestroyed;
+
         
         protected MetaGridSevice _gridSevice;
         protected CardAvalilabilityService _cardAvalilabilityService;
@@ -56,7 +59,6 @@ namespace Metagameplay.Buildings
         private AbstractSoundPlayerService _soundPlayerService;
         private Button _upgradeButton; 
         private Button _destroyButton;
-
 
         [Inject]
         public void Initialize(
@@ -97,7 +99,7 @@ namespace Metagameplay.Buildings
         /// <summary>
         /// scroll per effect array and apply if building level is high enough
         /// </summary>
-        public virtual void ApplyCellEffects()
+        public virtual void ApplyLevelEffects()
         {
             if (_description == null)
                 return;
@@ -105,22 +107,30 @@ namespace Metagameplay.Buildings
             if (_description.PerLevelEffects == null || Description.PerLevelEffects.Length == 0)
                 return;
 
-
             for (int i = 0; i <= _level; i++)
-            {
-                if (_description.PerLevelEffects.Length == i)
-                    break;
-                if (_description.PerLevelEffects[i] == null)
-                    continue;
-                
-                foreach (var tower in _description.PerLevelEffects[i].AvailableTowers)
-                {
-                    if(tower == null) 
-                        continue;
-                    _cardAvalilabilityService.AddAllowedType(tower.GetType());
-                }
-            }
+                ApplyLevelEffect(i);
         }      
+
+        protected void ApplyLevelEffect(PerLevelEffect perLevelEffect)
+        {
+            foreach (var tower in perLevelEffect.AvailableTowers)
+            {
+                if (tower == null)
+                    continue;
+                _cardAvalilabilityService.AddAllowedType(tower.GetType());
+            }
+        }
+        protected void ApplyLevelEffect(int level)
+        {
+            Debug.Log("Levelup " + level);
+
+            if (_description.PerLevelEffects.Length <= level)
+                return;
+            if (_description.PerLevelEffects[level] == null)
+                return;
+
+            ApplyLevelEffect(_description.PerLevelEffects[level]);
+        }
         public virtual void UnApplyEffect()
         {
             for (int i = 0; i <= _level; i++)
@@ -149,7 +159,8 @@ namespace Metagameplay.Buildings
         public void StopFollowingPointer() =>
             _pointerFollower.enabled = false;
         
-        public void ReturnToPool() => _pooler.ReturnToPool(this);
+        public void ReturnToPool() => 
+            _pooler.ReturnToPool(this);
        
         
         public AbstractMetaGridCell AsUnGhost() => this;
@@ -179,7 +190,7 @@ namespace Metagameplay.Buildings
 
         private void SetDestroyButtonInteractions()
         {
-            if (CanBeDestroyed)
+            if (_canBeDestroyed)
             {
                 _destroyButton.gameObject.SetActive(true);
                 _destroyButton.onClick.AddListener(DestroyBuiding);
@@ -189,8 +200,6 @@ namespace Metagameplay.Buildings
                 _destroyButton.gameObject.SetActive(false);
             }
         }
-
-     
 
         private void DestroyBuiding()
         {
@@ -214,13 +223,16 @@ namespace Metagameplay.Buildings
         protected virtual void Upgrade()
         {
             _level++;
+            ApplyLevelEffect(_level);
+            _upgradeButton.onClick.RemoveListener(Upgrade);
+            SetUpgradeButtoninteractions();
         }
 
         private bool CanBeUpgraded()
         {
             if(Description.UpgradeCostsPerLevel == null)
                 return false;
-            if (Description.UpgradeCostsPerLevel.Length >= Level + 1) //if no levels to upgrade
+            if (Description.UpgradeCostsPerLevel.Length <= Level + 1) //if no levels to upgrade
                 return false;
 
             return Description.UpgradeCostsPerLevel[Level + 1] <= _resourceService.GetResourceData(); //if is enough resources

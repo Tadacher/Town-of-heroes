@@ -55,6 +55,8 @@ MonoBehaviour:
   _pointerFollower: {fileID: 7626297418909349280}
   _spriteRenderer: {fileID: 0}
   _description: {fileID: 11400000, guid: ebb1c64b62db7b54ab7dc0187a35f0a5, type: 2}
+  _hideInBuildingMenu: 0
+  _canBeDestroyed: 1
 --- !u!114 &7626297418909349280
 MonoBehaviour:
   m_ObjectHideFlags: 0
