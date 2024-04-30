@@ -34,7 +34,7 @@ public class CoreGameplayService : IEnemyReachedReciever
         CastleHitpoints -= damage;
         if(CastleHitpoints <= 0 )
         {
-            _resourcesSaveLoader.Save(_resourceService.GetResourceData());
+           _resourceService.Save();
             _gameStateMachine.EnterState<LoadInitialLevelState, string>("MetaGameplayScene");
         }
     }

@@ -1,5 +1,6 @@
 using Infrastructure;
 using Progress;
+using System.ComponentModel.Design;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -22,7 +23,7 @@ public class ToCityButton : MonoBehaviour
 
     private void OnClick()
     {
-        _resourcesSaveLoader.Save(_resourceService.GetResourceData());
+        _resourceService.Save();
         _gameStateMachine.EnterState<LoadInitialLevelState, string>("MetaGameplayScene");
     }
 }

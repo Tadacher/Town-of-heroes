@@ -1,7 +1,6 @@
 using Metagameplay.Buildings;
 using Metagameplay.Ui;
 using Progress;
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,21 +42,14 @@ public class BuildMenuEntry : MonoBehaviour
 
     private void SpawnBuilding()
     {
-        //_descriptionAreaView.OnBuildButtonPressed -= SpawnBuilding;
-        //Debug.Log("Spawn");
-        if (EnoughToBuy(_resourceService.GetResourceData(), LinkedPrefab.Description.Cost))
+        if (_resourceService.GetResourceData() >= LinkedPrefab.Description.Cost)
         {
             _resourceService.SubtractResources(LinkedPrefab.Description.Cost);
             _metaBuildingService.InstantiateBuilding(LinkedPrefab.GetType());
+            _descriptionAreaView.CloseMenu();
         }
     }
-    private  bool EnoughToBuy(ResourceData resources, ResourceData cost)
-    {
-        bool result = resources.WoodPieces >= cost.WoodPieces &&
-               resources.StonePieces >= cost.StonePieces &&
-               resources.FoodPieces >= cost.FoodPieces;
-        return result;
-    }
+    
     public void Deselect()
     {
         _selected = false;

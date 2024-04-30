@@ -7,7 +7,12 @@ namespace Metagameplay.Ui
     {
         public BuildMenuUiContainer BuildMenuUiContainer;
         public DeckEditingUiContainer DeckEditingUiContainer;
-        public Button BuildMenuButton;
         public Transform MetaUiCanvasTransform;
+
+
+        public Button BuildMenuButton;
+        public Button UpgradeBtn;
+        public Button DestroyBtn;
+
     }
 }

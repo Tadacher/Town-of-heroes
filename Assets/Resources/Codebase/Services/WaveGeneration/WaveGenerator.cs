@@ -3,7 +3,7 @@ using UnityEngine;
 using WorldCells;
 using System.Collections.Generic;
 using Services.CardGeneration;
-using UnityEditorInternal.Profiling.Memory.Experimental.FileFormat;
+using Progress;
 /// <summary>
 /// Generates waves with all linked stuff
 /// First - enemy type is picked
@@ -17,6 +17,7 @@ public partial class WaveGenerator
     private readonly WaveDeathListenerFactory _waveDeathListenerFactory;
     private readonly CardGenerationService _cardGenerationService;
     private readonly EnemyGenerationCostService _enemyGenerationCostService;
+    private readonly ResourceService _resourceService;
     private float _currentWaveCost = 40;
     private float _waveMaxCost = 40;
 
@@ -25,7 +26,8 @@ public partial class WaveGenerator
                          EnemyTypeService enemyTypeService,
                          WaveDeathListenerFactory waveDeathListenerFactory,
                          CardGenerationService cardGenerationService,
-                         EnemyGenerationCostService enemyGenerationCostService)
+                         EnemyGenerationCostService enemyGenerationCostService,
+                         ResourceService resourceService)
     {
         _enemyInstantiationService = nemyInstantiationService;
         _cellBalanceService = worldCellBalanceService;
@@ -33,6 +35,7 @@ public partial class WaveGenerator
         _waveDeathListenerFactory = waveDeathListenerFactory;
         _cardGenerationService = cardGenerationService;
         _enemyGenerationCostService = enemyGenerationCostService;
+        _resourceService = resourceService;
     }
     /// <summary>
     /// Generate new wave
@@ -56,6 +59,7 @@ public partial class WaveGenerator
         }
         waveDeathListener.Reinitialize(abstractEnemies.Count);
         waveDeathListener.OnWaveDead += _cardGenerationService.DraftCard;
+        waveDeathListener.OnWaveDead += _resourceService.CountWave;
         IncreaseAndRestoreWaveCost();
         return abstractEnemies.ToArray();
     }

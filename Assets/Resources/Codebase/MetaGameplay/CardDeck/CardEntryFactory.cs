@@ -9,7 +9,7 @@ public class CardEntryFactory : AbstractPoolerFactory<CardEntry>
     private CardEntry _prefab;
     private Transform _parent;
     private Transform _canvasParent;
-    private CardDeckEditingService _cardDeckEditingservice;
+    private CardDeckEditingMenu _cardDeckEditingservice;
     public CardEntryFactory(DiContainer diContainer, CardEntry prefab, MetaUiContainer metaUiContainer) : base(diContainer)
     {
         _prefab = prefab;
@@ -17,7 +17,7 @@ public class CardEntryFactory : AbstractPoolerFactory<CardEntry>
         _canvasParent = metaUiContainer.MetaUiCanvasTransform;
 
     }
-    public void Init(CardDeckEditingService service)
+    public void Init(CardDeckEditingMenu service)
     {
         _cardDeckEditingservice = service;
     }

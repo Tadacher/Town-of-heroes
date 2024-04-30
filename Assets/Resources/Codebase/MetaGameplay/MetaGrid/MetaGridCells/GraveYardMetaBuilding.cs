@@ -1,20 +1,15 @@
 ﻿namespace Metagameplay.Buildings
 {
-    public class Streets : AbstractMetaGridCell
-    {
-        public override void UnApplyEffect()
-        {
-
-        }
-
+    public class GraveYardMetaBuilding : AbstractMetaGridCell
+    {     
         protected override void ApplyGridInteractions()
         {
-
+            
         }
 
         protected override void UnApplyGridInteractions()
         {
-
+            
         }
     }
 }

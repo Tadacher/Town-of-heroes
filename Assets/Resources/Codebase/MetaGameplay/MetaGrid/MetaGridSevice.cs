@@ -1,6 +1,9 @@
+using Core.Towers;
+using Metagameplay.Buildings;
 using Services.GridSystem;
 using System;
 using UnityEngine;
+using static Infrastructure.MetaCitySave;
 
 /// <summary>
 /// Meta grid and grid-level interaction logic
@@ -17,9 +20,9 @@ public class MetaGridSevice : AbstractGridService
     public MetaGridSevice() : base(Vector2.one/2, Vector2.zero, _cellSize, _gridSize_X, _gridSize_Y)
     {
     }
-    public Type[] GetSaveData()
+    public Infrastructure.MetaCitySave.MetaCitySaveEntry[] GetSaveData()
     {
-        Type[] types = new Type[_gridSizeX*_gridSizeY];
+        MetaCitySaveEntry[] types = new MetaCitySaveEntry[_gridSizeX*_gridSizeY];
 
         for (int x = 0; x < _gridSizeX; x++)
         {
@@ -31,7 +34,11 @@ public class MetaGridSevice : AbstractGridService
                     types[flatIndex] = null;
 
                 else
-                    types[flatIndex] = _cells[x, y].GetType();
+                {
+                    Type buildingType = _cells[x, y].GetType();
+                    int level = (_cells[x, y] as AbstractMetaGridCell).Level;
+                    types[flatIndex] = new(buildingType, level);
+                }
             }
         }
         return types;

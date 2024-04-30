@@ -3,7 +3,7 @@ using Services.CardGeneration;
 using System;
 using UnityEngine;
 
-public class CardDeckEditingService : IDeckEntryPressedReciever, IEntryInserter
+public class CardDeckEditingMenu : IDeckEntryPressedReciever, IEntryInserter
 {
     private readonly DeckEditingUiContainer _deckBuildingUiContainer;
     private readonly CardDeckSaveLoader _deckService;
@@ -11,13 +11,15 @@ public class CardDeckEditingService : IDeckEntryPressedReciever, IEntryInserter
     private readonly CardEntryFactory _cardEntryFactory;
     private readonly CardDescriptionService _cardDescriptionService;
     private readonly AbstractTowerPrefabContainer _abstractTowerPrefabContainer;
+    private readonly CardAvalilabilityService _cardAvalilabilityService;
 
-    public CardDeckEditingService(MetaUiContainer uiContainer,
+    public CardDeckEditingMenu(MetaUiContainer uiContainer,
                                   CardDeckSaveLoader deckService,
                                   DeckEntryFactory deckEntryFactory,
                                   CardEntryFactory cardEntryFactory,
                                   CardDescriptionService cardDescriptionService,
-                                  AbstractTowerPrefabContainer abstractTowerPrefabContainer)
+                                  AbstractTowerPrefabContainer abstractTowerPrefabContainer,
+                                  CardAvalilabilityService cardAvalilabilityService)
     {
         _deckBuildingUiContainer = uiContainer.DeckEditingUiContainer;
         _deckService = deckService;
@@ -25,7 +27,7 @@ public class CardDeckEditingService : IDeckEntryPressedReciever, IEntryInserter
         _cardEntryFactory = cardEntryFactory;
         _cardDescriptionService = cardDescriptionService;
         _abstractTowerPrefabContainer = abstractTowerPrefabContainer;
-
+        _cardAvalilabilityService = cardAvalilabilityService;
         InitDeckEntryFactory();
         InitCardFactory();
         InitDeckLayoutContent();
@@ -40,6 +42,9 @@ public class CardDeckEditingService : IDeckEntryPressedReciever, IEntryInserter
         foreach (Core.Towers.AbstractTower tower in _abstractTowerPrefabContainer.Towers)
         {
             if (_deckService.CardDeckSave.Contains(tower.GetType()))
+                continue;
+
+            if (!_cardAvalilabilityService.AllowedTypes.Contains(tower.GetType()))
                 continue;
 
             CardEntry card = _cardEntryFactory.GetObject();

@@ -2,6 +2,7 @@
 using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
+using static Infrastructure.MetaCitySave;
 
 namespace Infrastructure
 {
@@ -31,7 +32,7 @@ namespace Infrastructure
             else
                 Debug.LogError("NO ACCEPTABLE SAVES FOUND");
         }
-        public void Save(Type[] types)
+        public void Save(MetaCitySaveEntry[] types)
         {
             if (SaveObject == null)
                 SaveObject = new(types);
@@ -53,13 +54,24 @@ namespace Infrastructure
     public class MetaCitySave
     {
         /// <summary>
-        /// must be flat array cuz json caanot save multi-dimensional arrays
+        /// must be flat array cuz json cannot save multi-dimensional arrays
         /// </summary>
-        public Type[] FlatGrid;
+        public MetaCitySaveEntry[] FlatGrid;
 
-        public MetaCitySave(Type[] grid)
+        public MetaCitySave(MetaCitySaveEntry[] grid)
         {
             FlatGrid = grid;
+        }
+        public class MetaCitySaveEntry
+        {
+            public Type BuildingType;
+            public int BuildingLevel;
+
+            public MetaCitySaveEntry(Type buildingType, int buildingLevel)
+            {
+                BuildingType = buildingType;
+                BuildingLevel = buildingLevel;
+            }
         }
     }
 }

@@ -18,13 +18,16 @@ namespace Metagameplay.Ui
         [SerializeField] private Button _buildButton;
 
         private BuildMenuEntry _lastSelectedEntry;
+        private MetaUiContainer _metaUiContainer;
         [Inject]
         public void Init(MetaUiContainer metaUiContainer)
         {
-            _buildButton.onClick
-                .AddListener(() => metaUiContainer.BuildMenuUiContainer.gameObject.SetActive(false));
+            _metaUiContainer = metaUiContainer;
             _buildButton.onClick.AddListener(OnButtonPressed);
         }
+
+        public void CloseMenu() => _metaUiContainer.BuildMenuUiContainer.gameObject.SetActive(false);
+
         public void UpdateView(MetaBuildingDescriptionParams buildingDescruptionParams, BuildMenuEntry buildMenuEntry)
         {
             _lastSelectedEntry?.Deselect();

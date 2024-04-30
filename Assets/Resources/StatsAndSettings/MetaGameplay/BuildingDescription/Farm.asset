@@ -40,5 +40,9 @@ MonoBehaviour:
     WoodPieces: 1
     StonePieces: 1
     FoodPieces: 0
+    Scrolls: 0
+  PerLevelEffects:
+  - AvailableTowers:
+    - {fileID: 0}
   Image: {fileID: 21300000, guid: 1fde77ef8c120c648bef297755ab78c9, type: 3}
   ClipOnSelect: {fileID: 8300000, guid: 72169e55f3e3ae047b93ab1e7dc75a4d, type: 3}
