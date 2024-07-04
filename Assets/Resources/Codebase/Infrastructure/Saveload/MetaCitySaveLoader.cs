@@ -22,7 +22,14 @@ namespace Infrastructure
             if (File.Exists(Application.persistentDataPath + _path))
             {
                 _json = File.ReadAllText(Application.persistentDataPath + _path);
-                SaveObject = JsonConvert.DeserializeObject<MetaCitySave>(_json);
+                try
+                {
+                    SaveObject = JsonConvert.DeserializeObject<MetaCitySave>(_json);
+                }
+                catch(Exception ex)
+                {
+                    Debug.LogError(ex);
+                }
             }
             else if (File.Exists(Application.persistentDataPath + _initialMapPath))
             {
@@ -30,7 +37,7 @@ namespace Infrastructure
                 SaveObject = JsonConvert.DeserializeObject<MetaCitySave>(_json);
             }
             else
-                Debug.LogError("NO ACCEPTABLE SAVES FOUND");
+                Debug.LogError("NO INITIAL MAP FOUND");
         }
         public void Save(MetaCitySaveEntry[] save)
         {
