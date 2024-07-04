@@ -16,8 +16,10 @@ namespace Progress
 
         public ResourceService(ResourcesSaveLoader resourcesSaveLoader)
         {
+            _resourcesSaveLoader = resourcesSaveLoader;
             if(resourcesSaveLoader.ResourceSave == null)
             {
+                _data = new(0, 0, 0, 0, 0);
                 Debug.LogError("No resource savefile found!");
                 return;
             }
@@ -28,7 +30,6 @@ namespace Progress
                 foodPieces: save.FoodPieces,
                 scrolls: save.Scrolls,
                 waves: save.Waves);
-            _resourcesSaveLoader = resourcesSaveLoader;
         }
 
         public void Save() => _resourcesSaveLoader.Save(GetResourceData());
