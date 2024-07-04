@@ -1,0 +1,662 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorldCells.AbstractWorldCell
+  commentId: T:WorldCells.AbstractWorldCell
+  id: AbstractWorldCell
+  parent: WorldCells
+  children:
+  - WorldCells.AbstractWorldCell._cellStats
+  - WorldCells.AbstractWorldCell._gridAlignService
+  - WorldCells.AbstractWorldCell._objectPooler
+  - WorldCells.AbstractWorldCell._pointerFollower
+  - WorldCells.AbstractWorldCell._spriteRenderer
+  - WorldCells.AbstractWorldCell._worldCellBalanceService
+  - WorldCells.AbstractWorldCell.AsGhost
+  - WorldCells.AbstractWorldCell.AsUnGhost
+  - WorldCells.AbstractWorldCell.Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+  - WorldCells.AbstractWorldCell.InsertSelfToGrid
+  - WorldCells.AbstractWorldCell.MakeGhost
+  - WorldCells.AbstractWorldCell.MakeUnGhost
+  - WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  - WorldCells.AbstractWorldCell.ReturnToPool
+  - WorldCells.AbstractWorldCell.StartFollowPointer
+  - WorldCells.AbstractWorldCell.StopFollowingPointer
+  langs:
+  - csharp
+  - vb
+  name: AbstractWorldCell
+  nameWithType: AbstractWorldCell
+  fullName: WorldCells.AbstractWorldCell
+  type: Class
+  source:
+    id: AbstractWorldCell
+    path: ''
+    startLine: 3767
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  summary: "\nbase class for all world cells\nit is mandatory for it to be in WorldCells namespace for propper card generation\n"
+  example: []
+  syntax:
+    content: 'public class AbstractWorldCell : MonoBehaviour, IPoolableObject, IGridCellObject'
+    content.vb: >-
+      Public Class AbstractWorldCell
+          Inherits MonoBehaviour
+          Implements IPoolableObject, IGridCellObject
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - WorldCells.GrassMeadows
+  - WorldCells.GraveYard
+  implements:
+  - Global.IPoolableObject
+  - Services.GridSystem.IGridCellObject
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WorldCells.AbstractWorldCell._pointerFollower
+  commentId: F:WorldCells.AbstractWorldCell._pointerFollower
+  id: _pointerFollower
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: _pointerFollower
+  nameWithType: AbstractWorldCell._pointerFollower
+  fullName: WorldCells.AbstractWorldCell._pointerFollower
+  type: Field
+  source:
+    id: _pointerFollower
+    path: ''
+    startLine: 3770
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: protected PointerFollower _pointerFollower
+    return:
+      type: Global.PointerFollower
+    content.vb: Protected _pointerFollower As PointerFollower
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: WorldCells.AbstractWorldCell._spriteRenderer
+  commentId: F:WorldCells.AbstractWorldCell._spriteRenderer
+  id: _spriteRenderer
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: _spriteRenderer
+  nameWithType: AbstractWorldCell._spriteRenderer
+  fullName: WorldCells.AbstractWorldCell._spriteRenderer
+  type: Field
+  source:
+    id: _spriteRenderer
+    path: ''
+    startLine: 3771
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: protected SpriteRenderer _spriteRenderer
+    return:
+      type: Global.SpriteRenderer
+    content.vb: Protected _spriteRenderer As SpriteRenderer
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: WorldCells.AbstractWorldCell._cellStats
+  commentId: F:WorldCells.AbstractWorldCell._cellStats
+  id: _cellStats
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: _cellStats
+  nameWithType: AbstractWorldCell._cellStats
+  fullName: WorldCells.AbstractWorldCell._cellStats
+  type: Field
+  source:
+    id: _cellStats
+    path: ''
+    startLine: 3772
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: protected CellStats _cellStats
+    return:
+      type: Services.CardGeneration.CellStats
+    content.vb: Protected _cellStats As CellStats
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: WorldCells.AbstractWorldCell._objectPooler
+  commentId: F:WorldCells.AbstractWorldCell._objectPooler
+  id: _objectPooler
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: _objectPooler
+  nameWithType: AbstractWorldCell._objectPooler
+  fullName: WorldCells.AbstractWorldCell._objectPooler
+  type: Field
+  source:
+    id: _objectPooler
+    path: ''
+    startLine: 3774
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: protected IObjectPooler _objectPooler
+    return:
+      type: Global.IObjectPooler
+    content.vb: Protected _objectPooler As IObjectPooler
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: WorldCells.AbstractWorldCell._gridAlignService
+  commentId: F:WorldCells.AbstractWorldCell._gridAlignService
+  id: _gridAlignService
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: _gridAlignService
+  nameWithType: AbstractWorldCell._gridAlignService
+  fullName: WorldCells.AbstractWorldCell._gridAlignService
+  type: Field
+  source:
+    id: _gridAlignService
+    path: ''
+    startLine: 3775
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: protected WorldCellGridService _gridAlignService
+    return:
+      type: Global.WorldCellGridService
+    content.vb: Protected _gridAlignService As WorldCellGridService
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: WorldCells.AbstractWorldCell._worldCellBalanceService
+  commentId: F:WorldCells.AbstractWorldCell._worldCellBalanceService
+  id: _worldCellBalanceService
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: _worldCellBalanceService
+  nameWithType: AbstractWorldCell._worldCellBalanceService
+  fullName: WorldCells.AbstractWorldCell._worldCellBalanceService
+  type: Field
+  source:
+    id: _worldCellBalanceService
+    path: ''
+    startLine: 3776
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: protected WorldCellBalanceService _worldCellBalanceService
+    return:
+      type: WorldCells.WorldCellBalanceService
+    content.vb: Protected _worldCellBalanceService As WorldCellBalanceService
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: WorldCells.AbstractWorldCell.Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+  commentId: M:WorldCells.AbstractWorldCell.Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+  id: Initialize(IObjectPooler,WorldCellGridService,AbstractInputService,WorldCells.WorldCellBalanceService)
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: Initialize(IObjectPooler, WorldCellGridService, AbstractInputService, WorldCellBalanceService)
+  nameWithType: AbstractWorldCell.Initialize(IObjectPooler, WorldCellGridService, AbstractInputService, WorldCellBalanceService)
+  fullName: WorldCells.AbstractWorldCell.Initialize(IObjectPooler, WorldCellGridService, AbstractInputService, WorldCells.WorldCellBalanceService)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 3778
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public void Initialize(IObjectPooler objectPooler, WorldCellGridService gridAlignService, AbstractInputService inputService, WorldCellBalanceService worldCellBalanceService)
+    parameters:
+    - id: objectPooler
+      type: Global.IObjectPooler
+    - id: gridAlignService
+      type: Global.WorldCellGridService
+    - id: inputService
+      type: Global.AbstractInputService
+    - id: worldCellBalanceService
+      type: WorldCells.WorldCellBalanceService
+    content.vb: Public Sub Initialize(objectPooler As IObjectPooler, gridAlignService As WorldCellGridService, inputService As AbstractInputService, worldCellBalanceService As WorldCellBalanceService)
+  overload: WorldCells.AbstractWorldCell.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCells.AbstractWorldCell.ReturnToPool
+  commentId: M:WorldCells.AbstractWorldCell.ReturnToPool
+  id: ReturnToPool
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: ReturnToPool()
+  nameWithType: AbstractWorldCell.ReturnToPool()
+  fullName: WorldCells.AbstractWorldCell.ReturnToPool()
+  type: Method
+  source:
+    id: ReturnToPool
+    path: ''
+    startLine: 3789
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public void ReturnToPool()
+    content.vb: Public Sub ReturnToPool
+  overload: WorldCells.AbstractWorldCell.ReturnToPool*
+  implements:
+  - Global.IPoolableObject.ReturnToPool
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCells.AbstractWorldCell.StartFollowPointer
+  commentId: M:WorldCells.AbstractWorldCell.StartFollowPointer
+  id: StartFollowPointer
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: StartFollowPointer()
+  nameWithType: AbstractWorldCell.StartFollowPointer()
+  fullName: WorldCells.AbstractWorldCell.StartFollowPointer()
+  type: Method
+  source:
+    id: StartFollowPointer
+    path: ''
+    startLine: 3792
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public void StartFollowPointer()
+    content.vb: Public Sub StartFollowPointer
+  overload: WorldCells.AbstractWorldCell.StartFollowPointer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCells.AbstractWorldCell.StopFollowingPointer
+  commentId: M:WorldCells.AbstractWorldCell.StopFollowingPointer
+  id: StopFollowingPointer
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: StopFollowingPointer()
+  nameWithType: AbstractWorldCell.StopFollowingPointer()
+  fullName: WorldCells.AbstractWorldCell.StopFollowingPointer()
+  type: Method
+  source:
+    id: StopFollowingPointer
+    path: ''
+    startLine: 3794
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public void StopFollowingPointer()
+    content.vb: Public Sub StopFollowingPointer
+  overload: WorldCells.AbstractWorldCell.StopFollowingPointer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCells.AbstractWorldCell.InsertSelfToGrid
+  commentId: M:WorldCells.AbstractWorldCell.InsertSelfToGrid
+  id: InsertSelfToGrid
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: InsertSelfToGrid()
+  nameWithType: AbstractWorldCell.InsertSelfToGrid()
+  fullName: WorldCells.AbstractWorldCell.InsertSelfToGrid()
+  type: Method
+  source:
+    id: InsertSelfToGrid
+    path: ''
+    startLine: 3796
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public virtual void InsertSelfToGrid()
+    content.vb: Public Overridable Sub InsertSelfToGrid
+  overload: WorldCells.AbstractWorldCell.InsertSelfToGrid*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  commentId: M:WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  id: RemoveSelfFromGrid
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: RemoveSelfFromGrid()
+  nameWithType: AbstractWorldCell.RemoveSelfFromGrid()
+  fullName: WorldCells.AbstractWorldCell.RemoveSelfFromGrid()
+  type: Method
+  source:
+    id: RemoveSelfFromGrid
+    path: ''
+    startLine: 3802
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public virtual void RemoveSelfFromGrid()
+    content.vb: Public Overridable Sub RemoveSelfFromGrid
+  overload: WorldCells.AbstractWorldCell.RemoveSelfFromGrid*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: WorldCells.AbstractWorldCell.AsGhost
+  commentId: M:WorldCells.AbstractWorldCell.AsGhost
+  id: AsGhost
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: AsGhost()
+  nameWithType: AbstractWorldCell.AsGhost()
+  fullName: WorldCells.AbstractWorldCell.AsGhost()
+  type: Method
+  source:
+    id: AsGhost
+    path: ''
+    startLine: 3808
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public AbstractWorldCell AsGhost()
+    return:
+      type: WorldCells.AbstractWorldCell
+    content.vb: Public Function AsGhost As AbstractWorldCell
+  overload: WorldCells.AbstractWorldCell.AsGhost*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCells.AbstractWorldCell.AsUnGhost
+  commentId: M:WorldCells.AbstractWorldCell.AsUnGhost
+  id: AsUnGhost
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: AsUnGhost()
+  nameWithType: AbstractWorldCell.AsUnGhost()
+  fullName: WorldCells.AbstractWorldCell.AsUnGhost()
+  type: Method
+  source:
+    id: AsUnGhost
+    path: ''
+    startLine: 3814
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public AbstractWorldCell AsUnGhost()
+    return:
+      type: WorldCells.AbstractWorldCell
+    content.vb: Public Function AsUnGhost As AbstractWorldCell
+  overload: WorldCells.AbstractWorldCell.AsUnGhost*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCells.AbstractWorldCell.MakeUnGhost
+  commentId: M:WorldCells.AbstractWorldCell.MakeUnGhost
+  id: MakeUnGhost
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: MakeUnGhost()
+  nameWithType: AbstractWorldCell.MakeUnGhost()
+  fullName: WorldCells.AbstractWorldCell.MakeUnGhost()
+  type: Method
+  source:
+    id: MakeUnGhost
+    path: ''
+    startLine: 3820
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: protected void MakeUnGhost()
+    content.vb: Protected Sub MakeUnGhost
+  overload: WorldCells.AbstractWorldCell.MakeUnGhost*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: WorldCells.AbstractWorldCell.MakeGhost
+  commentId: M:WorldCells.AbstractWorldCell.MakeGhost
+  id: MakeGhost
+  parent: WorldCells.AbstractWorldCell
+  langs:
+  - csharp
+  - vb
+  name: MakeGhost()
+  nameWithType: AbstractWorldCell.MakeGhost()
+  fullName: WorldCells.AbstractWorldCell.MakeGhost()
+  type: Method
+  source:
+    id: MakeGhost
+    path: ''
+    startLine: 3825
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: protected void MakeGhost()
+    content.vb: Protected Sub MakeGhost
+  overload: WorldCells.AbstractWorldCell.MakeGhost*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+- uid: Services.GridSystem.IGridCellObject
+  commentId: T:Services.GridSystem.IGridCellObject
+  parent: Services.GridSystem
+  name: IGridCellObject
+  nameWithType: IGridCellObject
+  fullName: Services.GridSystem.IGridCellObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem
+- uid: Global.PointerFollower
+  commentId: T:Global.PointerFollower
+  name: PointerFollower
+  nameWithType: PointerFollower
+  fullName: PointerFollower
+- uid: Global.SpriteRenderer
+  commentId: '!:Global.SpriteRenderer'
+  isExternal: true
+  name: SpriteRenderer
+  nameWithType: SpriteRenderer
+  fullName: SpriteRenderer
+- uid: Services.CardGeneration.CellStats
+  commentId: T:Services.CardGeneration.CellStats
+  parent: Services.CardGeneration
+  name: CellStats
+  nameWithType: CellStats
+  fullName: Services.CardGeneration.CellStats
+- uid: Services.CardGeneration
+  commentId: N:Services.CardGeneration
+  name: Services.CardGeneration
+  nameWithType: Services.CardGeneration
+  fullName: Services.CardGeneration
+- uid: Global.IObjectPooler
+  commentId: T:Global.IObjectPooler
+  name: IObjectPooler
+  nameWithType: IObjectPooler
+  fullName: IObjectPooler
+- uid: Global.WorldCellGridService
+  isExternal: true
+  name: WorldCellGridService
+  nameWithType: WorldCellGridService
+  fullName: WorldCellGridService
+- uid: WorldCells.WorldCellBalanceService
+  commentId: T:WorldCells.WorldCellBalanceService
+  parent: WorldCells
+  name: WorldCellBalanceService
+  nameWithType: WorldCellBalanceService
+  fullName: WorldCells.WorldCellBalanceService
+- uid: WorldCells.AbstractWorldCell.Initialize*
+  commentId: Overload:WorldCells.AbstractWorldCell.Initialize
+  name: Initialize
+  nameWithType: AbstractWorldCell.Initialize
+  fullName: WorldCells.AbstractWorldCell.Initialize
+- uid: Global.AbstractInputService
+  isExternal: true
+  name: AbstractInputService
+  nameWithType: AbstractInputService
+  fullName: AbstractInputService
+- uid: WorldCells.AbstractWorldCell.ReturnToPool*
+  commentId: Overload:WorldCells.AbstractWorldCell.ReturnToPool
+  name: ReturnToPool
+  nameWithType: AbstractWorldCell.ReturnToPool
+  fullName: WorldCells.AbstractWorldCell.ReturnToPool
+- uid: Global.IPoolableObject.ReturnToPool
+  commentId: M:Global.IPoolableObject.ReturnToPool
+  parent: Global.IPoolableObject
+  name: ReturnToPool()
+  nameWithType: IPoolableObject.ReturnToPool()
+  fullName: IPoolableObject.ReturnToPool()
+  spec.csharp:
+  - uid: Global.IPoolableObject.ReturnToPool
+    name: ReturnToPool
+    nameWithType: IPoolableObject.ReturnToPool
+    fullName: IPoolableObject.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.IPoolableObject.ReturnToPool
+    name: ReturnToPool
+    nameWithType: IPoolableObject.ReturnToPool
+    fullName: IPoolableObject.ReturnToPool
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.AbstractWorldCell.StartFollowPointer*
+  commentId: Overload:WorldCells.AbstractWorldCell.StartFollowPointer
+  name: StartFollowPointer
+  nameWithType: AbstractWorldCell.StartFollowPointer
+  fullName: WorldCells.AbstractWorldCell.StartFollowPointer
+- uid: WorldCells.AbstractWorldCell.StopFollowingPointer*
+  commentId: Overload:WorldCells.AbstractWorldCell.StopFollowingPointer
+  name: StopFollowingPointer
+  nameWithType: AbstractWorldCell.StopFollowingPointer
+  fullName: WorldCells.AbstractWorldCell.StopFollowingPointer
+- uid: WorldCells.AbstractWorldCell.InsertSelfToGrid*
+  commentId: Overload:WorldCells.AbstractWorldCell.InsertSelfToGrid
+  name: InsertSelfToGrid
+  nameWithType: AbstractWorldCell.InsertSelfToGrid
+  fullName: WorldCells.AbstractWorldCell.InsertSelfToGrid
+- uid: WorldCells.AbstractWorldCell.RemoveSelfFromGrid*
+  commentId: Overload:WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+  name: RemoveSelfFromGrid
+  nameWithType: AbstractWorldCell.RemoveSelfFromGrid
+  fullName: WorldCells.AbstractWorldCell.RemoveSelfFromGrid
+- uid: WorldCells.AbstractWorldCell.AsGhost*
+  commentId: Overload:WorldCells.AbstractWorldCell.AsGhost
+  name: AsGhost
+  nameWithType: AbstractWorldCell.AsGhost
+  fullName: WorldCells.AbstractWorldCell.AsGhost
+- uid: WorldCells.AbstractWorldCell
+  commentId: T:WorldCells.AbstractWorldCell
+  parent: WorldCells
+  name: AbstractWorldCell
+  nameWithType: AbstractWorldCell
+  fullName: WorldCells.AbstractWorldCell
+- uid: WorldCells.AbstractWorldCell.AsUnGhost*
+  commentId: Overload:WorldCells.AbstractWorldCell.AsUnGhost
+  name: AsUnGhost
+  nameWithType: AbstractWorldCell.AsUnGhost
+  fullName: WorldCells.AbstractWorldCell.AsUnGhost
+- uid: WorldCells.AbstractWorldCell.MakeUnGhost*
+  commentId: Overload:WorldCells.AbstractWorldCell.MakeUnGhost
+  name: MakeUnGhost
+  nameWithType: AbstractWorldCell.MakeUnGhost
+  fullName: WorldCells.AbstractWorldCell.MakeUnGhost
+- uid: WorldCells.AbstractWorldCell.MakeGhost*
+  commentId: Overload:WorldCells.AbstractWorldCell.MakeGhost
+  name: MakeGhost
+  nameWithType: AbstractWorldCell.MakeGhost
+  fullName: WorldCells.AbstractWorldCell.MakeGhost

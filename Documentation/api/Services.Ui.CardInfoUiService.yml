@@ -1,0 +1,502 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.Ui.CardInfoUiService
+  commentId: T:Services.Ui.CardInfoUiService
+  id: CardInfoUiService
+  parent: Services.Ui
+  children:
+  - Services.Ui.CardInfoUiService.#ctor(CardInfoUIContainer,AbstractInputService)
+  - Services.Ui.CardInfoUiService.Hide
+  - Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  - Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  langs:
+  - csharp
+  - vb
+  name: CardInfoUiService
+  nameWithType: CardInfoUiService
+  fullName: Services.Ui.CardInfoUiService
+  type: Class
+  source:
+    id: CardInfoUiService
+    path: ''
+    startLine: 793
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  summary: "\ncontrolls tower/worldcell describition GUI\n"
+  example: []
+  syntax:
+    content: public class CardInfoUiService
+    content.vb: Public Class CardInfoUiService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.Ui.CardInfoUiService.#ctor(CardInfoUIContainer,AbstractInputService)
+  commentId: M:Services.Ui.CardInfoUiService.#ctor(CardInfoUIContainer,AbstractInputService)
+  id: '#ctor(CardInfoUIContainer,AbstractInputService)'
+  parent: Services.Ui.CardInfoUiService
+  langs:
+  - csharp
+  - vb
+  name: CardInfoUiService(CardInfoUIContainer, AbstractInputService)
+  nameWithType: CardInfoUiService.CardInfoUiService(CardInfoUIContainer, AbstractInputService)
+  fullName: Services.Ui.CardInfoUiService.CardInfoUiService(CardInfoUIContainer, AbstractInputService)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 798
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: public CardInfoUiService(CardInfoUIContainer container, AbstractInputService abstractInputService)
+    parameters:
+    - id: container
+      type: Global.CardInfoUIContainer
+    - id: abstractInputService
+      type: Global.AbstractInputService
+    content.vb: Public Sub New(container As CardInfoUIContainer, abstractInputService As AbstractInputService)
+  overload: Services.Ui.CardInfoUiService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  commentId: M:Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  id: ShowAsTower(TowerCardInfoConfig)
+  parent: Services.Ui.CardInfoUiService
+  langs:
+  - csharp
+  - vb
+  name: ShowAsTower(TowerCardInfoConfig)
+  nameWithType: CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  fullName: Services.Ui.CardInfoUiService.ShowAsTower(TowerCardInfoConfig)
+  type: Method
+  source:
+    id: ShowAsTower
+    path: ''
+    startLine: 810
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  summary: "\nshows given tower description\n"
+  example: []
+  syntax:
+    content: public void ShowAsTower(TowerCardInfoConfig towerCardInfoConfig)
+    parameters:
+    - id: towerCardInfoConfig
+      type: Global.TowerCardInfoConfig
+      description: description container
+    content.vb: Public Sub ShowAsTower(towerCardInfoConfig As TowerCardInfoConfig)
+  overload: Services.Ui.CardInfoUiService.ShowAsTower*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  commentId: M:Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  id: ShowAsWorldCell(WorldCellCardInfoConfig)
+  parent: Services.Ui.CardInfoUiService
+  langs:
+  - csharp
+  - vb
+  name: ShowAsWorldCell(WorldCellCardInfoConfig)
+  nameWithType: CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  fullName: Services.Ui.CardInfoUiService.ShowAsWorldCell(WorldCellCardInfoConfig)
+  type: Method
+  source:
+    id: ShowAsWorldCell
+    path: ''
+    startLine: 823
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: public void ShowAsWorldCell(WorldCellCardInfoConfig worldCellCardInfoConfig)
+    parameters:
+    - id: worldCellCardInfoConfig
+      type: Global.WorldCellCardInfoConfig
+    content.vb: Public Sub ShowAsWorldCell(worldCellCardInfoConfig As WorldCellCardInfoConfig)
+  overload: Services.Ui.CardInfoUiService.ShowAsWorldCell*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.Ui.CardInfoUiService.Hide
+  commentId: M:Services.Ui.CardInfoUiService.Hide
+  id: Hide
+  parent: Services.Ui.CardInfoUiService
+  langs:
+  - csharp
+  - vb
+  name: Hide()
+  nameWithType: CardInfoUiService.Hide()
+  fullName: Services.Ui.CardInfoUiService.Hide()
+  type: Method
+  source:
+    id: Hide
+    path: ''
+    startLine: 833
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: public void Hide()
+    content.vb: Public Sub Hide
+  overload: Services.Ui.CardInfoUiService.Hide*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Services.Ui
+  commentId: N:Services.Ui
+  name: Services.Ui
+  nameWithType: Services.Ui
+  fullName: Services.Ui
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Services.Ui.CardInfoUiService.#ctor*
+  commentId: Overload:Services.Ui.CardInfoUiService.#ctor
+  name: CardInfoUiService
+  nameWithType: CardInfoUiService.CardInfoUiService
+  fullName: Services.Ui.CardInfoUiService.CardInfoUiService
+- uid: Global.CardInfoUIContainer
+  commentId: T:Global.CardInfoUIContainer
+  name: CardInfoUIContainer
+  nameWithType: CardInfoUIContainer
+  fullName: CardInfoUIContainer
+- uid: Global.AbstractInputService
+  isExternal: true
+  name: AbstractInputService
+  nameWithType: AbstractInputService
+  fullName: AbstractInputService
+- uid: Services.Ui.CardInfoUiService.ShowAsTower*
+  commentId: Overload:Services.Ui.CardInfoUiService.ShowAsTower
+  name: ShowAsTower
+  nameWithType: CardInfoUiService.ShowAsTower
+  fullName: Services.Ui.CardInfoUiService.ShowAsTower
+- uid: Global.TowerCardInfoConfig
+  commentId: T:Global.TowerCardInfoConfig
+  name: TowerCardInfoConfig
+  nameWithType: TowerCardInfoConfig
+  fullName: TowerCardInfoConfig
+- uid: Services.Ui.CardInfoUiService.ShowAsWorldCell*
+  commentId: Overload:Services.Ui.CardInfoUiService.ShowAsWorldCell
+  name: ShowAsWorldCell
+  nameWithType: CardInfoUiService.ShowAsWorldCell
+  fullName: Services.Ui.CardInfoUiService.ShowAsWorldCell
+- uid: Global.WorldCellCardInfoConfig
+  commentId: T:Global.WorldCellCardInfoConfig
+  name: WorldCellCardInfoConfig
+  nameWithType: WorldCellCardInfoConfig
+  fullName: WorldCellCardInfoConfig
+- uid: Services.Ui.CardInfoUiService.Hide*
+  commentId: Overload:Services.Ui.CardInfoUiService.Hide
+  name: Hide
+  nameWithType: CardInfoUiService.Hide
+  fullName: Services.Ui.CardInfoUiService.Hide

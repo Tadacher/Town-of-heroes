@@ -1,0 +1,119 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.SimpleTowerAttackModule
+  commentId: T:Global.SimpleTowerAttackModule
+  id: SimpleTowerAttackModule
+  parent: Global
+  children:
+  - Global.SimpleTowerAttackModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  langs:
+  - csharp
+  - vb
+  name: SimpleTowerAttackModule
+  nameWithType: SimpleTowerAttackModule
+  fullName: SimpleTowerAttackModule
+  type: Class
+  source:
+    id: SimpleTowerAttackModule
+    path: ''
+    startLine: 3646
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class SimpleTowerAttackModule : AbstractTowerAttackModule'
+    content.vb: >-
+      Public Class SimpleTowerAttackModule
+          Inherits AbstractTowerAttackModule
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.SimpleTowerAttackModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  commentId: M:Global.SimpleTowerAttackModule.DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  id: DealDamage(IHitpointOwner,System.Int32,Core.Towers.AbstractTower)
+  parent: Global.SimpleTowerAttackModule
+  langs:
+  - csharp
+  - vb
+  name: DealDamage(IHitpointOwner, Int32, AbstractTower)
+  nameWithType: SimpleTowerAttackModule.DealDamage(IHitpointOwner, Int32, AbstractTower)
+  fullName: SimpleTowerAttackModule.DealDamage(IHitpointOwner, System.Int32, Core.Towers.AbstractTower)
+  type: Method
+  source:
+    id: DealDamage
+    path: ''
+    startLine: 3648
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public override void DealDamage(IHitpointOwner target, int damage, AbstractTower damageDealer)
+    parameters:
+    - id: target
+      type: Global.IHitpointOwner
+    - id: damage
+      type: System.Int32
+    - id: damageDealer
+      type: Core.Towers.AbstractTower
+    content.vb: Public Overrides Sub DealDamage(target As IHitpointOwner, damage As Integer, damageDealer As AbstractTower)
+  overload: Global.SimpleTowerAttackModule.DealDamage*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.SimpleTowerAttackModule.DealDamage*
+  commentId: Overload:Global.SimpleTowerAttackModule.DealDamage
+  name: DealDamage
+  nameWithType: SimpleTowerAttackModule.DealDamage
+  fullName: SimpleTowerAttackModule.DealDamage
+- uid: Global.IHitpointOwner
+  commentId: T:Global.IHitpointOwner
+  name: IHitpointOwner
+  nameWithType: IHitpointOwner
+  fullName: IHitpointOwner
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Core.Towers.AbstractTower
+  commentId: T:Core.Towers.AbstractTower
+  parent: Core.Towers
+  name: AbstractTower
+  nameWithType: AbstractTower
+  fullName: Core.Towers.AbstractTower
+- uid: Core.Towers
+  commentId: N:Core.Towers
+  name: Core.Towers
+  nameWithType: Core.Towers
+  fullName: Core.Towers

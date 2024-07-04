@@ -1,0 +1,279 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorldCellBuilding.CardImage.CardImageDatabase
+  commentId: T:WorldCellBuilding.CardImage.CardImageDatabase
+  id: CardImageDatabase
+  parent: WorldCellBuilding.CardImage
+  children:
+  - WorldCellBuilding.CardImage.CardImageDatabase.GetSprite(System.String)
+  - WorldCellBuilding.CardImage.CardImageDatabase.Initialize
+  - WorldCellBuilding.CardImage.CardImageDatabase.WorldCellCardSpritesDataBase
+  langs:
+  - csharp
+  - vb
+  name: CardImageDatabase
+  nameWithType: CardImageDatabase
+  fullName: WorldCellBuilding.CardImage.CardImageDatabase
+  type: Class
+  source:
+    id: CardImageDatabase
+    path: ''
+    startLine: 1287
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCellBuilding.CardImage
+  summary: "\ncontains all images for world cell cards\n"
+  example: []
+  syntax:
+    content: 'public class CardImageDatabase : ScriptableObject'
+    content.vb: >-
+      Public Class CardImageDatabase
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WorldCellBuilding.CardImage.CardImageDatabase.WorldCellCardSpritesDataBase
+  commentId: F:WorldCellBuilding.CardImage.CardImageDatabase.WorldCellCardSpritesDataBase
+  id: WorldCellCardSpritesDataBase
+  parent: WorldCellBuilding.CardImage.CardImageDatabase
+  langs:
+  - csharp
+  - vb
+  name: WorldCellCardSpritesDataBase
+  nameWithType: CardImageDatabase.WorldCellCardSpritesDataBase
+  fullName: WorldCellBuilding.CardImage.CardImageDatabase.WorldCellCardSpritesDataBase
+  type: Field
+  source:
+    id: WorldCellCardSpritesDataBase
+    path: ''
+    startLine: 1296
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCellBuilding.CardImage
+  summary: "\nwhere key is &quot;Worldcells.&quot; + sprite.name and value is sprite itself\n"
+  example: []
+  syntax:
+    content: public Dictionary<string, Sprite> WorldCellCardSpritesDataBase
+    return:
+      type: Global.Dictionary{System.String,Sprite}
+    content.vb: Public WorldCellCardSpritesDataBase As Dictionary(Of String, Sprite)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCellBuilding.CardImage.CardImageDatabase.Initialize
+  commentId: M:WorldCellBuilding.CardImage.CardImageDatabase.Initialize
+  id: Initialize
+  parent: WorldCellBuilding.CardImage.CardImageDatabase
+  langs:
+  - csharp
+  - vb
+  name: Initialize()
+  nameWithType: CardImageDatabase.Initialize()
+  fullName: WorldCellBuilding.CardImage.CardImageDatabase.Initialize()
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 1298
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCellBuilding.CardImage
+  syntax:
+    content: public void Initialize()
+    content.vb: Public Sub Initialize
+  overload: WorldCellBuilding.CardImage.CardImageDatabase.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCellBuilding.CardImage.CardImageDatabase.GetSprite(System.String)
+  commentId: M:WorldCellBuilding.CardImage.CardImageDatabase.GetSprite(System.String)
+  id: GetSprite(System.String)
+  parent: WorldCellBuilding.CardImage.CardImageDatabase
+  langs:
+  - csharp
+  - vb
+  name: GetSprite(String)
+  nameWithType: CardImageDatabase.GetSprite(String)
+  fullName: WorldCellBuilding.CardImage.CardImageDatabase.GetSprite(System.String)
+  type: Method
+  source:
+    id: GetSprite
+    path: ''
+    startLine: 1321
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCellBuilding.CardImage
+  summary: "\nget sprite by world cell name\n"
+  example: []
+  syntax:
+    content: public Sprite GetSprite(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: same as world cell type
+    return:
+      type: Global.Sprite
+      description: sprite for worldcell
+    content.vb: Public Function GetSprite(name As String) As Sprite
+  overload: WorldCellBuilding.CardImage.CardImageDatabase.GetSprite*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: WorldCellBuilding.CardImage
+  commentId: N:WorldCellBuilding.CardImage
+  name: WorldCellBuilding.CardImage
+  nameWithType: WorldCellBuilding.CardImage
+  fullName: WorldCellBuilding.CardImage
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Dictionary{System.String,Sprite}
+  commentId: '!:Global.Dictionary{System.String,Sprite}'
+  definition: Global.Dictionary`2
+  name: Dictionary<String, Sprite>
+  nameWithType: Dictionary<String, Sprite>
+  fullName: Dictionary<System.String, Sprite>
+  nameWithType.vb: Dictionary(Of String, Sprite)
+  fullName.vb: Dictionary(Of System.String, Sprite)
+  name.vb: Dictionary(Of String, Sprite)
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Sprite
+    name: Sprite
+    nameWithType: Sprite
+    fullName: Sprite
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Sprite
+    name: Sprite
+    nameWithType: Sprite
+    fullName: Sprite
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCellBuilding.CardImage.CardImageDatabase.Initialize*
+  commentId: Overload:WorldCellBuilding.CardImage.CardImageDatabase.Initialize
+  name: Initialize
+  nameWithType: CardImageDatabase.Initialize
+  fullName: WorldCellBuilding.CardImage.CardImageDatabase.Initialize
+- uid: WorldCellBuilding.CardImage.CardImageDatabase.GetSprite*
+  commentId: Overload:WorldCellBuilding.CardImage.CardImageDatabase.GetSprite
+  name: GetSprite
+  nameWithType: CardImageDatabase.GetSprite
+  fullName: WorldCellBuilding.CardImage.CardImageDatabase.GetSprite
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Global.Sprite
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: Sprite

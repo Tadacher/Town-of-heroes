@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.CardGeneration.CellStats
+  commentId: T:Services.CardGeneration.CellStats
+  id: CellStats
+  parent: Services.CardGeneration
+  children:
+  - Services.CardGeneration.CellStats.CellTags
+  langs:
+  - csharp
+  - vb
+  name: CellStats
+  nameWithType: CellStats
+  fullName: Services.CardGeneration.CellStats
+  type: Class
+  source:
+    id: CellStats
+    path: ''
+    startLine: 1348
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: 'public class CellStats : ScriptableObject'
+    content.vb: >-
+      Public Class CellStats
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.CardGeneration.CellStats.CellTags
+  commentId: F:Services.CardGeneration.CellStats.CellTags
+  id: CellTags
+  parent: Services.CardGeneration.CellStats
+  langs:
+  - csharp
+  - vb
+  name: CellTags
+  nameWithType: CellStats.CellTags
+  fullName: Services.CardGeneration.CellStats.CellTags
+  type: Field
+  source:
+    id: CellTags
+    path: ''
+    startLine: 1351
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: public CellBiomeTypes[] CellTags
+    return:
+      type: WorldCells.CellBiomeTypes[]
+    content.vb: Public CellTags As CellBiomeTypes()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Services.CardGeneration
+  commentId: N:Services.CardGeneration
+  name: Services.CardGeneration
+  nameWithType: Services.CardGeneration
+  fullName: Services.CardGeneration
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: WorldCells.CellBiomeTypes[]
+  isExternal: true
+  name: CellBiomeTypes[]
+  nameWithType: CellBiomeTypes[]
+  fullName: WorldCells.CellBiomeTypes[]
+  nameWithType.vb: CellBiomeTypes()
+  fullName.vb: WorldCells.CellBiomeTypes()
+  name.vb: CellBiomeTypes()
+  spec.csharp:
+  - uid: WorldCells.CellBiomeTypes
+    name: CellBiomeTypes
+    nameWithType: CellBiomeTypes
+    fullName: WorldCells.CellBiomeTypes
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: WorldCells.CellBiomeTypes
+    name: CellBiomeTypes
+    nameWithType: CellBiomeTypes
+    fullName: WorldCells.CellBiomeTypes
+  - name: ()
+    nameWithType: ()
+    fullName: ()

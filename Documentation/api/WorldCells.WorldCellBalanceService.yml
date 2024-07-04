@@ -1,0 +1,669 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorldCells.WorldCellBalanceService
+  commentId: T:WorldCells.WorldCellBalanceService
+  id: WorldCellBalanceService
+  parent: WorldCells
+  children:
+  - WorldCells.WorldCellBalanceService.#ctor
+  - WorldCells.WorldCellBalanceService.CellCountByTag
+  - WorldCells.WorldCellBalanceService.Clear(IEnumerable{WorldCells.CellBiomeTypes})
+  - WorldCells.WorldCellBalanceService.Count(IEnumerable{WorldCells.CellBiomeTypes})
+  langs:
+  - csharp
+  - vb
+  name: WorldCellBalanceService
+  nameWithType: WorldCellBalanceService
+  fullName: WorldCells.WorldCellBalanceService
+  type: Class
+  source:
+    id: WorldCellBalanceService
+    path: ''
+    startLine: 3165
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public class WorldCellBalanceService
+    content.vb: Public Class WorldCellBalanceService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: WorldCells.WorldCellBalanceService.CellCountByTag
+  commentId: P:WorldCells.WorldCellBalanceService.CellCountByTag
+  id: CellCountByTag
+  parent: WorldCells.WorldCellBalanceService
+  langs:
+  - csharp
+  - vb
+  name: CellCountByTag
+  nameWithType: WorldCellBalanceService.CellCountByTag
+  fullName: WorldCells.WorldCellBalanceService.CellCountByTag
+  type: Property
+  source:
+    id: CellCountByTag
+    path: ''
+    startLine: 3167
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public Dictionary<CellBiomeTypes, int> CellCountByTag { get; }
+    parameters: []
+    return:
+      type: Global.Dictionary{WorldCells.CellBiomeTypes,System.Int32}
+    content.vb: Public ReadOnly Property CellCountByTag As Dictionary(Of CellBiomeTypes, Integer)
+  overload: WorldCells.WorldCellBalanceService.CellCountByTag*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: WorldCells.WorldCellBalanceService.#ctor
+  commentId: M:WorldCells.WorldCellBalanceService.#ctor
+  id: '#ctor'
+  parent: WorldCells.WorldCellBalanceService
+  langs:
+  - csharp
+  - vb
+  name: WorldCellBalanceService()
+  nameWithType: WorldCellBalanceService.WorldCellBalanceService()
+  fullName: WorldCells.WorldCellBalanceService.WorldCellBalanceService()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 3168
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public WorldCellBalanceService()
+    content.vb: Public Sub New
+  overload: WorldCells.WorldCellBalanceService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: WorldCells.WorldCellBalanceService.Count(IEnumerable{WorldCells.CellBiomeTypes})
+  commentId: M:WorldCells.WorldCellBalanceService.Count(IEnumerable{WorldCells.CellBiomeTypes})
+  id: Count(IEnumerable{WorldCells.CellBiomeTypes})
+  parent: WorldCells.WorldCellBalanceService
+  langs:
+  - csharp
+  - vb
+  name: Count(IEnumerable<CellBiomeTypes>)
+  nameWithType: WorldCellBalanceService.Count(IEnumerable<CellBiomeTypes>)
+  fullName: WorldCells.WorldCellBalanceService.Count(IEnumerable<WorldCells.CellBiomeTypes>)
+  type: Method
+  source:
+    id: Count
+    path: ''
+    startLine: 3171
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public void Count(IEnumerable<CellBiomeTypes> tags)
+    parameters:
+    - id: tags
+      type: Global.IEnumerable{WorldCells.CellBiomeTypes}
+    content.vb: Public Sub Count(tags As IEnumerable(Of CellBiomeTypes))
+  overload: WorldCells.WorldCellBalanceService.Count*
+  nameWithType.vb: WorldCellBalanceService.Count(IEnumerable(Of CellBiomeTypes))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: WorldCells.WorldCellBalanceService.Count(IEnumerable(Of WorldCells.CellBiomeTypes))
+  name.vb: Count(IEnumerable(Of CellBiomeTypes))
+- uid: WorldCells.WorldCellBalanceService.Clear(IEnumerable{WorldCells.CellBiomeTypes})
+  commentId: M:WorldCells.WorldCellBalanceService.Clear(IEnumerable{WorldCells.CellBiomeTypes})
+  id: Clear(IEnumerable{WorldCells.CellBiomeTypes})
+  parent: WorldCells.WorldCellBalanceService
+  langs:
+  - csharp
+  - vb
+  name: Clear(IEnumerable<CellBiomeTypes>)
+  nameWithType: WorldCellBalanceService.Clear(IEnumerable<CellBiomeTypes>)
+  fullName: WorldCells.WorldCellBalanceService.Clear(IEnumerable<WorldCells.CellBiomeTypes>)
+  type: Method
+  source:
+    id: Clear
+    path: ''
+    startLine: 3182
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public void Clear(IEnumerable<CellBiomeTypes> tags)
+    parameters:
+    - id: tags
+      type: Global.IEnumerable{WorldCells.CellBiomeTypes}
+    content.vb: Public Sub Clear(tags As IEnumerable(Of CellBiomeTypes))
+  overload: WorldCells.WorldCellBalanceService.Clear*
+  nameWithType.vb: WorldCellBalanceService.Clear(IEnumerable(Of CellBiomeTypes))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: WorldCells.WorldCellBalanceService.Clear(IEnumerable(Of WorldCells.CellBiomeTypes))
+  name.vb: Clear(IEnumerable(Of CellBiomeTypes))
+references:
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: WorldCells.WorldCellBalanceService.CellCountByTag*
+  commentId: Overload:WorldCells.WorldCellBalanceService.CellCountByTag
+  name: CellCountByTag
+  nameWithType: WorldCellBalanceService.CellCountByTag
+  fullName: WorldCells.WorldCellBalanceService.CellCountByTag
+- uid: Global.Dictionary{WorldCells.CellBiomeTypes,System.Int32}
+  commentId: '!:Global.Dictionary{WorldCells.CellBiomeTypes,System.Int32}'
+  definition: Global.Dictionary`2
+  name: Dictionary<CellBiomeTypes, Int32>
+  nameWithType: Dictionary<CellBiomeTypes, Int32>
+  fullName: Dictionary<WorldCells.CellBiomeTypes, System.Int32>
+  nameWithType.vb: Dictionary(Of CellBiomeTypes, Int32)
+  fullName.vb: Dictionary(Of WorldCells.CellBiomeTypes, System.Int32)
+  name.vb: Dictionary(Of CellBiomeTypes, Int32)
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WorldCells.CellBiomeTypes
+    name: CellBiomeTypes
+    nameWithType: CellBiomeTypes
+    fullName: WorldCells.CellBiomeTypes
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WorldCells.CellBiomeTypes
+    name: CellBiomeTypes
+    nameWithType: CellBiomeTypes
+    fullName: WorldCells.CellBiomeTypes
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.WorldCellBalanceService.#ctor*
+  commentId: Overload:WorldCells.WorldCellBalanceService.#ctor
+  name: WorldCellBalanceService
+  nameWithType: WorldCellBalanceService.WorldCellBalanceService
+  fullName: WorldCells.WorldCellBalanceService.WorldCellBalanceService
+- uid: WorldCells.WorldCellBalanceService.Count*
+  commentId: Overload:WorldCells.WorldCellBalanceService.Count
+  name: Count
+  nameWithType: WorldCellBalanceService.Count
+  fullName: WorldCells.WorldCellBalanceService.Count
+- uid: Global.IEnumerable{WorldCells.CellBiomeTypes}
+  commentId: '!:Global.IEnumerable{WorldCells.CellBiomeTypes}'
+  definition: Global.IEnumerable`1
+  name: IEnumerable<CellBiomeTypes>
+  nameWithType: IEnumerable<CellBiomeTypes>
+  fullName: IEnumerable<WorldCells.CellBiomeTypes>
+  nameWithType.vb: IEnumerable(Of CellBiomeTypes)
+  fullName.vb: IEnumerable(Of WorldCells.CellBiomeTypes)
+  name.vb: IEnumerable(Of CellBiomeTypes)
+  spec.csharp:
+  - uid: Global.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: WorldCells.CellBiomeTypes
+    name: CellBiomeTypes
+    nameWithType: CellBiomeTypes
+    fullName: WorldCells.CellBiomeTypes
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: WorldCells.CellBiomeTypes
+    name: CellBiomeTypes
+    nameWithType: CellBiomeTypes
+    fullName: WorldCells.CellBiomeTypes
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: Global.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: WorldCells.WorldCellBalanceService.Clear*
+  commentId: Overload:WorldCells.WorldCellBalanceService.Clear
+  name: Clear
+  nameWithType: WorldCellBalanceService.Clear
+  fullName: WorldCells.WorldCellBalanceService.Clear

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Codebase.MonobehaviourComponents
+  commentId: N:Codebase.MonobehaviourComponents
+  id: Codebase.MonobehaviourComponents
+  children:
+  - Codebase.MonobehaviourComponents.TowerCardSpawnMarker
+  langs:
+  - csharp
+  - vb
+  name: Codebase.MonobehaviourComponents
+  nameWithType: Codebase.MonobehaviourComponents
+  fullName: Codebase.MonobehaviourComponents
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Codebase.MonobehaviourComponents.TowerCardSpawnMarker
+  commentId: T:Codebase.MonobehaviourComponents.TowerCardSpawnMarker
+  name: TowerCardSpawnMarker
+  nameWithType: TowerCardSpawnMarker
+  fullName: Codebase.MonobehaviourComponents.TowerCardSpawnMarker

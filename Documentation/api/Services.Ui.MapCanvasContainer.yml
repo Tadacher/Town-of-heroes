@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.Ui.MapCanvasContainer
+  commentId: T:Services.Ui.MapCanvasContainer
+  id: MapCanvasContainer
+  parent: Services.Ui
+  children:
+  - Services.Ui.MapCanvasContainer.ToBattleFieldBtn
+  langs:
+  - csharp
+  - vb
+  name: MapCanvasContainer
+  nameWithType: MapCanvasContainer
+  fullName: Services.Ui.MapCanvasContainer
+  type: Class
+  source:
+    id: MapCanvasContainer
+    path: ''
+    startLine: 1203
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: 'public class MapCanvasContainer : MonoBehaviour'
+    content.vb: >-
+      Public Class MapCanvasContainer
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.Ui.MapCanvasContainer.ToBattleFieldBtn
+  commentId: F:Services.Ui.MapCanvasContainer.ToBattleFieldBtn
+  id: ToBattleFieldBtn
+  parent: Services.Ui.MapCanvasContainer
+  langs:
+  - csharp
+  - vb
+  name: ToBattleFieldBtn
+  nameWithType: MapCanvasContainer.ToBattleFieldBtn
+  fullName: Services.Ui.MapCanvasContainer.ToBattleFieldBtn
+  type: Field
+  source:
+    id: ToBattleFieldBtn
+    path: ''
+    startLine: 1205
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Ui
+  syntax:
+    content: public Button ToBattleFieldBtn
+    return:
+      type: Global.Button
+    content.vb: Public ToBattleFieldBtn As Button
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Services.Ui
+  commentId: N:Services.Ui
+  name: Services.Ui
+  nameWithType: Services.Ui
+  fullName: Services.Ui
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.Button
+  isExternal: true
+  name: Button
+  nameWithType: Button
+  fullName: Button

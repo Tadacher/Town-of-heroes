@@ -1,0 +1,507 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.DodgeDamageRecievingModule
+  commentId: T:Global.DodgeDamageRecievingModule
+  id: DodgeDamageRecievingModule
+  parent: Global
+  children:
+  - Global.DodgeDamageRecievingModule.#ctor(System.Single,Transform,DamageTextService)
+  - Global.DodgeDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: DodgeDamageRecievingModule
+  nameWithType: DodgeDamageRecievingModule
+  fullName: DodgeDamageRecievingModule
+  type: Class
+  source:
+    id: DodgeDamageRecievingModule
+    path: ''
+    startLine: 211
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class DodgeDamageRecievingModule : AbstractDamageRecievingModule'
+    content.vb: >-
+      Public Class DodgeDamageRecievingModule
+          Inherits AbstractDamageRecievingModule
+  inheritance:
+  - System.Object
+  - Global.AbstractDamageRecievingModule
+  inheritedMembers:
+  - Global.AbstractDamageRecievingModule._damageTextService
+  - Global.AbstractDamageRecievingModule._unitTransform
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.DodgeDamageRecievingModule.#ctor(System.Single,Transform,DamageTextService)
+  commentId: M:Global.DodgeDamageRecievingModule.#ctor(System.Single,Transform,DamageTextService)
+  id: '#ctor(System.Single,Transform,DamageTextService)'
+  parent: Global.DodgeDamageRecievingModule
+  langs:
+  - csharp
+  - vb
+  name: DodgeDamageRecievingModule(Single, Transform, DamageTextService)
+  nameWithType: DodgeDamageRecievingModule.DodgeDamageRecievingModule(Single, Transform, DamageTextService)
+  fullName: DodgeDamageRecievingModule.DodgeDamageRecievingModule(System.Single, Transform, DamageTextService)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 220
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public DodgeDamageRecievingModule(float chance, Transform unitTransform, DamageTextService damageTextService)
+    parameters:
+    - id: chance
+      type: System.Single
+      description: Chance from 0 to 1f
+    - id: unitTransform
+      type: Global.Transform
+    - id: damageTextService
+      type: Global.DamageTextService
+    content.vb: Public Sub New(chance As Single, unitTransform As Transform, damageTextService As DamageTextService)
+  overload: Global.DodgeDamageRecievingModule.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.DodgeDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  commentId: M:Global.DodgeDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  id: CalculateRecievedDamage(System.Int32)
+  parent: Global.DodgeDamageRecievingModule
+  langs:
+  - csharp
+  - vb
+  name: CalculateRecievedDamage(Int32)
+  nameWithType: DodgeDamageRecievingModule.CalculateRecievedDamage(Int32)
+  fullName: DodgeDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  type: Method
+  source:
+    id: CalculateRecievedDamage
+    path: ''
+    startLine: 226
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public override int CalculateRecievedDamage(int damage)
+    parameters:
+    - id: damage
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function CalculateRecievedDamage(damage As Integer) As Integer
+  overridden: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  overload: Global.DodgeDamageRecievingModule.CalculateRecievedDamage*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Global.AbstractDamageRecievingModule
+  commentId: T:Global.AbstractDamageRecievingModule
+  name: AbstractDamageRecievingModule
+  nameWithType: AbstractDamageRecievingModule
+  fullName: AbstractDamageRecievingModule
+- uid: Global.AbstractDamageRecievingModule._damageTextService
+  commentId: F:Global.AbstractDamageRecievingModule._damageTextService
+  parent: Global.AbstractDamageRecievingModule
+  name: _damageTextService
+  nameWithType: AbstractDamageRecievingModule._damageTextService
+  fullName: AbstractDamageRecievingModule._damageTextService
+- uid: Global.AbstractDamageRecievingModule._unitTransform
+  commentId: F:Global.AbstractDamageRecievingModule._unitTransform
+  parent: Global.AbstractDamageRecievingModule
+  name: _unitTransform
+  nameWithType: AbstractDamageRecievingModule._unitTransform
+  fullName: AbstractDamageRecievingModule._unitTransform
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.DodgeDamageRecievingModule.#ctor*
+  commentId: Overload:Global.DodgeDamageRecievingModule.#ctor
+  name: DodgeDamageRecievingModule
+  nameWithType: DodgeDamageRecievingModule.DodgeDamageRecievingModule
+  fullName: DodgeDamageRecievingModule.DodgeDamageRecievingModule
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.Transform
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
+- uid: Global.DamageTextService
+  isExternal: true
+  name: DamageTextService
+  nameWithType: DamageTextService
+  fullName: DamageTextService
+- uid: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  commentId: M:Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  parent: Global.AbstractDamageRecievingModule
+  isExternal: true
+  name: CalculateRecievedDamage(Int32)
+  nameWithType: AbstractDamageRecievingModule.CalculateRecievedDamage(Int32)
+  fullName: AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+  spec.csharp:
+  - uid: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+    name: CalculateRecievedDamage
+    nameWithType: AbstractDamageRecievingModule.CalculateRecievedDamage
+    fullName: AbstractDamageRecievingModule.CalculateRecievedDamage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Global.AbstractDamageRecievingModule.CalculateRecievedDamage(System.Int32)
+    name: CalculateRecievedDamage
+    nameWithType: AbstractDamageRecievingModule.CalculateRecievedDamage
+    fullName: AbstractDamageRecievingModule.CalculateRecievedDamage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.DodgeDamageRecievingModule.CalculateRecievedDamage*
+  commentId: Overload:Global.DodgeDamageRecievingModule.CalculateRecievedDamage
+  name: CalculateRecievedDamage
+  nameWithType: DodgeDamageRecievingModule.CalculateRecievedDamage
+  fullName: DodgeDamageRecievingModule.CalculateRecievedDamage
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

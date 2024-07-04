@@ -1,0 +1,168 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.EnemyPrefabContainer
+  commentId: T:Global.EnemyPrefabContainer
+  id: EnemyPrefabContainer
+  parent: Global
+  children:
+  - Global.EnemyPrefabContainer.Enemies
+  - Global.EnemyPrefabContainer.Goblin
+  - Global.EnemyPrefabContainer.GoblinTrapper
+  langs:
+  - csharp
+  - vb
+  name: EnemyPrefabContainer
+  nameWithType: EnemyPrefabContainer
+  fullName: EnemyPrefabContainer
+  type: Class
+  source:
+    id: EnemyPrefabContainer
+    path: ''
+    startLine: 1355
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class EnemyPrefabContainer : ScriptableObject'
+    content.vb: >-
+      Public Class EnemyPrefabContainer
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.EnemyPrefabContainer.Enemies
+  commentId: F:Global.EnemyPrefabContainer.Enemies
+  id: Enemies
+  parent: Global.EnemyPrefabContainer
+  langs:
+  - csharp
+  - vb
+  name: Enemies
+  nameWithType: EnemyPrefabContainer.Enemies
+  fullName: EnemyPrefabContainer.Enemies
+  type: Field
+  source:
+    id: Enemies
+    path: ''
+    startLine: 1358
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AbstractEnemy[] Enemies
+    return:
+      type: Global.AbstractEnemy[]
+    content.vb: Public Enemies As AbstractEnemy()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.EnemyPrefabContainer.GoblinTrapper
+  commentId: F:Global.EnemyPrefabContainer.GoblinTrapper
+  id: GoblinTrapper
+  parent: Global.EnemyPrefabContainer
+  langs:
+  - csharp
+  - vb
+  name: GoblinTrapper
+  nameWithType: EnemyPrefabContainer.GoblinTrapper
+  fullName: EnemyPrefabContainer.GoblinTrapper
+  type: Field
+  source:
+    id: GoblinTrapper
+    path: ''
+    startLine: 1361
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AbstractEnemy GoblinTrapper
+    return:
+      type: Global.AbstractEnemy
+    content.vb: Public GoblinTrapper As AbstractEnemy
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.EnemyPrefabContainer.Goblin
+  commentId: F:Global.EnemyPrefabContainer.Goblin
+  id: Goblin
+  parent: Global.EnemyPrefabContainer
+  langs:
+  - csharp
+  - vb
+  name: Goblin
+  nameWithType: EnemyPrefabContainer.Goblin
+  fullName: EnemyPrefabContainer.Goblin
+  type: Field
+  source:
+    id: Goblin
+    path: ''
+    startLine: 1362
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public AbstractEnemy Goblin
+    return:
+      type: Global.AbstractEnemy
+    content.vb: Public Goblin As AbstractEnemy
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.AbstractEnemy[]
+  isExternal: true
+  name: AbstractEnemy[]
+  nameWithType: AbstractEnemy[]
+  fullName: AbstractEnemy[]
+  nameWithType.vb: AbstractEnemy()
+  fullName.vb: AbstractEnemy()
+  name.vb: AbstractEnemy()
+  spec.csharp:
+  - uid: Global.AbstractEnemy
+    name: AbstractEnemy
+    nameWithType: AbstractEnemy
+    fullName: AbstractEnemy
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Global.AbstractEnemy
+    name: AbstractEnemy
+    nameWithType: AbstractEnemy
+    fullName: AbstractEnemy
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Global.AbstractEnemy
+  commentId: T:Global.AbstractEnemy
+  name: AbstractEnemy
+  nameWithType: AbstractEnemy
+  fullName: AbstractEnemy

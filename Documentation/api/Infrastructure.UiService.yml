@@ -1,0 +1,449 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.UiService
+  commentId: T:Infrastructure.UiService
+  id: UiService
+  parent: Infrastructure
+  children:
+  - Infrastructure.UiService.#ctor(GameplayCanvasContainer,MapCanvasContainer)
+  - Infrastructure.UiService.SwitchToGameplayCanvas
+  - Infrastructure.UiService.SwitchToMapCanvas
+  langs:
+  - csharp
+  - vb
+  name: UiService
+  nameWithType: UiService
+  fullName: Infrastructure.UiService
+  type: Class
+  source:
+    id: UiService
+    path: ''
+    startLine: 2810
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public class UiService
+    content.vb: Public Class UiService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Infrastructure.UiService.#ctor(GameplayCanvasContainer,MapCanvasContainer)
+  commentId: M:Infrastructure.UiService.#ctor(GameplayCanvasContainer,MapCanvasContainer)
+  id: '#ctor(GameplayCanvasContainer,MapCanvasContainer)'
+  parent: Infrastructure.UiService
+  langs:
+  - csharp
+  - vb
+  name: UiService(GameplayCanvasContainer, MapCanvasContainer)
+  nameWithType: UiService.UiService(GameplayCanvasContainer, MapCanvasContainer)
+  fullName: Infrastructure.UiService.UiService(GameplayCanvasContainer, MapCanvasContainer)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2816
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public UiService(GameplayCanvasContainer gameplayCanvasContainer, MapCanvasContainer mapCanvasContainer)
+    parameters:
+    - id: gameplayCanvasContainer
+      type: Global.GameplayCanvasContainer
+    - id: mapCanvasContainer
+      type: Global.MapCanvasContainer
+    content.vb: Public Sub New(gameplayCanvasContainer As GameplayCanvasContainer, mapCanvasContainer As MapCanvasContainer)
+  overload: Infrastructure.UiService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Infrastructure.UiService.SwitchToGameplayCanvas
+  commentId: M:Infrastructure.UiService.SwitchToGameplayCanvas
+  id: SwitchToGameplayCanvas
+  parent: Infrastructure.UiService
+  langs:
+  - csharp
+  - vb
+  name: SwitchToGameplayCanvas()
+  nameWithType: UiService.SwitchToGameplayCanvas()
+  fullName: Infrastructure.UiService.SwitchToGameplayCanvas()
+  type: Method
+  source:
+    id: SwitchToGameplayCanvas
+    path: ''
+    startLine: 2822
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public void SwitchToGameplayCanvas()
+    content.vb: Public Sub SwitchToGameplayCanvas
+  overload: Infrastructure.UiService.SwitchToGameplayCanvas*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Infrastructure.UiService.SwitchToMapCanvas
+  commentId: M:Infrastructure.UiService.SwitchToMapCanvas
+  id: SwitchToMapCanvas
+  parent: Infrastructure.UiService
+  langs:
+  - csharp
+  - vb
+  name: SwitchToMapCanvas()
+  nameWithType: UiService.SwitchToMapCanvas()
+  fullName: Infrastructure.UiService.SwitchToMapCanvas()
+  type: Method
+  source:
+    id: SwitchToMapCanvas
+    path: ''
+    startLine: 2827
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public void SwitchToMapCanvas()
+    content.vb: Public Sub SwitchToMapCanvas
+  overload: Infrastructure.UiService.SwitchToMapCanvas*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Infrastructure.UiService.#ctor*
+  commentId: Overload:Infrastructure.UiService.#ctor
+  name: UiService
+  nameWithType: UiService.UiService
+  fullName: Infrastructure.UiService.UiService
+- uid: Global.GameplayCanvasContainer
+  isExternal: true
+  name: GameplayCanvasContainer
+  nameWithType: GameplayCanvasContainer
+  fullName: GameplayCanvasContainer
+- uid: Global.MapCanvasContainer
+  isExternal: true
+  name: MapCanvasContainer
+  nameWithType: MapCanvasContainer
+  fullName: MapCanvasContainer
+- uid: Infrastructure.UiService.SwitchToGameplayCanvas*
+  commentId: Overload:Infrastructure.UiService.SwitchToGameplayCanvas
+  name: SwitchToGameplayCanvas
+  nameWithType: UiService.SwitchToGameplayCanvas
+  fullName: Infrastructure.UiService.SwitchToGameplayCanvas
+- uid: Infrastructure.UiService.SwitchToMapCanvas*
+  commentId: Overload:Infrastructure.UiService.SwitchToMapCanvas
+  name: SwitchToMapCanvas
+  nameWithType: UiService.SwitchToMapCanvas
+  fullName: Infrastructure.UiService.SwitchToMapCanvas

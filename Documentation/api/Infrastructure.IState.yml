@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.IState
+  commentId: T:Infrastructure.IState
+  id: IState
+  parent: Infrastructure
+  children:
+  - Infrastructure.IState.Enter
+  langs:
+  - csharp
+  - vb
+  name: IState
+  nameWithType: IState
+  fullName: Infrastructure.IState
+  type: Interface
+  source:
+    id: IState
+    path: ''
+    startLine: 700
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: 'public interface IState : IExitableState'
+    content.vb: >-
+      Public Interface IState
+          Inherits IExitableState
+  inheritedMembers:
+  - Infrastructure.IExitableState.Exit
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Infrastructure.IState.Enter
+  commentId: M:Infrastructure.IState.Enter
+  id: Enter
+  parent: Infrastructure.IState
+  langs:
+  - csharp
+  - vb
+  name: Enter()
+  nameWithType: IState.Enter()
+  fullName: Infrastructure.IState.Enter()
+  type: Method
+  source:
+    id: Enter
+    path: ''
+    startLine: 702
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: void Enter()
+    content.vb: Sub Enter
+  overload: Infrastructure.IState.Enter*
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: Infrastructure.IExitableState.Exit
+  commentId: M:Infrastructure.IExitableState.Exit
+  parent: Infrastructure.IExitableState
+  name: Exit()
+  nameWithType: IExitableState.Exit()
+  fullName: Infrastructure.IExitableState.Exit()
+  spec.csharp:
+  - uid: Infrastructure.IExitableState.Exit
+    name: Exit
+    nameWithType: IExitableState.Exit
+    fullName: Infrastructure.IExitableState.Exit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.IExitableState.Exit
+    name: Exit
+    nameWithType: IExitableState.Exit
+    fullName: Infrastructure.IExitableState.Exit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.IExitableState
+  commentId: T:Infrastructure.IExitableState
+  parent: Infrastructure
+  name: IExitableState
+  nameWithType: IExitableState
+  fullName: Infrastructure.IExitableState
+- uid: Infrastructure.IState.Enter*
+  commentId: Overload:Infrastructure.IState.Enter
+  name: Enter
+  nameWithType: IState.Enter
+  fullName: Infrastructure.IState.Enter

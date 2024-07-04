@@ -1,0 +1,144 @@
+### YamlMime:ManagedReference
+items:
+- uid: Debugtools.DebugInput
+  commentId: T:Debugtools.DebugInput
+  id: DebugInput
+  parent: Debugtools
+  children:
+  - Debugtools.DebugInput.Construct(Services.CardGeneration.CardInstantiationService,Services.GridSystem.BattleGridService)
+  - Debugtools.DebugInput.Update
+  langs:
+  - csharp
+  - vb
+  name: DebugInput
+  nameWithType: DebugInput
+  fullName: Debugtools.DebugInput
+  type: Class
+  source:
+    id: DebugInput
+    path: ''
+    startLine: 10
+  assemblies:
+  - cs.temp.dll
+  namespace: Debugtools
+  syntax:
+    content: 'public class DebugInput : MonoBehaviour'
+    content.vb: >-
+      Public Class DebugInput
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Debugtools.DebugInput.Construct(Services.CardGeneration.CardInstantiationService,Services.GridSystem.BattleGridService)
+  commentId: M:Debugtools.DebugInput.Construct(Services.CardGeneration.CardInstantiationService,Services.GridSystem.BattleGridService)
+  id: Construct(Services.CardGeneration.CardInstantiationService,Services.GridSystem.BattleGridService)
+  parent: Debugtools.DebugInput
+  langs:
+  - csharp
+  - vb
+  name: Construct(CardInstantiationService, BattleGridService)
+  nameWithType: DebugInput.Construct(CardInstantiationService, BattleGridService)
+  fullName: Debugtools.DebugInput.Construct(Services.CardGeneration.CardInstantiationService, Services.GridSystem.BattleGridService)
+  type: Method
+  source:
+    id: Construct
+    path: ''
+    startLine: 14
+  assemblies:
+  - cs.temp.dll
+  namespace: Debugtools
+  syntax:
+    content: public void Construct(CardInstantiationService cardInstantiationService, BattleGridService battleGridService)
+    parameters:
+    - id: cardInstantiationService
+      type: Services.CardGeneration.CardInstantiationService
+    - id: battleGridService
+      type: Services.GridSystem.BattleGridService
+    content.vb: Public Sub Construct(cardInstantiationService As CardInstantiationService, battleGridService As BattleGridService)
+  overload: Debugtools.DebugInput.Construct*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Debugtools.DebugInput.Update
+  commentId: M:Debugtools.DebugInput.Update
+  id: Update
+  parent: Debugtools.DebugInput
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: DebugInput.Update()
+  fullName: Debugtools.DebugInput.Update()
+  type: Method
+  source:
+    id: Update
+    path: ''
+    startLine: 21
+  assemblies:
+  - cs.temp.dll
+  namespace: Debugtools
+  syntax:
+    content: public void Update()
+    content.vb: Public Sub Update
+  overload: Debugtools.DebugInput.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Debugtools
+  commentId: N:Debugtools
+  name: Debugtools
+  nameWithType: Debugtools
+  fullName: Debugtools
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Debugtools.DebugInput.Construct*
+  commentId: Overload:Debugtools.DebugInput.Construct
+  name: Construct
+  nameWithType: DebugInput.Construct
+  fullName: Debugtools.DebugInput.Construct
+- uid: Services.CardGeneration.CardInstantiationService
+  commentId: T:Services.CardGeneration.CardInstantiationService
+  parent: Services.CardGeneration
+  name: CardInstantiationService
+  nameWithType: CardInstantiationService
+  fullName: Services.CardGeneration.CardInstantiationService
+- uid: Services.GridSystem.BattleGridService
+  commentId: T:Services.GridSystem.BattleGridService
+  parent: Services.GridSystem
+  name: BattleGridService
+  nameWithType: BattleGridService
+  fullName: Services.GridSystem.BattleGridService
+- uid: Services.CardGeneration
+  commentId: N:Services.CardGeneration
+  name: Services.CardGeneration
+  nameWithType: Services.CardGeneration
+  fullName: Services.CardGeneration
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem
+- uid: Debugtools.DebugInput.Update*
+  commentId: Overload:Debugtools.DebugInput.Update
+  name: Update
+  nameWithType: DebugInput.Update
+  fullName: Debugtools.DebugInput.Update

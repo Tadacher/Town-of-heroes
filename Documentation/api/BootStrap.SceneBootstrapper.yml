@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: BootStrap.SceneBootstrapper
+  commentId: T:BootStrap.SceneBootstrapper
+  id: SceneBootstrapper
+  parent: BootStrap
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: SceneBootstrapper
+  nameWithType: SceneBootstrapper
+  fullName: BootStrap.SceneBootstrapper
+  type: Class
+  source:
+    id: SceneBootstrapper
+    path: ''
+    startLine: 522
+  assemblies:
+  - cs.temp.dll
+  namespace: BootStrap
+  syntax:
+    content: 'public class SceneBootstrapper : MonoBehaviour'
+    content.vb: >-
+      Public Class SceneBootstrapper
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: BootStrap
+  commentId: N:BootStrap
+  name: BootStrap
+  nameWithType: BootStrap
+  fullName: BootStrap
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

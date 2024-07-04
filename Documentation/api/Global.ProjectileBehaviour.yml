@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ProjectileBehaviour
+  commentId: T:Global.ProjectileBehaviour
+  id: ProjectileBehaviour
+  parent: Global
+  children:
+  - Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,System.Action)
+  - Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,System.Action)
+  langs:
+  - csharp
+  - vb
+  name: ProjectileBehaviour
+  nameWithType: ProjectileBehaviour
+  fullName: ProjectileBehaviour
+  type: Class
+  source:
+    id: ProjectileBehaviour
+    path: ''
+    startLine: 3699
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class ProjectileBehaviour : MonoBehaviour'
+    content.vb: >-
+      Public Class ProjectileBehaviour
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,System.Action)
+  commentId: M:Global.ProjectileBehaviour.Initialize(System.Single,Transform,Vector3,System.Action)
+  id: Initialize(System.Single,Transform,Vector3,System.Action)
+  parent: Global.ProjectileBehaviour
+  langs:
+  - csharp
+  - vb
+  name: Initialize(Single, Transform, Vector3, Action)
+  nameWithType: ProjectileBehaviour.Initialize(Single, Transform, Vector3, Action)
+  fullName: ProjectileBehaviour.Initialize(System.Single, Transform, Vector3, System.Action)
+  type: Method
+  source:
+    id: Initialize
+    path: ''
+    startLine: 3729
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void Initialize(float speed, Transform target, Vector3 initialPos, Action onTargetReached)
+    parameters:
+    - id: speed
+      type: System.Single
+    - id: target
+      type: Global.Transform
+    - id: initialPos
+      type: Global.Vector3
+    - id: onTargetReached
+      type: System.Action
+    content.vb: Public Sub Initialize(speed As Single, target As Transform, initialPos As Vector3, onTargetReached As Action)
+  overload: Global.ProjectileBehaviour.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,System.Action)
+  commentId: M:Global.ProjectileBehaviour.ReInitialize(Transform,Vector3,System.Action)
+  id: ReInitialize(Transform,Vector3,System.Action)
+  parent: Global.ProjectileBehaviour
+  langs:
+  - csharp
+  - vb
+  name: ReInitialize(Transform, Vector3, Action)
+  nameWithType: ProjectileBehaviour.ReInitialize(Transform, Vector3, Action)
+  fullName: ProjectileBehaviour.ReInitialize(Transform, Vector3, System.Action)
+  type: Method
+  source:
+    id: ReInitialize
+    path: ''
+    startLine: 3736
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public void ReInitialize(Transform target, Vector3 initialPos, Action onTargetReached)
+    parameters:
+    - id: target
+      type: Global.Transform
+    - id: initialPos
+      type: Global.Vector3
+    - id: onTargetReached
+      type: System.Action
+    content.vb: Public Sub ReInitialize(target As Transform, initialPos As Vector3, onTargetReached As Action)
+  overload: Global.ProjectileBehaviour.ReInitialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.ProjectileBehaviour.Initialize*
+  commentId: Overload:Global.ProjectileBehaviour.Initialize
+  name: Initialize
+  nameWithType: ProjectileBehaviour.Initialize
+  fullName: ProjectileBehaviour.Initialize
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: Global.Transform
+  isExternal: true
+  name: Transform
+  nameWithType: Transform
+  fullName: Transform
+- uid: Global.Vector3
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: Vector3
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: Global.ProjectileBehaviour.ReInitialize*
+  commentId: Overload:Global.ProjectileBehaviour.ReInitialize
+  name: ReInitialize
+  nameWithType: ProjectileBehaviour.ReInitialize
+  fullName: ProjectileBehaviour.ReInitialize

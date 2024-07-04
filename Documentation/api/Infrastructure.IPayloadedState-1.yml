@@ -1,0 +1,124 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.IPayloadedState`1
+  commentId: T:Infrastructure.IPayloadedState`1
+  id: IPayloadedState`1
+  parent: Infrastructure
+  children:
+  - Infrastructure.IPayloadedState`1.Enter(`0)
+  langs:
+  - csharp
+  - vb
+  name: IPayloadedState<TPayload>
+  nameWithType: IPayloadedState<TPayload>
+  fullName: Infrastructure.IPayloadedState<TPayload>
+  type: Interface
+  source:
+    id: IPayloadedState
+    path: ''
+    startLine: 704
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: 'public interface IPayloadedState<TPayload> : IExitableState'
+    typeParameters:
+    - id: TPayload
+    content.vb: >-
+      Public Interface IPayloadedState(Of TPayload)
+          Inherits IExitableState
+  inheritedMembers:
+  - Infrastructure.IExitableState.Exit
+  nameWithType.vb: IPayloadedState(Of TPayload)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Infrastructure.IPayloadedState(Of TPayload)
+  name.vb: IPayloadedState(Of TPayload)
+- uid: Infrastructure.IPayloadedState`1.Enter(`0)
+  commentId: M:Infrastructure.IPayloadedState`1.Enter(`0)
+  id: Enter(`0)
+  parent: Infrastructure.IPayloadedState`1
+  langs:
+  - csharp
+  - vb
+  name: Enter(TPayload)
+  nameWithType: IPayloadedState<TPayload>.Enter(TPayload)
+  fullName: Infrastructure.IPayloadedState<TPayload>.Enter(TPayload)
+  type: Method
+  source:
+    id: Enter
+    path: ''
+    startLine: 706
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: void Enter(TPayload payload)
+    parameters:
+    - id: payload
+      type: '{TPayload}'
+    content.vb: Sub Enter(payload As TPayload)
+  overload: Infrastructure.IPayloadedState`1.Enter*
+  nameWithType.vb: IPayloadedState(Of TPayload).Enter(TPayload)
+  fullName.vb: Infrastructure.IPayloadedState(Of TPayload).Enter(TPayload)
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: Infrastructure.IExitableState.Exit
+  commentId: M:Infrastructure.IExitableState.Exit
+  parent: Infrastructure.IExitableState
+  name: Exit()
+  nameWithType: IExitableState.Exit()
+  fullName: Infrastructure.IExitableState.Exit()
+  spec.csharp:
+  - uid: Infrastructure.IExitableState.Exit
+    name: Exit
+    nameWithType: IExitableState.Exit
+    fullName: Infrastructure.IExitableState.Exit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.IExitableState.Exit
+    name: Exit
+    nameWithType: IExitableState.Exit
+    fullName: Infrastructure.IExitableState.Exit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.IExitableState
+  commentId: T:Infrastructure.IExitableState
+  parent: Infrastructure
+  name: IExitableState
+  nameWithType: IExitableState
+  fullName: Infrastructure.IExitableState
+- uid: Infrastructure.IPayloadedState`1.Enter*
+  commentId: Overload:Infrastructure.IPayloadedState`1.Enter
+  name: Enter
+  nameWithType: IPayloadedState<TPayload>.Enter
+  fullName: Infrastructure.IPayloadedState<TPayload>.Enter
+  nameWithType.vb: IPayloadedState(Of TPayload).Enter
+  fullName.vb: Infrastructure.IPayloadedState(Of TPayload).Enter
+- uid: '{TPayload}'
+  commentId: '!:TPayload'
+  definition: TPayload
+  name: TPayload
+  nameWithType: TPayload
+  fullName: TPayload
+- uid: TPayload
+  name: TPayload
+  nameWithType: TPayload
+  fullName: TPayload

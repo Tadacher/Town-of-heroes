@@ -1,0 +1,802 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.GridSystem.BattleGridService
+  commentId: T:Services.GridSystem.BattleGridService
+  id: BattleGridService
+  parent: Services.GridSystem
+  children:
+  - Services.GridSystem.BattleGridService.#ctor
+  - Services.GridSystem.BattleGridService._battleCellSize
+  - Services.GridSystem.BattleGridService._battleGridSizeX
+  - Services.GridSystem.BattleGridService._battleGridSizeY
+  - Services.GridSystem.BattleGridService.InitCellContent
+  langs:
+  - csharp
+  - vb
+  name: BattleGridService
+  nameWithType: BattleGridService
+  fullName: Services.GridSystem.BattleGridService
+  type: Class
+  source:
+    id: BattleGridService
+    path: ''
+    startLine: 2476
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.GridSystem
+  syntax:
+    content: 'public class BattleGridService : AbstractGridService'
+    content.vb: >-
+      Public Class BattleGridService
+          Inherits AbstractGridService
+  inheritance:
+  - System.Object
+  - Services.GridSystem.AbstractGridService
+  inheritedMembers:
+  - Services.GridSystem.AbstractGridService._cellsize
+  - Services.GridSystem.AbstractGridService._gridSizeX
+  - Services.GridSystem.AbstractGridService._gridSizeY
+  - Services.GridSystem.AbstractGridService._cellOffset
+  - Services.GridSystem.AbstractGridService._zeroPoint
+  - Services.GridSystem.AbstractGridService._cells
+  - Services.GridSystem.AbstractGridService.CellAvailable(Vector3)
+  - Services.GridSystem.AbstractGridService.Insert(Services.GridSystem.IGridCellObject,Vector3)
+  - Services.GridSystem.AbstractGridService.Remove(Vector3)
+  - Services.GridSystem.AbstractGridService.PosToGrid(Vector2)
+  - Services.GridSystem.AbstractGridService.PosToCellCoords(Vector3)
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.GridSystem.BattleGridService._battleCellSize
+  commentId: F:Services.GridSystem.BattleGridService._battleCellSize
+  id: _battleCellSize
+  parent: Services.GridSystem.BattleGridService
+  langs:
+  - csharp
+  - vb
+  name: _battleCellSize
+  nameWithType: BattleGridService._battleCellSize
+  fullName: Services.GridSystem.BattleGridService._battleCellSize
+  type: Field
+  source:
+    id: _battleCellSize
+    path: ''
+    startLine: 2478
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.GridSystem
+  syntax:
+    content: protected const float _battleCellSize = 1F
+    return:
+      type: System.Single
+    content.vb: Protected Const _battleCellSize As Single = 1F
+  modifiers.csharp:
+  - protected
+  - const
+  modifiers.vb:
+  - Protected
+  - Const
+- uid: Services.GridSystem.BattleGridService._battleGridSizeX
+  commentId: F:Services.GridSystem.BattleGridService._battleGridSizeX
+  id: _battleGridSizeX
+  parent: Services.GridSystem.BattleGridService
+  langs:
+  - csharp
+  - vb
+  name: _battleGridSizeX
+  nameWithType: BattleGridService._battleGridSizeX
+  fullName: Services.GridSystem.BattleGridService._battleGridSizeX
+  type: Field
+  source:
+    id: _battleGridSizeX
+    path: ''
+    startLine: 2479
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.GridSystem
+  syntax:
+    content: protected const int _battleGridSizeX = 32
+    return:
+      type: System.Int32
+    content.vb: Protected Const _battleGridSizeX As Integer = 32
+  modifiers.csharp:
+  - protected
+  - const
+  modifiers.vb:
+  - Protected
+  - Const
+- uid: Services.GridSystem.BattleGridService._battleGridSizeY
+  commentId: F:Services.GridSystem.BattleGridService._battleGridSizeY
+  id: _battleGridSizeY
+  parent: Services.GridSystem.BattleGridService
+  langs:
+  - csharp
+  - vb
+  name: _battleGridSizeY
+  nameWithType: BattleGridService._battleGridSizeY
+  fullName: Services.GridSystem.BattleGridService._battleGridSizeY
+  type: Field
+  source:
+    id: _battleGridSizeY
+    path: ''
+    startLine: 2480
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.GridSystem
+  syntax:
+    content: protected const int _battleGridSizeY = 32
+    return:
+      type: System.Int32
+    content.vb: Protected Const _battleGridSizeY As Integer = 32
+  modifiers.csharp:
+  - protected
+  - const
+  modifiers.vb:
+  - Protected
+  - Const
+- uid: Services.GridSystem.BattleGridService.#ctor
+  commentId: M:Services.GridSystem.BattleGridService.#ctor
+  id: '#ctor'
+  parent: Services.GridSystem.BattleGridService
+  langs:
+  - csharp
+  - vb
+  name: BattleGridService()
+  nameWithType: BattleGridService.BattleGridService()
+  fullName: Services.GridSystem.BattleGridService.BattleGridService()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2482
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.GridSystem
+  syntax:
+    content: public BattleGridService()
+    content.vb: Public Sub New
+  overload: Services.GridSystem.BattleGridService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.GridSystem.BattleGridService.InitCellContent
+  commentId: M:Services.GridSystem.BattleGridService.InitCellContent
+  id: InitCellContent
+  parent: Services.GridSystem.BattleGridService
+  langs:
+  - csharp
+  - vb
+  name: InitCellContent()
+  nameWithType: BattleGridService.InitCellContent()
+  fullName: Services.GridSystem.BattleGridService.InitCellContent()
+  type: Method
+  source:
+    id: InitCellContent
+    path: ''
+    startLine: 2487
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.GridSystem
+  syntax:
+    content: protected override void InitCellContent()
+    content.vb: Protected Overrides Sub InitCellContent
+  overridden: Services.GridSystem.AbstractGridService.InitCellContent
+  overload: Services.GridSystem.BattleGridService.InitCellContent*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Services.GridSystem.AbstractGridService
+  commentId: T:Services.GridSystem.AbstractGridService
+  parent: Services.GridSystem
+  name: AbstractGridService
+  nameWithType: AbstractGridService
+  fullName: Services.GridSystem.AbstractGridService
+- uid: Services.GridSystem.AbstractGridService._cellsize
+  commentId: F:Services.GridSystem.AbstractGridService._cellsize
+  parent: Services.GridSystem.AbstractGridService
+  name: _cellsize
+  nameWithType: AbstractGridService._cellsize
+  fullName: Services.GridSystem.AbstractGridService._cellsize
+- uid: Services.GridSystem.AbstractGridService._gridSizeX
+  commentId: F:Services.GridSystem.AbstractGridService._gridSizeX
+  parent: Services.GridSystem.AbstractGridService
+  name: _gridSizeX
+  nameWithType: AbstractGridService._gridSizeX
+  fullName: Services.GridSystem.AbstractGridService._gridSizeX
+- uid: Services.GridSystem.AbstractGridService._gridSizeY
+  commentId: F:Services.GridSystem.AbstractGridService._gridSizeY
+  parent: Services.GridSystem.AbstractGridService
+  name: _gridSizeY
+  nameWithType: AbstractGridService._gridSizeY
+  fullName: Services.GridSystem.AbstractGridService._gridSizeY
+- uid: Services.GridSystem.AbstractGridService._cellOffset
+  commentId: F:Services.GridSystem.AbstractGridService._cellOffset
+  parent: Services.GridSystem.AbstractGridService
+  name: _cellOffset
+  nameWithType: AbstractGridService._cellOffset
+  fullName: Services.GridSystem.AbstractGridService._cellOffset
+- uid: Services.GridSystem.AbstractGridService._zeroPoint
+  commentId: F:Services.GridSystem.AbstractGridService._zeroPoint
+  parent: Services.GridSystem.AbstractGridService
+  name: _zeroPoint
+  nameWithType: AbstractGridService._zeroPoint
+  fullName: Services.GridSystem.AbstractGridService._zeroPoint
+- uid: Services.GridSystem.AbstractGridService._cells
+  commentId: F:Services.GridSystem.AbstractGridService._cells
+  parent: Services.GridSystem.AbstractGridService
+  name: _cells
+  nameWithType: AbstractGridService._cells
+  fullName: Services.GridSystem.AbstractGridService._cells
+- uid: Services.GridSystem.AbstractGridService.CellAvailable(Vector3)
+  commentId: M:Services.GridSystem.AbstractGridService.CellAvailable(Vector3)
+  parent: Services.GridSystem.AbstractGridService
+  isExternal: true
+  name: CellAvailable(Vector3)
+  nameWithType: AbstractGridService.CellAvailable(Vector3)
+  fullName: Services.GridSystem.AbstractGridService.CellAvailable(Vector3)
+  spec.csharp:
+  - uid: Services.GridSystem.AbstractGridService.CellAvailable(Vector3)
+    name: CellAvailable
+    nameWithType: AbstractGridService.CellAvailable
+    fullName: Services.GridSystem.AbstractGridService.CellAvailable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.GridSystem.AbstractGridService.CellAvailable(Vector3)
+    name: CellAvailable
+    nameWithType: AbstractGridService.CellAvailable
+    fullName: Services.GridSystem.AbstractGridService.CellAvailable
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.GridSystem.AbstractGridService.Insert(Services.GridSystem.IGridCellObject,Vector3)
+  commentId: M:Services.GridSystem.AbstractGridService.Insert(Services.GridSystem.IGridCellObject,Vector3)
+  parent: Services.GridSystem.AbstractGridService
+  isExternal: true
+  name: Insert(IGridCellObject, Vector3)
+  nameWithType: AbstractGridService.Insert(IGridCellObject, Vector3)
+  fullName: Services.GridSystem.AbstractGridService.Insert(Services.GridSystem.IGridCellObject, Vector3)
+  spec.csharp:
+  - uid: Services.GridSystem.AbstractGridService.Insert(Services.GridSystem.IGridCellObject,Vector3)
+    name: Insert
+    nameWithType: AbstractGridService.Insert
+    fullName: Services.GridSystem.AbstractGridService.Insert
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Services.GridSystem.IGridCellObject
+    name: IGridCellObject
+    nameWithType: IGridCellObject
+    fullName: Services.GridSystem.IGridCellObject
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.GridSystem.AbstractGridService.Insert(Services.GridSystem.IGridCellObject,Vector3)
+    name: Insert
+    nameWithType: AbstractGridService.Insert
+    fullName: Services.GridSystem.AbstractGridService.Insert
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Services.GridSystem.IGridCellObject
+    name: IGridCellObject
+    nameWithType: IGridCellObject
+    fullName: Services.GridSystem.IGridCellObject
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.GridSystem.AbstractGridService.Remove(Vector3)
+  commentId: M:Services.GridSystem.AbstractGridService.Remove(Vector3)
+  parent: Services.GridSystem.AbstractGridService
+  isExternal: true
+  name: Remove(Vector3)
+  nameWithType: AbstractGridService.Remove(Vector3)
+  fullName: Services.GridSystem.AbstractGridService.Remove(Vector3)
+  spec.csharp:
+  - uid: Services.GridSystem.AbstractGridService.Remove(Vector3)
+    name: Remove
+    nameWithType: AbstractGridService.Remove
+    fullName: Services.GridSystem.AbstractGridService.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.GridSystem.AbstractGridService.Remove(Vector3)
+    name: Remove
+    nameWithType: AbstractGridService.Remove
+    fullName: Services.GridSystem.AbstractGridService.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.GridSystem.AbstractGridService.PosToGrid(Vector2)
+  commentId: M:Services.GridSystem.AbstractGridService.PosToGrid(Vector2)
+  parent: Services.GridSystem.AbstractGridService
+  isExternal: true
+  name: PosToGrid(Vector2)
+  nameWithType: AbstractGridService.PosToGrid(Vector2)
+  fullName: Services.GridSystem.AbstractGridService.PosToGrid(Vector2)
+  spec.csharp:
+  - uid: Services.GridSystem.AbstractGridService.PosToGrid(Vector2)
+    name: PosToGrid
+    nameWithType: AbstractGridService.PosToGrid
+    fullName: Services.GridSystem.AbstractGridService.PosToGrid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.GridSystem.AbstractGridService.PosToGrid(Vector2)
+    name: PosToGrid
+    nameWithType: AbstractGridService.PosToGrid
+    fullName: Services.GridSystem.AbstractGridService.PosToGrid
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.Vector2
+    name: Vector2
+    nameWithType: Vector2
+    fullName: Vector2
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.GridSystem.AbstractGridService.PosToCellCoords(Vector3)
+  commentId: M:Services.GridSystem.AbstractGridService.PosToCellCoords(Vector3)
+  parent: Services.GridSystem.AbstractGridService
+  isExternal: true
+  name: PosToCellCoords(Vector3)
+  nameWithType: AbstractGridService.PosToCellCoords(Vector3)
+  fullName: Services.GridSystem.AbstractGridService.PosToCellCoords(Vector3)
+  spec.csharp:
+  - uid: Services.GridSystem.AbstractGridService.PosToCellCoords(Vector3)
+    name: PosToCellCoords
+    nameWithType: AbstractGridService.PosToCellCoords
+    fullName: Services.GridSystem.AbstractGridService.PosToCellCoords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.GridSystem.AbstractGridService.PosToCellCoords(Vector3)
+    name: PosToCellCoords
+    nameWithType: AbstractGridService.PosToCellCoords
+    fullName: Services.GridSystem.AbstractGridService.PosToCellCoords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Services.GridSystem.BattleGridService.#ctor*
+  commentId: Overload:Services.GridSystem.BattleGridService.#ctor
+  name: BattleGridService
+  nameWithType: BattleGridService.BattleGridService
+  fullName: Services.GridSystem.BattleGridService.BattleGridService
+- uid: Services.GridSystem.AbstractGridService.InitCellContent
+  commentId: M:Services.GridSystem.AbstractGridService.InitCellContent
+  parent: Services.GridSystem.AbstractGridService
+  name: InitCellContent()
+  nameWithType: AbstractGridService.InitCellContent()
+  fullName: Services.GridSystem.AbstractGridService.InitCellContent()
+  spec.csharp:
+  - uid: Services.GridSystem.AbstractGridService.InitCellContent
+    name: InitCellContent
+    nameWithType: AbstractGridService.InitCellContent
+    fullName: Services.GridSystem.AbstractGridService.InitCellContent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Services.GridSystem.AbstractGridService.InitCellContent
+    name: InitCellContent
+    nameWithType: AbstractGridService.InitCellContent
+    fullName: Services.GridSystem.AbstractGridService.InitCellContent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Services.GridSystem.BattleGridService.InitCellContent*
+  commentId: Overload:Services.GridSystem.BattleGridService.InitCellContent
+  name: InitCellContent
+  nameWithType: BattleGridService.InitCellContent
+  fullName: Services.GridSystem.BattleGridService.InitCellContent
