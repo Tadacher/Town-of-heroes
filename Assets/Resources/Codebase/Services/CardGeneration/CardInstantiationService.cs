@@ -32,8 +32,10 @@ namespace Services.CardGeneration
 
             _cardCountService.NotifyAboutNewCard();
             TowerCard card = _factories[type].GetObject();
-            card.StartTranslationCoroutine(_cardParent);
+            
             card.transform.SetParent(_commonCanvas);
+
+            card.StartTranslationCoroutine(_cardParent);
             return card;
         }
 

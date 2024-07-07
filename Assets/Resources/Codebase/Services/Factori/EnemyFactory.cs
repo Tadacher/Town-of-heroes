@@ -30,12 +30,7 @@ public class EnemyFactory : AbstractPoolerFactory<AbstractEnemy>
     {
         AbstractEnemy enemy = _container.InstantiatePrefabForComponent<AbstractEnemy>(prefab: _enemyPrefab, parentTransform: null);
         enemy.Init(this);
-        //enemy.Initialize(
-        //    audioSource: _container.Resolve<AudioSource>(),
-        //    damageTextService: _container.Resolve<DamageTextService>(),
-        //    monsterInfoServiceIngame: _container.Resolve<MonsterInfoServiceIngame>(),
-        //    coreGameplayService: _container.Resolve<IEnemyReachedReciever>(),
-        //    objectPooler: this);
+        
         return enemy;
     }
 }

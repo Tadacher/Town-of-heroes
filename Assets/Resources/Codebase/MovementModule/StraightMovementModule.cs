@@ -11,7 +11,6 @@ namespace MovementModules
             _targetV3 = target;
             _coroutineProcessor = coroutineProcessor;
             Speed = speed;
-            StartMovementCoroutine(coroutineProcessor);
         }
 
         protected override IEnumerator MovementCoroutine()
