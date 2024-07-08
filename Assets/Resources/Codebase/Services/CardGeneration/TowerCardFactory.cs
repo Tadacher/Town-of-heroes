@@ -68,6 +68,7 @@ namespace Services.CardGeneration
                     shiftEventProvider: _container.Resolve<AbstractInputService>(),
                     cardInfoUiService: _container.Resolve<CardInfoUiService>(),
                     inputService: _container.Resolve<AbstractInputService>(),
+                    cardRemovalListener: _container.Resolve<ICardRemovalListener>(),
                     towerCardInfoConfig: _cardDescriptionService.LoadCardDescription(_towerType),
                     worldCellCardInfoConfig: _cardDescriptionService.LoadWorldCellCardDescription(worldCellType),
                     worldCellSprite: _cardImageDatabase.GetSprite(worldCellType.Name),
