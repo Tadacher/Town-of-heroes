@@ -70,7 +70,7 @@ namespace Infrastructure
             BindService<WorldCellCardGenerator>();
             BindService<CardDescriptionService>();
             BindService<CardInfoUiService>();
-            BindService<CardCountService>();
+            BindInterfacesAndSelfto<CardCountService>();
 
             //worldCells
             BindService<WorldCellInstantiationService>();

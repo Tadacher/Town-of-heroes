@@ -1,5 +1,6 @@
 using Codebase.MonobehaviourComponents;
 using Infrastructure;
+using Services.CardGeneration;
 using Services.Input;
 using Services.TowerBuilding;
 using Services.Ui;
@@ -45,6 +46,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
     //internal
     private IExitableState _currentState;
+    private ICardRemovalListener _cardRemovalListener;
     private GameplayStateMachine _gameplayStateMachine;
     private Coroutine _switchStateCoroutine;
     private GameObject _gameObject;
@@ -57,6 +59,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
                            GameplayStateMachine gameplayStateMachine,
                            IObjectPooler pooler,
                            IShiftEventProvider shiftEventProvider,
+                           ICardRemovalListener cardRemovalListener,
                            CardInfoUiService cardInfoUiService,
                            AbstractInputService inputService,
                            TowerCardInfoConfig towerCardInfoConfig,
@@ -80,6 +83,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         _towerInstantiationService = towerBuildingService;
         _towerType = towerType;
 
+        _cardRemovalListener = cardRemovalListener;
         _worldCellInstantiationService = worldCellBuildingService;
         _worldCellType = worldCellType;
         _imageAsTower = towerSprite;
@@ -249,6 +253,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         UnsubscribeToGameStateChange();
         UnsubscribeToShiftEvent();
         RemoveSelfFromCardDeckChild();
+        _cardRemovalListener.NotifyAboutCardRemoval();
         _pooler.ReturnToPool(this);
     }
 

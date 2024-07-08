@@ -1,9 +1,10 @@
 ﻿using Codebase.MonobehaviourComponents;
 using Progress;
+using UnityEngine;
 
 namespace Services.CardGeneration
 {
-    public class CardCountService
+    public class CardCountService : ICardRemovalListener
     {
         private int _maxCardCount = 10;
         private int _currentCount = 0;
@@ -25,6 +26,12 @@ namespace Services.CardGeneration
                 towerToDelete.GetComponent<TowerCard>().ReturnToPool();
                 _resourceService.GatherScrolls(1);
             }
+        }
+        public void NotifyAboutCardRemoval()
+        {
+            _currentCount --;
+            if (_currentCount < 0)
+                Debug.LogError("impossible card in hand count");
         }
     }
 }
