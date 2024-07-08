@@ -6,11 +6,11 @@ namespace Enemies
 {
     public class GobboWarrior : Gobbo
     {
-        [SerializeField] private int _blockValue;
+        [SerializeField] private int _bubbleShieldCharge;
         public override void Construct(AudioSource audioSource, DamageTextService damageTextService, MonsterInfoServiceIngame monsterInfoServiceIngame, IEnemyReachedReciever enemyReachedReciever)
         {
             base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, enemyReachedReciever);
-            _abstractDamageRecievingModule = new BlockHealthModule(transform, damageTextService, _blockValue);
+            _abstractDamageRecievingModule = new BubbleShieldModule(transform, damageTextService, _bubbleShieldCharge);
         }
     }
 }

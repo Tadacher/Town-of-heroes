@@ -1,5 +1,6 @@
 ﻿using Services;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class BlockHealthModule : AbstractDamageRecievingModule
 {
@@ -15,5 +16,9 @@ public class BlockHealthModule : AbstractDamageRecievingModule
         if (realDamage < 0) { realDamage = 0; }
         _damageTextService.ReturnDamageText(realDamage, _unitTransform.position);
         return realDamage;
+    }
+
+    public override void ReInit()
+    {
     }
 }

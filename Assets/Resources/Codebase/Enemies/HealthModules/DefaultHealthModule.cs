@@ -13,4 +13,8 @@ public class DefaultHealthModule : AbstractDamageRecievingModule
         _damageTextService.ReturnDamageText(damage, _unitTransform.position);
         return damage;
     }
+
+    public override void ReInit()
+    {
+    }
 }

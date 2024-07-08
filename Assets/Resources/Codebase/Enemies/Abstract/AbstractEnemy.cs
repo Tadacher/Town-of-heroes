@@ -99,6 +99,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         transform.position = position;
         Hitpoints = _maxHitpoints;
         _enemyMovementModule.StartMovementCoroutine(this);
+        _abstractDamageRecievingModule.ReInit();
     }
     protected virtual void PlayDeathSound() => _audioSource.PlayOneShot(_deathClip);
     protected virtual void Die()

@@ -235,4 +235,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyName: GobboWarrior
   _stats: {fileID: 11400000, guid: aab7265215b013141a02fb5b5c2a14f3, type: 2}
-  _blockValue: 1
+  _bubbleShieldCharge: 1
