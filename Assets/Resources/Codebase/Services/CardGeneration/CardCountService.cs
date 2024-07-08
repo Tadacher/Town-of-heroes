@@ -21,7 +21,8 @@ namespace Services.CardGeneration
             if(_currentCount == _maxCardCount)
             {
                 _currentCount --;
-                _towerCardSpawnMarker.transform.GetChild(0).GetComponent<TowerCard>().ReturnToPool();
+                var towerToDelete = _towerCardSpawnMarker.transform.GetChild(0);
+                towerToDelete.GetComponent<TowerCard>().ReturnToPool();
                 _resourceService.GatherScrolls(1);
             }
         }
