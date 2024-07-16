@@ -17,6 +17,11 @@ namespace Metagameplay.Ui
         [SerializeField] private Text _description;
         [SerializeField] private Button _buildButton;
 
+        [SerializeField] private Text _woodCost;
+        [SerializeField] private Text _stoneCost;
+        [SerializeField] private Text _foodCost;
+        [SerializeField] private Text _scrollsCost;
+
         private BuildMenuEntry _lastSelectedEntry;
         private MetaUiContainer _metaUiContainer;
         [Inject]
@@ -37,6 +42,11 @@ namespace Metagameplay.Ui
             _image.sprite = buildingDescruptionParams.Image;
             _title.text = buildingDescruptionParams.Name;
             _description.text = buildingDescruptionParams.Description;
+
+            _woodCost.text = buildingDescruptionParams.Cost.WoodPieces.ToString();
+            _stoneCost.text = buildingDescruptionParams.Cost.StonePieces.ToString();
+            _foodCost.text = buildingDescruptionParams.Cost.FoodPieces.ToString();
+            _scrollsCost.text = buildingDescruptionParams.Cost.Scrolls.ToString();
         }
 
         private void OnButtonPressed()

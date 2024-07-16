@@ -8,10 +8,10 @@ namespace Progress
         public int WoodPieces;
         public int StonePieces;
         public int FoodPieces;
-        public int Waves;
+        public int Scrolls;
 
         [NonSerialized]
-        public int Scrolls;
+        public int Waves;
 
         
         public ResourceData(int woodPieces, int stonePieces, int foodPieces, int scrolls, int waves)
