@@ -3,9 +3,9 @@
     public class Map : IState
     {
         private CameraPositionService _cameraPositionService;
-        private readonly UiService _uiService;
+        private readonly CoreGameplaySceneUiService _uiService;
         private AbstractStateMachine stateMachine;
-        public Map (CameraPositionService cameraPositionService, UiService uiService)
+        public Map (CameraPositionService cameraPositionService, CoreGameplaySceneUiService uiService)
         {
             _cameraPositionService = cameraPositionService;
             _uiService = uiService;

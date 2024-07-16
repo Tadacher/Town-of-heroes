@@ -92,7 +92,7 @@ namespace Infrastructure
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();
             BindService<GameTimeService>();
-            BindService<UiService>().NonLazy();
+            BindService<CoreGameplaySceneUiService>().NonLazy();
             BindService<UiButtonBinder>().NonLazy();
 
             //Non monobeh abstract

@@ -2,13 +2,12 @@
 
 namespace Infrastructure
 {
-    public class UiService
+    public class CoreGameplaySceneUiService
     {
         private GameplayCanvasContainer _gameplayCanvasContainer;
         private MapCanvasContainer _mapCanvasContainer;
-        
-        
-        public UiService(GameplayCanvasContainer gameplayCanvasContainer, MapCanvasContainer mapCanvasContainer)
+
+        public CoreGameplaySceneUiService(GameplayCanvasContainer gameplayCanvasContainer, MapCanvasContainer mapCanvasContainer)
         {
             _gameplayCanvasContainer = gameplayCanvasContainer;
             _mapCanvasContainer = mapCanvasContainer;
@@ -24,5 +23,7 @@ namespace Infrastructure
             _gameplayCanvasContainer.gameObject.SetActive(false);
             _mapCanvasContainer.gameObject.SetActive(true);
         }
+        public void SetCastleHP(int HPCastle) =>
+            _gameplayCanvasContainer.CastleHealthBarText.text = HPCastle.ToString();
     }
 }
