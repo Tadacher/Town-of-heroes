@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.Input.IPointerEventListener
+  commentId: T:Services.Input.IPointerEventListener
+  id: IPointerEventListener
+  parent: Services.Input
+  children:
+  - Services.Input.IPointerEventListener.IsPointerDown
+  - Services.Input.IPointerEventListener.IsPointerUp
+  langs:
+  - csharp
+  - vb
+  name: IPointerEventListener
+  nameWithType: IPointerEventListener
+  fullName: Services.Input.IPointerEventListener
+  type: Interface
+  source:
+    id: IPointerEventListener
+    path: ''
+    startLine: 2607
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: public interface IPointerEventListener
+    content.vb: Public Interface IPointerEventListener
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Services.Input.IPointerEventListener.IsPointerDown
+  commentId: M:Services.Input.IPointerEventListener.IsPointerDown
+  id: IsPointerDown
+  parent: Services.Input.IPointerEventListener
+  langs:
+  - csharp
+  - vb
+  name: IsPointerDown()
+  nameWithType: IPointerEventListener.IsPointerDown()
+  fullName: Services.Input.IPointerEventListener.IsPointerDown()
+  type: Method
+  source:
+    id: IsPointerDown
+    path: ''
+    startLine: 2609
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: bool IsPointerDown()
+    return:
+      type: System.Boolean
+    content.vb: Function IsPointerDown As Boolean
+  overload: Services.Input.IPointerEventListener.IsPointerDown*
+- uid: Services.Input.IPointerEventListener.IsPointerUp
+  commentId: M:Services.Input.IPointerEventListener.IsPointerUp
+  id: IsPointerUp
+  parent: Services.Input.IPointerEventListener
+  langs:
+  - csharp
+  - vb
+  name: IsPointerUp()
+  nameWithType: IPointerEventListener.IsPointerUp()
+  fullName: Services.Input.IPointerEventListener.IsPointerUp()
+  type: Method
+  source:
+    id: IsPointerUp
+    path: ''
+    startLine: 2610
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.Input
+  syntax:
+    content: bool IsPointerUp()
+    return:
+      type: System.Boolean
+    content.vb: Function IsPointerUp As Boolean
+  overload: Services.Input.IPointerEventListener.IsPointerUp*
+references:
+- uid: Services.Input
+  commentId: N:Services.Input
+  name: Services.Input
+  nameWithType: Services.Input
+  fullName: Services.Input
+- uid: Services.Input.IPointerEventListener.IsPointerDown*
+  commentId: Overload:Services.Input.IPointerEventListener.IsPointerDown
+  name: IsPointerDown
+  nameWithType: IPointerEventListener.IsPointerDown
+  fullName: Services.Input.IPointerEventListener.IsPointerDown
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Services.Input.IPointerEventListener.IsPointerUp*
+  commentId: Overload:Services.Input.IPointerEventListener.IsPointerUp
+  name: IsPointerUp
+  nameWithType: IPointerEventListener.IsPointerUp
+  fullName: Services.Input.IPointerEventListener.IsPointerUp

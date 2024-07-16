@@ -16,11 +16,13 @@ namespace Services.Factories
         protected override AbstractWorldCell CreateNew()
         {
             AbstractWorldCell cell = Object.Instantiate(_cellPrefab, null);
-            cell.Initialize(this,
+            cell.Initialize(objectPooler: this,
                             worldCellBalanceService: _container.Resolve<WorldCellBalanceService>(),
                             inputService: _container.Resolve<AbstractInputService>(),
                             gridAlignService: _container.Resolve<WorldCellGridService>(),
-                            resourceService: _container.Resolve<ResourceService>());
+                            resourceService: _container.Resolve<ResourceService>(),
+                            worldCellInfoService: _container.Resolve<WorldCellInfoService>(),
+                            abstractInputService: _container.Resolve<AbstractInputService>());
             return cell;
         }
     }

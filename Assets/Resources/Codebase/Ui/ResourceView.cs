@@ -41,5 +41,6 @@ public class ResourceView : MonoBehaviour
         _resourceService.OnStoneGathered -= SetStone;
         _resourceService.OnWoodGathered -= SetWood;
         _resourceService.OnFoodGathered -= SetFood;
+        _resourceService.OnScrollsGathered -= SetScrolls;
     }
 }

@@ -1,0 +1,555 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.GameplaySceneInstaller
+  commentId: T:Infrastructure.GameplaySceneInstaller
+  id: GameplaySceneInstaller
+  parent: Infrastructure
+  children:
+  - Infrastructure.GameplaySceneInstaller.InstallBindings
+  langs:
+  - csharp
+  - vb
+  name: GameplaySceneInstaller
+  nameWithType: GameplaySceneInstaller
+  fullName: Infrastructure.GameplaySceneInstaller
+  type: Class
+  source:
+    id: GameplaySceneInstaller
+    path: ''
+    startLine: 418
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: 'public class GameplaySceneInstaller : AbstractMonoInstaller'
+    content.vb: >-
+      Public Class GameplaySceneInstaller
+          Inherits AbstractMonoInstaller
+  inheritance:
+  - System.Object
+  - Infrastructure.AbstractMonoInstaller
+  inheritedMembers:
+  - Infrastructure.AbstractMonoInstaller.BindService``1
+  - Infrastructure.AbstractMonoInstaller.BindAbstractClass``2
+  - Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding``2
+  - Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2({TRealization})
+  - Infrastructure.AbstractMonoInstaller.BindUnityComponent``1({TDependency})
+  - Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1({TDependency})
+  - Infrastructure.AbstractMonoInstaller.BindScriptableObject``1({TDependency})
+  - Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``1
+  - Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``2
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Infrastructure.GameplaySceneInstaller.InstallBindings
+  commentId: M:Infrastructure.GameplaySceneInstaller.InstallBindings
+  id: InstallBindings
+  parent: Infrastructure.GameplaySceneInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallBindings()
+  nameWithType: GameplaySceneInstaller.InstallBindings()
+  fullName: Infrastructure.GameplaySceneInstaller.InstallBindings()
+  type: Method
+  source:
+    id: InstallBindings
+    path: ''
+    startLine: 441
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public override void InstallBindings()
+    content.vb: Public Overrides Sub InstallBindings
+  overload: Infrastructure.GameplaySceneInstaller.InstallBindings*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Infrastructure.AbstractMonoInstaller
+  commentId: T:Infrastructure.AbstractMonoInstaller
+  parent: Infrastructure
+  name: AbstractMonoInstaller
+  nameWithType: AbstractMonoInstaller
+  fullName: Infrastructure.AbstractMonoInstaller
+- uid: Infrastructure.AbstractMonoInstaller.BindService``1
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindService``1
+  parent: Infrastructure.AbstractMonoInstaller
+  name: BindService<TDependency>()
+  nameWithType: AbstractMonoInstaller.BindService<TDependency>()
+  fullName: Infrastructure.AbstractMonoInstaller.BindService<TDependency>()
+  nameWithType.vb: AbstractMonoInstaller.BindService(Of TDependency)()
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindService(Of TDependency)()
+  name.vb: BindService(Of TDependency)()
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindService``1
+    name: BindService<TDependency>
+    nameWithType: AbstractMonoInstaller.BindService<TDependency>
+    fullName: Infrastructure.AbstractMonoInstaller.BindService<TDependency>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindService``1
+    name: BindService(Of TDependency)
+    nameWithType: AbstractMonoInstaller.BindService(Of TDependency)
+    fullName: Infrastructure.AbstractMonoInstaller.BindService(Of TDependency)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindAbstractClass``2
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindAbstractClass``2
+  parent: Infrastructure.AbstractMonoInstaller
+  name: BindAbstractClass<TAbstractDependency, TConcrete>()
+  nameWithType: AbstractMonoInstaller.BindAbstractClass<TAbstractDependency, TConcrete>()
+  fullName: Infrastructure.AbstractMonoInstaller.BindAbstractClass<TAbstractDependency, TConcrete>()
+  nameWithType.vb: AbstractMonoInstaller.BindAbstractClass(Of TAbstractDependency, TConcrete)()
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindAbstractClass(Of TAbstractDependency, TConcrete)()
+  name.vb: BindAbstractClass(Of TAbstractDependency, TConcrete)()
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindAbstractClass``2
+    name: BindAbstractClass<TAbstractDependency, TConcrete>
+    nameWithType: AbstractMonoInstaller.BindAbstractClass<TAbstractDependency, TConcrete>
+    fullName: Infrastructure.AbstractMonoInstaller.BindAbstractClass<TAbstractDependency, TConcrete>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindAbstractClass``2
+    name: BindAbstractClass(Of TAbstractDependency, TConcrete)
+    nameWithType: AbstractMonoInstaller.BindAbstractClass(Of TAbstractDependency, TConcrete)
+    fullName: Infrastructure.AbstractMonoInstaller.BindAbstractClass(Of TAbstractDependency, TConcrete)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding``2
+  commentId: M:Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding``2
+  parent: Infrastructure.AbstractMonoInstaller
+  name: InstallInterfaceBinding<TInterface, TRealization>()
+  nameWithType: AbstractMonoInstaller.InstallInterfaceBinding<TInterface, TRealization>()
+  fullName: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding<TInterface, TRealization>()
+  nameWithType.vb: AbstractMonoInstaller.InstallInterfaceBinding(Of TInterface, TRealization)()
+  fullName.vb: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding(Of TInterface, TRealization)()
+  name.vb: InstallInterfaceBinding(Of TInterface, TRealization)()
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding``2
+    name: InstallInterfaceBinding<TInterface, TRealization>
+    nameWithType: AbstractMonoInstaller.InstallInterfaceBinding<TInterface, TRealization>
+    fullName: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding<TInterface, TRealization>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding``2
+    name: InstallInterfaceBinding(Of TInterface, TRealization)
+    nameWithType: AbstractMonoInstaller.InstallInterfaceBinding(Of TInterface, TRealization)
+    fullName: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding(Of TInterface, TRealization)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2({TRealization})
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+  parent: Infrastructure.AbstractMonoInstaller
+  definition: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+  name: BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  nameWithType: AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  nameWithType.vb: AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+  name.vb: BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+    name: BindInterfaceFromInstance<TInterface, TRealization>
+    nameWithType: AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>
+    fullName: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRealization
+    nameWithType: TRealization
+    fullName: TRealization
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+    name: BindInterfaceFromInstance(Of TInterface, TRealization)
+    nameWithType: AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)
+    fullName: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRealization
+    nameWithType: TRealization
+    fullName: TRealization
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindUnityComponent``1({TDependency})
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+  parent: Infrastructure.AbstractMonoInstaller
+  definition: Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+  name: BindUnityComponent<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindUnityComponent<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindUnityComponent<TDependency>(TDependency)
+  nameWithType.vb: AbstractMonoInstaller.BindUnityComponent(Of TDependency)(TDependency)
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindUnityComponent(Of TDependency)(TDependency)
+  name.vb: BindUnityComponent(Of TDependency)(TDependency)
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+    name: BindUnityComponent<TDependency>
+    nameWithType: AbstractMonoInstaller.BindUnityComponent<TDependency>
+    fullName: Infrastructure.AbstractMonoInstaller.BindUnityComponent<TDependency>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+    name: BindUnityComponent(Of TDependency)
+    nameWithType: AbstractMonoInstaller.BindUnityComponent(Of TDependency)
+    fullName: Infrastructure.AbstractMonoInstaller.BindUnityComponent(Of TDependency)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1({TDependency})
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+  parent: Infrastructure.AbstractMonoInstaller
+  definition: Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+  name: BindMonobehaviour<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindMonobehaviour<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindMonobehaviour<TDependency>(TDependency)
+  nameWithType.vb: AbstractMonoInstaller.BindMonobehaviour(Of TDependency)(TDependency)
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindMonobehaviour(Of TDependency)(TDependency)
+  name.vb: BindMonobehaviour(Of TDependency)(TDependency)
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+    name: BindMonobehaviour<TDependency>
+    nameWithType: AbstractMonoInstaller.BindMonobehaviour<TDependency>
+    fullName: Infrastructure.AbstractMonoInstaller.BindMonobehaviour<TDependency>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+    name: BindMonobehaviour(Of TDependency)
+    nameWithType: AbstractMonoInstaller.BindMonobehaviour(Of TDependency)
+    fullName: Infrastructure.AbstractMonoInstaller.BindMonobehaviour(Of TDependency)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindScriptableObject``1({TDependency})
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+  parent: Infrastructure.AbstractMonoInstaller
+  definition: Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+  name: BindScriptableObject<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindScriptableObject<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindScriptableObject<TDependency>(TDependency)
+  nameWithType.vb: AbstractMonoInstaller.BindScriptableObject(Of TDependency)(TDependency)
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindScriptableObject(Of TDependency)(TDependency)
+  name.vb: BindScriptableObject(Of TDependency)(TDependency)
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+    name: BindScriptableObject<TDependency>
+    nameWithType: AbstractMonoInstaller.BindScriptableObject<TDependency>
+    fullName: Infrastructure.AbstractMonoInstaller.BindScriptableObject<TDependency>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+    name: BindScriptableObject(Of TDependency)
+    nameWithType: AbstractMonoInstaller.BindScriptableObject(Of TDependency)
+    fullName: Infrastructure.AbstractMonoInstaller.BindScriptableObject(Of TDependency)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``1
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``1
+  parent: Infrastructure.AbstractMonoInstaller
+  name: BindInterfacesAndSelfto<TService>()
+  nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto<TService>()
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto<TService>()
+  nameWithType.vb: AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService)()
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService)()
+  name.vb: BindInterfacesAndSelfto(Of TService)()
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``1
+    name: BindInterfacesAndSelfto<TService>
+    nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto<TService>
+    fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto<TService>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``1
+    name: BindInterfacesAndSelfto(Of TService)
+    nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService)
+    fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``2
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``2
+  parent: Infrastructure.AbstractMonoInstaller
+  name: BindInterfacesAndSelfto<TService, TAbstractService>()
+  nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto<TService, TAbstractService>()
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto<TService, TAbstractService>()
+  nameWithType.vb: AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService, TAbstractService)()
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService, TAbstractService)()
+  name.vb: BindInterfacesAndSelfto(Of TService, TAbstractService)()
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``2
+    name: BindInterfacesAndSelfto<TService, TAbstractService>
+    nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto<TService, TAbstractService>
+    fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto<TService, TAbstractService>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``2
+    name: BindInterfacesAndSelfto(Of TService, TAbstractService)
+    nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService, TAbstractService)
+    fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService, TAbstractService)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+  name: BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  nameWithType: AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  nameWithType.vb: AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+  name.vb: BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+    name: BindInterfaceFromInstance<TInterface, TRealization>
+    nameWithType: AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>
+    fullName: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRealization
+    nameWithType: TRealization
+    fullName: TRealization
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+    name: BindInterfaceFromInstance(Of TInterface, TRealization)
+    nameWithType: AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)
+    fullName: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRealization
+    nameWithType: TRealization
+    fullName: TRealization
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+  name: BindUnityComponent<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindUnityComponent<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindUnityComponent<TDependency>(TDependency)
+  nameWithType.vb: AbstractMonoInstaller.BindUnityComponent(Of TDependency)(TDependency)
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindUnityComponent(Of TDependency)(TDependency)
+  name.vb: BindUnityComponent(Of TDependency)(TDependency)
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+    name: BindUnityComponent<TDependency>
+    nameWithType: AbstractMonoInstaller.BindUnityComponent<TDependency>
+    fullName: Infrastructure.AbstractMonoInstaller.BindUnityComponent<TDependency>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+    name: BindUnityComponent(Of TDependency)
+    nameWithType: AbstractMonoInstaller.BindUnityComponent(Of TDependency)
+    fullName: Infrastructure.AbstractMonoInstaller.BindUnityComponent(Of TDependency)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+  name: BindMonobehaviour<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindMonobehaviour<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindMonobehaviour<TDependency>(TDependency)
+  nameWithType.vb: AbstractMonoInstaller.BindMonobehaviour(Of TDependency)(TDependency)
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindMonobehaviour(Of TDependency)(TDependency)
+  name.vb: BindMonobehaviour(Of TDependency)(TDependency)
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+    name: BindMonobehaviour<TDependency>
+    nameWithType: AbstractMonoInstaller.BindMonobehaviour<TDependency>
+    fullName: Infrastructure.AbstractMonoInstaller.BindMonobehaviour<TDependency>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+    name: BindMonobehaviour(Of TDependency)
+    nameWithType: AbstractMonoInstaller.BindMonobehaviour(Of TDependency)
+    fullName: Infrastructure.AbstractMonoInstaller.BindMonobehaviour(Of TDependency)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+  name: BindScriptableObject<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindScriptableObject<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindScriptableObject<TDependency>(TDependency)
+  nameWithType.vb: AbstractMonoInstaller.BindScriptableObject(Of TDependency)(TDependency)
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindScriptableObject(Of TDependency)(TDependency)
+  name.vb: BindScriptableObject(Of TDependency)(TDependency)
+  spec.csharp:
+  - uid: Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+    name: BindScriptableObject<TDependency>
+    nameWithType: AbstractMonoInstaller.BindScriptableObject<TDependency>
+    fullName: Infrastructure.AbstractMonoInstaller.BindScriptableObject<TDependency>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+    name: BindScriptableObject(Of TDependency)
+    nameWithType: AbstractMonoInstaller.BindScriptableObject(Of TDependency)
+    fullName: Infrastructure.AbstractMonoInstaller.BindScriptableObject(Of TDependency)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TDependency
+    nameWithType: TDependency
+    fullName: TDependency
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.GameplaySceneInstaller.InstallBindings*
+  commentId: Overload:Infrastructure.GameplaySceneInstaller.InstallBindings
+  name: InstallBindings
+  nameWithType: GameplaySceneInstaller.InstallBindings
+  fullName: Infrastructure.GameplaySceneInstaller.InstallBindings

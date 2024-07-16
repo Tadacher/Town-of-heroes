@@ -1,10 +1,10 @@
 ﻿using Progress;
 using Services.CardGeneration;
 using Services.GlobalMap;
-using Services.GridSystem;
 using Services.Input;
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace WorldCells
 {
@@ -13,8 +13,13 @@ namespace WorldCells
     /// base class for all world cells
     /// it is mandatory for it to be in WorldCells namespace for propper card generation
     /// </summary>
-    public abstract class AbstractWorldCell : MonoBehaviour, IPoolableObject, IWorldGridCellObject
+    public abstract class AbstractWorldCell : MonoBehaviour, IPoolableObject, IWorldGridCellObject, IPointerDownHandler, IWorldCellInfoProvider
     {
+        public string Name => _cellStats.Name;
+        public string Description => _cellStats.Description;
+        public CellBiomeTypes[] CellTypes => _cellStats.CellTags;
+
+
         //external
         [SerializeField] protected PointerFollower _pointerFollower;
         [SerializeField] protected SpriteRenderer _spriteRenderer;
@@ -25,17 +30,24 @@ namespace WorldCells
         protected WorldCellBalanceService _worldCellBalanceService;
         protected ResourceService _resourceService;
 
+        private AbstractInputService _abstractInputService;
+        private WorldCellInfoService _worldCellInfoService;
+
         public void Initialize(IObjectPooler objectPooler,
                                WorldCellGridService gridAlignService,
                                AbstractInputService inputService,
                                WorldCellBalanceService worldCellBalanceService,
-                               ResourceService resourceService)
+                               ResourceService resourceService,
+                               AbstractInputService abstractInputService,
+                               WorldCellInfoService worldCellInfoService)
         {
             _resourceService = resourceService;
             _objectPooler = objectPooler;
             _worldCellGridService = gridAlignService;
             _worldCellBalanceService = worldCellBalanceService;
             _pointerFollower.Initialize(inputService, gridAlignService);
+            _abstractInputService = abstractInputService;
+            _worldCellInfoService = worldCellInfoService;
         }
 
         public void ReturnToPool() =>
@@ -135,6 +147,12 @@ namespace WorldCells
             _worldCellGridService.SpawnAndInjectCellToWorld(celltype, transform.position);
             RemoveSelfFromGrid();
             PoolSelf();
+        }
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            if (_abstractInputService.RightMouseDown())
+                _worldCellInfoService.Show(this);
         }
     }
 }

@@ -6,7 +6,8 @@ namespace Progress
 {
     public class ResourceService
     {
-        ResourceData _data;
+        private ResourceData _data;
+        private readonly ResourcesSaveLoader _resourcesSaveLoader;
 
         public event Action<int> OnWoodGathered;
         public event Action<int> OnFoodGathered;
@@ -15,19 +16,23 @@ namespace Progress
 
         public ResourceService(ResourcesSaveLoader resourcesSaveLoader)
         {
+            _resourcesSaveLoader = resourcesSaveLoader;
             if(resourcesSaveLoader.ResourceSave == null)
             {
+                _data = new(0, 0, 0, 0, 0);
                 Debug.LogError("No resource savefile found!");
                 return;
             }
             var save = resourcesSaveLoader.ResourceSave;
             _data = new(
-                save.WoodPieces, 
-                save.StonePieces, 
-                save.FoodPieces,
-                save.Scrolls);
-           
+                woodPieces: save.WoodPieces, 
+                stonePieces: save.StonePieces, 
+                foodPieces: save.FoodPieces,
+                scrolls: save.Scrolls,
+                waves: save.Waves);
         }
+
+        public void Save() => _resourcesSaveLoader.Save(GetResourceData());
 
         public void GatherWood(int wood)
         {
@@ -51,6 +56,14 @@ namespace Progress
             _data.Scrolls += scrolls;
             OnScrollsGathered?.Invoke(_data.Scrolls);
         }
+
+        public void CountWave()
+        {
+            _data.Waves++;
+            Debug.Log(_data.Waves);
+        }
+
+        public void ClearWave() => _data.Waves = 0;
         public ResourceData GetResourceData() => _data;
 
         public void Refresh()
@@ -70,8 +83,6 @@ namespace Progress
 
             _data.StonePieces -= cost.StonePieces;
             OnStoneGathered?.Invoke(_data.StonePieces);
-        }
-
-        
+        }        
     }
 }

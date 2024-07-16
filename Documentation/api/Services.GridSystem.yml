@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  id: Services.GridSystem
+  children:
+  - Services.GridSystem.AbstractGridService
+  - Services.GridSystem.BattleGridService
+  - Services.GridSystem.IGridCellObject
+  - Services.GridSystem.RoadCell
+  langs:
+  - csharp
+  - vb
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Services.GridSystem.AbstractGridService
+  commentId: T:Services.GridSystem.AbstractGridService
+  parent: Services.GridSystem
+  name: AbstractGridService
+  nameWithType: AbstractGridService
+  fullName: Services.GridSystem.AbstractGridService
+- uid: Services.GridSystem.BattleGridService
+  commentId: T:Services.GridSystem.BattleGridService
+  parent: Services.GridSystem
+  name: BattleGridService
+  nameWithType: BattleGridService
+  fullName: Services.GridSystem.BattleGridService
+- uid: Services.GridSystem.IGridCellObject
+  commentId: T:Services.GridSystem.IGridCellObject
+  parent: Services.GridSystem
+  name: IGridCellObject
+  nameWithType: IGridCellObject
+  fullName: Services.GridSystem.IGridCellObject
+- uid: Services.GridSystem.RoadCell
+  commentId: T:Services.GridSystem.RoadCell
+  name: RoadCell
+  nameWithType: RoadCell
+  fullName: Services.GridSystem.RoadCell
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem

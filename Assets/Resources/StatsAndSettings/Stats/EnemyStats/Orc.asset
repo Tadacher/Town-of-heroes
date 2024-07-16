@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2d8d23eaeb3c54394afd34d931cc6f, type: 3}
+  m_Name: Orc
+  m_EditorClassIdentifier: 
+  EnemyTypesAndWeights: []
+  HitPoints: 0
+  Damage: 0
+  ExpPerKill: 0
+  GenerationCost: 0
+  Speed: 0
+  Name: 
+  HitPointsPerLevel: 0
+  DamagePerLevel: 0
+  ExpPerKillPerLevel: 0
+  SpeedPerLevel: 0
+  DeathSound: {fileID: 0}

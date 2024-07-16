@@ -39,6 +39,12 @@ public class CameraMovement : MonoBehaviour
     {
         Vector2 mousepos = Input.mousePosition;
 
+        if (mousepos.x < 0 || mousepos.x > _screenWidght)
+            return;
+        if (mousepos.y < 0 || mousepos.y > _screenHeight)
+            return;
+
+
         if (mousepos.x < _screenWidght * _borderGap || Input.GetKey(KeyCode.A))
             MoveLeft();
         else if (mousepos.x > _screenWidght * (1 - _borderGap) || Input.GetKey(KeyCode.D))

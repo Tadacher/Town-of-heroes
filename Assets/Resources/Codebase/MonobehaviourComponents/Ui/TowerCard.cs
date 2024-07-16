@@ -1,4 +1,6 @@
+using Codebase.MonobehaviourComponents;
 using Infrastructure;
+using Services.CardGeneration;
 using Services.Input;
 using Services.TowerBuilding;
 using Services.Ui;
@@ -44,10 +46,11 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
     //internal
     private IExitableState _currentState;
+    private ICardRemovalListener _cardRemovalListener;
     private GameplayStateMachine _gameplayStateMachine;
     private Coroutine _switchStateCoroutine;
     private GameObject _gameObject;
-
+    private RectTransform _rectTransform;
     private bool _battlefieldStated;
     private bool _readyToUse;
 
@@ -56,6 +59,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
                            GameplayStateMachine gameplayStateMachine,
                            IObjectPooler pooler,
                            IShiftEventProvider shiftEventProvider,
+                           ICardRemovalListener cardRemovalListener,
                            CardInfoUiService cardInfoUiService,
                            AbstractInputService inputService,
                            TowerCardInfoConfig towerCardInfoConfig,
@@ -71,8 +75,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         _shiftEventProvider = shiftEventProvider;
         _gameplayStateMachine = gameplayStateMachine;
         _inputService = inputService;
-        SubscribeToGameStateChange();
-        SubscribeToShiftEvent();
+       
         _pooler = pooler;
 
         _cardInfoUIService = cardInfoUiService;
@@ -80,10 +83,15 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         _towerInstantiationService = towerBuildingService;
         _towerType = towerType;
 
+        _cardRemovalListener = cardRemovalListener;
         _worldCellInstantiationService = worldCellBuildingService;
         _worldCellType = worldCellType;
         _imageAsTower = towerSprite;
         _imageAsCell = worldCellSprite;
+        _rectTransform = GetComponent<RectTransform>();
+
+        SubscribeToGameStateChange();
+        SubscribeToShiftEvent();
         SetGameState();
         SetImageAsState();
     }
@@ -95,8 +103,20 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
         SetGameState();
         SetImageAsState();
+        ResetAnchor();
+
         return this;
     }
+    /// <summary>
+    /// after setting as card deck child anchor sets to upper left, we need to reset it for propper flight anim position
+    /// </summary>
+    private void ResetAnchor()
+    {
+        _rectTransform.anchorMin = Vector2.zero;
+        _rectTransform.anchorMax = Vector2.zero;
+    }
+
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if (_inputService.LeftMouseDown())
@@ -232,9 +252,21 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     {
         UnsubscribeToGameStateChange();
         UnsubscribeToShiftEvent();
+        RemoveSelfFromCardDeckChild();
+        _cardRemovalListener.NotifyAboutCardRemoval();
         _pooler.ReturnToPool(this);
     }
 
+
+    /// <summary>
+    /// due to card services use GetChild() to get last card, we need to remove em from card deck child and put back when they are active. 
+    /// Need to rewrite as stack of cards in future
+    /// </summary>
+    private void RemoveSelfFromCardDeckChild()
+    {
+        transform.parent = null;
+    }
+   
     public void StartTranslationCoroutine(Transform cardParent) => StartCoroutine(TranslationCoroutine(cardParent));
 
     private IEnumerator TranslationCoroutine(Transform cardParent)
@@ -244,7 +276,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         RectTransform transform = GetComponent<RectTransform>();
         RectTransform targetTransform = cardParent.GetComponent<RectTransform>();
 
-        transform.localPosition = Vector3.right * Screen.width;
+        transform.anchoredPosition = Vector3.right * Screen.width;
 
         Vector3 direction = (targetTransform.anchoredPosition - transform.anchoredPosition).normalized;
         while(transform.anchoredPosition.x > Screen.width/2)

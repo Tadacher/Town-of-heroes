@@ -1,0 +1,660 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.LoadLevelState
+  commentId: T:Infrastructure.LoadLevelState
+  id: LoadLevelState
+  parent: Infrastructure
+  children:
+  - Infrastructure.LoadLevelState.#ctor(Infrastructure.GameStateMachine,Infrastructure.SceneLoaderService)
+  - Infrastructure.LoadLevelState.Infrastructure#IExitableState#Exit
+  - Infrastructure.LoadLevelState.Infrastructure#IPayloadedState{System#String}#Enter(System.String)
+  langs:
+  - csharp
+  - vb
+  name: LoadLevelState
+  nameWithType: LoadLevelState
+  fullName: Infrastructure.LoadLevelState
+  type: Class
+  source:
+    id: LoadLevelState
+    path: ''
+    startLine: 628
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: 'public class LoadLevelState : IPayloadedState<string>, IExitableState'
+    content.vb: >-
+      Public Class LoadLevelState
+          Implements IPayloadedState(Of String), IExitableState
+  inheritance:
+  - System.Object
+  implements:
+  - Infrastructure.IPayloadedState{System.String}
+  - Infrastructure.IExitableState
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Infrastructure.LoadLevelState.#ctor(Infrastructure.GameStateMachine,Infrastructure.SceneLoaderService)
+  commentId: M:Infrastructure.LoadLevelState.#ctor(Infrastructure.GameStateMachine,Infrastructure.SceneLoaderService)
+  id: '#ctor(Infrastructure.GameStateMachine,Infrastructure.SceneLoaderService)'
+  parent: Infrastructure.LoadLevelState
+  langs:
+  - csharp
+  - vb
+  name: LoadLevelState(GameStateMachine, SceneLoaderService)
+  nameWithType: LoadLevelState.LoadLevelState(GameStateMachine, SceneLoaderService)
+  fullName: Infrastructure.LoadLevelState.LoadLevelState(Infrastructure.GameStateMachine, Infrastructure.SceneLoaderService)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 634
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: public LoadLevelState(GameStateMachine gameStateMachine, SceneLoaderService sceneLoaderService)
+    parameters:
+    - id: gameStateMachine
+      type: Infrastructure.GameStateMachine
+    - id: sceneLoaderService
+      type: Infrastructure.SceneLoaderService
+    content.vb: Public Sub New(gameStateMachine As GameStateMachine, sceneLoaderService As SceneLoaderService)
+  overload: Infrastructure.LoadLevelState.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Infrastructure.LoadLevelState.Infrastructure#IPayloadedState{System#String}#Enter(System.String)
+  commentId: M:Infrastructure.LoadLevelState.Infrastructure#IPayloadedState{System#String}#Enter(System.String)
+  id: Infrastructure#IPayloadedState{System#String}#Enter(System.String)
+  isEii: true
+  parent: Infrastructure.LoadLevelState
+  langs:
+  - csharp
+  - vb
+  name: IPayloadedState<String>.Enter(String)
+  nameWithType: LoadLevelState.IPayloadedState<String>.Enter(String)
+  fullName: Infrastructure.LoadLevelState.Infrastructure.IPayloadedState<System.String>.Enter(System.String)
+  type: Method
+  source:
+    id: Infrastructure.IPayloadedState<System.String>.Enter
+    path: ''
+    startLine: 641
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: void IPayloadedState<string>.Enter(string payload)
+    parameters:
+    - id: payload
+      type: System.String
+    content.vb: Sub Infrastructure.IPayloadedState<System.String>.Enter(payload As String) Implements IPayloadedState(Of String).Enter
+  overload: Infrastructure.LoadLevelState.Infrastructure#IPayloadedState{System#String}#Enter*
+  implements:
+  - Infrastructure.IPayloadedState{System.String}.Enter(System.String)
+  nameWithType.vb: LoadLevelState.Infrastructure.IPayloadedState<System.String>.Enter(String)
+  name.vb: Infrastructure.IPayloadedState<System.String>.Enter(String)
+- uid: Infrastructure.LoadLevelState.Infrastructure#IExitableState#Exit
+  commentId: M:Infrastructure.LoadLevelState.Infrastructure#IExitableState#Exit
+  id: Infrastructure#IExitableState#Exit
+  isEii: true
+  parent: Infrastructure.LoadLevelState
+  langs:
+  - csharp
+  - vb
+  name: IExitableState.Exit()
+  nameWithType: LoadLevelState.IExitableState.Exit()
+  fullName: Infrastructure.LoadLevelState.Infrastructure.IExitableState.Exit()
+  type: Method
+  source:
+    id: Infrastructure.IExitableState.Exit
+    path: ''
+    startLine: 644
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: void IExitableState.Exit()
+    content.vb: Sub Infrastructure.IExitableState.Exit Implements IExitableState.Exit
+  overload: Infrastructure.LoadLevelState.Infrastructure#IExitableState#Exit*
+  implements:
+  - Infrastructure.IExitableState.Exit
+  nameWithType.vb: LoadLevelState.Infrastructure.IExitableState.Exit()
+  name.vb: Infrastructure.IExitableState.Exit()
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Infrastructure.IPayloadedState{System.String}
+  commentId: T:Infrastructure.IPayloadedState{System.String}
+  parent: Infrastructure
+  definition: Infrastructure.IPayloadedState`1
+  name: IPayloadedState<String>
+  nameWithType: IPayloadedState<String>
+  fullName: Infrastructure.IPayloadedState<System.String>
+  nameWithType.vb: IPayloadedState(Of String)
+  fullName.vb: Infrastructure.IPayloadedState(Of System.String)
+  name.vb: IPayloadedState(Of String)
+  spec.csharp:
+  - uid: Infrastructure.IPayloadedState`1
+    name: IPayloadedState
+    nameWithType: IPayloadedState
+    fullName: Infrastructure.IPayloadedState
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Infrastructure.IPayloadedState`1
+    name: IPayloadedState
+    nameWithType: IPayloadedState
+    fullName: Infrastructure.IPayloadedState
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.IExitableState
+  commentId: T:Infrastructure.IExitableState
+  parent: Infrastructure
+  name: IExitableState
+  nameWithType: IExitableState
+  fullName: Infrastructure.IExitableState
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Infrastructure.IPayloadedState`1
+  commentId: T:Infrastructure.IPayloadedState`1
+  name: IPayloadedState<TPayload>
+  nameWithType: IPayloadedState<TPayload>
+  fullName: Infrastructure.IPayloadedState<TPayload>
+  nameWithType.vb: IPayloadedState(Of TPayload)
+  fullName.vb: Infrastructure.IPayloadedState(Of TPayload)
+  name.vb: IPayloadedState(Of TPayload)
+  spec.csharp:
+  - uid: Infrastructure.IPayloadedState`1
+    name: IPayloadedState
+    nameWithType: IPayloadedState
+    fullName: Infrastructure.IPayloadedState
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TPayload
+    nameWithType: TPayload
+    fullName: TPayload
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Infrastructure.IPayloadedState`1
+    name: IPayloadedState
+    nameWithType: IPayloadedState
+    fullName: Infrastructure.IPayloadedState
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TPayload
+    nameWithType: TPayload
+    fullName: TPayload
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.LoadLevelState.#ctor*
+  commentId: Overload:Infrastructure.LoadLevelState.#ctor
+  name: LoadLevelState
+  nameWithType: LoadLevelState.LoadLevelState
+  fullName: Infrastructure.LoadLevelState.LoadLevelState
+- uid: Infrastructure.GameStateMachine
+  commentId: T:Infrastructure.GameStateMachine
+  parent: Infrastructure
+  name: GameStateMachine
+  nameWithType: GameStateMachine
+  fullName: Infrastructure.GameStateMachine
+- uid: Infrastructure.SceneLoaderService
+  commentId: T:Infrastructure.SceneLoaderService
+  parent: Infrastructure
+  name: SceneLoaderService
+  nameWithType: SceneLoaderService
+  fullName: Infrastructure.SceneLoaderService
+- uid: Infrastructure.LoadLevelState.Infrastructure#IPayloadedState{System#String}#Enter*
+  commentId: Overload:Infrastructure.LoadLevelState.Infrastructure#IPayloadedState{System#String}#Enter
+  name: IPayloadedState<String>.Enter
+  nameWithType: LoadLevelState.IPayloadedState<String>.Enter
+  fullName: Infrastructure.LoadLevelState.Infrastructure.IPayloadedState<System.String>.Enter
+  nameWithType.vb: LoadLevelState.Infrastructure.IPayloadedState<System.String>.Enter
+  name.vb: Infrastructure.IPayloadedState<System.String>.Enter
+- uid: Infrastructure.IPayloadedState{System.String}.Enter(System.String)
+  commentId: M:Infrastructure.IPayloadedState{System.String}.Enter(System.String)
+  parent: Infrastructure.IPayloadedState{System.String}
+  definition: Infrastructure.IPayloadedState`1.Enter(`0)
+  name: Enter(String)
+  nameWithType: IPayloadedState<String>.Enter(String)
+  fullName: Infrastructure.IPayloadedState<System.String>.Enter(System.String)
+  nameWithType.vb: IPayloadedState(Of String).Enter(String)
+  fullName.vb: Infrastructure.IPayloadedState(Of System.String).Enter(System.String)
+  spec.csharp:
+  - uid: Infrastructure.IPayloadedState`1.Enter(`0)
+    name: Enter
+    nameWithType: IPayloadedState<String>.Enter
+    fullName: Infrastructure.IPayloadedState<System.String>.Enter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.IPayloadedState`1.Enter(`0)
+    name: Enter
+    nameWithType: IPayloadedState(Of String).Enter
+    fullName: Infrastructure.IPayloadedState(Of System.String).Enter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Infrastructure.IPayloadedState`1.Enter(`0)
+  commentId: M:Infrastructure.IPayloadedState`1.Enter(`0)
+  name: Enter(TPayload)
+  nameWithType: IPayloadedState<TPayload>.Enter(TPayload)
+  fullName: Infrastructure.IPayloadedState<TPayload>.Enter(TPayload)
+  nameWithType.vb: IPayloadedState(Of TPayload).Enter(TPayload)
+  fullName.vb: Infrastructure.IPayloadedState(Of TPayload).Enter(TPayload)
+  spec.csharp:
+  - uid: Infrastructure.IPayloadedState`1.Enter(`0)
+    name: Enter
+    nameWithType: IPayloadedState<TPayload>.Enter
+    fullName: Infrastructure.IPayloadedState<TPayload>.Enter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TPayload
+    nameWithType: TPayload
+    fullName: TPayload
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.IPayloadedState`1.Enter(`0)
+    name: Enter
+    nameWithType: IPayloadedState(Of TPayload).Enter
+    fullName: Infrastructure.IPayloadedState(Of TPayload).Enter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TPayload
+    nameWithType: TPayload
+    fullName: TPayload
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Infrastructure.LoadLevelState.Infrastructure#IExitableState#Exit*
+  commentId: Overload:Infrastructure.LoadLevelState.Infrastructure#IExitableState#Exit
+  name: IExitableState.Exit
+  nameWithType: LoadLevelState.IExitableState.Exit
+  fullName: Infrastructure.LoadLevelState.Infrastructure.IExitableState.Exit
+  nameWithType.vb: LoadLevelState.Infrastructure.IExitableState.Exit
+  name.vb: Infrastructure.IExitableState.Exit
+- uid: Infrastructure.IExitableState.Exit
+  commentId: M:Infrastructure.IExitableState.Exit
+  parent: Infrastructure.IExitableState
+  name: Exit()
+  nameWithType: IExitableState.Exit()
+  fullName: Infrastructure.IExitableState.Exit()
+  spec.csharp:
+  - uid: Infrastructure.IExitableState.Exit
+    name: Exit
+    nameWithType: IExitableState.Exit
+    fullName: Infrastructure.IExitableState.Exit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Infrastructure.IExitableState.Exit
+    name: Exit
+    nameWithType: IExitableState.Exit
+    fullName: Infrastructure.IExitableState.Exit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

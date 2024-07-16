@@ -3,10 +3,10 @@
     public class BattleField : IState
     {
         private CameraPositionService _cameraPositionService;
-        private readonly UiService _uiService;
+        private readonly CoreGameplaySceneUiService _uiService;
         private AbstractStateMachine _gameStateMachine;
 
-        public BattleField(CameraPositionService cameraPositionService, UiService uiService)
+        public BattleField(CameraPositionService cameraPositionService, CoreGameplaySceneUiService uiService)
         {
             _cameraPositionService = cameraPositionService;
             _uiService = uiService;

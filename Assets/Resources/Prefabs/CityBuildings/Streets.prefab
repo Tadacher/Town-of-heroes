@@ -920,7 +920,7 @@ MonoBehaviour:
   _pointerFollower: {fileID: 4323903906418282097}
   _spriteRenderer: {fileID: 0}
   _description: {fileID: 11400000, guid: 431b3709e0b55c74b802a89c2a64d41a, type: 2}
-  _hideInBuildingMenu: 0
+  _hideInBuildingMenu: 1
 --- !u!114 &4323903906418282097
 MonoBehaviour:
   m_ObjectHideFlags: 0

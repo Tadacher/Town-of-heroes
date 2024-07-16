@@ -24,7 +24,9 @@ namespace Infrastructure
         [SerializeField] private GameplayCanvasContainer _gameplayCanvasContainer;
         [SerializeField] private MapCanvasContainer _mapCanvasContainer;
         [SerializeField] private MonsterInfoView _monsterInfoView;
+        
         [SerializeField] private TowerInfoView _towerInfoView;
+        [SerializeField] private WorldCellInfoView _worldCellInfoView;
 
         [Header("Scriptables")]
         [SerializeField] private ScriptableObject[] _scriptableObjects;
@@ -47,6 +49,7 @@ namespace Infrastructure
             BindMonobehaviour(_gameplayCanvasContainer);
             BindMonobehaviour(_monsterInfoView);
             BindMonobehaviour(_towerInfoView);
+            BindMonobehaviour(_worldCellInfoView);
 
             //UI
             BindService<MonsterInfoServiceIngame>();
@@ -67,13 +70,14 @@ namespace Infrastructure
             BindService<WorldCellCardGenerator>();
             BindService<CardDescriptionService>();
             BindService<CardInfoUiService>();
-            BindService<CardCountService>();
+            BindInterfacesAndSelfto<CardCountService>();
 
             //worldCells
             BindService<WorldCellInstantiationService>();
             BindService<WorldCellGridService>();
             BindService<WorldCellBuildingService>();
             BindService<WorldCellBalanceService>();
+            BindService<WorldCellInfoService>();
 
             //enemy waves
             BindService<WaveService>();
@@ -88,7 +92,7 @@ namespace Infrastructure
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();
             BindService<GameTimeService>();
-            BindService<UiService>().NonLazy();
+            BindService<CoreGameplaySceneUiService>().NonLazy();
             BindService<UiButtonBinder>().NonLazy();
 
             //Non monobeh abstract

@@ -92,9 +92,9 @@ namespace Services.GridSystem
             Vector2Int coord = PosToCellCoords(coords);
             return (IWorldGridCellObject)_cells[coord.x, coord.y];
         }
-        public IWorldGridCellObject GetCellObjectFromGridCoords(int x, int y)
+        public IGridCellObject GetCellObjectFromGridCoords(int x, int y)
         {
-            return (IWorldGridCellObject)_cells[x, y];
+            return _cells[x, y];
         }
         /// <summary>
         /// checks if gicen coords are in bounds of grid

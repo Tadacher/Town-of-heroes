@@ -8,7 +8,7 @@ namespace Infrastructure
     {
         public event Action<IExitableState> OnStateChanged;
 
-        public GameplayStateMachine(CameraPositionService cameraPositionService, GameTimeService gameTimeService, UiService uiService)
+        public GameplayStateMachine(CameraPositionService cameraPositionService, GameTimeService gameTimeService, CoreGameplaySceneUiService uiService)
         {
             _states = new Dictionary<System.Type, IExitableState>()
             {

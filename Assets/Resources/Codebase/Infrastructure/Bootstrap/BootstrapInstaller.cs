@@ -49,7 +49,7 @@ namespace Infrastructure
 
         private void InitializeCoroutineRunner()
         {
-            Debug.Log("Lol");
+            Debug.Log("Bim bim bom bom");
             _coroutineRunner = Instantiate(_coroutineRunnerPrefab, null);
             DontDestroyOnLoad(_coroutineRunner);
         }      

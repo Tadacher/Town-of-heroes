@@ -1,6 +1,7 @@
 ﻿using Services;
 using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Zenject;
 
 public class EnemyInstantiationService : AbstractInstantiationService<AbstractEnemy>
@@ -18,18 +19,20 @@ public class EnemyInstantiationService : AbstractInstantiationService<AbstractEn
         {
             AddNewFactory(type);
         }
-        var returnable = _factories[type].GetObject();
+        AbstractEnemy returnable = _factories[type].GetObject();
         returnable.transform.position = _spawnPosition.position;
+        returnable.ReInitialize(_spawnPosition.position);
         return returnable;
     }
-    public AbstractEnemy ReturnObject(Type type, Vector3 positition)
+    public AbstractEnemy ReturnObject(Type type, Vector3 position)
     {
         if (!_factories.ContainsKey(type))
         {
             AddNewFactory(type);
         }
         var returnable = _factories[type].GetObject();
-        returnable.transform.position = positition;
+        returnable.transform.position = position;
+        returnable.ReInitialize(position);
         return returnable;
     }
 

@@ -47,8 +47,8 @@ public class WaveService
     public void CancelRoutine()
     {
         Debug.Log("Spawn routine canceled");
-        _coroutineRunner.StopCoroutine(_waveSender);
-        _coroutineRunner.StopCoroutine(_spawnerOfwawes);
+        _coroutineRunner?.StopCoroutine(_waveSender);
+        _coroutineRunner?.StopCoroutine(_spawnerOfwawes);
     }
 
     /// <summary>

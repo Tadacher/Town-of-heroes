@@ -99,6 +99,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         transform.position = position;
         Hitpoints = _maxHitpoints;
         _enemyMovementModule.StartMovementCoroutine(this);
+        _abstractDamageRecievingModule.ReInit();
     }
     protected virtual void PlayDeathSound() => _audioSource.PlayOneShot(_deathClip);
     protected virtual void Die()
@@ -109,7 +110,11 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         ReturnToPool();
     }
 
-    protected void ReturnToPool() => gameObject.SetActive(false);
+    protected void ReturnToPool()
+    {
+        gameObject.SetActive(false);
+        _pooler.ReturnToPool(this);
+    }
 
     private void InitializeStats()
     {
@@ -122,8 +127,11 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         _expForKill = _stats.ExpPerKill;
     }
 
-    void IPoolableObject.ReturnToPool() => 
+    void IPoolableObject.ReturnToPool()
+    {
+        gameObject.SetActive(false);
         _pooler.ReturnToPool(this);
+    }
 
     public AbstractEnemy WithWaveDeathListener(IMobDeathListener waveDeathListener)
     {

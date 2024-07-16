@@ -13,6 +13,7 @@ public abstract class AbstractDamageRecievingModule
         _unitTransform = unitTransform;
         _damageTextService = damageTextService;
     }
+    public abstract void ReInit();
     /// <summary>
     /// calculates damage recieved by enemy
     /// </summary>

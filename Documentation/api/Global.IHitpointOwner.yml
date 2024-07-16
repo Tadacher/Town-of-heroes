@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.IHitpointOwner
+  commentId: T:Global.IHitpointOwner
+  id: IHitpointOwner
+  parent: Global
+  children:
+  - Global.IHitpointOwner.Heal(System.Int32)
+  - Global.IHitpointOwner.RecieveDamage(System.Int32,Core.Towers.AbstractTower)
+  langs:
+  - csharp
+  - vb
+  name: IHitpointOwner
+  nameWithType: IHitpointOwner
+  fullName: IHitpointOwner
+  type: Interface
+  source:
+    id: IHitpointOwner
+    path: ''
+    startLine: 677
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public interface IHitpointOwner
+    content.vb: Public Interface IHitpointOwner
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Global.IHitpointOwner.RecieveDamage(System.Int32,Core.Towers.AbstractTower)
+  commentId: M:Global.IHitpointOwner.RecieveDamage(System.Int32,Core.Towers.AbstractTower)
+  id: RecieveDamage(System.Int32,Core.Towers.AbstractTower)
+  parent: Global.IHitpointOwner
+  langs:
+  - csharp
+  - vb
+  name: RecieveDamage(Int32, AbstractTower)
+  nameWithType: IHitpointOwner.RecieveDamage(Int32, AbstractTower)
+  fullName: IHitpointOwner.RecieveDamage(System.Int32, Core.Towers.AbstractTower)
+  type: Method
+  source:
+    id: RecieveDamage
+    path: ''
+    startLine: 679
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void RecieveDamage(int damage, AbstractTower damageDealer)
+    parameters:
+    - id: damage
+      type: System.Int32
+    - id: damageDealer
+      type: Core.Towers.AbstractTower
+    content.vb: Sub RecieveDamage(damage As Integer, damageDealer As AbstractTower)
+  overload: Global.IHitpointOwner.RecieveDamage*
+- uid: Global.IHitpointOwner.Heal(System.Int32)
+  commentId: M:Global.IHitpointOwner.Heal(System.Int32)
+  id: Heal(System.Int32)
+  parent: Global.IHitpointOwner
+  langs:
+  - csharp
+  - vb
+  name: Heal(Int32)
+  nameWithType: IHitpointOwner.Heal(Int32)
+  fullName: IHitpointOwner.Heal(System.Int32)
+  type: Method
+  source:
+    id: Heal
+    path: ''
+    startLine: 680
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: void Heal(int points)
+    parameters:
+    - id: points
+      type: System.Int32
+    content.vb: Sub Heal(points As Integer)
+  overload: Global.IHitpointOwner.Heal*
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.IHitpointOwner.RecieveDamage*
+  commentId: Overload:Global.IHitpointOwner.RecieveDamage
+  name: RecieveDamage
+  nameWithType: IHitpointOwner.RecieveDamage
+  fullName: IHitpointOwner.RecieveDamage
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Core.Towers.AbstractTower
+  commentId: T:Core.Towers.AbstractTower
+  parent: Core.Towers
+  name: AbstractTower
+  nameWithType: AbstractTower
+  fullName: Core.Towers.AbstractTower
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Core.Towers
+  commentId: N:Core.Towers
+  name: Core.Towers
+  nameWithType: Core.Towers
+  fullName: Core.Towers
+- uid: Global.IHitpointOwner.Heal*
+  commentId: Overload:Global.IHitpointOwner.Heal
+  name: Heal
+  nameWithType: IHitpointOwner.Heal
+  fullName: IHitpointOwner.Heal

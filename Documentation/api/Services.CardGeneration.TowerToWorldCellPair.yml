@@ -1,0 +1,441 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.CardGeneration.TowerToWorldCellPair
+  commentId: T:Services.CardGeneration.TowerToWorldCellPair
+  id: TowerToWorldCellPair
+  parent: Services.CardGeneration
+  children:
+  - Services.CardGeneration.TowerToWorldCellPair.CellProbabilityPairs
+  - Services.CardGeneration.TowerToWorldCellPair.Tower
+  langs:
+  - csharp
+  - vb
+  name: TowerToWorldCellPair
+  nameWithType: TowerToWorldCellPair
+  fullName: Services.CardGeneration.TowerToWorldCellPair
+  type: Class
+  source:
+    id: TowerToWorldCellPair
+    path: ''
+    startLine: 1608
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  summary: "\ndescribes which tower on card can contain which world cell card on other side\n"
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class TowerToWorldCellPair
+    content.vb: >-
+      <Serializable>
+
+      Public Class TowerToWorldCellPair
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.CardGeneration.TowerToWorldCellPair.Tower
+  commentId: F:Services.CardGeneration.TowerToWorldCellPair.Tower
+  id: Tower
+  parent: Services.CardGeneration.TowerToWorldCellPair
+  langs:
+  - csharp
+  - vb
+  name: Tower
+  nameWithType: TowerToWorldCellPair.Tower
+  fullName: Services.CardGeneration.TowerToWorldCellPair.Tower
+  type: Field
+  source:
+    id: Tower
+    path: ''
+    startLine: 1611
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: public AbstractTower Tower
+    return:
+      type: Core.Towers.AbstractTower
+    content.vb: Public Tower As AbstractTower
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.CardGeneration.TowerToWorldCellPair.CellProbabilityPairs
+  commentId: F:Services.CardGeneration.TowerToWorldCellPair.CellProbabilityPairs
+  id: CellProbabilityPairs
+  parent: Services.CardGeneration.TowerToWorldCellPair
+  langs:
+  - csharp
+  - vb
+  name: CellProbabilityPairs
+  nameWithType: TowerToWorldCellPair.CellProbabilityPairs
+  fullName: Services.CardGeneration.TowerToWorldCellPair.CellProbabilityPairs
+  type: Field
+  source:
+    id: CellProbabilityPairs
+    path: ''
+    startLine: 1612
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.CardGeneration
+  syntax:
+    content: public CellProbabilityPair[] CellProbabilityPairs
+    return:
+      type: Services.CardGeneration.CellProbabilityPair[]
+    content.vb: Public CellProbabilityPairs As CellProbabilityPair()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Services.CardGeneration
+  commentId: N:Services.CardGeneration
+  name: Services.CardGeneration
+  nameWithType: Services.CardGeneration
+  fullName: Services.CardGeneration
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Core.Towers.AbstractTower
+  commentId: T:Core.Towers.AbstractTower
+  parent: Core.Towers
+  name: AbstractTower
+  nameWithType: AbstractTower
+  fullName: Core.Towers.AbstractTower
+- uid: Core.Towers
+  commentId: N:Core.Towers
+  name: Core.Towers
+  nameWithType: Core.Towers
+  fullName: Core.Towers
+- uid: Services.CardGeneration.CellProbabilityPair[]
+  isExternal: true
+  name: CellProbabilityPair[]
+  nameWithType: CellProbabilityPair[]
+  fullName: Services.CardGeneration.CellProbabilityPair[]
+  nameWithType.vb: CellProbabilityPair()
+  fullName.vb: Services.CardGeneration.CellProbabilityPair()
+  name.vb: CellProbabilityPair()
+  spec.csharp:
+  - uid: Services.CardGeneration.CellProbabilityPair
+    name: CellProbabilityPair
+    nameWithType: CellProbabilityPair
+    fullName: Services.CardGeneration.CellProbabilityPair
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Services.CardGeneration.CellProbabilityPair
+    name: CellProbabilityPair
+    nameWithType: CellProbabilityPair
+    fullName: Services.CardGeneration.CellProbabilityPair
+  - name: ()
+    nameWithType: ()
+    fullName: ()

@@ -1,0 +1,73 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.ICommonAttacker
+  commentId: T:Global.ICommonAttacker
+  id: ICommonAttacker
+  parent: Global
+  children:
+  - Global.ICommonAttacker.FindClosestTarget
+  langs:
+  - csharp
+  - vb
+  name: ICommonAttacker
+  nameWithType: ICommonAttacker
+  fullName: ICommonAttacker
+  type: Interface
+  source:
+    id: ICommonAttacker
+    path: ''
+    startLine: 650
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public interface ICommonAttacker
+    content.vb: Public Interface ICommonAttacker
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Global.ICommonAttacker.FindClosestTarget
+  commentId: M:Global.ICommonAttacker.FindClosestTarget
+  id: FindClosestTarget
+  parent: Global.ICommonAttacker
+  langs:
+  - csharp
+  - vb
+  name: FindClosestTarget()
+  nameWithType: ICommonAttacker.FindClosestTarget()
+  fullName: ICommonAttacker.FindClosestTarget()
+  type: Method
+  source:
+    id: FindClosestTarget
+    path: ''
+    startLine: 652
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: AbstractEnemy FindClosestTarget()
+    return:
+      type: Global.AbstractEnemy
+    content.vb: Function FindClosestTarget As AbstractEnemy
+  overload: Global.ICommonAttacker.FindClosestTarget*
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: Global.ICommonAttacker.FindClosestTarget*
+  commentId: Overload:Global.ICommonAttacker.FindClosestTarget
+  name: FindClosestTarget
+  nameWithType: ICommonAttacker.FindClosestTarget
+  fullName: ICommonAttacker.FindClosestTarget
+- uid: Global.AbstractEnemy
+  commentId: T:Global.AbstractEnemy
+  name: AbstractEnemy
+  nameWithType: AbstractEnemy
+  fullName: AbstractEnemy

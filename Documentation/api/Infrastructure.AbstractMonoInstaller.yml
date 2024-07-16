@@ -1,0 +1,503 @@
+### YamlMime:ManagedReference
+items:
+- uid: Infrastructure.AbstractMonoInstaller
+  commentId: T:Infrastructure.AbstractMonoInstaller
+  id: AbstractMonoInstaller
+  parent: Infrastructure
+  children:
+  - Infrastructure.AbstractMonoInstaller.BindAbstractClass``2
+  - Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+  - Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``1
+  - Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``2
+  - Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+  - Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+  - Infrastructure.AbstractMonoInstaller.BindService``1
+  - Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+  - Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding``2
+  langs:
+  - csharp
+  - vb
+  name: AbstractMonoInstaller
+  nameWithType: AbstractMonoInstaller
+  fullName: Infrastructure.AbstractMonoInstaller
+  type: Class
+  source:
+    id: AbstractMonoInstaller
+    path: ''
+    startLine: 284
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBase class for any zenject monoInstaller implementation. Consists of &quot;Bind&quot; methods, which are basically instructions \nabout which class should be resolved for each binded contract\n"
+  example: []
+  syntax:
+    content: 'public abstract class AbstractMonoInstaller : MonoInstaller'
+    content.vb: >-
+      Public MustInherit Class AbstractMonoInstaller
+          Inherits MonoInstaller
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Infrastructure.BootstrapInstaller
+  - Infrastructure.GameplaySceneInstaller
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Infrastructure.AbstractMonoInstaller.BindService``1
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindService``1
+  id: BindService``1
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: BindService<TDependency>()
+  nameWithType: AbstractMonoInstaller.BindService<TDependency>()
+  fullName: Infrastructure.AbstractMonoInstaller.BindService<TDependency>()
+  type: Method
+  source:
+    id: BindService
+    path: ''
+    startLine: 291
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBinds non-monobehaviour exemplar from new instance of given type\n"
+  example: []
+  syntax:
+    content: protected ConcreteIdArgConditionCopyNonLazyBinder BindService<TDependency>()
+    typeParameters:
+    - id: TDependency
+      description: 'binding type '
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+      description: 'object to override binding options of needed '
+    content.vb: Protected Function BindService(Of TDependency) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.BindService*
+  nameWithType.vb: AbstractMonoInstaller.BindService(Of TDependency)()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindService(Of TDependency)()
+  name.vb: BindService(Of TDependency)()
+- uid: Infrastructure.AbstractMonoInstaller.BindAbstractClass``2
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindAbstractClass``2
+  id: BindAbstractClass``2
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: BindAbstractClass<TAbstractDependency, TConcrete>()
+  nameWithType: AbstractMonoInstaller.BindAbstractClass<TAbstractDependency, TConcrete>()
+  fullName: Infrastructure.AbstractMonoInstaller.BindAbstractClass<TAbstractDependency, TConcrete>()
+  type: Method
+  source:
+    id: BindAbstractClass
+    path: ''
+    startLine: 299
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBinds non-monobehaviour concrete realization from new instance of given type to given abstract type\n"
+  example: []
+  syntax:
+    content: >-
+      protected ConcreteIdArgConditionCopyNonLazyBinder BindAbstractClass<TAbstractDependency, TConcrete>()
+          where TConcrete : TAbstractDependency
+    typeParameters:
+    - id: TAbstractDependency
+      description: abstract class
+    - id: TConcrete
+      description: concrete realization of an abstract class
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+      description: zenject object to override binding options of needed
+    content.vb: Protected Function BindAbstractClass(Of TAbstractDependency, TConcrete As TAbstractDependency) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.BindAbstractClass*
+  nameWithType.vb: AbstractMonoInstaller.BindAbstractClass(Of TAbstractDependency, TConcrete)()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindAbstractClass(Of TAbstractDependency, TConcrete)()
+  name.vb: BindAbstractClass(Of TAbstractDependency, TConcrete)()
+- uid: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding``2
+  commentId: M:Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding``2
+  id: InstallInterfaceBinding``2
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: InstallInterfaceBinding<TInterface, TRealization>()
+  nameWithType: AbstractMonoInstaller.InstallInterfaceBinding<TInterface, TRealization>()
+  fullName: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding<TInterface, TRealization>()
+  type: Method
+  source:
+    id: InstallInterfaceBinding
+    path: ''
+    startLine: 307
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBinds non-monobehaviour realization from new instance of given type to given interface type\n"
+  example: []
+  syntax:
+    content: >-
+      protected ConcreteIdArgConditionCopyNonLazyBinder InstallInterfaceBinding<TInterface, TRealization>()
+          where TRealization : TInterface
+    typeParameters:
+    - id: TInterface
+      description: interface we should bind realization to
+    - id: TRealization
+      description: interface realization itself
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+      description: zenject object to override binding options of needed
+    content.vb: Protected Function InstallInterfaceBinding(Of TInterface, TRealization As TInterface) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding*
+  nameWithType.vb: AbstractMonoInstaller.InstallInterfaceBinding(Of TInterface, TRealization)()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding(Of TInterface, TRealization)()
+  name.vb: InstallInterfaceBinding(Of TInterface, TRealization)()
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance``2(``1)
+  id: BindInterfaceFromInstance``2(``1)
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  nameWithType: AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance<TInterface, TRealization>(TRealization)
+  type: Method
+  source:
+    id: BindInterfaceFromInstance
+    path: ''
+    startLine: 316
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBinds non-monobehaviour realization from given existing instance of given type to given interface type\n"
+  example: []
+  syntax:
+    content: >-
+      protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfaceFromInstance<TInterface, TRealization>(TRealization instance)
+          where TRealization : TInterface
+    parameters:
+    - id: instance
+      type: '{TRealization}'
+      description: instance we want to bind
+    typeParameters:
+    - id: TInterface
+      description: interface we should bind realization to
+    - id: TRealization
+      description: interface realization itself
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+      description: zenject object to override binding options of needed
+    content.vb: Protected Function BindInterfaceFromInstance(Of TInterface, TRealization As TInterface)(instance As TRealization) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance*
+  nameWithType.vb: AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+  name.vb: BindInterfaceFromInstance(Of TInterface, TRealization)(TRealization)
+- uid: Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindUnityComponent``1(``0)
+  id: BindUnityComponent``1(``0)
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: BindUnityComponent<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindUnityComponent<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindUnityComponent<TDependency>(TDependency)
+  type: Method
+  source:
+    id: BindUnityComponent
+    path: ''
+    startLine: 324
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBinds unity component from existing instance of given type to thw same type \n"
+  example: []
+  syntax:
+    content: >-
+      protected ConcreteIdArgConditionCopyNonLazyBinder BindUnityComponent<TDependency>(TDependency instance)
+          where TDependency : Component
+    parameters:
+    - id: instance
+      type: '{TDependency}'
+      description: Unity component instance
+    typeParameters:
+    - id: TDependency
+      description: Unity component type
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+      description: zenject object to override binding options of needed
+    content.vb: Protected Function BindUnityComponent(Of TDependency As Component)(instance As TDependency) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.BindUnityComponent*
+  nameWithType.vb: AbstractMonoInstaller.BindUnityComponent(Of TDependency)(TDependency)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindUnityComponent(Of TDependency)(TDependency)
+  name.vb: BindUnityComponent(Of TDependency)(TDependency)
+- uid: Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindMonobehaviour``1(``0)
+  id: BindMonobehaviour``1(``0)
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: BindMonobehaviour<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindMonobehaviour<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindMonobehaviour<TDependency>(TDependency)
+  type: Method
+  source:
+    id: BindMonobehaviour
+    path: ''
+    startLine: 332
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBinds Monobehaviour component from existing instance of given type to thw same type \n"
+  example: []
+  syntax:
+    content: >-
+      protected ConcreteIdArgConditionCopyNonLazyBinder BindMonobehaviour<TDependency>(TDependency instance)
+          where TDependency : MonoBehaviour
+    parameters:
+    - id: instance
+      type: '{TDependency}'
+      description: Monobehaviour component instance
+    typeParameters:
+    - id: TDependency
+      description: Monobehaviour component type
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+      description: zenject object to override binding options of needed
+    content.vb: Protected Function BindMonobehaviour(Of TDependency As MonoBehaviour)(instance As TDependency) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.BindMonobehaviour*
+  nameWithType.vb: AbstractMonoInstaller.BindMonobehaviour(Of TDependency)(TDependency)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindMonobehaviour(Of TDependency)(TDependency)
+  name.vb: BindMonobehaviour(Of TDependency)(TDependency)
+- uid: Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindScriptableObject``1(``0)
+  id: BindScriptableObject``1(``0)
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: BindScriptableObject<TDependency>(TDependency)
+  nameWithType: AbstractMonoInstaller.BindScriptableObject<TDependency>(TDependency)
+  fullName: Infrastructure.AbstractMonoInstaller.BindScriptableObject<TDependency>(TDependency)
+  type: Method
+  source:
+    id: BindScriptableObject
+    path: ''
+    startLine: 340
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBinds ScriptableObject component from existing instance of given type to thw same type \n"
+  example: []
+  syntax:
+    content: >-
+      protected ConcreteIdArgConditionCopyNonLazyBinder BindScriptableObject<TDependency>(TDependency instance)
+          where TDependency : ScriptableObject
+    parameters:
+    - id: instance
+      type: '{TDependency}'
+      description: ScriptableObject component instance
+    typeParameters:
+    - id: TDependency
+      description: ScriptableObject component type
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+      description: zenject object to override binding options of needed
+    content.vb: Protected Function BindScriptableObject(Of TDependency As ScriptableObject)(instance As TDependency) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.BindScriptableObject*
+  nameWithType.vb: AbstractMonoInstaller.BindScriptableObject(Of TDependency)(TDependency)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindScriptableObject(Of TDependency)(TDependency)
+  name.vb: BindScriptableObject(Of TDependency)(TDependency)
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``1
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``1
+  id: BindInterfacesAndSelfto``1
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: BindInterfacesAndSelfto<TService>()
+  nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto<TService>()
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto<TService>()
+  type: Method
+  source:
+    id: BindInterfacesAndSelfto
+    path: ''
+    startLine: 347
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  summary: "\nBinds all class interfaces and class iteself to given type\n"
+  example: []
+  syntax:
+    content: >-
+      protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfto<TService>()
+          where TService : class
+    typeParameters:
+    - id: TService
+      description: binding type
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+      description: zenject object to override binding options of needed
+    content.vb: Protected Function BindInterfacesAndSelfto(Of TService As Class) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto*
+  nameWithType.vb: AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService)()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService)()
+  name.vb: BindInterfacesAndSelfto(Of TService)()
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``2
+  commentId: M:Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto``2
+  id: BindInterfacesAndSelfto``2
+  parent: Infrastructure.AbstractMonoInstaller
+  langs:
+  - csharp
+  - vb
+  name: BindInterfacesAndSelfto<TService, TAbstractService>()
+  nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto<TService, TAbstractService>()
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto<TService, TAbstractService>()
+  type: Method
+  source:
+    id: BindInterfacesAndSelfto
+    path: ''
+    startLine: 349
+  assemblies:
+  - cs.temp.dll
+  namespace: Infrastructure
+  syntax:
+    content: >-
+      protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfto<TService, TAbstractService>()
+          where TService : TAbstractService where TAbstractService : class
+    typeParameters:
+    - id: TService
+    - id: TAbstractService
+    return:
+      type: Global.ConcreteIdArgConditionCopyNonLazyBinder
+    content.vb: Protected Function BindInterfacesAndSelfto(Of TService As TAbstractService, TAbstractService As Class) As ConcreteIdArgConditionCopyNonLazyBinder
+  overload: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto*
+  nameWithType.vb: AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService, TAbstractService)()
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto(Of TService, TAbstractService)()
+  name.vb: BindInterfacesAndSelfto(Of TService, TAbstractService)()
+references:
+- uid: Infrastructure
+  commentId: N:Infrastructure
+  name: Infrastructure
+  nameWithType: Infrastructure
+  fullName: Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Infrastructure.AbstractMonoInstaller.BindService*
+  commentId: Overload:Infrastructure.AbstractMonoInstaller.BindService
+  name: BindService
+  nameWithType: AbstractMonoInstaller.BindService
+  fullName: Infrastructure.AbstractMonoInstaller.BindService
+- uid: Global.ConcreteIdArgConditionCopyNonLazyBinder
+  isExternal: true
+  name: ConcreteIdArgConditionCopyNonLazyBinder
+  nameWithType: ConcreteIdArgConditionCopyNonLazyBinder
+  fullName: ConcreteIdArgConditionCopyNonLazyBinder
+- uid: Infrastructure.AbstractMonoInstaller.BindAbstractClass*
+  commentId: Overload:Infrastructure.AbstractMonoInstaller.BindAbstractClass
+  name: BindAbstractClass
+  nameWithType: AbstractMonoInstaller.BindAbstractClass
+  fullName: Infrastructure.AbstractMonoInstaller.BindAbstractClass
+- uid: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding*
+  commentId: Overload:Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding
+  name: InstallInterfaceBinding
+  nameWithType: AbstractMonoInstaller.InstallInterfaceBinding
+  fullName: Infrastructure.AbstractMonoInstaller.InstallInterfaceBinding
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance*
+  commentId: Overload:Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance
+  name: BindInterfaceFromInstance
+  nameWithType: AbstractMonoInstaller.BindInterfaceFromInstance
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfaceFromInstance
+- uid: '{TRealization}'
+  commentId: '!:TRealization'
+  definition: TRealization
+  name: TRealization
+  nameWithType: TRealization
+  fullName: TRealization
+- uid: TRealization
+  commentId: '!:TRealization'
+  name: TRealization
+  nameWithType: TRealization
+  fullName: TRealization
+- uid: Infrastructure.AbstractMonoInstaller.BindUnityComponent*
+  commentId: Overload:Infrastructure.AbstractMonoInstaller.BindUnityComponent
+  name: BindUnityComponent
+  nameWithType: AbstractMonoInstaller.BindUnityComponent
+  fullName: Infrastructure.AbstractMonoInstaller.BindUnityComponent
+- uid: '{TDependency}'
+  commentId: '!:TDependency'
+  definition: TDependency
+  name: TDependency
+  nameWithType: TDependency
+  fullName: TDependency
+- uid: TDependency
+  name: TDependency
+  nameWithType: TDependency
+  fullName: TDependency
+- uid: Infrastructure.AbstractMonoInstaller.BindMonobehaviour*
+  commentId: Overload:Infrastructure.AbstractMonoInstaller.BindMonobehaviour
+  name: BindMonobehaviour
+  nameWithType: AbstractMonoInstaller.BindMonobehaviour
+  fullName: Infrastructure.AbstractMonoInstaller.BindMonobehaviour
+- uid: Infrastructure.AbstractMonoInstaller.BindScriptableObject*
+  commentId: Overload:Infrastructure.AbstractMonoInstaller.BindScriptableObject
+  name: BindScriptableObject
+  nameWithType: AbstractMonoInstaller.BindScriptableObject
+  fullName: Infrastructure.AbstractMonoInstaller.BindScriptableObject
+- uid: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto*
+  commentId: Overload:Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto
+  name: BindInterfacesAndSelfto
+  nameWithType: AbstractMonoInstaller.BindInterfacesAndSelfto
+  fullName: Infrastructure.AbstractMonoInstaller.BindInterfacesAndSelfto

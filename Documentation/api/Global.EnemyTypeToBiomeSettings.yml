@@ -1,0 +1,183 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.EnemyTypeToBiomeSettings
+  commentId: T:Global.EnemyTypeToBiomeSettings
+  id: EnemyTypeToBiomeSettings
+  parent: Global
+  children:
+  - Global.EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
+  - Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
+  langs:
+  - csharp
+  - vb
+  name: EnemyTypeToBiomeSettings
+  nameWithType: EnemyTypeToBiomeSettings
+  fullName: EnemyTypeToBiomeSettings
+  type: Class
+  source:
+    id: EnemyTypeToBiomeSettings
+    path: ''
+    startLine: 1408
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: 'public class EnemyTypeToBiomeSettings : ScriptableObject'
+    content.vb: >-
+      Public Class EnemyTypeToBiomeSettings
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
+  commentId: F:Global.EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
+  id: BiomeToEnemyTypesSettings
+  parent: Global.EnemyTypeToBiomeSettings
+  langs:
+  - csharp
+  - vb
+  name: BiomeToEnemyTypesSettings
+  nameWithType: EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
+  fullName: EnemyTypeToBiomeSettings.BiomeToEnemyTypesSettings
+  type: Field
+  source:
+    id: BiomeToEnemyTypesSettings
+    path: ''
+    startLine: 1411
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  syntax:
+    content: public BiomeToEnemyTypesPair[] BiomeToEnemyTypesSettings
+    return:
+      type: Global.BiomeToEnemyTypesPair[]
+    content.vb: Public BiomeToEnemyTypesSettings As BiomeToEnemyTypesPair()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
+  commentId: M:Global.EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
+  id: GetPairByBiomeType(WorldCells.CellBiomeTypes)
+  parent: Global.EnemyTypeToBiomeSettings
+  langs:
+  - csharp
+  - vb
+  name: GetPairByBiomeType(CellBiomeTypes)
+  nameWithType: EnemyTypeToBiomeSettings.GetPairByBiomeType(CellBiomeTypes)
+  fullName: EnemyTypeToBiomeSettings.GetPairByBiomeType(WorldCells.CellBiomeTypes)
+  type: Method
+  source:
+    id: GetPairByBiomeType
+    path: ''
+    startLine: 1419
+  assemblies:
+  - cs.temp.dll
+  namespace: Global
+  summary: "\nreturns every possible enemy type in biome and its weight\n"
+  example: []
+  syntax:
+    content: public EnemytypeToWeightPair[] GetPairByBiomeType(CellBiomeTypes biomeType)
+    parameters:
+    - id: biomeType
+      type: WorldCells.CellBiomeTypes
+      description: ''
+    return:
+      type: Global.EnemytypeToWeightPair[]
+      description: ''
+    content.vb: Public Function GetPairByBiomeType(biomeType As CellBiomeTypes) As EnemytypeToWeightPair()
+  overload: Global.EnemyTypeToBiomeSettings.GetPairByBiomeType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.BiomeToEnemyTypesPair[]
+  isExternal: true
+  name: BiomeToEnemyTypesPair[]
+  nameWithType: BiomeToEnemyTypesPair[]
+  fullName: BiomeToEnemyTypesPair[]
+  nameWithType.vb: BiomeToEnemyTypesPair()
+  fullName.vb: BiomeToEnemyTypesPair()
+  name.vb: BiomeToEnemyTypesPair()
+  spec.csharp:
+  - uid: Global.BiomeToEnemyTypesPair
+    name: BiomeToEnemyTypesPair
+    nameWithType: BiomeToEnemyTypesPair
+    fullName: BiomeToEnemyTypesPair
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Global.BiomeToEnemyTypesPair
+    name: BiomeToEnemyTypesPair
+    nameWithType: BiomeToEnemyTypesPair
+    fullName: BiomeToEnemyTypesPair
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Global.EnemyTypeToBiomeSettings.GetPairByBiomeType*
+  commentId: Overload:Global.EnemyTypeToBiomeSettings.GetPairByBiomeType
+  name: GetPairByBiomeType
+  nameWithType: EnemyTypeToBiomeSettings.GetPairByBiomeType
+  fullName: EnemyTypeToBiomeSettings.GetPairByBiomeType
+- uid: WorldCells.CellBiomeTypes
+  commentId: T:WorldCells.CellBiomeTypes
+  parent: WorldCells
+  name: CellBiomeTypes
+  nameWithType: CellBiomeTypes
+  fullName: WorldCells.CellBiomeTypes
+- uid: Global.EnemytypeToWeightPair[]
+  isExternal: true
+  name: EnemytypeToWeightPair[]
+  nameWithType: EnemytypeToWeightPair[]
+  fullName: EnemytypeToWeightPair[]
+  nameWithType.vb: EnemytypeToWeightPair()
+  fullName.vb: EnemytypeToWeightPair()
+  name.vb: EnemytypeToWeightPair()
+  spec.csharp:
+  - uid: Global.EnemytypeToWeightPair
+    name: EnemytypeToWeightPair
+    nameWithType: EnemytypeToWeightPair
+    fullName: EnemytypeToWeightPair
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Global.EnemytypeToWeightPair
+    name: EnemytypeToWeightPair
+    nameWithType: EnemytypeToWeightPair
+    fullName: EnemytypeToWeightPair
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells

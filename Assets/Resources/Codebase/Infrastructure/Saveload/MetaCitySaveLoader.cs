@@ -2,6 +2,7 @@
 using System.IO;
 using UnityEngine;
 using Newtonsoft.Json;
+using static Infrastructure.MetaCitySave;
 
 namespace Infrastructure
 {
@@ -21,7 +22,14 @@ namespace Infrastructure
             if (File.Exists(Application.persistentDataPath + _path))
             {
                 _json = File.ReadAllText(Application.persistentDataPath + _path);
-                SaveObject = JsonConvert.DeserializeObject<MetaCitySave>(_json);
+                try
+                {
+                    SaveObject = JsonConvert.DeserializeObject<MetaCitySave>(_json);
+                }
+                catch(Exception ex)
+                {
+                    Debug.LogError(ex);
+                }
             }
             else if (File.Exists(Application.persistentDataPath + _initialMapPath))
             {
@@ -29,15 +37,15 @@ namespace Infrastructure
                 SaveObject = JsonConvert.DeserializeObject<MetaCitySave>(_json);
             }
             else
-                Debug.LogError("NO ACCEPTABLE SAVES FOUND");
+                Debug.LogError("NO INITIAL MAP FOUND");
         }
-        public void Save(Type[] types)
+        public void Save(MetaCitySaveEntry[] save)
         {
             if (SaveObject == null)
-                SaveObject = new(types);
+                SaveObject = new(save);
 
             else 
-                SaveObject.FlatGrid = types;
+                SaveObject.FlatGrid = save;
             
             try
             {
@@ -53,13 +61,24 @@ namespace Infrastructure
     public class MetaCitySave
     {
         /// <summary>
-        /// must be flat array cuz json caanot save multi-dimensional arrays
+        /// must be flat array cuz json cannot save multi-dimensional arrays
         /// </summary>
-        public Type[] FlatGrid;
+        public MetaCitySaveEntry[] FlatGrid;
 
-        public MetaCitySave(Type[] grid)
+        public MetaCitySave(MetaCitySaveEntry[] grid)
         {
             FlatGrid = grid;
+        }
+        public class MetaCitySaveEntry
+        {
+            public Type BuildingType;
+            public int BuildingLevel;
+
+            public MetaCitySaveEntry(Type buildingType, int buildingLevel)
+            {
+                BuildingType = buildingType;
+                BuildingLevel = buildingLevel;
+            }
         }
     }
 }

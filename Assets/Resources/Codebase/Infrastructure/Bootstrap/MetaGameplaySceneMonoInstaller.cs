@@ -38,11 +38,12 @@ namespace Infrastructure
             BindService<MetaGridCellInfoService>();
 
             //deck editing
-            BindInterfacesAndSelfto<CardDeckEditingService>().NonLazy();
+            BindInterfacesAndSelfto<CardDeckEditingMenu>().NonLazy();
             BindService<CardDeckService>();
             BindService<DeckEntryFactory>();
             BindService<CardEntryFactory>();
             BindService<CardDescriptionService>();
+            BindService<CardAvalilabilityService>();
 
             //prefabs
             BindMonobehaviour(_deckEntry);

@@ -1,0 +1,481 @@
+### YamlMime:ManagedReference
+items:
+- uid: Services.TowerBuilding.TowerBuildingService
+  commentId: T:Services.TowerBuilding.TowerBuildingService
+  id: TowerBuildingService
+  parent: Services.TowerBuilding
+  children:
+  - Services.TowerBuilding.TowerBuildingService.#ctor(Services.TowerBuilding.TowerInstantiationService,Services.GridSystem.BattleGridService,AbstractInputService)
+  - Services.TowerBuilding.TowerBuildingService._activeCard
+  - Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,System.Type)
+  langs:
+  - csharp
+  - vb
+  name: TowerBuildingService
+  nameWithType: TowerBuildingService
+  fullName: Services.TowerBuilding.TowerBuildingService
+  type: Class
+  source:
+    id: TowerBuildingService
+    path: ''
+    startLine: 2672
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.TowerBuilding
+  syntax:
+    content: public class TowerBuildingService
+    content.vb: Public Class TowerBuildingService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Services.TowerBuilding.TowerBuildingService._activeCard
+  commentId: F:Services.TowerBuilding.TowerBuildingService._activeCard
+  id: _activeCard
+  parent: Services.TowerBuilding.TowerBuildingService
+  langs:
+  - csharp
+  - vb
+  name: _activeCard
+  nameWithType: TowerBuildingService._activeCard
+  fullName: Services.TowerBuilding.TowerBuildingService._activeCard
+  type: Field
+  source:
+    id: _activeCard
+    path: ''
+    startLine: 2674
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.TowerBuilding
+  syntax:
+    content: protected IPoolableObject _activeCard
+    return:
+      type: Global.IPoolableObject
+    content.vb: Protected _activeCard As IPoolableObject
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Services.TowerBuilding.TowerBuildingService.#ctor(Services.TowerBuilding.TowerInstantiationService,Services.GridSystem.BattleGridService,AbstractInputService)
+  commentId: M:Services.TowerBuilding.TowerBuildingService.#ctor(Services.TowerBuilding.TowerInstantiationService,Services.GridSystem.BattleGridService,AbstractInputService)
+  id: '#ctor(Services.TowerBuilding.TowerInstantiationService,Services.GridSystem.BattleGridService,AbstractInputService)'
+  parent: Services.TowerBuilding.TowerBuildingService
+  langs:
+  - csharp
+  - vb
+  name: TowerBuildingService(TowerInstantiationService, BattleGridService, AbstractInputService)
+  nameWithType: TowerBuildingService.TowerBuildingService(TowerInstantiationService, BattleGridService, AbstractInputService)
+  fullName: Services.TowerBuilding.TowerBuildingService.TowerBuildingService(Services.TowerBuilding.TowerInstantiationService, Services.GridSystem.BattleGridService, AbstractInputService)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 2680
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.TowerBuilding
+  syntax:
+    content: public TowerBuildingService(TowerInstantiationService towerInstantiatingService, BattleGridService gridAlignService, AbstractInputService inputService = null)
+    parameters:
+    - id: towerInstantiatingService
+      type: Services.TowerBuilding.TowerInstantiationService
+    - id: gridAlignService
+      type: Services.GridSystem.BattleGridService
+    - id: inputService
+      type: Global.AbstractInputService
+    content.vb: Public Sub New(towerInstantiatingService As TowerInstantiationService, gridAlignService As BattleGridService, inputService As AbstractInputService = Nothing)
+  overload: Services.TowerBuilding.TowerBuildingService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,System.Type)
+  commentId: M:Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard,System.Type)
+  id: InstantiateTowerFromCard(TowerCard,System.Type)
+  parent: Services.TowerBuilding.TowerBuildingService
+  langs:
+  - csharp
+  - vb
+  name: InstantiateTowerFromCard(TowerCard, Type)
+  nameWithType: TowerBuildingService.InstantiateTowerFromCard(TowerCard, Type)
+  fullName: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard(TowerCard, System.Type)
+  type: Method
+  source:
+    id: InstantiateTowerFromCard
+    path: ''
+    startLine: 2686
+  assemblies:
+  - cs.temp.dll
+  namespace: Services.TowerBuilding
+  syntax:
+    content: public void InstantiateTowerFromCard(TowerCard towerCard, Type type)
+    parameters:
+    - id: towerCard
+      type: Global.TowerCard
+    - id: type
+      type: System.Type
+    content.vb: Public Sub InstantiateTowerFromCard(towerCard As TowerCard, type As Type)
+  overload: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Services.TowerBuilding
+  commentId: N:Services.TowerBuilding
+  name: Services.TowerBuilding
+  nameWithType: Services.TowerBuilding
+  fullName: Services.TowerBuilding
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.IPoolableObject
+  commentId: T:Global.IPoolableObject
+  name: IPoolableObject
+  nameWithType: IPoolableObject
+  fullName: IPoolableObject
+- uid: Services.TowerBuilding.TowerBuildingService.#ctor*
+  commentId: Overload:Services.TowerBuilding.TowerBuildingService.#ctor
+  name: TowerBuildingService
+  nameWithType: TowerBuildingService.TowerBuildingService
+  fullName: Services.TowerBuilding.TowerBuildingService.TowerBuildingService
+- uid: Services.TowerBuilding.TowerInstantiationService
+  commentId: T:Services.TowerBuilding.TowerInstantiationService
+  parent: Services.TowerBuilding
+  name: TowerInstantiationService
+  nameWithType: TowerInstantiationService
+  fullName: Services.TowerBuilding.TowerInstantiationService
+- uid: Services.GridSystem.BattleGridService
+  commentId: T:Services.GridSystem.BattleGridService
+  parent: Services.GridSystem
+  name: BattleGridService
+  nameWithType: BattleGridService
+  fullName: Services.GridSystem.BattleGridService
+- uid: Global.AbstractInputService
+  isExternal: true
+  name: AbstractInputService
+  nameWithType: AbstractInputService
+  fullName: AbstractInputService
+- uid: Services.GridSystem
+  commentId: N:Services.GridSystem
+  name: Services.GridSystem
+  nameWithType: Services.GridSystem
+  fullName: Services.GridSystem
+- uid: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard*
+  commentId: Overload:Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard
+  name: InstantiateTowerFromCard
+  nameWithType: TowerBuildingService.InstantiateTowerFromCard
+  fullName: Services.TowerBuilding.TowerBuildingService.InstantiateTowerFromCard
+- uid: Global.TowerCard
+  commentId: T:Global.TowerCard
+  name: TowerCard
+  nameWithType: TowerCard
+  fullName: TowerCard
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type

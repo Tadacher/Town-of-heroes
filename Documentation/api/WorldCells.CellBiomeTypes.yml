@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: WorldCells.CellBiomeTypes
+  commentId: T:WorldCells.CellBiomeTypes
+  id: CellBiomeTypes
+  parent: WorldCells
+  children:
+  - WorldCells.CellBiomeTypes.Arctic
+  - WorldCells.CellBiomeTypes.Cursed
+  - WorldCells.CellBiomeTypes.Desert
+  - WorldCells.CellBiomeTypes.Green
+  - WorldCells.CellBiomeTypes.Ocean
+  langs:
+  - csharp
+  - vb
+  name: CellBiomeTypes
+  nameWithType: CellBiomeTypes
+  fullName: WorldCells.CellBiomeTypes
+  type: Enum
+  source:
+    id: CellBiomeTypes
+    path: ''
+    startLine: 1334
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: public enum CellBiomeTypes
+    content.vb: Public Enum CellBiomeTypes
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: WorldCells.CellBiomeTypes.Green
+  commentId: F:WorldCells.CellBiomeTypes.Green
+  id: Green
+  parent: WorldCells.CellBiomeTypes
+  langs:
+  - csharp
+  - vb
+  name: Green
+  nameWithType: CellBiomeTypes.Green
+  fullName: WorldCells.CellBiomeTypes.Green
+  type: Field
+  source:
+    id: Green
+    path: ''
+    startLine: 1336
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: Green = 0
+    return:
+      type: WorldCells.CellBiomeTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: WorldCells.CellBiomeTypes.Desert
+  commentId: F:WorldCells.CellBiomeTypes.Desert
+  id: Desert
+  parent: WorldCells.CellBiomeTypes
+  langs:
+  - csharp
+  - vb
+  name: Desert
+  nameWithType: CellBiomeTypes.Desert
+  fullName: WorldCells.CellBiomeTypes.Desert
+  type: Field
+  source:
+    id: Desert
+    path: ''
+    startLine: 1337
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: Desert = 1
+    return:
+      type: WorldCells.CellBiomeTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: WorldCells.CellBiomeTypes.Arctic
+  commentId: F:WorldCells.CellBiomeTypes.Arctic
+  id: Arctic
+  parent: WorldCells.CellBiomeTypes
+  langs:
+  - csharp
+  - vb
+  name: Arctic
+  nameWithType: CellBiomeTypes.Arctic
+  fullName: WorldCells.CellBiomeTypes.Arctic
+  type: Field
+  source:
+    id: Arctic
+    path: ''
+    startLine: 1338
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: Arctic = 2
+    return:
+      type: WorldCells.CellBiomeTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: WorldCells.CellBiomeTypes.Ocean
+  commentId: F:WorldCells.CellBiomeTypes.Ocean
+  id: Ocean
+  parent: WorldCells.CellBiomeTypes
+  langs:
+  - csharp
+  - vb
+  name: Ocean
+  nameWithType: CellBiomeTypes.Ocean
+  fullName: WorldCells.CellBiomeTypes.Ocean
+  type: Field
+  source:
+    id: Ocean
+    path: ''
+    startLine: 1339
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: Ocean = 3
+    return:
+      type: WorldCells.CellBiomeTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: WorldCells.CellBiomeTypes.Cursed
+  commentId: F:WorldCells.CellBiomeTypes.Cursed
+  id: Cursed
+  parent: WorldCells.CellBiomeTypes
+  langs:
+  - csharp
+  - vb
+  name: Cursed
+  nameWithType: CellBiomeTypes.Cursed
+  fullName: WorldCells.CellBiomeTypes.Cursed
+  type: Field
+  source:
+    id: Cursed
+    path: ''
+    startLine: 1340
+  assemblies:
+  - cs.temp.dll
+  namespace: WorldCells
+  syntax:
+    content: Cursed = 4
+    return:
+      type: WorldCells.CellBiomeTypes
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: WorldCells
+  commentId: N:WorldCells
+  name: WorldCells
+  nameWithType: WorldCells
+  fullName: WorldCells
+- uid: WorldCells.CellBiomeTypes
+  commentId: T:WorldCells.CellBiomeTypes
+  parent: WorldCells
+  name: CellBiomeTypes
+  nameWithType: CellBiomeTypes
+  fullName: WorldCells.CellBiomeTypes

@@ -308,6 +308,8 @@ MonoBehaviour:
   _spriteRenderer: {fileID: 0}
   _description: {fileID: 11400000, guid: 2232ca412213c634f8f743ff0fb654f5, type: 2}
   _hideInBuildingMenu: 1
+  _shouldNotSave: 1
+  _canBeDestroyed: 0
 --- !u!114 &8676160866164832597
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -40,5 +40,20 @@ MonoBehaviour:
     WoodPieces: 1
     StonePieces: 1
     FoodPieces: 0
+    Waves: 0
+  PerLevelEffects:
+  - AvailableTowers:
+    - {fileID: 3369840710708336310, guid: a2b4619c51e2b7948920dacce50acacf, type: 3}
+  - AvailableTowers:
+    - {fileID: 8399250403091713473, guid: 02639988f7a6cac40a59b019263613a5, type: 3}
+  UpgradeCostsPerLevel:
+  - WoodPieces: 0
+    StonePieces: 0
+    FoodPieces: 0
+    Waves: 0
+  - WoodPieces: 1
+    StonePieces: 1
+    FoodPieces: 1
+    Waves: 0
   Image: {fileID: 21300000, guid: 1fde77ef8c120c648bef297755ab78c9, type: 3}
   ClipOnSelect: {fileID: 8300000, guid: 72169e55f3e3ae047b93ab1e7dc75a4d, type: 3}

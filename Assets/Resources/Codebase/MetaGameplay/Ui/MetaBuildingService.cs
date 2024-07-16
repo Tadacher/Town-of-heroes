@@ -15,10 +15,9 @@ public class MetaBuildingService
     private AbstractInputService _inputService;
     private AbstractMetaGridCell _activeCell;
 
-    public MetaBuildingService(
-        MetaBuildingsInstantiationService metaBuildingsInstantiationService,
-        MetaGridSevice gameplayGridSevice,
-        AbstractInputService inputInputService)
+    public MetaBuildingService(MetaBuildingsInstantiationService metaBuildingsInstantiationService,
+                               MetaGridSevice gameplayGridSevice,
+                               AbstractInputService inputInputService)
     {
         _metaBuildingsInstantiationService = metaBuildingsInstantiationService;
         _metaGameplayGridSevice = gameplayGridSevice;

@@ -29,4 +29,8 @@ public class DodgeDamageRecievingModule : AbstractDamageRecievingModule
             return 0;
         }
     }
+
+    public override void ReInit()
+    {
+    }
 }
