@@ -19,7 +19,7 @@ public class EnemyInstantiationService : AbstractInstantiationService<AbstractEn
         {
             AddNewFactory(type);
         }
-        var returnable = _factories[type].GetObject();
+        AbstractEnemy returnable = _factories[type].GetObject();
         returnable.transform.position = _spawnPosition.position;
         returnable.ReInitialize(_spawnPosition.position);
         return returnable;
