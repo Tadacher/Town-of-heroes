@@ -100,7 +100,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     {
         SubscribeToGameStateChange();
         SubscribeToShiftEvent();
-
+        ResetScale();
         SetGameState();
         SetImageAsState();
         ResetAnchor();
