@@ -6,7 +6,7 @@ namespace Infrastructure
     {     
         public UiButtonBinder(GameplayStateMachine gameplayStateMachine, GameplayCanvasContainer gameplayCanvasContainer, MapCanvasContainer mapCanvasContainer)
         {
-            gameplayCanvasContainer.ToMapButton.onClick.AddListener(gameplayStateMachine.EnterState<Map>);
+            gameplayCanvasContainer.ToMapButton.onClick.AddListener(gameplayStateMachine.EnterState<MapState>);
             mapCanvasContainer.ToBattleFieldBtn.onClick.AddListener(gameplayStateMachine.EnterState<BattleField>);
         }
     }

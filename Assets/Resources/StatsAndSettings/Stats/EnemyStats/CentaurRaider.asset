@@ -21,8 +21,8 @@ MonoBehaviour:
   GenerationCost: 5
   Speed: 3
   Name: CentaurRaider
-  HitPointsPerLevel: 0
+  HitPointsPerLevel: 2
   DamagePerLevel: 0
-  ExpPerKillPerLevel: 0
-  SpeedPerLevel: 0
+  ExpPerKillPerLevel: 1
+  SpeedPerLevel: 0.01
   DeathSound: {fileID: 8300000, guid: 08c7b5d21b0150c4ea40357833bc8336, type: 3}

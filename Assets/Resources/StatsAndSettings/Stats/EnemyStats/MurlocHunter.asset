@@ -21,7 +21,7 @@ MonoBehaviour:
   GenerationCost: 20
   Speed: 1
   Name: MurlocHunter
-  HitPointsPerLevel: 0
+  HitPointsPerLevel: 4
   DamagePerLevel: 0
   ExpPerKillPerLevel: 0
   SpeedPerLevel: 0

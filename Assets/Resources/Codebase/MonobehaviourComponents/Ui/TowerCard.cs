@@ -158,7 +158,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
             case BattleField battleField:
                 SetImageAsCell();
                 break;
-            case Map map: 
+            case MapState map: 
                 SetTImageAsTower();
             break;
         }
@@ -179,7 +179,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
         switch (state)
         {
-            case Map map:
+            case MapState map:
                 SwitchToMapState();
                 break;
             case BattleField field:

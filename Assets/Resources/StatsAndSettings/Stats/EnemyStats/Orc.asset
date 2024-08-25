@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Orc
   m_EditorClassIdentifier: 
   EnemyTypesAndWeights: []
-  HitPoints: 0
-  Damage: 0
-  ExpPerKill: 0
-  GenerationCost: 0
-  Speed: 0
-  Name: 
-  HitPointsPerLevel: 0
-  DamagePerLevel: 0
-  ExpPerKillPerLevel: 0
-  SpeedPerLevel: 0
+  HitPoints: 12
+  Damage: 1
+  ExpPerKill: 2
+  GenerationCost: 2
+  Speed: 1
+  Name: Orc
+  HitPointsPerLevel: 3
+  DamagePerLevel: 1
+  ExpPerKillPerLevel: 3
+  SpeedPerLevel: 0.01
   DeathSound: {fileID: 0}

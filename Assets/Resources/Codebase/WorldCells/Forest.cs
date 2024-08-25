@@ -38,9 +38,10 @@ namespace WorldCells
 
         private bool IsForestCell(IWorldGridCellObject gridCellObject)
         {
+           
             return
-                ((Forest)gridCellObject) != null ||
-                ((ImpenetrableForest)gridCellObject) != null;
+                gridCellObject is Forest ||
+                gridCellObject is ImpenetrableForest;
         }
 
         protected override void CheckForGeneralInteraction()

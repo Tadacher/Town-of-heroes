@@ -17,6 +17,7 @@
 
         public void Exit()
         {
+
         }
 
         public IExitableState Init(AbstractStateMachine gameStateMachine)

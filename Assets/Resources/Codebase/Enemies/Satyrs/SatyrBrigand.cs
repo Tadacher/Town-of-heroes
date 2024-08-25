@@ -14,9 +14,13 @@ namespace Enemies
         private int _illusionCount = 1;
 
         [Inject]
-        public override void Construct(AudioSource audioSource, DamageTextService damageTextService, MonsterInfoServiceIngame monsterInfoServiceIngame, IEnemyReachedReciever enemyReachedReciever)
+        public override void Construct(AudioSource audioSource,
+                                       DamageTextService damageTextService,
+                                       MonsterInfoServiceIngame monsterInfoServiceIngame,
+                                       IEnemyReachedReciever enemyReachedReciever,
+                                       IWaveNumberProvider waveNumberProvider)
         {
-            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, enemyReachedReciever);
+            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, enemyReachedReciever, waveNumberProvider);
             _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
 
         }

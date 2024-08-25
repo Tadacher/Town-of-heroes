@@ -18,7 +18,7 @@ public class EnemyStats : ScriptableObject
     public string Name;
     [Space(5)]
 
-    [Header("Stats per level")]
+    [Header("Stats per wave")]
     public int HitPointsPerLevel;
     public int DamagePerLevel;
     public int ExpPerKillPerLevel;

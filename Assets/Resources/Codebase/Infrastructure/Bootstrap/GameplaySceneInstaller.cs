@@ -66,21 +66,21 @@ namespace Infrastructure
             BindInterfacesAndSelfto<CardCountService>();
 
             //worldCells
-            BindService<WorldCellInstantiationService>();
-            BindService<WorldCellGridService>();
+            BindService<WorldCellInstantiationService>().NonLazy();
+            BindService<WorldCellGridService>().NonLazy();
             BindService<WorldCellBuildingService>();
             BindService<WorldCellBalanceService>();
             BindService<WorldCellInfoService>();
 
             //enemy waves
-            BindService<WaveService>();
+            BindInterfacesAndSelfto<WaveService>();
             BindService<WaveDeathListenerFactory>();
             BindService<WaveGenerator>();
             BindService<EnemyInstantiationService>();
             BindService<EnemyTypeService>();
             BindService<EnemyGenerationCostService>();
 
-            BindInterfacesAndSelfto<CoreGameplayService>();
+            BindInterfacesAndSelfto<CoreGameplayService>().NonLazy();
 
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();
@@ -95,6 +95,11 @@ namespace Infrastructure
 
             Debug.Log("SCENE_INSTALLER_DONE");
         }
+        public override void Start()
+        {
+            base.Start();
+        }
+        
         private void BindMarkers()
         {
             foreach (var marker in _markers)

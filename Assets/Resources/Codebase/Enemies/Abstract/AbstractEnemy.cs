@@ -47,6 +47,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     //other
     protected IEnemyReachedReciever _coreGameplayService;
     protected IMobDeathListener _deathListener;
+    protected IWaveNumberProvider _waveNumberProvider;
     protected DamageTextService _damageTextService;
 
     //linked ui interactions
@@ -58,12 +59,14 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     public virtual void Construct(AudioSource audioSource,
                                    DamageTextService damageTextService,
                                    MonsterInfoServiceIngame monsterInfoServiceIngame,
-                                   IEnemyReachedReciever coreGameplayService)
+                                   IEnemyReachedReciever coreGameplayService,
+                                   IWaveNumberProvider waveNumberProvider)
     {
         _audioSource = audioSource;
         _damageTextService = damageTextService;
         _coreGameplayService = coreGameplayService;
         _monsterInfoService = monsterInfoServiceIngame;
+        _waveNumberProvider = waveNumberProvider;
         InitializeStats();      
     }
     public virtual void Init(IObjectPooler objectPooler)
@@ -96,8 +99,10 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
 
     public virtual void ReInitialize(Vector3 position)
     {
+        InitializeStats();
         transform.position = position;
         Hitpoints = _maxHitpoints;
+        _enemyMovementModule.SetSpeed(_speed);
         _enemyMovementModule.StartMovementCoroutine(this);
         _abstractDamageRecievingModule.ReInit();
     }
@@ -119,13 +124,18 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     private void InitializeStats()
     {
         EnemyName = _stats.Name;
-        _maxHitpoints = _stats.HitPoints;
+        SetMaxHp();
         Hitpoints = _maxHitpoints;
-        _damage = _stats.Damage;
-        _speed = _stats.Speed;
+        SetDamage();
+        SetSpeed();
+
         _deathClip = _stats.DeathSound;
         _expForKill = _stats.ExpPerKill;
     }
+
+    private void SetSpeed() => _speed = _stats.Speed + _stats.SpeedPerLevel * _waveNumberProvider.WaveNumber;
+    private void SetDamage() => _damage = _stats.Damage + _stats.DamagePerLevel * _waveNumberProvider.WaveNumber;
+    private void SetMaxHp() => _maxHitpoints = _stats.HitPoints + _stats.HitPointsPerLevel * _waveNumberProvider.WaveNumber;
 
     void IPoolableObject.ReturnToPool()
     {

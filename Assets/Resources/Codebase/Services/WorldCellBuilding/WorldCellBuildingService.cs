@@ -23,7 +23,7 @@ public class WorldCellBuildingService
         _alignerService = alignerService;
         _inputService = inputService;
 
-        
+
     }
 
     private void TryReleaseActiveCell()

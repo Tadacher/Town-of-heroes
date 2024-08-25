@@ -1,25 +1,31 @@
 using UnityEngine;
 using System.Collections;
 using Infrastructure;
+using Services.Ui;
+using TMPro.EditorUtilities;
+using System;
 
 /// <summary>
 /// General service for generating and spawning waves
 /// </summary>
-public class WaveService
+public class WaveService : IWaveNumberProvider
 {
+    public int WaveNumber => _waveNumber;
+
     private float _interval;
 
     private WaveGenerator _waveGenerator;   
     private ICoroutineRunner _coroutineRunner;
-
+    private GameplayCanvasContainer _gameplayCanvasContainer;
     private Coroutine _waveSender;
     private Coroutine _spawnerOfwawes;
-
-    public WaveService(WaveGenerator waveGenerator, ICoroutineRunner coroutineRunner)
+    private int _waveNumber;
+    public WaveService(WaveGenerator waveGenerator, ICoroutineRunner coroutineRunner, GameplayCanvasContainer gameplayCanvasContainer)
     {
         _waveGenerator = waveGenerator;
         _coroutineRunner = coroutineRunner;
-        _interval = 15f;      
+        _gameplayCanvasContainer = gameplayCanvasContainer;
+        _interval = 30f;      
     }
     
     /// <summary>
@@ -34,10 +40,20 @@ public class WaveService
     /// <returns></returns>
     private IEnumerator WaveSending()
     {
+        float currentInterval = _interval;
+        
         while (true)
         {
-            _spawnerOfwawes = _coroutineRunner.StartCoroutine(SendWaweCoroutine(_waveGenerator.GenerateWave())); 
-            yield return new WaitForSeconds(_interval);         
+            if (currentInterval > 0)
+            {
+                currentInterval -= Time.deltaTime;
+                _gameplayCanvasContainer.TimeLeftText.text = currentInterval.ToString("0.0");
+                yield return null;
+
+                continue;
+            }
+            currentInterval = _interval;
+            _spawnerOfwawes = _coroutineRunner.StartCoroutine(SendWaweCoroutine(_waveGenerator.GenerateWave(), () => _waveNumber++)); 
         }
     }
 
@@ -56,12 +72,13 @@ public class WaveService
     /// </summary>
     /// <param name="wave">wave object</param>
     /// <returns></returns>
-    private IEnumerator SendWaweCoroutine(Wave wave)
+    private IEnumerator SendWaweCoroutine(Wave wave, Action callback = null)
     {
         for (int pointer = 0; pointer < wave.EnemyCreationCommands.Length; pointer++)
         {
             wave.EnemyCreationCommands[pointer].Invoke();
             yield return new WaitForSeconds(wave.Delay);
         }
+        callback?.Invoke();
     }
 }

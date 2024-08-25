@@ -1,5 +1,6 @@
 ﻿
 using Services;
+using Services.GlobalMap;
 using System;
 using System.Collections.Generic;
 namespace Infrastructure
@@ -8,12 +9,12 @@ namespace Infrastructure
     {
         public event Action<IExitableState> OnStateChanged;
 
-        public GameplayStateMachine(CameraPositionService cameraPositionService, GameTimeService gameTimeService, CoreGameplaySceneUiService uiService)
+        public GameplayStateMachine(CameraPositionService cameraPositionService, GameTimeService gameTimeService, CoreGameplaySceneUiService uiService, WorldCellGridService worldCellGridService)
         {
             _states = new Dictionary<System.Type, IExitableState>()
             {
                 [typeof(BattleField)] = new BattleField(cameraPositionService, uiService),
-                [typeof(Map)] = new Map(cameraPositionService, uiService)
+                [typeof(MapState)] = new MapState(cameraPositionService, uiService, worldCellGridService)
             };
             EnterState<BattleField>();
             

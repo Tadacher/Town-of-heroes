@@ -11,9 +11,13 @@ namespace Enemies
         [SerializeField] private AudioClip _reviveClip;
 
         [Inject]
-        public override void Construct(AudioSource audioSource, DamageTextService damageTextService, MonsterInfoServiceIngame monsterInfoServiceIngame, IEnemyReachedReciever enemyReachedReciever)
+        public override void Construct(AudioSource audioSource,
+                                       DamageTextService damageTextService,
+                                       MonsterInfoServiceIngame monsterInfoServiceIngame,
+                                       IEnemyReachedReciever enemyReachedReciever,
+                                       IWaveNumberProvider waveNumberProvider)
         {
-            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, enemyReachedReciever);
+            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, enemyReachedReciever, waveNumberProvider);
             _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
         }
         protected override void Awake()

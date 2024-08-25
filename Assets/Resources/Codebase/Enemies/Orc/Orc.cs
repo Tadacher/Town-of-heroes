@@ -8,9 +8,13 @@ namespace Enemies
     public class Orc : AbstractEnemy
     {
         [Inject]
-        public override void Construct(AudioSource audioSource, DamageTextService damageTextService, MonsterInfoServiceIngame monsterInfoServiceIngame, IEnemyReachedReciever coreGameplayService)
+        public override void Construct(AudioSource audioSource,
+                                       DamageTextService damageTextService,
+                                       MonsterInfoServiceIngame monsterInfoServiceIngame,
+                                       IEnemyReachedReciever coreGameplayService, 
+                                       IWaveNumberProvider waveNumberProvider)
         {
-            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, coreGameplayService);
+            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, coreGameplayService, waveNumberProvider);
             _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
 
         }
