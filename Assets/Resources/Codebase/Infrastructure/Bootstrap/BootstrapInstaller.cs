@@ -10,22 +10,26 @@ namespace Infrastructure
     {
         [SerializeField] private CoroutineProcessorService _coroutineRunnerPrefab;
         [SerializeField] private InputReciever _inputRecieverPrefab;
+        [SerializeField] private DialogSystemView _dialogSystemViewPrefab;
         private CoroutineProcessorService _coroutineRunner;
         private InputReciever _inputReciever;
         public override void InstallBindings()
         {
+            InitAndBindConfigs();
             BindInterfacesAndSelfto<DesctopInput, AbstractInputService>();
-            
+
             InitializeCoroutineRunner();
-            InitializeInputListener();
+            InitializeInputReciever();
 
             BindInterfaceFromInstance<ICoroutineRunner, CoroutineProcessorService>(_coroutineRunner);
 
 
             BindService<SceneLoaderService>();
-            BindService<GameStateMachine>().NonLazy();
             BindService<GameStateFactory>();
+            BindService<DialogService>();
 
+            
+            ConstrucntAndBindDialogView();
             //saveload
             BindService<MetaCitySaveLoader>();
             BindService<CardDeckSaveLoader>();
@@ -34,13 +38,18 @@ namespace Infrastructure
 
             BindService<ResourceService>().NonLazy();
 
-
-            //Container.Bind<DiContainer>().FromInstance(Container);
-
+            BindService<GameStateMachine>().NonLazy();
             Debug.Log("BOOTSTRAP INSTALLER DONE");
         }
 
-        private void InitializeInputListener()
+        private void ConstrucntAndBindDialogView()
+        {
+            DialogSystemView view = Instantiate(_dialogSystemViewPrefab);
+            BindMonobehaviour(view);
+            DontDestroyOnLoad(view);
+        }
+
+        private void InitializeInputReciever()
         {
             _inputReciever = Instantiate(_inputRecieverPrefab, null);
             Container.Inject(_inputReciever);
@@ -49,9 +58,8 @@ namespace Infrastructure
 
         private void InitializeCoroutineRunner()
         {
-            Debug.Log("Bim bim bom bom");
             _coroutineRunner = Instantiate(_coroutineRunnerPrefab, null);
             DontDestroyOnLoad(_coroutineRunner);
-        }      
+        }
     }
 }

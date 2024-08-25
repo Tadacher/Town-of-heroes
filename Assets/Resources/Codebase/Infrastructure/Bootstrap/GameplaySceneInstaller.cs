@@ -1,14 +1,11 @@
-﻿using BootStrap;
-using Services;
+﻿using Services;
 using Services.CardGeneration;
 using Services.GlobalMap;
 using Services.GridSystem;
 using Services.TowerBuilding;
 using Services.Ui;
-using Unity.VisualScripting;
 using UnityEngine;
 using WorldCells;
-using static WaveGenerator;
 
 namespace Infrastructure
 {
@@ -27,14 +24,10 @@ namespace Infrastructure
         
         [SerializeField] private TowerInfoView _towerInfoView;
         [SerializeField] private WorldCellInfoView _worldCellInfoView;
-
-        [Header("Scriptables")]
-        [SerializeField] private ScriptableObject[] _scriptableObjects;
-
         public override void InstallBindings()
         {
             //ScriptableObjects
-            BindScriptables();
+            InitAndBindConfigs();
 
             //Unity components
             BindUnityComponent(_audioSource);
@@ -102,19 +95,6 @@ namespace Infrastructure
 
             Debug.Log("SCENE_INSTALLER_DONE");
         }
-
-        private void BindScriptables()
-        {
-            foreach (var scriptable in _scriptableObjects)
-            {
-                Container.Bind(scriptable.GetType()).FromInstance(scriptable);
-                IInitializableConfig initializable = scriptable as IInitializableConfig;
-
-                if (initializable != null) 
-                    initializable.Initialize();
-            }
-        }
-
         private void BindMarkers()
         {
             foreach (var marker in _markers)

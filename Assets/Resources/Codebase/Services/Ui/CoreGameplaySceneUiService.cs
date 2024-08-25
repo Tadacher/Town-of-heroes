@@ -23,7 +23,10 @@ namespace Infrastructure
             _gameplayCanvasContainer.gameObject.SetActive(false);
             _mapCanvasContainer.gameObject.SetActive(true);
         }
-        public void SetCastleHP(int HPCastle) =>
+        public void SetCastleHP(int HPCastle)
+        {
+            return;
             _gameplayCanvasContainer.CastleHealthBarText.text = HPCastle.ToString();
+        }
     }
 }

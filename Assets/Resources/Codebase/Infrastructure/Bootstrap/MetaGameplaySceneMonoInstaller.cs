@@ -6,7 +6,7 @@ using System;
 using UnityEngine;
 
 namespace Infrastructure
-{
+{  
     public sealed class MetaGameplaySceneMonoInstaller : AbstractMonoInstaller
     {
         [SerializeField] private AudioSource _audioSource;
@@ -17,8 +17,6 @@ namespace Infrastructure
         [SerializeField] private CardEntry _cardEntry;
         //monobehaviour services
         [SerializeField] private MetaGridCellInfoView _gridCellInfoView;
-
-        [SerializeField] private ScriptableObject[] _scriptableObjects;
 
         public override void InstallBindings()
         {
@@ -52,21 +50,7 @@ namespace Infrastructure
             BindMonobehaviour(_gridCellInfoView);
 
             //configs
-            InitConfigs();
-        }
-
-    
-
-        private void InitConfigs()
-        {
-            foreach (var scriptable in _scriptableObjects)
-            {
-                Container.Bind(scriptable.GetType()).FromInstance(scriptable);
-                IInitializableConfig initializable = scriptable as IInitializableConfig;
-
-                if (initializable != null)
-                    initializable.Initialize();
-            }
+            InitAndBindConfigs();
         }
     }
 }
