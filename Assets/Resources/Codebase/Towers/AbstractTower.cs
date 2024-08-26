@@ -59,16 +59,7 @@ namespace Core.Towers
             InitializeProjectileFactory(_towerStats.ProjectilePrefab);
             RefreshAttackDelay();
         }
-        public AbstractTower AsGhost()
-        {  
-            MakeGhost();
-            return this;
-        }
-        public AbstractTower AsUnGhost()
-        {
-            MakeUnGhost();
-            return this;
-        }
+        
         public virtual void Initialize(IObjectPooler objectPooler,
                                        AbstractInputService abstractInputService,
                                        BattleGridService gridAlignService,
@@ -92,7 +83,19 @@ namespace Core.Towers
         {
            
         }
-
+        public void ActionOnGet()
+        {
+        }
+        public AbstractTower AsGhost()
+        {
+            MakeGhost();
+            return this;
+        }
+        public AbstractTower AsUnGhost()
+        {
+            MakeUnGhost();
+            return this;
+        }
         public virtual AbstractEnemy FindClosestTarget()
         {
             int layerMask = LayerMask.NameToLayer(EnemyLayerName);
@@ -205,5 +208,7 @@ namespace Core.Towers
             _isGhost = false;
             _spriteRenderer.color += _ghostColor;
         }
+
+       
     }
 }

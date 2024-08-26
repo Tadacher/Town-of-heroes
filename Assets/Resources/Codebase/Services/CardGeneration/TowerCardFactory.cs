@@ -10,7 +10,7 @@ using Zenject;
 
 namespace Services.CardGeneration
 {
-    public class TowerCardFactory : AbstractPoolerFactory<TowerCard>, IFactory<TowerCard>
+    public class TowerCardFactory : MonobehaviourAbstractPoolerFactory<TowerCard>, IFactory<TowerCard>
     {
         [SerializeField] private CellStats _cellStats;
         private readonly CardImageDatabase _cardImageDatabase;
@@ -35,25 +35,6 @@ namespace Services.CardGeneration
             _cardPrefab = cardPrefab;
             _towerImageDatabase = towerImageDatabase;
         }
-
-        public override TowerCard GetObject()
-        {
-            TowerCard gettable = _pool.Get();
-            return gettable.ReInitialize();
-        }
-
-        public override void ReturnToPool(IPoolableObject poolable) =>
-            _pool.Release((TowerCard)poolable);
-
-        protected override void ActionOnDestroy(TowerCard poolable) => 
-            GameObject.Destroy(poolable.gameObject);
-
-        protected override void ActionOnGet(TowerCard poolable) =>
-            poolable.gameObject.SetActive(true);
-
-        protected override void ActionOnRelease(TowerCard returnable) => 
-            returnable.gameObject.SetActive(false);
-
         protected override TowerCard CreateNew()
         {
             TowerCard returnable = GameObject.Instantiate(_cardPrefab, null);

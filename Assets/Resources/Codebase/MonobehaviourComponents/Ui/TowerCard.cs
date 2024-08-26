@@ -109,7 +109,10 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         ResetScale();
         return this;
     }
-
+    public void ActionOnGet()
+    {
+        ReInitialize();
+    }
     private void ResetPicPosition() => _popupOnPointerEnter.ResetPosition();
 
     /// <summary>
@@ -126,8 +129,14 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     {
         if (_inputService.LeftMouseDown())
         {
+            
+
             if (_battlefieldStated)
-                InstantiateTowerGhost();
+            {
+                if (_towerInstantiationService.CanPlaceTower() == false)
+                    return;
+                TryInstantiateTowerGhost();
+            }
             else
                 InstantiateWorldCellGhost();
             gameObject.SetActive(false);
@@ -251,7 +260,18 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     #region UTIL
     private void InstantiateWorldCellGhost() => _worldCellInstantiationService.InstantiateWorldCellFromCard(this, _worldCellType);
 
-    private void InstantiateTowerGhost() => _towerInstantiationService.InstantiateTowerFromCard(this, _towerType);
+    private bool TryInstantiateTowerGhost()
+    {
+        if (_towerInstantiationService.CanPlaceTower())
+        {
+            _towerInstantiationService.InstantiateTowerFromCard(this, _towerType);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     public void ReturnToPool()
     {
@@ -292,6 +312,8 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         transform.SetParent(cardParent);
         _readyToUse = true;
     }
+
+   
 
     ~TowerCard()
     {

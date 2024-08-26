@@ -37,6 +37,7 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
 
 
     protected IObjectPooler _pooler;
+    protected bool _pooled = false;
     //Audio
     protected AudioClip _deathClip;
     protected AudioSource _audioSource;
@@ -73,6 +74,16 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
     {
         _pooler = objectPooler;
     }
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        _monsterInfoService.Show(this, this);
+    }
+
+    public void ActionOnGet()
+    {
+        _pooled = false;
+    }
+
     protected abstract void Awake();
     public virtual void Heal(float points)
     {
@@ -116,6 +127,10 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
 
     protected void ReturnToPool()
     {
+        if (_pooled)
+            return;
+
+        _pooled = true;
         gameObject.SetActive(false);
         _pooler.ReturnToPool(this);
     }
@@ -154,8 +169,5 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         ReturnToPool();
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        _monsterInfoService.Show(this, this);
-    }
+    
 }

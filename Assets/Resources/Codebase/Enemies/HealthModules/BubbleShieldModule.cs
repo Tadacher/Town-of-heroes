@@ -16,7 +16,6 @@ public class BubbleShieldModule : AbstractDamageRecievingModule
         if (_bubbleShieldCharge > 0) { damage = 0; }
         _damageTextService.ReturnDamageText(damage, _unitTransform.position);
         _bubbleShieldCharge--;
-        Debug.Log($"Shield defend:{damage}, cost shield:{_bubbleShieldCharge}");
         return damage;
     }
 

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pointerFollower: {fileID: 2283355937031523445}
   _spriteRenderer: {fileID: 8999628654628181382}
-  _cellStats: {fileID: 0}
+  _cellStats: {fileID: 11400000, guid: 5b06db97b5507814da56437742f2c743, type: 2}
 --- !u!114 &2283355937031523445
 MonoBehaviour:
   m_ObjectHideFlags: 0

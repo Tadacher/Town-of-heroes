@@ -10,5 +10,6 @@ namespace Services.Ui
         public Button ForceWaveButton;
         public TMP_Text CastleHealthBarText;
         public TMP_Text TimeLeftText;
+        public TMP_Text TowerCountText;
     }
 }

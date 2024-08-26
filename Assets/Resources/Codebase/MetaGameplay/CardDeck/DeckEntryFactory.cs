@@ -5,7 +5,7 @@ using System.ComponentModel;
 using UnityEngine;
 using Zenject;
 
-public class DeckEntryFactory : AbstractPoolerFactory<DeckEntry>
+public class DeckEntryFactory : MonobehaviourAbstractPoolerFactory<DeckEntry>
 {
     private Transform _parent;
     private DeckEntry _prefab;
@@ -17,21 +17,6 @@ public class DeckEntryFactory : AbstractPoolerFactory<DeckEntry>
         _prefab = prefab;
     }
     public void InjectReciever(IDeckEntryPressedReciever deckEntryPressedReciever) => _pressedReciever = deckEntryPressedReciever;
-
-    protected override void ActionOnDestroy(DeckEntry poolable)
-    {
-        
-    }
-
-    protected override void ActionOnGet(DeckEntry poolable)
-    {
-        poolable.gameObject.SetActive(true);
-    }
-
-    protected override void ActionOnRelease(DeckEntry poolale)
-    {
-        poolale.gameObject.SetActive(false);
-    }
 
     protected override DeckEntry CreateNew()
     {

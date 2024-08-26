@@ -33,6 +33,7 @@ namespace WorldCells
         private AbstractInputService _abstractInputService;
         private WorldCellInfoService _worldCellInfoService;
 
+        private bool _pooled;
         public void Initialize(IObjectPooler objectPooler,
                                WorldCellGridService gridAlignService,
                                AbstractInputService inputService,
@@ -49,9 +50,24 @@ namespace WorldCells
             _abstractInputService = abstractInputService;
             _worldCellInfoService = worldCellInfoService;
         }
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            if (_abstractInputService.RightMouseDown())
+                _worldCellInfoService.Show(this);
+        }
 
-        public void ReturnToPool() =>
-               _objectPooler.ReturnToPool(this);
+        public void ActionOnGet()
+        {
+            _pooled = false;
+        }
+        public void ReturnToPool()
+        {
+            if (_pooled)
+                return;
+            _pooled = true;
+            _objectPooler.ReturnToPool(this);
+        }
+
         public void StartFollowPointer() =>
             _pointerFollower.enabled = true;
         public void StopFollowingPointer() =>
@@ -140,19 +156,19 @@ namespace WorldCells
         {
 
         }
-        protected void PoolSelf() => _objectPooler.ReturnToPool(this);
+        protected void PoolSelf()
+        {
+            if (_pooled)
+                return;
+            _pooled = true;
+            _objectPooler.ReturnToPool(this);
+        }
 
         protected void ReplaceSelfWith(Type celltype)
         {
             _worldCellGridService.SpawnAndInjectCellToWorld(celltype, transform.position);
             RemoveSelfFromGrid();
             PoolSelf();
-        }
-
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            if (_abstractInputService.RightMouseDown())
-                _worldCellInfoService.Show(this);
         }
     }
 }

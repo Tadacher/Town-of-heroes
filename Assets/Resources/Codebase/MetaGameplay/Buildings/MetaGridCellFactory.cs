@@ -5,7 +5,7 @@ using Zenject;
 
 namespace Metagameplay.Buildings
 {
-    internal class MetaGridCellFactory : AbstractPoolerFactory<AbstractMetaGridCell>
+    internal class MetaGridCellFactory : MonobehaviourAbstractPoolerFactory<AbstractMetaGridCell>
     {
         private readonly AbstractMetaGridCell _prefab;
         private readonly AbstractInputService _input;
@@ -24,15 +24,6 @@ namespace Metagameplay.Buildings
             _metaGridService = metaGridService;
             _metaCityService = metaCityService;
         }
-
-        protected override void ActionOnDestroy(AbstractMetaGridCell poolable) =>
-            Object.Destroy(poolable.gameObject);
-
-        protected override void ActionOnGet(AbstractMetaGridCell poolable) =>
-            poolable.gameObject.SetActive(true);
-
-        protected override void ActionOnRelease(AbstractMetaGridCell returnable) =>
-            returnable.gameObject.SetActive(false);
 
         protected override AbstractMetaGridCell CreateNew()
         {

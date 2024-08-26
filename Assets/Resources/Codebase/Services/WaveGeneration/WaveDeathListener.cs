@@ -20,6 +20,11 @@ public class WaveDeathListener : IMobDeathListener, IPoolableObject
     /// </summary>
     public event Action OnMobDeath;
 
+    public void ActionOnGet()
+    {
+        
+    }
+
     /// <summary>
     /// reinit after being got from pool
     /// </summary>

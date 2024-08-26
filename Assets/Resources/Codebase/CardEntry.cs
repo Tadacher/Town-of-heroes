@@ -83,4 +83,9 @@ public class CardEntry : MonoBehaviour, IPointerDownHandler, IPoolableObject
         _pointerFollower.enabled = false;
         transform.SetParent(_parent);
     }
+
+    public void ActionOnGet()
+    {
+        
+    }
 }

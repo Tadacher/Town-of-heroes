@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _popupDistance: 16
   _popupSpeedX: 0
-  _popupSpeedY: 90
+  _popupSpeedY: 1
   _popupObjectTransform: {fileID: 5209098481229664223}
 --- !u!1 &5209098481229664220
 GameObject:

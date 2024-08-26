@@ -86,6 +86,15 @@ namespace Metagameplay.Buildings
         {
             _pooler = objectPooler;
         }
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            _cellInfoService.ShowInfo(this, this);
+            Select();
+        }
+        public void ActionOnGet()
+        {
+           
+        }
         /// <summary>
         /// Apply building effect
         /// </summary>
@@ -169,11 +178,6 @@ namespace Metagameplay.Buildings
         public void SetLevel(int level) 
             => _level = level;
 
-        public void OnPointerDown(PointerEventData eventData)
-        {
-            _cellInfoService.ShowInfo(this, this);
-            Select();
-        }
         public void DeSelect()
         {
             _outline.gameObject.SetActive(false);
