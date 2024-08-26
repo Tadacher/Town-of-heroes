@@ -17,6 +17,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
 
     //external
+    [SerializeField] private PopupOnPointerEnter _popupOnPointerEnter;
     [SerializeField] private RectTransform _cardImageTransform;
     [SerializeField] private Sprite _imageAsTower;
     [SerializeField] private Sprite _imageAsCell;
@@ -104,9 +105,13 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         SetGameState();
         SetImageAsState();
         ResetAnchor();
-
+        ResetPicPosition();
+        ResetScale();
         return this;
     }
+
+    private void ResetPicPosition() => _popupOnPointerEnter.ResetPosition();
+
     /// <summary>
     /// after setting as card deck child anchor sets to upper left, we need to reset it for propper flight anim position
     /// </summary>

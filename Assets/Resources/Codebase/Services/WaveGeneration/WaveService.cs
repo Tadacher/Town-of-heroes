@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using Infrastructure;
 using Services.Ui;
-using TMPro.EditorUtilities;
 using System;
 
 /// <summary>
@@ -12,22 +11,27 @@ public class WaveService : IWaveNumberProvider
 {
     public int WaveNumber => _waveNumber;
 
-    private float _interval;
+    private readonly float _interval = 30f;
+    private float _currentInterval;
 
     private WaveGenerator _waveGenerator;   
     private ICoroutineRunner _coroutineRunner;
     private GameplayCanvasContainer _gameplayCanvasContainer;
     private Coroutine _waveSender;
     private Coroutine _spawnerOfwawes;
-    private int _waveNumber;
-    public WaveService(WaveGenerator waveGenerator, ICoroutineRunner coroutineRunner, GameplayCanvasContainer gameplayCanvasContainer)
+    private int _waveNumber = -1;
+    public WaveService(WaveGenerator waveGenerator,
+                       ICoroutineRunner coroutineRunner,
+                       GameplayCanvasContainer gameplayCanvasContainer)
     {
         _waveGenerator = waveGenerator;
         _coroutineRunner = coroutineRunner;
         _gameplayCanvasContainer = gameplayCanvasContainer;
-        _interval = 30f;      
+
+        _gameplayCanvasContainer.ForceWaveButton.onClick.AddListener(ForceWaveHandler);
     }
-    
+
+
     /// <summary>
     /// Starts general coroutine that starts wavesending and waits for an interval betwee waves
     /// </summary>
@@ -40,22 +44,24 @@ public class WaveService : IWaveNumberProvider
     /// <returns></returns>
     private IEnumerator WaveSending()
     {
-        float currentInterval = _interval;
+        _currentInterval = _interval;
         
         while (true)
         {
-            if (currentInterval > 0)
+            if (_currentInterval > 0)
             {
-                currentInterval -= Time.deltaTime;
-                _gameplayCanvasContainer.TimeLeftText.text = currentInterval.ToString("0.0");
+                _currentInterval -= Time.deltaTime;
+                _gameplayCanvasContainer.TimeLeftText.text = _currentInterval.ToString("0.0");
                 yield return null;
 
                 continue;
             }
-            currentInterval = _interval;
-            _spawnerOfwawes = _coroutineRunner.StartCoroutine(SendWaweCoroutine(_waveGenerator.GenerateWave(), () => _waveNumber++)); 
+            _waveNumber++;
+            _currentInterval = _interval;
+            _spawnerOfwawes = _coroutineRunner.StartCoroutine(SendWaweCoroutine(_waveGenerator.GenerateWave())); 
         }
     }
+    private void ForceWaveHandler() => _currentInterval = 0;
 
     /// <summary>
     /// Cancels all active spawn and wave routines

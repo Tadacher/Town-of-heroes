@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -53,5 +54,10 @@ public class PopupOnPointerEnter : MonoBehaviour, IPointerEnterHandler, IPointer
             _popupObjectTransform.localPosition -= _direction * Time.deltaTime;
             yield return null;
         }
+    }
+
+    public void ResetPosition()
+    {
+        _popupObjectTransform.localPosition = _origPos;
     }
 }

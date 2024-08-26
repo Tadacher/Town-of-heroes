@@ -83,7 +83,6 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
 
     public virtual void RecieveDamage(float damage, AbstractTower abstractTower)
     {
-        
         if (Hitpoints < 0)
             return;
 
@@ -160,6 +159,3 @@ public abstract class AbstractEnemy : MonoBehaviour, IHitpointOwner, IMowementMo
         _monsterInfoService.Show(this, this);
     }
 }
-
-
-   

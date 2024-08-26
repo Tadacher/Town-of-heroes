@@ -10,7 +10,6 @@ namespace Core.Towers
         private AbstractInputService _abstractInputService;
         void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
         {
-            if(_abstractInputService.RightMouseDown())
                 _towerInfoService.Show(this, this);
         }
     }

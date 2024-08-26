@@ -21,7 +21,7 @@ public class MonsterInfoServiceIngame
         _hitpointInfoProvider = hitpointInfo;
 
 
-        _view.RectTransform.anchoredPosition = _abstractInputService.GetPointerPositionScreen();
+       // _view.RectTransform.anchoredPosition = _abstractInputService.GetPointerPositionScreen();
         _view.gameObject.SetActive(true);
 
 

@@ -22,7 +22,7 @@ public class TowerInfoServiceIngame
         _view.AttackDelay.text = $"Delay: {towerInfoProvider.Delay.ToString("0.0")}";
         _view.Level.text = $"Level: {towerInfoProvider.Level.ToString()}";
 
-        _view.RectTransform.anchoredPosition = _abstractInputService.GetPointerPositionScreen();
+        //_view.RectTransform.anchoredPosition = _abstractInputService.GetPointerPositionScreen();
         _view.gameObject.SetActive(true);
 
 

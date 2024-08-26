@@ -12,6 +12,6 @@ public class MonsterInfoView : MonoBehaviour
 
     private void Update()
     {
-        RectTransform.anchoredPosition = Input.mousePosition;
+        //RectTransform.anchoredPosition = Input.mousePosition;
     }
 }

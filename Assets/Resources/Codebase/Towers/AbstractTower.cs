@@ -205,6 +205,5 @@ namespace Core.Towers
             _isGhost = false;
             _spriteRenderer.color += _ghostColor;
         }
-
     }
 }
