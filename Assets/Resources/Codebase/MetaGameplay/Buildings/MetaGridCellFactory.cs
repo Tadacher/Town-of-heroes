@@ -10,14 +10,14 @@ namespace Metagameplay.Buildings
         private readonly AbstractMetaGridCell _prefab;
         private readonly AbstractInputService _input;
         private readonly MetaGridSevice _metaGridService;
-        private readonly MetaCityService _metaCityService;
+        private readonly MetaCityInfoService _metaCityService;
 
         public MetaGridCellFactory(
                             AbstractMetaGridCell abstractMetaGridCell,
                             DiContainer container,
                             AbstractInputService input,
                             MetaGridSevice metaGridService,
-                            MetaCityService metaCityService) : base(container)
+                            MetaCityInfoService metaCityService) : base(container)
         {
             _prefab = abstractMetaGridCell;
             _input = input;

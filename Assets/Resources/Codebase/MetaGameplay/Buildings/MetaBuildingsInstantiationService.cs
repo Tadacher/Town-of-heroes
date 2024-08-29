@@ -31,7 +31,7 @@ namespace Metagameplay.Buildings
         {
             return new MetaGridCellFactory(abstractMetaGridCell: LoadProductPrefab(productType),
                                            metaGridService: _container.Resolve<MetaGridSevice>(),
-                                           metaCityService: _container.Resolve<MetaCityService>(),
+                                           metaCityService: _container.Resolve<MetaCityInfoService>(),
                                            input: _container.Resolve<AbstractInputService>(),
                                            container: _container);
         }

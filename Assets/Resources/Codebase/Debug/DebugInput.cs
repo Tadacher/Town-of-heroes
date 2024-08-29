@@ -1,9 +1,7 @@
 ﻿using Core.Towers;
 using Services.CardGeneration;
 using Services.GridSystem;
-using System;
 using UnityEngine;
-using WorldCells;
 using Zenject;
 
 namespace Debugtools
@@ -35,7 +33,5 @@ namespace Debugtools
                 Debug.Log(_battleGridService.PosToGrid(Camera.main.ScreenToWorldPoint(Input.mousePosition)));
             }
         }
-
-       
     }
 }

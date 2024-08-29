@@ -72,9 +72,9 @@ namespace Infrastructure
         /// </summary>
         /// <typeparam name="TService">binding type</typeparam>
         /// <returns>zenject object to override binding options of needed</returns>
-        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfto<TService>() where TService : class => 
+        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfTo<TService>() where TService : class => 
             Container.BindInterfacesAndSelfTo<TService>().AsSingle();
-        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfto<TService, TAbstractService>() where TService : TAbstractService where TAbstractService : class
+        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfFromAbstractto<TService, TAbstractService>() where TService : TAbstractService where TAbstractService : class
         {
             TService service = Container.Instantiate<TService>();
             return Container.BindInterfacesAndSelfTo<TAbstractService>().FromInstance(service);

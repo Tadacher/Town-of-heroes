@@ -50,7 +50,8 @@ namespace Infrastructure
 
 
             //Towers
-            BindService<TowerBuildingService>();
+            BindInterfacesAndSelfTo<TowerBuildingService>();
+            BindInterfacesAndSelfTo<AdditionalTowerService>().NonLazy();
             BindService<BattleGridService>();
             BindService<TowerInstantiationService>();
             BindService<DamageTextService>();
@@ -63,24 +64,24 @@ namespace Infrastructure
             BindService<WorldCellCardGenerator>();
             BindService<CardDescriptionService>();
             BindService<CardInfoUiService>();
-            BindInterfacesAndSelfto<CardCountService>();
+            BindInterfacesAndSelfTo<CardCountService>();
 
             //worldCells
             BindService<WorldCellInstantiationService>().NonLazy();
             BindService<WorldCellGridService>().NonLazy();
-            BindService<WorldCellBuildingService>();
+            BindInterfacesAndSelfTo<WorldCellBuildingService>();
             BindService<WorldCellBalanceService>();
             BindService<WorldCellInfoService>();
 
             //enemy waves
-            BindInterfacesAndSelfto<WaveService>();
+            BindInterfacesAndSelfTo<WaveService>();
             BindService<WaveDeathListenerFactory>();
             BindService<WaveGenerator>();
             BindService<EnemyInstantiationService>();
             BindService<EnemyTypeService>();
             BindService<EnemyGenerationCostService>();
 
-            BindInterfacesAndSelfto<CoreGameplayService>().NonLazy();
+            BindInterfacesAndSelfTo<CoreGameplayService>().NonLazy();
 
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();

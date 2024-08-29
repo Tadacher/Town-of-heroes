@@ -8,6 +8,7 @@ namespace Progress
         public int WoodPieces;
         public int StonePieces;
         public int FoodPieces;
+        public int ManaClot;
         public int Scrolls;
 
         [NonSerialized]

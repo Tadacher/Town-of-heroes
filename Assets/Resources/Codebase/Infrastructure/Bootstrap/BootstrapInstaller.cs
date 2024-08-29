@@ -16,7 +16,7 @@ namespace Infrastructure
         public override void InstallBindings()
         {
             InitAndBindConfigs();
-            BindInterfacesAndSelfto<DesctopInput, AbstractInputService>();
+            BindInterfacesAndSelfFromAbstractto<DesctopInput, AbstractInputService>();
 
             InitializeCoroutineRunner();
             InitializeInputReciever();

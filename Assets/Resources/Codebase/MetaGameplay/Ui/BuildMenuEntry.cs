@@ -11,20 +11,18 @@ public class BuildMenuEntry : MonoBehaviour
     [SerializeField] private Image _image;
     [SerializeField] private Text _title;
     [SerializeField] private Outline _outline;
+
     private DescriptionAreaView _descriptionAreaView;
     private MetaBuildingService _metaBuildingService;
-    private ResourceService _resourceService;
     private bool _selected;
     public void Initialize(AbstractMetaGridCell building,
                            DescriptionAreaView descriptionAreaView,
-                           MetaBuildingService metaBuildingService,
-                           ResourceService resourceService)
+                           MetaBuildingService metaBuildingService)
     {
         _image.sprite = building.Image;
         _title.text = building.Name;
         LinkedPrefab = building;
         _descriptionAreaView = descriptionAreaView;
-        _resourceService = resourceService;
 
         _metaBuildingService = metaBuildingService;
     }
@@ -42,14 +40,14 @@ public class BuildMenuEntry : MonoBehaviour
 
     private void SpawnBuilding()
     {
-        if (_resourceService.GetResourceData() >= LinkedPrefab.Description.Cost)
+        if (_metaBuildingService.TryInstantiateBuilding(LinkedPrefab))
         {
-            _resourceService.SubtractResources(LinkedPrefab.Description.Cost);
-            _metaBuildingService.InstantiateBuilding(LinkedPrefab.GetType());
             _descriptionAreaView.CloseMenu();
         }
     }
-    
+
+   
+
     public void Deselect()
     {
         _selected = false;

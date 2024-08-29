@@ -55,7 +55,7 @@ namespace Metagameplay.Buildings
         private IObjectPooler _pooler;
         private ResourceService _resourceService;
         private MetaGridCellInfoService _cellInfoService;
-        private MetaCityService _cityService;
+        private MetaCityInfoService _cityService;
         private AbstractSoundPlayerService _soundPlayerService;
         private Button _upgradeButton; 
         private Button _destroyButton;
@@ -64,7 +64,7 @@ namespace Metagameplay.Buildings
         public void Initialize(
             AbstractInputService abstractInputService,
             MetaGridSevice abstractGridService,
-            MetaCityService metaCityService,
+            MetaCityInfoService metaCityService,
             MetaGridCellInfoService metaGridCellInfoService,
             AbstractSoundPlayerService abstractSoundPlayerService,
             CardAvalilabilityService cardAvalilabilityService,
@@ -102,9 +102,10 @@ namespace Metagameplay.Buildings
         {
             ApplyGridInteractions();
             _gridSevice.Insert(this, transform.position);
-            _cityService.AddCell(this);
+            _cityService.CountCell(this);
+            _cityService.CachePlacedCell(this);
         }
-       
+
         /// <summary>
         /// scroll per effect array and apply if building level is high enough
         /// </summary>
@@ -126,7 +127,28 @@ namespace Metagameplay.Buildings
             {
                 if (tower == null)
                     continue;
+
                 _cardAvalilabilityService.AddAllowedType(tower.GetType());
+            }
+
+            foreach (var building in perLevelEffect.AvailableBuildings)
+            {
+                if (_cityService.AvailableBuildingTypes.Contains(building.GetType()))
+                    continue;
+
+                _cityService.AvailableBuildingTypes.Add(building.GetType());
+            }
+
+            foreach (var level in perLevelEffect.AvailableBuldingLevels)
+            {
+                if (!_cityService.AvailableBuildingLevels.ContainsKey(level.Building.GetType()))
+                    continue;
+
+                var count = _cityService.AvailableBuildingLevels[level.Building.GetType()];
+                if (count > level.NewMaxAvailableLevel)
+                {
+                    _cityService.AvailableBuildingLevels[level.Building.GetType()] = count;
+                }
             }
         }
         protected void ApplyLevelEffect(int level)

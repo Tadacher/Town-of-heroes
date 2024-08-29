@@ -12,7 +12,7 @@
 
         public void Enter()
         {
-            DialogService.ShowDialog("StartTheGame");
+            
         }
 
         public void Exit()

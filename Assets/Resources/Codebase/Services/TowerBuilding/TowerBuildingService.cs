@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace Services.TowerBuilding
 {
-    public class TowerBuildingService
+    public class TowerBuildingService : ITowerCountProvider, IAdditionalTowerCountReviever
     {
+        public int MaxTowerCount { get => _originalMaxTowerCount; set => _maxTowerCount = value; }
+
 
         protected IPoolableObject _activeCard;
         private TowerInstantiationService _towerInstantiatingService;
@@ -16,11 +18,14 @@ namespace Services.TowerBuilding
         private CoreGameplaySceneUiService _gameplaySceneUiService;
 
 
-        private int _maxTowerCount =5;
+        private const int _originalMaxTowerCount = 5;
+        private int _maxTowerCount = _originalMaxTowerCount;
         private int _currentTowerCount;
 
         private AbstractInputService _inputService;
         private AbstractTower _activeTower;
+
+
         public TowerBuildingService(TowerInstantiationService towerInstantiatingService,
                                     BattleGridService gridAlignService,
                                     CoreGameplaySceneUiService gameplaySceneUiService,
@@ -31,13 +36,10 @@ namespace Services.TowerBuilding
             _inputService = inputService;
             _alignerService = gridAlignService;
 
-            SetTowerCount();
+            DrawTowerCount();
         }
 
-        private void SetTowerCount()
-        {
-            _gameplaySceneUiService.SetTowerCount(_currentTowerCount, _maxTowerCount);
-        }
+        private void DrawTowerCount() => _gameplaySceneUiService.SetTowerCount(_currentTowerCount, _maxTowerCount);
 
         public void InstantiateTowerFromCard(TowerCard towerCard, Type type)
         {
@@ -54,7 +56,7 @@ namespace Services.TowerBuilding
             {
                 PlaceActiveTower();
                 _currentTowerCount++;
-                SetTowerCount();
+                DrawTowerCount();
                 _activeCard.ReturnToPool();
             }
             else
@@ -81,6 +83,12 @@ namespace Services.TowerBuilding
         public bool CanPlaceTower()
         {
             return _currentTowerCount < _maxTowerCount;
+        }
+
+        void IAdditionalTowerCountReviever.AddTowerCount(int additionalCount)
+        {
+            _maxTowerCount = _originalMaxTowerCount + additionalCount;
+            DrawTowerCount();
         }
     }
 }

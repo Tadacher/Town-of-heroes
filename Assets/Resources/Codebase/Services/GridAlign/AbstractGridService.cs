@@ -84,6 +84,17 @@ namespace Services.GridSystem
             position -= (Vector3)_zeroPoint;
             int x = (int)(position.x / _cellsize);
             int y = (int)(position.y / _cellsize);
+
+            if (x < 0)
+                x = 0;
+            else if (x > _gridSizeX-1) 
+                x = _gridSizeX-1;
+
+            if (y < 0)
+                y = 0;
+            else if(y > _gridSizeY-1)
+                y = _gridSizeY-1;
+
             // Debug.Log($"{x}.{y}");
             return new Vector2Int(x, y);
         }  

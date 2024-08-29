@@ -26,17 +26,22 @@ namespace Infrastructure
 
             BindService<MetaGameplayUiService>().NonLazy();
             BindAbstractClass<AbstractSoundPlayerService, SimpleSoundPlayerService>();
+
             //meta city
-            BindService<MetaBuildingService>();
-            BindService<BuldingMenuService>().NonLazy();
+
+            BindInterfacesAndSelfTo<MetaBuildingService>();
+            BindInterfacesAndSelfTo<BuldingMenuService>();
+            BindInterfacesAndSelfTo<MetaBuildingPrefabsLoader>();
+            BindInterfacesAndSelfTo<BuildingMenuEntryFactory>().NonLazy();
+
             BindService<MetaBuildingsInstantiationService>();
             BindService<MetaGridSevice>();
-            BindService<MetaCityService>();
-            BindService<MetaCityLoadHandler>().NonLazy();
+            BindService<MetaCityInfoService>();
+            BindService<MetaCitySaveLoadHandler>().NonLazy();
             BindService<MetaGridCellInfoService>();
 
             //deck editing
-            BindInterfacesAndSelfto<CardDeckEditingMenu>().NonLazy();
+            BindInterfacesAndSelfTo<CardDeckEditingMenu>().NonLazy();
             BindService<CardDeckService>();
             BindService<DeckEntryFactory>();
             BindService<CardEntryFactory>();

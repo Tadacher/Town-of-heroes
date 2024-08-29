@@ -1,36 +1,74 @@
 ﻿using Metagameplay.Buildings;
+using Metagameplay.Ui;
+using Progress;
 using Services.Input;
 using System;
-using UnityEngine;
 
 /// <summary>
 /// Instantiates and controlls lifecycle of meta buildings
 /// </summary>
-public class MetaBuildingService
+public class MetaBuildingService : IBuildingPlacedEventProvider
 {
-    IPoolableObject _activeBuilding;
-    private MetaBuildingsInstantiationService _metaBuildingsInstantiationService;
-    private MetaGridSevice _metaGameplayGridSevice;
+    public event Action<AbstractMetaGridCell> OnMetaGridCellPlaced;
 
-    private AbstractInputService _inputService;
-    private AbstractMetaGridCell _activeCell;
+    IPoolableObject _activeBuilding;
+    private readonly MetaBuildingsInstantiationService _metaBuildingsInstantiationService;
+    private readonly MetaGridSevice _metaGameplayGridSevice;
+    private readonly ResourceService _resourceService;
+    private readonly AbstractInputService _inputService;
+    private readonly MetaCityInfoService _metaCityService;
+
+
+    private  AbstractMetaGridCell _activeCell;
 
     public MetaBuildingService(MetaBuildingsInstantiationService metaBuildingsInstantiationService,
                                MetaGridSevice gameplayGridSevice,
-                               AbstractInputService inputInputService)
+                               AbstractInputService inputInputService,
+                               ResourceService resourceService,
+                               MetaCityInfoService metaCityService)
     {
         _metaBuildingsInstantiationService = metaBuildingsInstantiationService;
         _metaGameplayGridSevice = gameplayGridSevice;
         _inputService = inputInputService;
+        _resourceService = resourceService;
+        _metaCityService = metaCityService;
     }
 
-    public void InstantiateBuilding(Type type)
+    public bool TryInstantiateBuilding(AbstractMetaGridCell prefab)
     {
-        _activeCell = GetBuildingGhost(type);
-        _activeBuilding = _activeCell;
-        _activeCell.StartFollowingPointer();
+        if (CanBuild(prefab))
+        {
+            _resourceService.SubtractResources(prefab.Description.Cost);
+            _activeCell = GetBuildingGhost(prefab.GetType());
+            _activeBuilding = _activeCell;
+            _activeCell.StartFollowingPointer();
 
-        _inputService.OnPointerDown += TryReleaseActiveCell;
+            _inputService.OnPointerDown += TryReleaseActiveCell;
+            return true;
+        }
+        return false;
+    }
+
+    private bool CanBuild(AbstractMetaGridCell prefab)
+    {
+        if (_resourceService.GetResourceData() < prefab.Description.Cost)
+        {
+            //show warn
+            return false;
+        }
+
+        if (_metaCityService.MetaCellCountByType[prefab.GetType()] >= prefab.Description.MaxBuildingsOfThisType)
+        {
+            //show warn
+            return false;
+        }
+
+        if(!_metaCityService.AvailableBuildingTypes.Contains(prefab.GetType()))
+        {
+            //show warn
+            return false;
+        }
+        return true;
     }
 
     private void TryReleaseActiveCell()

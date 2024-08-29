@@ -1,4 +1,3 @@
-using Core.Towers;
 using Metagameplay.Buildings;
 using Services.GridSystem;
 using System;
@@ -19,6 +18,7 @@ public class MetaGridSevice : AbstractGridService
 
     public MetaGridSevice() : base(Vector2.one/2, Vector2.zero, _cellSize, _gridSize_X, _gridSize_Y)
     {
+
     }
     public MetaCitySaveEntry[] GetSaveData()
     {

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba8f2852453e1640a229d7061b9de87, type: 3}
+  m_Name: TownHallPlaced
+  m_EditorClassIdentifier: 
+  EventType: 0
+  Head: {fileID: 0}
+  TriggeredType: {fileID: 9008204972548919841, guid: ff7c2e7bbf978cb419f50b0ae3f76992, type: 3}

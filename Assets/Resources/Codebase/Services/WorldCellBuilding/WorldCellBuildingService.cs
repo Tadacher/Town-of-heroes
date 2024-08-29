@@ -3,18 +3,18 @@ using Services.Input;
 using System;
 using UnityEngine;
 using WorldCells;
-
-public class WorldCellBuildingService
+public class WorldCellBuildingService : IWorldCellPlacedEventProvider
 {
+    public event Action OnWorldCellPlaced;
+
     protected IPoolableObject _activeCard;
     protected WorldCellInstantiationService _instantiatingService;
     protected WorldCellGridService _alignerService;
 
     protected AbstractInputService _inputService;
-
-
     protected AbstractWorldCell _activeCell;
 
+   
     public WorldCellBuildingService(WorldCellInstantiationService towerInstantiatingService,
                                     WorldCellGridService alignerService,
                                     AbstractInputService inputService)
@@ -22,8 +22,6 @@ public class WorldCellBuildingService
         _instantiatingService = towerInstantiatingService;
         _alignerService = alignerService;
         _inputService = inputService;
-
-
     }
 
     private void TryReleaseActiveCell()
@@ -54,8 +52,10 @@ public class WorldCellBuildingService
     {
         _activeCell.AsUnGhost().StopFollowingPointer();
         _activeCell.InsertSelfToGrid();
+        OnWorldCellPlaced?.Invoke();
     }
 
+  
     private bool CanBePlacedAtPointer() =>
         _alignerService.CellAvailable(_activeCell.transform.position);
 
