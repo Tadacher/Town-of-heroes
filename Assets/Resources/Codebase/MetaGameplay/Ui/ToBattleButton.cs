@@ -32,6 +32,9 @@ public class ToBattleButton : MonoBehaviour
         _citySaveLoader.Save(_metaGridSevice.GetSaveData());
         _cardDeckSaveLoader.Save();
 
+        if (_cardDeckService.CardDeck.Count == 0)
+            return;
+
         _gameStateMachine.EnterState<LoadMetaSceneState, string>(_gameplaySceneName);
     }
 }

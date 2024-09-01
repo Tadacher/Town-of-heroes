@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TownHallPlaced
   m_EditorClassIdentifier: 
   EventType: 0
-  Head: {fileID: 0}
+  Head: {fileID: 11400000, guid: 9e318f7d67fcdc640a7c7ec976e01dda, type: 2}
   TriggeredType: {fileID: 9008204972548919841, guid: ff7c2e7bbf978cb419f50b0ae3f76992, type: 3}

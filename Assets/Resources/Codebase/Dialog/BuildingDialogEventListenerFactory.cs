@@ -1,19 +1,21 @@
 using System;
 using System.Collections.Generic;
 
-public class DialogEventListenerFactory 
+public class BuildingDialogEventListenerFactory 
 {
     private readonly IBuildingPlacedEventProvider _buildingPlacedEventProvider;
     private readonly DialogService _dialogService;
     private readonly DialogDatabase _dialogDatabase;
     private readonly HashSet<AbstractDialogEventListener> _listeners = new();
-    public DialogEventListenerFactory(DialogDatabase dialogDatabase,
+    public BuildingDialogEventListenerFactory(
+                                      DialogDatabase dialogDatabase,
                                       IBuildingPlacedEventProvider buildingPlacedEventProvider,
                                       DialogService dialogService)
     {
         _dialogDatabase = dialogDatabase;
         _buildingPlacedEventProvider = buildingPlacedEventProvider;
         _dialogService = dialogService;
+        CreateListeners();
     }
 
     public void CreateListeners()
@@ -21,11 +23,9 @@ public class DialogEventListenerFactory
         foreach (var data in _dialogDatabase._dialogDatas)
         {
 
-            switch (data.EventType)
+            if (data.EventType == DialogData.DialogEventType.Building)
             {
-                case DialogData.DialogEventType.Building:
-                    CreateAndAddPlacedListener(data);
-                        break;
+                CreateAndAddPlacedListener(data);
             }
         }
     }

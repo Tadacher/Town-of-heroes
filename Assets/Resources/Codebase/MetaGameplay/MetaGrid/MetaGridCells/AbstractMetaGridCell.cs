@@ -101,6 +101,7 @@ namespace Metagameplay.Buildings
         public void InsertSelfToGrid()
         {
             ApplyGridInteractions();
+            ApplyLevelEffects();
             _gridSevice.Insert(this, transform.position);
             _cityService.CountCell(this);
             _cityService.CachePlacedCell(this);

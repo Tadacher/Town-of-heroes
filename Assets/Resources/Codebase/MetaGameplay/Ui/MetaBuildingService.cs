@@ -90,6 +90,7 @@ public class MetaBuildingService : IBuildingPlacedEventProvider
     {
         _activeCell.AsUnGhost().StopFollowingPointer();
         _activeCell.InsertSelfToGrid();
+        OnMetaGridCellPlaced?.Invoke(_activeCell);
     }
 
     private bool CanBePlacedAtPointer() => 

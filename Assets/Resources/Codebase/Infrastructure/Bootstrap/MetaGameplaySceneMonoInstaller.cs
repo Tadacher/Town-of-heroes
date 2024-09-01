@@ -28,7 +28,7 @@ namespace Infrastructure
             BindAbstractClass<AbstractSoundPlayerService, SimpleSoundPlayerService>();
 
             //meta city
-
+            BindService<BuildingDialogEventListenerFactory>().NonLazy();
             BindInterfacesAndSelfTo<MetaBuildingService>();
             BindInterfacesAndSelfTo<BuldingMenuService>();
             BindInterfacesAndSelfTo<MetaBuildingPrefabsLoader>();
