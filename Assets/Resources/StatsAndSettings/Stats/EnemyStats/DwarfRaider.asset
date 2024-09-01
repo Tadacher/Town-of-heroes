@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c2d8d23eaeb3c54394afd34d931cc6f, type: 3}
-  m_Name: OrcWarrior
+  m_Name: DwarfRaider
   m_EditorClassIdentifier: 
   EnemyTypesAndWeights:
-  - enemyType: 3
-    Weight: 80
-  HitPoints: 5
+  - enemyType: 8
+    Weight: 20
+  HitPoints: 10
   Damage: 1
-  ExpPerKill: 1
-  GenerationCost: 3
-  Speed: 1
-  Name: OrcWarrior
-  HitPointsPerLevel: 2
-  DamagePerLevel: 2
-  ExpPerKillPerLevel: 5
-  SpeedPerLevel: 0.01
-  DeathSound: {fileID: 0}
+  ExpPerKill: 6
+  GenerationCost: 20
+  Speed: 1.4
+  Name: DwarfRaider
+  HitPointsPerLevel: 3
+  DamagePerLevel: 0
+  ExpPerKillPerLevel: 3
+  SpeedPerLevel: 0.005
+  DeathSound: {fileID: 8300000, guid: d15f7c262885bcc4f879983c3a12aeda, type: 3}

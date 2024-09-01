@@ -7,7 +7,7 @@ namespace Metagameplay.Ui
 {
     public class MetaBuildingPrefabsLoader : IBuildingContainerProvider
     {
-        private string _buildingPrefabPath = "Prefabs/CityBuildings";
+        private const string _buildingPrefabPath = "Prefabs/CityBuildings";
 
         public Dictionary<Type, AbstractMetaGridCell> BuildingContainer => _buildingContainer;
         private readonly Dictionary<Type, AbstractMetaGridCell> _buildingContainer = new();

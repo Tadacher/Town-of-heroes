@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2d8d23eaeb3c54394afd34d931cc6f, type: 3}
   m_Name: Orc
   m_EditorClassIdentifier: 
-  EnemyTypesAndWeights: []
+  EnemyTypesAndWeights:
+  - enemyType: 3
+    Weight: 100
   HitPoints: 12
   Damage: 1
   ExpPerKill: 2

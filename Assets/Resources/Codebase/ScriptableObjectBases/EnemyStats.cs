@@ -29,10 +29,17 @@ public class EnemyStats : ScriptableObject
     [Header("Audio")]
     public AudioClip DeathSound;
 
+
+    /// <summary>
+    /// weight inside enemy type
+    /// </summary>
     [Serializable]
     public class WeightToEnemyType
     {
         public EnemyType enemyType;
+        /// <summary>
+        /// weight inside enemy type
+        /// </summary>
         public float Weight;
     }
 }

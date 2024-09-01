@@ -4,7 +4,6 @@ using Zenject;
 
 namespace Metagameplay.Buildings
 {
-
     public class Farm : AbstractMetaGridCell
     {
         private MetaBuildingsInstantiationService _instantiationService;

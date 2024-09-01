@@ -26,9 +26,9 @@ namespace Metagameplay.Ui
     [Serializable]
     public class PerLevelEffect
     {
-        public AbstractTower[] AvailableTowers;
-        public AbstractMetaGridCell[] AvailableBuildings;
-        public AvailableBuildingLevel[] AvailableBuldingLevels;
+        public AbstractTower[] AvailableTowers = new AbstractTower[0];
+        public AbstractMetaGridCell[] AvailableBuildings = new AbstractMetaGridCell[0];
+        public AvailableBuildingLevel[] AvailableBuldingLevels = new AvailableBuildingLevel[0];
     }
     [Serializable]
     public class AvailableBuildingLevel

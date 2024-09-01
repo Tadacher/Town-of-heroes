@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyTypesAndWeights:
   - enemyType: 5
-    Weight: 0
+    Weight: 1
   HitPoints: 8
   Damage: 1
   ExpPerKill: 1

@@ -18,7 +18,7 @@ MonoBehaviour:
   AttackDamagePerLevel: 2
   AttackRangePerLevel: 1
   AttackDelayPerLevel: 0.1
-  ExpPerLevel: 100
+  ExpPerLevel: 50
   AttackClip: {fileID: 8300000, guid: b9c73dc489669c64784c36996f536c97, type: 3}
   LevelupClip: {fileID: 8300000, guid: 31c2a4d3a144dc945bb15883b14c52c4, type: 3}
   ProjectilePrefab: {fileID: 5812650127882103866, guid: c498f8076c54aae44ad1c4c1cdf9dcee, type: 3}

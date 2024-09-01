@@ -41,7 +41,7 @@ namespace Progress
                    resourceData1.StonePieces >= resourceData2.StonePieces &&
                    resourceData1.FoodPieces >= resourceData2.FoodPieces;
         }
-        public static bool operator <(ResourceData resourceData1, ResourceData resourceData2)
+        public static bool operator < (ResourceData resourceData1, ResourceData resourceData2)
         {
             return resourceData1.Waves < resourceData2.Waves &&
                    resourceData1.Scrolls < resourceData2.Scrolls &&

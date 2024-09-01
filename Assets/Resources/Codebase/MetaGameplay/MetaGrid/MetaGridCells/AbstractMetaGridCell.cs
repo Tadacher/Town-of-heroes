@@ -136,7 +136,7 @@ namespace Metagameplay.Buildings
                 if (_cityService.AvailableBuildingTypes.Contains(building.GetType()))
                     continue;
 
-                _cityService.AvailableBuildingTypes.Add(building.GetType());
+                _cityService.AddAvailableType(building.GetType());
             }
 
             foreach (var level in perLevelEffect.AvailableBuldingLevels)

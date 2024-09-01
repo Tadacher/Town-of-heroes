@@ -19,9 +19,15 @@ MonoBehaviour:
       ProbabilityWeight: 100
     - WorldCell: {fileID: 9220280681949285413, guid: 0b9effac776f67b42954cf0609089e3a, type: 3}
       ProbabilityWeight: 100
+    - WorldCell: {fileID: 7355307844078930114, guid: 970c513cea49cfc4d90a019f3f90d99d, type: 3}
+      ProbabilityWeight: 100
   - Tower: {fileID: 7595039726850096372, guid: 9e7203908c325684d8f23d85e530c4c9, type: 3}
     CellProbabilityPairs:
     - WorldCell: {fileID: 1780903576480717292, guid: fc69c44528dcc1d488c8a1a95bea2037, type: 3}
+      ProbabilityWeight: 100
+    - WorldCell: {fileID: 9220280681949285413, guid: 0b9effac776f67b42954cf0609089e3a, type: 3}
+      ProbabilityWeight: 100
+    - WorldCell: {fileID: 7355307844078930114, guid: 970c513cea49cfc4d90a019f3f90d99d, type: 3}
       ProbabilityWeight: 100
   - Tower: {fileID: 8329447290316851384, guid: 5e71eb97f5eccf74c8ac67b1847cfed2, type: 3}
     CellProbabilityPairs:
@@ -34,4 +40,6 @@ MonoBehaviour:
   - Tower: {fileID: 8399250403091713473, guid: 02639988f7a6cac40a59b019263613a5, type: 3}
     CellProbabilityPairs:
     - WorldCell: {fileID: 3220683919994174034, guid: 81fffb3458c7ea141bb79a3c14d66f5b, type: 3}
+      ProbabilityWeight: 100
+    - WorldCell: {fileID: 7355307844078930114, guid: 970c513cea49cfc4d90a019f3f90d99d, type: 3}
       ProbabilityWeight: 100
