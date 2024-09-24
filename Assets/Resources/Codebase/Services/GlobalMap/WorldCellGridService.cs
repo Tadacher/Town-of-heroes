@@ -18,10 +18,11 @@ namespace Services.GlobalMap
         {
             _worldCellInstantiationService = worldCellInstantiationService;
         }
-
+        public void Init() => InitCellContent();
         protected override void InitCellContent()
         {
             //place castle and initial cells
+            SpawnAndInjectCellToWorld(typeof(PlayerCity), CelCoordsToPos(new Vector2(_cellCountx / 2, _cellCounty / 2)));
         }
         /// <summary>
         /// 

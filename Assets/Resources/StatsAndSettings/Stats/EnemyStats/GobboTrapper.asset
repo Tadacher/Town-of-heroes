@@ -26,5 +26,5 @@ MonoBehaviour:
   HitPointsPerLevel: 1
   DamagePerLevel: 1
   ExpPerKillPerLevel: 1
-  SpeedPerLevel: 1
+  SpeedPerLevel: 0.01
   DeathSound: {fileID: 8300000, guid: d786118f618d2994eb1514f3325802b4, type: 3}

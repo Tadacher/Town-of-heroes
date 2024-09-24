@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df9de4bf3cafc44395855b9b9f90745, type: 3}
+  m_Name: TownHall
+  m_EditorClassIdentifier: 
+  Name: TownHall
+  Description: 
+  Image: {fileID: 1247944375, guid: 09998687ac2432048b9ab88bb3d9f84d, type: 3}
+  ClipOnSelect: {fileID: 8300000, guid: 45d09c5be80b5634eb963d25bb3ac2c9, type: 3}
+  MaxBuildingsOfThisType: 1
+  Cost:
+    WoodPieces: 0
+    StonePieces: 0
+    FoodPieces: 0
+    ManaClot: 0
+    Scrolls: 0
+  PerLevelEffects:
+  - AvailableTowers: []
+    AvailableBuildings:
+    - {fileID: 8767286230719501222, guid: dca57ceef036ca44da6fa477af04c782, type: 3}
+    AvailableBuldingLevels: []
+  UpgradeCostsPerLevel: []

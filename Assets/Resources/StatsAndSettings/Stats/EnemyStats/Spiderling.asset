@@ -19,8 +19,8 @@ MonoBehaviour:
   GenerationCost: 1
   Speed: 1
   Name: Spiderling
-  HitPointsPerLevel: 0
+  HitPointsPerLevel: 3
   DamagePerLevel: 0
-  ExpPerKillPerLevel: 0
-  SpeedPerLevel: 0
+  ExpPerKillPerLevel: 1
+  SpeedPerLevel: 0.01
   DeathSound: {fileID: 8300000, guid: 2b97146771289ce4885a8538d9f661f0, type: 3}

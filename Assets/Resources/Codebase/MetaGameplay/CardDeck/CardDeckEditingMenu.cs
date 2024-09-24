@@ -8,8 +8,10 @@ public class CardDeckEditingMenu : IDeckEntryPressedReciever, IEntryInserter
 {
     private readonly DeckEditingUiContainer _deckBuildingUiContainer;
     private readonly CardDeckSaveLoader _deckService;
+
     private readonly DeckEntryFactory _deckEntryFactory;
     private readonly CardEntryFactory _cardEntryFactory;
+
     private readonly CardDescriptionService _cardDescriptionService;
     private readonly AbstractTowerPrefabContainer _abstractTowerPrefabContainer;
     private readonly CardAvalilabilityService _cardAvalilabilityService;

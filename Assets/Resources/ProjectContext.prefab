@@ -74,5 +74,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455f7faafc3586948b6afa28064db437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _scriptableObjects:
+  - {fileID: 11400000, guid: 5a9a5c70d9370274d9675eeb2cbeddba, type: 2}
   _coroutineRunnerPrefab: {fileID: 7740042449146335252, guid: 7e6567c5b86bd8c4090fac93fa3b1eff, type: 3}
   _inputRecieverPrefab: {fileID: 7636549320984285505, guid: 54ba26e1f5f9ad740a96f4c8af6f2950, type: 3}
+  _dialogSystemViewPrefab: {fileID: 1916292602888006656, guid: 4b264fa5fe30f26498e6d8c2ce09fcc7, type: 3}

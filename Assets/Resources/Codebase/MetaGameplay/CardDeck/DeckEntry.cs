@@ -35,4 +35,9 @@ public class DeckEntry : MonoBehaviour, IPointerDownHandler, IPoolableObject
         _reciever.DeckEntryPressed(this);
         ReturnToPool();
     }
+
+    public void ActionOnGet()
+    {
+        
+    }
 }

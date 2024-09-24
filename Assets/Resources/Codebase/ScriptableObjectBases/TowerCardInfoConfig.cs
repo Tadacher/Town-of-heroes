@@ -19,4 +19,6 @@ public class TowerCardInfoConfig : ScriptableObject
     /// insert tower to automatically gain its stats to description
     /// </summary>
     public TowerStats TowerStats;
+
+    
 }

@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b55440d803c0e4682797f6782cdd6c, type: 3}
   m_Name: Desert
   m_EditorClassIdentifier: 
+  Name: Desert
+  Description: 
   CellTags: 0100000001000000
+  TowerBuffs: []
+  EnemyBuffs: []

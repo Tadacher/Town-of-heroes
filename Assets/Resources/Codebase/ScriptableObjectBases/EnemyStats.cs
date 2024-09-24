@@ -18,7 +18,7 @@ public class EnemyStats : ScriptableObject
     public string Name;
     [Space(5)]
 
-    [Header("Stats per level")]
+    [Header("Stats per wave")]
     public int HitPointsPerLevel;
     public int DamagePerLevel;
     public int ExpPerKillPerLevel;
@@ -29,10 +29,17 @@ public class EnemyStats : ScriptableObject
     [Header("Audio")]
     public AudioClip DeathSound;
 
+
+    /// <summary>
+    /// weight inside enemy type
+    /// </summary>
     [Serializable]
     public class WeightToEnemyType
     {
         public EnemyType enemyType;
+        /// <summary>
+        /// weight inside enemy type
+        /// </summary>
         public float Weight;
     }
 }

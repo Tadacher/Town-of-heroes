@@ -8,6 +8,7 @@ namespace Infrastructure
         private const string _initialSceneName = "InitialScene";
         private const string _coreGameplayScene = "CoreGameplayScene";
         private const string _metaGameplayState = "MetaGameplayScene";
+        private const string _menuScene = "MenuScene";
         private AbstractStateMachine _gameStateMachine;
         private SceneLoaderService _sceneLoaderService;
         public BootstrapState(SceneLoaderService sceneLoaderService)
@@ -26,7 +27,7 @@ namespace Infrastructure
         }
 
         private void EnterLoadLevel() => 
-            _gameStateMachine.EnterState<LoadInitialLevelState, string>(_metaGameplayState);
+            _gameStateMachine.EnterState<LoadMenuLevelState, string>(_menuScene);
 
         private void RegisterServices()
         {

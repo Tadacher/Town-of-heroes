@@ -17,6 +17,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
 
     //external
+    [SerializeField] private PopupOnPointerEnter _popupOnPointerEnter;
     [SerializeField] private RectTransform _cardImageTransform;
     [SerializeField] private Sprite _imageAsTower;
     [SerializeField] private Sprite _imageAsCell;
@@ -104,9 +105,16 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         SetGameState();
         SetImageAsState();
         ResetAnchor();
-
+        ResetPicPosition();
+        ResetScale();
         return this;
     }
+    public void ActionOnGet()
+    {
+        ReInitialize();
+    }
+    private void ResetPicPosition() => _popupOnPointerEnter.ResetPosition();
+
     /// <summary>
     /// after setting as card deck child anchor sets to upper left, we need to reset it for propper flight anim position
     /// </summary>
@@ -121,8 +129,14 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     {
         if (_inputService.LeftMouseDown())
         {
+            
+
             if (_battlefieldStated)
-                InstantiateTowerGhost();
+            {
+                if (_towerInstantiationService.CanPlaceTower() == false)
+                    return;
+                TryInstantiateTowerGhost();
+            }
             else
                 InstantiateWorldCellGhost();
             gameObject.SetActive(false);
@@ -158,7 +172,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
             case BattleField battleField:
                 SetImageAsCell();
                 break;
-            case Map map: 
+            case MapState map: 
                 SetTImageAsTower();
             break;
         }
@@ -179,7 +193,7 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
 
         switch (state)
         {
-            case Map map:
+            case MapState map:
                 SwitchToMapState();
                 break;
             case BattleField field:
@@ -246,7 +260,18 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
     #region UTIL
     private void InstantiateWorldCellGhost() => _worldCellInstantiationService.InstantiateWorldCellFromCard(this, _worldCellType);
 
-    private void InstantiateTowerGhost() => _towerInstantiationService.InstantiateTowerFromCard(this, _towerType);
+    private bool TryInstantiateTowerGhost()
+    {
+        if (_towerInstantiationService.CanPlaceTower())
+        {
+            _towerInstantiationService.InstantiateTowerFromCard(this, _towerType);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     public void ReturnToPool()
     {
@@ -287,6 +312,8 @@ public class TowerCard : MonoBehaviour, IPoolableObject, IPointerDownHandler
         transform.SetParent(cardParent);
         _readyToUse = true;
     }
+
+   
 
     ~TowerCard()
     {

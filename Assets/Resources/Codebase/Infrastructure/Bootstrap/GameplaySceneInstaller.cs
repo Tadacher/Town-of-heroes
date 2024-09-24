@@ -1,14 +1,11 @@
-﻿using BootStrap;
-using Services;
+﻿using Services;
 using Services.CardGeneration;
 using Services.GlobalMap;
 using Services.GridSystem;
 using Services.TowerBuilding;
 using Services.Ui;
-using Unity.VisualScripting;
 using UnityEngine;
 using WorldCells;
-using static WaveGenerator;
 
 namespace Infrastructure
 {
@@ -27,14 +24,10 @@ namespace Infrastructure
         
         [SerializeField] private TowerInfoView _towerInfoView;
         [SerializeField] private WorldCellInfoView _worldCellInfoView;
-
-        [Header("Scriptables")]
-        [SerializeField] private ScriptableObject[] _scriptableObjects;
-
         public override void InstallBindings()
         {
             //ScriptableObjects
-            BindScriptables();
+            InitAndBindConfigs();
 
             //Unity components
             BindUnityComponent(_audioSource);
@@ -57,7 +50,8 @@ namespace Infrastructure
 
 
             //Towers
-            BindService<TowerBuildingService>();
+            BindInterfacesAndSelfTo<TowerBuildingService>();
+            BindInterfacesAndSelfTo<AdditionalTowerService>().NonLazy();
             BindService<BattleGridService>();
             BindService<TowerInstantiationService>();
             BindService<DamageTextService>();
@@ -70,24 +64,24 @@ namespace Infrastructure
             BindService<WorldCellCardGenerator>();
             BindService<CardDescriptionService>();
             BindService<CardInfoUiService>();
-            BindInterfacesAndSelfto<CardCountService>();
+            BindInterfacesAndSelfTo<CardCountService>();
 
             //worldCells
-            BindService<WorldCellInstantiationService>();
-            BindService<WorldCellGridService>();
-            BindService<WorldCellBuildingService>();
+            BindService<WorldCellInstantiationService>().NonLazy();
+            BindService<WorldCellGridService>().NonLazy();
+            BindInterfacesAndSelfTo<WorldCellBuildingService>();
             BindService<WorldCellBalanceService>();
             BindService<WorldCellInfoService>();
 
             //enemy waves
-            BindService<WaveService>();
+            BindInterfacesAndSelfTo<WaveService>();
             BindService<WaveDeathListenerFactory>();
             BindService<WaveGenerator>();
             BindService<EnemyInstantiationService>();
             BindService<EnemyTypeService>();
             BindService<EnemyGenerationCostService>();
 
-            BindInterfacesAndSelfto<CoreGameplayService>();
+            BindInterfacesAndSelfTo<CoreGameplayService>().NonLazy();
 
             BindService<CameraPositionService>();
             BindService<GameplayStateMachine>().NonLazy();
@@ -102,19 +96,11 @@ namespace Infrastructure
 
             Debug.Log("SCENE_INSTALLER_DONE");
         }
-
-        private void BindScriptables()
+        public override void Start()
         {
-            foreach (var scriptable in _scriptableObjects)
-            {
-                Container.Bind(scriptable.GetType()).FromInstance(scriptable);
-                IInitializableConfig initializable = scriptable as IInitializableConfig;
-
-                if (initializable != null) 
-                    initializable.Initialize();
-            }
+            base.Start();
         }
-
+        
         private void BindMarkers()
         {
             foreach (var marker in _markers)

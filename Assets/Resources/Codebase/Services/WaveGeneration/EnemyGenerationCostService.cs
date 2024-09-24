@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public partial class WaveGenerator
-{
+
     public class EnemyGenerationCostService
     {
         private Dictionary<Type, int> EnemyCosts = new();
@@ -15,4 +14,4 @@ public partial class WaveGenerator
         }
         public int GetCostByType(Type type) => EnemyCosts[type];
     }
-}
+

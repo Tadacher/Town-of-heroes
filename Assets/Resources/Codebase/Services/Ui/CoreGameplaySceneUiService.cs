@@ -1,4 +1,5 @@
 ﻿using Services.Ui;
+using System;
 
 namespace Infrastructure
 {
@@ -23,7 +24,14 @@ namespace Infrastructure
             _gameplayCanvasContainer.gameObject.SetActive(false);
             _mapCanvasContainer.gameObject.SetActive(true);
         }
-        public void SetCastleHP(int HPCastle) =>
-            _gameplayCanvasContainer.CastleHealthBarText.text = HPCastle.ToString();
+        public void SetCastleHP(int castleHp)
+        {
+            _gameplayCanvasContainer.CastleHealthBarText.text = castleHp.ToString();
+        }
+
+        public void SetTowerCount(int currentTowerCCount, int maxTowerCount)
+        {
+            _gameplayCanvasContainer.TowerCountText.text = $"{currentTowerCCount}/{maxTowerCount}";
+        }
     }
 }

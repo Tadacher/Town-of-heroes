@@ -4,7 +4,7 @@ using Services.Input;
 using UnityEngine;
 using Zenject;
 
-public class CardEntryFactory : AbstractPoolerFactory<CardEntry>
+public class CardEntryFactory : MonobehaviourAbstractPoolerFactory<CardEntry>
 {
     private CardEntry _prefab;
     private Transform _parent;
@@ -20,20 +20,6 @@ public class CardEntryFactory : AbstractPoolerFactory<CardEntry>
     public void Init(CardDeckEditingMenu service)
     {
         _cardDeckEditingservice = service;
-    }
-    protected override void ActionOnDestroy(CardEntry poolable)
-    {
-        Object.Destroy(poolable.gameObject);
-    }
-
-    protected override void ActionOnGet(CardEntry poolable)
-    {
-        poolable.gameObject.SetActive(true);
-    }
-
-    protected override void ActionOnRelease(CardEntry type)
-    {
-        type.gameObject.SetActive(false);
     }
 
     protected override CardEntry CreateNew()

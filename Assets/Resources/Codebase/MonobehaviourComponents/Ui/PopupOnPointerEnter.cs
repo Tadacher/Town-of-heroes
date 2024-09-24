@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -16,11 +17,14 @@ public class PopupOnPointerEnter : MonoBehaviour, IPointerEnterHandler, IPointer
     private Coroutine _popupCoroutine;
     private Vector3 _direction;
     private Vector3 _origPos;
+    private Vector3 _targetpos;
+
     //
     private void Start()
     {
         _direction = new Vector3(_popupSpeedX, _popupSpeedY, 0f);
         _origPos = _popupObjectTransform.localPosition;
+        _targetpos = _origPos + _direction * _popupDistance;
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -39,19 +43,31 @@ public class PopupOnPointerEnter : MonoBehaviour, IPointerEnterHandler, IPointer
 
     private IEnumerator PopupCoroutine()
     {
-        while (Vector2.Distance(_popupObjectTransform.localPosition, _origPos) < _popupDistance)
+        float t = 0f;
+        Vector3 curPos = _popupObjectTransform.localPosition;
+
+        while (t < 1f)
         {
-            _popupObjectTransform.localPosition += _direction * Time.deltaTime;
+            _popupObjectTransform.localPosition = Vector3.Lerp(curPos, _targetpos, t);
+            t += Time.deltaTime * 2;
             yield return null;
         }
     }
 
     private IEnumerator PopdownCoroutine()
     {
-        while (Vector2.Distance(_popupObjectTransform.localPosition, _origPos) > 1f)
+        float t = 0f;
+        Vector3 curPos = _popupObjectTransform.localPosition;
+        while (t < 1f)
         {
-            _popupObjectTransform.localPosition -= _direction * Time.deltaTime;
+            _popupObjectTransform.localPosition = Vector3.Lerp(curPos, _origPos, t);
+            t += Time.deltaTime *2;
             yield return null;
         }
+    }
+
+    public void ResetPosition()
+    {
+        _popupObjectTransform.localPosition = _origPos;
     }
 }

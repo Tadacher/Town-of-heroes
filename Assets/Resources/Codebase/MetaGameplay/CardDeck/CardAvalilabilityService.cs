@@ -11,10 +11,6 @@ public class CardAvalilabilityService
     private readonly Type[] _defaulTypes = 
     {
         typeof(ArcherTower),
-        typeof(LightingSpire),
-        typeof(ShrapnelCanonTower),
-        typeof(SniperNest),
-        typeof(TowerOfDeath),
     };
 
     public CardAvalilabilityService()

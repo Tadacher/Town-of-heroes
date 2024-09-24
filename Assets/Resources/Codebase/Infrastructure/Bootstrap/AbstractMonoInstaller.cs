@@ -9,6 +9,8 @@ namespace Infrastructure
     /// </summary>
     public abstract class AbstractMonoInstaller : MonoInstaller
     {
+        [Header("Scriptables")]
+        [SerializeField] protected ScriptableObject[] _scriptableObjects;
         /// <summary>
         /// Binds non-monobehaviour exemplar from new instance of given type
         /// </summary>
@@ -70,12 +72,24 @@ namespace Infrastructure
         /// </summary>
         /// <typeparam name="TService">binding type</typeparam>
         /// <returns>zenject object to override binding options of needed</returns>
-        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfto<TService>() where TService : class => 
+        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfTo<TService>() where TService : class => 
             Container.BindInterfacesAndSelfTo<TService>().AsSingle();
-        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfto<TService, TAbstractService>() where TService : TAbstractService where TAbstractService : class
+        protected ConcreteIdArgConditionCopyNonLazyBinder BindInterfacesAndSelfFromAbstractto<TService, TAbstractService>() where TService : TAbstractService where TAbstractService : class
         {
             TService service = Container.Instantiate<TService>();
             return Container.BindInterfacesAndSelfTo<TAbstractService>().FromInstance(service);
+        }
+
+        protected void InitAndBindConfigs()
+        {
+            foreach (var scriptable in _scriptableObjects)
+            {
+                Container.Bind(scriptable.GetType()).FromInstance(scriptable).AsSingle();
+                IInitializableConfig initializable = scriptable as IInitializableConfig;
+
+                if (initializable != null)
+                    initializable.Initialize();
+            }
         }
     }
     }

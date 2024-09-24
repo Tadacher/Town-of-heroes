@@ -10,8 +10,10 @@ namespace Services.Factories
     public class WorldCellFactory : MonobehaviourAbstractPoolerFactory<AbstractWorldCell>
     {
         private AbstractWorldCell _cellPrefab;
-        public WorldCellFactory(AbstractWorldCell cellPrefab, DiContainer diContainer) : base(diContainer) 
-            => _cellPrefab = cellPrefab;
+        public WorldCellFactory(AbstractWorldCell cellPrefab, DiContainer diContainer) : base(diContainer)
+        {
+            _cellPrefab = cellPrefab;
+        }
 
         protected override AbstractWorldCell CreateNew()
         {

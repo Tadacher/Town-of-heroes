@@ -21,8 +21,8 @@ MonoBehaviour:
   GenerationCost: 13
   Speed: 2
   Name: Skeleton
-  HitPointsPerLevel: 1
+  HitPointsPerLevel: 2
   DamagePerLevel: 0
   ExpPerKillPerLevel: 1
-  SpeedPerLevel: 1
+  SpeedPerLevel: 0.01
   DeathSound: {fileID: 8300000, guid: 43d02289cbc945a479275cf0ee23ae5f, type: 3}

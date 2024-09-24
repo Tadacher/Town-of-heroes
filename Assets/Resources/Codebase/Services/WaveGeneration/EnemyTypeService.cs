@@ -89,6 +89,9 @@ public class EnemyTypeService
         return _enemyPrefabContainer.Enemies[0].GetType();
     }
 }
+/// <summary>
+/// Enemy tags which are classify each enemy type
+/// </summary>
 public enum EnemyType
 {
     //Common
@@ -102,4 +105,5 @@ public enum EnemyType
     Centaur = 5,
     Murloc = 6,
     Spider = 7,
+    Dwarf = 8,
 }

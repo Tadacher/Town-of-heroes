@@ -9,6 +9,7 @@
         Cursed = 4,
         Water = 5,
         River= 6,
+        Hill = 7,
 
         //cocrete mob type spawners
         Satyr_Habitat = 100,

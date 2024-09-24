@@ -24,8 +24,11 @@ namespace Services.Factories
         }
         public virtual void ReturnToPool(IPoolableObject returnable) =>
             _pool.Release((TType)returnable);
-        public virtual TType GetObject() =>
-            _pool.Get();
+        public virtual TType GetObject()
+        {
+            return _pool.Get();
+        }
+
         /// <summary>
         /// action on return to pool
         /// </summary>

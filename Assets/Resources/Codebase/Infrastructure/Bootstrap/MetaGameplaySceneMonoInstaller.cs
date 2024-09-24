@@ -6,7 +6,7 @@ using System;
 using UnityEngine;
 
 namespace Infrastructure
-{
+{  
     public sealed class MetaGameplaySceneMonoInstaller : AbstractMonoInstaller
     {
         [SerializeField] private AudioSource _audioSource;
@@ -18,8 +18,6 @@ namespace Infrastructure
         //monobehaviour services
         [SerializeField] private MetaGridCellInfoView _gridCellInfoView;
 
-        [SerializeField] private ScriptableObject[] _scriptableObjects;
-
         public override void InstallBindings()
         {
             BindUnityComponent(_audioSource);
@@ -28,17 +26,22 @@ namespace Infrastructure
 
             BindService<MetaGameplayUiService>().NonLazy();
             BindAbstractClass<AbstractSoundPlayerService, SimpleSoundPlayerService>();
+
             //meta city
-            BindService<MetaBuildingService>();
-            BindService<BuldingMenuService>().NonLazy();
+            BindService<BuildingDialogEventListenerFactory>().NonLazy();
+            BindInterfacesAndSelfTo<MetaBuildingService>();
+            BindInterfacesAndSelfTo<BuldingMenuService>();
+            BindInterfacesAndSelfTo<MetaBuildingPrefabsLoader>();
+            BindInterfacesAndSelfTo<BuildingMenuEntryFactory>().NonLazy();
+
             BindService<MetaBuildingsInstantiationService>();
             BindService<MetaGridSevice>();
-            BindService<MetaCityService>();
-            BindService<MetaCityLoadHandler>().NonLazy();
+            BindService<MetaCityInfoService>();
+            BindService<MetaCitySaveLoadHandler>().NonLazy();
             BindService<MetaGridCellInfoService>();
 
             //deck editing
-            BindInterfacesAndSelfto<CardDeckEditingMenu>().NonLazy();
+            BindInterfacesAndSelfTo<CardDeckEditingMenu>().NonLazy();
             BindService<CardDeckService>();
             BindService<DeckEntryFactory>();
             BindService<CardEntryFactory>();
@@ -52,21 +55,7 @@ namespace Infrastructure
             BindMonobehaviour(_gridCellInfoView);
 
             //configs
-            InitConfigs();
-        }
-
-    
-
-        private void InitConfigs()
-        {
-            foreach (var scriptable in _scriptableObjects)
-            {
-                Container.Bind(scriptable.GetType()).FromInstance(scriptable);
-                IInitializableConfig initializable = scriptable as IInitializableConfig;
-
-                if (initializable != null)
-                    initializable.Initialize();
-            }
+            InitAndBindConfigs();
         }
     }
 }
