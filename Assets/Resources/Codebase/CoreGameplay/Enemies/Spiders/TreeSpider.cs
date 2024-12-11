@@ -12,14 +12,18 @@ namespace Enemies
         private EnemyInstantiationService _enemyInstantiationService;
         [Inject]
         public override void Construct(AudioSource audioSource,
-                                        DamageTextService damageTextService,
-                                        MonsterInfoServiceIngame monsterInfoServiceIngame,
-                                        IEnemyReachedReciever coreGameplayService, 
-                                        IWaveNumberProvider waveNumberProvider)
+                                       DamageTextService damageTextService,
+                                       MonsterInfoServiceIngame monsterInfoServiceIngame,
+                                       IEnemyReachedReciever coreGameplayService,
+                                       IWaveNumberProvider waveNumberProvider)
         {
-            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, coreGameplayService, waveNumberProvider);
+            base.Construct(audioSource,
+                           damageTextService,
+                           monsterInfoServiceIngame,
+                           coreGameplayService,
+                           waveNumberProvider);
 
-            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
+            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService, null);
         }
 
         [Inject]

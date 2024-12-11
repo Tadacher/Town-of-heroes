@@ -1,5 +1,6 @@
 using MovementModules;
 using Services;
+using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -14,11 +15,14 @@ namespace Enemies
                                        IEnemyReachedReciever coreGameplayService,
                                        IWaveNumberProvider waveNumberProvider)
         {
-            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, coreGameplayService, waveNumberProvider);
-            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
+            base.Construct(audioSource,
+                           damageTextService,
+                           monsterInfoServiceIngame,
+                           coreGameplayService,
+                           waveNumberProvider);
+            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService, null);
 
         }
-
         protected override void Awake()
         {
             _enemyMovementModule = new StraightMovementModule(transform, new Vector3(16.5f, 7.5f, 0f), this, _speed);

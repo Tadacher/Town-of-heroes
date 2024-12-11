@@ -1,5 +1,6 @@
 ﻿using MovementModules;
 using Services;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Enemies
@@ -7,14 +8,23 @@ namespace Enemies
     public class GobboTrapper : Gobbo
     {
         [SerializeField] private float _dodgeValue;
+
         public override void Construct(AudioSource audioSource,
                                        DamageTextService damageTextService,
                                        MonsterInfoServiceIngame monsterInfoServiceIngame,
-                                       IEnemyReachedReciever enemyReachedReciever,
+                                       IEnemyReachedReciever coreGameplayService,
                                        IWaveNumberProvider waveNumberProvider)
         {
-            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, enemyReachedReciever, waveNumberProvider);
-            _abstractDamageRecievingModule = new DodgeDamageRecievingModule(_dodgeValue, transform, damageTextService);
+            base.Construct(audioSource,
+                           damageTextService,
+                           monsterInfoServiceIngame,
+                           coreGameplayService,
+                           waveNumberProvider);
+            var abilties = new List<AbstractPassiveDefensiveAbility>()
+                    {
+                        new DodgeAbility(_dodgeValue, damageTextService, transform)
+                    };
+            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService, passiveDefensiveAbilities: abilties);
         }
         public override void Heal(float points)
         {
