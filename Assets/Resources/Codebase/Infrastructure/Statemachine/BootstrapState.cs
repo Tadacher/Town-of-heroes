@@ -7,7 +7,8 @@ namespace Infrastructure
     {
         private const string _initialSceneName = "InitialScene";
         private const string _coreGameplayScene = "CoreGameplayScene";
-        private const string _metaGameplayState = "MetaGameplayScene";
+        private const string _metaGameplayScene = "MetaGameplayScene";
+        private const string _menuScene = "MenuScene";
         private AbstractStateMachine _gameStateMachine;
         private SceneLoaderService _sceneLoaderService;
         public BootstrapState(SceneLoaderService sceneLoaderService)
@@ -22,15 +23,12 @@ namespace Infrastructure
 
         public void Enter()
         {
-            _sceneLoaderService.StartLoadSceneCoroutine(_initialSceneName, onloaded: EnterLoadLevel);
+            _sceneLoaderService.StartLoadSceneCoroutine(_initialSceneName, onloaded: EnterLoadedLevel);
         }
 
-        private void EnterLoadLevel() => 
-            _gameStateMachine.EnterState<LoadInitialLevelState, string>(_metaGameplayState);
+        private void EnterLoadedLevel() => 
+            _gameStateMachine.EnterState<LoadInitialLevelState, string>(_menuScene);
 
-        private void RegisterServices()
-        {
-        }
 
         public void Exit()
         {

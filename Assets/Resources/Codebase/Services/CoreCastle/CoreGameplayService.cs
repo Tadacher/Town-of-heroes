@@ -35,7 +35,7 @@ public class CoreGameplayService : IEnemyReachedReciever
         if(CastleHitpoints <= 0 )
         {
            _resourceService.Save();
-            _gameStateMachine.EnterState<LoadInitialLevelState, string>("MetaGameplayScene");
+            _gameStateMachine.EnterState<LoadMetaGameplaySceneState, string>("MetaGameplayScene");
         }
     }
 }

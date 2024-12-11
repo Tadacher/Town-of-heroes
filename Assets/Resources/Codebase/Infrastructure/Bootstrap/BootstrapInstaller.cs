@@ -23,7 +23,6 @@ namespace Infrastructure
 
 
             BindService<SceneLoaderService>();
-            BindService<GameStateMachine>().NonLazy();
             BindService<GameStateFactory>();
 
             //saveload
@@ -35,8 +34,7 @@ namespace Infrastructure
             BindService<ResourceService>().NonLazy();
 
 
-            //Container.Bind<DiContainer>().FromInstance(Container);
-
+            BindService<GameStateMachine>().NonLazy();
             Debug.Log("BOOTSTRAP INSTALLER DONE");
         }
 

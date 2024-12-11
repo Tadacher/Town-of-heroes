@@ -15,6 +15,7 @@ namespace Infrastructure
                 [typeof(LoadInitialLevelState)] = stateFactory.GetPayloadedState<string, LoadInitialLevelState>().Init(this),
                 [typeof(MetaSceneState)] = stateFactory.GetState<MetaSceneState>().Init(this),
                 [typeof(CoreSceneState)] = stateFactory.GetState<CoreSceneState>().Init(this),
+                [typeof(MenuSceneState)] = stateFactory.GetState<MenuSceneState>().Init(this),
             };
             EnterState<BootstrapState>();
         }

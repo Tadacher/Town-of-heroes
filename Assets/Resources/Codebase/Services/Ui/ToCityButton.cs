@@ -24,6 +24,6 @@ public class ToCityButton : MonoBehaviour
     private void OnClick()
     {
         _resourceService.Save();
-        _gameStateMachine.EnterState<LoadInitialLevelState, string>("MetaGameplayScene");
+        _gameStateMachine.EnterState<LoadMetaGameplaySceneState, string>("MetaGameplayScene");
     }
 }
