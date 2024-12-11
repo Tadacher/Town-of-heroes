@@ -1,6 +1,5 @@
 ﻿using Services;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class BlockHealthModule : AbstractDamageRecievingModule
 {
@@ -10,15 +9,12 @@ public class BlockHealthModule : AbstractDamageRecievingModule
         _block = block;
     }
 
-    public override float CalculateRecievedDamage(float damage)
-    {
-        float realDamage = damage - _block;
-        if (realDamage < 0) { realDamage = 0; }
-        _damageTextService.ReturnDamageText(realDamage, _unitTransform.position);
-        return realDamage;
-    }
-
     public override void ReInit()
     {
+    }
+
+    protected override void InitPassiveDefenciveAbilities()
+    {
+        _passiveDefensiveAbilities.Add(new BlockDefenciveAbility(_block));
     }
 }
