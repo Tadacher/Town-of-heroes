@@ -1,3 +1,4 @@
+using Enemies;
 using Services.Input;
 using UnityEngine;
 public class MonsterInfoServiceIngame
