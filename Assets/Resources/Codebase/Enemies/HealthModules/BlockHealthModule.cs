@@ -11,6 +11,7 @@ public class BlockHealthModule : AbstractDamageRecievingModule
 
     public override void ReInit()
     {
+
     }
 
     protected override void InitPassiveDefenciveAbilities()
