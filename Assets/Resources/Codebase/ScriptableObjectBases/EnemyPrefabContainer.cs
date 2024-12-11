@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Enemies;
+using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyPrefabContainer", menuName = "ScriptableObjects/InitializableConfig/EnemyPrefabContainer", order = 1)]
 public class EnemyPrefabContainer : ScriptableObject, IInitializableConfig
 {

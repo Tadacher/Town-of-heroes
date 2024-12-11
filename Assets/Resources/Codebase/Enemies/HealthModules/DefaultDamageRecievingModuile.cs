@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DefaultDamageRecievingModuile : AbstractDamageRecievingModule
 {
-    public DefaultDamageRecievingModuile(List<AbstractPassiveDefensiveAbility> passiveDefensiveAbilities, Transform unitTransform, DamageTextService damageTextService) : base(unitTransform, damageTextService)
+    public DefaultDamageRecievingModuile(List<AbstractPassiveDefensiveAbility> passiveDefensiveAbilities, Transform unitTransform, DamageTextService damageTextService) : base(unitTransform, damageTextService, passiveDefensiveAbilities)
     {
         _passiveDefensiveAbilities = passiveDefensiveAbilities;
     }

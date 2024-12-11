@@ -10,7 +10,7 @@ namespace Enemies
         {
             base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, coreGameplayService);
             
-            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
+            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService, null);
         }
 
         protected override void Awake()

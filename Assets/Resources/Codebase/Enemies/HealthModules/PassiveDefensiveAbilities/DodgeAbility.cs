@@ -1,22 +1,22 @@
 ﻿using Services;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class DodgeDamageRecievingModule : AbstractDamageRecievingModule
+public class DodgeAbility : AbstractPassiveDefensiveAbility
 {
     private const string _missText = "MISS!";
     private float _chance;
+    private DamageTextService _damageTextService;
+    private Transform _unitTransform;
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="chance">Chance from 0 to 1f</param>
-    public DodgeDamageRecievingModule(float chance, Transform unitTransform, DamageTextService damageTextService) : base(unitTransform, damageTextService)
+    public DodgeAbility(float chance, DamageTextService damageTextService, Transform unitTransform)
     {
         _damageTextService = damageTextService;
         _chance = chance;
+        _unitTransform = unitTransform;
     }
 
-    public override float CalculateRecievedDamage(float damage)
+    public override float ProcessDamage(float damage)
     {
         if (Random.Range(0f, 1f) > _chance)
         {

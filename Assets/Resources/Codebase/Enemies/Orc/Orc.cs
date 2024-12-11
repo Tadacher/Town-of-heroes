@@ -11,7 +11,7 @@ namespace Enemies
         public override void Construct(AudioSource audioSource, DamageTextService damageTextService, MonsterInfoServiceIngame monsterInfoServiceIngame, IEnemyReachedReciever coreGameplayService)
         {
             base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, coreGameplayService);
-            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
+            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService, null);
 
         }
 

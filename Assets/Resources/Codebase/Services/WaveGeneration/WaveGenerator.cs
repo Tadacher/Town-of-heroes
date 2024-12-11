@@ -4,6 +4,7 @@ using WorldCells;
 using System.Collections.Generic;
 using Services.CardGeneration;
 using Progress;
+using Enemies;
 /// <summary>
 /// Generates waves with all linked stuff
 /// First - enemy type is picked

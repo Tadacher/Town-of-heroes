@@ -11,18 +11,21 @@ public abstract class AbstractDamageRecievingModule
     protected DamageTextService _damageTextService;
     protected Transform _unitTransform;
     protected List<AbstractPassiveDefensiveAbility> _passiveDefensiveAbilities;
-    protected AbstractDamageRecievingModule(Transform unitTransform, DamageTextService damageTextService)
+
+    protected AbstractDamageRecievingModule(Transform unitTransform, DamageTextService damageTextService, List<AbstractPassiveDefensiveAbility> passiveDefensiveAbilities)
     {
         _unitTransform = unitTransform;
         _damageTextService = damageTextService;
+        _passiveDefensiveAbilities = passiveDefensiveAbilities;
         InitPassiveDefenciveAbilities();
     }
 
     public virtual void ReInit()
     {
-        for (int i = 0; i < _passiveDefensiveAbilities.Count; i++)
+        if (_passiveDefensiveAbilities == null)
+            return;
+        foreach (AbstractPassiveDefensiveAbility ability in _passiveDefensiveAbilities)
         {
-            AbstractPassiveDefensiveAbility ability = _passiveDefensiveAbilities[i];
             ability.ReInit();
         }
     }
@@ -36,9 +39,12 @@ public abstract class AbstractDamageRecievingModule
     /// <returns>calculated damage</returns>
     public float CalculateRecievedDamage(float damage)
     {
-        for (int i = 0; i < _passiveDefensiveAbilities.Count; i++)
+        if (_passiveDefensiveAbilities == null)
+            return damage;
+
+        foreach (AbstractPassiveDefensiveAbility ability in _passiveDefensiveAbilities)
         {
-            damage = _passiveDefensiveAbilities[i].ProcessDamage(damage);
+            damage = ability.ProcessDamage(damage);
         }
         _damageTextService.ReturnDamageText(damage, _unitTransform.position);
         return damage;
