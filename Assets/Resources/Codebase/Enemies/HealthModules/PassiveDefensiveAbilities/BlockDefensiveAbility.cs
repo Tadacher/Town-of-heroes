@@ -1,8 +1,11 @@
-﻿internal class BlockDefenciveAbility : AbstractPassiveDefensiveAbility
+﻿using Unity.IO.LowLevel.Unsafe;
+using static UnityEditor.Progress;
+
+internal class BlockDefenciveAbility : AbstractPassiveDefensiveAbility
 {
     private float _block;
 
-    public BlockDefenciveAbility(float block) 
+    public BlockDefenciveAbility(float block, int priority) : base(priority)
     {
         _block = block;
     }

@@ -18,7 +18,14 @@ public abstract class AbstractDamageRecievingModule
         InitPassiveDefenciveAbilities();
     }
 
-    public abstract void ReInit();
+    public virtual void ReInit()
+    {
+        for (int i = 0; i < _passiveDefensiveAbilities.Count; i++)
+        {
+            AbstractPassiveDefensiveAbility ability = _passiveDefensiveAbilities[i];
+            ability.ReInit();
+        }
+    }
     protected abstract void InitPassiveDefenciveAbilities();
 
     /// <summary>

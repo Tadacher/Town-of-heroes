@@ -9,11 +9,6 @@ public class DefaultDamageRecievingModuile : AbstractDamageRecievingModule
         _passiveDefensiveAbilities = passiveDefensiveAbilities;
     }
 
-    public override void ReInit()
-    {
-        //reinit all abilities i dunno
-    }
-
     protected override void InitPassiveDefenciveAbilities()
     {
         //init em if needed

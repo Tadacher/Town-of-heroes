@@ -5,11 +5,12 @@
     /// </summary>
     public int Priority;
 
-
-    public abstract float ProcessDamage(float damage);
     protected AbstractPassiveDefensiveAbility(int priority)
     {
         Priority = priority;
     }
+
+    public abstract float ProcessDamage(float damage);
+    public abstract void ReInit();
 }
 
