@@ -15,8 +15,12 @@ namespace Enemies
                                        IEnemyReachedReciever coreGameplayService,
                                        IWaveNumberProvider waveNumberProvider)
         {
-            base.Construct(audioSource, damageTextService, monsterInfoServiceIngame, coreGameplayService, waveNumberProvider);
-            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService);
+            base.Construct(audioSource,
+                           damageTextService,
+                           monsterInfoServiceIngame,
+                           coreGameplayService,
+                           waveNumberProvider);
+            _abstractDamageRecievingModule = new DefaultHealthModule(transform, damageTextService, null);
         }
 
         public override void RecieveDamage(float damage, AbstractTower abstractTower)
