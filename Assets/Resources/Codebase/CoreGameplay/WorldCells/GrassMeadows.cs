@@ -14,7 +14,7 @@ namespace WorldCells
 
         }
 
-        public override void CheckForNeighborInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
+        public override void CheckForInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
         {
             switch (gridCellObject)
             {
@@ -22,6 +22,11 @@ namespace WorldCells
                     ReplaceSelfWith(typeof(FloweringMeadows));
                     break;
             }
+        }
+
+        public override void CheckForNearbyInteractionsUnrecursive()
+        {
+
         }
     }
 }

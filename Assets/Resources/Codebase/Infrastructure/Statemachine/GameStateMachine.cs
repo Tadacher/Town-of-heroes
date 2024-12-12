@@ -16,6 +16,7 @@ namespace Infrastructure
                 [typeof(CoreSceneState)] = stateFactory.GetState<CoreSceneState>().Init(this),
                 [typeof(LoadMenuLevelState)] = stateFactory.GetPayloadedState<string, LoadMenuLevelState>().Init(this),
                 [typeof(MenuLevelState)] = stateFactory.GetState<MenuLevelState>().Init(this),
+                [typeof(LoadCoreGameplaySceneState)] = stateFactory.GetState<LoadCoreGameplaySceneState>().Init(this),
             };
             EnterState<BootstrapState>();
         }

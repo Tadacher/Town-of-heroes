@@ -4,8 +4,19 @@ namespace Services.GridSystem
 {
     public abstract class AbstractGridService
     {
+        public float GetCellSize => _cellsize;
+        /// <summary>
+        /// size of a cell in units
+        /// </summary>
         protected readonly float _cellsize;
+
+        /// <summary>
+        /// horizontal cell count
+        /// </summary>
         protected readonly int _gridSizeX;
+        /// <summary>
+        /// vertical cell count
+        /// </summary>
         protected readonly int _gridSizeY;
 
         protected readonly Vector2 _cellOffset;

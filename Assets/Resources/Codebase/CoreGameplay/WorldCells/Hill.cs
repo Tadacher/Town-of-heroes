@@ -21,10 +21,10 @@ namespace WorldCells
 
 
 
-                    CheckForNeighborInteraction(gridCellObject, GetNeighborWorldCoords(x, y));
+                    CheckForInteraction(gridCellObject, GetNeighborWorldCoords(x, y));
 
                     if (gridCellObject != null)
-                        gridCellObject.CheckForNeighborInteraction(this, _worldCellGridService.PosToGrid(transform.position));
+                        gridCellObject.CheckForInteraction(this, _worldCellGridService.PosToGrid(transform.position));
                 }
             }
             if (nearbyForestCells == 8)
@@ -37,7 +37,7 @@ namespace WorldCells
                gridCellObject is Hill;
         }
 
-        public override void CheckForNeighborInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
+        public override void CheckForInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
         {
             return;
         }
@@ -50,6 +50,11 @@ namespace WorldCells
         protected override void CheckForGeneralInteraction()
         {
             
+        }
+
+        public override void CheckForNearbyInteractionsUnrecursive()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

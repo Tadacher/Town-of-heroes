@@ -56,10 +56,7 @@ namespace WorldCells
                 _worldCellInfoService.Show(this);
         }
 
-        public void ActionOnGet()
-        {
-            _pooled = false;
-        }
+        public void ActionOnGet() => _pooled = false;
         public void ReturnToPool()
         {
             if (_pooled)
@@ -107,14 +104,14 @@ namespace WorldCells
                 {
                     IWorldGridCellObject gridCellObject = GetNeighborCell(x, y);
 
-                    CheckForNeighborInteraction(gridCellObject, GetNeighborWorldCoords(x, y));
+                    CheckForInteraction(gridCellObject, GetNeighborWorldCoords(x, y));
 
                     if(gridCellObject != null)
-                        gridCellObject.CheckForNeighborInteraction(this, _worldCellGridService.PosToGrid(transform.position));
+                        gridCellObject.CheckForInteraction(this, _worldCellGridService.PosToGrid(transform.position));
                 }
             }
         }
-
+        public abstract void CheckForNearbyInteractionsUnrecursive();
         /// <summary>
         /// Returns neighborCell. Calculates coordinates by adding cellsize * given offset
         /// </summary>
@@ -124,16 +121,21 @@ namespace WorldCells
         protected IWorldGridCellObject GetNeighborCell(int xOffset, int yOffset) =>
             _worldCellGridService.GetCellObjectFromWorldCoords(GetNeighborWorldCoords(xOffset, yOffset));
 
+        /// <summary>
+        /// gets world position of a neighborCell by original cell world position and grid position offset
+        /// </summary>
+        /// <param name="xOffset">grid offset x</param>
+        /// <param name="yOffset">grid offset y</param>
+        /// <returns></returns>
         protected Vector2 GetNeighborWorldCoords(int xOffset, int yOffset) => 
-            (Vector2)transform.position + new Vector2(xOffset, yOffset);
+            (Vector2)transform.position + new Vector2(xOffset, yOffset) * _worldCellGridService.GetCellSize;
+
+
+        public abstract void CheckForInteraction(IWorldGridCellObject gridCellObject, Vector2 pos);
 
         /// <summary>
-        /// Check all possible interactions cell can perform with targeted cell and perfom them
-        /// It is called twice - when cell is placed - for every cell around and each time some cell is placed around it will call this for every neighbor
+        /// checks for such interaction triggers as count of cells in world, kiled enemies, placed towers, plot events and such
         /// </summary>
-        /// <param name="gridCellObject">targeted neigbor cell</param>
-        /// <param name="pos">targeted neigbor cell position</param>
-        public abstract void CheckForNeighborInteraction(IWorldGridCellObject gridCellObject, Vector2 pos);
         protected abstract void CheckForGeneralInteraction();
         public AbstractWorldCell AsGhost()
         {
@@ -166,9 +168,11 @@ namespace WorldCells
 
         protected void ReplaceSelfWith(Type celltype)
         {
-            _worldCellGridService.SpawnAndInjectCellToWorld(celltype, transform.position);
             RemoveSelfFromGrid();
+            _worldCellGridService.SpawnAndInjectCellToWorld(celltype, transform.position);
             PoolSelf();
         }
+
+       
     }
 }

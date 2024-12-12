@@ -15,7 +15,7 @@ namespace WorldCells
 
         }
 
-        public override void CheckForNeighborInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
+        public override void CheckForInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
         {
             switch (gridCellObject)
             {
@@ -24,6 +24,11 @@ namespace WorldCells
                     _worldCellGridService.SpawnAndReplacetCellToWorld(typeof(CursedForest), pos);
                     break;
             }
+        }
+
+        public override void CheckForNearbyInteractionsUnrecursive()
+        {
+
         }
     }
 }
