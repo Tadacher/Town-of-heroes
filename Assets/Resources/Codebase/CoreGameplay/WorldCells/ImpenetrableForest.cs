@@ -4,9 +4,14 @@ namespace WorldCells
 {
     public class ImpenetrableForest : AbstractWorldCell
     {
-        public override void CheckForNeighborInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
+        public override void CheckForInteraction(IWorldGridCellObject gridCellObject, Vector2 pos)
         {
             
+        }
+
+        public override void CheckForNearbyInteractionsUnrecursive()
+        {
+
         }
 
         protected override void AddResources()

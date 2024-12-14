@@ -35,6 +35,6 @@ public class ToBattleButton : MonoBehaviour
         if (_cardDeckService.CardDeck.Count == 0)
             return;
 
-        _gameStateMachine.EnterState<LoadMetaSceneState, string>(_gameplaySceneName);
+        _gameStateMachine.EnterState<LoadCoreGameplaySceneState, string>(_gameplaySceneName);
     }
 }
